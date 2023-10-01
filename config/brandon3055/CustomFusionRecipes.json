@@ -22,7 +22,7 @@
       "nuclearcraft:gem",
       "thermalfoundation:material,1,513",
       "tconstruct:tool_rod,1,0,{Material: ardite}",
-      "minecraft:red_nether_brick"
+      "quark:biome_cobblestone"
     ]
   },
   {
