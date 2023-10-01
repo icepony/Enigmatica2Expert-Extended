@@ -6,6 +6,7 @@
  */
 
 #priority 4000
+#reloadable
 
 import crafttweaker.command.ICommandSender;
 import crafttweaker.data.IData;
@@ -14,8 +15,6 @@ import crafttweaker.item.IItemStack;
 import crafttweaker.oredict.IOreDictEntry;
 import crafttweaker.recipes.IRecipeFunction;
 import crafttweaker.world.IWorld;
-
-#reloadable
 
 zenClass Utils {
   var DEBUG as bool = false;
@@ -39,6 +38,20 @@ zenClass Utils {
     if(ingr.itemArray.length <= 0 ) { return null; }
     val a = ingr.itemArray[0];
     return a.damage == 32767 ? a.withDamage(0) : a;
+  }
+
+  function iterateOredict(ore as IOreDictEntry, callback as function(IItemStack)void) as void {
+    for item in ore.items {
+      if(item.damage == 32767) {
+        logger.logWarning(
+          'Trying to iterate oredict "'~ore.name
+          ~'", but it have wildcarded item '~item.commandString
+          ~'. Script cannot propertly iterate wildcarded items.'
+        );
+        callback(item.withDamage(0));
+      }
+      callback(item);
+    }
   }
 
   function compact(a as IIngredient, b as IIngredient) as void {
