@@ -28,9 +28,7 @@ function add(entity as IEntityDefinition, dropList as IItemStack[]) as void {
       ? item * (item.amount / 100)
       : item.anyAmount().withLore(["§fChance: §b" ~ item.amount ~ "%"]);
   }
-  utils.log(['  ~~ adding:', fixedList.length]);
   scripts.jei.requious.add(<assembly:entity_drop>, {[Soul(entity.id)] as IIngredient[] : fixedList});
-  utils.log(['  ~~ finished']);
 }
 
 /*Inject_js{
