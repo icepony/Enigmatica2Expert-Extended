@@ -1,4 +1,8 @@
 [main/WARN] [mixin]: Reference map 'mixins.zenrecipereloading.refmap.json' for mixins.zenrecipereloading.json could not be read. If this is a development environment you can ignore this message
+[main/WARN] [mixin]: Error loading class: journeymap/client/task/multi/TaskController (java.lang.ClassNotFoundException: The specified class 'journeymap.client.task.multi.TaskController' was not found)
+[main/WARN] [mixin]: @Mixin target journeymap.client.task.multi.TaskController was not found mixins.sledgehammer.journeymap.json:client.task.multi.TaskControllerMixin from mod unknown-owner
+[main/WARN] [mixin]: Error loading class: journeymap/client/JourneymapClient (java.lang.ClassNotFoundException: The specified class 'journeymap.client.JourneymapClient' was not found)
+[main/WARN] [mixin]: @Mixin target journeymap.client.JourneymapClient was not found mixins.sledgehammer.journeymap.json:client.JourneymapClientMixin from mod unknown-owner
 [main/ERROR] [mixin]: Classloader restrictions [PACKAGE_TRANSFORMER_EXCLUSION] encountered loading mixin.modularui.json:SlotMixin from mod unknown-owner, name: com.cleanroommc.modularui.core.mixin.SlotMixin
 [main/ERROR] [mixin]: Classloader restrictions [PACKAGE_TRANSFORMER_EXCLUSION] encountered loading mixin.modularui.json:GuiContainerAccessor from mod unknown-owner, name: com.cleanroommc.modularui.core.mixin.GuiContainerAccessor
 [main/ERROR] [mixin]: Classloader restrictions [PACKAGE_TRANSFORMER_EXCLUSION] encountered loading mixin.modularui.json:GuiContainerMixin from mod unknown-owner, name: com.cleanroommc.modularui.core.mixin.GuiContainerMixin
