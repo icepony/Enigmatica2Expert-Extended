@@ -3,21 +3,16 @@
 🚧✅❌ List of priorities:
 
 - [ ] ✏️ nanomachines Dissaper On Rejoin Server
-- [x] ✏️ illium Gen Shoul Have No Nbt Recipe
-- [ ] ✏️ Check cat opener script
-- [ ] ✏️ Balance EIO obelisks (too costy right now)
-- [ ] ✏️ Octadic Capacitor remove from usages since its gating them hard
+- [ ] ✏️ Fix Portals on same positions in different dimensions conflicting
+- [ ] ✏️ Unify QMD cobalt dust
+- [ ] 🟢 Add `RLTweaker`
 - [ ] 🟢 Configure `Villager Trade Tables`
 - [ ] 🟢 Make `Essential` work with modpack
-- [ ] 🟢 Find why looking at JER page with villagers this error cut list of trades every roll:
-  > Error caught from Recipe Category: jeresources.jei.villager.VillagerCategory
-  > java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
-  > 	at java.util.LinkedList.checkElementIndex(LinkedList.java:555) ~[?:1.8.0_352]
-  > 	at java.util.LinkedList.get(LinkedList.java:476) ~[?:1.8.0_352]
-  > 	at jeresources.entry.VillagerEntry.getVillagerTrades(VillagerEntry.java:37) ~[VillagerEntry.class:?]
-  > 	at jeresources.jei.villager.VillagerWrapper.getTrades(VillagerWrapper.java:35) ~[VillagerWrapper.class:?]
 - [ ] 🌍 fix Mercury Have Water
 - [ ] ✏️ Sun Conglomerate instantly grow animals
+- [ ] ✏️ Geese should use holden items
+- [ ] 📖 Improve messages "Player Obtained [...]" with `tellraw` command
+- [ ] 🔴 Remove `Integrated Crafting`
 
 ---
 
@@ -27,6 +22,9 @@
 
 Planned non-urgent changes, or just good ideas:
 
+- [ ] 🔨 fix Invincible Combo `Strength Of Will` + `Runic Shield`
+- [ ] ✏️ Fix Health boost potion recipe (one from gold ingot)
+- [ ] 📖 Add new `Conflux VI` level based on 100% trophy completion
 - [ ] 🔴 Remove `Culinari Construct`
 - [ ] ✏️ Add mobs that always blights (probably breedable mobs)
 - [ ] ✏️ Moon stone could be used in Animals chapter
@@ -40,7 +38,7 @@ Planned non-urgent changes, or just good ideas:
 - [ ] ✏️ blight Tamed Always Drop Something. Problem: dont know how to determine if entity is tamed
 - [ ] 🧩 Make Platforms from Random Things with metal texture instead of wood
 - [ ] ✏️ disable Excavate Ench For Pickarang
-- [ ] ✏️ Transfer liquid interaction to Witch Water, remove Plus Tweaks
+- [ ] ✏️ Transfer liquid interaction to Witch Water, remove `Plus Tweaks`
 - [ ] ✏️ invent Tool For Robot With Low Durability
 - [ ] ✏️ Printing and assembling Chaos Guardian spawns Chaos Guardian
 - [ ] ✏️ fix ET gen Tuntsten Chunks. Cant reproduce in singleplayer.
@@ -83,7 +81,7 @@ Planned non-urgent changes, or just good ideas:
 - [ ] ✏️ RFTools `Dimension building` make cheaper by balancing possible dimlets
 - [ ] ✏️ `Conglomerate of Life` spawns Foxes and Pigmen near portal
 - [ ] ✏️ `Conglomerate of Coal` should buff portal spread with `onRandomTick`
-- [ ] 🔨 rework Difficulty Trait, add efficiency growth 
+- [ ] 🔨 rework Difficulty Trait, add efficiency growth
 - [ ] ✏️ Quark Frog Drop Cooked Legs on death
 - [ ] 🔄 Giant chest disable sort buttons
 - [ ] 📀 Rebalance Sage and Druids trades
@@ -160,7 +158,6 @@ Planned non-urgent changes, or just good ideas:
 - [ ] ✏️ More Alien Crystal blocks + mica to get Crystaltine and ET gems
 - [ ] ✏️ Milk Questing Ram to color essence
 - [ ] ✏️ Nature chests still turn into Lootr
-- [ ] 🤹‍♂️ Change Model for Tinker's Disassembler
 - [ ] 🟢 Install `Steve Carts`
 - [ ] 🟢 Install `OpenGlasses2`
 - [ ] ✏️ Add chaos shards recipe for Skyblock. Probably RFT Syringe in 5 steps => Struck Lightning. Or Add New conglomerate to explode with nuke and get Chaos Shards.
