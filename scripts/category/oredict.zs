@@ -298,6 +298,13 @@ add(<ore:stoneDiorite>, <quark:world_stone_bricks:1>);
 add(<ore:stoneAndesite>, <quark:world_stone_bricks:2>);
 add(<ore:stoneBasalt>, <quark:world_stone_bricks:3>);
 
+addItems(<ore:blockBricks>, [
+	<minecraft:brick_block>,
+	<chisel:bricks:*>,
+	<engineersdecor:slag_brick_block>,
+	<randomthings:stainedbrick:*>,
+]);
+
 addItems(<ore:slabBasalt>, [
 	<quark:stone_basalt_slab>,
 	<environmentalmaterials:basalt_slab>,
