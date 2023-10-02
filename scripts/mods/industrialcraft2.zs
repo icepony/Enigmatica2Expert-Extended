@@ -356,12 +356,9 @@ craft.make(<immersiveengineering:treated_wood> * 8, ["pretty",
   "~": <fluid:ic2creosote> * 1000, # Creosote Bucket
 });
 
-# Alternative without scrap
-# [Fertilizer]*2 from [Fertilizer][+1]
-craft.shapeless(<ic2:crop_res:2> * 3, "eFFF", {
-  "e": <ic2:crop_res:2>,     # Fertilizer
-  "F": <ore:fertilizer>, # Fertilizer
-});
+// Weed => Fertilizer => Green Fertilizer
+mods.actuallyadditions.Compost.addRecipe(<ic2:crop_res:2>, <minecraft:wool:13>, <ic2:crop_res:5>, <tconstruct:soil:1>);
+mods.actuallyadditions.Compost.addRecipe(<farmingforblockheads:fertilizer:1>, <quark:quilted_wool:5>, <ic2:crop_res:2>, <minecraft:wool:13>);
 
 # Scrap making from seed bags
 scripts.process.crush(<ic2:crop_seed_bag>, <ic2:crafting:23>, "only: Macerator", null, null);
@@ -498,9 +495,6 @@ mods.nuclearcraft.Melter.addRecipe(<ore:dustSulfur>, <liquid:sulfur> * 100);
 <ic2:crop_res:7>.setAspects(<aspect:motus>*100); # Oil Berry
 <ic2:crop_res:8>.setAspects(<aspect:visum>*20); # Bobs-Yer-Uncle-Ranks Berry
 <ic2:crop_res:1>.setAspects(<aspect:cognitio>*50); # Coffee Powder
-
-# [Green Fertilizer] from [Weed]
-mods.actuallyadditions.Compost.addRecipe(<farmingforblockheads:fertilizer:1>, <quark:quilted_wool:5>, <ic2:crop_res:5>, <biomesoplenty:log_4:4>);
 
 # [Biogas Bucket] from [Hops]
 scripts.process.squeeze([<ic2:crop_res:4>], <fluid:ic2biogas> * 200, "only: IndustrialSqueezer");
