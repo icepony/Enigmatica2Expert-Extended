@@ -84,13 +84,29 @@ craft.remake(<enderio:block_buffer:1>, ["pretty",
 	[<enderio:block_solar_panel:2>, <enderio:block_solar_panel:2>, <enderio:block_solar_panel:2>],
 	[<enderio:item_basic_capacitor:2>, <ore:darkFusedQuartz>, <enderio:item_basic_capacitor:2>]]);
 
-# Dimensional Transceiver
-	recipes.remove(<enderio:block_transceiver>);
-	recipes.addShapedMirrored("Ender IO Dimensional Transceiver", 
-	<enderio:block_transceiver>, 
-	[[<ore:blockElectricalSteel>, <ore:skullEnderResonator>, <ore:blockElectricalSteel>],
-	[<enderio:item_basic_capacitor:2>, <mekanism:machineblock3>, <enderio:item_basic_capacitor:2>], 
-	[<ore:blockElectricalSteel>, <ore:itemEnderCrystal>, <ore:blockElectricalSteel>]]);
+# [Dimensional Transceiver] from [Quantum Entangloporter][+4]
+craft.remake(<enderio:block_transceiver>, ["pretty",
+  "■ E ■",
+  "O Q O",
+  "■ * ■"], {
+  "■": <ore:blockElectricalSteel>,       # Electrical Steel Block
+  "E": <ore:skullEnderResonator>,        # Ender Resonator
+  "O": <enderio:item_basic_capacitor:2>, # Octadic Capacitor
+  "Q": <mekanism:machineblock3>,         # Quantum Entangloporter
+  "*": <ore:itemEnderCrystal>,           # Ender Crystal
+});
+
+# [Dimensional Transceiver] from [Quantum Entangloporter][+4]
+craft.make(<enderio:block_transceiver>, ["pretty",
+  "■ E ■",
+  "T Q T",
+  "■ * ■"], {
+  "■": <ore:blockElectricalSteel>, # Electrical Steel Block
+  "E": <ore:skullEnderResonator>,  # Ender Resonator
+  "T": <enderio:item_capacitor_totemic>.anyDamage(), # Totemic Capacitor
+  "Q": <mekanism:machineblock3>,   # Quantum Entangloporter
+  "*": <ore:itemEnderCrystal>,     # Ender Crystal
+});
 
 # Enchanter
 	recipes.remove(<enderio:block_enchanter>);
