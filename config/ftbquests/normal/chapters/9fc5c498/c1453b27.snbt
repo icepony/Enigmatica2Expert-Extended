@@ -1,13 +1,13 @@
 {
 	title: "{q.ender_io.end_steel_armor.name}",
 	icon: "enderio:item_end_steel_chestplate",
-	x: 8.7d,
-	y: 5.1d,
+	x: -0.5d,
+	y: 3.4d,
 	text: [
 		"{q.ender_io.end_steel_armor.desc}"
 	],
 	dependencies: [
-		"a1061823"
+		"0c16a92b"
 	],
 	tasks: [{
 		uid: "08e8f42d",
