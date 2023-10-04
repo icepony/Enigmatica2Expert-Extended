@@ -1160,21 +1160,19 @@ soulRecipe("thermalfoundation:blizz"    ,"elementals"      , [<aspect:aqua>*60  
 soulRecipe("thermalfoundation:basalz"   ,"elementals"      , [<aspect:terra>*60     ,<aspect:metallum>*60]);
 soulRecipe("thermalfoundation:blitz"    ,"elementals"      , [<aspect:aer>*60       ,<aspect:ventus>*60]);
 
-/*
-soulRecipe("tconstruct:blueslime"        , [<aspect:caeles> * 100, <aspect:alkimia>    * 100]);
-soulRecipe("twilightforest:kobold"       , [<aspect:caeles> * 100, <aspect:praemunio>  * 100]);
-soulRecipe("twilightforest:swarm_spider" , [<aspect:caeles> * 100, <aspect:tenebrae>   * 100]);
-soulRecipe("twilightforest:penguin"      , [<aspect:caeles> * 100, <aspect:sensus>     * 100]);
-soulRecipe("twilightforest:minotaur"     , [<aspect:caeles> * 100, <aspect:mythus>     * 100]);
+soulRecipe("tconstruct:blueslime"        ,"hvanilla"       , [<aspect:caeles> * 100, <aspect:alkimia>    * 100]);
+soulRecipe("twilightforest:kobold"       ,"hvanilla"       , [<aspect:caeles> * 100, <aspect:praemunio>  * 100]);
+soulRecipe("twilightforest:swarm_spider" ,"hvanilla"       , [<aspect:caeles> * 100, <aspect:tenebrae>   * 100]);
+soulRecipe("twilightforest:penguin"      ,"hvanilla"       , [<aspect:caeles> * 100, <aspect:sensus>     * 100]);
+soulRecipe("twilightforest:minotaur"     ,"hvanilla"       , [<aspect:caeles> * 100, <aspect:mythus>     * 100]);
 
-soulRecipe("minecraft:villager"           , [<aspect:humanus> * 500, <aspect:rattus> * 500, <aspect:imperium> * 500]);
-soulRecipe("minecraft:villager_golem"     , [<aspect:humanus> * 500, <aspect:rattus> * 500, <aspect:caeles> * 500]);
-soulRecipe("minecraft:evocation_illager"  , [<aspect:humanus> * 500, <aspect:rattus> * 500, <aspect:exanimis> * 500]);
-soulRecipe("minecraft:vindication_illager", [<aspect:humanus> * 500, <aspect:rattus> * 500, <aspect:visum> * 500]);
-soulRecipe("minecraft:illusion_illager"   , [<aspect:humanus> * 500, <aspect:rattus> * 500, <aspect:victus> * 500]);
+soulRecipe("minecraft:villager"           ,"hvanilla"       , [<aspect:humanus> * 500, <aspect:rattus> * 500, <aspect:imperium> * 500]);
+soulRecipe("minecraft:villager_golem"     ,"hvanilla"       , [<aspect:humanus> * 500, <aspect:rattus> * 500, <aspect:caeles> * 500]);
+soulRecipe("minecraft:evocation_illager"  ,"hvanilla"       , [<aspect:humanus> * 500, <aspect:rattus> * 500, <aspect:exanimis> * 500]);
+soulRecipe("minecraft:vindication_illager","hvanilla"       , [<aspect:humanus> * 500, <aspect:rattus> * 500, <aspect:visum> * 500]);
+soulRecipe("minecraft:illusion_illager"   ,"hvanilla"       , [<aspect:humanus> * 500, <aspect:rattus> * 500, <aspect:victus> * 500]);
 
-soulRecipe("minecraft:vex"                , [<aspect:alienis> * 500, <aspect:draco> * 500, <aspect:visum> * 500]);
-*/
+soulRecipe("minecraft:vex"                ,"hvanilla"       , [<aspect:alienis> * 500, <aspect:draco> * 500, <aspect:visum> * 500]);
 
 /*
  ██████╗ ████████╗██╗  ██╗███████╗██████╗ 
