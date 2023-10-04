@@ -118,7 +118,7 @@ recipes.addShaped("Luminous Crafting Table - RecipeAction", <astralsorcery:block
 	if (isNull(player)) return;
   if (player.world.isRemote()) return;
 	val server = player.server;
-	server.commandManager.executeCommand(server, '/astralsorcery research '~player.name~' BASIC_CRAFT');
+	server.commandManager.executeCommandSilent(server, '/astralsorcery research '~player.name~' BASIC_CRAFT');
 });
 
 
