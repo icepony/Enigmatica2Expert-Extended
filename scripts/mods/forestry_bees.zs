@@ -353,7 +353,6 @@ zenClass BeeHelper {
 		# Add missed centrifuge recipes
 
 		val removeBlacklist = [1,3,4,5,7] as int[];
-		// val makeTERecipeBlacklist = [10, 9, 12] as int[];
 
 		for i in [
 /*Inject_js(
