@@ -13,6 +13,7 @@ import crafttweaker.data.IData;
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 import crafttweaker.oredict.IOreDictEntry;
+import crafttweaker.player.IPlayer;
 import crafttweaker.recipes.IRecipeFunction;
 import crafttweaker.world.IWorld;
 
@@ -421,6 +422,37 @@ zenClass Utils {
         return output.withTag({ench:[{lvl: 1 as short, id: ench.id as short}]});
       }, null
     );
+  }
+
+
+  /*
+  ████████╗███████╗██╗     ██╗     ██████╗  █████╗ ██╗    ██╗
+  ╚══██╔══╝██╔════╝██║     ██║     ██╔══██╗██╔══██╗██║    ██║
+     ██║   █████╗  ██║     ██║     ██████╔╝███████║██║ █╗ ██║
+     ██║   ██╔══╝  ██║     ██║     ██╔══██╗██╔══██║██║███╗██║
+     ██║   ███████╗███████╗███████╗██║  ██║██║  ██║╚███╔███╔╝
+     ╚═╝   ╚══════╝╚══════╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚══╝╚══╝ 
+  */
+  function tellrawItem(item as IItemStack, color as string = null) as string {
+    val colorTag = isNull(color) ? '' : ',"color":"'~color~'"';
+    val amount = item.amount > 1 ? '{"text":"'~item.amount~'"'~colorTag~'},{"text":" "},' : '';
+    val itemName =
+    '{"text":"\u00A7f   ","hoverEvent":'
+        ~'{"action":"show_item","value":"'
+          ~item.asData().toNBTString().replaceAll('"', '\\\\"')
+        ~'"}'
+      ~',"extra":['
+        ~'{"text":"["'~colorTag~'}'
+        ~',{"translate":"'~item.name~'.name"'~colorTag~'}'
+        ~',{"text":"]"'~colorTag~'}'
+      ~']'
+    ~'}';
+
+    return amount ~ itemName;
+  }
+
+  function tellrawSend(player as IPlayer, message as string) as void {
+    mods.contenttweaker.Commands.call('/tellraw '~player.name~' ['~message~']', player, player.world, false, true);
   }
 }
 global utils as Utils = Utils();
