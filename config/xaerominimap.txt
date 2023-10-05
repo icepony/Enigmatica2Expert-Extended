@@ -18,9 +18,9 @@ displayRedstone:true
 deathpoints:true
 oldDeathpoints:true
 distance:1
-lockNorth:false
+lockNorth:true
 zoom:0
-minimapSize:0
+minimapSize:158
 chunkGrid:-1
 slimeChunks:false
 mapSafeMode:false
@@ -59,7 +59,7 @@ biomeColorsVanillaMode:false
 lookingAtAngle:10
 lookingAtAngleVertical:180
 centeredEnlarged:false
-zoomOnEnlarged:0
+zoomOnEnlarged:4
 minimapTextAlign:0
 waypointsMutualEdit:true
 compassLocation:1
@@ -77,8 +77,8 @@ lightOverlayColor:13
 uiScale:0
 bossHealthPushBox:1
 potionEffectPushBox:1
-minimapFrame:0
-minimapFrameColor:9
+minimapFrame:2
+minimapFrameColor:8
 compassColor:9
 northCompassColor:-1
 displayMultipleWaypointInfo:1
@@ -123,5 +123,5 @@ interface:dummy:0:36:true:false:false:false
 interface:dummy:0:10000:true:false:false:false
 interface:dummy:0:0:false:false:true:false
 interface:dummy:0:36:true:false:false:false
-interface:gui.xaero_minimap:0:0:false:false:false:false
+interface:gui.xaero_minimap:93:0:false:false:true:false
 #WAYPOINTS HAVE BEEN MOVED TO /XaeroWaypoints
