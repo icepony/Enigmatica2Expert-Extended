@@ -214,7 +214,7 @@ Icon | Summary
 
 Mods that present only in `Extended` version:
 
-211 mods in this section.
+213 mods in this section.
 
 Icon | Summary
 ----:|:-------
@@ -402,7 +402,9 @@ Icon | Summary
 <img src="https://media.forgecdn.net/avatars/thumbnails/538/146/30/30/637862893538783773.png"            > |                          [**JEI Utilities**](https://www.curseforge.com/minecraft/mc-mods/jei-utilities)                <sup><sub>JEI-Utilities-1.12.2-0.2.12.jar                  </sub></sup><br>Added more enhancements to JEI
 <img src="https://media.forgecdn.net/avatars/thumbnails/548/971/30/30/637885445429300474.png"            > |                             [**燐/Hesperus**](https://www.curseforge.com/minecraft/mc-mods/hesperus)                     <sup><sub>phosphor-1.12.2-0.2.9.3-SNAPSHOT.jar             </sub></sup><br>Lighting optimization mod
 <img src="https://media.forgecdn.net/avatars/thumbnails/548/30/30/30/637882959576383371.png"             > |              [**AE2 Fluid Crafting Rework**](https://www.curseforge.com/minecraft/mc-mods/ae2-fluid-crafting-rework)    <sup><sub>Fluid Craft for AE2-2.4.31-r.jar                 </sub></sup><br>A port and reworked of AE2FC. Implement the fluid autocrafting mechanic in AE2.
+<img src="https://media.forgecdn.net/avatars/thumbnails/551/59/30/30/637888242565991470.png"             > |                              [**ModularUI**](https://www.curseforge.com/minecraft/mc-mods/modularui)                    <sup><sub>modularui-2.2.2.jar                              </sub></sup><br>A GUI library to ease the process of creating vanilla style GUIs
 <img src="https://media.forgecdn.net/avatars/thumbnails/799/138/30/30/638161375254345080.png"            > |                     [**Roughly Enough IDs**](https://www.curseforge.com/minecraft/mc-mods/reid)                         <sup><sub>RoughlyEnoughIDs-2.0.6.jar                       </sub></sup><br>Removes the biome, item &amp; block ID limits using the 1.13+ format
+<img src="https://media.forgecdn.net/avatars/thumbnails/557/657/30/30/637904734114975779.png"            > |                  [**Inventory Bogo Sorter**](https://www.curseforge.com/minecraft/mc-mods/inventory-bogo-sorter)        <sup><sub>bogosorter-1.4.1.jar                             </sub></sup><br>A highly configurable and advanced inventory sorter mod
 <img src="https://media.forgecdn.net/avatars/thumbnails/559/283/30/30/637908604129051982.png"            > |             [**Crafting Tweaks Unofficial**](https://www.curseforge.com/minecraft/mc-mods/crafting-tweaks-unofficial)   <sup><sub>CraftingTweaks_1.12.2-9.0.1.jar                  </sub></sup><br>A Continuation of Crafting Tweaks for 1.12.2
 <img src="https://media.forgecdn.net/avatars/thumbnails/559/893/30/30/637910144009224910.png"            > |             [**Ender Storage continuation**](https://www.curseforge.com/minecraft/mc-mods/ender-storage-1-12-continuation)<sup><sub>EnderStorage-1.12.2-2.4.9.jar                    </sub></sup><br>Linked chests and fluid/gas/mana tanks
 <img src="https://media.forgecdn.net/avatars/thumbnails/573/97/30/30/637934782154930654.png"             > |                                [**Pointer**](https://www.curseforge.com/minecraft/mc-mods/pointer)                      <sup><sub>pointer-2.1.jar                                  </sub></sup><br>Access a block from anywhere in the same dimension
