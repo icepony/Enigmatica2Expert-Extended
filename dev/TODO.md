@@ -5,6 +5,9 @@
 - [ ] ✏️ nanomachines Dissaper On Rejoin Server
 - [ ] ✏️ Fix Portals on same positions in different dimensions conflicting
 - [ ] ✏️ Unify QMD cobalt dust
+- [ ] ✏️ Add more witches potions
+- [ ] ✏️ Add Tungsten Ore => ingot (in Arc Furnace)
+- [ ] ✏️ Fix Some Nether Portal Spread JEI entries
 - [ ] 🟢 Add `RLTweaker`
 - [ ] 🟢 Configure `Villager Trade Tables`
 - [ ] 🟢 Make `Essential` work with modpack
