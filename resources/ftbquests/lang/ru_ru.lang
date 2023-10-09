@@ -118,7 +118,6 @@ q.getting_started.harvest_level_9.desc=Osgloglas - это сплав, состо
 q.getting_started.little_chisel.desc=§b LittleTiles §r - это мод, позволяющий редактировать блоки на субпиксельных уровнях, создавать новые хранилища, настраивать двери, перекрашивать блоки и многое другое. Это похоже на сочетание §o Chisels & Bits §r с включенным режимом World Edit with God.\n Это самый полный мод на строительство!
 q.getting_started.harvest_level_10.name=Уровень урожая 10
 q.getting_started.harvest_level_10.desc=Эндериум - это терморасширяющийся сплав, значительно улучшенный для характеристик Тнкера.
-q.getting_started.buildes.name=Строит
 q.getting_started.buildes.desc=Иногда строительство больших конструкций может быть немного утомительным и требует больших усилий. Не всех из нас вы знаете великих строителей! Цель проекта Dire's Building Gadgets сделать строительство немного проще.\n\n
 q.getting_started.obelisks.name=Obelisks
 q.getting_started.obelisks.desc=Obelisks provide tools for mob farms. For example, The §aExperience Obelisk§r can store huge amounts of liquid XP.\n\nSome of them require §nSoul Vial§r or §nCapacitor§r.

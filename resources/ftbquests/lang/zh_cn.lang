@@ -118,7 +118,6 @@ q.getting_started.harvest_level_9.desc=§2锇荧黑曜合金§r 是通用机械�
 q.getting_started.little_chisel.desc=§b小方块§r模组允许对方块进行次像素级别的编辑，可以制作存储方块、自定义门、染色方块等。有点像§o凿子§r加创世神。\n它是这里最复杂的也唯一的建筑模组了。
 q.getting_started.harvest_level_10.name=挖掘等级10
 q.getting_started.harvest_level_10.desc=末影锭是热力膨胀的合金，它的匠魂属性上加强了很多。
-q.getting_started.buildes.name=建筑
 q.getting_started.buildes.desc=有时盖大房子挺难的，还很费劲。显然我们并不都是建筑大佬！Dire的建筑小工具能够帮助我们更容易建房子。\n\n
 q.getting_started.obelisks.name=Obelisks
 q.getting_started.obelisks.desc=Obelisks provide tools for mob farms. For example, The §aExperience Obelisk§r can store huge amounts of liquid XP.\n\nSome of them require §nSoul Vial§r or §nCapacitor§r.
