@@ -44,4 +44,4 @@
 [Client thread/WARN] [VintageFix Mixin Loader]: Not applying mixin 'mixin.version_protest.F3Change' as 'mixin.version_protest' is disabled in config
 [Client thread/WARN] [VintageFix Mixin Loader]: Not applying mixin 'mixin.version_protest.LoaderChange' as 'mixin.version_protest' is disabled in config
 [Client thread/WARN] [VintageFix Mixin Loader]: Not applying mixin 'mixin.dynamic_resources.SafeModelBakeWrapperMixin' as 'mixin.dynamic_resources' is disabled in config
-[Client thread/WARN] [VintageFix Mixin Loader]: Not applying mixin 'mixin.dynamic_resources.TextureCollectionMixin' as 'mixin.dynamic_resources' is disabled in config
+[Client thread/WARN] [VintageFix Mixin Loader]: Not applying mixin 'mixin.dynamic_resources.TextureCollectionMixin' as 'mixin.dynamic_resources' is disabled in config

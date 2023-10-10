@@ -6,16 +6,68 @@
 - [ ] ✏️ Fix Portals on same positions in different dimensions conflicting
 - [ ] ✏️ Unify QMD cobalt dust
 - [ ] ✏️ Add more witches potions
-- [ ] ✏️ Add Tungsten Ore => ingot (in Arc Furnace)
-- [ ] ✏️ Fix Some Nether Portal Spread JEI entries
-- [ ] 🟢 Add `RLTweaker`
+- [x] ✏️ Add Tungsten Ore => ingot (in Arc Furnace)
 - [ ] 🟢 Configure `Villager Trade Tables`
 - [ ] 🟢 Make `Essential` work with modpack
 - [ ] 🌍 fix Mercury Have Water
 - [ ] ✏️ Sun Conglomerate instantly grow animals
 - [ ] ✏️ Geese should use holden items
+- [x] ✏️ Remove Door=>Bars portal spread
+- [x] ✏️ fixRockCrystalOreNotNetherSpread
+- [ ] ✏️ Make Elite Component craftable without tech
+- [ ] ✏️ Harbinger drop AE ingredients (printed Silicone for example)
+- [x] 📖 Fix "Builders" quest
 - [ ] 📖 Improve messages "Player Obtained [...]" with `tellraw` command
+- [ ] 📖 /levelupTool use in quest reward
+- [x] 📖 Fix red color in PR quest
 - [ ] 🔴 Remove `Integrated Crafting`
+- [ ] 🔴 Remove `MineralTracker`
+- [ ] ⛑️ Add amount of blocks in Portal Spread message
+
+Useful Commands:
+`/spark tps, /list, /team info Krutoy242, /leaderboards ftbutilities:time_played, /leaderboards ftbquests:progress`
+
+```sh
+/bcore_ticktime
+/bcore_util regenchunk
+```
+
+### Myrmex trades ideas:
+```less
+
+DESERT:
+dr~1 ; forestry:fruits:1               ; 56-64 =>
+dr~1 ; forestry:fruits:2               ;  1-1  =>
+dr~1 ; forestry:fruits:4               ;  1-1  =>
+dr~1 ; forestry:fruits:6               ;  1-1  =>
+dr~2 ; forestry:butterfly_ge:0         ;  1-1  =>
+dr~3 ; thermalfoundation:material:832  ;  1-1  =>
+dr~4 ; forestry:propolis:0             ;  1-1  =>
+dr~5 ; forestry:propolis:2             ;  1-1  =>
+dr~6 ; forestry:crafting_material:5    ;  1-1  =>
+dr~7 ; tconstruct:edible:31            ;  1-1  =>
+dr~7 ; tconstruct:edible:32            ;  1-1  =>
+dr~7 ; tconstruct:edible:33            ;  1-1  =>
+
+JUNGLE:
+jr~1 ; forestry:fruits:0               ; 1-1 =>
+jr~1 ; forestry:fruits:3               ; 1-1 =>
+jr~1 ; forestry:fruits:5               ; 1-1 =>
+jr~1 ; forestry:fruits:6               ; 1-1 =>
+jr~2 ; forestry:butterfly_ge:0         ; 1-1 =>
+jr~3 ; thermalfoundation:material:833  ; 1-1 =>
+jr~4 ; forestry:propolis:1             ; 1-1 =>
+jr~5 ; forestry:propolis:3             ; 1-1 =>
+jr~6 ; forestry:crafting_material:5    ; 1-1 =>
+jr~7 ; tconstruct:edible:30            ; 1-1 =>
+jr~7 ; tconstruct:edible:34            ; 1-1 =>
+jr~7 ; tconstruct:edible:33            ; 1-1 =>
+
+OUTPUTS:
+ic2:crafting:23 // Scrap
+<tconevo:edible> // Raw meat
+<thermalfoundation:fertilizer:2>
+```
 
 ---
 
@@ -25,6 +77,7 @@
 
 Planned non-urgent changes, or just good ideas:
 
+- [ ] ✏️ Add more seeds compat for Graden Cloche https://github.com/michelegargiulo/ZenCloche/wiki
 - [ ] 🔨 fix Invincible Combo `Strength Of Will` + `Runic Shield`
 - [ ] ✏️ Fix Health boost potion recipe (one from gold ingot)
 - [ ] 📖 Add new `Conflux VI` level based on 100% trophy completion
