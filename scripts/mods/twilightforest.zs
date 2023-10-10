@@ -405,7 +405,7 @@ mods.thaumcraft.ArcaneWorkbench.registerShapedRecipe(
   "M ▬ M",
   "  M  "], {
   "M": <botania:biomestonea:*>, # Metamorphic Swamp Stone
-  "▬": <ore:ingotPlutonium242All>, # Plutonium-242
+  "▬": <ore:dustAlugentum>,
 }).shaped());
 
 # [Auroralized Glass] from [Aurora Block][+1]
