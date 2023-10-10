@@ -265,6 +265,7 @@ setOreBlocks(0, -1, <ore:sand>, [<blockstate:minecraft:soul_sand>]);
 setStates(0, -1, [<blockstate:minecraft:sea_lantern>], [<blockstate:minecraft:glowstone>]);
 setStates(0, -1, [<blockstate:minecraft:mossy_cobblestone>], [<blockstate:minecraft:magma>]);
 setBlocks(0, -1, [<blockstate:minecraft:vine>], [<blockstate:minecraft:air>]);
+setBlocks(0, -1, [<blockstate:minecraft:wooden_door>], [<blockstate:minecraft:air>]);
 setBlocks(0, -1, [<blockstate:minecraft:ice>], [<blockstate:minecraft:obsidian>]);
 setBlocks(0, -1, [
   <blockstate:minecraft:brick_block>,
@@ -282,7 +283,6 @@ setStates(0, -1, [
 ]);
 
 setBlocks(0, -1, [<blockstate:floralchemy:hedge>], [<blockstate:twilightforest:thorns>]);
-setBlocks(0, -1, [<blockstate:minecraft:wooden_door>], [<blockstate:minecraft:iron_bars>]);
 setBlocks(0, -1, [<blockstate:minecraft:wooden_slab>], [<blockstate:minecraft:stone_slab:variant=nether_brick>]);
 setStates(0, -1, [
   <blockstate:minecraft:stone_slab:half=bottom,variant=stone_brick>,
