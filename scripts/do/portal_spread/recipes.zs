@@ -333,7 +333,6 @@ if(!isNull(loadedMods['netherendingores'])) {
     <blockstate:netherendingores:ore_nether_vanilla:blocks=iron_ore>,
   ]);
   setStates(0, -1, [<blockstate:minecraft:iron_ore>], [<blockstate:netherendingores:ore_nether_modded_1:blocks=aluminum_ore>]);
-  setStates(0, -1, [<blockstate:astralsorcery:blockcustomore:oretype=rock_crystal>], [<blockstate:netherendingores:ore_nether_modded_1:blocks=platinum_ore>]);
 
   setStates(0, -1, [<blockstate:forestry:resources:resource=apatite>], [<blockstate:netherendingores:ore_nether_modded_1:blocks=tin_ore>]);
   setStates(0, -1, [<blockstate:immersiveengineering:ore:type=uranium>], [<blockstate:netherendingores:ore_nether_modded_1:blocks=copper_ore>]);
