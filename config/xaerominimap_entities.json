@@ -114,7 +114,8 @@
           "name": "gui.xaero_entity_category_hostile",
           "protection": true,
           "settingOverrides": {
-            "renderOrder": 3.0
+            "renderOrder": 3.0,
+            "color": 4.0
           },
           "subCategories": [
             {
@@ -151,7 +152,40 @@
               "name": "gui.xaero_entity_category_friendly_tamed",
               "protection": true,
               "settingOverrides": {
-                "renderOrder": 4.0
+                "renderOrder": 4.0,
+                "color": 10.0
+              },
+              "subCategories": [
+                {
+                  "hardInclude": "nothing",
+                  "includeList": [
+                    "rats:rat"
+                  ],
+                  "includeListInSuperCategory": true,
+                  "excludeMode": "ONLY",
+                  "excludeList": [],
+                  "name": "rat",
+                  "protection": false,
+                  "settingOverrides": {
+                    "displayed": true,
+                    "color": 6.0
+                  },
+                  "subCategories": []
+                }
+              ]
+            },
+            {
+              "hardInclude": "nothing",
+              "includeList": [
+                "forestry:butterflyge"
+              ],
+              "includeListInSuperCategory": true,
+              "excludeMode": "ONLY",
+              "excludeList": [],
+              "name": "butterflies",
+              "protection": false,
+              "settingOverrides": {
+                "displayed": false
               },
               "subCategories": []
             }
@@ -184,7 +218,24 @@
       "settingOverrides": {
         "color": 5.0
       },
-      "subCategories": []
+      "subCategories": [
+        {
+          "hardInclude": "nothing",
+          "includeList": [
+            "randomthings:eclipsedclock",
+            "randomthings:spectreilluminator"
+          ],
+          "includeListInSuperCategory": true,
+          "excludeMode": "ONLY",
+          "excludeList": [],
+          "name": "Invisible",
+          "protection": false,
+          "settingOverrides": {
+            "displayed": false
+          },
+          "subCategories": []
+        }
+      ]
     }
   ]
 }
