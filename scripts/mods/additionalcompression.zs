@@ -1,8 +1,8 @@
 #modloaded additionalcompression
 
 // Compressed blocks highly resistant to explosions
-<additionalcompression:charcoal_compressed:1>.asBlock().definition.resistance = 8;
-<additionalcompression:charcoal_compressed:2>.asBlock().definition.resistance = 9;
+<additionalcompression:charcoal_compressed:1>.asBlock().definition.resistance = <minecraft:obsidian>.asBlock().definition.resistance / 2;
+<additionalcompression:charcoal_compressed:2>.asBlock().definition.resistance = <minecraft:obsidian>.asBlock().definition.resistance;
 
 // Alternative Carbon Plates recipe
 mods.inworldcrafting.ExplosionCrafting.explodeBlockRecipe(<ic2:crafting:15>, <additionalcompression:charcoal_compressed:1>);
