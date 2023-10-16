@@ -59,7 +59,7 @@ val rockRecycleTable as IItemStack[][IIngredient] = {
 <twilightforest:underbrick>          |
 <twilightforest:underbrick:1>        |
 <twilightforest:underbrick:2>        |
-<twilightforest:underbrick:3>        : [<ic2:dust:1>, <thermalfoundation:material:772>, <enderio:item_material:74>],
+<twilightforest:underbrick:3>        : [<ic2:dust:1>, <thermalfoundation:material:772>, <nuclearcraft:dust:3>],
 <twilightforest:castle_rune_brick>   : [<randomthings:runedust:6>, <thermalfoundation:material:72>, <nuclearcraft:compound>],
 <twilightforest:castle_rune_brick:3> : [<randomthings:runedust:10>, <thermalfoundation:material:72>, <nuclearcraft:compound>],
 <twilightforest:castle_rune_brick:1> : [<randomthings:runedust:11>, <thermalfoundation:material:72>, <nuclearcraft:compound>],
