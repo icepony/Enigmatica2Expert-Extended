@@ -29,8 +29,12 @@ val mainHand = crafttweaker.entity.IEntityEquipmentSlot.mainHand();
 
 events.onPlayerInteractEntity(function(e as crafttweaker.event.PlayerInteractEntityEvent){
   if(
+    # Player must be sneaking
     !e.player.isSneaking
+    # Player must be targeting another player
     || !e.target instanceof IPlayer
+    # Fix https://github.com/Krutoy242/Enigmatica2Expert-Extended/issues/280
+    || e.player.fake
   ) return;
 
   val item = e.player.getItemInSlot(mainHand);
