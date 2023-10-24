@@ -183,15 +183,6 @@ utils.addEnchRecipe(<endreborn:ender_sword>,
   "▬": <ore:ingotEndorium>,           # Endorium Ingot
 }).shaped());
 
-# [Xorcite Cluster]*64 from [Broken Sword Part][+1]
-craft.remake(<endreborn:dragon_essence> * 64, ["pretty",
-  "1 1 1",
-  "1 B 1",
-  "1 1 1"], {
-  "1": <ore:compressed1xEndStone>, # Compressed End Stone
-  "B": <endreborn:sword_shard>,    # Broken Sword Part
-});
-
 # [Materializer] from [Broken Sword Part][+3]
 craft.remake(<endreborn:entropy_user>, ["pretty",
   "§ ▬ §",
