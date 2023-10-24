@@ -19,14 +19,14 @@ import crafttweaker.item.IItemStack;
 # Infinity Ingot
 	mods.avaritia.ExtremeCrafting.remove(<avaritia:resource:6>);
 	mods.extendedcrafting.TableCrafting.addShaped(0, <avaritia:resource:6>, [
-	[<ore:ingotCosmicNeutronium>, <ore:ingotCosmicNeutronium>, <ore:ingotCosmicNeutronium>, <ore:ingotCosmicNeutronium>, <ore:ingotCosmicNeutronium>, <ore:ingotCosmicNeutronium>, <ore:ingotCosmicNeutronium>, <ore:ingotCosmicNeutronium>, <ore:ingotCosmicNeutronium>], 
-	[<ore:ingotCosmicNeutronium>, <ore:ingotCrystalMatrix>, <avaritia:resource:5>, <avaritia:resource:5>, <extendedcrafting:singularity_ultimate>, <avaritia:resource:5>, <avaritia:resource:5>, <ore:ingotCrystalMatrix>, <ore:ingotCosmicNeutronium>], 
-	[<ore:ingotCosmicNeutronium>, <avaritia:resource:5>, <ore:ingotCrystalMatrix>, <ore:ingotCrystalMatrix>, <avaritia:resource:5>, <ore:ingotCrystalMatrix>, <ore:ingotCrystalMatrix>, <avaritia:resource:5>, <ore:ingotCosmicNeutronium>], 
-	[<ore:ingotCosmicNeutronium>, <ore:ingotCrystalMatrix>, <avaritia:resource:5>, <avaritia:resource:5>, <extendedcrafting:singularity_ultimate>, <avaritia:resource:5>, <avaritia:resource:5>, <ore:ingotCrystalMatrix>, <ore:ingotCosmicNeutronium>], 
-	[<ore:ingotCosmicNeutronium>, <ore:ingotCosmicNeutronium>, <ore:ingotCosmicNeutronium>, <ore:ingotCosmicNeutronium>, <ore:ingotCosmicNeutronium>, <ore:ingotCosmicNeutronium>, <ore:ingotCosmicNeutronium>, <ore:ingotCosmicNeutronium>, <ore:ingotCosmicNeutronium>], 
-	[null, null, null, null, null, null, null, null, null], 
-	[null, null, null, null, null, null, null, null, null], 
-	[null, null, null, null, null, null, null, null, null], 
+	[<ore:ingotCosmicNeutronium>, <ore:ingotCosmicNeutronium>, <ore:ingotCosmicNeutronium>, <ore:ingotCosmicNeutronium>, <ore:ingotCosmicNeutronium>, <ore:ingotCosmicNeutronium>, <ore:ingotCosmicNeutronium>, <ore:ingotCosmicNeutronium>, <ore:ingotCosmicNeutronium>],
+	[<ore:ingotCosmicNeutronium>, <ore:ingotCrystalMatrix>, <avaritia:resource:5>, <avaritia:resource:5>, <extendedcrafting:singularity_ultimate>, <avaritia:resource:5>, <avaritia:resource:5>, <ore:ingotCrystalMatrix>, <ore:ingotCosmicNeutronium>],
+	[<ore:ingotCosmicNeutronium>, <avaritia:resource:5>, <ore:ingotCrystalMatrix>, <ore:ingotCrystalMatrix>, <avaritia:resource:5>, <ore:ingotCrystalMatrix>, <ore:ingotCrystalMatrix>, <avaritia:resource:5>, <ore:ingotCosmicNeutronium>],
+	[<ore:ingotCosmicNeutronium>, <ore:ingotCrystalMatrix>, <avaritia:resource:5>, <avaritia:resource:5>, <extendedcrafting:singularity_ultimate>, <avaritia:resource:5>, <avaritia:resource:5>, <ore:ingotCrystalMatrix>, <ore:ingotCosmicNeutronium>],
+	[<ore:ingotCosmicNeutronium>, <ore:ingotCosmicNeutronium>, <ore:ingotCosmicNeutronium>, <ore:ingotCosmicNeutronium>, <ore:ingotCosmicNeutronium>, <ore:ingotCosmicNeutronium>, <ore:ingotCosmicNeutronium>, <ore:ingotCosmicNeutronium>, <ore:ingotCosmicNeutronium>],
+	[null, null, null, null, null, null, null, null, null],
+	[null, null, null, null, null, null, null, null, null],
+	[null, null, null, null, null, null, null, null, null],
 	[null, null, null, null, null, null, null, null, null]
 	]);
 
@@ -50,22 +50,22 @@ craft.make(<avaritia:neutron_collector>, ["pretty",
 
 # Infinity Catalyst
 	mods.avaritia.ExtremeCrafting.remove(<avaritia:resource:5>);
-	mods.extendedcrafting.TableCrafting.addShapeless(0, <avaritia:resource:5>, 
-	[<avaritia:ultimate_stew>, <avaritia:endest_pearl>, <ore:gemBenitoite>, 
-	<ore:tokenOrIdolFlag>, 	<ore:gemAnglesite>, <darkutils:shulker_pearl>, <avaritia:cosmic_meatballs>, 
-	<quark:soul_bead>, 	<ore:slimecrystalPink>, <ore:plateElite>, <bloodmagic:demon_crystal>, 
-	<ore:dragonEgg>, 	<scalinghealth:heartcontainer>, 
+	mods.extendedcrafting.TableCrafting.addShapeless(0, <avaritia:resource:5>,
+	[<avaritia:ultimate_stew>, <avaritia:endest_pearl>, <ore:gemBenitoite>,
+	<ore:tokenOrIdolFlag>, 	<ore:gemAnglesite>, <darkutils:shulker_pearl>, <avaritia:cosmic_meatballs>,
+	<quark:soul_bead>, 	<ore:slimecrystalPink>, <ore:plateElite>, <bloodmagic:demon_crystal>,
+	<ore:dragonEgg>, 	<scalinghealth:heartcontainer>,
 	<rustic:fluid_bottle>.withTag({Fluid: {FluidName: "wine", Amount: 1000, Tag: {Quality: 1 as float}}}),
-	<ore:blockWither>, <ore:blockAethium>, 	<ore:blockCosmicNeutronium>, <extendedcrafting:storage:7>, 
-	<ore:blockEvilMetal>, <ore:blockCoalCoke>, 	<ore:compressed3xDustBedrock>, <tconstruct:firewood:1>, 
-	<ore:blockVividAlloy>, <ore:blockAmethyst>, 	<randomthings:spectreilluminator>, 
-	<twilightforest:block_storage:4>, <ore:blockSupremium>, <ore:blockDilithium>, 	
-	<ore:blockCrystalMatrix>, <ore:blockEnderium>, <deepmoblearning:infused_ingot_block>, 	
+	<ore:blockWither>, <ore:blockAethium>, 	<ore:blockCosmicNeutronium>, <extendedcrafting:storage:7>,
+	<ore:blockEvilMetal>, <ore:blockCoalCoke>, 	<ore:compressed3xDustBedrock>, <tconstruct:firewood:1>,
+	<ore:blockVividAlloy>, <ore:blockAmethyst>, 	<randomthings:spectreilluminator>,
+	<twilightforest:block_storage:4>, <ore:blockSupremium>, <ore:blockDilithium>,
+	<ore:blockCrystalMatrix>, <ore:blockEnderium>, <deepmoblearning:infused_ingot_block>,
 	<contenttweaker:terrestrial_artifact_block>, <extrautils2:decorativesolid:6>, <appliedenergistics2:fluix_block>,
-	<draconicevolution:draconium_block:1>, <ore:blockMyrmexResin>, 
+	<draconicevolution:draconium_block:1>, <ore:blockMyrmexResin>,
 	<advancedrocketry:hotturf>, <forestry:bee_combs_0>, <ore:blockBoundMetal>,
 	<ore:blockAstralStarmetal>, <ore:blockOsgloglas>, <ore:blockMirion>, <ore:blockTrinitite>]);
-	
+
 # [Endest Pearl] from [Pristine Enderman Matter][+5]
 mods.avaritia.ExtremeCrafting.remove(<avaritia:endest_pearl>);
 craft.make(<avaritia:endest_pearl>, ["pretty",
@@ -83,7 +83,7 @@ craft.make(<avaritia:endest_pearl>, ["pretty",
   "▬": <ore:ingotEndorium>,                        # Endorium Ingot
   "-": <ore:ingotEndSteel>,                        # End Steel Ingot
 });
-	
+
 # [Skullfire Sword] from [Obsidian Skull][+6]
 mods.avaritia.ExtremeCrafting.remove(<avaritia:skullfire_sword>);
 craft.make(<avaritia:skullfire_sword>, ["pretty",
@@ -165,7 +165,7 @@ mods.extendedcrafting.TableCrafting.addShapeless(
     utils.tryCatch('twilightforest:raw_meef'         , <minecraft:beef>),
 /**/
 ]);
-		
+
 # Neutronium Ingot
 	var ni = <ore:ingotCosmicNeutronium>;
 # Infinity Catalyst
@@ -174,10 +174,10 @@ mods.extendedcrafting.TableCrafting.addShapeless(
 	var ii = <ore:ingotInfinity>;
 # Crystal Matrix
 	var cm = <ore:blockCrystalMatrix>;
-	
+
 # Infinity Armor
-	mods.extendedcrafting.TableCrafting.addShaped(0, 
-	<avaritia:infinity_helmet>, 
+	mods.extendedcrafting.TableCrafting.addShaped(0,
+	<avaritia:infinity_helmet>,
 	[
 	[null, null, ni, ni, ni, ni, ni, null, null],
 	[null, ni, ii, ii, ii, ii, ii, ni, null],
@@ -190,8 +190,8 @@ mods.extendedcrafting.TableCrafting.addShapeless(
 	[null, null, null, null, null, null, null, null, null]
 	]);
 
-	mods.extendedcrafting.TableCrafting.addShaped(0, 
-	<avaritia:infinity_chestplate>, 
+	mods.extendedcrafting.TableCrafting.addShaped(0,
+	<avaritia:infinity_chestplate>,
 	[
 	[null, ni, ni, null, null, null, ni, ni, null],
 	[ni, ni, ni, null, null, null, ni, ni, ni],
@@ -204,8 +204,8 @@ mods.extendedcrafting.TableCrafting.addShapeless(
 	[null, null, ni, ni, ni, ni, ni, null, null]
 	]);
 
-	mods.extendedcrafting.TableCrafting.addShaped(0, 
-	<avaritia:infinity_pants>, 
+	mods.extendedcrafting.TableCrafting.addShaped(0,
+	<avaritia:infinity_pants>,
 	[
 	[ni, ni, ni, ni, ni, ni, ni, ni, ni],
 	[ni, ii, ii, ii, <draconicevolution:draconic_legs>.anyDamage(), ii, ii, ii, ni],
@@ -218,8 +218,8 @@ mods.extendedcrafting.TableCrafting.addShapeless(
 	[ni, ni, ni, null, null, null, ni, ni, ni]
 	]);
 
-	mods.extendedcrafting.TableCrafting.addShaped(0, 
-	<avaritia:infinity_boots>, 
+	mods.extendedcrafting.TableCrafting.addShaped(0,
+	<avaritia:infinity_boots>,
 	[
 	[null, ni, ni, ni, null, ni, ni, ni, null],
 	[null, ni, ii, ni, null, ni, ii, ni, null],
@@ -233,8 +233,8 @@ mods.extendedcrafting.TableCrafting.addShapeless(
 	]);
 
 # Infinity Sword
-	mods.extendedcrafting.TableCrafting.addShaped(0, 
-	<avaritia:infinity_sword>, 
+	mods.extendedcrafting.TableCrafting.addShaped(0,
+	<avaritia:infinity_sword>,
 	[
 	[null, null, null, null, null, null, null, ii, ii],
 	[null, null, null, null, null, null, ii, ii, ii],
@@ -246,10 +246,10 @@ mods.extendedcrafting.TableCrafting.addShapeless(
 	[null, ni, null, null, cm, null, null, null, null],
 	[ic, null, null, null, null, null, null, null, null]
 	]);
-	
+
 # Infinity Bow
-	mods.extendedcrafting.TableCrafting.addShaped(0, 
-	<avaritia:infinity_bow>, 
+	mods.extendedcrafting.TableCrafting.addShaped(0,
+	<avaritia:infinity_bow>,
 	[
 	[null, null, null, ii, ii, null, null, null, null],
 	[null, null, ii, null, <ore:blockRockwool>, null, null, null, null],
@@ -261,10 +261,10 @@ mods.extendedcrafting.TableCrafting.addShapeless(
 	[null, null, ii, null, <ore:blockRockwool>, null, null, null, null],
 	[null, null, null, ii, ii, null, null, null, null]
 	]);
-	
+
 # Infinity Pickaxe
-	mods.extendedcrafting.TableCrafting.addShaped(0, 
-	<avaritia:infinity_pickaxe>.withTag({ench: [{lvl: 10 as short, id: 35 as short}]}), 
+	mods.extendedcrafting.TableCrafting.addShaped(0,
+	<avaritia:infinity_pickaxe>.withTag({ench: [{lvl: 10 as short, id: 35 as short}]}),
 	[
 	[null, ii, ii, ii, ii, ii, ii, ii, null],
 	[ii, ii, ii, ii, cm, ii, ii, ii, ii],
@@ -276,10 +276,10 @@ mods.extendedcrafting.TableCrafting.addShapeless(
 	[null, null, null, null, ni, null, null, null, null],
 	[null, null, null, null, ni, null, null, null, null]
 	]);
-	
+
 # Infinity Shovel
-	mods.extendedcrafting.TableCrafting.addShaped(0, 
-	<avaritia:infinity_shovel>, 
+	mods.extendedcrafting.TableCrafting.addShaped(0,
+	<avaritia:infinity_shovel>,
 	[
 	[null, null, null, null, null, null, ii, ii, ii],
 	[null, null, null, null, null, ii, ii, <ore:blockInfinity>, ii],
@@ -291,10 +291,10 @@ mods.extendedcrafting.TableCrafting.addShapeless(
 	[null, ni, null, null, null, null, null, null, null],
 	[ni, null, null, null, null, null, null, null, null]
 	]);
-	
+
 # Infinity Axe
-	mods.extendedcrafting.TableCrafting.addShaped(0, 
-	<avaritia:infinity_axe>, 
+	mods.extendedcrafting.TableCrafting.addShaped(0,
+	<avaritia:infinity_axe>,
 	[
 	[null, null, null, ii, null, null, null, null, null],
 	[null, null, ii, ii, ii, ii, ii, null, null],
@@ -306,10 +306,10 @@ mods.extendedcrafting.TableCrafting.addShapeless(
 	[null, null, null, null, null, null, ni, null, null],
 	[null, null, null, null, null, null, ni, null, null]
 	]);
-	
+
 # Infinity Hoe
-	mods.extendedcrafting.TableCrafting.addShaped(0, 
-	<avaritia:infinity_hoe>, 
+	mods.extendedcrafting.TableCrafting.addShaped(0,
+	<avaritia:infinity_hoe>,
 	[
 	[null, null, null, null, null, ni, null, null, null],
 	[null, ii, ii, ii, ii, ii, ii, null, null],
@@ -321,11 +321,11 @@ mods.extendedcrafting.TableCrafting.addShapeless(
 	[null, null, null, null, null, ni, null, null, null],
 	[null, null, null, null, null, ni, null, null, null]
 	]);
-	
+
 	recipes.remove(<avaritia:extreme_crafting_table>);
-	mods.extendedcrafting.CombinationCrafting.addRecipe(<avaritia:extreme_crafting_table>, 
-	100000000, 1000000, <vaultopic:vice>, 
-	[<avaritia:resource:1>, <avaritia:resource:1>, <extendedcrafting:material:12>, 
+	mods.extendedcrafting.CombinationCrafting.addRecipe(<avaritia:extreme_crafting_table>,
+	100000000, 1000000, <vaultopic:vice>,
+	[<avaritia:resource:1>, <avaritia:resource:1>, <extendedcrafting:material:12>,
 	<extendedcrafting:material:12>, <avaritia:resource:1>, <avaritia:resource:1>]);
 
 
