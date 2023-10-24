@@ -89,17 +89,6 @@ mods.tconstruct.Casting.addBasinRecipe(<endreborn:block_essence_ore>, <endreborn
 # Add missed ore => ingot
 mods.immersiveengineering.ArcFurnace.addRecipe(<endreborn:item_ingot_wolframium> * 2, <endreborn:block_wolframium_ore>, <immersiveengineering:material:7>, 20, 2048);
 
-# [Simple Machine Chassis] from [Hardened Cell Frame][+3]
-craft.remake(<enderio:item_material>, ["pretty",
-  "□ ¤ □",
-  "D ◘ D",
-  "□ ¤ □"], {
-  "□": <ore:plateTitaniumAluminide>,         # Titanium Aluminide Plate
-  "¤": <ore:gearIronInfinity>,               # Infinity Bimetal Gear
-  "D": <endreborn:block_decorative_lormyte>, # Decorative Lormyte Stone
-  "◘": <thermalexpansion:frame:129>,         # Hardened Cell Frame
-});
-
 # [Angel Feather] from [Blue Peacock Feather][+2]
 craft.remake(<endreborn:item_angel_feather>, ["pretty",
   "  D  ",
