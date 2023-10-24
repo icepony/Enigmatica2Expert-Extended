@@ -237,6 +237,7 @@ q.animals.piggybackpack.desc=§6肩托式背包§r能够让玩家§l背起§r生
 q.animals.monster_ball.desc=如果暴徒没有受到至少80%%的伤害，就不能捕获有20以上HP的暴徒。
 q.animals.garbage_pile.desc=§n垃圾堆§r可以用：\n§n被污染的食物§r + 8个§n其它§r不重复的五品。\n\n每个物品的§6价值§r会相乘。\n垃圾堆的产出基于物品的很多属性。\n一些属性会增加§6价值§r一些会减少。\n\n§2+§r 硬度\n§2+§r 挖掘等级\n§2+§r 燃烧时间\n§2+§r 附魔数量\n§2+§r 工具类型\n§2+§r 不可堆叠/堆叠数低\n§2+§r 具有NBT标签\n§2+§r 允许有损伤值\n§c-§r 原版物品\n§c-§r 是方块
 q.animals.cocoon_of_caprice.desc=在放置两分钟后，它将变成一个小动物。95%%的时间，茧会变成一个农场动物--羊、猪、牛、鸡或兔子（各19%%的机会）。奶牛有1%%的机会变成Mooshroom。5%%的时候，蚕茧会变成马、狼或Ocelot（各有1.7%%的机会）。绿宝石会使它产下一个小村民，而不是动物。每件物品将增加5%%的机会。
+q.animals.dragon_skull.desc=Weclome to Ice and Fire branch!\n\nAll mobs required by quests can be found in Overworld OR can be spawned without exploration.
 q.animals.rat_upgrade_basic.desc=§6老鼠升级：基础§r没有升级效果，它只不过是其他升级的材料。\n\n
 q.animals.rat_upgrade_gemcu.desc=就像其他升级一样，它可以在放在§6老鼠菜单§r的升级槽上使老鼠升级。\n\n
 q.animals.hippogryphs.name=河马象
