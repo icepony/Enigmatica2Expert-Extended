@@ -19,6 +19,49 @@ loottweaker.LootTweaker
   .getPool('main')
   .addItemEntryHelper(<littletiles:recipeadvanced>, 1, 0, [Functions.setCount(1, 3)], []);
 
+/////////////////////////////////////////
+// Better Questing Ram Drop
+/////////////////////////////////////////
+val garanteedPools = [
+  ['diamond', 'minecraft:diamond_block'],
+  ['iron', 'minecraft:iron_block'],
+  ['emerald', 'minecraft:emerald_block'],
+  ['gold', 'minecraft:gold_block'],
+  ['lapis', 'minecraft:lapis_block'],
+  // ['horn', 'twilightforest:crumble_horn'],
+  // ['trophy', 'twilightforest:trophy'],
+  // ['shader', 'minecraft:coal_block'],
+  // ['shader', 'minecraft:coal_block'],
+] as string[][];
+
+val newDrops = [
+  <thermalfoundation:storage:2>,
+  <plustic:osmiridiumblock>,
+  <actuallyadditions:block_misc:2>,
+  <thermalfoundation:storage_alloy>,
+  <extrautils2:simpledecorative>,
+  <twilightforest:crumble_horn>,
+  <twilightforest:trophy:8>,
+  <twilightforest:shader>.withTag({shader_type: "Questing Ram"}),
+  <twilightforest:shader_bag>.withTag({shader_rarity: "Twilight"}),
+] as IItemStack[];
+
+val ramTable = loottweaker.LootTweaker.getTable('twilightforest:entities/questing_ram_rewards');
+for i, poolTuple in garanteedPools {
+  val poolName = poolTuple[0];
+  val oldEntry = poolTuple[1];
+  val pool = ramTable.getPool(poolName);
+  pool.removeEntry(oldEntry);
+
+  if (newDrops.length <= i) {
+    logger.logWarning('Unable to change Questing Ram rewards - list smaller than removals');
+    continue;
+  }
+  pool.addItemEntry(newDrops[i], 1);
+}
+scripts.jei.entity_drop.add(<entity:twilightforest:quest_ram>, newDrops);
+/////////////////////////////////////////
+
 for tuple in [
   ['minecraft:sheep', 'twilightforest:bighorn_sheep'],
   ['minecraft:pig', 'twilightforest:wild_boar'],
