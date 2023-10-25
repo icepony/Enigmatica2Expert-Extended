@@ -1,9 +1,10 @@
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
+import crafttweaker.item.WeightedItemStack;
+import crafttweaker.liquid.ILiquidStack;
 import crafttweaker.oredict.IOreDict;
 import crafttweaker.oredict.IOreDictEntry;
-import crafttweaker.liquid.ILiquidStack;
-import crafttweaker.item.WeightedItemStack;
+import loottweaker.vanilla.loot.Functions;
 
 scripts.lib.loot.tweak("twilightforest:entities/helmet_crab", "fish", "minecraft:fish", null, [<harvestcraft:crabrawitem>], [1,3]);
 scripts.lib.loot.tweak("twilightforest:entities/deer"       , "meat", "twilightforest:raw_venison", <twilightforest:raw_venison>, [<harvestcraft:venisonrawitem>], [1,3]);
@@ -392,6 +393,7 @@ mods.tconstruct.Alloy.addRecipe(<liquid:lava> * 250,       [<liquid:fiery_essenc
 <entity:twilightforest:wraith>.addDrop(<enderio:block_holier_fog>, 10, 40);
 <entity:twilightforest:tower_broodling>.addPlayerOnlyDrop(<plustic:osgloglasnugget> % 50, 1, 3);
 <entity:twilightforest:tower_golem>.addPlayerOnlyDrop(<mekanism:enrichedalloy> % 50, 1, 2);
+<entity:twilightforest:harbinger_cube>.addDrop(<appliedenergistics2:material:20>, 1, 3);
 
 # [Aurora Block]*4 from [Plutonium-242][+4]
 mods.thaumcraft.ArcaneWorkbench.registerShapedRecipe(

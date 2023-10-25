@@ -277,6 +277,7 @@ return list.map(({ groups: { id, display, items } }) => {
   add(<entity:twilightforest:giant_miner>             , [<twilightforest:giant_pickaxe> * 100]); // Giant Miner
 # add(<entity:twilightforest:goblin_knight_lower>     , []); // Lower Goblin Knight
   add(<entity:twilightforest:goblin_knight_upper>     , [<twilightforest:armor_shard> * 89]); // Upper Goblin Knight
+  add(<entity:twilightforest:harbinger_cube>          , [<appliedenergistics2:material:20> * 200]);
   add(<entity:twilightforest:hedge_spider>            , [<minecraft:arrow> * 2, <minecraft:bone> * 1, <minecraft:spider_eye> * 39, <minecraft:string> * 93]); // Hedge Spider
   add(<entity:twilightforest:helmet_crab>             , [<harvestcraft:crabrawitem> * 94, <twilightforest:armor_shard> * 97]); // Helmet Crab
   add(<entity:twilightforest:hostile_wolf>            , [utils.get('betteranimalsplus:wolf_pelt_snowy', 0, 94)]); // Hostile Wolf
