@@ -63,9 +63,6 @@ function getStatus(world as IWorld) as string {
   return prefix ~ '§7Maximum radius§8: §f' ~
     scripts.do.portal_spread.utils.MAX_R ~ '\n'
 
-  ~ prefix ~ '§7Total cached points§8: §f' ~
-    totalCachedPoints ~ '\n'
-
   ~ prefix ~ '§7#Portals in this dim§8: §f' ~
     scripts.do.portal_spread.data.getPortalCount(world) ~ '\n'
 
