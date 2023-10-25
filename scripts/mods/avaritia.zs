@@ -1,4 +1,6 @@
 import crafttweaker.item.IItemStack;
+import crafttweaker.data.IData;
+
 #modloaded avaritia
 
 # *======= Recipes =======*
@@ -347,9 +349,8 @@ craft.shapeless(<avaritia:compressed_crafting_table>, "wwwwwwwww", {
 });
 
 // -------------------------------------------------------------------
-# Burn singularity
+# Singularity
 // -------------------------------------------------------------------
-
 # [Empty Singularity] from [Block of Black Iron][+2]
 craft.remake(<avaritia:singularity>, ["pretty",
   "    ▬ ▬  ",
@@ -362,11 +363,13 @@ craft.remake(<avaritia:singularity>, ["pretty",
   "■": <ore:blockBlackIron>,          # Block of Black Iron
 });
 
-val A = <*>.only(function(item) { return item.burnTime > 0; });
+// -------------------------------------------------------------------
+# Burn singularity
+// -------------------------------------------------------------------
+var A = <*>.only(function(item) { return item.burnTime > 0; });
 val E = <avaritia:singularity>; // Empty Singularity
-val F = <avaritia:singularity:9>; // Filling Singularity
-val R = <avaritia:singularity:12>; // Result Singularity
-
+var F = <avaritia:singularity:9>; // Filling Singularity
+var R = <avaritia:singularity:12>; // Result Singularity
 F.addAdvancedTooltip(function(item) {
 	val charge = isNull(item.tag.charge) ? 0.0 : item.tag.charge.asDouble();
   return "§fCharge: §6" ~ charge as int ~ '§r';
@@ -418,4 +421,146 @@ function(out, ins, cInfo) {
 			.updateTag({charge: charge})
 		: E;
 }, null);
+
+// -------------------------------------------------------------------
+// Woodweave
+// -------------------------------------------------------------------
+A = <ore:plankFireproof>; // Any Fireproof Plank
+F = <avaritia:singularity:4>; // Bark Singularity
+R = <avaritia:singularity:1>; // Woodweave singularity
+
+val needPower = pow(10.0, 9.0);
+
+scripts.lib.tooltip.desc.jei(F, "singularity.bark", maxBonus * 100.0 as int, needCharge as int);
+scripts.lib.tooltip.desc.jei(R, "singularity.woodweave", maxBonus * 100.0 as int, needCharge as int);
+
+function getPower(median as double, length as double) as double {
+	return (median * pow(2.0, length - 1));
+}
+
+function getMapLength(map as IData) as int {
+	var length = 0;
+	for _ in map.asMap() { length += 1; }
+	return length;
+}
+
+function getMedian(values as int[]) as int {
+	if(values.length == 0) return 0;
+	if(values.length == 1) return values[0];
+	mods.ctintegration.util.ArrayUtil.sort(values);
+  val mid = values.length / 2;
+  if (values.length % 2 == 0) return (values[mid - 1] + values[mid]) / 2;
+  else return values[mid];
+}
+
+function getIntMapMedian(map as IData, length as int) as int {
+	if(length <= 0) return 0;
+	var i = 0;
+	val values = intArrayOf(length, 0);
+	for _, value in map.asMap() {
+		values[i] = value;
+		i += 1;
+	}
+	return getMedian(values);
+}
+
+function getFireproofPower(item as IItemStack) as double {
+	if(isNull(item.tag.singularity)) return 0.0;
+	if(isNull(item.tag.singularity.asMap())) return 0.0;
+	val length = getMapLength(item.tag.singularity);
+	val median = getIntMapMedian(item.tag.singularity, length);
+
+	return getPower(median, length);
+}
+
+F.addAdvancedTooltip(function(item) {
+  return "§fPower: §6" ~ getFireproofPower(item) as int ~ '§r';
+});
+
+// Actual recipe
+recipes.addShaped('Woodweave Singularity', R, [
+	[(E | F).marked('g0'),A.marked('g1'),A.marked('g2')],
+	[A.marked('g3'),A.marked('g4'),A.marked('g5')],
+	[A.marked('g6'),A.marked('g7'),A.marked('g8')],
+],
+function(out, ins, cInfo) {
+	val newMap = {} as int[string];
+	var length = 0;
+
+	// Add already existing values
+	if(!isNull(ins.g0.tag.singularity) && !isNull(ins.g0.tag.singularity.asMap())) {
+		for plank, value in ins.g0.tag.singularity.asMap() {
+			newMap[plank] = value;
+			length += 1;
+		}
+	}
+
+	// Add new values
+	for i in 1 to 9 {
+		val key = ins["g"~i].definition.id ~ ':' ~ ins["g"~i].damage;
+		if(isNull(newMap[key])) {
+			newMap[key] = 1;
+			length += 1;
+		} else {
+			newMap[key] = newMap[key] as int + 1;
+		}
+	}
+
+	// Calculate median value
+	val values = intArrayOf(length, 0);
+	var i = 0;
+	for _, v in newMap { values[i] = v as int; i += 1; }
+	var median = getMedian(values);
+
+	// Calculate power
+	val power = getPower(median, length);
+
+	if(power >= needPower) return out;
+
+	// Create new singularity data
+	var singularity = !isNull(ins.g0.tag.singularity) ? ins.g0.tag.singularity : {};
+	for i, v in newMap { singularity += {[i]: v as int} as IData; }
+
+	return F.updateTag({singularity: singularity});
+}, null);
+
+events.onPlayerInteractBlock(function(e as crafttweaker.event.PlayerInteractBlockEvent) {
+  if(
+    isNull(e)
+    || isNull(e.player.world)
+    || e.player.world.remote
+    || isNull(e.item)
+    || e.item.definition.id != "avaritia:singularity"
+		|| e.item.damage != 4
+    || !e.item.hasTag
+    || isNull(e.item.tag.singularity)
+    || isNull(e.item.tag.singularity.asMap())
+  ) return;
+
+	var s = '';
+	var values = [] as int[];
+	for itemStr, value in e.item.tag.singularity.asMap() {
+		val split = itemStr.split(':');
+		val item = itemUtils.getItem(split[0]~':'~split[1], split[2] as int);
+		if (isNull(item)) continue;
+		values += value;
+		s += ',{"text":"' ~ (value as int) ~ 'x "},'~utils.tellrawItem(item, 'white', false)~',{"text":"\n"}';
+	}
+
+	if(values.length <= 0) return;
+
+	val median = getMedian(values);
+
+	utils.tellrawSend(e.player,
+     '{"translate":"Planks stored in singularity:","color":"dark_green"},{"text":"\n"}'
+    ~ s
+
+		~',{"translate":"Total types of wood:","color":"dark_green"}'
+    ~',{"text":" '~values.length~'\n","color":"green"}'
+
+		~',{"translate":"Median amount of planks:","color":"dark_green"}'
+    ~',{"text":" '~median~'\n","color":"green"}'
+  );
+});
+
 // -------------------------------------------------------------------

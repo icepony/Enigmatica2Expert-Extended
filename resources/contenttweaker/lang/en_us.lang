@@ -77,6 +77,7 @@ item.contenttweaker.bee_diversity.name=Bee Diversity Store
 
 e2ee.tconstruct.material.spectre.name=Spectre
 e2ee.tconstruct.material.spectre.description=§bSpectral\nEach part gives additional Reach potion effect
+e2ee.tconstruct.material.fireproof.name=Fireproof
 e2ee.tconstruct.material.mentor.name=Mentor
 e2ee.tconstruct.material.mentor.description=§oPower of knowledge\n§rEach hit consumes 1 XP level (for each part) but deals additional √(XP * parts) damage
 e2ee.tconstruct.material.apprentice.name=Apprentice
@@ -137,13 +138,26 @@ warp.sword.speak.kill.5=§o§5And another sacrifice for J'zahar
 warp.sword.speak.kill.6=§o§5Just like in abyss... Another dead fool!
 warp.sword.speak.kill.7=§o§5J'zahar will be pleased with another soul
 
-item.singularity.silver.name=§bFur Singularity
+##################################
+# Singularities
+##################################
 item.singularity.iron.name=§7Empty Singularity
+
+# Burn singularity
+item.singularity.silver.name=§bFur Singularity
 item.singularity.nickel.name=§eHeat Singularity
 item.singularity.fluxed.name=§4Burn Singularity
 tooltips.lang.singularity.heat=§7Intermediate ingredient.§r\nCombine with §lany burnable§r material to add a charge.\nWhen using burnable materials with different burning times, their effectiveness is §lincreased by up to %s%%§r.\nNeed §6%s§r charge.
 tooltips.lang.singularity.burn=Combine with §lany burnable§r material to add a charge.\nWhen using burnable materials with different burning times, their effectiveness is §lincreased by up to %s%%§r.\nNeed §6%s§r charge.
 item.contenttweaker.any_burnable.name=§6Any burnable
+
+# Wood singularity
+item.singularity.quartz.name=§eBark Singilarity
+item.singularity.gold.name=§cWoodweave Singularity
+tooltips.lang.singularity.bark=§7Intermediate ingredient.§r\nCombine with §6any fireproof planks§r to increase power.\nThe §6variety§r of plank types increases the power exponentially. Power is calculated by the formula §aM*2^(N-1)§r, where §aM§r is the median number of planks, §aN§r is the number of plank types.\n§2§nRight-Click§2 on something to see list of planks.
+tooltips.lang.singularity.woodweave=Combine with §6any fireproof planks§r to increase power.\nThe §6variety§r of plank types increases the power exponentially. Power is calculated by the formula §aM*2^(N-1)§r, where §aM§r is the median number of planks, §aN§r is the number of plank types.
+item.contenttweaker.any_fireproof.name=§6Any Fireproof Plank
+##################################
 
 # Custom renames
 item.excompressum:bait_unknown.name=Any Bait
