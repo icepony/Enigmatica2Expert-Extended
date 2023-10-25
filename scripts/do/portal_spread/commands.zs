@@ -28,7 +28,6 @@ cmd.getCommandUsage = function(sender) { return
 val tabCompletion as mods.zenutils.command.IGetTabCompletion = function(server, sender, pos) {
   return mods.zenutils.StringList.create([
     "status"
-    // TODO: add "list" command to show all portal info such as loaded and modifiers
   ]);
 };
 cmd.tabCompletionGetters = [tabCompletion];
