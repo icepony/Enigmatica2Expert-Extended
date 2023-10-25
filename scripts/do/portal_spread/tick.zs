@@ -30,6 +30,7 @@ static MODIF as int[string] = scripts.do.portal_spread.modifiers.MODIF;
 
 static spreadDelay as double = scripts.do.portal_spread.config.spreadDelay;
 static blockChecks as int = scripts.do.portal_spread.config.blockChecks;
+static dimHasRecipes as bool[int] = scripts.do.portal_spread.recipes.dimHasRecipes;
 
 ////////////////////////////////////////////////////
 
@@ -46,7 +47,9 @@ events.onPortalSpawn(function(e as crafttweaker.event.PortalSpawnEvent) {
 // Convert blocks around portal
 events.onWorldTick(function(e as crafttweaker.event.WorldTickEvent){
   if(e.world.remote || e.phase != "END") return;
-  if(e.world.dimension != 0) return;
+  if(isNull(dimHasRecipes[e.world.dimension])) return;
+  val fallback = scripts.do.portal_spread.recipes.dimFallbacks[e.world.dimension];
+  val currDimNumId = !isNull(fallback) ? (fallback as int) : e.world.dimension;
 
   // Skip ticks
   val spreadDelayInt = spreadDelay as int;
@@ -58,10 +61,10 @@ events.onWorldTick(function(e as crafttweaker.event.WorldTickEvent){
     // -------------------------------
     // Get userful maps from recipes
     val idInt = dimId as int;
-    val spreadStateRecipes = scripts.do.portal_spread.recipes.getRecipes(e.world.dimension, idInt);
-    val _spreadWhitelist = scripts.do.portal_spread.recipes.transformableBlockNumIds[e.world.dimension];
-    val _spreadBlacklist = scripts.do.portal_spread.recipes.blacklistedBlockNumIds[e.world.dimension];
-    val _spreadWildcards = scripts.do.portal_spread.recipes.wildcardedNumIds[e.world.dimension];
+    val spreadStateRecipes = scripts.do.portal_spread.recipes.getRecipes(currDimNumId, idInt);
+    val _spreadWhitelist = scripts.do.portal_spread.recipes.transformableBlockNumIds[currDimNumId];
+    val _spreadBlacklist = scripts.do.portal_spread.recipes.blacklistedBlockNumIds[currDimNumId];
+    val _spreadWildcards = scripts.do.portal_spread.recipes.wildcardedNumIds[currDimNumId];
 
     if (
       isNull(spreadStateRecipes)
