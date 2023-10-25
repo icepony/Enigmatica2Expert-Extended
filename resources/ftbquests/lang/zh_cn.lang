@@ -271,6 +271,7 @@ q.animals.cheese_marble.name=奶酪大理石
 q.animals.cheese_marble.desc=只能在§6鼠西洲§0获取。
 q.animals.plague_doctorate.desc=将村民转化为瘟疫医生。\n\n§3提示：§r\n瘟疫医生可以治愈僵尸村民。\n被雷击后转化为黑死神。
 q.animals.gem_of_ratlantis.desc=合成材料
+q.animals.conglomerate_of_sun.desc=Randomly speed up animals growth in 8 blocks radius.
 q.animals.black_death.name=黑死神
 q.animals.black_death.desc=黑死神是一个boss，它召唤很多怪物保护它，而且能够在它触及范围内传播瘟疫并造成大破坏。\n\n用 §3闪电§r 击中 §0瘟疫医生§r，将其转化为 §0黑死病§r。
 q.animals.golden_egg.desc=金蛋使金鸡，当你用本土金簇喂养它们时，它们会产下金锭。

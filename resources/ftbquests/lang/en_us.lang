@@ -271,6 +271,7 @@ q.animals.cheese_marble.name=Cheese marble
 q.animals.cheese_marble.desc=Can be obtained only in §6Ratlantis
 q.animals.plague_doctorate.desc=Turn any villager into plague doctor.\n\n§3Tip:§r\nPlague Doctors can heal Zombie Villagers.\nStrike it with lightning to turn into Black Death.
 q.animals.gem_of_ratlantis.desc=Crafting ingredient
+q.animals.conglomerate_of_sun.desc=Randomly speed up animals growth in 8 blocks radius.
 q.animals.black_death.name=Black Death
 q.animals.black_death.desc=The Black Death is a boss mob that summons many other mobs to defend it, to spread plague and wreak havoc on any mob in its reach.\n\nStrike §0Plague Doctor§r with §3lightning§r to turn into §0Black Death§r.
 q.animals.golden_egg.desc=Golden egg makes golden chickens that lay gold ingots when you feed them with §6Native Gold Cluster

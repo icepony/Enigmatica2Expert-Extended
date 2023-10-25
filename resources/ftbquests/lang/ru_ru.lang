@@ -271,6 +271,7 @@ q.animals.cheese_marble.name=Сыр мраморный
 q.animals.cheese_marble.desc=Можно получить только в §6 Ratlantis
 q.animals.plague_doctorate.desc=Превратите любого жителя деревни в Чумного доктора.\n\n§3Совет:§r\nЧумные доктора могут лечить зомби-жителей.\nУдарьте его молнией, чтобы превратить в Черную смерть.
 q.animals.gem_of_ratlantis.desc=Ингредиент для крафта
+q.animals.conglomerate_of_sun.desc=Randomly speed up animals growth in 8 blocks radius.
 q.animals.black_death.name=Черная смерть
 q.animals.black_death.desc=Черная Смерть - это босс-моб, который призывает множество других мобов, чтобы защитить себя, чтобы сеять чуму и сеять хаос на всех мобах в пределах досягаемости.\n\nНанесите молнией §3Поджигателя§r, чтобы превратить его в §0Чуму§r.
 q.animals.golden_egg.desc=Золотое яйцо делает золотых цыплят, откладывающих золотые слитки, когда вы кормите их Золотыми Кластерами.
