@@ -9,6 +9,16 @@ import loottweaker.vanilla.loot.Functions;
 scripts.lib.loot.tweak("twilightforest:entities/helmet_crab", "fish", "minecraft:fish", null, [<harvestcraft:crabrawitem>], [1,3]);
 scripts.lib.loot.tweak("twilightforest:entities/deer"       , "meat", "twilightforest:raw_venison", <twilightforest:raw_venison>, [<harvestcraft:venisonrawitem>], [1,3]);
 
+// Add Little Blueprints to Aurora caches
+loottweaker.LootTweaker
+  .getTable('twilightforest:structures/aurora_cache/common')
+  .getPool('main')
+  .addItemEntryHelper(<littletiles:recipeadvanced>, 1, 0, [Functions.setCount(2, 6)], []);
+loottweaker.LootTweaker
+  .getTable('twilightforest:structures/aurora_room/common')
+  .getPool('main')
+  .addItemEntryHelper(<littletiles:recipeadvanced>, 1, 0, [Functions.setCount(1, 3)], []);
+
 for tuple in [
   ['minecraft:sheep', 'twilightforest:bighorn_sheep'],
   ['minecraft:pig', 'twilightforest:wild_boar'],
