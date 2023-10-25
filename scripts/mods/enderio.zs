@@ -348,6 +348,11 @@ solution([<ore:dustBedrock>, <ore:dustRedstone>                     ], [<liquid:
 # Fake iron -> Steel
 mods.mekanism.infuser.addRecipe("CARBON", 10, <enderio:item_alloy_ingot:9>, <mekanism:enrichediron>);
 
+// Fake Iron remove melting conversions
+mods.tconstruct.Melting.removeRecipe(<fluid:iron>, <immersiveengineering:conveyor>.withTag({conveyorType: "immersiveengineering:conveyor"}));
+mods.tconstruct.Melting.removeRecipe(<fluid:iron>, <iceandfire:chain_link>);
+mods.tconstruct.Melting.removeRecipe(<fluid:iron>, <immersiveengineering:drillhead:1>);
+
 # Oxidiser
 val ox as IIngredient = <ore:itemInfinityGoop>; # Infinity reagent
 
