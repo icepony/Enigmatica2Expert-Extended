@@ -10,7 +10,7 @@ recipes.addShapeless('Blood Magic Guide',
 for ingr in [
   <thaumcraft:stone_ancient_glyphed>,
   <extrautils2:decorativesolid:3>,
-] as IItemStack {
+] as IItemStack[] {
   # Rune of Speed
   recipes.remove(<bloodmagic:blood_rune:1>);
   recipes.addShaped("Rune of Speed", <bloodmagic:blood_rune:1>, 
