@@ -341,6 +341,13 @@ craft.make(<twilightforest:castle_brick>, ["pretty",
   "L": <twilightforest:lamp_of_cinders>.anyDamage().transformDamage(1), # Lamp of Cinders
 });
 
+# [Blue Castle Door] from [Yellow Rune][+5]
+craft.shapeless(<twilightforest:castle_door:3>, "LYC", {
+  "L": <twilightforest:lamp_of_cinders>.anyDamage().transformDamage(1), # Lamp of Cinders
+  "Y": <quark:rune:*>,                  # Yellow Rune
+  "C": <twilightforest:castle_brick:*>, # Castle Brick
+});
+
 val castleIngrs = {
   "C": <twilightforest:castle_brick:*>, # Castle Brick
   "▲": <ore:dustCalciumSulfate>,        # Calcium Sulfate
@@ -504,10 +511,3 @@ mods.thaumcraft.ArcaneWorkbench.registerShapedRecipe(
   "M": <minecraft:brown_mushroom_block>, # Mushroom
   "g": <ore:glowstone>, # Glowstone
 }).shaped());
-
-# [Blue Castle Door] from [Yellow Rune][+5]
-craft.shapeless(<twilightforest:castle_door:3>, "LYC", {
-  "L": <twilightforest:lamp_of_cinders>.anyDamage().transformDamage(1), # Lamp of Cinders
-  "Y": <quark:rune:*>,                  # Yellow Rune
-  "C": <twilightforest:castle_brick:*>, # Castle Brick
-});
