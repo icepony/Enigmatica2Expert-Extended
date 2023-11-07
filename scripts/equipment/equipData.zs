@@ -1,6 +1,8 @@
 #priority 10
+#reloadable
 
 import crafttweaker.data.IData;
+import crafttweaker.item.IItemStack;
 import mods.zentoolforge.Toolforge;
 
 # ######################################################################
@@ -546,3 +548,22 @@ static armDefinitions as string[][] = [
   ],
   ["tconstruct:battlesign"]
 ] as string[][];
+
+// How much materials required for each tool or armour
+static matsRequired as int[string] = {} as int[string];
+function addMatRequirment(item as IItemStack) as void {
+  if(!item.hasTag) return;
+  val len = D(item.tag).get("TinkerData.Materials", {d:[]}).asList().length;
+  if(len <= 0) return;
+  matsRequired[item.definition.id] = len;
+}
+function getMatsRequired(matName as string) as int {
+  if(isNull(matsRequired.__initialized)) {
+    for modName in ['tconstruct', 'conarm', 'tconevo'] as string[] {
+      for item in loadedMods[modName].items { addMatRequirment(item); }
+    }
+    matsRequired['__initialized'] = 1;
+  }
+  val len = matsRequired[matName];
+  return isNull(len) ? 0 : len as int;
+}
