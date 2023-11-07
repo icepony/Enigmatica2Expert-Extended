@@ -462,6 +462,17 @@ craft.remake(<libvulpes:productfan:6>, ["pretty",
   "╱": <ore:stickSteel>, # Steel Rod
 });
 
+# [Nuclear Thermal Fission Core] from [Solid Fuel Fission Controller][+3]
+craft.remake(<advancedrocketry:nuclearcore>, ["pretty",
+  "M P M",
+  "B S B",
+  "M P M"], {
+  "M": <libvulpes:structuremachine>,            # Machine Structure
+  "P": <advancedrocketry:liquidtank>,           # Pressurized Tank
+  "B": <ore:processorBasic>,                    # Basic Processor
+  "S": <nuclearcraft:solid_fission_controller>, # Solid Fuel Fission Controller
+});
+
 # Some Alts with advanced machines
 scripts.processUtils.avdRockXmlRecipeEx("ChemicalReactor", [<ore:dustSulfur> * 30], [<fluid:oxygen> * 1500], null, [<fluid:sulfuric_acid> * 3000], {power: 140000, timeRequired: 15});
 scripts.processUtils.avdRockXmlRecipe("Crystallizer", [<ore:dustFluorite> * 6], [<fluid:sulfuric_acid> * 6000], [<nuclearcraft:compound> * 6], null);
