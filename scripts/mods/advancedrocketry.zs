@@ -174,10 +174,11 @@ for i in 0 .. 6 {
   val energy = 5000000 * (i+1);
   mods.qmd.target_chamber.addRecipe(
     <ore:gemDilithium>,
+    null,
     (<particle:proton>*2000000)^(5000000 * (i+1)),
     <advancedrocketry:crystal>.definition.makeStack(i),
-    null, null, null,
-    5000000 * (i+2), 1.0, 0, 0
+    null, null, null, null,
+    5000000 * (i+2), 1.0, 0
   );
 }
 
