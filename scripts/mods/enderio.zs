@@ -286,7 +286,7 @@ mods.immersiveengineering.ArcFurnace.addRecipe(<enderio:item_material:72>, <ore:
 recipes.remove(<enderio:item_material:22> * 8);
 makeEx(<enderio:item_material:22> * 24, [
 	[<ore:dust>, <ore:dustEndstone>, <ore:dust>],
-	[<ore:dustClay>, <liquid:sand> * 1000, <ore:dustClay>],
+	[<ore:dustClay>, LiquidIngr('sand'), <ore:dustClay>],
 	[<ore:dust>, <ore:dustEndstone>, <ore:dust>]]);
 
 # And remake binder as compost
