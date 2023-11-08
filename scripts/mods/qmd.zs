@@ -250,7 +250,6 @@ utils.rh(<qmd:chemical_dust:2>);
 ////////////////////////////////////////
 
 mods.nuclearcraft.Melter.removeRecipeWithOutput(<fluid:mercury> * 144);
-mods.nuclearcraft.IngotFormer.removeRecipeWithInput(<fluid:mercury> * 144);
 mods.qmd.nucleosynthesis_chamber.removeRecipeWithInput(<fluid:gold> * 144, null, (<particle:neutron>*13980000)~1);
 mods.qmd.nucleosynthesis_chamber.addRecipe(<fluid:gold> * 144, null, (<particle:neutron>*13980000)~1, <liquid:fluid_quicksilver>*144, null, 10000000, 3610);
 mods.qmd.nucleosynthesis_chamber.removeRecipeWithInput(<fluid:mercury> * 144, null, (<particle:neutron>*16940000)~1);
@@ -266,9 +265,6 @@ mods.qmd.nucleosynthesis_chamber_heater.addRecipe(<liquid:fluid_quicksilver>, <f
 // https://github.com/Filostorm/Multiblock-Madness/blob/19659008c64234f96d5607df3f9ca6df7adee778/scripts/Non%20Mod%20Scripts/unification.zs#L150-L301
 
 // New Ore Leacher Recipes
-mods.qmd.ore_leacher.removeRecipeWithOutput(<minecraft:redstone> * 12, <qmd:ingot2:2> * 3, null);
-mods.qmd.ore_leacher.removeRecipeWithOutput(<qmd:ingot2:2>, <thermalfoundation:material:771>, null);
-
 mods.qmd.ore_leacher.addRecipe(<ore:oreRedstone>, <liquid:nitric_acid>*16, <liquid:hydrochloric_acid>*16, <liquid:sulfuric_acid>*16, <minecraft:redstone>*12, <thaumcraft:quicksilver>*3, null, 1.0, 1.0, 0);
 mods.qmd.ore_leacher.addRecipe(<ore:dustRedstone>, <liquid:nitric_acid>*16, <liquid:hydrochloric_acid>*16, <liquid:sulfuric_acid>*16, 
 ChanceItemIngredient.create(<thaumcraft:quicksilver>, 50, 0), 
@@ -276,24 +272,6 @@ ChanceItemIngredient.create(<thermalfoundation:material:771>, 50, 0),
 null, 1.0, 1.0, 0.001);
 
 // New Fuel Reprocessor Recipes
-val fuelstorewrite =
-[
-<qmd:waste_spallation:1>,
-<qmd:waste_spallation:2>,
-<qmd:waste_spallation:3>,
-<qmd:waste_spallation:4>,
-<qmd:waste_spallation:5>,
-<qmd:waste_spallation:6>,
-<qmd:waste_spallation:8>,
-<qmd:waste_spallation:7>,
-<qmd:waste_spallation:9>
-]
- as IItemStack[];
-
-for item in fuelstorewrite {
-	mods.nuclearcraft.FuelReprocessor.removeRecipeWithInput(item);
-}
-
 mods.nuclearcraft.FuelReprocessor.addRecipe(<qmd:waste_spallation:1>, 
 ChanceItemIngredient.create(<nuclearcraft:fission_dust:1>, 9, 0), 
 ChanceItemIngredient.create(<nuclearcraft:fission_dust:2>, 15, 0), 
@@ -385,13 +363,6 @@ null,
 null);
 
 // New Target Chamber Recipes
-mods.qmd.target_chamber.removeRecipeWithInput(<qmd:ingot2:2>, (<particle:proton>*50000000)^200000);
-mods.qmd.target_chamber.removeRecipeWithInput(<qmd:ingot2:2>, (<particle:proton>*5000000)^6580000);
-mods.qmd.target_chamber.removeRecipeWithInput(<qmd:ingot2:2>, (<particle:proton>*5000000)^1540000);
-mods.qmd.target_chamber.removeRecipeWithInput(<qmd:ingot2:2>, <particle:antiproton>*1000000);
-mods.qmd.target_chamber.removeRecipeWithInput(<qmd:ingot2:2>, (<particle:deuteron>*10000000)^13100000);
-mods.qmd.target_chamber.removeRecipeWithInput(<qmd:ingot2:2>, <particle:antideuteron>*1000000);
-
 mods.qmd.target_chamber.addRecipe(<thaumcraft:quicksilver>, null, (<particle:proton>*50000000)^200000, <qmd:waste_fission>, null,
 null, <particle:neutron>, null, 
 1000000, 0.02, 0);
