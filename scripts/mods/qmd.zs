@@ -230,6 +230,11 @@ remakeTarget(<qmd:ingot>, (<particle:antideuteron>*10000000)     , TG, <qmd:wast
 // Melt tungsten misssed recipe
 scripts.process.melt(<endreborn:item_ingot_wolframium>, <fluid:tungsten> * 144);
 
+// Cast missing recipe
+mods.tconstruct.Casting.addTableRecipe(<endreborn:wolframium_nugget>, <tconstruct:cast_custom:1>, <liquid:tungsten>, 16, false, 40);
+mods.tconstruct.Casting.addTableRecipe(<endreborn:item_ingot_wolframium>, <tconstruct:cast_custom>, <liquid:tungsten>, 144, false, 200);
+mods.tconstruct.Casting.addBasinRecipe(<endreborn:block_wolframium>, null, <liquid:tungsten>, 1296, false, 800);
+
 # Sodium Chlorde (salt)
 mods.nuclearcraft.Crystallizer.removeRecipeWithOutput(<qmd:chemical_dust:3>);
 mods.nuclearcraft.Crystallizer.addRecipe(<fluid:sodium_chloride_solution> * 666, <mekanism:salt>);
