@@ -1,3 +1,9 @@
+[main/ERROR] [Bansoukou]: Throwing
+java.io.FileNotFoundException: mc2discord-forge-1.12.2-3.3.0.jar does not exist in mods folder!
+	at zone.rong.bansoukou.BansoukouCoreMod.getPatchFile(BansoukouCoreMod.java:198) [_bansoukou-4.3.1.jar:1]
+	at zone.rong.bansoukou.BansoukouCoreMod.<init>(BansoukouCoreMod.java:61) [_bansoukou-4.3.1.jar:1]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_352]
+  [...]
 [main/WARN] [mixin]: Reference map 'mixins.zenrecipereloading.refmap.json' for mixins.zenrecipereloading.json could not be read. If this is a development environment you can ignore this message
 [main/WARN] [mixin]: Error loading class: net/optifine/CustomColors (java.lang.ClassNotFoundException: The specified class 'net.optifine.CustomColors' was not found)
 [main/WARN] [mixin]: @Mixin target net.optifine.CustomColors was not found mixins.betterbiomeblend.json:MixinCustomColors from mod unknown-owner
@@ -17,24 +23,6 @@ java.lang.IllegalArgumentException: null
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:168) ~[asm-debug-all-5.2.jar:5.2]
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
   [...]
-[Client thread/ERROR] [FML]: There was a problem reading the entry module-info.class in the jar E:\mc_client\GDLuncher\instances\E2E-E\minecraft\mods\PrecisionMining-1.12.2-5.1.jar - probably a corrupt zip
-net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
-
-	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
-	at net.minecraftforge.fml.common.discovery.JarDiscoverer.redirect$zlf000$redirectNewASMModParser(JarDiscoverer.java:561) ~[JarDiscoverer.class:?]
-  [...]
-[Client thread/WARN] [FML]: Zip file PrecisionMining-1.12.2-5.1.jar failed to read properly, it will be ignored
-net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
-
-	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
-	at net.minecraftforge.fml.common.discovery.JarDiscoverer.redirect$zlf000$redirectNewASMModParser(JarDiscoverer.java:561) ~[JarDiscoverer.class:?]
-  [...]
-[Client thread/ERROR] [FML]: Unable to read a class file correctly
-java.lang.IllegalArgumentException: null
-	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:185) ~[asm-debug-all-5.2.jar:5.2]
-	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:168) ~[asm-debug-all-5.2.jar:5.2]
-	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
-  [...]
 [Client thread/ERROR] [FML]: There was a problem reading the entry META-INF/versions/9/module-info.class in the jar E:\mc_client\GDLuncher\instances\E2E-E\minecraft\mods\ProbeZS-1.17.5.jar - probably a corrupt zip
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
@@ -47,25 +35,19 @@ net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentExceptio
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
 	at net.minecraftforge.fml.common.discovery.JarDiscoverer.redirect$zlf000$redirectNewASMModParser(JarDiscoverer.java:561) ~[JarDiscoverer.class:?]
   [...]
-[Client thread/WARN] [mixin]: Reference map 'mixins.probezs.refmap.json' for mixins.probezs.json could not be read. If this is a development environment you can ignore this message
 [Client thread/WARN] [mixin]: Reference map 'mixins.zenrecipereloading.refmap.json' for mixins.zenrecipereloading.crafttweaker.json could not be read. If this is a development environment you can ignore this message
 [Client thread/WARN] [mixin]: Reference map 'mixins.zenrecipereloading.refmap.json' for mixins.zenrecipereloading.jei.json could not be read. If this is a development environment you can ignore this message
 [Client thread/WARN] [mixin]: Reference map 'mixins.zenrecipereloading.refmap.json' for mixins.zenrecipereloading.modtweaker.json could not be read. If this is a development environment you can ignore this message
 [Client thread/WARN] [mixin]: Reference map 'mixins.zenrecipereloading.refmap.json' for mixins.zenrecipereloading.forestry.json could not be read. If this is a development environment you can ignore this message
 [Client thread/WARN] [mixin]: Reference map 'mixins.zenrecipereloading.refmap.json' for mixins.zenrecipereloading.avaritia.json could not be read. If this is a development environment you can ignore this message
 [Client thread/WARN] [mixin]: Reference map 'mixins.zenrecipereloading.refmap.json' for mixins.zenrecipereloading.tconstruct.json could not be read. If this is a development environment you can ignore this message
+[Client thread/WARN] [mixin]: Reference map 'mixins.probezs.refmap.json' for mixins.probezs.json could not be read. If this is a development environment you can ignore this message
 [Client thread/WARN] [mixin]: @Mixin target com.feed_the_beast.mods.ftbultimine.client.FTBUltimineClient was not found mixins.randomtweaker.mods.json:ftbultimine.MixinFTBUltimineClient from mod unknown-owner
 [Client thread/WARN] [net.minecraft.network.datasync.EntityDataManager]: defineId called for: class net.minecraft.entity.item.EntityMinecartFurnace from class com.lothrazar.cyclicmagic.item.minecart.EntityGoldFurnaceMinecart
 [Client thread/WARN] [net.minecraft.network.datasync.EntityDataManager]: defineId called for: class net.minecraft.entity.monster.EntitySlime from class teamroots.emberroot.entity.slime.EntityRainbowSlime
 [Client thread/WARN] [net.minecraft.network.datasync.EntityDataManager]: defineId called for: class malte0811.industrialwires.entities.EntityBrokenPart from class malte0811.industrialwires.IndustrialWires
 [Client thread/WARN] [net.minecraft.network.datasync.EntityDataManager]: defineId called for: class com.github.alexthe666.iceandfire.entity.EntityDreadThrall from class com.github.alexthe666.iceandfire.entity.EntityDreadKnight
 [Client thread/WARN] [net.minecraft.network.datasync.EntityDataManager]: defineId called for: class com.github.alexthe666.rats.server.entity.EntityFeralRatlantean from class com.github.alexthe666.rats.server.entity.EntityNeoRatlantean
-[Client thread/WARN] [bedrockores]: Failed reading 'overrides.json'.
-com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_ARRAY but was STRING at path $
-	at com.google.gson.Gson.fromJson(Gson.java:899) ~[Gson.class:?]
-	at com.google.gson.Gson.fromJson(Gson.java:952) ~[Gson.class:?]
-	at com.google.gson.internal.bind.TreeTypeAdapter$GsonContextImpl.deserialize(TreeTypeAdapter.java:162) ~[TreeTypeAdapter$GsonContextImpl.class:?]
-  [...]
 [Client thread/ERROR] [Had Enough Items]: An interpreter is already registered for this item: exnihilocreatio.modules.tconstruct.tools.SledgeHammer@xxxxxxxx
 java.lang.IllegalArgumentException: null
 	at mezz.jei.runtime.SubtypeRegistry.registerSubtypeInterpreter(SubtypeRegistry.java:46) [SubtypeRegistry.class:?]
@@ -88,9 +70,9 @@ java.lang.IllegalArgumentException: Invalid ingredient found. Parameter Name: in
 	at mezz.jei.startup.ModRegistry.addIngredientInfo(ModRegistry.java:260) ~[ModRegistry.class:?]
 	at mezz.jei.startup.ModRegistry.addIngredientInfo(ModRegistry.java:271) ~[ModRegistry.class:?]
   [...]
+[Client thread/ERROR] [Had Enough Items]: A Recipe Handler has already been registered for this recipe class: com.github.alexthe666.rats.server.recipes.SharedRecipe
+[Client thread/ERROR] [Had Enough Items]: A Recipe Handler has already been registered for this recipe class: com.github.alexthe666.rats.server.recipes.SharedRecipe
 [Client thread/ERROR] [Had Enough Items]: A Recipe Handler has already been registered for this recipe class: com.github.alexthe666.iceandfire.recipe.DragonForgeRecipe
-[Client thread/ERROR] [Had Enough Items]: A Recipe Handler has already been registered for this recipe class: com.github.alexthe666.rats.server.recipes.SharedRecipe
-[Client thread/ERROR] [Had Enough Items]: A Recipe Handler has already been registered for this recipe class: com.github.alexthe666.rats.server.recipes.SharedRecipe
 [Client thread/WARN] [LoliASM]: Clearing LoliVertexDataPool
 [Client thread/ERROR] [FML.TEXTURE_ERRORS]: +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
 [Client thread/ERROR] [FML.TEXTURE_ERRORS]: The following texture errors were found.
