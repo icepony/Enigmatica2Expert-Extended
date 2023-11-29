@@ -179,7 +179,6 @@ addLootList(
 	<ic2:dust:23> : 10,
 	<ic2:dust:26> : 8,
 	<ic2:dust:31> : 2,
-	<ic2:dust:36> : 2,
 }, 1, 10);
 
 addLootList(
