@@ -1,6 +1,34 @@
 import crafttweaker.item.IItemStack;
 #modloaded bloodmagic
 
+# Blood Orb Oredicts
+  <ore:orbTier1>.add(<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:weak"}));
+  <ore:orbTier1>.add(<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:apprentice"}));
+  <ore:orbTier1>.add(<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:magician"}));
+  <ore:orbTier1>.add(<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:master"}));
+  <ore:orbTier1>.add(<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:archmage"}));
+  <ore:orbTier1>.add(<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:transcendent"}));
+  
+  <ore:orbTier2>.add(<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:apprentice"}));
+  <ore:orbTier2>.add(<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:magician"}));
+  <ore:orbTier2>.add(<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:master"}));
+  <ore:orbTier2>.add(<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:archmage"}));
+  <ore:orbTier2>.add(<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:transcendent"}));
+
+  <ore:orbTier3>.add(<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:magician"}));
+  <ore:orbTier3>.add(<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:master"}));
+  <ore:orbTier3>.add(<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:archmage"}));
+  <ore:orbTier3>.add(<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:transcendent"}));
+
+  <ore:orbTier4>.add(<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:master"}));
+  <ore:orbTier4>.add(<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:archmage"}));
+  <ore:orbTier4>.add(<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:transcendent"}));
+
+  <ore:orbTier5>.add(<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:archmage"}));
+  <ore:orbTier5>.add(<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:transcendent"}));
+
+  <ore:orbTier6>.add(<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:transcendent"}));
+
 // Blood Magic Guide
 recipes.addShapeless('Blood Magic Guide',
   <guideapi:bloodmagic-guide>,
@@ -135,34 +163,6 @@ craft.remake(<bloodmagic:blood_rune:6>, ["pretty",
   mods.bloodmagic.BloodAltar.removeRecipe(<minecraft:iron_sword>);
   mods.bloodmagic.BloodAltar.addRecipe(<bloodmagic:dagger_of_sacrifice>, 
   <thaumcraft:thaumium_sword>, 1, 3000, 12, 12);
-
-# Blood Orb Oredicts
-  <ore:orbTier1>.add(<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:weak"}));
-  <ore:orbTier1>.add(<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:apprentice"}));
-  <ore:orbTier1>.add(<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:magician"}));
-  <ore:orbTier1>.add(<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:master"}));
-  <ore:orbTier1>.add(<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:archmage"}));
-  <ore:orbTier1>.add(<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:transcendent"}));
-  
-  <ore:orbTier2>.add(<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:apprentice"}));
-  <ore:orbTier2>.add(<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:magician"}));
-  <ore:orbTier2>.add(<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:master"}));
-  <ore:orbTier2>.add(<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:archmage"}));
-  <ore:orbTier2>.add(<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:transcendent"}));
-
-  <ore:orbTier3>.add(<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:magician"}));
-  <ore:orbTier3>.add(<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:master"}));
-  <ore:orbTier3>.add(<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:archmage"}));
-  <ore:orbTier3>.add(<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:transcendent"}));
-
-  <ore:orbTier4>.add(<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:master"}));
-  <ore:orbTier4>.add(<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:archmage"}));
-  <ore:orbTier4>.add(<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:transcendent"}));
-
-  <ore:orbTier5>.add(<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:archmage"}));
-  <ore:orbTier5>.add(<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:transcendent"}));
-
-  <ore:orbTier6>.add(<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:transcendent"}));
   
 # Remake recipe of blood tanks
 
