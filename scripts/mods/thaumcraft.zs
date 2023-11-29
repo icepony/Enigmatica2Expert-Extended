@@ -20,6 +20,10 @@ import loottweaker.vanilla.loot.Functions;
 furnace.addRecipe(<thaumcraft:quicksilver> * 2, <thaumcraft:cluster:6>);
 furnace.addRecipe(<thermalfoundation:material:131> * 2, <thaumcraft:cluster:5>);
 
+// Fix Infernal Furnace unchangeable nuggets output
+val NG = <thaumcraft:nugget:4>;
+recipes.addShapeless(<thermalfoundation:material:131>, [NG, NG, NG, NG, NG, NG, NG, NG, NG]);
+
 # Primordial Pearl alt (for some people who dont want to close rifts)
 mods.astralsorcery.Altar.addConstellationAltarRecipe(
   'Primordial Pearl alt', <thaumcraft:primordial_pearl>, 1500, 250, Grid([
