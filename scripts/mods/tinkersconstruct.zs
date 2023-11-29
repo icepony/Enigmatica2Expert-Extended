@@ -143,8 +143,6 @@ for out,inp in pressPlates {
 
 scripts.process.compress(<ore:blockQuartzBlack>, <tconstruct:large_plate>.withTag({Material: "black_quartz"}), "only: Compactor");
 
-	mods.immersiveengineering.MetalPress.addRecipe(<tconstruct:tool_rod>.withTag({Material: "ardite"}), <tconstruct:ingots:1>, <immersiveengineering:mold:2>, 4000, 1);
-
 # EFLN
 	recipes.remove(<tconstruct:throwball:1>);
 	recipes.addShapedMirrored("EFLN", 

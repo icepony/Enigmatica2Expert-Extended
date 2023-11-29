@@ -21,7 +21,7 @@
     "ingredients": [
       "nuclearcraft:gem",
       "thermalfoundation:material,1,513",
-      "tconstruct:tool_rod,1,0,{Material: ardite}",
+      "tconstruct:ingots,1,1",
       "quark:biome_cobblestone"
     ]
   },
@@ -52,7 +52,7 @@
     "catalyst": "actuallyadditions:block_crystal,1,3",
     "energy": 2500000,
     "tier": 0,
-    "ingredients": ["randomthings:ingredient,1,13", "extendedcrafting:storage", "ore:stoneBasalt", "appliedenergistics2:sky_stone_block"]
+    "ingredients": ["randomthings:ingredient,1,13", "extendedcrafting:storage", "contenttweaker:compressed_basalt", "appliedenergistics2:sky_stone_block"]
   },
   {
     "mode": "ADD",
@@ -61,10 +61,10 @@
     "energy": 500000,
     "tier": 0,
     "ingredients": [
-      "minecraft:dye,1,2",
-      "minecraft:emerald",
+      "minecraft:experience_bottle",
+      "actuallyadditions:item_dust,1,3",
       "nuclearcraft:dust,1,9",
-      "actuallyadditions:block_testifi_bucks_green_wall"
+      "immersiveengineering:stone_decoration,1,8"
     ]
   },
   {
