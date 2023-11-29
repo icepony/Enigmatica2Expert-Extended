@@ -20,7 +20,10 @@ function addRecipe(
   needPower as double
 ) as void {
   F.addAdvancedTooltip(function(item) {
-    return "§fPower: §6" ~ getFireproofPower(item) as int ~ '§r';
+    return mods.zenutils.I18n.format(
+      game.localize("e2ee.do.diverse.power"),
+      utils.formatNum(getFireproofPower(item))
+    );
   });
 
   // Actual recipe
@@ -64,7 +67,7 @@ function addRecipe(
     if(power >= needPower) return out;
 
     // Create new singularity data
-    var singularity = !isNull(ins.g0.tag.singularity) ? ins.g0.tag.singularity : {};
+    var singularity = !isNull(ins['0'].tag.singularity) ? ins['0'].tag.singularity : {};
     for i, v in newMap { singularity += {[i]: v as int} as IData; }
 
     return F.updateTag({singularity: singularity});
@@ -139,16 +142,8 @@ events.onPlayerInteractBlock(function(e as crafttweaker.event.PlayerInteractBloc
 
 	if(values.length <= 0) return;
 
-	val median = getMedian(values);
-	val data = [{
-		text: '',
-		color: 'dark_green',
-		extra: [
-			 { translate: 'Total types of wood: ', extra: [{ text: values.length~'\n', color: 'green' }]}
-			,{ translate: 'Median amount of planks: ', extra: [{ text: median~'\n', color: 'green' }]}
-			,{ translate: 'Planks stored in singularity:\n', extra: itemData + ['\n']}
-		]
-	}] as IData;
-	print(data.asString());
-	e.player.sendRichTextMessage(crafttweaker.text.ITextComponent.fromData(data));
+	e.player.sendRichTextMessage(crafttweaker.text.ITextComponent.fromData([{
+    translate: 'e2ee.do.diverse.info',
+    with: [values.length, getMedian(values), {text: '', extra: itemData}]
+  }]));
 });

@@ -1,3 +1,5 @@
+#PARSE_ESCAPES
+
 # Various fixes
 modifier.excompressum:smashingii.desc=Hammering compressed blocks
 tile.spectreCoil_number.info=Generates 32 RF/t and outputs it into the block it's attached to. They can be found in dungeon chests.
@@ -307,6 +309,9 @@ e2ee.written_book.Creeper=Creeper
 e2ee.written_book.Zombie=Zombie
 
 # Misc
+e2ee.do.charge=§fCharge: §6%s§r
+e2ee.do.diverse.power=§fPower: §6%s§r
+e2ee.do.diverse.info=§2Total types: §a%s§r\n§2Median amount: §a%s§r\n§2Items consumed by singularity:\n%s
 e2ee.otg.not_otg_biome=§2Cant TP to non-OTG biome with ID:§r §a§n%s§r§2. §8Try other Biome Essence.§r
 e2ee.otg.tp_to=§2Attempt teleport to:§r §a§n%s§r §8Wait until teleported or aborted.§r
 e2ee.otg.tp_finished=§2Teleporting finished.§r §8Try again if not teleported.§r

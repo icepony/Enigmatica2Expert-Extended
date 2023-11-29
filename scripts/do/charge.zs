@@ -22,7 +22,10 @@ function addRecipe(
 ) as void {
   F.addAdvancedTooltip(function(item) {
     val charge = isNull(item.tag.charge) ? 0.0 : item.tag.charge.asDouble();
-    return "§fCharge: §6" ~ charge as int ~ '§r';
+    return mods.zenutils.I18n.format(
+      game.localize("e2ee.do.charge"),
+      utils.formatNum(charge, '§8,§6')
+    );
   });
 
   val maxBonus = 10.0;
