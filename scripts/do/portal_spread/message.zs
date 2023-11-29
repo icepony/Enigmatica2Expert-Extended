@@ -9,13 +9,16 @@
 #reloadable
 #modloaded zenutils
 
+import crafttweaker.data.IData;
+import crafttweaker.item.IItemStack;
 import crafttweaker.player.IPlayer;
-import crafttweaker.text.ITextComponent.fromTranslation;
 import crafttweaker.text.ITextComponent.fromString;
+import crafttweaker.text.ITextComponent.fromTranslation;
 import crafttweaker.util.Position3f;
 import crafttweaker.world.IWorld;
 
 import scripts.do.portal_spread.config.Config;
+import scripts.do.portal_spread.utils.abs;
 
 // Stylazed icon of portal
 // static prefix as string = '§8[§5░§8] ';
@@ -23,25 +26,6 @@ static prefix as string = '\u00A78[\u00A75\u2591\u00A78] ';
 
 // Cube radius for messages send
 static payerNotifyDistance as int = 40;
-
-////////////////////////////////////////////////////////////////////////////
-// Localisation
-////////////////////////////////////////////////////////////////////////////
-for lang, entries in {
-  en_us: {
-    created : '§7The corrupted energy from the portal will slowly spread to §6%s§7 blocks around, unless %s are placed in the corners.',
-    broken  : '§7With the nether portal broken, no more corrupted energy is spreading.',
-  },
-  zh_cn: {
-    created : '§7来自下界传送门的腐化能量会缓慢扩散到传送门附近 §6%s§7 格的范围内，除非把 %s 放置在传送门的四个角落。',
-    broken  : '§7下界传送门已被破坏，腐化能量不再扩散。',
-  },
-} as string[string][string] {
-  for k, v in entries {
-    game.setLocalization(lang, 'portal_spread.'~k, v);
-  }
-}
-////////////////////////////////////////////////////////////////////////////
 
 function notifyPlayers(world as IWorld, p as Position3f, messageType as string) as void {
   for pl in world.getAllPlayers() {
@@ -54,29 +38,49 @@ function notifyPlayers(world as IWorld, p as Position3f, messageType as string) 
   }
 }
 
+function getModifierBlock(modifKey as string = null, amount as int = 1) as IItemStack {
+  var modifID as string = null;
+  for blockDef, blockMetas in Config.modifBlocksKey {
+    for meta, keys in blockMetas {
+      for key in keys {
+        if(!isNull(modifKey) && key != modifKey) continue;
+        val item = itemUtils.getItem(blockDef.id, meta);
+        return isNull(item) ? null : item * amount;
+      }
+    }
+  }
+  return null;
+}
+
 function playerMessage(player as IPlayer, messageType as string) as void {
-  val msgLang = 'portal_spread.'~messageType;
-  val maxRadius = Config.maxRadius as string;
+  var payload as IData = [];
 
   if (messageType == 'created') {
-    var modifID as string = null;
-    for def, key in Config.modifBlocksKey {
-      if(key != 'slow') continue;
-      modifID = def.id;
-    }
+    // TODO: message about actual modified radius
 
-    player.sendRichTextMessage(crafttweaker.text.ITextComponent.fromData([{
-      text: prefix
-    }, {
-      translate: msgLang,
-      with: [maxRadius, {
-        text: '',
-        extra: scripts.lib.tellraw.item(itemUtils.getItem(modifID) * 4, 'gold')
-      }],
-    }]));
+    payload = [Config.defaultRadius, {
+      text: '',
+      extra: scripts.lib.tellraw.item(getModifierBlock(null, 4), 'gold')
+    }];
   } else {
-    player.sendRichTextMessage(fromString(prefix) + fromTranslation(msgLang));
+    /* Modifiers can be messaged without blocks
+    val modifierKey = messageType.split('_')[0];
+    if (Config.modifiersList has modifierKey) {
+      payload = [{
+        text: '',
+        extra: scripts.lib.tellraw.item(getModifierBlock(modifierKey), 'gold')
+      }];
+    } */
   }
+
+  sendPortalMessage(player, {
+    translate: 'portal_spread.'~messageType,
+    with: payload,
+  });
+}
+
+function sendPortalMessage(player as IPlayer, rawData as IData) as void {
+  player.sendRichTextMessage(crafttweaker.text.ITextComponent.fromData([prefix, rawData]));
 }
 
 function log(s as string, world as IWorld = null) as void {
@@ -90,5 +94,3 @@ function log(s as string, world as IWorld = null) as void {
     pl.sendMessage(msg);
   }
 }
-
-function abs(n as double) as double { return n < 0 ? -n : n; }

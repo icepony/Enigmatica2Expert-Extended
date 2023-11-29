@@ -56,21 +56,21 @@ events.onWorldTick(function(e as crafttweaker.event.WorldTickEvent){
   val recipeDimId = !isNull(fallback) ? (fallback as int) : e.world.dimension;
 
   // Skip ticks for every portal
-  val spreadDelayInt = Config.spreadDelay;
+  val spreadDelayInt = Config.spreadDelay as int;
   if(spreadDelayInt > 1 && e.world.time % spreadDelayInt != 0) return;
 
-  for dimIdStr, dimData in getDimsMap(e.world).asMap() {
+  for targetDimIdStr, dimData in getDimsMap(e.world).asMap() {
     if(isNull(dimData) || isNull(dimData.asMap())) continue;
-    tickPortalsToWorld(e.world, dimIdStr, dimData, recipeDimId);
+    tickPortalsToWorld(e.world, targetDimIdStr, dimData, recipeDimId);
   }
 });
 
-function tickPortalsToWorld(world as IWorld, dimIdStr as string, dimData as IData, recipeDimId as int) as void {
+function tickPortalsToWorld(world as IWorld, targetDimIdStr as string, dimData as IData, recipeDimId as int) as void {
   // Get userful maps from recipes
-  val REC = scripts.do.portal_spread.recipes.getRecipes(recipeDimId, dimIdStr); if(isNull(REC)) return;
-  val WL = getNumIds('transformable', recipeDimId, dimIdStr); if(isNull(WL)) return;
-  val BL = getNumIds('blacklisted', recipeDimId, dimIdStr); if(isNull(BL)) return;
-  val WC = getNumIds('wildcarded', recipeDimId, dimIdStr); if(isNull(WC)) return;
+  val REC = scripts.do.portal_spread.recipes.getRecipes(recipeDimId, targetDimIdStr); if(isNull(REC)) return;
+  val WL = getNumIds('transformable', recipeDimId, targetDimIdStr); if(isNull(WL)) return;
+  val BL = getNumIds('blacklisted', recipeDimId, targetDimIdStr); if(isNull(BL)) return;
+  val WC = getNumIds('wildcarded', recipeDimId, targetDimIdStr); if(isNull(WC)) return;
   /*
       ████
     ██▒▒▒▒██
@@ -90,17 +90,24 @@ function tickPortalsToWorld(world as IWorld, dimIdStr as string, dimData as IDat
     // Portal is destroyed
     val fullPortalId = world.dimension~':'~portalId;
     if (isNull(blockState) || blockState.block.definition.id != "minecraft:portal") {
-      destroyPortal(world, dimIdStr, portalId, fullPortalId);
+      destroyPortal(world, targetDimIdStr, portalId, fullPortalId);
       notifyPlayers(world, portalPos, 'broken');
       continue;
     }
 
     // Get modifiers
-    val modifiers = getModifiers(world, fullPortalId, portalData, dimIdStr, blockPos, blockState, portalPos);
+    val modifiers = getModifiers(world, fullPortalId, portalData, targetDimIdStr, blockPos, blockState, portalPos);
+
+    // Skip if portal shrinked to zero size
+    val maxSpreadIndex = scripts.do.portal_spread.modifiers.getMaxSpreadIndex(modifiers);
+    if(maxSpreadIndex <= 0) continue;
 
     // Skip generation on slow modifier
-    val trueDelay = scripts.do.portal_spread.modifiers.getTrueDelay(world, modifiers);
+    val trueDelay = scripts.do.portal_spread.modifiers.getTrueDelay(modifiers);
     if(trueDelay <= 0) continue;
+
+    // Skip generation on slow modifier
+    if (trueDelay >= 1.0 && (world.time % (trueDelay as int)) != 0) continue;
 
     // Determine how many blocks could be transformed in one run
     val repeats = (1.0 / trueDelay) as int;
@@ -108,15 +115,17 @@ function tickPortalsToWorld(world as IWorld, dimIdStr as string, dimData as IDat
     // Show particles only if player nerbly
     var showParticles = isShowParticles(world, portalPos);
 
+    val trueLookup = scripts.do.portal_spread.modifiers.getTrueLookup(modifiers);
+    if(trueLookup <= 0) continue;
+
     // Repeat
     var somethingReplaced = false;
     for i in 0 .. repeats {
-      for j in 0 .. Config.blockChecks {
+      for j in 0 .. trueLookup {
+        val spreadPos = getNexPortalPos(fullPortalId, portalPos, maxSpreadIndex);
         if (spread(
           world,
-          fullPortalId,
-          portalPos,
-          modifiers,
+          spreadPos,
           showParticles,
           REC, WL, BL, WC
         )) {
@@ -125,7 +134,7 @@ function tickPortalsToWorld(world as IWorld, dimIdStr as string, dimData as IDat
         }
       }
     }
-    if(somethingReplaced) portalIndexes[fullPortalId] = 1;
+    if(somethingReplaced && !Config.debug) portalIndexes[fullPortalId] = 1;
   }
 }
 
@@ -133,9 +142,10 @@ function tickPortalsToWorld(world as IWorld, dimIdStr as string, dimData as IDat
 // Requre fullPortalID "dim:x:y:z"
 static portalIndexes as int[string] = {} as int[string];
 
-function getNexPortalPos(fullPortalId as string, offset as Position3f) as Position3f {
-  var i = portalIndexes[fullPortalId];
-  val tuple = getNextPoint(isNull(i) ? 1 : i as int);
+function getNexPortalPos(fullPortalId as string, offset as Position3f, maxSpreadIndex as int) as Position3f {
+  var _i = portalIndexes[fullPortalId];
+  val i = (isNull(_i) || _i >= maxSpreadIndex) ? 1 : _i as int;
+  val tuple = getNextPoint(i);
   portalIndexes[fullPortalId] = tuple[0];
   return Position3f.create(tuple[1] + offset.x, tuple[2] + offset.y, tuple[3] + offset.z);
 }
@@ -149,17 +159,13 @@ function destroyPortal(world as IWorld, dimId as string, portalId as string, ful
 // Return true if block converted, false if skipped / not found
 function spread(
   world as IWorld,
-  fullPortalId as string,
-  portalPos as Position3f,
-  modifiers as int[],
+  spreadPos as Position3f,
   showParticles as bool,
   spreadStateRecipes as IBlockState[][IBlockState],
   spreadWhitelist as bool[int],
   spreadBlacklist as bool[int],
   spreadWildcards as bool[int]
 ) as bool {
-  val spreadPos = getNexPortalPos(fullPortalId, portalPos);
-
   var inworldState = world.getBlockState(spreadPos);
   val inworldDefinition = inworldState.block.definition;
   val numId = inworldDefinition.numericalId;

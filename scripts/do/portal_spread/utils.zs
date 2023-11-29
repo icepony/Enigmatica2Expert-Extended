@@ -27,7 +27,9 @@ static MAX_DISTANCE_INDEXES as int = MAX_GROUP_SIZE * MAX_Z_VARIANTS * MAX_MIRRO
 static table_sum_of_two_squares_variants as int[][int][int] = {} as int[][int][int];
 
 // Create cache of points around portal to faster acces
+static initialized as bool = false;
 function init() as void {
+  initialized = true;
   for x in 0 .. (maxRadius+1) {
     for y in 0 .. (x+1) {
       val x2_y2 = x*x + y*y;
@@ -49,35 +51,29 @@ function init() as void {
   }
 }
 
-static initialized as bool = false;
-
 /*
   Returns [i, x, y, z] where i is next index
 */
 function getNextPoint(index as int) as int[] {
-  if(!initialized) {
-    initialized = true;
-    init();
-  }
+  if(!initialized) init();
 
   // Index is integer-packed [ distance_squared_3d, z, group_index, mirror_index ]
   // with dimensions (anything * MAX_Z_VARIANTS * MAX_GROUP_SIZE * MAX_MIRRORS)
   val distance_squared_3d = index / MAX_DISTANCE_INDEXES;
 
-  val distance_index = index % MAX_DISTANCE_INDEXES;
-  var z = distance_index / (MAX_GROUP_SIZE * MAX_MIRRORS);
-  val group_index = distance_index % (MAX_GROUP_SIZE * MAX_MIRRORS) / MAX_MIRRORS;
-  val mirror_index = distance_index % MAX_MIRRORS;
-
-  // --- --- ---
-
   # Loop back if reached end or max radius
   if (distance_squared_3d > maxRadius*maxRadius)
-    return getNextPoint(0);
+    return getNextPoint(1);
+
+  val distance_index = index % MAX_DISTANCE_INDEXES;
+  var z = distance_index / (MAX_GROUP_SIZE * MAX_MIRRORS);
 
   // Go to next z point
   if (z*z > distance_squared_3d)
     return getNextPoint((distance_squared_3d + 1) * MAX_DISTANCE_INDEXES);
+
+  val group_index = distance_index % (MAX_GROUP_SIZE * MAX_MIRRORS) / MAX_MIRRORS;
+  val mirror_index = distance_index % MAX_MIRRORS;
 
   val distance_squared_2d = distance_squared_3d - z*z;
   val z_group = table_sum_of_two_squares_variants[distance_squared_2d];
@@ -107,3 +103,5 @@ function getNextPoint(index as int) as int[] {
 
   return [index + next_mirror_index - mirror_index, x, y, z];
 }
+
+function abs(n as double) as double { return n < 0 ? -n : n; }
