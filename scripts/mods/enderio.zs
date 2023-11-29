@@ -914,3 +914,9 @@ addBrewAlt(<fluid:short.mead> * 2000, [<minecraft:skull:2>, <minecraft:sugar>], 
 addBrewAlt(<fluid:milk>       * 8000, [<rats:assorted_vegetables>, <additionalcompression:dustsugar_compressed:1>], 'hootch');
 addBrewAlt(<fluid:hootch>     * 2000, [<minecraft:blaze_powder>, <minecraft:redstone>], 'fire_water');
 addBrewAlt(<fluid:fire_water> * 2000, [<iceandfire:dread_shard>, <iceandfire:hydra_fang>, <iceandfire:shiny_scales>], 'syngas', <contenttweaker:blasted_coal>);
+
+// Simple machines recycle
+recipes.addShapeless(<enderio:item_material>, [<enderio:block_simple_furnace>.anyDamage()]);
+recipes.addShapeless(<enderio:item_material>, [<enderio:block_simple_alloy_smelter>.anyDamage()]);
+recipes.addShapeless(<enderio:item_material>, [<enderio:block_simple_stirling_generator>.anyDamage()]);
+recipes.addShapeless(<enderio:item_material>, [<enderio:block_simple_sag_mill>.anyDamage()]);
