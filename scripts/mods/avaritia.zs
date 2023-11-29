@@ -348,21 +348,6 @@ craft.shapeless(<avaritia:compressed_crafting_table>, "wwwwwwwww", {
 });
 
 // -------------------------------------------------------------------
-# Singularity
-// -------------------------------------------------------------------
-# [Empty Singularity] from [Block of Black Iron][+2]
-craft.remake(<avaritia:singularity>, ["pretty",
-  "    ▬ ▬  ",
-  "▬ ▲ ▲ ▲  ",
-  "▬ ▲ ■ ▲ ▬",
-  "  ▲ ▲ ▲ ▬",
-  "  ▬ ▬    "], {
-  "▬": <ore:ingotHeavy>,              # Heavy Ingot
-  "▲": <ore:compressed1xDustBedrock>, # Infinity Dust Block
-  "■": <ore:blockBlackIron>,          # Block of Black Iron
-});
-
-// -------------------------------------------------------------------
 # Burn singularity
 // -------------------------------------------------------------------
 val burnSingularity = <avaritia:singularity:12>; // Result Singularity
