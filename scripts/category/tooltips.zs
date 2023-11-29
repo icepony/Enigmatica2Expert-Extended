@@ -71,6 +71,7 @@ for item in [
   <twilightforest:transformation_powder>,
 /**/
 ] as IItemStack[] {
+	if(isNull(item)) continue;
 	desc.both(item);
 }
 
