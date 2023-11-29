@@ -486,32 +486,6 @@ for entry in armorEntitys.asList() {
   normalizedWeights[entry] = result;
 }
 
-static normDefs as IData[string] = {
-  armor: [],
-  tool: [],
-} as IData[string];
-static blacklistedMaterials as string[] = [
-  'paper',
-  'chocolate',
-  'ma.superium',
-  'ma.supremium',
-  'spectre',
-  'draconic_metal',
-  'neutronium',
-  'aethium',
-  'chaotic_metal',
-  'infinity_metal',
-];
-function normalizeDefaultList(list as int[string], field as string) as void {
-  for matName, _ in list {
-    if(blacklistedMaterials has matName) continue;
-    if(!isNull(Toolforge.getMaterialFromID(matName))) normDefs[field] = normDefs[field] + [matName] as IData;
-  }
-  utils.log("Valid default " ~ field ~ " materials: " ~ normDefs[field].asString());
-}
-normalizeDefaultList(defaultArmorMats, 'armor');
-normalizeDefaultList(defaultWeaponMats, 'tool');
-
 # -------------------------------
 # EQUIPMENT IDs
 # -------------------------------
