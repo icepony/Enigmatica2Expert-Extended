@@ -376,7 +376,6 @@ tooltips.lang.reinforced_cell_frame=制作强化能量单元框架（满）需�
 tooltips.lang.obtained.fabricator_or_excavator=可以通过电弧高炉或者斗轮式挖掘机获得。
 tooltips.lang.obtained.mithril=可以通过§9元始魔力§r的世界内交互获得，也会生成在§1其他维度§r。
 tooltips.lang.removed.use_market=已禁用，请改用 Farming For Blockheads 的市场。
-tooltips.lang.ethylene_convert=怎么让高级发电机接受乙烯作为燃料呢？用回旋式气液转换机把乙烯转化为液体即可。
 tooltips.lang.redstone.need=§4需要通过红石信号启用
 tooltips.lang.removed.crash=§4已被禁用，因为其会导致服务端崩溃
 

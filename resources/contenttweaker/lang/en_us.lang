@@ -376,7 +376,6 @@ tooltips.lang.reinforced_cell_frame=The Reinforced Cell Frame (Full) can only be
 tooltips.lang.obtained.fabricator_or_excavator=Obtainable through the Electric Arc Furnace OR from IE Excavator.
 tooltips.lang.obtained.mithril=Only obtainable through §9Primal Mana§r world interaction or in §1other dimensions§r
 tooltips.lang.removed.use_market=Disabled. Use the Market from Farming For Blockheads.
-tooltips.lang.ethylene_convert=How can I use Ethylene with Advanced Generators? Use the Rotary Condensentrator to convert the Ethylene to a liquid.
 tooltips.lang.redstone.need=§4Need redstone to function
 tooltips.lang.removed.crash=§4Removed because it crashes the server
 

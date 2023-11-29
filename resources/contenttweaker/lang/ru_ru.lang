@@ -371,7 +371,6 @@ tooltips.lang.reinforced_cell_frame=Усиленный каркас ячеек (
 tooltips.lang.obtained.fabricator_or_excavator=Можно получить на Дуговой Печи ИЛИ в IE кскаваторе.
 tooltips.lang.obtained.mithril=Только доступно только §9Первичная Мана§r wмировое взаимодействие или в §1Другие размеры§r
 tooltips.lang.removed.use_market=Отключено. Используйте Market from Farming для болванов.
-tooltips.lang.ethylene_convert=Как я могу использовать этилен с усовершенствованными генераторами? Используйте роторный конденсатор, чтобы превратить этилен в жидкость.
 tooltips.lang.redstone.need=§4Нужен сигнал красного камня
 tooltips.lang.removed.crash=§4Удалено по причине того что крашит сервер
 
