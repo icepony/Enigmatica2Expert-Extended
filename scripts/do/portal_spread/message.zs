@@ -15,7 +15,7 @@ import crafttweaker.text.ITextComponent.fromString;
 import crafttweaker.util.Position3f;
 import crafttweaker.world.IWorld;
 
-import scripts.do.portal_spread.config.config;
+import scripts.do.portal_spread.config.Config;
 
 // Stylazed icon of portal
 // static prefix as string = '§8[§5░§8] ';
@@ -29,20 +29,12 @@ static payerNotifyDistance as int = 40;
 ////////////////////////////////////////////////////////////////////////////
 for lang, entries in {
   en_us: {
-    created_1: '§7The corrupted energy from the portal will slowly spread to §6%s§7 blocks around, unless ',
-    created_2: '§7 are placed in the corners.',
-    broken   : '§7With the nether portal broken, no more corrupted energy is spreading.',
-    slow_red : '§7With §6%s§7 removed, you feel the portal spreading faster.',
-    slow_add : '§7With §6%s§7 placed, you feel the portal spreading slower.',
-    slow_max : '§7Portal completely stopped spreading.',
+    created : '§7The corrupted energy from the portal will slowly spread to §6%s§7 blocks around, unless %s are placed in the corners.',
+    broken  : '§7With the nether portal broken, no more corrupted energy is spreading.',
   },
   zh_cn: {
-    created_1: '§7来自下界传送门的腐化能量会缓慢扩散到传送门附近 §6%s§7 格的范围内，除非把 ',
-    created_2: '§7 放置在传送门的四个角落。',
-    broken   : '§7下界传送门已被破坏，腐化能量不再扩散。',
-    slow_red : '§7有 §6%s§7 被移除了，你感到下界传送门扩散的速度正在加快。',
-    slow_add : '§7有 §6%s§7 被放置了，你感到下界传送门扩散的速度正在减缓。',
-    slow_max : '§7传送门完全停止了扩散。',
+    created : '§7来自下界传送门的腐化能量会缓慢扩散到传送门附近 §6%s§7 格的范围内，除非把 %s 放置在传送门的四个角落。',
+    broken  : '§7下界传送门已被破坏，腐化能量不再扩散。',
   },
 } as string[string][string] {
   for k, v in entries {
@@ -64,17 +56,23 @@ function notifyPlayers(world as IWorld, p as Position3f, messageType as string) 
 
 function playerMessage(player as IPlayer, messageType as string) as void {
   val msgLang = 'portal_spread.'~messageType;
+  val maxRadius = Config.maxRadius as string;
 
   if (messageType == 'created') {
+    var modifID as string = null;
+    for def, key in Config.modifBlocksKey {
+      if(key != 'slow') continue;
+      modifID = def.id;
+    }
+
     player.sendRichTextMessage(crafttweaker.text.ITextComponent.fromData([{
       text: prefix
     }, {
-      translate: msgLang~'_1',
-      with: [scripts.do.portal_spread.utils.MAX_R],
-      // TODO: Make 'minecraft:coal_block' there dynamic, not static
-      extra: scripts.lib.tellraw.item(itemUtils.getItem('minecraft:coal_block') * 4, 'gold'),
-    }, {
-      translate: msgLang~'_2',
+      translate: msgLang,
+      with: [maxRadius, {
+        text: '',
+        extra: scripts.lib.tellraw.item(itemUtils.getItem(modifID) * 4, 'gold')
+      }],
     }]));
   } else {
     player.sendRichTextMessage(fromString(prefix) + fromTranslation(msgLang));
@@ -82,7 +80,7 @@ function playerMessage(player as IPlayer, messageType as string) as void {
 }
 
 function log(s as string, world as IWorld = null) as void {
-  if(!config.debug) return;
+  if(!Config.debug) return;
   val msg = prefix~(isNull(s)?'':s);
   print(msg);
 

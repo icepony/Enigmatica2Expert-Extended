@@ -13,8 +13,11 @@
 
 import crafttweaker.world.IWorld;
 
-import scripts.do.portal_spread.data.serializePortals;
-import scripts.do.portal_spread.config.config;
+import scripts.do.portal_spread.config.Config;
+import scripts.do.portal_spread.data.getDimsMap;
+import scripts.do.portal_spread.data.getPortalDataMap;
+import scripts.do.portal_spread.data.portalIdToPos;
+import scripts.do.portal_spread.modifiers.getModifiers;
 
 val cmd = mods.zenutils.command.ZenCommand.create("portal_spread");
 cmd.requiredPermissionLevel = 1;
@@ -65,9 +68,10 @@ function getStatus(world as IWorld) as string {
   }
 
   var portalsStr = serializePortals(world);
+  val maxRadius as int = Config.maxRadius;
 
   return prefix ~ '§7Maximum radius§8: §f' ~
-    scripts.do.portal_spread.utils.MAX_R ~ '\n'
+    maxRadius ~ '\n'
 
   ~ prefix ~ '§7#Portals in this dim§8: §f' ~
     scripts.do.portal_spread.data.getPortalCount(world) ~ '\n'
@@ -78,12 +82,38 @@ function getStatus(world as IWorld) as string {
 }
 
 function enableDebug() as string {
-  if(!config.debug) {
-    config.debug = true;
+  if(!Config.debug) {
+    Config.debug = true;
     return prefix ~ '§7Debug mode §2enabled§7.'
       ~'\n§8You must be in §7Creative Mode§8 to see debug messages in chat.'
       ~'\n§8Messages also repeated in file §7crafttweaker.log';
   }
-  config.debug = false;
+  Config.debug = false;
   return prefix ~ '§7Debug mode §3disabled§7.';
+}
+
+function serializePortals(world as IWorld) as string {
+  var s = '';
+  for dimId, dimData in getDimsMap(world).asMap() {
+    s += '§7To dim §3'~dimId~'§8:\n';
+    for portalId, portalData in getPortalDataMap(dimData).asMap() {
+      val portalPos = portalIdToPos(portalId);
+      val loaded = world.isBlockLoaded(portalPos);
+      if(loaded) {
+        val portalFullId = world.dimension~':'~portalId;
+        val modifiers = getModifiers(world, portalFullId, portalData);
+        var modStr = '';
+        for i in 0 .. modifiers.length {
+          if (modifiers[i] > 0) for i in 0 .. modifiers[i] {
+            modStr += '§8█';
+          }
+        }
+        s += '§8[§f' ~ portalId.replace(':', '§8:§f') ~ '§8] ' ~ modStr;
+      } else {
+        s += '§8['~portalId~'] (unloaded)';
+      }
+      s += '\n';
+    }
+  }
+  return s;
 }

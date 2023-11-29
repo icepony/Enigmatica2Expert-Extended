@@ -9,19 +9,17 @@
 #modloaded zenutils
 #reloadable
 
-// Maximum radius of portal. Must be less that 256
-// Consume MAX_R³ RAM memory
-static MAX_R as int = 64;
+static maxRadius as int = scripts.do.portal_spread.config.Config.maxRadius;
 
-// 8 is maximum z_group size in table_sum_of_two_squares_variants for MAX_R=256.
-// For MAX_R=64 its 4
+// 8 is maximum z_group size in table_sum_of_two_squares_variants for maxRadius=256.
+// For maxRadius=64 its 4
 static MAX_GROUP_SIZE as int = 4;
 
 // Number of possible mirrors of one point in 3d sphere
 static MAX_MIRRORS as int = 16;
 
 // Number of variations of z for same square distance
-static MAX_Z_VARIANTS as int = MAX_R + 2;
+static MAX_Z_VARIANTS as int = maxRadius + 2;
 
 // Number of indexes in same 2d squared distance
 static MAX_DISTANCE_INDEXES as int = MAX_GROUP_SIZE * MAX_Z_VARIANTS * MAX_MIRRORS;
@@ -30,10 +28,10 @@ static table_sum_of_two_squares_variants as int[][int][int] = {} as int[][int][i
 
 // Create cache of points around portal to faster acces
 function init() as void {
-  for x in 0 .. (MAX_R+1) {
+  for x in 0 .. (maxRadius+1) {
     for y in 0 .. (x+1) {
       val x2_y2 = x*x + y*y;
-      if(x2_y2 > MAX_R * MAX_R) continue;
+      if(x2_y2 > maxRadius * maxRadius) continue;
 
       // Add new map if not exist
       if(isNull(table_sum_of_two_squares_variants[x2_y2])) {
@@ -41,7 +39,7 @@ function init() as void {
       }
 
       // "push" implementation
-      for i in 0 .. MAX_R {
+      for i in 0 .. maxRadius {
         if(isNull(table_sum_of_two_squares_variants[x2_y2][i])) {
           table_sum_of_two_squares_variants[x2_y2][i] = [x, y] as int[];
           break;
@@ -74,7 +72,7 @@ function getNextPoint(index as int) as int[] {
   // --- --- ---
 
   # Loop back if reached end or max radius
-  if (distance_squared_3d > MAX_R*MAX_R)
+  if (distance_squared_3d > maxRadius*maxRadius)
     return getNextPoint(0);
 
   // Go to next z point
