@@ -101,7 +101,7 @@ registerGasReservoir("Aluminium Slurry Reservoir (Terra Nova)", <gas:slurryAlumi
 */
 registerReservoir("Steam Reservoir (Venus)"         , <liquid:steam>    , 2000000000, maxInt, 0 , 800, 30,  I, [], [102], [], []);
 registerReservoir("Pyrotheum Reservoir (Venus)"     , <liquid:pyrotheum>, 1228800000, maxInt, 0 , 200, 30,  I, [], [102], [], []);
-registerReservoir("Hot NaK Reservoir (Venus)"       , <liquid:nak_hot>  , 250000    , 650000, 20, 200, 30,  I, [], [102], [], []);
+registerReservoir("NaK Reservoir (Venus)"           , <liquid:nak>      , 250000    , 650000, 20, 200, 30,  I, [], [102], [], []);
 registerGasReservoir("Gold Slurry Reservoir (Venus)", <gas:gold>        , 1228800000, maxInt, 0 , 50 , 30, II, [], [102], [], []);
 
 # Mars ID=103
