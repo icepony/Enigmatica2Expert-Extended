@@ -1,6 +1,6 @@
 /**
  * @file Bunch of handy utilities for zenscript
- * 
+ *
  * @author Krutoy242
  * @link https://github.com/Krutoy242
  */
@@ -22,7 +22,7 @@ zenClass Utils {
 
 	zenConstructor() { }
 
-  val getSomething as function(string,string[],int)IItemStack = 
+  val getSomething as function(string,string[],int)IItemStack =
   function (oreName as string, entryNames as string[], amount as int) as IItemStack {
     return null;
   };
@@ -312,7 +312,7 @@ zenClass Utils {
     clearFluid(input, "Fluid Clearing " ~ input.definition.id.replaceAll(":", "_") ~ "_" ~ input.damage);
   }
   function clearFluid(input as IItemStack, recipeName as string) as void  {
-    recipes.addShapeless(recipeName, 
+    recipes.addShapeless(recipeName,
       input, [input.marked("marked")],
       function(out, ins, cInfo) {
         if(ins has "marked" && !isNull(ins.marked) && ins.marked.hasTag) {
@@ -380,7 +380,7 @@ zenClass Utils {
   val executeCommandSilent as function(ICommandSender,string)void =
   function(sender as ICommandSender, command as string) as void {};
 
-  val geyser as function(IWorld,IItemStack,float,float,float,int,double,double,double,int)void = 
+  val geyser as function(IWorld,IItemStack,float,float,float,int,double,double,double,int)void =
   function(
     world as IWorld,                    # World where everything happen
     output as IItemStack,               # Item that would be spawned

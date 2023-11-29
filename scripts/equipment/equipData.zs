@@ -1,6 +1,9 @@
 #priority 10
 #reloadable
 
+// Used for $orderly
+#modloaded zenutils
+
 import crafttweaker.data.IData;
 import crafttweaker.item.IItemStack;
 import mods.zentoolforge.Toolforge;
