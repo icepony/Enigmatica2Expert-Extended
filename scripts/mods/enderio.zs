@@ -871,6 +871,22 @@ mods.thaumcraft.Infusion.registerRecipe(
   "n": <ore:itemEnhancedMachineChassi>, # Enhanced Machine Chassis
 }).spiral(1));
 
+# [Enhanced Wireless Charger] from [Wireless Charger][+5]
+mods.thaumcraft.Infusion.registerRecipe(
+  "block_enhanced_wireless_charger", # Name
+  "INFUSION", # Research
+  <enderio:block_enhanced_wireless_charger>, # Output
+  7, # Instability
+  [<aspect:amogus> * 50, <aspect:caeles> * 50],
+  <enderio:block_normal_wireless_charger>, # Central Item
+  Grid(["pretty",
+  "  E  ",
+  "E   E",
+  "  n  "], {
+  "E": <ore:itemEnhancedChassiParts>,   # Enhanced Machine Parts
+  "n": <ore:itemEnhancedMachineChassi>, # Enhanced Machine Chassis
+}).spiral(1));
+
 # [Grains of Prescience] from [Prescient Crystal]
 scripts.process.crush(<ore:itemPrecientCrystal>, <enderio:item_material:34>, 'only: eu2Crusher AACrusher');
 
