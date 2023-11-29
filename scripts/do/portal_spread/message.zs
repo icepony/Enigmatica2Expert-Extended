@@ -66,13 +66,16 @@ function playerMessage(player as IPlayer, messageType as string) as void {
   val msgLang = 'portal_spread.'~messageType;
 
   if (messageType == 'created') {
-    scripts.lib.tellraw.send(player,
-      '{"text":"'~prefix~'"}'
-      ~',{"translate":"'~msgLang~'_1","with":["'~scripts.do.portal_spread.utils.MAX_R~'"]}'
+    player.sendRichTextMessage(crafttweaker.text.ITextComponent.fromData([{
+      text: prefix
+    }, {
+      translate: msgLang~'_1',
+      with: [scripts.do.portal_spread.utils.MAX_R],
       // TODO: Make 'minecraft:coal_block' there dynamic, not static
-      ~','~scripts.lib.tellraw.item(itemUtils.getItem('minecraft:coal_block'), 'gold')
-      ~',{"translate":"'~msgLang~'_2"}'
-    );
+      extra: scripts.lib.tellraw.item(itemUtils.getItem('minecraft:coal_block') * 4, 'gold'),
+    }, {
+      translate: msgLang~'_2',
+    }]));
   } else {
     player.sendRichTextMessage(fromString(prefix) + fromTranslation(msgLang));
   }

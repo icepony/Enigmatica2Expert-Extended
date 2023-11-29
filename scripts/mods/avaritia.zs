@@ -537,30 +537,33 @@ events.onPlayerInteractBlock(function(e as crafttweaker.event.PlayerInteractBloc
     || isNull(e.item.tag.singularity.asMap())
   ) return;
 
-	var s = '';
+	var itemData = [] as IData;
 	var values = [] as int[];
 	for itemStr, value in e.item.tag.singularity.asMap() {
 		val split = itemStr.split(':');
 		val item = itemUtils.getItem(split[0]~':'~split[1], split[2] as int);
 		if (isNull(item)) continue;
 		values += value;
-		s += ',{"text":"' ~ (value as int) ~ 'x "},'~scripts.lib.tellraw.item(item, 'white', false)~',{"text":"\n"}';
+		itemData += [{
+			text:'',
+			extra: scripts.lib.tellraw.item(item * value, 'white', false) + [' ']
+		}];
 	}
 
 	if(values.length <= 0) return;
 
 	val median = getMedian(values);
-
-	scripts.lib.tellraw.send(e.player,
-     '{"translate":"Planks stored in singularity:","color":"dark_green"},{"text":"\n"}'
-    ~ s
-
-		~',{"translate":"Total types of wood:","color":"dark_green"}'
-    ~',{"text":" '~values.length~'\n","color":"green"}'
-
-		~',{"translate":"Median amount of planks:","color":"dark_green"}'
-    ~',{"text":" '~median~'\n","color":"green"}'
-  );
+	val data = [{
+		text: '',
+		color: 'dark_green',
+		extra: [
+			 { translate: 'Total types of wood: ', extra: [{ text: values.length~'\n', color: 'green' }]}
+			,{ translate: 'Median amount of planks: ', extra: [{ text: median~'\n', color: 'green' }]}
+			,{ translate: 'Planks stored in singularity:\n', extra: itemData + ['\n']}
+		]
+	}] as IData;
+	print(data.asString());
+	e.player.sendRichTextMessage(crafttweaker.text.ITextComponent.fromData(data));
 });
 
 // -------------------------------------------------------------------
