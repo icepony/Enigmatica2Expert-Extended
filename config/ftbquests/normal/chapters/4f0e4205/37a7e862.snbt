@@ -10,6 +10,9 @@
 	x: 10.350000000000001d,
 	y: 0.75d,
 	shape: "square",
+	text: [
+		"{q.twilight_forest.tower_key.desc}"
+	],
 	can_repeat: true,
 	dependencies: [
 		"ea1707c5"

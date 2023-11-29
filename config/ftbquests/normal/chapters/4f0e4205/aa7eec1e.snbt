@@ -10,6 +10,9 @@
 	x: 10.350000000000001d,
 	y: 0.3d,
 	shape: "square",
+	text: [
+		"{q.twilight_forest.experiment_115.desc}"
+	],
 	can_repeat: true,
 	dependencies: [
 		"ea1707c5"

@@ -9,6 +9,9 @@
 	x: 9.9d,
 	y: 0.3d,
 	shape: "square",
+	text: [
+		"{q.twilight_forest.maze_wafer.desc}"
+	],
 	can_repeat: true,
 	dependencies: [
 		"ea1707c5"
