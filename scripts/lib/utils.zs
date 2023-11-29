@@ -412,7 +412,7 @@ zenClass Utils {
   };
 
   # Get Shimmer enchant + Random Things colored shining
-  val shimmerTag as IData = <enchantment:enderio:shimmer>.makeEnchantment(1).makeTag();
+  var shimmerTag as IData = <enchantment:minecraft:protection>.makeEnchantment(1).makeTag();
   function shinigTag(color as int) as IData {
     return { enchantmentColor: color } as IData + shimmerTag;
   }
