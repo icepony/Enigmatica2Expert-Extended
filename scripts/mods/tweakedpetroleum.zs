@@ -149,8 +149,8 @@ registerReservoir("High Pressure Aquifer Reservoir (Europa)", <liquid:water>, 12
 	/*
 		Radioactive
 */
-registerReservoir("Molten FLiBe Salt Solution of Depleted TBU Fluoride Fuel Reservoir (Titan)"    , <liquid:depleted_fuel_tbu_fluoride_flibe>    , 324000    , 453600, 2, 20, 5 , II, [], [108], [], []);
-registerReservoir("Molten FLiBe Salt Solution of Depleted LEU-235 Fluoride Fuel Reservoir (Titan)", <liquid:depleted_fuel_leu_235_fluoride_flibe>, 324000    , 453600, 2, 20, 5 , II, [], [108], [], []);
+registerReservoir("Molten FLiBe Salt Solution of Depleted TBU Fluoride Fuel Reservoir (Titan)"    , <liquid:depleted_tbu_fluoride_flibe>         , 324000    , 453600, 2, 20, 5 , II, [], [108], [], []);
+registerReservoir("Molten FLiBe Salt Solution of Depleted LEU-235 Fluoride Fuel Reservoir (Titan)", <liquid:depleted_leu_235_fluoride_flibe>     , 324000    , 453600, 2, 20, 5 , II, [], [108], [], []);
 registerGasReservoir("Magnesium Reservoir (Titan)"                                                , <gas:slurryMagnesium>                        , 1228800000, maxInt, 0, 50, 30, II, [], [108], [], []);
 registerGasReservoir("Thorium Reservoir (Titan)"                                                  , <gas:slurryThorium>                          , 1228800000, maxInt, 0, 50, 30, II, [], [108], [], []);
 registerGasReservoir("Boron Reservoir (Titan)"                                                    , <gas:slurryBoron>                            , 1228800000, maxInt, 0, 50, 30, II, [], [108], [], []);
