@@ -19,7 +19,7 @@ import crafttweaker.item.IItemStack;
 
 // Disk Platter / Iron Chain Link
 craft.remake(<iceandfire:chain_link> * 2, ['AAA', 'A A', 'AAA'], {
-  A: <ore:nuggetFakeIron>,
+  A: <ore:nuggetIron>,
 });
 
 # Cockatrice Scepter
