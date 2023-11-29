@@ -348,7 +348,7 @@ for item in loadedMods["tconstruct"].items {
 recipes.removeByRecipeName("tconstruct:tools/table/chest/pattern");
 craft.make(<tconstruct:tooltables:4>.withTag({
 		inventory: {Items: dataList_allPatterns}
-	} as IData + utils.shinigTag(10057489)), ["pretty",
+	} as IData + utils.shiningTag(10057489)), ["pretty",
   "# a #",
   "p c p",
   "# M #"], {

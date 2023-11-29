@@ -500,7 +500,7 @@ val potCombined = <minecraft:potion>.withTag(
         Id:2,Amplifier:0,Duration:600
       }
     ]
-  } as IData + utils.shinigTag(327880)
+  } as IData + utils.shiningTag(327880)
 );
 var anyCombined = potCombined | <minecraft:potion:*>;
 
@@ -536,7 +536,7 @@ val potLong = <rustic:elixir>.withTag(
         Effect: "minecraft:speed", Duration: (20*60*60*24), Amplifier: 0
       }
     ]
-  } as IData + utils.shinigTag(2720000)
+  } as IData + utils.shiningTag(2720000)
 );
 var anyLong = <rustic:elixir:*> | potLong;
 
@@ -578,7 +578,7 @@ val potStrong = <bloodmagic:potion_flask>.withTag(
     CustomPotionEffects: [
       { Id: 1 as byte, Duration: 2400, Amplifier: 5 as byte }
     ]
-  } as IData + utils.shinigTag(831714)
+  } as IData + utils.shiningTag(831714)
 );
 
 var anyStrong = potStrong | <bloodmagic:potion_flask>.withTag({CustomPotionEffects:[]}, false);
@@ -627,7 +627,7 @@ val potOMEGA = <bloodmagic:potion_flask>.withTag(
     CustomPotionEffects: [
       { Id: 1 as byte, Duration: 2400, Amplifier: 5 as byte }
     ]
-  } as IData + utils.shinigTag(15326208)
+  } as IData + utils.shiningTag(15326208)
 );
 
 advancedBrew(Grid(["pretty",

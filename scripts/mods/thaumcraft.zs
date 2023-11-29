@@ -59,7 +59,7 @@ for aspect, ingr in {
 
 function getAnyVisCrystal(key as string = '8', col as int = 0x333333, matchNBTCheck as bool = false) as IItemStack {
   return <thaumcraft:crystal_essence>.withTag(
-    utils.shinigTag(col) + {
+    utils.shiningTag(col) + {
       Aspects: [{key: 'ordo', amount: 1}],
       display: {Name: "§"~key~"§lAny Different Vis Crystal"}
     } as IData,
@@ -68,7 +68,7 @@ function getAnyVisCrystal(key as string = '8', col as int = 0x333333, matchNBTCh
 
 function getAnyVisSalt(key as string = '8', col as int = 0x333333) as IItemStack {
   return <thaumadditions:salt_essence>.withTag(
-    utils.shinigTag(col) + {
+    utils.shiningTag(col) + {
       Aspects: [{key: 'ordo', amount: 1}],
       display: {Name: "§"~key~"§lAny Vis Salt"}
     } as IData,
