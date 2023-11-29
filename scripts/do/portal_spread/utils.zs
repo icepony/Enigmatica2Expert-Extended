@@ -6,6 +6,7 @@
  */
 
 #priority 3000
+#modloaded zenutils
 #reloadable
 
 // Maximum radius of portal. Must be less that 256

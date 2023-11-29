@@ -11,7 +11,7 @@
  * @link https://github.com/Krutoy242
  */
 
-#modloaded requious
+#modloaded requious zenutils
 #priority -4000
 
 import crafttweaker.block.IBlockState;

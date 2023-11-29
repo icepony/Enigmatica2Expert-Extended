@@ -6,6 +6,7 @@
  */
 
 #priority 2000
+#modloaded zenutils
 
 #reloadable
 import crafttweaker.data.IData;

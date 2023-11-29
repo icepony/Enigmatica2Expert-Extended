@@ -7,6 +7,7 @@
 
 #priority 2100
 #reloadable
+#modloaded zenutils
 
 import crafttweaker.data.IData;
 import crafttweaker.util.Position3f;

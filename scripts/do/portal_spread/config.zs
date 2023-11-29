@@ -1,6 +1,7 @@
 
 #priority 4500
 #reloadable
+#modloaded zenutils
 
 /*
  ██████╗ ██████╗ ███╗   ██╗███████╗██╗ ██████╗

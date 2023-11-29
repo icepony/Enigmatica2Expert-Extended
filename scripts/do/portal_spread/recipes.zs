@@ -7,6 +7,7 @@
 
 #priority 2000
 #reloadable
+#modloaded zenutils
 
 import crafttweaker.block.IBlock;
 import crafttweaker.block.IBlockState;

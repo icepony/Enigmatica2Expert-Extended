@@ -6,6 +6,7 @@
  */
 
 #reloadable
+#modloaded zenutils
 
 import crafttweaker.block.IBlockDefinition;
 import crafttweaker.block.IBlockState;

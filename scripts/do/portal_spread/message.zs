@@ -7,6 +7,7 @@
 
 #priority 2500
 #reloadable
+#modloaded zenutils
 
 import crafttweaker.player.IPlayer;
 import crafttweaker.text.ITextComponent.fromTranslation;
