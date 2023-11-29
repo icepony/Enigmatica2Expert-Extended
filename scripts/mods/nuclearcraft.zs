@@ -257,7 +257,7 @@ scripts.process.compress(<harvestcraft:flouritem> * 2, <nuclearcraft:graham_crac
 
 # IC2 Steam -> Water in turbine
 # mods.nuclearcraft.Turbine.addRecipe(ILiquidStack fluidInput, ILiquidStack fluidOutput, double turbine_power_per_mb, double turbine_expansion_level, double turbine_spin_up_multiplier, @Optional String particleEffect, @Optional double particleSpeedMultiplier);
-mods.nuclearcraft.Turbine.addRecipe(<liquid:ic2superheated_steam>, <liquid:ic2steam> * 2, 1000.0, 1.8, 1.0);
+mods.nuclearcraft.Turbine.addRecipe(<liquid:ic2superheated_steam>, <liquid:steam> * 2, 1000.0, 1.8, 1.0);
 mods.nuclearcraft.Turbine.addRecipe(<liquid:ic2steam>, <liquid:low_quality_steam> * 2, 400.0, 1.6, 1.0);
 
 # Harder compressed recipes
