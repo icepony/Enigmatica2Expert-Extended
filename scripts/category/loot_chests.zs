@@ -36,7 +36,7 @@ val caveloot = [
 	<actuallyadditions:item_crystal_empowered:3>,
 	<actuallyadditions:item_crystal_empowered:4>,
 	<actuallyadditions:item_crystal_empowered:5>,
-	<botania:manaring>.withTag({mana: 500000}),
+	<botania:manaring>.withTag({mana: 5000}),
 	<botania:auraring>,
 	<botania:magnetring>,
 	<mysticalagriculture:prudentium_apple>,
