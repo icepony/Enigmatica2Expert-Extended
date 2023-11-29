@@ -59,17 +59,17 @@ events.onPlayerInteractEntity(function(e as crafttweaker.event.PlayerInteractEnt
   player.setItemToSlot(MAIN_HAND, null);
 
   // Sender message
-  utils.tellrawSend(player,
+  scripts.lib.tellraw.send(player,
     '{"translate":"chat.hand_over_your_items.send","color":"blue","with":['
-      ~utils.tellrawItem(item, 'white')
+      ~scripts.lib.tellraw.item(item, 'white')
       ~',{"text":"'~target.name~'","color":"dark_blue"}'
     ~']}'
   );
 
   // Receiver message
-  utils.tellrawSend(target,
+  scripts.lib.tellraw.send(target,
     '{"translate":"chat.hand_over_your_items.receive","color":"dark_green","with":['
-      ~utils.tellrawItem(item, 'white')
+      ~scripts.lib.tellraw.item(item, 'white')
       ~',{"text":"'~player.name~'","color":"green"}'
     ~']}'
   );

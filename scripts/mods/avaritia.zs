@@ -544,14 +544,14 @@ events.onPlayerInteractBlock(function(e as crafttweaker.event.PlayerInteractBloc
 		val item = itemUtils.getItem(split[0]~':'~split[1], split[2] as int);
 		if (isNull(item)) continue;
 		values += value;
-		s += ',{"text":"' ~ (value as int) ~ 'x "},'~utils.tellrawItem(item, 'white', false)~',{"text":"\n"}';
+		s += ',{"text":"' ~ (value as int) ~ 'x "},'~scripts.lib.tellraw.item(item, 'white', false)~',{"text":"\n"}';
 	}
 
 	if(values.length <= 0) return;
 
 	val median = getMedian(values);
 
-	utils.tellrawSend(e.player,
+	scripts.lib.tellraw.send(e.player,
      '{"translate":"Planks stored in singularity:","color":"dark_green"},{"text":"\n"}'
     ~ s
 
