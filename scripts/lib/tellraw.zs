@@ -6,14 +6,6 @@ import crafttweaker.data.IData;
 import crafttweaker.item.IItemStack;
 import crafttweaker.player.IPlayer;
 
-/*
-████████╗███████╗██╗     ██╗     ██████╗  █████╗ ██╗    ██╗
-╚══██╔══╝██╔════╝██║     ██║     ██╔══██╗██╔══██╗██║    ██║
-   ██║   █████╗  ██║     ██║     ██████╔╝███████║██║ █╗ ██║
-   ██║   ██╔══╝  ██║     ██║     ██╔══██╗██╔══██║██║███╗██║
-   ██║   ███████╗███████╗███████╗██║  ██║██║  ██║╚███╔███╔╝
-   ╚═╝   ╚══════╝╚══════╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚══╝╚══╝ 
-*/
 function item(item as IItemStack, color as string = null, showName as bool = true) as IData {
   val data = [
     {
@@ -35,4 +27,8 @@ function item(item as IItemStack, color as string = null, showName as bool = tru
     + (color ? {color: color} : {}),
   ] as IData;
   return data;
+}
+
+function itemObj(item as IItemStack, color as string = null, showName as bool = true) as IData {
+  return {text: '', extra: scripts.lib.tellraw.item(item, color, showName)};
 }

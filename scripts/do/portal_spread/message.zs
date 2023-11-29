@@ -58,10 +58,10 @@ function playerMessage(player as IPlayer, messageType as string) as void {
   if (messageType == 'created') {
     // TODO: message about actual modified radius
 
-    payload = [Config.defaultRadius, {
-      text: '',
-      extra: scripts.lib.tellraw.item(getModifierBlock(null, 4), 'gold')
-    }];
+    payload = [
+      Config.defaultRadius,
+      scripts.lib.tellraw.itemObj(getModifierBlock(null, 4), 'gold')
+    ];
   } else {
     /* Modifiers can be messaged without blocks
     val modifierKey = messageType.split('_')[0];

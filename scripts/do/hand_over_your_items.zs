@@ -66,10 +66,7 @@ function broadcastMsg(langCode as string, sender as IPlayer, receiver as IPlayer
   sender.sendRichTextMessage(crafttweaker.text.ITextComponent.fromData([{
     translate: 'chat.hand_over_your_items.' ~ langCode,
     color: col1,
-    with: [{
-      text: '',
-      extra: scripts.lib.tellraw.item(item, 'white')
-    }, {
+    with: [scripts.lib.tellraw.itemObj(item, 'white'), {
       text: receiver.name,
       color: col2
     }]
