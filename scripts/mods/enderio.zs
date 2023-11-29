@@ -884,10 +884,10 @@ scripts.process.crush(<ore:itemPulsatingCrystal>, <enderio:item_material:36>, 'o
 scripts.process.crush(<ore:itemEnderCrystal>, <enderio:item_material:37>, 'only: eu2Crusher AACrusher');
 
 # The Vat early alternatives
-function addBrewAlt(fluid as ILiquidStack, ingrs as IIngredient[], output as string) as void {
+function addBrewAlt(fluid as ILiquidStack, ingrs as IIngredient[], output as string, extraIngr as IIngredient = null) as void {
   mods.rustic.Condenser.addRecipe(
     <rustic:fluid_bottle>.withTag({Fluid: {FluidName: output, Amount: 1000}}),
-    ingrs, null, <minecraft:glass_bottle>, fluid, 40
+    ingrs, extraIngr, <minecraft:glass_bottle>, fluid, 40
   );
 }
 
@@ -897,3 +897,4 @@ addBrewAlt(<fluid:mead>       * 2000, [<minecraft:skull:2>, <minecraft:sugar>], 
 addBrewAlt(<fluid:short.mead> * 2000, [<minecraft:skull:2>, <minecraft:sugar>], 'nutrient_distillation');
 addBrewAlt(<fluid:milk>       * 8000, [<rats:assorted_vegetables>, <additionalcompression:dustsugar_compressed:1>], 'hootch');
 addBrewAlt(<fluid:hootch>     * 2000, [<minecraft:blaze_powder>, <minecraft:redstone>], 'fire_water');
+addBrewAlt(<fluid:fire_water> * 2000, [<iceandfire:dread_shard>, <iceandfire:hydra_fang>, <iceandfire:shiny_scales>], 'syngas', <contenttweaker:blasted_coal>);
