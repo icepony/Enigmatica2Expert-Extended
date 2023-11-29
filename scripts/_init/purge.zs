@@ -55,11 +55,9 @@ utils.rh(<bloodmagic:component:23>);
 
 # TC nuggets
 for i in 0 .. 5 {
-	utils.rh(<thaumcraft:nugget>.definition.makeStack(i));
+	utils.rh(<thaumcraft:nugget>, true, i);
 }
 
-
-					
 # *======= Metal Nuggets =======*
 
 utils.rh(<immersiveengineering:metal:29>);

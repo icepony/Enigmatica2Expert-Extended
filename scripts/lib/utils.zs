@@ -82,10 +82,12 @@ zenClass Utils {
   # ########################
   # Removing item everywhere
   # ########################
-  function rh(ingr as IIngredient, removeOredict as bool = true) as void {
+  function rh(ingr as IIngredient, removeOredict as bool = true, meta as int = -1) as void {
     if (isNull(ingr)) return;
 
-    for item in ingr.items {
+    for _item in ingr.items {
+      val item = meta <= -1 ? _item : _item.withDamage(meta);
+
       if(removeOredict) {
         for ore in item.ores {
           ore.remove(item);
