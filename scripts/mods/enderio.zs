@@ -181,9 +181,9 @@ craft.remake(<enderio:item_basic_capacitor>, ["pretty",
 });
 mods.advancedrocketry.RecipeTweaker.forMachine('PrecisionAssembler').builder()
 	.outputs(<enderio:item_basic_capacitor> * 64)
-	.input(<ore:stickTitaniumIridium> * 64)
-	.input(<ore:dustBedrock> * 64)
-	.input(<thermalfoundation:material:515> * 64)
+	.input(<ore:stickTitaniumIridium> * 32)
+	.input(<ore:dustBedrock> * 32)
+	.input(<thermalfoundation:material:515> * 32)
 	.input(<threng:material> * 32)
 	.power(320000).timeRequired(20).build();
 
