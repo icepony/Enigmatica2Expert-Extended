@@ -28,9 +28,6 @@ import scripts.do.portal_spread.message.notifyPlayers;
 import scripts.do.portal_spread.modifiers.getCorners;
 import scripts.do.portal_spread.utils.getNextPoint;
 
-// Map of modifiers
-static MODIF as int[string] = scripts.do.portal_spread.modifiers.MODIF;
-
 static spreadDelay as double = config.spreadDelay;
 static blockChecks as int = config.blockChecks;
 static dimHasRecipes as bool[int] = scripts.do.portal_spread.recipes.dimHasRecipes;

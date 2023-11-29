@@ -23,7 +23,7 @@ static modifiersList as string[] = [
 ];
 
 // Enum of modifiers
-static MODIF as int[string]$orderly = {};
+static MODIF as int[string] = {};
 
 // Fill Enum list
 for i, k in modifiersList { MODIF[k] = i; }

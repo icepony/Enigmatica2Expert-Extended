@@ -14,7 +14,6 @@ import crafttweaker.text.ITextComponent.fromTranslation;
 import crafttweaker.text.ITextComponent.fromString;
 import crafttweaker.util.Position3f;
 import crafttweaker.world.IWorld;
-import mods.ctutils.utils.Math.abs;
 
 import scripts.do.portal_spread.config.config;
 
@@ -31,7 +30,7 @@ static payerNotifyDistance as int = 40;
 for lang, entries in {
   en_us: {
     created_1: '§7The corrupted energy from the portal will slowly spread to §6%s§7 blocks around, unless ',
-    created_2:          '§7 are placed in the corners.',
+    created_2: '§7 are placed in the corners.',
     broken   : '§7With the nether portal broken, no more corrupted energy is spreading.',
     slow_red : '§7With §6%s§7 removed, you feel the portal spreading faster.',
     slow_add : '§7With §6%s§7 placed, you feel the portal spreading slower.',
@@ -39,7 +38,7 @@ for lang, entries in {
   },
   zh_cn: {
     created_1: '§7来自下界传送门的腐化能量会缓慢扩散到传送门附近 §6%s§7 格的范围内，除非把 ',
-    created_2:          '§7 放置在传送门的四个角落。',
+    created_2: '§7 放置在传送门的四个角落。',
     broken   : '§7下界传送门已被破坏，腐化能量不再扩散。',
     slow_red : '§7有 §6%s§7 被移除了，你感到下界传送门扩散的速度正在加快。',
     slow_add : '§7有 §6%s§7 被放置了，你感到下界传送门扩散的速度正在减缓。',
@@ -90,3 +89,5 @@ function log(s as string, world as IWorld = null) as void {
     pl.sendMessage(msg);
   }
 }
+
+function abs(n as double) as double { return n < 0 ? -n : n; }
