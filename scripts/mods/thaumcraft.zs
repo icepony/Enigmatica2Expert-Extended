@@ -164,8 +164,8 @@ recipes.addShaped(<thaumcraft:baubles:6>,
 
 # Salis Mundus visible recipe (actually not working)
 craft.shapeless(<thaumcraft:salis_mundus>, "DEFCAB", {
-  A: <ore:itemFlint>.reuse(),
-  B: <minecraft:bowl>.reuse(),
+  A: utils.reuse(<minecraft:flint>),
+  B: utils.reuse(<minecraft:bowl>),
   C: <ore:dustRedstone>,
   D: getAnyVisCrystal('4', 0xff0000, true),
   E: getAnyVisCrystal('2', 0x00ff00, true),

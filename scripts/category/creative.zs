@@ -566,7 +566,7 @@ craft.make(<ae2wtlib:wut_creative>, ["pretty",
   "  W  "], {
   "e": <wct:wct:*>.withTag({}), # Wireless Crafting Terminal
   "r": <wpt:wpt:*>.withTag({}), # Wireless Pattern Terminal
-  "Ϟ": creativeCube.reuse(), # Creative Energy Cube
+  "Ϟ": utils.reuse(creativeCube), # Creative Energy Cube
   "i": <wft:wft:*>.withTag({}), # Wireless Fluid Terminal
   "W": <wit:wit:*>.withTag({}), # Wireless Interface Terminal
 });

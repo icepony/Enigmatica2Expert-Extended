@@ -510,7 +510,7 @@ advancedBrew(Grid(["pretty",
     "M ⱋ M",
     "C r C"], {
     "B": <thaumcraft:bottle_taint>,           # Bottle of Taint
-    "r": <thaumcraft:crucible>.reuse(),       # Crucible
+    "r": utils.reuse(<thaumcraft:crucible>),  # Crucible
     "C": <cyclicmagic:crystallized_obsidian>, # Crystallized Obsidian
     "M": <randomthings:beans:2>,              # Magic Bean
     "◊": anyCombined.marked("m1"),
@@ -552,7 +552,7 @@ advancedBrew(Grid(["pretty",
     "B o B",
     "‚ E ‚",
     "M C M"], {
-    "C": <thaumcraft:crucible>.reuse(),  # Crucible
+    "C": utils.reuse(<thaumcraft:crucible>), # Crucible
     "‚": <ore:nuggetTerrasteel>,         # Terrasteel Nugget
     "M": <twilightforest:moonworm>,      # Moonworm
     "o": <cookingforblockheads:cow_jar>, # Cow in a Jar
@@ -602,7 +602,7 @@ advancedBrew(Grid(["pretty",
     "P o P",
     "E C E"], {
     "P": <avaritia:resource:2>,             # Pile of Neutrons
-    "C": <thaumcraft:crucible>.reuse(),     # Crucible
+    "C": utils.reuse(<thaumcraft:crucible>),# Crucible
     "E": <thaumictinkerer:energetic_nitor>, # Energetic Nitor
     "*": <ore:crystalAethium>,              # Aethium Crystal
     "o": anyStrong.marked("m1"),            # Potion Flask
@@ -634,7 +634,7 @@ advancedBrew(Grid(["pretty",
     "§ n §",
     "ⱋ ◊ ◘",
     "U C U"], {
-    "C": <thaumcraft:crucible>.reuse(),  # Crucible
+    "C": utils.reuse(<thaumcraft:crucible>), # Crucible
     "U": <avaritia:ultimate_stew>,       # Ultimate Stew
     "§": <deepmoblearning:glitch_heart>, # Corrupted Glitch Heart
     "n": <avaritia:endest_pearl>,        # Endest Pearl

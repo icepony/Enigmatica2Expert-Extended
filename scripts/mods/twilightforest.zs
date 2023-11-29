@@ -469,7 +469,7 @@ mods.thaumcraft.ArcaneWorkbench.registerShapedRecipe(
 
 # [Auroralized Glass] from [Aurora Block][+1]
 craft.shapeless(<twilightforest:auroralized_glass>, "/■", {
-  "/": <botania:rainbowrod>.reuse(), # Rod of the Bifrost
+  "/": utils.reuse(<botania:rainbowrod>), # Rod of the Bifrost
   "■": <twilightforest:aurora_block>, # Aurora Block
 });
 

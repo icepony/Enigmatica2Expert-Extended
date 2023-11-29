@@ -15,6 +15,9 @@ fluid.mithrillium=Растворимый Митриллиум
 fluid.adaminite=Расплавленный Адаминит
 fluid.mithminite=Растворенный Митминит
 
+description.crt.reuse=§a§o(Не будет потрачено!)§r
+description.crt.consume=§6§o(Будет потрачено!)§r
+
 item.contenttweaker.compressed_glowstone.name=Сжатая Светопыль
 item.contenttweaker.compressed_ender.name=Сжатый Эндер Жемчуг
 item.contenttweaker.compressed_dimensional.name=Сжатость Измерений

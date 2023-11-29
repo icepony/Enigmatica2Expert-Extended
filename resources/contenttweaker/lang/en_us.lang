@@ -15,6 +15,9 @@ fluid.mithrillium=Molten Mithrillium
 fluid.adaminite=Molten Adaminite
 fluid.mithminite=Molten Mithminite
 
+description.crt.reuse=§a§o(Will not be consumed!)§r
+description.crt.consume=§6§o(Will be consumed!)§r
+
 item.contenttweaker.compressed_glowstone.name=Compressed Glowstone
 item.contenttweaker.compressed_ender.name=Compressed Ender
 item.contenttweaker.compressed_dimensional.name=Compressed Dimensional

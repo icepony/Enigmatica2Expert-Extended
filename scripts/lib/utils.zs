@@ -79,6 +79,38 @@ zenClass Utils {
     return null;
   }
 
+  /**
+   * Name that only display over ingredient but not actually require it on craft
+   * Idea from:
+   * https://github.com/DoremySwee/Art-of-Enigma/blob/2465b90209ced64f5a1ca65ffdd17b6d60e2206c/scripts/recipes/libs/Misc.zs#L47-L67
+   */
+  function tempName(ins as IIngredient, local as string) as IIngredient{
+    var result as IIngredient = null;
+    for i in ins.items {
+      var tag = {
+        display: { LocName: local },
+        "Quark:RuneColor": 6,
+        "Quark:RuneAttached": 1 as byte,
+      } as IData + shimmerTag;
+      if(i.hasTag) tag = i.tag.deepUpdate(tag);
+      if(isNull(result)) result = i.updateTag(tag, false);
+      else result |= i.updateTag(tag, false);
+    }
+
+    // Guard for uninitialized oredicts
+    if(isNull(result)) return ins;
+
+    return result.only(function(item){
+      return ins.matches(item);
+    });
+  }
+  function reuse(ins as IIngredient)as IIngredient{
+    return tempName(ins, "description.crt.reuse").reuse();
+  }
+  function consume(ins as IIngredient)as IIngredient{
+    return tempName(ins, "description.crt.consume").noReturn();
+  }
+
   # ########################
   # Removing item everywhere
   # ########################

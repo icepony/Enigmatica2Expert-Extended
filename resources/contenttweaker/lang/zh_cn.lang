@@ -15,6 +15,9 @@ fluid.mithrillium=熔融秘银
 fluid.adaminite=熔融精金
 fluid.mithminite=熔融秘金
 
+description.crt.reuse=§a§o(不会被消耗！)§r
+description.crt.consume=§6§o(会被消耗！)§r
+
 item.contenttweaker.compressed_glowstone.name=压缩荧石
 item.contenttweaker.compressed_ender.name=压缩末影
 item.contenttweaker.compressed_dimensional.name=压缩维度

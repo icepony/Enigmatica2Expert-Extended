@@ -50,14 +50,14 @@ for i, ingr in [
   recipes.remove(<bloodmagic:blood_rune:3>);
   recipes.addShaped("Rune of Sacrifice "~i, <bloodmagic:blood_rune:3> * 3, 
   [[ingr, <bloodmagic:slate:1>, ingr], 
-  [<bloodmagic:slate:1>, <ore:orbTier2>.reuse(), <bloodmagic:slate:1>],
+  [<bloodmagic:slate:1>, utils.reuse(<ore:orbTier2>), <bloodmagic:slate:1>],
   [ingr, <astralsorcery:itemcrystalsword:*>.withTag({astralsorcery:{}}), ingr]]);
 
   # Imperfect Ritual Stone
   recipes.remove(<bloodmagic:ritual_controller:1>);
   recipes.addShaped("Imperfect Ritual Stone "~i, <bloodmagic:ritual_controller:1>, 
   [[<ore:obsidian>, ingr, <ore:obsidian>], 
-  [ingr, <ore:orbTier1>.reuse(), ingr], 
+  [ingr, utils.reuse(<ore:orbTier1>), ingr], 
   [<ore:obsidian>, ingr, <ore:obsidian>]]);
 }
 
@@ -75,22 +75,22 @@ craft.remake(<bloodmagic:blood_rune:6>, ["pretty",
 # Rune of the orb
   recipes.remove(<bloodmagic:blood_rune:8>);
   recipes.addShaped("Rune of the Orb", <bloodmagic:blood_rune:8>, 
-  [[<bloodmagic:slate:1>, <ore:orbTier1>.reuse(), <bloodmagic:slate:1>], 
-  [<bloodmagic:slate:2>, <ore:orbTier4>.reuse(), <bloodmagic:slate:2>], 
-  [<bloodmagic:slate:3>, <ore:orbTier1>.reuse(), <bloodmagic:slate:3>]]);
+  [[<bloodmagic:slate:1>, utils.reuse(<ore:orbTier1>), <bloodmagic:slate:1>], 
+  [<bloodmagic:slate:2>, utils.reuse(<ore:orbTier4>), <bloodmagic:slate:2>], 
+  [<bloodmagic:slate:3>, utils.reuse(<ore:orbTier1>), <bloodmagic:slate:3>]]);
 
 # Rune of acceleration
   recipes.remove(<bloodmagic:blood_rune:9>);
   recipes.addShaped("Rune of Acceleration", <bloodmagic:blood_rune:9>, 
   [[<bloodmagic:blood_tank>, <bloodmagic:slate:3>, <bloodmagic:blood_tank>], 
   [<ore:ingotGold>, <actuallyadditions:item_drill_upgrade_speed_ii>, <minecraft:gold_ingot>], 
-  [<bloodmagic:blood_tank>, <ore:orbTier4>.reuse(), <bloodmagic:blood_tank>]]);
+  [<bloodmagic:blood_tank>, utils.reuse(<ore:orbTier4>), <bloodmagic:blood_tank>]]);
 
 # Ritual Stone 
   recipes.remove(<bloodmagic:ritual_stone>);
   recipes.addShaped("Ritual Stone", <bloodmagic:ritual_stone> * 4, 
   [[<thaumcraft:salis_mundus>, <bloodmagic:slate:1>, <thaumcraft:salis_mundus>], 
-  [<bloodmagic:slate:1>, <ore:orbTier2>.reuse(), <bloodmagic:slate:1>], 
+  [<bloodmagic:slate:1>, utils.reuse(<ore:orbTier2>), <bloodmagic:slate:1>], 
   [<ore:obsidian>, <bloodmagic:slate:1>, <ore:obsidian>]]);
 
 # Hellfire Forge
