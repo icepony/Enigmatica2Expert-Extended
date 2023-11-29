@@ -508,3 +508,7 @@ mods.thaumcraft.ArcaneWorkbench.registerShapedRecipe(
   "M": <minecraft:brown_mushroom_block>, # Mushroom
   "g": <ore:glowstone>, # Glowstone
 }).shaped());
+
+// Phantom Armor recycling
+recipes.addShapeless(<randomthings:spectreanchor>, [<twilightforest:phantom_helmet>.anyDamage()]);
+recipes.addShapeless(<randomthings:spectreanchor>, [<twilightforest:phantom_chestplate>.anyDamage()]);
