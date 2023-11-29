@@ -188,6 +188,9 @@ mods.nuclearcraft.IngotFormer.addRecipe(<fluid:corium> * 1000, <nuclearcraft:sol
 # Remove unused infinity metal recipe
 mods.nuclearcraft.IngotFormer.removeRecipeWithInput(<fluid:infinity> * 144);
 
+// Carbon recipe conflict
+mods.nuclearcraft.IngotFormer.removeRecipeWithOutput(<advancedrocketry:misc:1>);
+
 # [Energetic Blend] harder
 recipes.remove(<nuclearcraft:compound:2>);
 mods.mekanism.infuser.addRecipe("GLOWSTONE", 10, <minecraft:redstone>, <nuclearcraft:compound:2>);
