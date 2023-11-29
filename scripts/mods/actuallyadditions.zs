@@ -129,10 +129,13 @@ craft.remake(<actuallyadditions:item_mining_lens>, ["pretty",
 	[<ore:plankTreatedWood>, <forestry:oak_stick>, <ore:plankTreatedWood>]]);
 
 # Emerald Dust
-	recipes.remove(<actuallyadditions:item_dust:3>);
-	
+recipes.remove(<actuallyadditions:item_dust:3>);
+
 # Black Quartz Dust
-	recipes.remove(<actuallyadditions:item_dust:7>);
+recipes.remove(<actuallyadditions:item_dust:7>);
+
+// Crushed coal wrong recipe
+mods.actuallyadditions.Crusher.removeRecipe(<actuallyadditions:item_dust:6>);
 	
 # Iron Casing
 	recipes.remove(<actuallyadditions:block_misc:9>);
