@@ -105,7 +105,7 @@ craft.make(<avaritia:skullfire_sword>, ["pretty",
 
 # [Ultimate Stew]*9 from [Cosmic Meatballs][+6]
 craft.make(<avaritia:ultimate_stew> * 9, ["pretty",
-  "  ■       ■  ",
+  "  F       F  ",
   "■ F B C B F ■",
   "■ G G G G G ■",
   "■ G G G G G ■",
