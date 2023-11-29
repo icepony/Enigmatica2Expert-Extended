@@ -250,7 +250,7 @@ var list = {
 		<ore:blockDragonsteel>,
 		<ore:blockSilver>,
 		<ore:blockAluminium>,
-		<endreborn:block_wolframium>,
+		<ore:blockTungsten>,
 		<ore:blockDarkSteel>,
 		<ore:blockVoid>,
 		<ore:blockDraconium>,
