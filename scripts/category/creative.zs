@@ -465,7 +465,7 @@ craft.make(<tconstruct:materials:50>, ["pretty",
   "▀": <ore:blockAlubrass>,     # Block of Aluminum Brass
   "▄": <ore:blockKnightslime>,  # Block of Knightslime
   "G": <ore:compressedGold3x>,  # Triple Compressed Gold
-  "i": <tconstruct:metal:6>,    # Silky Block of Jewel
+  "i": <ore:blockMithril>,      # Block Of mana Infused metal
   "A": <ore:blockAlumite>,      # Alumite Block
   "O": <ore:blockOsgloglas>,    # Osgloglas Block
   "□": <tconevo:material:2>,    # Plate of Unsealing
