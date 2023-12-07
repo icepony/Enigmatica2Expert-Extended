@@ -263,22 +263,6 @@ for i,a in [
 	);
 }
 
-# Turbine Fuel description
-<advgenerators:turbine_controller>.addShiftTooltip(
-	"§3Canola Oil"          ~ " §710 MJ/mB§r\n" ~
-	"§3Crude Oil"           ~ " §725 MJ/mB§r\n" ~
-	"§3Biomass"             ~ " §730 MJ/mB§r\n" ~
-	"§3Biodiesel"           ~ " §740 MJ/mB§r\n" ~
-	"§3Crystallized Oil"    ~ " §740 MJ/mB§r\n" ~
-	"§3Biogas"              ~ " §750 MJ/mB§r\n" ~
-	"§3Ethylene"            ~ " §780 MJ/mB§r\n" ~
-	"§3Biofuel"             ~ " §790 MJ/mB§r\n" ~
-	"§3Rocket Fuel (EiO)"   ~ " §795 MJ/mB§r\n" ~
-	"§3Refined Fuel"       ~ " §7105 MJ/mB§r\n" ~
-	"§3Rocket Fuel (AR)"   ~ " §7110 MJ/mB§r\n" ~
-	"§3Empowered Oil"      ~ " §7120 MJ/mB§r"
-,format.darkAqua(desc.local("fuel.shift_for_list")));
-
 # Antimatter
 desc.tooltipRaw(Bucket("blockfluidantimatter"), '§b' ~ desc.local("strike_with_lightning"));
 

@@ -403,7 +403,6 @@ tooltips.lang.et_miner_cont_any=需要方块：\n%s 无效果/速度/精度强�
 tooltips.lang.nano_cont_personal=需要方块：\n%s 无效果/任意对应有药水效果的强化部件\n%s 结构方块等级 %s\n%s 结构镶板
 tooltips.lang.lightning_cont=需要方块：\n%s 结构方块等级 %s\n%s 避雷针\n%s 绝缘避雷针
 tooltips.lang.et.or_above=或更高
-tooltips.lang.fuel.shift_for_list===按住 Shift 展开燃料列表==
 tooltips.lang.strike_with_lightning=通过雷击生命源质获得
 tooltips.lang.thaum.progress=研究进度
 tooltips.lang.thaum.auromancy=神秘学
