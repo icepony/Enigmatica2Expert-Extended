@@ -4,7 +4,15 @@
 modifier.excompressum:smashingii.desc=锤击压缩方块
 tile.spectreCoil_number.info=产生 32 RF/t 并输出到所贴的方块中。它们可以在地牢箱子中找到。
 entity.twilightforest.harbinger_cube.name=先驱者立方体
+# --------------------------------------
+# Custom mechanics
+# --------------------------------------
+description.crt.reuse=§a§o(不会被消耗！)§r
+description.crt.consume=§6§o(会被消耗！)§r
 
+# --------------------------------------
+# CoT new content
+# --------------------------------------
 # itemGroup.other=ContentTweaker
 fluid.heavy_metal=熔融沉重金属
 fluid.cheese=奶酪
@@ -16,9 +24,6 @@ fluid.terrestrial=熔融天地宝晶
 fluid.mithrillium=熔融秘银
 fluid.adaminite=熔融精金
 fluid.mithminite=熔融秘金
-
-description.crt.reuse=§a§o(不会被消耗！)§r
-description.crt.consume=§6§o(会被消耗！)§r
 
 item.contenttweaker.compressed_glowstone.name=压缩荧石
 item.contenttweaker.compressed_ender.name=压缩末影
@@ -204,6 +209,9 @@ tile.contenttweaker.ore_anglesite.name=§6硫酸铅矿
 
 item.contenttweaker.bee_diversity.name=蜜蜂回收集市
 
+# --------------------------------------
+# TConstruct new materials and traits
+# --------------------------------------
 e2ee.tconstruct.material.spectre.name=通灵
 e2ee.tconstruct.material.spectre.description=§b灵光到处现\n§r每个部件都可以给予玩家额外的"延伸"药水效果
 e2ee.tconstruct.material.fireproof.name=防火
@@ -348,6 +356,9 @@ item.positron_unit.name=正电子能量单元
 item.quantron.name=量子能量单元
 tile.industrialwires.hv_multiblock.marx.name=马克斯发生器
 
+# --------------------------------------
+# Tags tooltips (see tags.zs)
+# --------------------------------------
 tooltips.lang.tag.generator=§6#发电机
 tooltips.lang.tag.solar=§f#太阳能发电机
 tooltips.lang.tag.chunkloader=§9#区块加载器
@@ -482,6 +493,9 @@ tooltips.dim_stages.restricted=§c在§b空岛§c世界中，你无法前往任�
 tooltips.dim_stages.enter_skyblock=§e你进入了一个§b空岛§e世界。你将无法前往任何其他维度§8(不包括太空、RF工具的维度和个人维度)。另外你现在会获得持续 3 小时的急迫 IV 效果。§r
 tooltips.dim_stages.remind_skyblock=§e你再次进入了一个§b空岛§e世界。谨记：你无法前往任何其他维度§8(不包括太空、RF工具的维度和个人维度)§r。
 
+# --------------------------------------
+# Requious Fracto custom JEI categories
+# --------------------------------------
 requious.jei.recipe.adv_bee_analyzer=高级蜜蜂分析仪
 requious.jei.recipe.alchemists_stone=炼金术士之石
 requious.jei.recipe.alienists_stone=异形之石
@@ -518,6 +532,7 @@ requious.jei.recipe.turbine=涡轮机
 requious.jei.recipe.typewriter=打字机
 requious.jei.recipe.witch_water=巫水转化
 
+# Actually Requious Fracto blocks
 tile.adv_bee_analyzer.name=高级蜜蜂分析仪
 tile.infinity_furnace.name=无尽熔炉
 tile.replicator.name=§5复制机
@@ -538,10 +553,10 @@ item.contenttweaker.blade_core.name=稀土涡轮机转子叶片芯
 item.contenttweaker.steel_mould.name=超轻不锈钢粗模
 item.contenttweaker.alloy_mould.name=超轻高超不锈钢粗模
 item.contenttweaker.sic_mould.name=超轻矩阵合金粗模
+
 # --------------------------------------
 # Enchantment Descriptions
 # --------------------------------------
-
 enchantment.advancedrocketry.spacebreathing.desc=为护甲添加氧气罐。
 #enchantment.astralsorcery.enchantment.as.nightvision.desc=赋予佩戴者夜视效果。
 #enchantment.astralsorcery.enchantment.as.smelting.desc=用此附魔开采的方块将获得熔炼后的掉落物，就像熔炉那样。
@@ -586,6 +601,7 @@ enchantment.extrautils2.xu.kaboomerang.desc=摧毁方块。
 enchantment.extrautils2.xu.zoomerang.desc=提高回旋镖速度。
 enchantment.minecraft.aqua_affinity.desc=加快水下挖掘速度。
 enchantment.minecraft.bane_of_arthropods.desc=对节肢生物造成额外伤害（蜘蛛、洞穴蜘蛛、蠹虫和末影螨）。
+enchantment.minecraft.binding_curse.desc=防止附魔物品从盔甲槽中移除。
 #enchantment.minecraft.blast_protection.desc=减少爆炸伤害，也会降低爆炸产生的(等级*15)%的击退效果。
 enchantment.minecraft.depth_strider.desc=增加在水下行走的速度。
 enchantment.minecraft.efficiency.desc=增加工具的挖掘速度。
@@ -609,8 +625,10 @@ enchantment.minecraft.respiration.desc=延长水下呼吸时间，增强水下�
 enchantment.minecraft.sharpness.desc=增加物品的伤害值。
 enchantment.minecraft.silk_touch.desc=被挖掘的方块会掉落它们的本体而不是应该掉落的物品。
 enchantment.minecraft.smite.desc=对亡灵生物造成额外伤害（僵尸、僵尸猪人、骷髅、凋灵骷髅和凋灵）。
+enchantment.minecraft.sweeping.desc=增加横扫攻击的伤害。
 enchantment.minecraft.thorns.desc=给予攻击者伤害。
 enchantment.minecraft.unbreaking.desc=减缓工具的耐久消耗速率。
+enchantment.minecraft.vanishing_curse.desc=如果你死亡时物品在你的库存中，附魔物品将会消失。
 enchantment.openblocks.explosive.desc=遭受攻击时会产生爆炸。
 enchantment.openblocks.flim_flam.desc=在附近随机引发负面效果。
 enchantment.openblocks.last_stand.desc=使用经验防止死亡。

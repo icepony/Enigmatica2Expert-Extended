@@ -4,7 +4,15 @@
 modifier.excompressum:smashingii.desc=Hammering compressed blocks
 tile.spectreCoil_number.info=Generates 32 RF/t and outputs it into the block it's attached to. They can be found in dungeon chests.
 entity.twilightforest.harbinger_cube.name=Harbinger Cube
+# --------------------------------------
+# Custom mechanics
+# --------------------------------------
+description.crt.reuse=§a§o(Will not be consumed!)§r
+description.crt.consume=§6§o(Will be consumed!)§r
 
+# --------------------------------------
+# CoT new content
+# --------------------------------------
 itemGroup.other=ContentTweaker
 fluid.heavy_metal=Heavy Metal
 fluid.cheese=Cheese
@@ -16,9 +24,6 @@ fluid.terrestrial=Molten Terrestrial Artifact
 fluid.mithrillium=Molten Mithrillium
 fluid.adaminite=Molten Adaminite
 fluid.mithminite=Molten Mithminite
-
-description.crt.reuse=§a§o(Will not be consumed!)§r
-description.crt.consume=§6§o(Will be consumed!)§r
 
 item.contenttweaker.compressed_glowstone.name=Compressed Glowstone
 item.contenttweaker.compressed_ender.name=Compressed Ender
@@ -204,6 +209,9 @@ contenttweaker.part.fluid=%s
 
 item.contenttweaker.bee_diversity.name=Bee Diversity Store
 
+# --------------------------------------
+# TConstruct new materials and traits
+# --------------------------------------
 e2ee.tconstruct.material.spectre.name=Spectre
 e2ee.tconstruct.material.spectre.description=§bSpectral\nEach part gives additional Reach potion effect
 e2ee.tconstruct.material.fireproof.name=Fireproof
@@ -348,6 +356,9 @@ item.positron_unit.name=Positron Unit
 item.quantron.name=Quantron
 tile.industrialwires.hv_multiblock.marx.name=Marx Generator
 
+# --------------------------------------
+# Tags tooltips (see tags.zs)
+# --------------------------------------
 tooltips.lang.tag.generator=§6#Generator
 tooltips.lang.tag.solar=§f#Solar
 tooltips.lang.tag.chunkloader=§9#ChunkLoader
@@ -482,6 +493,9 @@ tooltips.dim_stages.restricted=§cIn §bSkyblock §cworlds, you cannot visit any
 tooltips.dim_stages.enter_skyblock=§eYou started a §bSkyblock §eworld. You cannot visit any other dimension §8(except Space, RFTools and personal ones). Also you get Haste IV for 3 hours.§r
 tooltips.dim_stages.remind_skyblock=§eYou have entered a §bSkyblock §eworld again. Remember: you cannot visit any other dimension §8(except Space, RFTools and personal ones)§r.
 
+# --------------------------------------
+# Requious Fracto custom JEI categories
+# --------------------------------------
 requious.jei.recipe.adv_bee_analyzer=Advanced Analyzer
 requious.jei.recipe.alchemists_stone=Alchemists Stone
 requious.jei.recipe.alienists_stone=Alienists Stone
@@ -518,6 +532,7 @@ requious.jei.recipe.turbine=Turbine
 requious.jei.recipe.typewriter=Typewriter
 requious.jei.recipe.witch_water=Witch Water
 
+# Actually Requious Fracto blocks
 tile.adv_bee_analyzer.name=Advanced Analyzer
 tile.infinity_furnace.name=Infinity Furnace
 tile.replicator.name=§5Replicator
@@ -538,10 +553,10 @@ item.contenttweaker.blade_core.name=Turbine Rotor Actinide Blade Core
 item.contenttweaker.steel_mould.name=Ultra Light Edelstahl Mould
 item.contenttweaker.alloy_mould.name=Ultra Light Edle Elektronlegierung Mould
 item.contenttweaker.sic_mould.name=Ultra Light Matrix-Legierung Mould
+
 # --------------------------------------
 # Enchantment Descriptions
 # --------------------------------------
-
 enchantment.advancedrocketry.spacebreathing.desc=Adds an oxygen tank to the armor piece.
 #enchantment.astralsorcery.enchantment.as.nightvision.desc=Grants the wearer night vision.
 #enchantment.astralsorcery.enchantment.as.smelting.desc=Blocks mined with this enchantment will have their drops smelted, as though in a furnace.
