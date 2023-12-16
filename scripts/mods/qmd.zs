@@ -131,8 +131,9 @@ craft.make(<qmd:boots_hev>, ["pretty",
 );
 
 # [Tungsten Filament] from [Tungsten Ingot]
-scripts.process.alloy([<endreborn:item_ingot_wolframium>, <endreborn:item_ingot_wolframium>],
-  <qmd:source>.withTag({particle_storage: {particle_amount: 50000000}}), "except: AlloyFurnace Kiln induction alloySmelter"
+scripts.process.alloy([<endreborn:item_ingot_wolframium>, <ore:dustTungsten>],
+  <qmd:source>.withTag({particle_storage: {particle_amount: 50000000, particle_capacity: 50000000}}),
+  "except: AlloyFurnace Kiln induction alloySmelter"
 );
 
 val alloyMachines = "except: alloyFurnace kiln";
