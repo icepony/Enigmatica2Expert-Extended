@@ -2,24 +2,46 @@
 
 🚧✅❌ List of priorities:
 
-- [x] 📖 Add langs to "Fireproof" singularity
-- [ ] ✏️ Check Voiding Armor From Hydra
-- [ ] 🔴 Remove TwilightTweaks until fixed rename bug
-- [ ] 🟢 move To Server Starter
-- [ ] ✏️ Make recipe function for Rats Nuggets recipes
-- [ ] 📖 `/levelupTool` use in quest reward
-- [ ] 📖 ExCr tables should be available from Conflux levels
-- [x] ✏️ removeManaFromDragonLootRings
-- [x] ✏️ fixAssemblerWoodDustConflicts
-- [ ] 🕸 Create issues about IC2 Reactor in compact machine and cables disconnection
-- [ ] ✏️ Burn singularity should be exponential
+- [ ] ✏️ Burn singularity should be exponential `1.25`
 - [ ] ✏️ Star Of Psi should be obtainable in no-power run
 - [ ] 📖 Explain BoP gems sources in empowered quests
 - [ ] 🐛 fix Ie Bug If Removing Entities When Crash On Mount
-- [ ] 📜 Fix Readme on github have broken image links
-- [x] ✏️ fix AA Crushing Coal
-- [x] ✏️ nerfMekSolarPanels
-
+- [ ] ✏️ Remove Mysical Flesh
+- [ ] 🐛 Fix AdvRock planet jump causing death https://discord.com/channels/911676461050642432/959878900278784030/1179686673525776474
+- [ ] ✏️ Remove usage of different fires from Cyclic
+- [ ] ✏️ Remove fast processing with Crushing block since its too fast
+- [ ] ✏️ fix 59% on Bees Output
+- [ ] ✏️ adv Rock Crystals Beneficate In QMD
+- [ ] default Nanomachines Configs
+- [ ] fix Trophy Crafting Not Working
+- [ ] distructive Stabilisation Ring Not Working
+- [ ] induction Smelter Add Energetic Alloy Recipe
+- [ ] add Drawer Key To Morphing Tool
+- [ ] fix I C2 Chainsaw Cant Cut T Ctrees
+- [ ] fix Filament N B T
+- [ ] fix Ic2 Fertilizer Recipe
+- [ ] remove Grid Hotkey
+- [ ] rolling Machine Remove False Quest Description
+- [ ] install Threadwatcher
+- [ ] remove Enchantments From Quests Rewards
+- [ ] check If Compressed Cobble In E I O Smeltery Smeltable
+- [ ] sulfuric acid recipe recipe in Chemical Reactor should also accept Mek's liquid
+- [ ] Disable Quark's buttons for Modular Storage
+- [ ] Remove cheap fluiduct recipe
+- [ ] Install https://www.curseforge.com/minecraft/mc-mods/omniwand
+- [ ] Replace BetterP2P to https://www.curseforge.com/minecraft/mc-mods/enhancedp2p
+- [ ] Replace Villager Market to https://www.curseforge.com/minecraft/mc-mods/villager-market-nbt-fix
+- [ ] find Option That Fix E U Ring On Change Dimension
+- [ ] fix Dispenser Quest Typo C
+- [ ] fix Tropical Gardens Spawn In Frozen Ocean
+- [ ] check Shark Bite Glitching
+- [ ] add3 D Prints More Usage
+- [ ] remove Melodic Alloy Reservoir From I O
+- [ ] remove All Modded Books From Rewards
+- [ ] Remove useless ores from T6 ore miner
+- [ ] disable Bogo Shuffle
+- [ ] `betteranimalsplus_goose` replace for world tick instead of entity tick
+- [ ] Remove Armor Curve
 
 ```sh
 /bcore_ticktime
@@ -73,6 +95,9 @@ minecraft:sponge
 
 Planned non-urgent changes, or just good ideas:
 
+- [ ] 🕸 Create issues about IC2 Reactor in compact machine and cables disconnection
+- [ ] 🐛 If Conarm armor have huge durability (>65,000), when it get damage over 50% its repairing to 100% and become unbreakable. On some cases it void armor from inventory instead
+- [ ] 🟢 Return `TwilightTweaks` when fixed https://github.com/LoliKingdom/Bansoukou/issues/5
 - [ ] ✏️ `Critical Matter Cluster` add usages and mechanics (obtained with shift+right click of World Breaker)
 - [ ] ✏️ Add bar for diverse/charge singularity by making custon CoT item with durability.
 - [ ] 📖 sort TC book By Material Power, need fix: https://github.com/Project-RT/RandomTweaker/issues/67
@@ -213,7 +238,6 @@ Planned non-urgent changes, or just good ideas:
 - [ ] 📀 Adv. Rock tank left 64 buckets when broken
 - [ ] 🟠 Do not update Recurrent Complex to `1.4.8.3` (cause crashes on server)
 - [ ] 🔴 Do not update `JAOPCA` - uncompatible with JAOPCACustom
-- [ ] 🔴 Do not update `Redstone Repository Revolved` (incompatible with TConEvo)
 - [ ] 🔴 Do not update `spark` (not working propertly)
 - [ ] 🔴 Do not update `Specrtal Edge` to 1.5
 - [ ] 🔄 After getting 30 hearts, player need to relog to enter nether
@@ -246,7 +270,6 @@ Planned non-urgent changes, or just good ideas:
 - [ ] 🌍 Add new AdvRocke atmospheres
 - [ ] 🌍 Add water animals at dim 118
 - [ ] 🌿 Patchouli: Change **texture** of book
-- [ ] 🔄 ![](https://git.io/J3p8B "Infinity Furnace") front texture empty on client
 - [ ] 🏪 ![](https://git.io/J3p8B "Infinity Furnace") add speed upgrades
 - [ ] 🔄 **Perfect Fuel** Fix texture. Now it uses default one.
 - [ ] 🔄 Fix Custom Animals drops non-cooked meat
