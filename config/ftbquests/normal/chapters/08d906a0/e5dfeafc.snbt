@@ -17,7 +17,7 @@
 	rewards: [{
 		uid: "c6af6a43",
 		type: "item",
-		item: "exnihilocreatio:block_barrel1",
-		count: 2
+		item: "immersiveengineering:wooden_device0 1 1",
+		count: 5
 	}]
 }

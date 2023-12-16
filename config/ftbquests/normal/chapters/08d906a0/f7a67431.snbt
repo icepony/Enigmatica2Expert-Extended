@@ -9,7 +9,7 @@
 		uid: "2e1abcdf",
 		type: "item",
 		items: [{
-			item: "minecraft:quartz_ore"
+			item: "minecraft:quartz"
 		}]
 	}],
 	rewards: [{
