@@ -10,25 +10,6 @@
 import crafttweaker.player.IPlayer;
 import crafttweaker.item.IItemStack;
 
-for lang, entries in {
-  en_us: {
-    send   : 'You have given %s to %s',
-    receive: 'You have been given %s by %s'
-  },
-  ru_ru: {
-    send   : 'Вы передали %s игроку %s',
-    receive: 'Вам передали %s от игрока %s'
-  },
-  zh_cn: {
-    send   : '你已经将 %s 交给 %s',
-    receive: '你获得了 %s ，来自 %s'
-  },
-} as string[string][string] {
-  for key, value in entries {
-    game.setLocalization(lang, 'chat.hand_over_your_items.'~key, value);
-  }
-}
-
 val MAIN_HAND = crafttweaker.entity.IEntityEquipmentSlot.mainHand();
 
 events.onPlayerInteractEntity(function(e as crafttweaker.event.PlayerInteractEntityEvent){
