@@ -31,6 +31,7 @@ val superMOT = <morphtool:tool>.withTag({"morphtool:is_morphing": 1 as byte, "mo
 	rats:                {id:"rats:cheese_stick",                           Count: 1 as byte, Damage: 0 as short},
 	iceandfire:          {id:"iceandfire:dragon_stick",                     Count: 1 as byte, Damage: 0 as short},
 	nuclearcraft:        {id:"nuclearcraft:multitool",                      Count: 1 as byte, Damage: 0 as short, tag: {multitoolUsed: 0 as byte}},
+	storagedrawers:      {id:"storagedrawers:drawer_key",                   Count: 1 as byte, Damage: 0 as short},
 	},
 });
 
