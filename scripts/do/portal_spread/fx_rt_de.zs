@@ -8,6 +8,7 @@
 #priority -3
 #reloadable
 #modloaded zenutils randomtweaker draconicevolution
+#sideonly client
 
 import crafttweaker.world.IWorld;
 import crafttweaker.world.IVector3d;
