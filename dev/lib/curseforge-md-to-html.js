@@ -13,7 +13,7 @@ import { join, parse } from 'node:path'
 import * as cheerio from 'cheerio'
 import MarkdownIt from 'markdown-it'
 
-const sourcePath = String(process.argv[2] || 'latest.md')
+const sourcePath = String(process.argv[2] || 'latest_release.md')
 if (!existsSync(sourcePath)) throw new Error(`Provide correct file path: ${sourcePath}`)
 
 const md = new MarkdownIt({ html: true })

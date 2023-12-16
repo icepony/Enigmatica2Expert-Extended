@@ -195,7 +195,7 @@ const style = {
   const nextVersion = inputVersion || oldVersion || 'v???'
 
   if (await pressEnterOrEsc(`[${STEP++}] Generate Changelog? ENTER / ESC.`)) {
-    const latestPath = 'changelogs/LATEST.md'
+    const latestPath = 'CHANGELOG-latest.md'
 
     // Update version in files
     execSyncInherit(`npx json -I -f config/CustomMainMenu/mainmenu.json -e "this.labels.version_num.text='${nextVersion}'"`)
