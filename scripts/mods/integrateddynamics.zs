@@ -126,7 +126,7 @@ craft.make(<integrateddynamics:cable> * 4, ["pretty",
 });
 
 # [Fluid Interface] from [Flopper][+1]
-craft.remake(<integratedtunnels:part_interface_fluid_item>, ["pretty",
+craft.remake(<integratedtunnels:part_interface_fluid_item> * 4, ["pretty",
   "∩ F ∩",
   "∩ ∩ ∩"], {
   "F": <flopper:flopper>, # Flopper
