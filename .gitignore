@@ -26,6 +26,11 @@ structures/inactive
 !.github/
 !.imgbotconfig
 
+# Developing-only configs
+!.eslint.config.js
+!.tsconfig.json
+!.vscode/settings.json
+
 # OTG configs
 !mods
 mods/*
