@@ -33,7 +33,7 @@ static oreStick as IItemStack[string] = {
 
 function setDrops(e as BlockHarvestDropsEvent, value as int) as void {
   val log = e.drops[0].stack.anyAmount();
-  var output = scripts.category.wood.logPlank[log];
+  var output = scripts.lib.wood.logPlank[log];
 
   // Try to convert Plank => Sticks
   if(isNull(output)) {

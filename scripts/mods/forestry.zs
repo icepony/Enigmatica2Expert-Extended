@@ -329,7 +329,7 @@ craft.make(<forestry:capsule> * 2, ["PPP"], {
 });
 
 # Remove all fireproof recipes. Fireproof only obtainable through breeding.
-for log, plank in scripts.category.wood.logPlank {
+for log, plank in scripts.lib.wood.logPlank {
   if(!log.definition.id.matches('.*fireproof.*')) continue;
   mods.forestry.ThermionicFabricator.removeCast(log);
   mods.forestry.ThermionicFabricator.removeCast(plank * 5);

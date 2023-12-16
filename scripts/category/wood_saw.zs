@@ -14,7 +14,7 @@ function saw(input as IIngredient, output as IItemStack, exceptions as string) {
   scripts.process.sawWood(input, output, "except: TESawmill blockCutter shapeless " ~ exceptions);
 }
 
-for log, plank in scripts.category.wood.logPlank {
+for log, plank in scripts.lib.wood.logPlank {
   val id = log.definition.id;
   val mod = id.split(':')[0];
   val exceptions = 
