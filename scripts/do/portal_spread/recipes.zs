@@ -1,6 +1,6 @@
 /**
  * @file Create and store recipes for do.zs/portal_spread
- * 
+ *
  * @author Krutoy242
  * @link https://github.com/Krutoy242
  */
@@ -9,10 +9,7 @@
 #reloadable
 #modloaded zenutils
 
-import crafttweaker.block.IBlock;
 import crafttweaker.block.IBlockState;
-import crafttweaker.block.IBlockStateMatcher;
-import crafttweaker.item.IItemStack;
 import crafttweaker.oredict.IOreDictEntry;
 
 /*
@@ -60,7 +57,7 @@ static initialized as bool = false;
 
 // Get recipes and initialize if needed
 function getRecipes(dimFrom as int, dimTo as int) as IBlockState[][IBlockState] {
-  if(!initialized) init();
+  if (!initialized) init();
 
   if (isNull(stateRecipes[dimFrom])) return null;
   return stateRecipes[dimFrom][dimTo];
@@ -68,17 +65,17 @@ function getRecipes(dimFrom as int, dimTo as int) as IBlockState[][IBlockState] 
 
 // Get one of cached lists for faster lookup
 function getNumIds(listName as string, dimFrom as int, dimTo as int) as bool[int] {
-  if(!initialized) init();
+  if (!initialized) init();
 
   val list = listName == 'transformable'
     ? transformableBlockNumIds
     : listName == 'blacklisted'
-    ? blacklistedBlockNumIds
-    : listName == 'wildcarded'
-    ? wildcardedNumIds
-    : null;
-  
-  if(isNull(list)) logger.logWarning('[portal_spread] trying to get unexisting block list: '~listName);
+      ? blacklistedBlockNumIds
+      : listName == 'wildcarded'
+        ? wildcardedNumIds
+        : null;
+
+  if (isNull(list)) logger.logWarning('[portal_spread] trying to get unexisting block list: ' ~ listName);
 
   if (isNull(list[dimFrom])) return null;
   return list[dimFrom][dimTo];
@@ -87,8 +84,8 @@ function getNumIds(listName as string, dimFrom as int, dimTo as int) as bool[int
 /*
 ██████╗ ██╗   ██╗██████╗ ██╗     ██╗ ██████╗
 ██╔══██╗██║   ██║██╔══██╗██║     ██║██╔════╝
-██████╔╝██║   ██║██████╔╝██║     ██║██║     
-██╔═══╝ ██║   ██║██╔══██╗██║     ██║██║     
+██████╔╝██║   ██║██████╔╝██║     ██║██║
+██╔═══╝ ██║   ██║██╔══██╗██║     ██║██║
 ██║     ╚██████╔╝██████╔╝███████╗██║╚██████╗
 ╚═╝      ╚═════╝ ╚═════╝ ╚══════╝╚═╝ ╚═════╝
 
@@ -102,27 +99,27 @@ function getNumIds(listName as string, dimFrom as int, dimTo as int) as bool[int
 
 /**
  * Set conversion of one specific state to another ones
- * 
+ *
  * Use <blockstate:minecraft:air> in blocksTo to remove block
- * 
+ *
  */
 function setState(dimFrom as int, dimTo as int, blockFrom as IBlockState, blocksTo as IBlockState[]) as void {
-  if(isNull(blockFrom)) return;
+  if (isNull(blockFrom)) return;
 
   // Update stateRecipes maps
-  if(isNull(stateRecipes[dimFrom])) stateRecipes[dimFrom] = {} as IBlockState[][IBlockState][int];
-  if(isNull(stateRecipes[dimFrom][dimTo])) stateRecipes[dimFrom][dimTo] = {} as IBlockState[][IBlockState];
+  if (isNull(stateRecipes[dimFrom])) stateRecipes[dimFrom] = {} as IBlockState[][IBlockState][int];
+  if (isNull(stateRecipes[dimFrom][dimTo])) stateRecipes[dimFrom][dimTo] = {} as IBlockState[][IBlockState];
 
   // Update fast lookup maps
-  if(isNull(transformableBlockNumIds[dimFrom])) transformableBlockNumIds[dimFrom] = {} as bool[int][int];
-  if(isNull(transformableBlockNumIds[dimFrom][dimTo])) transformableBlockNumIds[dimFrom][dimTo] = {} as bool[int];
+  if (isNull(transformableBlockNumIds[dimFrom])) transformableBlockNumIds[dimFrom] = {} as bool[int][int];
+  if (isNull(transformableBlockNumIds[dimFrom][dimTo])) transformableBlockNumIds[dimFrom][dimTo] = {} as bool[int];
   transformableBlockNumIds[dimFrom][dimTo][blockFrom.block.definition.numericalId] = true;
 
   stateRecipes[dimFrom][dimTo][blockFrom] = blocksTo;
-  
+
   // Update this dim and all dependent dims
   dimHasRecipes[dimFrom] = true;
-  if(!isNull(dimDependents[dimFrom])) {
+  if (!isNull(dimDependents[dimFrom])) {
     for i, dep in dimDependents[dimFrom] {
       dimHasRecipes[dep] = true;
     }
@@ -130,9 +127,9 @@ function setState(dimFrom as int, dimTo as int, blockFrom as IBlockState, blocks
 
   // Update untransformable blocks
   for blockTo in blocksTo {
-    if(isNull(blockTo)) continue;
-    if(isNull(blacklistedBlockNumIds[dimFrom])) blacklistedBlockNumIds[dimFrom] = {} as bool[int][int];
-    if(isNull(blacklistedBlockNumIds[dimFrom][dimTo])) blacklistedBlockNumIds[dimFrom][dimTo] = {} as bool[int];
+    if (isNull(blockTo)) continue;
+    if (isNull(blacklistedBlockNumIds[dimFrom])) blacklistedBlockNumIds[dimFrom] = {} as bool[int][int];
+    if (isNull(blacklistedBlockNumIds[dimFrom][dimTo])) blacklistedBlockNumIds[dimFrom][dimTo] = {} as bool[int];
     blacklistedBlockNumIds[dimFrom][dimTo][blockTo.block.definition.numericalId] = true;
   }
 }
@@ -151,8 +148,8 @@ function setStates(dimFrom as int, dimTo as int, blocksFrom as IBlockState[], bl
  */
 function setBlocks(dimFrom as int, dimTo as int, blocksFrom as IBlockState[], blocksTo as IBlockState[]) as void {
   for blockFrom in blocksFrom {
-    if(isNull(wildcardedNumIds[dimFrom])) wildcardedNumIds[dimFrom] = {} as bool[int][int];
-    if(isNull(wildcardedNumIds[dimFrom][dimTo])) wildcardedNumIds[dimFrom][dimTo] = {} as bool[int];
+    if (isNull(wildcardedNumIds[dimFrom])) wildcardedNumIds[dimFrom] = {} as bool[int][int];
+    if (isNull(wildcardedNumIds[dimFrom][dimTo])) wildcardedNumIds[dimFrom][dimTo] = {} as bool[int];
     wildcardedNumIds[dimFrom][dimTo][blockFrom.block.definition.numericalId] = true;
 
     setState(dimFrom, dimTo, blockFrom.block.definition.defaultState, blocksTo);
@@ -179,7 +176,7 @@ function setOreBlocks(dimFrom as int, dimTo as int, oredict as IOreDictEntry, bl
 function setDimensionFallback(copyDim as int, baseDim as int) as void {
   dimFallbacks[copyDim] = baseDim;
   dimHasRecipes[copyDim] = dimHasRecipes[baseDim];
-  if(isNull(dimDependents[baseDim])) dimDependents[baseDim] = [] as int[];
+  if (isNull(dimDependents[baseDim])) dimDependents[baseDim] = [] as int[];
   dimDependents[baseDim] = dimDependents[baseDim] + copyDim;
 }
 
@@ -190,10 +187,10 @@ function setDimensionFallback(copyDim as int, baseDim as int) as void {
 // Remove all transformable blocks from blacklist
 function init() as void {
   for dimFromId, dimFrom in transformableBlockNumIds {
-    if(isNull(blacklistedBlockNumIds[dimFromId])) continue;
+    if (isNull(blacklistedBlockNumIds[dimFromId])) continue;
 
     for dimToId, dimTo in dimFrom {
-      if(isNull(blacklistedBlockNumIds[dimFromId][dimToId])) continue;
+      if (isNull(blacklistedBlockNumIds[dimFromId][dimToId])) continue;
 
       blacklistedBlockNumIds[dimFromId][dimToId] = mapAExceptB(
         blacklistedBlockNumIds[dimFromId][dimToId], dimTo
@@ -217,17 +214,17 @@ function mapAExceptB(a as bool[int], b as bool[int]) as bool[int] {
     }
     if (!isOutputInInput) newOne[idA] = true;
   }
-  
+
   return newOne;
 }
 
 /*
 ██████╗ ███████╗███████╗ █████╗ ██╗   ██╗██╗  ████████╗
 ██╔══██╗██╔════╝██╔════╝██╔══██╗██║   ██║██║  ╚══██╔══╝
-██║  ██║█████╗  █████╗  ███████║██║   ██║██║     ██║   
-██║  ██║██╔══╝  ██╔══╝  ██╔══██║██║   ██║██║     ██║   
-██████╔╝███████╗██║     ██║  ██║╚██████╔╝███████╗██║   
-╚═════╝ ╚══════╝╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝   
+██║  ██║█████╗  █████╗  ███████║██║   ██║██║     ██║
+██║  ██║██╔══╝  ██╔══╝  ██╔══██║██║   ██║██║     ██║
+██████╔╝███████╗██║     ██║  ██║╚██████╔╝███████╗██║
+╚═════╝ ╚══════╝╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝
 
 ██████╗ ███████╗ ██████╗██╗██████╗ ███████╗███████╗
 ██╔══██╗██╔════╝██╔════╝██║██╔══██╗██╔════╝██╔════╝
@@ -339,14 +336,14 @@ setStates(0, -1, [
 ], [<blockstate:minecraft:stone_slab:half=bottom,variant=nether_brick>]);
 setStates(0, -1, [
   <blockstate:minecraft:stone_slab:half=top,variant=stone_brick>,
-  <blockstate:minecraft:stone_slab:half=top,variant=stone>
+  <blockstate:minecraft:stone_slab:half=top,variant=stone>,
 ], [<blockstate:minecraft:stone_slab:half=top,variant=nether_brick>]);
 setStates(0, -1, [], [<blockstate:minecraft:stone_slab:half=bottom,variant=nether_brick>]);
 
 ////////////////////////////////////////////////////////////
 // Modded Recipes
 ////////////////////////////////////////////////////////////
-if(!isNull(loadedMods['biomesoplenty'])) {
+if (!isNull(loadedMods['biomesoplenty'])) {
   setBlocks(0, -1, [<blockstate:minecraft:water>], [<blockstate:biomesoplenty:blood>]);
 
   for item in <ore:treeLeaves>.items {
@@ -362,11 +359,12 @@ if(!isNull(loadedMods['biomesoplenty'])) {
     <blockstate:biomesoplenty:hive:variant=filled_honeycomb>,
   ]);
   setBlocks(0, -1, [<blockstate:minecraft:snow_layer>], [<blockstate:biomesoplenty:blue_fire>]);
-} else {
+}
+else {
 
 }
 
-if(!isNull(loadedMods['netherendingores'])) {
+if (!isNull(loadedMods['netherendingores'])) {
   setStates(0, -1, [
     <blockstate:minecraft:iron_ore>,
     <blockstate:minecraft:redstone_ore>,
@@ -388,17 +386,19 @@ if(!isNull(loadedMods['netherendingores'])) {
   setStates(0, -1, [<blockstate:thaumcraft:ore_amber>], [<blockstate:netherendingores:ore_nether_modded_1:blocks=certus_quartz_ore>]);
   setStates(0, -1, [<blockstate:thaumcraft:ore_cinnabar>], [<blockstate:netherendingores:ore_nether_modded_1:blocks=charged_certus_quartz_ore>]);
   setStates(0, -1, [<blockstate:thermalfoundation:ore:type=platinum>], [<blockstate:netherendingores:ore_nether_modded_1:blocks=lead_ore>]);
-} else {
+}
+else {
 
 }
 
-if(!isNull(loadedMods['rustic'])) {
+if (!isNull(loadedMods['rustic'])) {
   setBlocks(0, -1, [<blockstate:minecraft:planks>], [<blockstate:rustic:painted_wood_black>]);
-} else {
+}
+else {
 
 }
 
-if(!isNull(loadedMods['chisel'])) {
+if (!isNull(loadedMods['chisel'])) {
   setBlocks(0, -1, [<blockstate:minecraft:hardened_clay>], [<blockstate:chisel:basalt2:variation=7>]);
 
   setStates(0, -1, [
@@ -412,17 +412,19 @@ if(!isNull(loadedMods['chisel'])) {
   setBlocks(0, -1, [<blockstate:minecraft:glass_pane>], [<blockstate:chisel:glasspane1:variation=0>]);
   setBlocks(0, -1, [<blockstate:minecraft:double_stone_slab>], [<blockstate:chisel:netherbrick:variation=7>]);
   setStates(0, -1, [<blockstate:minecraft:grass_path>], [<blockstate:chisel:netherrack:variation=12>]);
-} else {
+}
+else {
 
 }
 
-if(!isNull(loadedMods['exnihilocreatio'])) {
+if (!isNull(loadedMods['exnihilocreatio'])) {
   setStates(0, -1, [<blockstate:minecraft:gravel>], [<blockstate:exnihilocreatio:block_netherrack_crushed>]);
-} else {
+}
+else {
 
 }
 
-if(!isNull(loadedMods['exnihilocreatio'])) {
+if (!isNull(loadedMods['exnihilocreatio'])) {
   setStates(0, -1, [<blockstate:minecraft:sandstone:type=sandstone>], [<blockstate:mysticalagriculture:soulstone:variant=cobbled>]);
   setStates(0, -1, [<blockstate:minecraft:sandstone:type=chiseled_sandstone>], [<blockstate:mysticalagriculture:soulstone:variant=smooth>]);
   setStates(0, -1, [<blockstate:minecraft:sandstone:type=smooth_sandstone>], [<blockstate:mysticalagriculture:soulstone:variant=polished>]);
@@ -435,20 +437,22 @@ if(!isNull(loadedMods['exnihilocreatio'])) {
   ], [
     <blockstate:mysticalagriculture:soulstone:variant=polished>,
   ]);
-} else {
+}
+else {
 
 }
 
-if(!isNull(loadedMods['advancedrocketry'])) {
+if (!isNull(loadedMods['advancedrocketry'])) {
   setOreBlocks(0, -1, <ore:logWood>, [
     <blockstate:advancedrocketry:charcoallog>,
   ]);
   setBlocks(0, -1, [<blockstate:quark:bark>], [<blockstate:advancedrocketry:charcoallog>]);
-} else {
+}
+else {
 
 }
 
-if(!isNull(loadedMods['quark'])) {
+if (!isNull(loadedMods['quark'])) {
   setStates(0, -1, [<blockstate:minecraft:glass>], [<blockstate:quark:framed_glass>]);
   setStates(0, -1, [<blockstate:minecraft:stone_slab:half=bottom,variant=cobblestone>], [<blockstate:quark:fire_stone_slab:half=bottom,prop=blarg>]);
   setStates(0, -1, [<blockstate:minecraft:stone_slab:half=top,variant=cobblestone>], [<blockstate:quark:fire_stone_slab:half=top,prop=blarg>]);
@@ -467,17 +471,19 @@ if(!isNull(loadedMods['quark'])) {
   setBlocks(0, -1, [<blockstate:biomesoplenty:white_sandstone_stairs>], [<blockstate:quark:stone_jasper_stairs>]);
   setBlocks(0, -1, [<blockstate:minecraft:stained_hardened_clay>], [<blockstate:quark:sandstone_new:variant=soul_sandstone_smooth>]);
   setBlocks(0, -1, [<blockstate:quark:sandstone_wall>], [<blockstate:mysticalagriculture:soulstone_brick_wall>]);
-} else {
+}
+else {
 
 }
 
-if(!isNull(loadedMods['darkutils'])) {
+if (!isNull(loadedMods['darkutils'])) {
   setBlocks(0, -1, [<blockstate:minecraft:wool>], [<blockstate:darkutils:slime_dyed>]);
-} else {
+}
+else {
 
 }
 
-if(!isNull(loadedMods['tconstruct'])) {
+if (!isNull(loadedMods['tconstruct'])) {
   setBlocks(0, -1, [<blockstate:minecraft:torch>], [<blockstate:tconstruct:stone_torch>]);
   setStates(0, -1, [
     <blockstate:actuallyadditions:block_misc:type=ore_black_quartz>,
@@ -496,42 +502,48 @@ if(!isNull(loadedMods['tconstruct'])) {
   ], [
     <blockstate:tconstruct:ore:type=cobalt>,
   ]);
-} else {
+}
+else {
 
 }
 
-if(!isNull(loadedMods['sonarcore'])) {
+if (!isNull(loadedMods['sonarcore'])) {
   setOreBlocks(0, -1, <ore:fenceWood>, [<blockstate:sonarcore:reinforcedstonefence>]);
-} else {
+}
+else {
 
 }
 
-if(!isNull(loadedMods['excompressum'])) {
+if (!isNull(loadedMods['excompressum'])) {
   setStates(0, -1, [<blockstate:astralsorcery:blockcustomsandore:oretype=aquamarine>], [<blockstate:excompressum:compressed_block:variant=soul_sand>]);
-} else {
+}
+else {
 
 }
 
-if(!isNull(loadedMods['actuallyadditions'])) {
+if (!isNull(loadedMods['actuallyadditions'])) {
   setBlocks(0, -1, [<blockstate:astralsorcery:blockmarble>], [<blockstate:astralsorcery:blockblackmarble>]);
-} else {
+}
+else {
 
 }
 
-if(!isNull(loadedMods['iceandfire'])) {
+if (!isNull(loadedMods['iceandfire'])) {
   setBlocks(0, -1, [<blockstate:minecraft:hay_block>], [<blockstate:iceandfire:chared_gravel>]);
   setBlocks(0, -1, [<blockstate:minecraft:red_sandstone>], [<blockstate:iceandfire:chared_stone:revert=false>]);
-} else {
+}
+else {
 
 }
 
-if(!isNull(loadedMods['extrautils2'])) {
+if (!isNull(loadedMods['extrautils2'])) {
   setBlocks(0, -1, [<blockstate:minecraft:mycelium>], [<blockstate:extrautils2:cursedearth:decay=0>]);
-} else {
+}
+else {
 
 }
 
-if(!isNull(loadedMods['thaumcraft'])) {
+if (!isNull(loadedMods['thaumcraft'])) {
   setStates(0, -1, [
     <blockstate:thaumcraft:stone_porous>,
   ], [
@@ -540,12 +552,14 @@ if(!isNull(loadedMods['thaumcraft'])) {
     <blockstate:forestry:ash_block_3>,
     <blockstate:additionalcompression:dustgunpowder_compressed:level=0>,
   ]);
-} else {
+}
+else {
 
 }
 
-if(!isNull(loadedMods['rats'])) {
+if (!isNull(loadedMods['rats'])) {
   setStates(0, -1, [<blockstate:rats:garbage_pile>], [<blockstate:tconstruct:soil:type=grout>]);
-} else {
+}
+else {
 
 }

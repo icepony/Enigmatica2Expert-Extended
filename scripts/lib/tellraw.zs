@@ -9,7 +9,7 @@ import crafttweaker.player.IPlayer;
 function item(item as IItemStack, color as string = null, showName as bool = true) as IData {
   val data = [
     {
-      text: item.amount > 1 ? item.amount~'x' : '',
+      text: item.amount > 1 ? item.amount ~'x' : '',
       hoverEvent: {
         action: 'show_item',
         value: item.asData().toNBTString(),
@@ -20,7 +20,7 @@ function item(item as IItemStack, color as string = null, showName as bool = tru
           // So you needs Quark to get the icon
           text: '§f   '
         } + (!showName ? {} :
-          {extra: [(item.hasDisplayName ? item.tag.display.Name : {translate: item.name~'.name'})]}
+          {extra: [(item.hasDisplayName ? item.tag.display.Name : {translate: item.name ~'.name'})]}
         )
       ]
     }

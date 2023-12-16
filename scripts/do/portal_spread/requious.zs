@@ -26,12 +26,12 @@ static blockRepresentation as IItemStack[string] = {
   'minecraft:lava'              : <minecraft:lava_bucket>,
   'minecraft:water'             : <minecraft:water_bucket>,
   'minecraft:air'               : <mechanics:empty>,
-  'biomesoplenty:blood'         : <forge:bucketfilled>.withTag({FluidName: "blood", Amount: 1000}),
+  'biomesoplenty:blood'         : <forge:bucketfilled>.withTag({ FluidName: 'blood', Amount: 1000 }),
 };
 
-var x = <assembly:portal_spread>;
+val x = <assembly:portal_spread>;
 x.addJEICatalyst(<minecraft:obsidian>);
-x.setJEIDurationSlot(1,0,"duration", mods.requious.SlotVisual.arrowRight());
+x.setJEIDurationSlot(1, 0, 'duration', mods.requious.SlotVisual.arrowRight());
 x.setJEIItemSlot(0, 0, 'input');
 for i in 2 .. 6 {
   x.setJEIItemSlot(i, 0, 'output');
@@ -40,7 +40,7 @@ for i in 2 .. 6 {
 val wildcardedNumIds = scripts.do.portal_spread.recipes.wildcardedNumIds;
 
 function stateToItem(state as IBlockState) as IItemStack {
-  if(
+  if (
     isNull(state)
     || isNull(state.block)
     || isNull(state.block.definition)
@@ -50,7 +50,7 @@ function stateToItem(state as IBlockState) as IItemStack {
   var item = state.block.getItem(null, null, state);
   if (isNull(item)) item = blockRepresentation[defId];
   if (isNull(item))
-    logger.logWarning('Cannot find item representation for block: '~defId);
+    logger.logWarning('Cannot find item representation for block: ' ~ defId);
   return item;
 }
 
@@ -63,29 +63,29 @@ for dimFrom, dimFromData in scripts.do.portal_spread.recipes.stateRecipes {
       // Outputs
       var outputs as IItemStack[] = [];
       for state in statesTo {
-        var item = stateToItem(state);
-        if(isNull(item)) continue;
+        val item = stateToItem(state);
+        if (isNull(item)) continue;
         outputs += item;
       }
 
       // Input
       var input = stateToItem(stateFrom);
-      if(isNull(input)) continue;
-      if(  !isNull(wildcardedNumIds[dimFrom])
+      if (isNull(input)) continue;
+      if (!isNull(wildcardedNumIds[dimFrom])
         && !isNull(wildcardedNumIds[dimFrom][dimTo])
         && !isNull(wildcardedNumIds[dimFrom][dimTo][stateFrom.block.definition.numericalId])
       ) input = input.anyDamage();
-      
+
       var merged = false;
       for inp, outs in recipeMap {
-        if(isNull(outs)) continue;
+        if (isNull(outs)) continue;
 
         // Find if outputs are the same
         var outsMatch = true;
-        for out in outs { if(!(outputs has out)) { outsMatch = false; break; } }
-        if(outsMatch) for out in outputs { if(!(outs has out)) { outsMatch = false; break; } }
+        for out in outs { if (!(outputs has out)) { outsMatch = false; break; } }
+        if (outsMatch) for out in outputs { if (!(outs has out)) { outsMatch = false; break; } }
 
-        if(!outsMatch || inp has input) continue;
+        if (!outsMatch || inp has input) continue;
 
         // Replace inputs
         recipeMap[inp] = null;
@@ -94,17 +94,16 @@ for dimFrom, dimFromData in scripts.do.portal_spread.recipes.stateRecipes {
         break;
       }
 
-      if(merged) continue;
+      if (merged) continue;
       recipeMap[input as IIngredient] = outputs;
     }
   }
 }
 
-
 for input, outputs in recipeMap {
-  if(isNull(outputs)) continue;
+  if (isNull(outputs)) continue;
 
-  x.addJEIRecipe(mods.requious.AssemblyRecipe.create(function(c) {
+  x.addJEIRecipe(mods.requious.AssemblyRecipe.create(function (c) {
     for output in outputs { c.addItemOutput('output', output); }
   }).requireItem('input', input));
 

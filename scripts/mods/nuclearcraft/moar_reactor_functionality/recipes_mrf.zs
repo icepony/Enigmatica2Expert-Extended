@@ -24,7 +24,7 @@ mods.nuclearcraft.FissionHeating.addRecipe(<fluid:critical_exhaust_carbon_dioxid
 val radioHeat = {
   <fluid:strontium_90>  : <fluid:samarium> * 61,
   <fluid:ruthenium_106> : <fluid:silver> * 102,
-//<fluid:caesium_137>   : <fluid:samarium> * 204, Managed by Trinity
+  // <fluid:caesium_137>   : <fluid:samarium> * 204, Managed by Trinity
   <fluid:promethium_147>: <fluid:samarium> * 244,
   <fluid:europium_155>  : <fluid:samarium> * 367,
 } as ILiquidStack[ILiquidStack];

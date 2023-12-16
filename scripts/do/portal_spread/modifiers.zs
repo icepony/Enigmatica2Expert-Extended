@@ -1,6 +1,6 @@
 /**
  * @file Portal modifier blocks and their configurations
- * 
+ *
  * @author Krutoy242
  * @link https://github.com/Krutoy242
  */
@@ -26,9 +26,9 @@ static MAX_DISTANCE_INDEXES as int = scripts.do.portal_spread.utils.MAX_DISTANCE
 
 static oldGroups as int[][string] = {};
 
-/** 
+/**
  * Using 4 block positions in world determine power of modifiers
- * 
+ *
  * @return Array of power of each modifier [modif_1_value, modif_2_value, ..., modif_n_value]
  */
 function getModifiers(
@@ -53,28 +53,28 @@ function getModifiers(
     // Portal just created and asserted
     notifyPlayers(world, portalPos, 'created');
   }
-  
+
   // Populate modifiers amounts
   val len = Config.modifiersList.length;
-  var modifiers = intArrayOf(len, 0);
-  var modGroupPower = intArrayOf(Config.modifierGroupCount, 0);
+  val modifiers = intArrayOf(len, 0);
+  val modGroupPower = intArrayOf(Config.modifierGroupCount, 0);
   for i in 0 .. 4 { // Iterate each corner
-    val block = world.getBlock(portalCorners[i*3+0], portalCorners[i*3+1], portalCorners[i*3+2]);
-    if(isNull(block)) continue; // no block or Air
+    val block = world.getBlock(portalCorners[i * 3 + 0], portalCorners[i * 3 + 1], portalCorners[i * 3 + 2]);
+    if (isNull(block)) continue; // no block or Air
 
     val blockMetas = Config.modifBlocksKey[block.definition];
-    if(isNull(blockMetas)) continue; // This block def not used
+    if (isNull(blockMetas)) continue; // This block def not used
 
     val keys = blockMetas[block.meta];
-    if(isNull(keys) || keys.length == 0) continue; // Block used but with other metas
+    if (isNull(keys) || keys.length == 0) continue; // Block used but with other metas
 
     // Add to modifier group
-    val groupIndex = Config.blockGroupMap[block.definition.id~':'~block.meta] as int;
+    val groupIndex = Config.blockGroupMap[block.definition.id ~ ':' ~ block.meta] as int;
     modGroupPower[groupIndex] = modGroupPower[groupIndex] + 1;
 
     for key in keys {
-      if(isNull(Config.MODIF[key])) {
-        logger.logWarning('[Portal Spread]: cant find find modifier ['~ key ~'] for block '~block.definition.id);
+      if (isNull(Config.MODIF[key])) {
+        logger.logWarning('[Portal Spread]: cant find find modifier [' ~ key ~ '] for block ' ~ block.definition.id);
         continue;
       }
       val index = Config.MODIF[key] as int;
@@ -83,13 +83,13 @@ function getModifiers(
   }
 
   // Notify players if modifiers changed
-  if(!isNull(portalPos)) {
+  if (!isNull(portalPos)) {
     val old = oldGroups[portalFullId];
-    if(!isNull(old)) {
+    if (!isNull(old)) {
       for i, value in modGroupPower {
-        if(old[i] == value) continue;
+        if (old[i] == value) continue;
         val postfix = old[i] > value ? 'red' : value != 4 ? 'add' : 'max';
-        notifyPlayers(world, portalPos, i~'_'~postfix);
+        notifyPlayers(world, portalPos, i ~ '_' ~ postfix);
       }
     }
   }
@@ -101,34 +101,34 @@ function getModifiers(
 
 function extractModif(modifiers as int[], key as string) as int {
   val i = Config.MODIF[key];
-  if(isNull(i)) return 0;
+  if (isNull(i)) return 0;
   val n = modifiers[i];
   return isNull(n) ? 0 : n as int;
 }
 
 function getTrueDelay(modifiers as int[]) as double {
-  val value =
-    pow(4.0, extractModif(modifiers, 'slow')) /
-    pow(3.0, extractModif(modifiers, 'fast'));
+  val value
+    = pow(4.0, extractModif(modifiers, 'slow'))
+    / pow(3.0, extractModif(modifiers, 'fast'));
 
   // Skip of maximum slow
-  if(value >= 256) return 0.0;
+  if (value >= 256) return 0.0;
 
   return Config.spreadDelay * value;
 }
 
 function getTrueLookup(modifiers as int[]) as double {
   val value = (Config.lookup as double)
-    * pow(2, extractModif(modifiers, 'potent'))
-    / pow(2, extractModif(modifiers, 'weak'));
+  * pow(2, extractModif(modifiers, 'potent'))
+  / pow(2, extractModif(modifiers, 'weak'));
   return value;
 }
 
 // "Index" is term used in portal_spread.utils functions
 function getMaxSpreadIndex(modifiers as int[]) as int {
   val value = extractModif(modifiers, 'large') - extractModif(modifiers, 'small');
-  if(value <= -4) return 0;
-  if(value >=  4) return 2147483647;
+  if (value <= -4) return 0;
+  if (value >= 4) return 2147483647;
 
   val currMaxRadius = value > 0
     ? (Config.maxRadius - Config.defaultRadius) * value / 4 + Config.defaultRadius
@@ -143,9 +143,9 @@ function spreadIndexToRadius(index as int) as int {
   return min(Config.maxRadius, pow(index / MAX_DISTANCE_INDEXES, 0.5));
 }
 
-/** 
+/**
  * Find corners of Nether portal
- * 
+ *
  * @return Flatten array with length of 12 of coordinates
  *   [x0, y0, z0, x1, y1, z1, x2, y2, z2, x3, y3, z3, x4, y4, z4]
  */
@@ -153,22 +153,18 @@ function getCorners(world as IWorld, pos as IBlockPos, axisX as bool) as IData {
   var y1 = 0;
   var y2 = 0;
   for i in 1 .. 21 {
-    if(!isPortalBlock(world, pos.getOffset(IFacing.down(), i)))
-      { y1 = -i; break; }
+    if (!isPortalBlock(world, pos.getOffset(IFacing.down(), i))) { y1 = -i; break; }
   }
   for i in 1 .. 21 {
-    if(!isPortalBlock(world, pos.getOffset(IFacing.up(), i)))
-      { y2 = i; break; }
+    if (!isPortalBlock(world, pos.getOffset(IFacing.up(), i))) { y2 = i; break; }
   }
   var u1 = 0;
   var u2 = 0;
   for i in 1 .. 21 {
-    if(!isPortalBlock(world, pos.getOffset(axisX ? IFacing.west() : IFacing.north(), i)))
-      { u1 = -i; break; }
+    if (!isPortalBlock(world, pos.getOffset(axisX ? IFacing.west() : IFacing.north(), i))) { u1 = -i; break; }
   }
   for i in 1 .. 21 {
-    if(!isPortalBlock(world, pos.getOffset(axisX ? IFacing.east() : IFacing.south(), i)))
-      { u2 = i; break; }
+    if (!isPortalBlock(world, pos.getOffset(axisX ? IFacing.east() : IFacing.south(), i))) { u2 = i; break; }
   }
   return [
     pos.x + (axisX ? u1 : 0), pos.y + y1, pos.z + (!axisX ? u1 : 0),

@@ -25,7 +25,7 @@ craft.make(<contenttweaker:bee_diversity>, ['pretty',
   'C P C',
   'C b C'], {
   P: <forestry:portable_alyzer>, // Portable Analyzer
-  C: <forestry:carton>,          // Carton
+  C: <forestry:carton>, // Carton
   b: <forestry:bee_queen_ge:*>,
 });
 
@@ -74,9 +74,9 @@ function rewardCalculator(
   penalty as double,
   multiplier as double
 ) as int {
-  val pow1 = pow((total - 12.0d) * 8.0d, 0.5d);
-  val pow2 = (points / 13.0d + 2.0d) / (penalty + 1.0d) + 1.0d;
-  return max(20, (pow(pow1, pow2) * multiplier + 0.5d) as int);
+  val pow1 = pow((total - 12.0) * 8.0, 0.5);
+  val pow2 = (points / 13.0 + 2.0) / (penalty + 1.0) + 1.0;
+  return max(20, (pow(pow1, pow2) * multiplier + 0.5) as int);
 }
 
 val diversityStoreOutput = <contenttweaker:bee_diversity>.withTag({

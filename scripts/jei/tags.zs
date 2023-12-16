@@ -8,7 +8,7 @@ val desc = scripts.lib.tooltip.desc;
 
 static list as IItemStack[][string] = {
 
-  generator : [
+  generator: [
     <actuallyadditions:block_coal_generator>,
     <actuallyadditions:block_leaf_generator>,
     <actuallyadditions:block_oil_generator>,
@@ -23,22 +23,22 @@ static list as IItemStack[][string] = {
     <enderio:block_simple_stirling_generator>,
     <enderio:block_stirling_generator>,
     <enderio:block_zombie_generator>,
-    <extrautils2:machine>.withTag({Type: "extrautils2:generator_culinary"}),
-    <extrautils2:machine>.withTag({Type: "extrautils2:generator_death"}),
-    <extrautils2:machine>.withTag({Type: "extrautils2:generator_dragonsbreath"}),
-    <extrautils2:machine>.withTag({Type: "extrautils2:generator_enchant"}),
-    <extrautils2:machine>.withTag({Type: "extrautils2:generator_ender"}),
-    <extrautils2:machine>.withTag({Type: "extrautils2:generator_ice"}),
-    <extrautils2:machine>.withTag({Type: "extrautils2:generator_lava"}),
-    <extrautils2:machine>.withTag({Type: "extrautils2:generator_netherstar"}),
-    <extrautils2:machine>.withTag({Type: "extrautils2:generator_overclock"}),
-    <extrautils2:machine>.withTag({Type: "extrautils2:generator_pink"}),
-    <extrautils2:machine>.withTag({Type: "extrautils2:generator_potion"}),
-    <extrautils2:machine>.withTag({Type: "extrautils2:generator_redstone"}),
-    <extrautils2:machine>.withTag({Type: "extrautils2:generator_slime"}),
-    <extrautils2:machine>.withTag({Type: "extrautils2:generator_survival"}),
-    <extrautils2:machine>.withTag({Type: "extrautils2:generator_tnt"}),
-    <extrautils2:machine>.withTag({Type: "extrautils2:generator"}),
+    <extrautils2:machine>.withTag({ Type: 'extrautils2:generator_culinary' }),
+    <extrautils2:machine>.withTag({ Type: 'extrautils2:generator_death' }),
+    <extrautils2:machine>.withTag({ Type: 'extrautils2:generator_dragonsbreath' }),
+    <extrautils2:machine>.withTag({ Type: 'extrautils2:generator_enchant' }),
+    <extrautils2:machine>.withTag({ Type: 'extrautils2:generator_ender' }),
+    <extrautils2:machine>.withTag({ Type: 'extrautils2:generator_ice' }),
+    <extrautils2:machine>.withTag({ Type: 'extrautils2:generator_lava' }),
+    <extrautils2:machine>.withTag({ Type: 'extrautils2:generator_netherstar' }),
+    <extrautils2:machine>.withTag({ Type: 'extrautils2:generator_overclock' }),
+    <extrautils2:machine>.withTag({ Type: 'extrautils2:generator_pink' }),
+    <extrautils2:machine>.withTag({ Type: 'extrautils2:generator_potion' }),
+    <extrautils2:machine>.withTag({ Type: 'extrautils2:generator_redstone' }),
+    <extrautils2:machine>.withTag({ Type: 'extrautils2:generator_slime' }),
+    <extrautils2:machine>.withTag({ Type: 'extrautils2:generator_survival' }),
+    <extrautils2:machine>.withTag({ Type: 'extrautils2:generator_tnt' }),
+    <extrautils2:machine>.withTag({ Type: 'extrautils2:generator' }),
     <extrautils2:rainbowgenerator>,
     <forestry:engine_biogas>,
     <forestry:engine_clockwork>,
@@ -80,7 +80,7 @@ static list as IItemStack[][string] = {
     <thermalexpansion:dynamo:5>,
   ],
 
-  solar : [
+  solar: [
     <actuallyadditions:block_furnace_solar>,
     <advancedrocketry:solargenerator>,
     <compactsolars:compact_solar_block:1>,
@@ -109,7 +109,7 @@ static list as IItemStack[][string] = {
     <nuclearcraft:solar_panel_elite>,
   ],
 
-  chunkloader : [
+  chunkloader: [
     <extrautils2:chunkloader>,
     <ic2:te:82>,
     <mekanism:anchorupgrade>,
@@ -118,7 +118,7 @@ static list as IItemStack[][string] = {
     <fluxnetworks:fluxpoint>,
   ],
 
-  repairer : [
+  repairer: [
     <actuallyadditions:block_item_repairer>,
     <cyclicmagic:block_anvil_magma>,
     <cyclicmagic:block_anvil>,
@@ -126,7 +126,7 @@ static list as IItemStack[][string] = {
     <thermalexpansion:augment:401>,
   ],
 
-  charger : [
+  charger: [
     <actuallyadditions:block_battery_box>,
     <actuallyadditions:block_energizer>,
     <appliedenergistics2:charger>,
@@ -146,20 +146,20 @@ static list as IItemStack[][string] = {
     <industrialforegoing:pitiful_fuel_generator>,
     <industrialforegoing:protein_generator>,
     <integrateddynamics:energy_battery>,
-    <mekanism:energycube>.withTag({tier: 0}),
-    <mekanism:energycube>.withTag({tier: 1}),
-    <mekanism:energycube>.withTag({tier: 2}),
-    <mekanism:energycube>.withTag({tier: 3}),
+    <mekanism:energycube>.withTag({ tier: 0 }),
+    <mekanism:energycube>.withTag({ tier: 1 }),
+    <mekanism:energycube>.withTag({ tier: 2 }),
+    <mekanism:energycube>.withTag({ tier: 3 }),
     <opencomputers:charger>,
     <randomthings:spectrecharger:1>,
     <randomthings:spectrecharger:2>,
     <randomthings:spectrecharger:3>,
     <randomthings:spectrecharger>,
     <rftools:coalgenerator>,
-    <thermalexpansion:machine:9>.withTag({RSControl: 0 as byte, Facing: 3 as byte, Energy: 0, SideCache: [1, 1, 2, 2, 2, 2] as byte[] as byte[], Level: 0 as byte}),
+    <thermalexpansion:machine:9>.withTag({ RSControl: 0 as byte, Facing: 3 as byte, Energy: 0, SideCache: [1, 1, 2, 2, 2, 2] as byte[] as byte[], Level: 0 as byte }),
   ],
 
-  user : [
+  user: [
     <computercraft:turtle_advanced>,
     <computercraft:turtle_expanded>,
     <cyclicmagic:block_user>,
@@ -170,8 +170,8 @@ static list as IItemStack[][string] = {
     <thaumictinkerer:animation_tablet>, // Dynamism Tablet
   ],
 
-  crafter : [
-    <immersivepetroleum:schematic>.withTag({multiblock: "IE:Assembler"}),
+  crafter: [
+    <immersivepetroleum:schematic>.withTag({ multiblock: 'IE:Assembler' }),
     <enderio:block_simple_crafter>,
     <enderio:block_crafter>,
     <extrautils2:crafter>,
@@ -187,7 +187,7 @@ static list as IItemStack[][string] = {
     <thermallogistics:crafter:2>,
     <thermallogistics:crafter:3>,
     <thermallogistics:crafter:4>,
-    <thermalexpansion:machine:11>.withTag({RSControl: 0 as byte, Facing: 3 as byte, Energy: 0, SideCache: [1, 1, 2, 2, 2, 2] as byte[] as byte[], Level: 0 as byte}),
+    <thermalexpansion:machine:11>.withTag({ RSControl: 0 as byte, Facing: 3 as byte, Energy: 0, SideCache: [1, 1, 2, 2, 2, 2] as byte[] as byte[], Level: 0 as byte }),
     <mekanism:machineblock3:5>,
     <appliedenergistics2:molecular_assembler>,
     <threng:big_assembler:2>,
@@ -199,12 +199,12 @@ static list as IItemStack[][string] = {
     <rats:rat_upgrade_crafting>,
   ],
 
-  flight : [
+  flight: [
     <actuallyadditions:item_wings_of_the_bats>,
     <botania:flighttiara>.withTag({}),
-    <conarm:armor_trim>.withTag({Material: "aethium"}),
-    <conarm:chest_core>.withTag({Material: "infinity_metal"}),
-    <conarm:chest_core>.withTag({Material: "ma.supremium"}),
+    <conarm:armor_trim>.withTag({ Material: 'aethium' }),
+    <conarm:chest_core>.withTag({ Material: 'infinity_metal' }),
+    <conarm:chest_core>.withTag({ Material: 'ma.supremium' }),
     <cyclicmagic:glowing_chorus>,
     <deepmoblearning:glitch_infused_chestplate>,
     <draconicevolution:draconic_chest>,
@@ -216,11 +216,11 @@ static list as IItemStack[][string] = {
     <ic2:quantum_chestplate:26>,
     <mekanism:armoredjetpack>,
     <mekanism:jetpack>,
-    <minecraft:potion>.withTag({Potion: "potioncore:flight"}),
+    <minecraft:potion>.withTag({ Potion: 'potioncore:flight' }),
     <rftools:flight_module>,
   ],
 
-  miner : [
+  miner: [
     <bedrockores:bedrock_miner>,
     <cyclicmagic:block_miner_smart>,
     <ic2:te:57>,
@@ -234,23 +234,23 @@ static list as IItemStack[][string] = {
     <rftools:shape_card:5>,
     <rftools:shape_card:6>,
     <rftools:shape_card:7>,
-    <computercraft:turtle_expanded>.withTag({rightUpgrade: "minecraft:diamond_pickaxe"}),
-    <computercraft:turtle_advanced>.withTag({rightUpgrade: "minecraft:diamond_pickaxe"}),
+    <computercraft:turtle_expanded>.withTag({ rightUpgrade: 'minecraft:diamond_pickaxe' }),
+    <computercraft:turtle_advanced>.withTag({ rightUpgrade: 'minecraft:diamond_pickaxe' }),
     <opencomputers:robot>,
     <actuallyadditions:block_miner>,
   ],
 
-  voidminer : [
+  voidminer: [
     <actuallyadditions:item_mining_lens>,
     <advancedrocketry:spacelaser>,
-    <astralsorcery:itemtunedcelestialcrystal>.withTag({astralsorcery: {constellationName: "astralsorcery.constellation.mineralis", crystalProperties: {collectiveCapability: 100, size: 900, fract: 0, purity: 100, sizeOverride: -1}}}),
-    <bloodmagic:ritual_diviner:1>.withTag({current_ritual: "meteor"}),
-    <botania:floatingspecialflower>.withTag({type: "excompressum.orechidEvolved"}),
-    <botania:floatingspecialflower>.withTag({type: "orechidIgnem"}),
-    <botania:floatingspecialflower>.withTag({type: "orechidVacuam"}),
-    <botania:specialflower>.withTag({type: "excompressum.orechidEvolved"}),
-    <botania:specialflower>.withTag({type: "orechidIgnem"}),
-    <botania:specialflower>.withTag({type: "orechidVacuam"}),
+    <astralsorcery:itemtunedcelestialcrystal>.withTag({ astralsorcery: { constellationName: 'astralsorcery.constellation.mineralis', crystalProperties: { collectiveCapability: 100, size: 900, fract: 0, purity: 100, sizeOverride: -1 } } }),
+    <bloodmagic:ritual_diviner:1>.withTag({ current_ritual: 'meteor' }),
+    <botania:floatingspecialflower>.withTag({ type: 'excompressum.orechidEvolved' }),
+    <botania:floatingspecialflower>.withTag({ type: 'orechidIgnem' }),
+    <botania:floatingspecialflower>.withTag({ type: 'orechidVacuam' }),
+    <botania:specialflower>.withTag({ type: 'excompressum.orechidEvolved' }),
+    <botania:specialflower>.withTag({ type: 'orechidIgnem' }),
+    <botania:specialflower>.withTag({ type: 'orechidVacuam' }),
     <environmentaltech:void_ore_miner_cont_1>,
     <environmentaltech:void_ore_miner_cont_2>,
     <environmentaltech:void_ore_miner_cont_3>,
@@ -265,16 +265,16 @@ static list as IItemStack[][string] = {
     <environmentaltech:void_res_miner_cont_6>,
     <excompressum:heavy_sieve>,
     <exnihilocreatio:block_sieve>,
-    <immersivepetroleum:schematic>.withTag({multiblock: "IE:ExcavatorDemo", flip: 1 as byte}),
+    <immersivepetroleum:schematic>.withTag({ multiblock: 'IE:ExcavatorDemo', flip: 1 as byte }),
     <industrialforegoing:laser_drill>,
   ],
 
-  hopper : [
+  hopper: [
     <actuallyadditions:block_ranged_collector>,
-    <botania:floatingspecialflower>.withTag({type: "hopperhock"}),
-    <botania:floatingspecialflower>.withTag({type: "hopperhockChibi"}),
-    <botania:specialflower>.withTag({type: "hopperhock"}),
-    <botania:specialflower>.withTag({type: "hopperhockChibi"}),
+    <botania:floatingspecialflower>.withTag({ type: 'hopperhock' }),
+    <botania:floatingspecialflower>.withTag({ type: 'hopperhockChibi' }),
+    <botania:specialflower>.withTag({ type: 'hopperhock' }),
+    <botania:specialflower>.withTag({ type: 'hopperhockChibi' }),
     <cyclicmagic:block_vacuum>,
     <darkutils:ender_hopper>,
     <darkutils:ender_pearl_hopper>,
@@ -287,12 +287,12 @@ static list as IItemStack[][string] = {
     <randomthings:itemcollector>,
     <randomthings:plate_collection>,
     <tconstruct:wooden_hopper>,
-    <thaumadditions:seal_symbol>.withTag({Aspect: "vacuos"}),
+    <thaumadditions:seal_symbol>.withTag({ Aspect: 'vacuos' }),
     <thaumcraft:hungry_chest>,
     <thermalexpansion:device:12>,
   ],
 
-  tank : [
+  tank: [
     <advancedrocketry:liquidtank>,
     <bloodmagic:blood_tank>,
     <cyclicmagic:block_storeempty>,
@@ -330,17 +330,17 @@ static list as IItemStack[][string] = {
 
 for lang, items in list {
   for item in items {
-    if(isNull(item)) continue;
-    desc.tooltip(item, 'tag.'~lang);
+    if (isNull(item)) continue;
+    desc.tooltip(item, 'tag.' ~ lang);
   }
 }
 
 function getAsIngredient(tagName as string) as IIngredient {
   val items = list[tagName];
-  if(isNull(items) || items.length == 0) return null;
+  if (isNull(items) || items.length == 0) return null;
   var ingr = items[0];
   for i, item in items {
-    if(i==0) continue;
+    if (i == 0) continue;
     ingr |= item;
   }
   return ingr;

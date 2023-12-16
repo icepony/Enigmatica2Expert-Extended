@@ -1,9 +1,7 @@
-
 #priority 4500
 #reloadable
 #modloaded zenutils
 
-import crafttweaker.block.IBlock;
 import crafttweaker.block.IBlockDefinition;
 import crafttweaker.item.IIngredient;
 
@@ -35,10 +33,10 @@ zenClass Config {
   // Debug mode to output all portal spread actions
   static debug as bool = false;
 
-  //-----------------------------------------------
+  // -----------------------------------------------
   // Technical private fields
-  //-----------------------------------------------
-	zenConstructor() {}
+  // -----------------------------------------------
+  zenConstructor() {}
   // Default list of blocks and their modifiers
   // Find possible modifiers keys as scripts/do/portal_spread/modifiers.zs
   static modifBlocksKey as string[][int][IBlockDefinition]$orderly = {};
@@ -46,35 +44,34 @@ zenClass Config {
   static MODIF as int[string] = {}; // Enum of modifiers
   static blockGroupMap as int[string] = {}; // Map of block "id:meta" and its respected number
   static modifierGroupCount as int = 0; // Number of modifier groups
-  //-----------------------------------------------
+  // -----------------------------------------------
 }
 
 ///////////////////////////////////////////////////////////
 
 /**
  * Add or rewrite modifier block
- * 
+ *
  * @param items - list of blocks in item forms that could be used for configuring portal
- * 
+ *
  * @param keys - list of modifier keys for this blocks
- * 
+ *
  */
 function setModifier(
   items as IIngredient,
   keys as string[]
 ) as void {
-
   // Fill all items to array
   for item in items.itemArray {
     val block = item.asBlock();
-    if(isNull(block)) {
-      logger.logWarning('[Portal Spread]: cannot transform item to block: '~item.commandString);
+    if (isNull(block)) {
+      logger.logWarning('[Portal Spread]: cannot transform item to block: ' ~ item.commandString);
       continue;
     }
-    if(isNull(Config.modifBlocksKey[block.definition])) Config.modifBlocksKey[block.definition] = {};
+    if (isNull(Config.modifBlocksKey[block.definition])) Config.modifBlocksKey[block.definition] = {};
 
     // This block already defined
-    if(!isNull(Config.modifBlocksKey[block.definition][block.meta])) continue;
+    if (!isNull(Config.modifBlocksKey[block.definition][block.meta])) continue;
 
     Config.modifBlocksKey[block.definition][block.meta] = [];
     var newKeys = Config.modifBlocksKey[block.definition][block.meta];
@@ -84,12 +81,12 @@ function setModifier(
     Config.modifBlocksKey[block.definition][block.meta] = newKeys;
 
     // Add this block to group
-    Config.blockGroupMap[block.definition.id~':'~block.meta] = Config.modifierGroupCount;
+    Config.blockGroupMap[block.definition.id ~ ':' ~ block.meta] = Config.modifierGroupCount;
   }
 
   // Add key if new
   for key in keys {
-    if(!(Config.modifiersList has key)) {
+    if (!(Config.modifiersList has key)) {
       Config.modifiersList = Config.modifiersList + key;
       Config.MODIF[key] = Config.modifiersList.length - 1;
     }

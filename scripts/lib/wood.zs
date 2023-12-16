@@ -7,9 +7,9 @@ import crafttweaker.item.IIngredient;
 // Used for $orderly
 #modloaded zenutils
 
-# Logs to planks recipes
+// Logs to planks recipes
 static logPlank as IItemStack[IItemStack]$orderly = {
-# Vanilla
+// Vanilla
   <minecraft:log>    : <minecraft:planks>,
   <minecraft:log:1>  : <minecraft:planks:1>,
   <minecraft:log:2>  : <minecraft:planks:2>,
@@ -17,7 +17,7 @@ static logPlank as IItemStack[IItemStack]$orderly = {
   <minecraft:log2>   : <minecraft:planks:4>,
   <minecraft:log2:1> : <minecraft:planks:5>,
 
-# Twilight Forest
+// Twilight Forest
   <twilightforest:twilight_log>   : <twilightforest:twilight_oak_planks>,
   <twilightforest:twilight_log:1> : <twilightforest:canopy_planks>,
   <twilightforest:twilight_log:2> : <twilightforest:mangrove_planks>,
@@ -27,7 +27,7 @@ static logPlank as IItemStack[IItemStack]$orderly = {
   <twilightforest:magic_log:2>    : <twilightforest:mine_planks>,
   <twilightforest:magic_log:3>    : <twilightforest:sort_planks>,
 
-# Biomes O' plenty, made by Trilexcom
+// Biomes O' plenty, made by Trilexcom
   <biomesoplenty:log_0:4> : <biomesoplenty:planks_0>,
   <biomesoplenty:log_0:5> : <biomesoplenty:planks_0:1>,
   <biomesoplenty:log_0:6> : <biomesoplenty:planks_0:2>,
@@ -44,7 +44,7 @@ static logPlank as IItemStack[IItemStack]$orderly = {
   <biomesoplenty:log_3:7> : <biomesoplenty:planks_0:15>,
   <biomesoplenty:log_1:7> : <biomesoplenty:planks_0:7>,
 
-# Forestry, made by Trilexcom
+// Forestry, made by Trilexcom
   <forestry:logs.0>   : <forestry:planks.0>,
   <forestry:logs.0:1> : <forestry:planks.0:1>,
   <forestry:logs.0:2> : <forestry:planks.0:2>,
@@ -75,12 +75,12 @@ static logPlank as IItemStack[IItemStack]$orderly = {
   <forestry:logs.2:2> : <forestry:planks.0:10>,
   <forestry:logs.6:3> : <forestry:planks.1:11>,
 
-# pam
+// pam
   <harvestcraft:pamcinnamon>  : <minecraft:planks:3>,
   <harvestcraft:pammaple>     : <minecraft:planks:1>,
   <harvestcraft:pampaperbark> : <minecraft:planks:3>,
 
-# Other Mods
+// Other Mods
   <rustic:log>                   : <rustic:planks>,
   <rustic:log:1>                 : <rustic:planks:1>,
   <thaumcraft:log_greatwood>     : <thaumcraft:plank_greatwood>,
@@ -92,7 +92,7 @@ static logPlank as IItemStack[IItemStack]$orderly = {
   <iceandfire:dreadwood_log>     : <iceandfire:dreadwood_planks>,
   <randomthings:spectrelog>      : <randomthings:spectreplank>,
 
-# Magical wood special
+// Magical wood special
   <extrautils2:decorativesolidwood:1>: <extrautils2:decorativesolidwood>,
   <thaumcraft:taint_log>             : <thaumadditions:taintwood_planks>,
   <botania:livingwood>               : <botania:livingwood:1>,
@@ -100,7 +100,7 @@ static logPlank as IItemStack[IItemStack]$orderly = {
   <astralsorcery:blockinfusedwood>   : <astralsorcery:blockinfusedwood:1>,
 } as IItemStack[IItemStack];
 
-# Forestry fireproof
+// Forestry fireproof
 static logPlankFireproof as IItemStack[IItemStack]$orderly = {
   <forestry:logs.fireproof.0:1>        : <forestry:planks.fireproof.0:1>,
   <forestry:logs.fireproof.0:2>        : <forestry:planks.fireproof.0:2>,

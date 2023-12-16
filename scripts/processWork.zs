@@ -1,26 +1,26 @@
+#priority 51
+
+import crafttweaker.data.IData;
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 import crafttweaker.item.WeightedItemStack;
 import crafttweaker.liquid.ILiquidStack;
-import crafttweaker.data.IData;
 import mods.mekanism.MekanismHelper.getGas;
 
 import scripts.processUtils.I;
-import scripts.processUtils.isNotException;
-import scripts.processUtils.isStrict;
-import scripts.processUtils.arrN_item;
-import scripts.processUtils.arrN_ingr;
-import scripts.processUtils.arrN_liq;
 import scripts.processUtils.arrN_float;
-import scripts.processUtils.defaultItem0;
+import scripts.processUtils.arrN_ingr;
+import scripts.processUtils.arrN_item;
+import scripts.processUtils.arrN_liq;
 import scripts.processUtils.defaultChance0;
 import scripts.processUtils.defaultChance0_int;
+import scripts.processUtils.defaultItem0;
+import scripts.processUtils.enderioXmlRecipe;
+import scripts.processUtils.info;
+import scripts.processUtils.isNotException;
+import scripts.processUtils.isStrict;
 import scripts.processUtils.normalizeChances;
 import scripts.processUtils.warning;
-import scripts.processUtils.info;
-import scripts.processUtils.enderioXmlRecipe;
-
-#priority 51
 
 // ######################################################################
 //
@@ -67,36 +67,36 @@ function workEx(machineNameAnyCase as string, exceptions as string,
   // ------------
   // Inputs
   // ------------
-  val inputIngr0           = arrN_ingr(inputItems, 0);
-  val haveItemInput        = !isNull(inputIngr0);
-  val inputIsSingle        = haveItemInput && inputItems.length == 1;
-  val inputHasTag          = haveItemInput && inputIngr0.itemArray.length > 0 && !isNull(inputIngr0.itemArray[0]) && inputIngr0.itemArray[0].hasTag;
+  val inputIngr0 = arrN_ingr(inputItems, 0);
+  val haveItemInput = !isNull(inputIngr0);
+  val inputIsSingle = haveItemInput && inputItems.length == 1;
+  val inputHasTag = haveItemInput && inputIngr0.itemArray.length > 0 && !isNull(inputIngr0.itemArray[0]) && inputIngr0.itemArray[0].hasTag;
 
-  val inputLiquid0         = arrN_liq(inputLiquids, 0);
-  val haveLiquidInput      = !isNull(inputLiquid0);
-  val inputLiquidIsSingle  = haveLiquidInput && inputLiquids.length == 1;
+  val inputLiquid0 = arrN_liq(inputLiquids, 0);
+  val haveLiquidInput = !isNull(inputLiquid0);
+  val inputLiquidIsSingle = haveLiquidInput && inputLiquids.length == 1;
 
   // ------------
   // Outputs
   // ------------
-  val outputItem0          = arrN_item(outputItems, 0);
-  val haveItemOutput       = !isNull(outputItem0);
-  val outputIsSingle       = haveItemOutput && outputItems.length == 1;
+  val outputItem0 = arrN_item(outputItems, 0);
+  val haveItemOutput = !isNull(outputItem0);
+  val outputIsSingle = haveItemOutput && outputItems.length == 1;
 
-  val outputLiquid0        = arrN_liq(outputLiquids, 0);
-  val haveLiquidOutput     = !isNull(outputLiquid0);
+  val outputLiquid0 = arrN_liq(outputLiquids, 0);
+  val haveLiquidOutput = !isNull(outputLiquid0);
   val outputLiquidIsSingle = haveLiquidOutput && outputLiquids.length == 1;
 
-  val haveGasOutput        = D(options).check('gasOutput');
-  val outputGasAmount      = D(options).getInt('gasOutputAmount', 600);
-  val outputGas            = haveGasOutput ? getGas(options.gasOutput.asString()) * outputGasAmount : null;
+  val haveGasOutput = D(options).check('gasOutput');
+  val outputGasAmount = D(options).getInt('gasOutputAmount', 600);
+  val outputGas = haveGasOutput ? getGas(options.gasOutput.asString()) * outputGasAmount : null;
 
   // ------------
   // Extra
   // ------------
-  val extra0               = arrN_item(extra, 0);
-  val haveExtra            = !isNull(extra0);
-  val outputItem0orExtra0  = haveItemOutput ? outputItem0 : extra0;
+  val extra0 = arrN_item(extra, 0);
+  val haveExtra = !isNull(extra0);
+  val outputItem0orExtra0 = haveItemOutput ? outputItem0 : extra0;
 
   // ------------
   // Relations
@@ -106,9 +106,9 @@ function workEx(machineNameAnyCase as string, exceptions as string,
   // ------------
   // List Length
   // ------------
-  val lenInItem  = haveItemInput    ? inputItems.length    : 0;
-  val lenInLiqs  = haveLiquidInput  ? inputLiquids.length  : 0;
-  val lenOutItem = haveItemOutput   ? outputItems.length   : 0;
+  val lenInItem = haveItemInput ? inputItems.length : 0;
+  val lenInLiqs = haveLiquidInput ? inputLiquids.length : 0;
+  val lenOutItem = haveItemOutput ? outputItems.length : 0;
   val lenOutLiqs = haveLiquidOutput ? outputLiquids.length : 0;
 
   // ------------
@@ -338,7 +338,7 @@ function workEx(machineNameAnyCase as string, exceptions as string,
         mods.nuclearcraft.ChanceItemIngredient.create(arrN_item(combinedOutput, 0), (combinedChances[0] * 100) as int),
         mods.nuclearcraft.ChanceItemIngredient.create(arrN_item(combinedOutput, 1), (combinedChances[1] * 100) as int),
         mods.nuclearcraft.ChanceItemIngredient.create(arrN_item(combinedOutput, 2), (combinedChances[2] * 100) as int),
-        2.0d, 1.5d);
+        2.0, 1.5);
       return machineName;
     }
 

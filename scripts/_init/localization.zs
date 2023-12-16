@@ -44,7 +44,6 @@ val localizationMap as string[string][string] = {
   },
 };
 
-
 for lang, entries in localizationMap {
   for k, v in entries {
     game.setLocalization(lang, k, v);

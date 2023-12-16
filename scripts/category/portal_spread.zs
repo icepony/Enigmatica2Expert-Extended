@@ -1,6 +1,6 @@
 #reloadable
 
-# Defined with portal spread
+// Defined with portal spread
 recipes.removeShaped(<mysticalagriculture:soulstone>);
 
 // Make portal spread available in skyblock

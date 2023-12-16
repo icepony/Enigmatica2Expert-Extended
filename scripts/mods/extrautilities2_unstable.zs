@@ -9,15 +9,15 @@
 #modloaded extrautils2
 #norun
 
+import crafttweaker.data.IData;
 import crafttweaker.item.IItemStack;
 import crafttweaker.player.IPlayer;
 import crafttweaker.world.IWorld;
-import crafttweaker.data.IData;
 
 static tagName = 'unstableIngotContainerCounter';
 
 function setPlayerContainerCounter(n as int, player as IPlayer) {
-  var data as IData = IData.createEmptyMutableDataMap();
+  val data as IData = IData.createEmptyMutableDataMap();
   data.memberSet(tagName, n);
   player.update(data);
 }
@@ -36,8 +36,8 @@ events.onPlayerRespawn(function (event as crafttweaker.event.PlayerRespawnEvent)
 });
 
 events.onPlayerOpenContainer(function (event as crafttweaker.event.PlayerOpenContainerEvent) {
-  var p as IPlayer = event.player;
-  var w as IWorld = p.world;
+  val p as IPlayer = event.player;
+  val w as IWorld = p.world;
   if (w.remote) return;
   setPlayerContainerCounter(1 + getPlayerContainerCounter(p), p);
 });

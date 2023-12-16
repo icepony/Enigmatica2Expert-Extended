@@ -80,7 +80,7 @@ function defaultChance0(extraChance as float[], default as float) as float {
 
 // Get 0 element of float Array. If null or zero - return default. Return x100 as int
 function defaultChance0_int(extraChance as float[], default as int) as int {
-  return (defaultChance0(extraChance, default as float / 100.0f) * 100.0d) as int;
+  return (defaultChance0(extraChance, default as float / 100.0f) * 100.0) as int;
 }
 
 // Get input/output amount if we have non-whole output amount
@@ -88,8 +88,8 @@ function wholesCalc(inputAmount as int, outputAmount as double) as double[string
   val whole = outputAmount as int as double;
   val residue = outputAmount - whole;
   val out1 = outputAmount / inputAmount as double;
-  if (residue == 0) return { ins: 1.0d, outs: whole, out1: out1 };
-  val ins = 1.0d / residue;
+  if (residue == 0) return { ins: 1.0, outs: whole, out1: out1 };
+  val ins = 1.0 / residue;
   val outs = outputAmount * ins;
   return { ins: ins, outs: outs, out1: out1 };
 }
