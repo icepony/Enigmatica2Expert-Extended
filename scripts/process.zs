@@ -57,9 +57,9 @@ static fluidSteps as double[] = [144, 666, 100, 250] as double[];
 // Multiply liquid amount on double value
 function lF(output as ILiquidStack, mult as double) as ILiquidStack  {
   if (isNull(output)) { return null; }
-  var damount = output.amount as double;
+  val damount = output.amount as double;
   var dresult = 0.0d;
-  var dmult = damount * mult;
+  val dmult = damount * mult;
   for step in fluidSteps {
     if (dresult == 0.0d && damount % step == 0) {
       dresult = max(step, step * ((dmult / step) as int)) as double;
@@ -178,7 +178,7 @@ function electrolyze(inputLiquid as ILiquidStack, outputLiquids as ILiquidStack[
   work([
     'ElectrolytiCcrucible',
     'ElectrolyticSeparator',
-    'AdvRockElectrolyzer'
+    'AdvRockElectrolyzer',
   ], exceptions, null, [inputLiquid], null, outputLiquids, null, null, options);
 }
 
@@ -249,7 +249,7 @@ function beneficiate(
 
   // Determine extra output based on JAOPCA
   val JA = mods.jaopca.JAOPCA.getOre(oreName);
-  var extraChances = [
+  val extraChances = [
     min(1.0, 1.0 / 6 * amount),
     min(1.0, 0.1   * amount),
     min(1.0, 0.05  * amount)] as float[];
@@ -294,7 +294,7 @@ function beneficiate(
   val altLiquid as ILiquidStack = game.getLiquid((oreName == 'Aluminium' ? 'Aluminum' : oreName).toLowerCase());
   val liquid = isNull(molten) ? altLiquid : molten;
   if (!isNull(liquid) && !isNull(JA)) {
-    var meltingExceptions = D(opts).get('meltingExceptions', { d: [] }).asList();
+    val meltingExceptions = D(opts).get('meltingExceptions', { d: [] }).asList();
     var meltAllowed = true;
     for meltExc in meltingExceptions { if (meltExc.asString() == oreName) meltAllowed = false; }
     if (meltAllowed) {
