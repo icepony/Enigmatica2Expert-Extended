@@ -18,10 +18,6 @@ import crafttweaker.block.IBlockState;
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 
-game.setLocalization('en_us', 'requious.jei.recipe.portal_spread', 'Portal Spread');
-game.setLocalization('ru_ru', 'requious.jei.recipe.portal_spread', 'Распространение портала');
-game.setLocalization('zh_cn', 'requious.jei.recipe.portal_spread', '门户传播');
-
 // Replaces for blocks that cant be converted into items
 static blockRepresentation as IItemStack[string] = {
   'minecraft:double_stone_slab' : <minecraft:stone_slab>,

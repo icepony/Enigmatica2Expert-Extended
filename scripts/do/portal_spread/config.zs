@@ -50,39 +50,6 @@ zenClass Config {
 }
 
 ///////////////////////////////////////////////////////////
-// Localisation
-///////////////////////////////////////////////////////////
-function addLocales(langEntries as string[string][string], prefix as string = '') as void {
-  for lang, entries in langEntries {
-    for k, v in entries {
-      game.setLocalization(lang, 'portal_spread.'~prefix~k, v);
-    }
-  }
-}
-
-addLocales({
-  en_us: {
-    created : '§7The corrupted energy from the portal will slowly spread to §6%s§7 blocks around, unless %s §7are placed in the corners.'
-              ~'\n§8(Touch the portal to feel its power.)',
-    broken  : '§7With the nether portal broken, no more corrupted energy is spreading.',
-    info    : '§7The portal emits §3energy waves§7, converting nearby blocks.'
-           ~'\n§7■ Waves are emitted §6%s§7 time(s) per §6%s§7 second(s).'
-           ~'\n§7■ Each wave searches up to §6%s§7 blocks until conversion.'
-           ~'\n§7■ The portal has a reach of up to §6%s§7 blocks in radius.',
-    idle    : '§7This portal halted and can\'t spread its energy.',
-  },
-  zh_cn: {
-    created : '§7来自下界传送门的腐化能量会缓慢扩散到传送门附近 §6%s§7 格的范围内，除非把 %s §7放置在传送门的四个角落。'
-             ~'\n§8(触摸传送门，感受它的力量。)',
-    broken  : '§7下界传送门已被破坏，腐化能量不再扩散。',
-    info    : '§7这个传送门发射能量的§3波浪§7，将其周围的方块转化。'
-             ~'§7■ 每§6%s§7秒发射§6%s§7次波动。'
-             ~'§7■ 每个波浪搜索最多§6%s§7个方块，直到至少一个被转化。'
-             ~'§7■ 该传送门的影响范围可达§6%s§7个方块的半径。',
-    idle    : '§7这个传送门停止了，无法传播能量。',
-  },
-});
-///////////////////////////////////////////////////////////
 
 /**
  * Add or rewrite modifier block
@@ -91,20 +58,10 @@ addLocales({
  * 
  * @param keys - list of modifier keys for this blocks
  * 
- * @param langEntries - List of messages that
- *   players will receive when changing portal setup.
- * Must content this fields:
- * {
- *   add: "Message that player get when placed one of listed blocks"
- *   red: "Message when one of blocks removed"
- *   max: "Message when all 4 blocks of this group placed"
- * }
- * 
  */
 function setModifier(
   items as IIngredient,
-  keys as string[],
-  langEntries as string[string][string] = null
+  keys as string[]
 ) as void {
 
   // Fill all items to array
@@ -138,8 +95,6 @@ function setModifier(
     }
   }
 
-  // Add localisation if exist
-  if(!isNull(langEntries)) addLocales(langEntries, Config.modifierGroupCount~'_');
   Config.modifierGroupCount += 1;
 }
 
@@ -148,26 +103,5 @@ function setModifier(
 ///////////////////////////////////////////////////////////
 
 // Very first item of first modifier here will be proposed to stop portal from spreading
-
-setModifier(
-  <minecraft:coal_block> | <ore:blockCoal>, ['slow', 'weak', 'small'], {
-    en_us: {
-      add: '§7You feel the portal energy becoming §3weaker§7.',
-      red: '§7You feel the portal energy becoming §6stronger§7.',
-      max: '§7Portal completely stopped spreading.',
-    },
-    zh_cn: {
-      add: '§7你感到下界传送门扩散的速度正在减缓。',
-      red: '§7你感到下界传送门扩散的速度正在加快。',
-      max: '§7传送门完全停止了扩散。',
-    }
-});
-
-setModifier(
-  <contenttweaker:conglomerate_of_coal>, ['fast', 'potent', 'large'], {
-    en_us: {
-      add: '§7You feel the portal energy becoming §6stronger§7.',
-      red: '§7You feel the portal energy becoming §3weaker§7.',
-      max: '§7Portal reached maximum spreading speed.',
-    },
-});
+setModifier(<minecraft:coal_block> | <ore:blockCoal>, ['slow', 'weak', 'small']);
+setModifier(<contenttweaker:conglomerate_of_coal>, ['fast', 'potent', 'large']);
