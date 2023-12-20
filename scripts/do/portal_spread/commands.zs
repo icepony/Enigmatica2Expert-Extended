@@ -26,7 +26,7 @@ cmd.requiredPermissionLevel = 1;
 static prefix as string = scripts.do.portal_spread.message.prefix;
 
 cmd.getCommandUsage = function (sender) {
-  return prefix ~ '§7/portal_spread §8<§7status§8§8|§7debug§8>'
+  return prefix ~ '§7/portal_spread §8<§7status§8|§7debug§8|§7faster§8|§7slower§8>'
   ~ '\n§7status§8: show all registered portals'
   ~ '\n§7debug§8: enable debug mode'
   ~ '\n§7faster§8: spread speed * 2'
