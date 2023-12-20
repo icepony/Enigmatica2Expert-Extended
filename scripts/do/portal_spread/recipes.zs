@@ -299,6 +299,11 @@ setStates(0, -1, [
 ]);
 
 setBlocks(0, -1, [
+  <blockstate:minecraft:mossy_cobblestone>,
+  <blockstate:biomesoplenty:hard_ice>,
+], [<blockstate:minecraft:magma>]);
+
+setBlocks(0, -1, [
   <blockstate:minecraft:stone_brick_stairs>,
   <blockstate:minecraft:oak_stairs>,
   <blockstate:minecraft:spruce_stairs>,
@@ -309,7 +314,6 @@ setBlocks(0, -1, [
 ], [<blockstate:minecraft:nether_brick_stairs>]);
 setOreBlocks(0, -1, <ore:sand>, [<blockstate:minecraft:soul_sand>]);
 setStates(0, -1, [<blockstate:minecraft:sea_lantern>], [<blockstate:minecraft:glowstone>]);
-setStates(0, -1, [<blockstate:minecraft:mossy_cobblestone>], [<blockstate:minecraft:magma>]);
 setBlocks(0, -1, [<blockstate:minecraft:vine>], [<blockstate:minecraft:air>]);
 setBlocks(0, -1, [<blockstate:minecraft:wooden_door>], [<blockstate:minecraft:air>]);
 setBlocks(0, -1, [<blockstate:minecraft:ice>], [<blockstate:minecraft:obsidian>]);
