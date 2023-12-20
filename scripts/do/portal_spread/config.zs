@@ -15,8 +15,8 @@ import crafttweaker.item.IIngredient;
 */
 
 zenClass Config {
-  // Maximum radius of portal with all modifiers. Must be less that 256
-  // Consume maxRadius³ RAM memory
+  // Maximum radius of portal with all modifiers. Must be less than 256
+  // Consume ~ maxRadius³ kb RAM memory
   static maxRadius as int = 64;
 
   // Radius of portal without modifiers.
@@ -31,6 +31,7 @@ zenClass Config {
   static lookup as int = 50;
 
   // Debug mode to output all portal spread actions
+  // Could be enabled with command /portal_spread debug
   static debug as bool = false;
 
   // -----------------------------------------------
