@@ -1,3 +1,10 @@
+/*
+
+Make impossible to plant Vis Seeds in any dimension except for Planets or Emptiness
+
+*/
+
+#norun
 #reloadable
 
 import crafttweaker.world.IFacing;
