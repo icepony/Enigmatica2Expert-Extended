@@ -3,13 +3,11 @@ import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 
 // ######################################################################
-//
-// Remove completely
-//
+// Remove armor that can be replaced with Construct's Armory (Conarm)
 // ######################################################################
 
-// Remove all armor that can be replaced with Conarm
-for item in [
+val armorToRemove = [
+  // Immersive Engineering
   <immersiveengineering:steel_armor_head>,
   <immersiveengineering:steel_armor_chest>,
   <immersiveengineering:steel_armor_legs>,
@@ -18,42 +16,47 @@ for item in [
   <immersiveengineering:faraday_suit_chest>,
   <immersiveengineering:faraday_suit_legs>,
   <immersiveengineering:faraday_suit_feet>,
+  // Tinkers' Complement
   <tcomplement:knightslime_helmet>,
   <tcomplement:knightslime_chestplate>,
   <tcomplement:knightslime_leggings>,
   <tcomplement:knightslime_boots>,
-  <harvestcraft:hardenedleatherhelmitem>,
-  <harvestcraft:hardenedleatherchestitem>,
-  <harvestcraft:hardenedleatherleggingsitem>,
-  <harvestcraft:hardenedleatherbootsitem>,
   <tcomplement:manyullyn_helmet>,
   <tcomplement:manyullyn_chestplate>,
   <tcomplement:manyullyn_leggings>,
   <tcomplement:manyullyn_boots>,
-  <ic2:alloy_chestplate>,
   <tcomplement:steel_helmet>,
   <tcomplement:steel_chestplate>,
   <tcomplement:steel_leggings>,
   <tcomplement:steel_boots>,
-
+  // HarvestCraft
+  <harvestcraft:hardenedleatherhelmitem>,
+  <harvestcraft:hardenedleatherchestitem>,
+  <harvestcraft:hardenedleatherleggingsitem>,
+  <harvestcraft:hardenedleatherbootsitem>,
+  // IndustrialCraft 2
+  <ic2:alloy_chestplate>,
+  // Twilight Forest
   <twilightforest:fiery_helmet>,
   <twilightforest:fiery_chestplate>,
   <twilightforest:fiery_leggings>,
   <twilightforest:fiery_boots>,
-
   <twilightforest:knightmetal_helmet>,
   <twilightforest:knightmetal_chestplate>,
   <twilightforest:knightmetal_leggings>,
   <twilightforest:knightmetal_boots>,
-
   <twilightforest:steeleaf_helmet>,
   <twilightforest:steeleaf_chestplate>,
   <twilightforest:steeleaf_leggings>,
   <twilightforest:steeleaf_boots>,
-] as IItemStack[] { utils.rh(item); }
+] as IItemStack[];
+
+for item in armorToRemove {
+  utils.rh(item);
+}
 
 // Only remove recipes but keep in JEI
-for item in [
+val vanillaArmorToRemove = [
   <minecraft:iron_helmet>,
   <minecraft:iron_chestplate>,
   <minecraft:iron_leggings>,
@@ -66,152 +69,162 @@ for item in [
   <minecraft:diamond_chestplate>,
   <minecraft:diamond_leggings>,
   <minecraft:diamond_boots>,
-] as IItemStack[] { recipes.remove(item); }
+] as IItemStack[];
 
-// ------------
-// Iron
-// ------------
+for item in vanillaArmorToRemove {
+  recipes.remove(item);
+}
 
+// ######################################################################
 // Replace recipes that used items
+// ######################################################################
+
+// Iron
 val helmet_iron = <conarm:helmet_core>.withTag({ Material: 'iron' });
-remakeEx(<actuallyadditions:item_player_probe>, [[<minecraft:iron_bars>, null, <minecraft:iron_bars>], [<minecraft:iron_bars>, helmet_iron, <minecraft:iron_bars>], [<actuallyadditions:item_crystal_empowered>, <minecraft:skull:1>, <actuallyadditions:item_crystal_empowered>]]);
-remakeEx(itemUtils.getItem('openblocks:sonic_glasses'), [[<ore:ingotIron>, helmet_iron, <ore:ingotIron>], [<minecraft:obsidian>, <ore:stickWood>, <minecraft:obsidian>], [null, null, null]]);
+remakeEx(<actuallyadditions:item_player_probe>, [
+  [<minecraft:iron_bars>, null, <minecraft:iron_bars>],
+  [<minecraft:iron_bars>, helmet_iron, <minecraft:iron_bars>],
+  [<actuallyadditions:item_crystal_empowered>, <minecraft:skull:1>, <actuallyadditions:item_crystal_empowered>],
+]);
 
-remakeEx(<randomthings:superlubricentboots>, [[<conarm:boots_core>.withTag({ Material: 'iron' })], [<randomthings:ingredient:6>]]);
+remakeEx(itemUtils.getItem('openblocks:sonic_glasses'), [
+  [<ore:ingotIron>, helmet_iron, <ore:ingotIron>],
+  [<minecraft:obsidian>, <ore:stickWood>, <minecraft:obsidian>],
+  [null, null, null],
+]);
 
-// mods.bloodmagic.AlchemyArray.removeRecipe(IItemStack input, IItemStack catalyst);
+remakeEx(<randomthings:superlubricentboots>, [
+  [<conarm:boots_core>.withTag({ Material: 'iron' })],
+  [<randomthings:ingredient:6>],
+]);
+
+// Blood Magic Alchemy Array recipes
 val BRT = <bloodmagic:component:8>;
 mods.bloodmagic.AlchemyArray.removeRecipe(BRT, <minecraft:iron_helmet>);
 mods.bloodmagic.AlchemyArray.removeRecipe(BRT, <minecraft:iron_chestplate>);
 mods.bloodmagic.AlchemyArray.removeRecipe(BRT, <minecraft:iron_leggings>);
 mods.bloodmagic.AlchemyArray.removeRecipe(BRT, <minecraft:iron_boots>);
 
-// mods.bloodmagic.AlchemyArray.addRecipe(IItemStack output, IItemStack input, IItemStack catalyst, @Optional string textureLocation);
-mods.bloodmagic.AlchemyArray.addRecipe(<bloodmagic:living_armour_helmet>, BRT, <conarm:helmet_core>.withTag({ Material: 'iron' }), 'bloodmagic:textures/models/AlchemyArrays/bindingarray.png');
+mods.bloodmagic.AlchemyArray.addRecipe(<bloodmagic:living_armour_helmet>, BRT, helmet_iron, 'bloodmagic:textures/models/AlchemyArrays/bindingarray.png');
 mods.bloodmagic.AlchemyArray.addRecipe(<bloodmagic:living_armour_chest>, BRT, <conarm:chest_core>.withTag({ Material: 'iron' }), 'bloodmagic:textures/models/AlchemyArrays/bindingarray.png');
 mods.bloodmagic.AlchemyArray.addRecipe(<bloodmagic:living_armour_leggings>, BRT, <conarm:leggings_core>.withTag({ Material: 'iron' }), 'bloodmagic:textures/models/AlchemyArrays/bindingarray.png');
 mods.bloodmagic.AlchemyArray.addRecipe(<bloodmagic:living_armour_boots>, BRT, <conarm:boots_core>.withTag({ Material: 'iron' }), 'bloodmagic:textures/models/AlchemyArrays/bindingarray.png');
 
-// ------------
-// Iron
-// ------------
-for inp, out in {
+// Compact Solars recipes
+val compactSolarsRecipes = {
   <compactsolars:compact_solar_block>  : <compactsolars:solar_hat_low_voltage>,
   <compactsolars:compact_solar_block:1>: <compactsolars:solar_hat_medium_voltage>,
   <compactsolars:compact_solar_block:2>: <compactsolars:solar_hat_high_voltage>,
-} as IItemStack[IIngredient] {
-  recipes.remove(out);
-  recipes.addShapeless(out, [<conarm:helmet_core>.withTag({ Material: 'iron' }), inp]);
+} as IItemStack[IIngredient];
+
+for input, output in compactSolarsRecipes {
+  recipes.remove(output);
+  recipes.addShapeless(output, [helmet_iron, input]);
 }
 
-// ------------
 // Gold
-// ------------
-remakeEx(<draconicevolution:tool_upgrade:9>, [[<minecraft:dye:4>, <draconicevolution:draconic_core:*>, <minecraft:dye:4>], [<ore:ingotDraconium>, <conarm:chest_core>.withTag({ Material: 'electrum' }), <ore:ingotDraconium>], [<minecraft:dye:4>, <draconicevolution:draconic_core:*>, <minecraft:dye:4>]]);
-remakeEx(<draconicevolution:tool_upgrade:10>, [[<minecraft:dye:4>, <draconicevolution:draconic_core:*>, <minecraft:dye:4>], [<ore:ingotDraconium>, <conarm:boots_core>.withTag({ Material: 'electrum' }), <ore:ingotDraconium>], [<minecraft:dye:4>, <ore:blockRedstone>, <minecraft:dye:4>]]);
-remakeEx(<draconicevolution:tool_upgrade:11>, [[<minecraft:dye:4>, <draconicevolution:draconic_core:*>, <minecraft:dye:4>], [<ore:ingotDraconium>, <conarm:boots_core>.withTag({ Material: 'electrum' }), <ore:ingotDraconium>], [<minecraft:dye:4>, <ore:blockSlime>, <minecraft:dye:4>]]);
+val goldRecipes = {
+  <draconicevolution:tool_upgrade:9>  : [<conarm:chest_core>.withTag({ Material: 'electrum' }), <draconicevolution:draconic_core:*>],
+  <draconicevolution:tool_upgrade:10> : [<conarm:boots_core>.withTag({ Material: 'electrum' }), <ore:blockRedstone>],
+  <draconicevolution:tool_upgrade:11> : [<conarm:boots_core>.withTag({ Material: 'electrum' }), <ore:blockSlime>],
+} as IIngredient[][IItemStack];
 
-// ------------
+for output, cores in goldRecipes {
+  remakeEx(output, [
+    [<minecraft:dye:4>, <draconicevolution:draconic_core:*>, <minecraft:dye:4>],
+    [<ore:ingotDraconium>, cores[0], <ore:ingotDraconium>],
+    [<minecraft:dye:4>, cores[1], <minecraft:dye:4>],
+  ]);
+}
+
 // Diamond
-// ------------
 val dimBootsCore = <conarm:boots_core>.withTag({ Material: 'diamantine_crystal' });
-remakeEx(<draconicevolution:tool_upgrade:8>, [[<minecraft:dye:4>, <draconicevolution:draconic_core:*>, <minecraft:dye:4>], [<ore:ingotDraconium>, <conarm:chest_core>.withTag({ Material: 'diamantine_crystal' }), <ore:ingotDraconium>], [<minecraft:dye:4>, <draconicevolution:draconic_core:*>, <minecraft:dye:4>]]);
-remakeEx(<environmentaltech:modifier_jump_boost>, [[dimBootsCore, <environmentaltech:litherite_crystal>, dimBootsCore], [<environmentaltech:mica>, <environmentaltech:modifier_null>, <environmentaltech:mica>], [dimBootsCore, <environmentaltech:lonsdaleite_crystal>, dimBootsCore]]);
+val dimChestCore = <conarm:chest_core>.withTag({ Material: 'diamantine_crystal' });
+
+remakeEx(<draconicevolution:tool_upgrade:8>, [
+  [<minecraft:dye:4>, <draconicevolution:draconic_core:*>, <minecraft:dye:4>],
+  [<ore:ingotDraconium>, dimChestCore, <ore:ingotDraconium>],
+  [<minecraft:dye:4>, <draconicevolution:draconic_core:*>, <minecraft:dye:4>],
+]);
+
+remakeEx(<environmentaltech:modifier_jump_boost>, [
+  [dimBootsCore, <environmentaltech:litherite_crystal>, dimBootsCore],
+  [<environmentaltech:mica>, <environmentaltech:modifier_null>, <environmentaltech:mica>],
+  [dimBootsCore, <environmentaltech:lonsdaleite_crystal>, dimBootsCore],
+]);
 
 mods.bloodmagic.TartaricForge.removeRecipe([<minecraft:diamond_chestplate:*>, <bloodmagic:soul_gem:1>, <minecraft:iron_block>, <minecraft:obsidian>]);
-mods.bloodmagic.TartaricForge.addRecipe(<bloodmagic:sentient_armour_gem>, [<conarm:chest_core>.withTag({ Material: 'diamantine_crystal' }), <bloodmagic:soul_gem:1>, <minecraft:iron_block>, <minecraft:obsidian>], 250, 150);
+mods.bloodmagic.TartaricForge.addRecipe(<bloodmagic:sentient_armour_gem>, [dimChestCore, <bloodmagic:soul_gem:1>, <minecraft:iron_block>, <minecraft:obsidian>], 250, 150);
 
 // ######################################################################
-//
 // Generate recipes
-//
 // ######################################################################
 
 static armorStaged as IData[string] = scripts.equipment.armorData.armorStaged;
 
 function getSetPiece(setData as IData, pieceN as int) as IItemStack {
-  if (!isNull(setData)) {
-    val idStr = setData.list[pieceN].id.asString();
-    if (!isNull(idStr)) {
-      val piece = getIngredientFromString(idStr);
-      if (!isNull(piece)) {
-        return piece.itemArray[0];
-      }
-      else {
-        logger.logWarning('Armor.zs Error. No armor item <' ~ idStr ~ '>');
-      }
-    }
+  if (isNull(setData)) return null;
+
+  val idStr = setData.list[pieceN].id.asString();
+  if (isNull(idStr)) return null;
+
+  val piece = getIngredientFromString(idStr);
+  if (isNull(piece)) {
+    logger.logWarning('Armor.zs Error. No armor item <' ~ idStr ~ '>');
+    return null;
   }
 
-  return null;
+  return piece.itemArray[0];
 }
 
-static setNames as string[] = ['Helmet', 'Chestplate', 'Leggins', 'Boots'] as string[];
+static setNames as string[] = ['Helmet', 'Chestplate', 'Leggins', 'Boots'];
 
-function createRecipe(setData as IData, setId as string, pieceN as int, ingrs as IIngredient[][]) {
+function createRecipe(setData as IData, setId as string, pieceN as int, ingrs as IIngredient[][]) as void {
   val setPiece = getSetPiece(setData, pieceN);
-  if (!isNull(setPiece)) {
-    recipes.removeShaped(setPiece);
-    recipes.addShaped(craft.uniqueRecipeName(setPiece), setPiece, ingrs, utils.smartUpgradeFnc, null);
-  }
-  else {
+  if (isNull(setPiece)) {
     logger.logWarning('Armor.zs Error. No armor for set {' ~ setId ~ '} for piece: ' ~ setNames[pieceN]);
+    return;
   }
+
+  recipes.removeShaped(setPiece);
+  recipes.addShaped(craft.uniqueRecipeName(setPiece), setPiece, ingrs, utils.smartUpgradeFnc, null);
 }
 
 function armGridExtra(n as int, mat as IIngredient, extra as IIngredient, prev as IData) as IIngredient[][] {
   val prevReal = getSetPiece(prev, n);
   val prevAny = !isNull(prevReal) ? prevReal.anyDamage().marked('marked') : null;
-  if (n == 0) {
-    return [[mat, extra, mat], [mat, prevAny, mat], [null, null, null]] as IIngredient[][];
-  }
-  else if (n == 1) {
-    return [[mat, prevAny, mat], [mat, extra, mat], [mat, mat, mat]] as IIngredient[][];
-  }
-  else if (n == 2) {
-    return [[mat, extra, mat], [mat, prevAny, mat], [mat, null, mat]] as IIngredient[][];
-  }
-  else if (n == 3) {
-    return [[null, null, null], [mat, extra, mat], [mat, prevAny, mat]] as IIngredient[][];
-  }
+  /* */if (n == 0) return [[mat , extra  ,  mat], [mat, prevAny, mat], [null, null   , null]] as IIngredient[][];
+  else if (n == 1) return [[mat , prevAny,  mat], [mat, extra  , mat], [mat , mat    ,  mat]] as IIngredient [][];
+  else if (n == 2) return [[mat , extra  ,  mat], [mat, prevAny, mat], [mat , null   ,  mat]] as IIngredient [][];
+  else if (n == 3) return [[null, null   , null], [mat, extra  , mat], [mat , prevAny,  mat]] as IIngredient [][];
   return null;
 }
+
 function armGridNormal(n as int, mat as IIngredient, prev as IData) as IIngredient[][] {
   return armGridExtra(n, mat, mat, prev);
 }
 
-function createArmorSet(setData as IData, setId as string) {
-  if ((!isNull(setData.recipe) && !isNull(setData.recipe.manual)) || isNull(setData.material)) { return null; }
+function createArmorSet(setData as IData, setId as string) as void {
+  if (!isNull(setData.recipe) && !isNull(setData.recipe.manual)) return; // Recipe shuld be manual only
+  if (isNull(setData.material)) return; // No ingredient data
 
-  // Material armor made from
   val matStr = setData.material.asString();
   val mat = getIngredientFromString(matStr);
   if (isNull(mat)) {
     logger.logWarning('Armor.zs Error. No material {' ~ matStr ~ '}');
-    return null;
+    return;
   }
 
-  // prev set
   val prev = armorStaged[D(setData).get('prev', { d: 'undefined' })];
+  val extra = isNull(setData.recipe) || isNull(setData.recipe.extra)
+    ? null
+    : getIngredientFromString(setData.recipe.extra.asString());
 
-  // Extra ingredient. Recipe is chained but have additional item
-  if (!isNull(setData.recipe) && !isNull(setData.recipe.extra)) {
-    val extraStr = setData.recipe.extra.asString();
-    val extra = getIngredientFromString(extraStr);
-    if (isNull(extra)) {
-      logger.logWarning('Armor.zs Error. No ingredient <' ~ extraStr ~ '>');
-      return null;
-    }
-
-    for i in 0 .. 4 {
-      createRecipe(setData, setId, i, armGridExtra(i, mat, extra, prev));
-    }
-    return null;
-  }
-
-  // Simple chained (or not) recipe
-  for i in 0 .. 4 {
-    createRecipe(setData, setId, i, armGridNormal(i, mat, prev));
+  for i in 0 .. setNames.length {
+    val grid = isNull(extra)
+      ? armGridNormal(i, mat, prev)
+      : armGridExtra(i, mat, extra, prev);
+    createRecipe(setData, setId, i, grid);
   }
 }
 
