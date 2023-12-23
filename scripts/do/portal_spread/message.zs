@@ -57,7 +57,7 @@ function playerMessage(player as IPlayer, messageType as string) as void {
 
     payload = [
       Config.defaultRadius,
-      scripts.lib.tellraw.itemObj(getModifierBlock(null, 4), 'gold'),
+      tellrawItemObj(getModifierBlock(null, 4), 'gold'),
     ];
   }
   else {
@@ -66,7 +66,7 @@ function playerMessage(player as IPlayer, messageType as string) as void {
     if (Config.modifiersList has modifierKey) {
       payload = [{
         text: '',
-        extra: scripts.lib.tellraw.item(getModifierBlock(modifierKey), 'gold')
+        extra: tellrawItem(getModifierBlock(modifierKey), 'gold')
       }];
     } */
   }
@@ -91,4 +91,31 @@ function log(s as string, world as IWorld = null) as void {
     if (!pl.creative) continue;
     pl.sendMessage(msg);
   }
+}
+
+function tellrawItem(item as IItemStack, color as string = null, showName as bool = true) as IData {
+  val data = [
+    {
+      text: item.amount > 1 ? item.amount ~'x' : '',
+      hoverEvent: {
+        action: 'show_item',
+        value: '{id:"' ~ item.definition.id ~ '",Count:1,Damage:' ~ item.damage ~ 's}', // item.asData().toNBTString(),
+      },
+      extra: [
+        {
+          // The major part of `iconQuark` is actually 3 spaces, which are reserved for Quark item rendering
+          // So you needs Quark to get the icon
+          text: '§f   '
+        } + (!showName ? {} :
+          {extra: [(item.hasDisplayName ? item.tag.display.Name : {translate: item.name ~'.name'})]}
+        )
+      ]
+    }
+    + (color ? {color: color} : {}),
+  ] as IData;
+  return data;
+}
+
+function tellrawItemObj(item as IItemStack, color as string = null, showName as bool = true) as IData {
+  return {text: '', extra: tellrawItem(item, color, showName)};
 }

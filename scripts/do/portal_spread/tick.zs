@@ -22,10 +22,8 @@ import scripts.do.portal_spread.data.updatePortal;
 import scripts.do.portal_spread.message.log;
 import scripts.do.portal_spread.message.notifyPlayers;
 import scripts.do.portal_spread.modifiers.getModifiers;
-import scripts.do.portal_spread.recipes.getNumIds;
+import scripts.do.portal_spread.recipes.spread;
 import scripts.do.portal_spread.utils.getNextPoint;
-
-static dimHasRecipes as bool[int] = scripts.do.portal_spread.recipes.dimHasRecipes;
 
 ////////////////////////////////////////////////////
 
@@ -34,10 +32,10 @@ events.onPortalSpawn(function (e as crafttweaker.event.PortalSpawnEvent) {
   log('onPortalSpawn event thrown in world §7' ~ e.world.dimension ~ ' §8at pos: §7' ~ e.position.x ~ '§8:§7' ~ e.position.y ~ '§8:§7' ~ e.position.z, e.world);
   if (!e.valid) return log('portal not valid', e.world);
   if (e.world.remote) return log('event is client sided', e.world);
-  for dim, _ in dimHasRecipes {
+  for dim, _ in spread.dimHasRecipes {
     log('dim with recipe: ' ~ dim);
   }
-  if (isNull(dimHasRecipes[e.world.dimension])) return log("this dimension doesn't have recipes", e.world);
+  if (isNull(spread.dimHasRecipes[e.world.dimension])) return log("this dimension doesn't have recipes", e.world);
 
   updatePortal(e.world, -1, e.position);
 });
@@ -45,8 +43,8 @@ events.onPortalSpawn(function (e as crafttweaker.event.PortalSpawnEvent) {
 // Convert blocks around portal
 events.onWorldTick(function (e as crafttweaker.event.WorldTickEvent) {
   if (e.world.remote || e.phase != 'END') return;
-  if (isNull(dimHasRecipes[e.world.dimension])) return;
-  val fallback = scripts.do.portal_spread.recipes.dimFallbacks[e.world.dimension];
+  if (isNull(spread.dimHasRecipes[e.world.dimension])) return;
+  val fallback = spread.dimFallbacks[e.world.dimension];
   val recipeDimId = !isNull(fallback) ? (fallback as int) : e.world.dimension;
 
   // Skip ticks for every portal
@@ -61,10 +59,10 @@ events.onWorldTick(function (e as crafttweaker.event.WorldTickEvent) {
 
 function tickPortalsToWorld(world as IWorld, targetDimIdStr as string, dimData as IData, recipeDimId as int) as void {
   // Get userful maps from recipes
-  val REC = scripts.do.portal_spread.recipes.getRecipes(recipeDimId, targetDimIdStr); if (isNull(REC)) return;
-  val WL = getNumIds('transformable', recipeDimId, targetDimIdStr); if (isNull(WL)) return;
-  val BL = getNumIds('blacklisted', recipeDimId, targetDimIdStr); if (isNull(BL)) return;
-  val WC = getNumIds('wildcarded', recipeDimId, targetDimIdStr); if (isNull(WC)) return;
+  val REC = spread.getRecipes(recipeDimId, targetDimIdStr); if (isNull(REC)) return;
+  val WL = spread.getNumIds('transformable', recipeDimId, targetDimIdStr); if (isNull(WL)) return;
+  val BL = spread.getNumIds('blacklisted', recipeDimId, targetDimIdStr); if (isNull(BL)) return;
+  val WC = spread.getNumIds('wildcarded', recipeDimId, targetDimIdStr); if (isNull(WC)) return;
   /*
       ████
     ██▒▒▒▒██
@@ -117,7 +115,7 @@ function tickPortalsToWorld(world as IWorld, targetDimIdStr as string, dimData a
     for i in 0 .. repeats {
       for j in 0 .. trueLookup {
         val spreadPos = getNexPortalPos(fullPortalId, portalPos, maxSpreadIndex);
-        if (spread(
+        if (spreadBlock(
           world,
           spreadPos,
           showParticles,
@@ -151,7 +149,7 @@ function destroyPortal(world as IWorld, dimId as string, portalId as string, ful
 
 // Find and convert one block
 // Return true if block converted, false if skipped / not found
-function spread(
+function spreadBlock(
   world as IWorld,
   spreadPos as Position3f,
   showParticles as bool,
@@ -190,8 +188,11 @@ function spread(
     blockTo = blocksTo[blocksTo.length - 1 - rndIndex];
   }
 
+  if (isNull(blockTo)) return false;
+  val blockToNumId = blockTo.block.definition.numericalId;
+
   if (
-    numId == blockTo.block.definition.numericalId
+    numId == blockToNumId
     && inworldState == blockTo
   ) return false; // Already transformed
 
@@ -213,7 +214,9 @@ function spread(
 
   // Replace block
   setBlock(world, spreadPos, blockTo, showParticles);
-  return true;
+
+  // Return false if transformed block was air to prevent stopping on those blocks
+  return blockToNumId != 0;
 }
 
 // Spawn particles

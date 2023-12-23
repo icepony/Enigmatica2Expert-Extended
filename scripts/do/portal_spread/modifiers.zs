@@ -100,10 +100,11 @@ function getModifiers(
 }
 
 function extractModif(modifiers as int[], key as string) as int {
-  val i = Config.MODIF[key];
-  if (isNull(i)) return 0;
-  val n = modifiers[i];
-  return isNull(n) ? 0 : n as int;
+  val _i = Config.MODIF[key];
+  if (isNull(_i)) return 0;
+  val i = _i as int;
+  if (i < 0 || i >= modifiers.length) return 0;
+  return modifiers[i];
 }
 
 function getTrueDelay(modifiers as int[]) as double {

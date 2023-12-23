@@ -37,7 +37,7 @@ for i in 2 .. 6 {
   x.setJEIItemSlot(i, 0, 'output');
 }
 
-val wildcardedNumIds = scripts.do.portal_spread.recipes.wildcardedNumIds;
+val wildcardedNumIds = scripts.do.portal_spread.recipes.spread.wildcardedNumIds;
 
 function stateToItem(state as IBlockState) as IItemStack {
   if (
@@ -57,7 +57,7 @@ function stateToItem(state as IBlockState) as IItemStack {
 // Group recipes by inputs and outputs
 val recipeMap as IItemStack[][IIngredient] = {};
 
-for dimFrom, dimFromData in scripts.do.portal_spread.recipes.stateRecipes {
+for dimFrom, dimFromData in scripts.do.portal_spread.recipes.spread.stateRecipes {
   for dimTo, dimToData in dimFromData {
     for stateFrom, statesTo in dimToData {
       // Outputs
