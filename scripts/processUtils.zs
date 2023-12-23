@@ -1,3 +1,4 @@
+#modloaded advancedrocketry
 #priority 52
 
 import crafttweaker.data.IData;

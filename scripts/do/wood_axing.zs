@@ -6,6 +6,7 @@ When you break block with special axe it output planks
 
 #priority -1
 #reloadable
+#ignoreBracketErrors
 
 import crafttweaker.event.BlockHarvestDropsEvent;
 import crafttweaker.item.IIngredient;

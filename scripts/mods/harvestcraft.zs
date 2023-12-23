@@ -1,3 +1,5 @@
+#modloaded harvestcraft
+
 import crafttweaker.item.IItemStack;
 
 // Make Universal Tweaks highlite items that have usages in crafting table recipes

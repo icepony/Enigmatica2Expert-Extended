@@ -1,3 +1,4 @@
+#modloaded jei
 #priority 10
 
 import crafttweaker.entity.IEntityLivingBase;

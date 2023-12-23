@@ -1,3 +1,4 @@
+#modloaded jei
 #priority 1
 #ignoreBracketErrors
 

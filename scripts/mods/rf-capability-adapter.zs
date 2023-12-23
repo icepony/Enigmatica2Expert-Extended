@@ -1,3 +1,5 @@
+#modloaded rf-capability-adapter
+
 if (isNull(itemUtils.getItem('appliedenergistics2:controller'))) {
   val anyFluix = <ore:crystalFluix> | <appliedenergistics2:material:12>;
   recipes.remove(<rf-capability-adapter:aecapabilityadapter>);

@@ -1,9 +1,9 @@
+#modloaded zentoolforge
 #priority 100
 #reloadable
 
 import crafttweaker.data.IData;
 import crafttweaker.item.IItemStack;
-import mods.ctutils.utils.Math.max;
 
 static allToolModifiers as IData = [
   // "creative", // Creative is avaliable but added parralel with other modifiers
@@ -145,7 +145,7 @@ function addSingleModifier(_tag as IData, name as string) as IData {
   }
   else if (name != 'soulbound' && name != 'tconevo.artifact') {
     // Other except creative and soulbound
-    tag = tag + { Stats: { FreeModifiers: max(0, D(tag).getInt('Stats.FreeModifiers', 0) - 1) as IData } } as IData;
+    tag = tag + { Stats: { FreeModifiers: max(0.0, D(tag).getInt('Stats.FreeModifiers', 0) - 1) as IData } } as IData;
     tag = tag + { TinkerData: { UsedModifiers: (D(tag).getInt('TinkerData.UsedModifiers', 0) + 1) as IData } } as IData;
   }
 

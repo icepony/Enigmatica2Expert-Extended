@@ -10,6 +10,7 @@ https://github.com/Krutoy242
 
 */
 
+#modloaded jei ctintegration
 #reloadable
 
 import crafttweaker.entity.IEntityDefinition;

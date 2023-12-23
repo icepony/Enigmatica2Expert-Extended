@@ -1,3 +1,5 @@
+#modloaded architecturecraft
+
 import crafttweaker.item.IItemStack;
 
 function getArchSphere(block as IItemStack) as IItemStack {

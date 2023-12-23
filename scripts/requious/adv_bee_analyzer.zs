@@ -1,3 +1,4 @@
+#modloaded requious
 #priority -100
 
 import mods.requious.AssemblyRecipe;

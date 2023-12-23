@@ -1,3 +1,5 @@
+#modloaded nuclearcraft
+
 import crafttweaker.item.IIngredient;
 import mods.nuclearcraft.Infuser;
 

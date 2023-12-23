@@ -1,3 +1,4 @@
+#modloaded ctintegration
 #reloadable
 
 import mods.ctintegration.util.RawLogger.logRaw;

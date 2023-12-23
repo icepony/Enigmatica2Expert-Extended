@@ -1,3 +1,4 @@
+#modloaded appliedenergistics2
 #ignoreBracketErrors
 #priority 1000
 

@@ -1,3 +1,5 @@
+#modloaded tconstruct mechanics inworldcrafting tconstruct extendedcrafting thaumcraft
+
 import crafttweaker.item.IIngredient;
 
 furnace.setFuel(<contenttweaker:conglomerate_of_coal>, 60000);

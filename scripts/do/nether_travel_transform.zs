@@ -4,6 +4,8 @@ Spawn entities when entity item travel into Nether
 
 */
 
+#modloaded requious
+
 // List of recipes
 val netherPortalEntityConversion = {
   'forestry:butterfly_ge': <entity:biomesoplenty:wasp>,

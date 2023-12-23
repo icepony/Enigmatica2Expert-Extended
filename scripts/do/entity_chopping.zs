@@ -1,4 +1,6 @@
+#modloaded ctintegration
 #reloadable
+#ignoreBracketErrors
 
 import crafttweaker.player.IPlayer;
 

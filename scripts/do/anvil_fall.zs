@@ -1,3 +1,4 @@
+#modloaded requious
 #reloadable
 
 static entityMap as int[string] = {

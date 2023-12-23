@@ -5,6 +5,7 @@ and if you provide more diversity in those items you need less of them
 
 */
 
+#modloaded ctintegration
 #priority 2000
 
 import crafttweaker.data.IData;

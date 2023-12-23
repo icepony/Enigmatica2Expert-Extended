@@ -1,5 +1,5 @@
 // Used for $orderly
-#modloaded zenutils
+#modloaded zenutils thermalexpansion
 
 import crafttweaker.data.IData;
 import crafttweaker.item.IItemStack;

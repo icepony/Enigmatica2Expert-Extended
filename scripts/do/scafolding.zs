@@ -1,3 +1,4 @@
+#modloaded cyclicmagic ctintegration
 #reloadable
 
 static offsetOrder as int[] = [

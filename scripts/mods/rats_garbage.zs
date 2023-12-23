@@ -1,4 +1,4 @@
-#modloaded rats
+#modloaded rats crafttweakerutils
 
 import crafttweaker.item.IItemStack;
 import mods.ctutils.utils.Math.max;

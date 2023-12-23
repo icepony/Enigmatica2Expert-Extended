@@ -1,3 +1,5 @@
+#modloaded jei
+
 // Thanks to the FTB Interactions devs for making me aware of this feature <3
 val categoriesToHide as string[] = [
   'minecraft.fuel',

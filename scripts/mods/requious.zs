@@ -1,3 +1,5 @@
+#modloaded requious
+
 // [Quantron] from [Elite Control Circuit][+2]
 craft.remake(<requious:quantron>, ['pretty',
   '  S  ',

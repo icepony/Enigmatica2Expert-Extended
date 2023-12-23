@@ -9,6 +9,8 @@ https://creativecommons.org/licenses/by-nc/3.0/
 this code. Also, you may not sell this code.)
 */
 
+#modloaded nuclearcraft
+
 import crafttweaker.liquid.ILiquidStack;
 
 mods.nuclearcraft.FissionHeating.addRecipe(<fluid:carbon_dioxide> * 3, <fluid:hot_carbon_dioxide>, 5);

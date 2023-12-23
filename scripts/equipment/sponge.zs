@@ -4,6 +4,8 @@ Remove TCon modifiers and Jetpack Attachments from any armor
 
 */
 
+#modloaded tconstruct
+
 import crafttweaker.data.IData;
 import crafttweaker.recipes.IRecipeFunction;
 

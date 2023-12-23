@@ -1,4 +1,5 @@
 #loader contenttweaker
+#modloaded ctintegration thaumcraft crafttweakerutils
 
 import crafttweaker.block.IBlock;
 import crafttweaker.entity.IEntityLivingBase;

@@ -1,3 +1,5 @@
+#modloaded dropt
+
 import crafttweaker.item.IItemStack;
 import mods.dropt.Dropt;
 

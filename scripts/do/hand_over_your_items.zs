@@ -5,8 +5,10 @@
  * @link https://github.com/Krutoy242
  */
 
+#modloaded zenutils ctintegration
 #reloadable
 
+import crafttweaker.data.IData;
 import crafttweaker.item.IItemStack;
 import crafttweaker.player.IPlayer;
 
@@ -47,9 +49,36 @@ function broadcastMsg(langCode as string, sender as IPlayer, receiver as IPlayer
   sender.sendRichTextMessage(crafttweaker.text.ITextComponent.fromData([{
     translate: 'chat.hand_over_your_items.' ~ langCode,
     color    : col1,
-    with     : [scripts.lib.tellraw.itemObj(item, 'white'), {
+    with     : [tellrawItemObj(item, 'white'), {
       text : receiver.name,
       color: col2,
     }],
   }]));
+}
+
+function tellrawItem(item as IItemStack, color as string = null, showName as bool = true) as IData {
+  val data = [
+    {
+      text: item.amount > 1 ? item.amount ~'x' : '',
+      hoverEvent: {
+        action: 'show_item',
+        value: item.asData().toNBTString(),
+      },
+      extra: [
+        {
+          // The major part of `iconQuark` is actually 3 spaces, which are reserved for Quark item rendering
+          // So you needs Quark to get the icon
+          text: '§f   '
+        } + (!showName ? {} :
+          {extra: [(item.hasDisplayName ? item.tag.display.Name : {translate: item.name ~'.name'})]}
+        )
+      ]
+    }
+    + (color ? {color: color} : {}),
+  ] as IData;
+  return data;
+}
+
+function tellrawItemObj(item as IItemStack, color as string = null, showName as bool = true) as IData {
+  return {text: '', extra: tellrawItem(item, color, showName)};
 }

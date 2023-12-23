@@ -1,3 +1,4 @@
+#modloaded ctintegration thaumcraft
 #priority -1
 #reloadable
 

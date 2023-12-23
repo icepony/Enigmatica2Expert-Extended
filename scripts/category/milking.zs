@@ -2,15 +2,13 @@
   Extract seed issue from gender-specific animals
 */
 
+#modloaded tconstruct
 #reloadable
 
 import crafttweaker.data.IData;
 import crafttweaker.entity.IEntityAnimal;
-import crafttweaker.item.IItemStack;
-
 import crafttweaker.entity.IEntityLiving;
-import mods.ctutils.utils.Math.max;
-import mods.ctutils.utils.Math.min;
+import crafttweaker.item.IItemStack;
 
 mods.tconstruct.Fuel.registerFuel(<liquid:seed> * 10, 500000);
 
@@ -107,7 +105,7 @@ function milk(e as crafttweaker.event.PlayerInteractEntityEvent) as bool {
   val maxTankSize = dholdData.getInt('tag.Fluid.Amount', dholdData.getInt('tag.Amount', 1000));
 
   // Spawn liquid on ground if overwhelming amount
-  val spilled = max(0.0f, milkAmount - maxTankSize as float) as int;
+  val spilled = max(0.0, milkAmount - maxTankSize as double) as int;
   if (spilled > 0) {
     val maxSpilled = pow(spilled as double / 1000.0, 0.5) as int;
     var totalSpilled = 0;

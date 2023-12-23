@@ -26,14 +26,13 @@
 //
 // ######################################################################
 
+#modloaded jaopca mekanism
 #priority 50
 
 import crafttweaker.data.IData;
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 import crafttweaker.liquid.ILiquidStack;
-import mods.ctutils.utils.Math.max;
-import mods.ctutils.utils.Math.min;
 
 import scripts.processUtils.wholesCalc;
 import scripts.processWork.work;
@@ -48,7 +47,7 @@ import scripts.processWork.workEx;
 // Multiply item amount on double value
 function iF(output as IItemStack, mult as double) as IItemStack {
   if (isNull(output)) { return null; }
-  return output * max(1, min(output.maxStackSize, (output.amount as double * mult) as int));
+  return output * max(1.0, min(output.maxStackSize as double, (output.amount as double * mult) as int));
 }
 
 static fluidSteps as double[] = [144, 666, 100, 250] as double[];
@@ -61,7 +60,7 @@ function lF(output as ILiquidStack, mult as double) as ILiquidStack {
   val dmult = damount * mult;
   for step in fluidSteps {
     if (dresult == 0.0 && damount % step == 0) {
-      dresult = max(step, step * ((dmult / step) as int)) as double;
+      dresult = max(step as double, step * ((dmult / step) as int)) as double;
     }
   }
   if (dresult == 0) { dresult = dmult; }

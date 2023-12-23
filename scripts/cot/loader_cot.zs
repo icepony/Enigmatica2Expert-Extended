@@ -1,4 +1,4 @@
-#loader contenttweaker
+#loader contenttweaker crafttweakerutils
 #priority 9000
 
 import crafttweaker.item.IItemStack;

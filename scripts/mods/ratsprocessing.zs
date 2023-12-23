@@ -1,3 +1,5 @@
+#modloaded rats
+
 import crafttweaker.item.IItemStack;
 
 static listRatPoop as IItemStack[] = [
