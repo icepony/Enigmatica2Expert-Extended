@@ -11,32 +11,6 @@ furnace.addRecipe(<endreborn:item_ingot_wolframium>, <qmd:dust>, 4.0);
 // Mage-Barclay
 <entity:endreborn:endlord>.addPlayerOnlyDrop(<storagedrawers:upgrade_storage:4>, 1, 2);
 
-// Remove excess items
-for item in [
-  <endreborn:armour_boots_obsidian>,
-  <endreborn:armour_chestplate_obsidian>,
-  <endreborn:armour_helmet_helmet>,
-  <endreborn:armour_leggings_obsidian>,
-  <endreborn:block_end_forge>,
-  <endreborn:ender_bow>,
-  <endreborn:entropy_wand>,
-  <endreborn:ingot_infused>,
-  <endreborn:item_shard_obsidian>,
-  <endreborn:tool_axe_endorium>,
-  <endreborn:tool_axe_wolframium>,
-  <endreborn:tool_hammer_iron>,
-  <endreborn:tool_hoe_endorium>,
-  <endreborn:tool_hoe_wolframium>,
-  <endreborn:tool_pickaxe_endorium>,
-  <endreborn:tool_pickaxe_wolframium>,
-  <endreborn:tool_shovel_endorium>,
-  <endreborn:tool_shovel_wolframium>,
-  <endreborn:tool_sword_endorium>,
-  <endreborn:tool_sword_wolframium>,
-] as IItemStack[] {
-  utils.rh(item);
-}
-
 // Remove hammer recipes
 for recipeName in [
   'unidict:dustobsidian_x3_size.3',
