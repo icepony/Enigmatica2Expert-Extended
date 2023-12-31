@@ -610,6 +610,7 @@ ____ _  _ ___ ____ ____    _  _ ___ _ _    _ ___ _ ____ ____
 
 <extrautils2:ingredients:11>                    .setAspects(<aspect:metallum>*10  ,<aspect:infernum>*5); #Demonic ingot
 <extrautils2:ingredients:12>                    .setAspects(<aspect:metallum>*10  ,<aspect:cognitio>*5); #Enchanted ingot
+<extrautils2:fakecopy:*>                        .setAspects(<aspect:amogus>*25); #Fake Item
 
 /*
 #######################################################
@@ -1156,6 +1157,7 @@ ___ _  _ ____ _  _ _  _ ____ ____ ____ ____ ___
 
 <thaumcraft:bath_salts>                        .setAspects(<aspect:ordo>*1        , <aspect:victus>*1);
 <thaumcraft:sanity_soap>                       .setAspects(<aspect:ordo>*2        , <aspect:victus>*2         ,<aspect:mana>*2);
+<thaumicaugmentation:bars>                     .setAspects(<aspect:metallum>);
 
 <thaumcraft:ingot>                              .setAspects(<aspect:metallum>*10        , <aspect:praecantatio>*5);
 <thaumcraft:nugget:6>                           .setAspects(<aspect:metallum>*1);
@@ -1458,7 +1460,7 @@ Just a list of aspect - metal
 function calculateAspects(main as float, secondary as float, a1 as CTAspectStack, a2 as CTAspectStack, a3 as CTAspectStack) as CTAspectStack[] {
   var list = [] as CTAspectStack[];
   list+=a1.setAmount(main as int);
-  list+=a2.setAmount(secondary as int);
+  if (secondary>=1) list+=a2.setAmount(secondary as int);
   if (!isNull(a3)) list+=a3.setAmount(main as int); 
   return list;
 }

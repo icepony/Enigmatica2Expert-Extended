@@ -867,6 +867,7 @@ mods.thaumcraft.Infusion.registerRecipe(
 );
 
 // [Chester]
+<thaumadditions:chester>.addTooltip("§6Can be retrieved by Bone-eye§r");
 mods.thaumcraft.Infusion.removeRecipe(<thaumadditions:chester>);
 mods.thaumcraft.Infusion.registerRecipe(
   'chester', // Name
@@ -1478,11 +1479,16 @@ craft.make(bookWithAllKnowledge, ['pretty',
   'R': <rats:marbled_cheese_raw>, // Raw Marbled Cheese
 });
 
-// Mithrillium, Adamanite, Mithminite melting and casting
-scripts.process.melt(<thaumadditions:mithrillium_nugget>, <liquid:mithrillium> * 16);
-scripts.process.melt(<thaumadditions:mithrillium_ingot>, <liquid:mithrillium> * 144);
-scripts.process.melt(<thaumadditions:mithrillium_plate>, <liquid:mithrillium> * 144);
-scripts.process.melt(<thaumadditions:mithrillium_block>, <liquid:mithrillium> * 1296);
+mods.randomtweaker.thaumadditions.IFluxConcentrator.addRecipes(<thaumcraft:condenser_lattice>, <thaumcraft:condenser_lattice_dirty>);
+mods.randomtweaker.thaumadditions.IFluxConcentrator.addRecipes(<thaumadditions:dawn_totem>, <thaumadditions:twilight_totem>);
+mods.randomtweaker.thaumadditions.IFluxConcentrator.addRecipes(<ore:stone>, <thaumcraft:taint_rock>);
+mods.randomtweaker.thaumadditions.IFluxConcentrator.addRecipes(<ore:dirt>, <thaumcraft:taint_soil>);
+
+# Mithrillium, Adamanite, Mithminite melting and casting
+scripts.process.melt(<thaumadditions:mithrillium_nugget>	,<liquid:mithrillium> * 16);
+scripts.process.melt(<thaumadditions:mithrillium_ingot>		,<liquid:mithrillium> * 144);
+scripts.process.melt(<thaumadditions:mithrillium_plate>		,<liquid:mithrillium> * 144);
+scripts.process.melt(<thaumadditions:mithrillium_block>		,<liquid:mithrillium> * 1296);
 
 scripts.process.melt(<thaumadditions:adaminite_nugget>, <liquid:adaminite> * 16);
 scripts.process.melt(<thaumadditions:adaminite_ingot>, <liquid:adaminite> * 144);
