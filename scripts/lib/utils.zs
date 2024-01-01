@@ -55,13 +55,13 @@ zenClass Utils {
     }
   }
 
-  function compact(a as IIngredient, b as IIngredient) as void {
-    if (a.itemArray.length <= 0 || b.itemArray.length <= 0) {
-      logger.logWarning('Cannot compact ' ~ a.commandString ~ ' into ' ~ b.commandString);
+  function compact(small as IIngredient, big as IIngredient) as void {
+    if (small.itemArray.length <= 0 || big.itemArray.length <= 0) {
+      logger.logWarning('Cannot compact ' ~ small.commandString ~ ' into ' ~ big.commandString);
       return;
     }
-    recipes.addShapeless(firstItem(b).anyAmount(), [a, a, a, a, a, a, a, a, a]);
-    recipes.addShapeless(firstItem(a) * 9, [b]);
+    recipes.addShapeless(firstItem(big).anyAmount(), [small, small, small, small, small, small, small, small, small]);
+    recipes.addShapeless(firstItem(small) * 9, [big]);
   }
 
   function ingredientFromArrayByRegex(regex as string) as IIngredient {
