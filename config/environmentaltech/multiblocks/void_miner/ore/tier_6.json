@@ -31,16 +31,6 @@
       "id": "environmentaltech:aethium_crystal"
     },
     {
-      "target": "white",
-      "weight": 32,
-      "id": "OD:oreQuartz"
-    },
-    {
-      "target": "yellow",
-      "weight": 19,
-      "id": "OD:oreGold"
-    },
-    {
       "target": "cyan",
       "weight": 15,
       "id": "OD:oreDiamond"
@@ -114,6 +104,11 @@
       "target": "white",
       "weight": 10,
       "id": "rftools:dimensional_shard_ore"
+    },
+    {
+      "target": "yellow",
+      "weight": 10,
+      "id": "OD:oreTitanium"
     }
   ]
 }
