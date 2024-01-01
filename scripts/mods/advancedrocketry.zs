@@ -474,7 +474,8 @@ craft.remake(<advancedrocketry:nuclearcore>, ['pretty',
 });
 
 // Some Alts with advanced machines
-scripts.processUtils.avdRockXmlRecipeEx('ChemicalReactor', [<ore:dustSulfur> * 30], [<fluid:oxygen> * 1500], null, [<fluid:sulfuric_acid> * 3000], { power: 140000, timeRequired: 15 });
+scripts.process.solution([<thermalfoundation:material:771> * 30], [<fluid:oxygen>       * 1500], [<fluid:sulfuric_acid> * 3000], null, 'only: ChemicalReactor', { energy: 140000, time: 15 });
+scripts.process.solution([<thermalfoundation:material:771> * 30], [<fluid:liquidoxygen> * 1500], [<fluid:sulfuric_acid> * 3000], null, 'only: ChemicalReactor', { energy: 140000, time: 15 });
 scripts.processUtils.avdRockXmlRecipe('Crystallizer', [<ore:dustFluorite> * 6], [<fluid:sulfuric_acid> * 6000], [<nuclearcraft:compound> * 6], null);
 
 // Remove carbon (defined in ExNihilio configs)
