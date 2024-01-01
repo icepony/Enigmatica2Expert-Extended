@@ -114,15 +114,4 @@
 			<fluidStack>cloud_seed 1000</fluidStack>
 		</output>
 	</Recipe>
-	<!-- Recipe below generated automatically. Do not make changes or they gonna be rewritten. -->
-	<!-- [Ammonia] -->
-	<Recipe timeRequired="80" power="120000">
-		<input>
-			<fluidStack>nitrogen 800</fluidStack>
-			<fluidStack>hydrogen 2400</fluidStack>
-		</input>
-		<output>
-			<fluidStack>ammonia 16000</fluidStack>
-		</output>
-	</Recipe>
 </Recipes>

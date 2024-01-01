@@ -362,7 +362,7 @@ mods.actuallyadditions.AtomicReconstructor.addRecipe(<nuclearcraft:gem:2>, <biom
 mods.actuallyadditions.AtomicReconstructor.addRecipe(<nuclearcraft:gem:3>, <biomesoplenty:gem:3>, 15000);
 
 // Boron Nitride shortcut with AdvRock machines
-scripts.processUtils.avdRockXmlRecipeEx('ChemicalReactor', null, [<fluid:nitrogen> * 800, <fluid:hydrogen> * 2400], null, [<fluid:ammonia> * 16000], { power: 120000, timeRequired: 80 });
+scripts.process.solution(null, [<fluid:nitrogen> * 800, <fluid:hydrogen> * 2400], [<fluid:ammonia> * 16000], null, 'only: ChemicalReactor', { energy: 120000, time: 80 });
 scripts.processUtils.avdRockXmlRecipe('Crystallizer', [<ore:dustBoron> * 5], [<fluid:ammonia> * 5000], [<nuclearcraft:gem:1> * 10], null);
 
 // Platings Laser Alternatives
