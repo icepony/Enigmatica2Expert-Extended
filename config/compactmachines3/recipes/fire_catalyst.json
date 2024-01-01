@@ -1,0 +1,55 @@
+{
+  "name": "compactmachines3:conglomerate_of_fire",
+  "target-item": "cyclicmagic:fire_dark_anim",
+  "target-meta": 0,
+  "target-count": 1,
+
+  "duration": 20,
+  "catalyst": "randomthings:imbue",
+  "input-types": {
+    "a": {
+      "id": "cyclicmagic:fire_frost",
+      "ignore-meta": true,
+      "meta": 15
+    },
+    "b": {
+      "id": "cyclicmagic:fire_dark",
+      "ignore-meta": true,
+      "meta": 15
+    },
+    "c": {
+      "id": "biomesoplenty:blue_fire",
+      "ignore-meta": true,
+      "meta": 0
+    },
+    "d": {
+      "id": "enderio:block_cold_fire",
+      "meta": 0,
+      "ignore-meta": true,
+      "item": {
+        "id": "enderio:item_cold_fire_igniter",
+        "meta": 0,
+        "count": 2,
+        "nbt": "{\"enderio:famount\":1000}"
+      }
+    },
+    "e": {
+      "id": "endreborn:end_fire",
+      "meta": 1,
+      "ignore-meta": true,
+      "item": {
+        "id": "draconicevolution:mob_soul",
+        "meta": 0,
+        "count": 1,
+        "nbt": "{EntityName:\"endreborn:endguard\"}"
+      }
+    }
+  },
+  "shape": [
+    [
+      ["a", "d", "a"],
+      ["b", "e", "b"],
+      ["c", "d", "c"]
+    ]
+  ]
+}
