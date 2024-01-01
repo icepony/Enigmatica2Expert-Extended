@@ -360,9 +360,8 @@ craft.make(<immersiveengineering:treated_wood> * 8, ['pretty',
   '~': LiquidIngr('ic2creosote'),
 });
 
-// Weed => Fertilizer => Green Fertilizer
+// Weed => Fertilizer
 mods.actuallyadditions.Compost.addRecipe(<ic2:crop_res:2>, <minecraft:wool:13>, <ic2:crop_res:5>, <tconstruct:soil:1>);
-mods.actuallyadditions.Compost.addRecipe(<farmingforblockheads:fertilizer:1>, <quark:quilted_wool:5>, <ic2:crop_res:2>, <minecraft:wool:13>);
 
 // Scrap making from seed bags
 scripts.process.crush(<ic2:crop_seed_bag>, <ic2:crafting:23>, 'only: Macerator', null, null);
