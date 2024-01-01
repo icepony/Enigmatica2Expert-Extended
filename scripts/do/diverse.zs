@@ -5,6 +5,7 @@ and if you provide more diversity in those items you need less of them
 
 */
 
+#reloadable
 #modloaded ctintegration
 #priority 2000
 
