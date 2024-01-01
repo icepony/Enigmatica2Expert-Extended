@@ -1,21 +1,21 @@
 {
-    "name": "compactmachines3:dragonforge_fire_core",
-  
-    "target-item": "iceandfire:dragonforge_fire_core_disabled",
-    "target-count": 1,
-  
-    "duration": 300,
-    "symmetrical": true,
-  
-    "catalyst": "iceandfire:fire_dragon_heart",
-  
+  "name": "compactmachines3:dragonforge_fire_core",
+
+  "target-item": "iceandfire:dragonforge_fire_core_disabled",
+  "target-count": 1,
+
+  "duration": 300,
+  "symmetrical": true,
+
+  "catalyst": "iceandfire:fire_dragon_heart",
+
   "input-types": {
     "a": {
       "id": "iceandfire:dragonforge_fire_brick",
       "meta": 0
     },
     "b": {
-      "id": "iceandfire:myrmex_desert_resin_glass",
+      "id": "iceandfire:myrmex_desert_resin_block",
       "meta": 0
     },
     "c": {

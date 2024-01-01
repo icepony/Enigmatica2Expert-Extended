@@ -474,6 +474,18 @@ mods.inworldcrafting.FluidToItem.transform(<iceandfire:frost_lily>, <liquid:cryo
 recipes.addShapeless(<iceandfire:dragonforge_ice_core_disabled>, [<iceandfire:dragonforge_ice_core>]);
 recipes.addShapeless(<iceandfire:dragonforge_fire_core_disabled>, [<iceandfire:dragonforge_fire_core>]);
 
+// Make resin blocks 3x3 instead of 2x2
+recipes.remove(<iceandfire:myrmex_desert_resin_block>);
+recipes.remove(<iceandfire:myrmex_jungle_resin_block>);
+utils.compact(<iceandfire:myrmex_desert_resin>, <iceandfire:myrmex_desert_resin_block>);
+utils.compact(<iceandfire:myrmex_jungle_resin>, <iceandfire:myrmex_jungle_resin_block>);
+
+// Make Myrmex Glass as x81 of resin (double compresseed)
+furnace.remove(<iceandfire:myrmex_desert_resin_glass>);
+furnace.remove(<iceandfire:myrmex_jungle_resin_glass>);
+utils.compact(<iceandfire:myrmex_desert_resin_block>, <iceandfire:myrmex_desert_resin_glass>);
+utils.compact(<iceandfire:myrmex_jungle_resin_block>, <iceandfire:myrmex_jungle_resin_glass>);
+
 // Recycling myrmex resin
 function addResinRecycle(input as IItemStack, amount as int, isDesert as bool) as void {
   val output = (isDesert ? <iceandfire:myrmex_desert_resin> : <iceandfire:myrmex_jungle_resin>) % (2 * amount);

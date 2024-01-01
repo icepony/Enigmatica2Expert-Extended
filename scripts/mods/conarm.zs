@@ -9,7 +9,7 @@ function remakeResistance(item as IItemStack, primary as IIngredient) {
     'B R B',
     '▬ B ▬'], {
     'B': primary,
-    'R': <ore:myrmexResinGlass>, // Desert Myrmex Resin Glass
+    'R': <ore:blockMyrmexResin>,
     '▬': <ore:ingotDarkSteel>, // Dark Steel Ingot
   });
 }
