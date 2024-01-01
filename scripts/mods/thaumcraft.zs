@@ -1180,17 +1180,17 @@ soulRecipe('minecraft:vex'                , 'hvanilla'  , [<aspect:alienis> * 50
 scripts.process.crushRock(<thaumicaugmentation:stone>,
   [<jaopca:item_dusttanzanite>, <jaopca:item_dustdimensionalshard>, <actuallyadditions:item_dust:7>],
   [0.8, 0.2, 0.1],
-  'No exceptions');
+  'only: rockCrusher');
 
 scripts.process.crushRock(<thaumicaugmentation:stone:1>,
   [<jaopca:item_dusttanzanite>, <jaopca:item_dustdimensionalshard>, <thaumadditions:salt_essence>.withTag({ Aspects: [{ amount: 1, key: 'vitium' }] })],
   [0.8, 0.2, 0.1],
-  'No exceptions');
+  'only: rockCrusher');
 
 scripts.process.crushRock(<thaumicaugmentation:stone:2>,
   [<jaopca:item_dusttanzanite>, <jaopca:item_dustdimensionalshard>, <thaumadditions:salt_essence>.withTag({ Aspects: [{ amount: 1, key: 'vitium' }] })],
   [0.8, 0.3, 0.1],
-  'No exceptions');
+  'only: rockCrusher');
 
 // Skyblock alt
 mods.thaumcraft.SalisMundus.addSingleConversion(<ore:plankWood>, <thaumcraft:plank_silverwood>);
