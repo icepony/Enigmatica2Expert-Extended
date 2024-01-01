@@ -121,6 +121,67 @@
       <output name="ingotEndSteel"/>
     </alloying>
   </recipe>
+  <!-- Compressed Stone recipes -->
+  <recipe name="Alloy: Compressed  1">
+    <alloying energy="4000" exp="1">
+      <input name="extrautils2:compressedcobblestone:0"/>
+      <output name="additionalcompression:stone_compressed:0"/>
+    </alloying>
+  </recipe>
+  <recipe name="Alloy: Compressed  2">
+    <alloying energy="16000" exp="1">
+      <input name="extrautils2:compressedcobblestone:1"/>
+      <output name="additionalcompression:stone_compressed:1"/>
+    </alloying>
+  </recipe>
+  <recipe name="Alloy: Compressed  3">
+    <alloying energy="64000" exp="1">
+      <input name="extrautils2:compressedcobblestone:2"/>
+      <output name="additionalcompression:stone_compressed:2"/>
+    </alloying>
+  </recipe>
+  <recipe name="Alloy: Compressed  4">
+    <alloying energy="256000" exp="1">
+      <input name="extrautils2:compressedcobblestone:3"/>
+      <output name="additionalcompression:stone_compressed:3"/>
+    </alloying>
+  </recipe>
+  <recipe name="Alloy: Compressed  5">
+    <alloying energy="1024000" exp="1">
+      <input name="extrautils2:compressedcobblestone:4"/>
+      <output name="additionalcompression:stone_compressed:4"/>
+    </alloying>
+  </recipe>
+  <recipe name="Alloy: Compressed  6">
+    <alloying energy="4096000" exp="1">
+      <input name="extrautils2:compressedcobblestone:5"/>
+      <output name="additionalcompression:stone_compressed:5"/>
+    </alloying>
+  </recipe>
+  <recipe name="Alloy: Compressed  7">
+    <alloying energy="16384000" exp="1">
+      <input name="extrautils2:compressedcobblestone:6"/>
+      <output name="additionalcompression:stone_compressed:6"/>
+    </alloying>
+  </recipe>
+  <recipe name="Alloy: Compressed  8">
+    <alloying energy="65536000" exp="1">
+      <input name="extrautils2:compressedcobblestone:7"/>
+      <output name="additionalcompression:stone_compressed:7"/>
+    </alloying>
+  </recipe>
+  <recipe name="Alloy: Compressed  9">
+    <alloying energy="262144000" exp="1">
+      <input name="additionalcompression:cobblestone_compressed:8"/>
+      <output name="additionalcompression:stone_compressed:8"/>
+    </alloying>
+  </recipe>
+  <recipe name="Alloy: Compressed 10">
+    <alloying energy="1048576000" exp="1">
+      <input name="additionalcompression:cobblestone_compressed:9"/>
+      <output name="additionalcompression:stone_compressed:9"/>
+    </alloying>
+  </recipe>
   <!-- Disable recipes that EnderTweaker cant -->
   <recipe name="Alloy: Enderium Base (Thermal Expansion)">
     <disabled/>

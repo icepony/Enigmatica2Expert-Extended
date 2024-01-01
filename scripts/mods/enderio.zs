@@ -469,25 +469,6 @@ craft.remake(<enderio:item_item_conduit> * 8, ['pretty',
   '‚': <ore:nuggetVibrantAlloy>, // Vibrant Alloy Nugget
 });
 
-// Compressed blocks smelting
-val compressedBlocks = [
-  <extrautils2:compressedcobblestone>, <additionalcompression:stone_compressed>,
-  <extrautils2:compressedcobblestone:1>, <additionalcompression:stone_compressed:1>,
-  <extrautils2:compressedcobblestone:2>, <additionalcompression:stone_compressed:2>,
-  <extrautils2:compressedcobblestone:3>, <additionalcompression:stone_compressed:3>,
-  <extrautils2:compressedcobblestone:4>, <additionalcompression:stone_compressed:4>,
-  <extrautils2:compressedcobblestone:5>, <additionalcompression:stone_compressed:5>,
-  <extrautils2:compressedcobblestone:6>, <additionalcompression:stone_compressed:6>,
-  <extrautils2:compressedcobblestone:7>, <additionalcompression:stone_compressed:7>,
-  <additionalcompression:cobblestone_compressed:8>, <additionalcompression:stone_compressed:8>,
-  <additionalcompression:cobblestone_compressed:9>, <additionalcompression:stone_compressed:9>,
-] as IItemStack[];
-
-for i, input in compressedBlocks {
-  if (i % 2 == 1) continue;
-  mods.enderio.AlloySmelter.addRecipe(compressedBlocks[i + 1], [input], pow(4, i / 2 + 1) * 1000, (i + 1) * 200);
-}
-
 // Cheaper cause vanilla recipe require Vibrant Alloy
 // [Dark Steel Upgrade "Empowered"] from [Pulsating Crystal][+1]
 craft.reshapeless(<enderio:item_dark_steel_upgrade:1>.withTag({ 'enderio:dsu': 'enderio:energyupgrade' }),
