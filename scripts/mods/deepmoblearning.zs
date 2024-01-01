@@ -68,7 +68,7 @@ craft.remake(<deepmoblearning:data_model_blank>, ['pretty',
   '* M *'], {
   '♥': <deepmoblearning:soot_covered_redstone>, // Soot-covered Redstone
   '*': <ore:itemPulsatingCrystal>, // Pulsating Crystal
-  'M': <endreborn:food_ender_flesh>, // Mysical Flesh
+  'M': <randomthings:ingredient:13>,
 });
 
 // [Ender Air Bottle] from [End Stone][+2]

@@ -97,7 +97,7 @@ return list.map(({ groups: { id, display, items } }) => {
 # add(<entity:botania:pixie>                          , []); // Pixie
   add(<entity:deepmoblearning:glitch>                 , [<deepmoblearning:glitch_heart> * 100]); // System Glitch
   add(<entity:deepmoblearning:trial_cave_spider>      , [<minecraft:spider_eye> * 30, <minecraft:string> * 96]); // Trial Cave Spider
-  add(<entity:deepmoblearning:trial_enderman>         , [<enderio:block_enderman_skull> * 1, <endreborn:food_ender_flesh> * 100, <minecraft:ender_pearl> * 100]); // Trial Enderman
+  add(<entity:deepmoblearning:trial_enderman>         , [<enderio:block_enderman_skull> * 1, <minecraft:ender_pearl> * 100]); // Trial Enderman
   add(<entity:deepmoblearning:trial_slime>            , [<minecraft:slime_ball> * 34]); // Trial Slime
   add(<entity:deepmoblearning:trial_spider>           , [<minecraft:spider_eye> * 30, <minecraft:string> * 98]); // Trial Spider
   add(<entity:emberroot:creeper>                      , [<minecraft:gunpowder> * 311, <minecraft:skull:4> * 8]); // Cursed Creeper
@@ -122,7 +122,7 @@ return list.map(({ groups: { id, display, items } }) => {
   add(<entity:endreborn:chronologist>                 , [<deepmoblearning:living_matter_extraterrestrial> * 149, <minecraft:ender_pearl> * 100]); // Chronologist
   add(<entity:endreborn:endguard>                     , [<endreborn:item_end_shard> * 79, <thermalfoundation:material:771> * 14]); // Purpur Guard
   add(<entity:endreborn:endlord>                      , [<endreborn:sword_shard> * 100, <thermalfoundation:material:771> * 100, <storagedrawers:upgrade_storage:4> * 150]); // End-Mage Barclay
-  add(<entity:endreborn:watcher>                      , [<endreborn:food_ender_flesh> * 100, <minecraft:ender_eye> * 100]); // Watcher
+  add(<entity:endreborn:watcher>                      , [<minecraft:ender_eye> * 100]); // Watcher
   add(<entity:excompressum:angry_chicken>             , [<excompressum:chicken_stick>.withTag({IsAngry: 1 as byte}) * 100, <minecraft:chicken> * 100, <minecraft:feather> * 103]); // Angry Chicken
   add(<entity:iceandfire:amphithere>                  , [<iceandfire:amphithere_feather> * 373, <iceandfire:amphithere_skull> * 2]); // Amphithere
   add(<entity:iceandfire:cyclops>                     , [<iceandfire:cyclops_eye> * 50, <iceandfire:cyclops_skull> * 3, <minecraft:leather> * 568, <minecraft:mutton> * 515, <minecraft:wool> * 268]); // Cyclops
@@ -164,7 +164,7 @@ return list.map(({ groups: { id, display, items } }) => {
   add(<entity:minecraft:creeper>                      , [<minecraft:gunpowder> * 99, <minecraft:skull:4> * 2]); // Creeper
   add(<entity:minecraft:donkey>                       , [<minecraft:leather> * 93]); // Donkey
   add(<entity:minecraft:elder_guardian>               , [<enderio:item_material:56> * 100, <minecraft:fish> * 48, <minecraft:prismarine_crystals> * 34, <minecraft:prismarine_shard> * 92, <minecraft:sponge:1> * 100]); // Elder Guardian
-  add(<entity:minecraft:enderman>                     , [<enderio:block_enderman_skull> * 4, <endreborn:food_ender_flesh> * 100, <minecraft:ender_pearl> * 100]); // Enderman
+  add(<entity:minecraft:enderman>                     , [<enderio:block_enderman_skull> * 4, <minecraft:ender_pearl> * 100]); // Enderman
   add(<entity:minecraft:endermite>                    , [<appliedenergistics2:material:46> * 208, <contenttweaker:item_ore_tungsten> * 25]); // Endermite
   add(<entity:minecraft:evocation_illager>            , [<minecraft:emerald> * 50, <minecraft:totem_of_undying> * 100]); // Evoker
   add(<entity:minecraft:ghast>                        , [<minecraft:ghast_tear> * 46, <minecraft:gunpowder> * 111, <thermalfoundation:material:771> * 16]); // Ghast

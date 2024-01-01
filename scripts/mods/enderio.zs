@@ -612,7 +612,7 @@ craft.remake(<enderio:item_material:15>, ['pretty',
 craft.reshapeless(<enderio:item_material:38>, '▲▲▲©S©▲▲▲', {
   '▲': <ore:dustLapis>, // Lapis Lazuli Dust
   'S': <ore:ingotSilicon>, // Silicon
-  '©': <endreborn:food_ender_flesh>,
+  '©': <randomthings:ingredient:13>,
 });
 
 // Low-level machines (original in Alloy Smelter)

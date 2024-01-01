@@ -191,7 +191,7 @@
     {
       "key": "CREATION_HOSTILE_VANILLA_END",
       "name": "research_name.CREATION_HOSTILE_VANILLA_END",
-      "icons": ["endreborn:food_ender_flesh", "minecraft:ender_pearl", "minecraft:shulker_shell"],
+      "icons": ["minecraft:ender_pearl", "minecraft:shulker_shell"],
       "category": "INFUSION",
       "location": [2, 9],
       "parents": ["CREATION_HOSTILE_VANILLA"],

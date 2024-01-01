@@ -475,19 +475,19 @@ craft.remake(<cyclicmagic:block_hydrator>, ['pretty',
   'A E A',
   'M M M'], {
   'A': <ore:listAllwater>, // Fresh Water
-  'y': <endreborn:food_ender_flesh>, // Mysical Flesh
+  'y': <randomthings:ingredient:13>,
   'E': <randomthings:ingredient:2>, // Ectoplasm
   'M': <extrautils2:decorativesolidwood>, // Magical Planks
 });
 
-// [Tempered Glass]*6 from [Mysical Flesh][+2]
+// [Tempered Glass]
 craft.remake(<cyclicmagic:glass_strong> * 6, ['pretty',
   'r F r',
   'r M r',
   'r r r'], {
   'r': <cyclicmagic:stone_pebble>, // Pebble
   'F': <thermalexpansion:florb>.withTag({ Fluid: 'water' }), // Florb (Water)
-  'M': <endreborn:food_ender_flesh>, // Mysical Flesh
+  'M': <randomthings:ingredient:13>,
 });
 
 // [Fan] from [Tempered Glass][+1]

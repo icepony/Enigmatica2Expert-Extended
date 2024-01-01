@@ -421,7 +421,7 @@ craft.remake(<randomthings:pitcherplant>, [
   'M',
   'f',
   'F'], {
-  'M': <endreborn:food_ender_flesh>,  // Mysical Flesh
+  'M': <randomthings:ingredient:13>,
   'f': <ore:flower>,                  // Oxeye Daisy
   'F': <randomthings:fertilizeddirt>, // Fertilized Dirt
 });
