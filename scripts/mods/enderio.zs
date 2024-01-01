@@ -360,6 +360,9 @@ solution([ox, <extendedcrafting:material:49>], [<liquid:energetic_alloy> * 144],
 solution([ox, <ore:dustRedstone>], [<liquid:tin> * 144], [<liquid:redstone_alloy> * 144], [0.5, 1, 0.25, 5400], 'only: highoven');
 solution([ox, <ore:dustEnderEye>], [<liquid:iron> * 144], [<liquid:pulsating_iron> * 144], [0.5, 1, 0.25, 8200], 'only: highoven');
 
+// Induction Smelter Energetic alloy recipe
+scripts.process.alloy([<ore:ingotGold>, <ore:dustEnergetic>], <enderio:item_alloy_ingot:1>, 'only: Induction');
+
 // Cheaper conduit facades
 recipes.removeByRecipeName('enderio:conduit_facade_transparent');
 val BDR = <ore:itemConduitBinder>;
