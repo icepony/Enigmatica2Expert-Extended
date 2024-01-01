@@ -124,7 +124,6 @@ registerReservoir('Molten Energetic Alloy Reservoir (IO)'             , <liquid:
 registerReservoir('Molten Vibrant Alloy Reservoir (IO)'               , <liquid:vibrant_alloy>         , 5760000   , 8640000 , 0, 20 , 25, II, [], [105], [], []);
 registerReservoir('Molten Crystalline Alloy Reservoir (IO)'           , <liquid:crystalline_alloy>     , 1440000   , 2880000 , 0, 20 , 10, II, [], [105], [], []);
 registerReservoir('Molten Crystalline Pink Slime Alloy Reservoir (IO)', <liquid:crystalline_pink_slime>, 720000    , 1440000 , 0, 20 , 6 , II, [], [105], [], []);
-registerReservoir('Molten Melodic Alloy Reservoir (IO)'               , <liquid:melodic_alloy>         , 288000    , 720000  , 0, 20 , 2 , II, [], [105], [], []);
 
 // Europa ID=106
 /*
