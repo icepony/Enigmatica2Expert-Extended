@@ -284,8 +284,8 @@ item.singularity.iron.name=§7空奇点
 item.singularity.silver.name=§b皮毛奇点
 item.singularity.nickel.name=§e火热奇点
 item.singularity.fluxed.name=§4燃烧奇点
-tooltips.lang.singularity.heat=§7中间产物。§r\n将此奇点与§l任何可燃物§r结合即可以添加 1 点充能。\n使用燃烧时长不同的可燃物时，充能上升的效率§l最高上升 %s %%§r.\n还需要 §6%s§r 点充能。
-tooltips.lang.singularity.burn=将此奇点与§l任何可燃物§r结合即可以添加 1 点充能。\n使用燃烧时长不同的可燃物时，充能上升的效率§l最高上升 %s %%§r.\n还需要 §6%s§r 点充能。
+tooltips.lang.singularity.heat=§7中间产物。§r\n将此奇点与§l任何可燃物§r结合以添加充能。\n必须使用燃烧时间§l不同§r的可燃物。\n较长的燃烧时间将提供§l指数级§r的充能奖励。\n需要 §6%s§r 点充能。
+tooltips.lang.singularity.burn=将此奇点与§l任何可燃物§r结合以添加充能。\n必须使用燃烧时间§l不同§r的可燃物。\n较长的燃烧时间将提供§l指数级§r的充能奖励。\n需要 §6%s§r 点充能。
 item.contenttweaker.any_burnable.name=§6任何可燃物
 
 # Wood singularity
@@ -318,6 +318,7 @@ e2ee.written_book.Zombie=僵尸
 
 # Misc 杂项
 e2ee.do.charge=§f充电: §6%s§r
+e2ee.do.charge.bonus=§f最新奖金: §7x§b%s§r
 e2ee.do.diverse.power=§f功率: §6%s§r
 e2ee.do.diverse.info=§2类型总数: §a%s§r\n§2中位数: §a%s§r\n§2奇点消耗的物品:\n%s
 e2ee.otg.not_otg_biome=§2无法传送到 ID 为：§r §a§n%s§r§2 的非 OTG 生物群系. §8请尝试使用其他的生物群系精华。§r

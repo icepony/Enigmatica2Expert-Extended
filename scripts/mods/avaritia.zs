@@ -1,3 +1,4 @@
+#reloadable
 #modloaded avaritia
 
 import crafttweaker.item.IItemStack;
@@ -348,17 +349,21 @@ craft.shapeless(<avaritia:compressed_crafting_table>, 'wwwwwwwww', {
 // -------------------------------------------------------------------
 // Burn singularity
 // -------------------------------------------------------------------
-val burnSingularity = <avaritia:singularity:12>; // Result Singularity
-val fillingSingularity = <avaritia:singularity:9>; // Filling Singularity
-val needCharge = pow(10.0, 9.0);
+static burnSingularity as IItemStack = <avaritia:singularity:12>; // Result Singularity
+static fillingSingularity as IItemStack = <avaritia:singularity:9>; // Filling Singularity
+static needCharge as double = pow(10.0, 9.0);
+val needChargeStr = utils.formatNum(needCharge as int, '§8,§6');
 furnace.setFuel(burnSingularity, needCharge);
 
 scripts.lib.tooltip.desc.jei(fillingSingularity,
-  'singularity.heat', 1000, needCharge as int
+  'singularity.heat', needChargeStr
 );
 scripts.lib.tooltip.desc.jei(burnSingularity,
-  'singularity.burn', 1000, needCharge as int
+  'singularity.burn', needChargeStr
 );
+
+static getCharge as function(IItemStack)double
+  = function (item as IItemStack) as double { return item.burnTime as double; };
 
 scripts.do.charge.addRecipe(
   'Burn Singularity',
@@ -368,8 +373,38 @@ scripts.do.charge.addRecipe(
   <*>.only(function (item) { return item.burnTime > 0; }),
   needCharge,
   <contenttweaker:any_burnable>, // Fake ingredient
-  function (item as IItemStack) as double { return item.burnTime as double; }
+  getCharge
 );
+
+// Examples
+function addExampleRecipe(a as IItemStack[][]) as void {
+  val map = {
+    0: a[0][0], 1: a[0][1], 2: a[0][2],
+    3: a[1][0], 4: a[1][1], 5: a[1][2],
+    6: a[2][0], 7: a[2][1], 8: a[2][2],
+  } as IItemStack[string];
+  val output = scripts.do.charge.chargeRecipeFunction(map, fillingSingularity, burnSingularity, needCharge, getCharge);
+  if (isNull(output)) return;
+  recipes.addShaped(craft.uniqueRecipeName(output), output, a);
+}
+
+addExampleRecipe([
+  [<avaritia:singularity>, <minecraft:cactus>, <minecraft:carpet>],
+  [<ic2:sapling>         , <minecraft:stick> , <minecraft:wooden_slab>],
+  [<minecraft:planks>    , <minecraft:torch> , <thaumcraft:log_greatwood>],
+]);
+
+addExampleRecipe([
+  [<avaritia:singularity>          , <harvestcraft:pressedwax> , <thaumcraft:alumentum>],
+  [<thermalfoundation:material:892>, <mysticalagriculture:coal>, <forestry:peat>],
+  [<minecraft:coal:1>              , <forestry:wood_pile>      , <mechanics:fuel_dust>],
+]);
+
+addExampleRecipe([
+  [<avaritia:singularity>            , <mysticalagradditions:storage:2>  , <mysticalagriculture:coal_block:4>],
+  [<mysticalagriculture:coal_block:3>, <mysticalagriculture:coal_block:2>, <mysticalagradditions:insanium:5>],
+  [<mysticalagriculture:coal_block:1>, <mysticalagriculture:coal:4>      , <chisel:block_coal_coke>],
+]);
 
 // -------------------------------------------------------------------
 // Woodweave
