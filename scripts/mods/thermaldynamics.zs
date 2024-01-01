@@ -26,13 +26,13 @@ recipes.addShapedMirrored('Itemduct Opaque',
 recipes.remove(<thermaldynamics:duct_16>);
 recipes.addShapedMirrored('Fluiduct',
   <thermaldynamics:duct_16> * 12,
-  [[<ore:plateCopper>, <ore:blockGlass>, <ore:plateCopper>]]);
+  [[<ore:plateCopper>, <xnet:netcable:*>, <ore:plateCopper>]]);
 
 // Fluiduct Opaque
 recipes.remove(<thermaldynamics:duct_16:1>);
 recipes.addShapedMirrored('Fluiduct Opaque',
   <thermaldynamics:duct_16:1> * 12,
-  [[<ore:plateCopper>, <xnet:netcable:*>, <ore:plateCopper>]]);
+  [[<ic2:casing:1>, <xnet:netcable:*>, <ic2:casing:1>]]);
 
 // Hardened Fluiduct Opaque
 recipes.remove(<thermaldynamics:duct_16:3>);
