@@ -11,7 +11,7 @@
 		uid: "d2fe4d9d",
 		type: "item",
 		items: [{
-			item: "morphtool:tool"
+			item: "omniwand:wand"
 		}],
 		ignore_nbt: 1b
 	}],
