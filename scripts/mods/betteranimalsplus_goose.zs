@@ -16,27 +16,30 @@ function clearPlayerInventory(player as IPlayer) as void {
 // --------------------------------
 // Geese use items
 // --------------------------------
-events.onEntityLivingUpdate(function (e as crafttweaker.event.EntityLivingUpdateEvent) {
-  val world = e.entity.world;
-  if (
-    world.remote
-    || !(e.entity instanceof IEntityAnimal)
-    || (e.entity instanceof IPlayer)
-    || e.entity.definition.id != 'betteranimalsplus:goose'
-    || world.time % 10 != 0
-  ) return;
+events.onWorldTick(function (e as crafttweaker.event.WorldTickEvent) {
+  val world = e.world;
+  if (world.remote || world.time % 10 != 0) return;
+  
+  for entity in world.getEntities() {
+    if (!(entity instanceof IEntityAnimal) || !entity.alive) continue;
+    val animal as IEntityAnimal = entity;
+    if (!animal.canPickUpLoot) continue;
+    if (animal.definition.id != 'betteranimalsplus:goose') continue;
+    val base as IEntityLivingBase = animal;
+    tickGoose(base);
+  }
+});
 
-  val entity as IEntityLivingBase = e.entity;
-
+function tickGoose(entity as IEntityLivingBase) as void {
   val item = entity.getItemInSlot(crafttweaker.entity.IEntityEquipmentSlot.mainHand());
 
   // No item in Goose beak
   if (isNull(item)) return;
 
   // Test random
-  if (world.random.nextInt(5) != 0) return;
+  if (entity.world.random.nextInt(5) != 0) return;
 
-  val player = world.getFakePlayer();
+  val player = entity.world.getFakePlayer();
   player.setToLocationFrom(entity);
   // player.posY -= 0.5;
 
@@ -61,4 +64,4 @@ events.onEntityLivingUpdate(function (e as crafttweaker.event.EntityLivingUpdate
   entity.posY = player.posY;// + 0.5;
   entity.posZ = player.posZ;
   player.onEntityUpdate();
-});
+}
