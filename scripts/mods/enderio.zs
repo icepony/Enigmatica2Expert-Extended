@@ -727,7 +727,7 @@ for block, result in {
 
 // [Enhanced Dye Blend] from [Grains of Piezallity][+1]
 recipes.remove(<enderio:item_material:67>);
-scripts.do.expire_in_block.setEx(<ore:itemPulsatingPowder>, { 'enderio:block_cold_fire': <enderio:item_material:67> }, <enderio:item_cold_fire_igniter>.withTag({ 'enderio:famount': 1000 }));
+scripts.do.expire_in_block.set(<ore:itemPulsatingPowder>, { 'cyclicmagic:fire_dark': <enderio:item_material:67> });
 
 // [Conduit Binder]*24 from [Crushed End Stone]*2[+3]
 scripts.processUtils.avdRockXmlRecipe('Crystallizer', [

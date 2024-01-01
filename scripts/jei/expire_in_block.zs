@@ -8,10 +8,10 @@ import mods.requious.AssemblyRecipe;
 // -----------------------------------------------------------------------
 // -----------------------------------------------------------------------
 val x = <assembly:expire_in_block>;
-x.addJEICatalyst(<biomesoplenty:blue_fire>);
-x.addJEICatalyst(<cyclicmagic:fire_frost>);
+// x.addJEICatalyst(<biomesoplenty:blue_fire>);
+// x.addJEICatalyst(<cyclicmagic:fire_frost>);
 x.addJEICatalyst(<cyclicmagic:fire_dark>);
-x.addJEICatalyst(<enderio:item_cold_fire_igniter>.withTag({ 'enderio:famount': 1000 }));
+// x.addJEICatalyst(<enderio:item_cold_fire_igniter>.withTag({ 'enderio:famount': 1000 }));
 x.addJEICatalyst(<cyclicmagic:fire_starter>);
 x.addJEICatalyst(<cyclicmagic:ender_blaze>);
 x.setJEIDurationSlot(2, 0, 'duration', scripts.jei.requious.getVisSlots(5, 1));

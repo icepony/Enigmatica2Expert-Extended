@@ -398,7 +398,7 @@ scripts.do.entity_kill_entity.add('minecraft:slime', 'minecraft:enderman', <cycl
 // Craft in fire
 recipes.remove(<cyclicmagic:apple_lapis>);
 recipes.remove(<cyclicmagic:horse_upgrade_type>);
-scripts.do.expire_in_block.set(<ore:cropApple>, { 'cyclicmagic:fire_frost': <cyclicmagic:apple_lapis> });
+scripts.do.expire_in_block.set(<ore:cropApple>, { 'cyclicmagic:fire_dark': <cyclicmagic:apple_lapis> });
 scripts.do.expire_in_block.set(<ore:cropCarrot>, { 'cyclicmagic:fire_dark': <cyclicmagic:horse_upgrade_type> });
 
 // [Corrupted Chorus Fruit] peaceful alt

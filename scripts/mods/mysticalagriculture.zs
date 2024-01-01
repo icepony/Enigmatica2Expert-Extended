@@ -668,7 +668,7 @@ craft.make(<quark:slime_bucket>, ['pretty',
 });
 
 // "Purification" or [Prosperity Shard Shard] into pure shards
-scripts.do.expire_in_block.set(<tconstruct:shard>.withTag({ Material: 'ma.prosperity' }),  { 'biomesoplenty:blue_fire': <mysticalagriculture:crafting:5> });
+scripts.do.expire_in_block.set(<tconstruct:shard>.withTag({ Material: 'ma.prosperity' }),  { 'cyclicmagic:fire_dark': <mysticalagriculture:crafting:5> });
 
 // Adventure way to obtain Prudentium Essence
 scripts.do.entity_kill_entity.add('minecraft:slime', 'betteranimalsplus:feralwolf', <mysticalagriculture:crafting:2>);

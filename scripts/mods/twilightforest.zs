@@ -147,7 +147,7 @@ craft.remake(<twilightforest:ice_bomb> * 8, ['pretty',
   '◊': <ore:gemPearl>, // Shulker Pearl
 });
 
-scripts.do.expire_in_block.set(<ore:gemPearl>, { 'cyclicmagic:fire_frost': <twilightforest:ice_bomb> });
+scripts.do.expire_in_block.set(<ore:gemPearl>, { 'cyclicmagic:fire_dark': <twilightforest:ice_bomb> });
 
 // [Sickly Twilight Oak Sapling]*8 from [Moonworm][+1]
 craft.reshapeless(<twilightforest:twilight_sapling> * 8, 'SM', {
