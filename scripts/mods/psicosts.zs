@@ -22,8 +22,8 @@ val ingrs = {
   'S': <cyclicmagic:soulstone>,     // Soulstone
   'M': <tconstruct:materials:19>,   // Mending Moss
   '-': <ore:ingotEnergeticAlloy>,   // Energetic Alloy Ingot
-  '_': <ore:ingotCrystallineAlloy>, // Crystalline Alloy Ingot
-  '▬': <ore:ingotWyvernMetal>,      // Wyvern Metal Ingot
+  '_': <ore:ingotVibrantAlloy>,
+  '▬': <ore:ingotCrystallineAlloy>,
   '◊': <ore:gemPsi>,                // Psigem
   '=': <ore:ingotPsi>,              // Psimetal Ingot
   '≡': <ore:ingotEbonyPsi>,         // Ebony Psimetal Ingot
