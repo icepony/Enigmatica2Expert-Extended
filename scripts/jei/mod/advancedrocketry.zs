@@ -28,7 +28,7 @@ function addAsteroid(name as string, values as double[], output as IItemStack[])
 
 /* Inject_js(
 xml_to_js(loadText('config/advRocketry/asteroidConfig.xml')).elements[0].elements.map(
-  (asteroid) => [`addAsteroid("${asteroid.attributes.name}"`, `, [${
+  (asteroid) => [`addAsteroid('${asteroid.attributes.name}'`, `, [${
       Object.entries(asteroid.attributes)
       .filter(([key]) => key !== 'name')
       .sort(([a],[b])=>a.length-b.length)
@@ -37,7 +37,7 @@ xml_to_js(loadText('config/advRocketry/asteroidConfig.xml')).elements[0].element
       asteroid.elements
       .map((item) => `<${
         String(item.attributes.itemStack).replace(' ', ':')
-      }>.withLore(["§8Chance: §b${item.attributes.chance}"])`)
+      }>.withLore(['§8Chance: §b${item.attributes.chance}'])`)
       .join(', ')}]);`]
 )) */
 addAsteroid('Iridium Enriched asteroid'     , [25, 100, 0.8, 3, 10, 0.2], [<minecraft:iron_ore>.withLore(['§8Chance: §b25']), <thermalfoundation:ore:7>.withLore(['§8Chance: §b25'])]);

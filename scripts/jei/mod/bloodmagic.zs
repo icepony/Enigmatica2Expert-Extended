@@ -23,7 +23,7 @@ glob.sync('config/bloodmagic/meteors/*.json')
   ...f.components.map(c=>c.oreName.substring(3))
   ]
   .map(s=>`'${s}'`).join(', ')
-).map(s=>`[${s}],`).sort(naturalSort).join('\n')
+).map(s=>`  [${s}],`).sort(naturalSort).join('\n')
 ) */
   ['jaopca:block_blockdilithium', '0', '2000000', 'EndDilithium', 'ClathrateRedstone', 'ClathrateEnder', 'ClathrateGlowstone'],
   ['minecraft:emerald_block', '0', '1400000', 'Lapis', 'Diamond', 'Coal', 'Ruby', 'Peridot', 'Topaz', 'Tanzanite', 'Malachite', 'Sapphire', 'Amber', 'Apatite', 'CertusQuartz', 'Cinnabar', 'Prosperity', 'QuartzBlack'],

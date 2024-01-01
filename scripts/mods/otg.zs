@@ -6,11 +6,11 @@ static biomeIdToName as string[][int] = {
 Object.entries(_.groupBy(getCSV('config/tellme/biomes-csv.csv'), 'ID'))
     .map(([id, list]) => {
       return [id, list
-        .map(v => [v['Registry name'], `"${v['Biome name']}"`])
+        .map(v => [v['Registry name'], `'${v['Biome name']}'`])
         .filter(([reg]) => reg.startsWith('openterraingenerator:'))]
     })
     .filter(ID => ID[1].length)
-    .map(([id, names]) => [`  ${id}:`, `[${names.map(([,b]) => b).join(', ')}],`])
+    .map(([id, names]) => [`  ${id.padEnd(3)}:`, ` [${names.map(([,b]) => b).join(', ')}],`])
 ) */
   0  : ['AlienOcean', 'Ocean', 'OceanKelpForest'],
   1  : ['AlienRiver', 'BirchGrove', 'BirchGroveBorder', 'Plains', 'TemperatePlains', 'Tropical Savanna Edge', 'Void'],

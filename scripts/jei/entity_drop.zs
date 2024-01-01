@@ -212,7 +212,7 @@ return list.map(({ groups: { id, display, items } }) => {
   add(<entity:quark:crab>                             , [<harvestcraft:crabrawitem> * 199, <quark:crab_shell> * 20]); // Crab
   add(<entity:quark:dweller>                          , [<minecraft:carrot> * 1, <minecraft:iron_ingot> * 1, <minecraft:potato> * 1, <minecraft:rotten_flesh> * 94, <minecraft:skull:2> * 3, <thaumcraft:brain> * 11]); // Dweller
   add(<entity:quark:foxhound>                         , [<minecraft:blaze_powder> * 148, <minecraft:leather> * 141, <thermalfoundation:material:771> * 20]); // Foxhound
-  add(<entity:quark:frog>                             , [<quark:cooked_frog_leg> * 100]); // Frog
+  add(<entity:quark:frog>                             , [<quark:frog_leg> * 100]); // Frog
   add(<entity:quark:pirate>                           , [<minecraft:arrow> * 106, <minecraft:bone> * 105, <minecraft:iron_sword> * 9, <minecraft:skull> * 3, <quark:pirate_hat> * 10]); // Pirate
   add(<entity:quark:stoneling>                        , [<minecraft:coal> * 324, <minecraft:diamond_horse_armor> * 2, <minecraft:diamond> * 3, <minecraft:dye:4> * 54, <minecraft:emerald> * 14, <minecraft:ender_pearl> * 8, <minecraft:gold_ingot> * 38, <minecraft:golden_apple> * 2, <minecraft:golden_horse_armor> * 1, <minecraft:iron_ingot> * 71, <minecraft:redstone> * 113, <minecraft:saddle> * 2, <minecraft:skull:2> * 10, <minecraft:skull:4> * 13, <quark:cooked_frog_leg> * 1, <quark:diamond_heart> * 21]); // Stoneling
   add(<entity:quark:wraith>                           , [<minecraft:skull:2> * 2, <quark:soul_bead> * 100, <thaumcraft:brain> * 11, <thermalfoundation:material:771> * 18]); // Wraith

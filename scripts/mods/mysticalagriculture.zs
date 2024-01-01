@@ -460,7 +460,7 @@ getByOredict('treeSapling')
 )
 .filter(o=>o.commandString != '<biomesoplenty:sapling_1:7>')
 .map((o,i)=>[
-  `recipes.addShaped("sap #${i}", `,
+  `recipes.addShaped('sap #${i}', `,
   o.commandString,
   '* ', o.owner==='biomesoplenty'?10:6,
   `, uniq_${
@@ -492,7 +492,7 @@ recipes.addShaped('sap #20', <biomesoplenty:sapling_2:5>     * 10, uniq_biomesop
 recipes.addShaped('sap #21', <biomesoplenty:sapling_2:6>     * 10, uniq_biomesoplenty.next());
 recipes.addShaped('sap #22', <biomesoplenty:sapling_2:7>     * 10, uniq_biomesoplenty.next());
 recipes.addShaped('sap #23', <extrautils2:ironwood_sapling>  * 6 , uniq_other.next());
-recipes.addShaped('sap #24', <extrautils2:ironwood_sapling:1> * 6 , uniq_other.next());
+recipes.addShaped('sap #24', <extrautils2:ironwood_sapling:1>* 6 , uniq_other.next());
 recipes.addShaped('sap #25', <ic2:sapling>                   * 6 , uniq_other.next());
 recipes.addShaped('sap #26', <quark:variant_sapling>         * 6 , uniq_other.next());
 recipes.addShaped('sap #27', <quark:variant_sapling:1>       * 6 , uniq_other.next());

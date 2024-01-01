@@ -2,7 +2,7 @@
 
 import crafttweaker.item.IItemStack;
 
-scripts.lib.loot.tweak('quark:entities/crab', 'legs', 'quark:crab_leg', <quark:crab_leg>, [<harvestcraft:crabrawitem>], [1,3]);
+scripts.lib.loot.tweak('quark:entities/crab', 'legs', 'quark:crab_leg', null, [<harvestcraft:crabrawitem>], [1,3]);
 
 // Quark Polished Marble
 val marble = <ore:stoneMarble>;
@@ -36,8 +36,8 @@ recipes.addShaped('oredicted_slab', <quark:stone_basalt_slab> * 6, [[<ore:stoneB
 
 // Fix recipes (each original quark recipe use basalt bricks for some reason)
 for i in [
-/* Inject_js(getSubMetas('quark:world_stone_carved').join(', ')) */
-  0, 1, 2, 3, 4, 5, 6, 7,
+/* Inject_js(getSubMetas('quark:world_stone_carved').map(s=>s+',').join(' ')) */
+0, 1, 2, 3, 4, 5, 6, 7,
 /**/
 ] as int[] {
   if (i == 3) continue;

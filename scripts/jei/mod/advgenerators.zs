@@ -180,7 +180,7 @@ return cfg
   const item = OD ? _item : _item.toLowerCase()
   const it = `<${OD ? 'ore:'+item : bl(item)}>`
   return ((OD ? !isODExist(item) : !isItemExist(bl(item)))?'// ':'') +
-    `addSyngas(${it}, ${val ?? (OD ? `getOreDictBurnTime("${item}")` : it+'.burnTime')});`
+    `addSyngas(${it}, ${val ?? (OD ? `getOreDictBurnTime('${item}')` : it+'.burnTime')});`
 })
 } */
 addSyngas(<contenttweaker:saturated_phosphor>, 450000);
@@ -210,7 +210,7 @@ addSyngas(<ore:plankWood>, 400);
 addSyngas(<ore:blockCoal>, getOreDictBurnTime('blockCoal'));
 addSyngas(<minecraft:coal:0>, <minecraft:coal:0>.burnTime);
 addSyngas(<minecraft:coal:1>, <minecraft:coal:1>.burnTime);
-// addSyngas(<ore:itemCharcoalSugar>, getOreDictBurnTime("itemCharcoalSugar"));
+// addSyngas(<ore:itemCharcoalSugar>, getOreDictBurnTime('itemCharcoalSugar'));
 // addSyngas(<minefactoryreloaded:brick:15>, <minefactoryreloaded:brick:15>.burnTime);
 addSyngas(<ore:woodRubber>, getOreDictBurnTime('woodRubber'));
 addSyngas(<forestry:bituminous_peat>, <forestry:bituminous_peat>.burnTime);

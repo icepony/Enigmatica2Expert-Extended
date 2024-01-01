@@ -165,7 +165,7 @@ mods.extendedcrafting.TableCrafting.addShapeless(
     utils.tryCatch('rats:raw_rat'                    , <minecraft:beef>),
     utils.tryCatch('tconevo:edible'                  , <minecraft:beef>),
     utils.tryCatch('twilightforest:raw_meef'         , <minecraft:beef>),
-    /**/
+/**/
   ]);
 
 // Neutronium Ingot

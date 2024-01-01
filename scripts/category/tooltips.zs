@@ -14,10 +14,15 @@ for item in [
 [...loadText('resources/autotooltips/lang/en_us.lang')
 .matchAll(/^tooltips\.lang\.(?<id>[^=]+)=(.*)$/gm)]
 .filter(([,,text])=>!text.includes('%s'))
-.map(([, id]) => `  <${id}>,`)
+.map(([, id]) => {
+  const [reg, ...nbt] = id.split(':{')
+  const tag = nbt.join(':{')
+  return `  <${reg}>${!tag ? '' : '.withTag({'+tag+')'},`
+})
 .sort(naturalSort)
 ) */
   <actuallyadditions:block_farmer>,
+  <advancedrocketry:liquidtank>,
   <ae2stuff:visualiser>,
   <bibliocraft:fancysign>,
   <bloodmagic:blood_rune:1>,
@@ -47,6 +52,20 @@ for item in [
   <minecraft:torch>,
   <oeintegration:excavatemodifier>,
   <openblocks:tank>,
+  <openblocks:trophy>.withTag({entity_id:'minecraft:blaze'}),
+  <openblocks:trophy>.withTag({entity_id:'minecraft:cave_spider'}),
+  <openblocks:trophy>.withTag({entity_id:'minecraft:cow'}),
+  <openblocks:trophy>.withTag({entity_id:'minecraft:creeper'}),
+  <openblocks:trophy>.withTag({entity_id:'minecraft:elder_guardian'}),
+  <openblocks:trophy>.withTag({entity_id:'minecraft:enderman'}),
+  <openblocks:trophy>.withTag({entity_id:'minecraft:evocation_illager'}),
+  <openblocks:trophy>.withTag({entity_id:'minecraft:llama'}),
+  <openblocks:trophy>.withTag({entity_id:'minecraft:mooshroom'}),
+  <openblocks:trophy>.withTag({entity_id:'minecraft:shulker'}),
+  <openblocks:trophy>.withTag({entity_id:'minecraft:skeleton'}),
+  <openblocks:trophy>.withTag({entity_id:'minecraft:snowman'}),
+  <openblocks:trophy>.withTag({entity_id:'minecraft:squid'}),
+  <openblocks:trophy>.withTag({entity_id:'minecraft:witch'}),
   <opencomputers:print>,
   <quark:archaeologist_hat>,
   <quark:chain>,
@@ -171,7 +190,7 @@ desc.both(<mekanism:tierinstaller:3>, 'mekanism_t_ultimate');
 
 desc.tooltip(<industrialforegoing:mob_relocator>, 'industrialforegoing:mob_relocator',
 /* Inject_js(config('config/industrialforegoing.cfg').machines.mob_relocator.damage) */
-  100
+100
 /**/
 );
 
@@ -293,20 +312,6 @@ desc.tooltip(<travelersbackpack:travelers_backpack:63>, 'backpack.Sunflower');
 desc.tooltip(<travelersbackpack:travelers_backpack:73>, 'backpack.Wolf');
 desc.tooltip(<ic2:jetpack_electric:26>, 'sponge.removed_with');
 desc.tooltip(<minecraft:sponge>, 'sponge.can_remove');
-
-desc.tooltip(<openblocks:trophy>.withTag({ entity_id: 'minecraft:blaze' }), 'trophy.blaze');
-desc.tooltip(<openblocks:trophy>.withTag({ entity_id: 'minecraft:cave_spider' }), 'trophy.cave_spider');
-desc.tooltip(<openblocks:trophy>.withTag({ entity_id: 'minecraft:creeper' }), 'trophy.creeper');
-desc.tooltip(<openblocks:trophy>.withTag({ entity_id: 'minecraft:enderman' }), 'trophy.enderman');
-desc.tooltip(<openblocks:trophy>.withTag({ entity_id: 'minecraft:evocation_illager' }), 'trophy.evocation_illager');
-desc.tooltip(<openblocks:trophy>.withTag({ entity_id: 'minecraft:elder_guardian' }), 'trophy.elder_guardian');
-desc.tooltip(<openblocks:trophy>.withTag({ entity_id: 'minecraft:llama' }), 'trophy.llama');
-desc.tooltip(<openblocks:trophy>.withTag({ entity_id: 'minecraft:mooshroom' }), 'trophy.mooshroom');
-desc.tooltip(<openblocks:trophy>.withTag({ entity_id: 'minecraft:shulker' }), 'trophy.shulker');
-desc.tooltip(<openblocks:trophy>.withTag({ entity_id: 'minecraft:skeleton' }), 'trophy.skeleton');
-desc.tooltip(<openblocks:trophy>.withTag({ entity_id: 'minecraft:snowman' }), 'trophy.snowman');
-desc.tooltip(<openblocks:trophy>.withTag({ entity_id: 'minecraft:squid' }), 'trophy.squid');
-desc.tooltip(<openblocks:trophy>.withTag({ entity_id: 'minecraft:witch' }), 'trophy.witch');
 
 desc.both(<netherendingores:ore_nether_modded_1:7>, 'worldgen.disabled_use_sub');
 desc.both(<netherendingores:ore_end_modded_1:7>, 'worldgen.disabled_use_sub');

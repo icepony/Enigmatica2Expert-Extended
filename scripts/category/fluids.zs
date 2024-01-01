@@ -225,32 +225,32 @@ val combustionGenerator_fuels = {
 .sort((a,b)=>b[2]*b[3] - a[2]*a[3])
 .map(function ([_, fluid, pertick, ticks]) {
   return this.some(({Name})=>Name===fluid)
-  ? `  ${fluid.padEnd(17)}: [${pertick.padStart(3)}, ${ticks.padStart(5)}],`
+  ? `  ${fluid.padEnd(16)}: [${pertick.padStart(3)}, ${ticks.padStart(5)}],`
   : undefined
 }, getCSV('config/tellme/fluids-csv.csv'))
 .filter(l=>l)
 ) */
-  fire_water      : [80, 15000],
-  refined_fuel    : [200, 6000],
-  rocket_fuel     : [160, 7000],
-  gasoline        : [160, 6000],
-  empoweredoil    : [140, 6000],
-  refined_biofuel : [125, 6000],
-  biodiesel       : [125, 6000],
-  diesel          : [125, 6000],
-  biofuel         : [125, 6000],
-  refined_oil     : [100, 6000],
-  crystaloil      : [80, 6000],
-  hootch          : [60, 6000],
-  crude_oil       : [50, 6000],
-  tree_oil        : [50, 6000],
-  oil             : [50, 6000],
-  ic2biogas       : [50, 6000],
-  coal            : [40, 6000],
-  refinedcanolaoil: [40, 6000],
-  creosote        : [20, 6000],
-  seed_oil        : [20, 6000],
-  canolaoil       : [20, 6000],
+  fire_water      : [ 80, 15000],
+  refined_fuel    : [200,  6000],
+  rocket_fuel     : [160,  7000],
+  gasoline        : [160,  6000],
+  empoweredoil    : [140,  6000],
+  refined_biofuel : [125,  6000],
+  biodiesel       : [125,  6000],
+  diesel          : [125,  6000],
+  biofuel         : [125,  6000],
+  refined_oil     : [100,  6000],
+  crystaloil      : [ 80,  6000],
+  hootch          : [ 60,  6000],
+  crude_oil       : [ 50,  6000],
+  tree_oil        : [ 50,  6000],
+  oil             : [ 50,  6000],
+  ic2biogas       : [ 50,  6000],
+  coal            : [ 40,  6000],
+  refinedcanolaoil: [ 40,  6000],
+  creosote        : [ 20,  6000],
+  seed_oil        : [ 20,  6000],
+  canolaoil       : [ 20,  6000],
 /**/
 } as int[][string];
 

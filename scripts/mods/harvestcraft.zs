@@ -37,18 +37,17 @@ const result = Object.entries(itemsMap)
     }`
   })
 
-const cfgPath = 'config/UniversalTweaks.cfg'
-const cfg = config(cfgPath)
+const cfgPath = 'config/Universal Tweaks - Tweaks.cfg'
 
 const union = [...new Set(config(cfgPath)
-  .general['tweaks: items']['Custom Rarity']
+  .general.items['Custom Rarity']
   .concat(result))]
 
 injectInFile(cfgPath, 'S:"Custom Rarity" <', '         >',
   `\n${union.map(s => `            ${s}`).join('\n')}\n`
 )
 
-return `# Managed ${result.length} Harvestcraft items`
+return `// Managed ${result.length} Harvestcraft items`
 } */
 // Managed 638 Harvestcraft items
 /**/

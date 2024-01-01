@@ -21,7 +21,7 @@ Object.entries(
   [fluid, ((20*60) / burnTime * 1000) | 0, powerPreTick * burnTime]
 ).sort((a, b) => b[2] - a[2])
 .map(([fluid, consumption, manaTotal]) =>
-  `  ${("'"+fluid+"'").padEnd(15)+':'}[${consumption}, ${manaTotal}],`
+  `  ${("'"+fluid+"'").padEnd(14)+':'} [${consumption}, ${manaTotal}],`
 )) */
   'perfect_fuel': [12, 768000000],
   'rocketfuel'  : [500, 480000],

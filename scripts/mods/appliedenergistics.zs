@@ -394,7 +394,6 @@ regrind(<biomesoplenty:gem_ore:3>               , <jaopca:item_dusttopaz>, true,
 regrind(<biomesoplenty:gem_ore:4>               , <jaopca:item_dusttanzanite>, true, <jaopca:item_dusttinyquartz>);
 regrind(<biomesoplenty:gem_ore:5>               , <jaopca:item_dustmalachite>, true, <ic2:dust:22>);
 regrind(<biomesoplenty:gem_ore:6>               , <jaopca:item_dustsapphire>, true, <jaopca:item_dusttinyaluminium>);
-regrind(<biomesoplenty:gem_ore:7>               , <jaopca:item_dustamber>, true, <rustic:dust_tiny_iron>);
 regrind(<biomesoplenty:gem_ore>                 , <jaopca:item_dustamethyst>, true, <jaopca:item_dusttinycobalt>);
 regrind(<draconicevolution:draconium_ore>       , <draconicevolution:draconium_dust>, true, <jaopca:item_dusttinyardite>);
 regrind(<endreborn:block_wolframium_ore>        , <qmd:dust>, true, <jaopca:item_dusttinymagnesium>);
@@ -418,6 +417,7 @@ regrind(<nuclearcraft:ore:7>                    , <nuclearcraft:dust:7>, true, <
 regrind(<rftools:dimensional_shard_ore>         , <jaopca:item_dustdimensionalshard>, true, <jaopca:item_dusttinyastralstarmetal>);
 regrind(<tconstruct:ore:1>                      , <enderio:item_material:30>, true, <jaopca:item_dusttinyosmium>);
 regrind(<tconstruct:ore>                        , <enderio:item_material:31>, true, <rustic:dust_tiny_iron>);
+regrind(<thaumcraft:ore_amber>                  , <jaopca:item_dustamber>, true, <rustic:dust_tiny_iron>);
 regrind(<thermalfoundation:ore:1>               , <thermalfoundation:material:65>, true, <rustic:dust_tiny_iron>);
 regrind(<thermalfoundation:ore:2>               , <thermalfoundation:material:66>, true);
 regrind(<thermalfoundation:ore:3>               , <thermalfoundation:material:67>, true);

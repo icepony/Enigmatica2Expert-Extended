@@ -41,7 +41,7 @@ loadText('config/thaumtweaks_pech_trades.txt')
   .replace(/\s+\]\],\n/, '') + // Excess at start
 '\n]]'
 ) */
-  MINER: [[
+MINER: [[
     <extrautils2:compressedcobblestone:2>,
     <jaopca:item_clustertungsten>,
     <thaumcraft:cluster:4>,
@@ -77,7 +77,7 @@ loadText('config/thaumtweaks_pech_trades.txt')
     <astralsorcery:blockgemcrystals:3>,
     <astralsorcery:blockgemcrystals:4>,
   ]],
-  MAGE: [[
+MAGE: [[
     <thaumcraft:phial:1>.withTag(sNBT('{Aspects: [{amount: 10, key: "aer"}]}')),
     <thaumcraft:phial:1>.withTag(sNBT('{Aspects: [{amount: 10, key: "terra"}]}')),
     <thaumcraft:phial:1>.withTag(sNBT('{Aspects: [{amount: 10, key: "ignis"}]}')),
@@ -113,7 +113,7 @@ loadText('config/thaumtweaks_pech_trades.txt')
     <randomthings:beans:2>,
     <mysticalagriculture:growth_accelerator>,
   ]],
-  ARCHER: [[
+ARCHER: [[
     <forestry:hunter_bag>,
     <cyclicmagic:water_candle>,
     <rats:rat_arrow>,
@@ -149,7 +149,7 @@ loadText('config/thaumtweaks_pech_trades.txt')
     <minecraft:enchanted_book>.withTag(sNBT('{StoredEnchantments: [{lvl: 4s, id: 49}]}')),
     <minecraft:enchanted_book>.withTag(sNBT('{StoredEnchantments: [{lvl: 6s, id: 65}]}')),
   ]],
-  COMMON: [[
+COMMON: [[
     <mysticalagriculture:inferium_apple> * 2,
     <extrautils2:magicapple> * 4,
     <thaumcraft:curio:1> * 4,
@@ -184,7 +184,7 @@ loadText('config/thaumtweaks_pech_trades.txt')
     <thaumadditions:zeith_fur> * 3,
     <minecraft:totem_of_undying> * 3,
     <thaumadditions:jar_eldritch>,
-  ]],
+]]
 /**/
 } as IItemStack[][][string];
 

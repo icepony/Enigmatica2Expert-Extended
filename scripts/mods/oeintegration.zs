@@ -42,8 +42,8 @@ return overridn
     `, 'excavate.overrides', ${
       Object.entries(o)
       .filter(([k, v]) => k !== 'itemID' && def[k] != v)
-      .map(([k, v]) => `'§7'+desc.local('${k}')+': §6${v}'`)
-      .join(` +' '+ `) || "''"
+      .map(([k, v]) => `'§7' + desc.local('${k}') + ': §6${v}'`)
+      .join(` + ' ' + `) || "''"
       });`,
   ])
 } */

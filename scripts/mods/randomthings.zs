@@ -27,7 +27,7 @@ setBlockDrops('randomthings:beanpod', [
 {stack: 'minecraft:emerald', luck: [0,2]},
 {stack: 'randomthings:beans', luck: [4,8]},
 ])
-return '# Done!'
+return '// Done!'
 } */
 // Done!
 /**/

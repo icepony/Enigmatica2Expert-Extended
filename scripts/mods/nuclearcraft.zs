@@ -774,17 +774,17 @@ val pileIngrs = {
   )
 } */
 val piles = [
-  <nuclearcraft:voltaic_pile_basic>.withTag({ energyStorage: { capacity: 1600000 as long, energy: 0 as long } }),
-  <nuclearcraft:voltaic_pile_advanced>.withTag({ energyStorage: { capacity: 6400000 as long, energy: 0 as long } }),
-  <nuclearcraft:voltaic_pile_du>.withTag({ energyStorage: { capacity: 25600000 as long, energy: 0 as long } }),
-  <nuclearcraft:voltaic_pile_elite>.withTag({ energyStorage: { capacity: 102400000 as long, energy: 0 as long } }),
+  <nuclearcraft:voltaic_pile_basic>.withTag({ energyStorage: {capacity:   1600000 as long, energy: 0 as long } }),
+  <nuclearcraft:voltaic_pile_advanced>.withTag({ energyStorage: {capacity:   6400000 as long, energy: 0 as long } }),
+  <nuclearcraft:voltaic_pile_du>.withTag({ energyStorage: {capacity:  25600000 as long, energy: 0 as long } }),
+  <nuclearcraft:voltaic_pile_elite>.withTag({ energyStorage: {capacity: 102400000 as long, energy: 0 as long } }),
 ] as IItemStack[];
 
 val batteries = [
-  <nuclearcraft:lithium_ion_battery_basic>.withTag({ energyStorage: { capacity: 32000000 as long, energy: 0 as long } }),
-  <nuclearcraft:lithium_ion_battery_advanced>.withTag({ energyStorage: { capacity: 128000000 as long, energy: 0 as long } }),
-  <nuclearcraft:lithium_ion_battery_du>.withTag({ energyStorage: { capacity: 512000000 as long, energy: 0 as long } }),
-  <nuclearcraft:lithium_ion_battery_elite>.withTag({ energyStorage: { capacity: 2048000000 as long, energy: 0 as long } }),
+  <nuclearcraft:lithium_ion_battery_basic>.withTag({ energyStorage: {capacity:  32000000 as long, energy: 0 as long } }),
+  <nuclearcraft:lithium_ion_battery_advanced>.withTag({ energyStorage: {capacity: 128000000 as long, energy: 0 as long } }),
+  <nuclearcraft:lithium_ion_battery_du>.withTag({ energyStorage: {capacity: 512000000 as long, energy: 0 as long } }),
+  <nuclearcraft:lithium_ion_battery_elite>.withTag({ energyStorage: {capacity:2048000000 as long, energy: 0 as long } }),
 ] as IItemStack[];
 /**/
 

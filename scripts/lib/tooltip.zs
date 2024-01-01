@@ -86,7 +86,14 @@ zenClass Descriptor {
 	/*
 		Other functions
 	*/
-	function autoLang(item as IItemStack) as string { return item.commandString.replaceAll("[<>]", ""); }
+	function autoLang(item as IItemStack) as string {
+		val id = item.commandString.replaceAll('<|>.*', '');
+		val nbt = !item.hasTag ? ''
+			: ':'~item.tag.toNBTString().replaceAll('"', "'");
+		print('autolocalizing: '~id~nbt);
+		return id ~ nbt;
+	}
+
 	function local(lang as string) as string { return game.localize(prefix(lang)); }
 	function local(item as IItemStack) as string { return local(autoLang(item)); }
 	function prefix(lang as string) as string { return langPrefix ~ lang; }
