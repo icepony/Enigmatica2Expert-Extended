@@ -13,16 +13,8 @@
 		}]
 	}],
 	rewards: [{
-		uid: "a37e10c9",
+		uid: "9afb3887",
 		type: "item",
-		item: {
-			id: "minecraft:enchanted_book",
-			tag: {
-				StoredEnchantments: [{
-					id: 39,
-					lvl: 5s
-				}]
-			}
-		}
+		item: "extendedcrafting:material 1 8"
 	}]
 }
