@@ -10,25 +10,6 @@ import mods.botaniatweaks.AgglomerationMultiblock;
 import mods.botaniatweaks.AgglomerationRecipe;
 import mods.ctutils.utils.Math.abs;
 
-function getPoop(ore_name as string) as IItemStack {
-  for poop in scripts.mods.ratsprocessing.listRatPoop {
-    val oreBlockDef = D(poop.tag).getString('OreItem.id', '');
-
-    if (oreBlockDef != '') {
-      val oreBlockDmg = D(poop.tag).getInt('OreItem.Damage', 0);
-      val oreBlockItem = itemUtils.getItem(oreBlockDef, oreBlockDmg);
-
-      if (!isNull(oreBlockItem)) {
-        for ore in oreBlockItem.ores {
-          if (ore.name.matches('ore[A-Z]\\w+') && ore.name.substring(3) == ore_name)
-            return poop;
-        }
-      }
-    }
-  }
-  return null;
-}
-
 static aspects as CTAspectStack[][] = [
   [<aspect:aer>, <aspect:terra>,
     <aspect:ignis>, <aspect:aqua>,
@@ -133,12 +114,11 @@ function magicProcessing(nativeClusterOreEntry as IOreDictEntry, ore_name as str
   prevItem = currItem;
   currItem = processList[k]; k += 1;
   if (isNull(currItem)) return; // 🛑
-  val poop = getPoop(ore_name); if (isNull(poop)) return; // 🛑
   furnace.addRecipe(dirtyGem * 10, currItem);
 
   // mods.bloodmagic.AlchemyTable.addRecipe(IItemStack output, IItemStack[] inputs, int syphon, int ticks, int minTier);
   mods.bloodmagic.AlchemyTable.addRecipe(currItem, [
-    prevItem, <bloodmagic:component:8>, <bloodmagic:cutting_fluid>, prevItem, poop, poop,
+    prevItem, <bloodmagic:component:8>, <bloodmagic:cutting_fluid>, prevItem,
   ], 20000, 400, 4);
 
   // ██╗  ██╗
