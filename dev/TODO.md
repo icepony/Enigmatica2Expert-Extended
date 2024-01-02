@@ -2,46 +2,22 @@
 
 🚧✅❌ List of priorities:
 
-- [ ] ✏️ Burn singularity should be exponential `1.25`
-- [ ] ✏️ Star Of Psi should be obtainable in no-power run
-- [ ] 📖 Explain BoP gems sources in empowered quests
-- [ ] 🐛 fix Ie Bug If Removing Entities When Crash On Mount
-- [ ] ✏️ Remove Mysical Flesh
-- [ ] 🐛 Fix AdvRock planet jump causing death https://discord.com/channels/911676461050642432/959878900278784030/1179686673525776474
-- [ ] ✏️ Remove usage of different fires from Cyclic
-- [ ] ✏️ Remove fast processing with Crushing block since its too fast
-- [ ] ✏️ fix 59% on Bees Output
+- [ ] 🐛 fix when unlog on entity causing it to dissapear
+- [ ] 🤖 Nanomachines still lost on servers
+- [ ] ✏️ add 3D Prints More Usage (maybe for QMD)
+- [ ] ✏️ Shift+Right click clear NC Multitool info
+- [ ] ✏️ Buff advanced generators
+- [ ] 📖 remove Eldritch Knowledge Rewards since newbies eat them all at once
 - [ ] ✏️ adv Rock Crystals Beneficate In QMD
-- [ ] default Nanomachines Configs
-- [ ] fix Trophy Crafting Not Working
-- [ ] distructive Stabilisation Ring Not Working
-- [ ] induction Smelter Add Energetic Alloy Recipe
-- [ ] add Drawer Key To Morphing Tool
-- [ ] fix I C2 Chainsaw Cant Cut T Ctrees
-- [ ] fix Filament N B T
-- [ ] fix Ic2 Fertilizer Recipe
-- [ ] remove Grid Hotkey
-- [ ] rolling Machine Remove False Quest Description
-- [ ] install Threadwatcher
-- [ ] remove Enchantments From Quests Rewards
-- [ ] check If Compressed Cobble In E I O Smeltery Smeltable
-- [ ] sulfuric acid recipe recipe in Chemical Reactor should also accept Mek's liquid
-- [ ] Disable Quark's buttons for Modular Storage
-- [ ] Remove cheap fluiduct recipe
-- [ ] Install https://www.curseforge.com/minecraft/mc-mods/omniwand
-- [ ] Replace BetterP2P to https://www.curseforge.com/minecraft/mc-mods/enhancedp2p
-- [ ] Replace Villager Market to https://www.curseforge.com/minecraft/mc-mods/villager-market-nbt-fix
-- [ ] find Option That Fix E U Ring On Change Dimension
-- [ ] fix Dispenser Quest Typo C
-- [ ] fix Tropical Gardens Spawn In Frozen Ocean
-- [ ] check Shark Bite Glitching
-- [ ] add3 D Prints More Usage
-- [ ] remove Melodic Alloy Reservoir From I O
-- [ ] remove All Modded Books From Rewards
-- [ ] Remove useless ores from T6 ore miner
-- [ ] disable Bogo Shuffle
-- [ ] `betteranimalsplus_goose` replace for world tick instead of entity tick
-- [ ] Remove Armor Curve
+- [ ] ✏️ steel And Up Turbine Upgrades Not Working
+- [ ] 📖 note That Mithminite Armor Simplify Bores
+- [ ] ⚡ Replace `utils.rh` with subcommands to improve performance. `IItemStack.ores` is slow.
+- [ ] ✏️ QMDs `Sodium Chlorde` and `Sodium Nitrate` unify
+- [ ] 🌍 Fix Biome Tweaker block replacementsafter AdvRock filler block change
+- [ ] 🖼️ Optimize Bibliocraft textures
+- [ ] ✏️ addVoidBeaconTab
+- [ ] addSkyblockTpMechanic
+- [ ] Fix Myrmexes have double JER trade tabs
 
 ```sh
 /bcore_ticktime
@@ -95,6 +71,8 @@ minecraft:sponge
 
 Planned non-urgent changes, or just good ideas:
 
+- [ ] 🌎 fix Tropical Gardens Spawn In OTG Frozen Ocean
+- [ ] ✏️ Star Of Psi should be obtainable in no-power run
 - [ ] 🕸 Create issues about IC2 Reactor in compact machine and cables disconnection
 - [ ] 🐛 If Conarm armor have huge durability (>65,000), when it get damage over 50% its repairing to 100% and become unbreakable. On some cases it void armor from inventory instead
 - [ ] 🟢 Return `TwilightTweaks` when fixed https://github.com/LoliKingdom/Bansoukou/issues/5
@@ -103,12 +81,9 @@ Planned non-urgent changes, or just good ideas:
 - [ ] 📖 sort TC book By Material Power, need fix: https://github.com/Project-RT/RandomTweaker/issues/67
 - [ ] ✏️ Stackable Fluid Containers duped when crafting with fluid. Waiting for fix: https://github.com/CraftTweaker/CraftTweaker/issues/1692
 - [ ] ✏️ Apiarist Villagert should sell Combs cor Cacoa. Seems like its impossible to remove Apiarist trades with `vtt` mod
-- [ ] 🟢 add `Fairy Lights` when released https://github.com/ACGaming/UniversalTweaks/pull/291
 - [ ] 📖 Improve messages "Player Obtained [...]" with `tellraw` command. Cant untill fix `/tellraw` for Discord
 - [ ] ✏️ `Harbinger Cube` must spawn with strong Iron/Diamond skin effects and as Blight
 - [ ] 🌍 fix Mercury Have Water
-- [ ] 🟢 Unify QMD cobalt dust after QMD update
-- [ ] 🟢 Install `Fairy Lights` when fixed: https://github.com/ACGaming/UniversalTweaks/issues/289
 - [ ] ✏️ Add more seeds compat for Graden Cloche https://github.com/michelegargiulo/ZenCloche/wiki
 - [ ] 🔨 fix Invincible Combo `Strength Of Will` + `Runic Shield`
 - [ ] ✏️ Fix Health boost potion recipe (one from gold ingot)
@@ -220,7 +195,7 @@ Planned non-urgent changes, or just good ideas:
 - [ ] ✏️ Add craft mechanic - Mud Ball hit something (called "humilate")
 - [ ] 📖 Add little tiles fancy chest with lot of space
 - [ ] ✏️ Add mobs in Mek's gear
-- [ ] 🌍 AdvRock geodes should contain modded ores
+- [ ] 🌍 AdvRock geodes should contain modded ores (use <geodeOres> XML tag)
 - [ ] ✏️ Nerf IO spike metals (carapace with `Bedrock cobblestone` + `Bedrock Ore` inside instead of pure blocks)
 - [ ] ✏️ Remove Cyclic's machines completely because they are laggy
 - [ ] ✏️ Add craft `Rat hole` + `Salis Mundus` -> `Something`
@@ -291,6 +266,8 @@ Planned non-urgent changes, or just good ideas:
 
 ## Unable to
 
+- ✏️ fix 59% on Bees Output such as Combs. Impossible since this how Mod Tweaker adds them. Some recipes have -1% some dont.
+- ❌ fix I C2 Chainsaw Cant Cut T Ctrees. Impossible to change mining level with `MaterialChanger`
 - ✏️ Add Rubber Wood in Resin Funnel - **Resin Funnel** recipes cant be changed
 - 🔄 Blacklist Bedrock Ore for ![](https://git.io/Jz9q9 "Mining Laser")
 - Buff Giant Sword

@@ -111,7 +111,7 @@ export function getSubMetas(definition) {
 }
 
 /**
- * @typedef {Object} TMStack Tell Me Item Stack
+ * @typedef {object} TMStack Tell Me Item Stack
  * @property {string} mod 'Astral Sorcery'
  * @property {string} id 'minecraft:stone'
  * @property {number} itemId 1234
@@ -296,7 +296,7 @@ export function prefferedModSort(a, b) {
 }
 
 /**
- * @typedef {Object} FurnaceRecipe
+ * @typedef {object} FurnaceRecipe
  * @property {string} output
  * @property {string} out_id
  * @property {string} out_meta
@@ -462,7 +462,7 @@ export function getSomething(ore_base, kindKeys, blacklist = []) {
 }
 
 /**
- * @typedef {Object} TableRecipe
+ * @typedef {object} TableRecipe
  * @property {string} shape
  * @property {string} name
  * @property {string} output

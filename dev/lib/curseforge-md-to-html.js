@@ -64,11 +64,11 @@ for (const o of ['d', 'h']) {
 
 // Find all <code> elements and replace new lines with <br>
 // Curse Forge cant in newlines inside code blocks
-$('code').each(function () {
-  const codeContent = $(this).html()
-  if (!codeContent) return
-  $(this).html(codeContent.replace(/\n/g, '<br/>\n').replace(/ /g, ' '))
-})
+// $('code').each(function () {
+//   const codeContent = $(this).html()
+//   if (!codeContent) return
+//   $(this).html(codeContent.replace(/\n/g, '<br/>\n').replace(/ /g, ' '))
+// })
 
 // 𝑷𝒓𝒆𝒇𝒊𝒙𝒆𝒔
 $('body').prepend(

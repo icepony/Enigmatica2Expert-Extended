@@ -125,7 +125,7 @@ export async function init(h = defaultHelper) {
   glob.sync('scripts/**/*.zs').forEach((filePath) => {
     const zsfileContent = loadText(filePath)
     for (const match of zsfileContent.matchAll(
-      /\/\*\s*Inject_js((\(|\{)[\s\S\n\r]*?(\)|\}))\s*\*\//gm
+      /\/\*\s*Inject_js((\(|\{)[\s\S\n\r]*?(\)|\})\s*)\*\//gm
     )) {
       const lineNumber = zsfileContent
         .substring(0, match.index)

@@ -7,7 +7,7 @@
 
 // @ts-check
 
-import { spawn } from 'node:child_process'
+import { execSync, spawnSync } from 'node:child_process'
 import { existsSync, mkdirSync, renameSync, statSync, unlinkSync } from 'node:fs'
 import { dirname, join, parse } from 'node:path'
 import process from 'node:process'
@@ -17,13 +17,11 @@ import AdmZip from 'adm-zip'
 import fast_glob from 'fast-glob'
 import levenshtein from 'fast-levenshtein'
 import _ from 'lodash'
-import replace_in_file from 'replace-in-file'
 
 import {
   defaultHelper,
   execSyncInherit,
   loadJson,
-  loadText,
   saveObjAsJson,
   saveText,
 } from '../lib/utils.js'
@@ -35,37 +33,9 @@ function relative(relPath = './') {
 export async function init(h = defaultHelper) {
   await h.begin('Fixing Bansoukou files')
   renameFoldersToActualMods()
-  injectJsonAdvancementFixes()
   await showDiffs(h)
 
   return h.result('Done!')
-}
-
-function injectJsonAdvancementFixes() {
-  const json = loadJson(relative('bansoukou.json'))
-  for (const [glob, data] of Object.entries(json)) {
-    const filePaths = fast_glob.sync(`mods/${glob}`, { dot: true })
-    for (const [archievePath, advJson] of Object.entries(data))
-      saveFile(/** @type {string} */ (filePaths.pop()), archievePath, advJson)
-  }
-  return Object.entries(json).length
-}
-
-/**
- * @param {string} jarPath
- * @param {string} archievePath
- * @param {object} advJson
- */
-function saveFile(jarPath, archievePath, advJson) {
-  const savePath = join('bansoukou/', getJarName(jarPath), archievePath)
-  const oldText = loadText(savePath)
-  const newText = JSON.stringify(advJson, null, 2)
-  if (oldText.length === newText.length && oldText === newText) return
-  saveText(newText, savePath)
-}
-
-function getJarName(jarPath) {
-  return jarPath.match(/^mods\/(.+)\.(jar|disabled)$/)[1]
 }
 
 /**
@@ -133,9 +103,10 @@ async function showDiffs(/** @type {typeof defaultHelper} */ h) {
       ? `mods/${folder}.disabled`
       : `mods/${folder}.jar`
     if (!existsSync(jarPath)) continue
-    const jarStat = getStat(jarPath)
+    const jarStat = statToString(statSync(jarPath))
     const isJarCached = caches[jarPath] === jarStat
     caches[jarPath] = jarStat
+    const unpatchedModPath = join('~bansoukou_unpatched/', folder)
 
     /** @type {AdmZip |  undefined} */
     let zip
@@ -146,14 +117,20 @@ async function showDiffs(/** @type {typeof defaultHelper} */ h) {
       cwd: `bansoukou/${folder}`,
     })
 
+    // Generate Diffs
     changedFiles.forEach((changedFile) => {
-      const unpatchedModPath = join('~bansoukou_unpatched/', folder)
-      const unpatchedFilePath = join(unpatchedModPath, changedFile)
       const patchedFilePath = join('bansoukou', folder, changedFile)
+      const diffOut = `${join(diffStore, folder, changedFile)}.diff`
+      const diffExist = existsSync(diffOut)
+      const stat = statSync(patchedFilePath)
+
+      // If file just supposed to be removed no diffs will be generated
+      if (!stat.size) return
 
       // Skip if both files unchanged
-      const fileStat = getStat(patchedFilePath)
-      if (isJarCached && caches[patchedFilePath] === fileStat) return
+      // Never skip if diff file not exist
+      const fileStat = statToString(stat)
+      if (diffExist && isJarCached && caches[patchedFilePath] === fileStat) return
 
       // Extract unpatched file
       try {
@@ -164,24 +141,34 @@ async function showDiffs(/** @type {typeof defaultHelper} */ h) {
         return
       }
 
+      const unpatchedFilePath = join(unpatchedModPath, changedFile)
       const { oldF, newF } = decompile(unpatchedFilePath, patchedFilePath)
 
-      const diffOut = `${join(diffStore, folder, changedFile)}.diff`
       mkdirSync(dirname(diffOut), { recursive: true })
 
+      const gitDiffCommand = 'git diff --no-index'
+        + ` "${oldF}"`
+        + ` "${newF}"`
+      // process.stdout.write(`> ${chalk.cyan(gitDiffCommand)}\n`)
+
+      /** @type {string|undefined} */
+      let diffResult
       try {
-        execSyncInherit(
-          'git diff --no-index'
-          + ` "${oldF}"`
-          + ` "${newF}"`
-          + ` > "${diffOut}"`
-        )
+        diffResult = execSync(gitDiffCommand).toString().trim()
       }
       catch (error) {
         // Diff will end with error each time
+        diffResult = error?.stdout.toString().trim()
       }
+
+      // Remove diff technical info
+      if (diffResult) {
+        diffResult = diffResult.replace(/^diff --git .+\nindex .+\n(--- .+\n\+\+\+ .+|Binary files .+)\n/m, '')
+        saveText(diffResult, diffOut)
+      }
+
       try {
-        spawn(
+        spawnSync(
           'code --diff'
           + ` "${oldF}"`
           + ` "${newF}"`
@@ -189,13 +176,6 @@ async function showDiffs(/** @type {typeof defaultHelper} */ h) {
         )
       }
       catch (error) {}
-
-      // Remove diff technical info
-      replace_in_file.sync({
-        files: diffOut,
-        from : /^diff --git .+\nindex .+\n--- .+\n\+\+\+ .+\n/m,
-        to   : '',
-      })
 
       // Remove tempFiles
       if (unpatchedFilePath !== oldF) unlinkSync(oldF)
@@ -241,12 +221,10 @@ function decompile(unpatchedFilePath, patchedFilePath) {
 }
 
 /**
- *
- * @param {string} filePath
  * @returns {string}
+ * @param {import("fs").Stats} stat
  */
-function getStat(filePath) {
-  const stat = statSync(filePath)
+function statToString(stat) {
   return `${stat.mtime.toUTCString()} - ${stat.size}`
 }
 

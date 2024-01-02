@@ -4,12 +4,29 @@ java.io.FileNotFoundException: twilighttweaks-1.12.2-v1.0.2.jar.jar does not exi
 	at zone.rong.bansoukou.BansoukouCoreMod.<init>(BansoukouCoreMod.java:61) [_bansoukou-4.3.1.jar:1]
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_352]
   [...]
-[main/WARN] [mixin]: Reference map 'mixins.zenrecipereloading.refmap.json' for mixins.zenrecipereloading.json could not be read. If this is a development environment you can ignore this message
 [main/WARN] [mixin]: Error loading class: journeymap/client/task/multi/TaskController (java.lang.ClassNotFoundException: The specified class 'journeymap.client.task.multi.TaskController' was not found)
 [main/WARN] [mixin]: @Mixin target journeymap.client.task.multi.TaskController was not found mixins.sledgehammer.journeymap.json:client.task.multi.TaskControllerMixin from mod unknown-owner
 [main/WARN] [mixin]: Error loading class: journeymap/client/JourneymapClient (java.lang.ClassNotFoundException: The specified class 'journeymap.client.JourneymapClient' was not found)
 [main/WARN] [mixin]: @Mixin target journeymap.client.JourneymapClient was not found mixins.sledgehammer.journeymap.json:client.JourneymapClientMixin from mod unknown-owner
-[Client thread/WARN] [mixin]: @Inject(@At("INVOKE")) Shift.BY=2 on mixins.zenutils.vanilla.json:MixinForgeHooks from mod unknown-owner::handler$zzc000$passPlayer exceeds the maximum allowed value: 0. Increase the value of maxShiftBy to suppress this warning.
+[Client thread/WARN] [mixin]: @Inject(@At("INVOKE")) Shift.BY=2 on mixins.zenutils.vanilla.json:MixinForgeHooks from mod unknown-owner::handler$xxx000$passPlayer exceeds the maximum allowed value: 0. Increase the value of maxShiftBy to suppress this warning.
+[Client thread/ERROR] [FML]: Unable to read a class file correctly
+java.lang.IllegalArgumentException: null
+	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:185) ~[asm-debug-all-5.2.jar:5.2]
+	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:168) ~[asm-debug-all-5.2.jar:5.2]
+	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
+  [...]
+[Client thread/ERROR] [FML]: There was a problem reading the entry module-info.class in the jar E:\mc\packs\E2E-E\minecraft\mods\PrecisionMining-1.12.2-5.2.jar - probably a corrupt zip
+net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
+
+	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
+	at net.minecraftforge.fml.common.discovery.JarDiscoverer.redirect$xxx000$redirectNewASMModParser(JarDiscoverer.java:561) ~[JarDiscoverer.class:?]
+  [...]
+[Client thread/WARN] [FML]: Zip file PrecisionMining-1.12.2-5.2.jar failed to read properly, it will be ignored
+net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
+
+	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
+	at net.minecraftforge.fml.common.discovery.JarDiscoverer.redirect$xxx000$redirectNewASMModParser(JarDiscoverer.java:561) ~[JarDiscoverer.class:?]
+  [...]
 [Client thread/ERROR] [FML]: Unable to read a class file correctly
 java.lang.IllegalArgumentException: null
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:185) ~[asm-debug-all-5.2.jar:5.2]
@@ -20,13 +37,13 @@ java.lang.IllegalArgumentException: null
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
-	at net.minecraftforge.fml.common.discovery.JarDiscoverer.redirect$zln000$redirectNewASMModParser(JarDiscoverer.java:561) ~[JarDiscoverer.class:?]
+	at net.minecraftforge.fml.common.discovery.JarDiscoverer.redirect$xxx000$redirectNewASMModParser(JarDiscoverer.java:561) ~[JarDiscoverer.class:?]
   [...]
 [Client thread/WARN] [FML]: Zip file ProbeZS-1.17.8.jar failed to read properly, it will be ignored
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
-	at net.minecraftforge.fml.common.discovery.JarDiscoverer.redirect$zln000$redirectNewASMModParser(JarDiscoverer.java:561) ~[JarDiscoverer.class:?]
+	at net.minecraftforge.fml.common.discovery.JarDiscoverer.redirect$xxx000$redirectNewASMModParser(JarDiscoverer.java:561) ~[JarDiscoverer.class:?]
   [...]
 [Client thread/ERROR] [FML]: Unable to read a class file correctly
 java.lang.IllegalArgumentException: null
@@ -38,25 +55,31 @@ java.lang.IllegalArgumentException: null
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
-	at net.minecraftforge.fml.common.discovery.JarDiscoverer.redirect$zln000$redirectNewASMModParser(JarDiscoverer.java:561) ~[JarDiscoverer.class:?]
+	at net.minecraftforge.fml.common.discovery.JarDiscoverer.redirect$xxx000$redirectNewASMModParser(JarDiscoverer.java:561) ~[JarDiscoverer.class:?]
   [...]
 [Client thread/WARN] [FML]: Zip file UniversalTweaks-1.12.2-1.9.0.jar failed to read properly, it will be ignored
 net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
 
 	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
-	at net.minecraftforge.fml.common.discovery.JarDiscoverer.redirect$zln000$redirectNewASMModParser(JarDiscoverer.java:561) ~[JarDiscoverer.class:?]
+	at net.minecraftforge.fml.common.discovery.JarDiscoverer.redirect$xxx000$redirectNewASMModParser(JarDiscoverer.java:561) ~[JarDiscoverer.class:?]
   [...]
-[Client thread/WARN] [mixin]: Reference map 'mixins.zenrecipereloading.refmap.json' for mixins.zenrecipereloading.crafttweaker.json could not be read. If this is a development environment you can ignore this message
-[Client thread/WARN] [mixin]: Reference map 'mixins.zenrecipereloading.refmap.json' for mixins.zenrecipereloading.jei.json could not be read. If this is a development environment you can ignore this message
-[Client thread/WARN] [mixin]: Reference map 'mixins.zenrecipereloading.refmap.json' for mixins.zenrecipereloading.modtweaker.json could not be read. If this is a development environment you can ignore this message
-[Client thread/WARN] [mixin]: Reference map 'mixins.zenrecipereloading.refmap.json' for mixins.zenrecipereloading.forestry.json could not be read. If this is a development environment you can ignore this message
-[Client thread/WARN] [mixin]: Reference map 'mixins.zenrecipereloading.refmap.json' for mixins.zenrecipereloading.avaritia.json could not be read. If this is a development environment you can ignore this message
-[Client thread/WARN] [mixin]: Reference map 'mixins.zenrecipereloading.refmap.json' for mixins.zenrecipereloading.tconstruct.json could not be read. If this is a development environment you can ignore this message
 [Client thread/WARN] [mixin]: @Mixin target com.feed_the_beast.mods.ftbultimine.client.FTBUltimineClient was not found mixins.randomtweaker.mods.json:ftbultimine.MixinFTBUltimineClient from mod unknown-owner
-[Client thread/WARN] [FML]: * A broken ore dictionary registration with name hammerIron has occurred. It adds an item (type: class endreborn.mod.items.ItemHammer) which is currently unknown to the game registry. This dictionary item can only support a single value when registered with ores like this, and NO I am not going to turn this spam off. Just register your ore dictionary entries after the GameRegistry.
-TO USERS: YES this is a BUG in the mod End: Reborn report it to them!
-[Client thread/WARN] [FML]: * A broken ore dictionary registration with name hammer has occurred. It adds an item (type: class endreborn.mod.items.ItemHammer) which is currently unknown to the game registry. This dictionary item can only support a single value when registered with ores like this, and NO I am not going to turn this spam off. Just register your ore dictionary entries after the GameRegistry.
-TO USERS: YES this is a BUG in the mod End: Reborn report it to them!
+[Client thread/WARN] [net.minecraft.network.datasync.EntityDataManager]: defineId called for: class net.minecraft.entity.item.EntityMinecartFurnace from class com.lothrazar.cyclicmagic.item.minecart.EntityGoldFurnaceMinecart
+[Client thread/WARN] [net.minecraft.network.datasync.EntityDataManager]: defineId called for: class net.minecraft.entity.monster.EntitySlime from class teamroots.emberroot.entity.slime.EntityRainbowSlime
+[Client thread/WARN] [net.minecraft.network.datasync.EntityDataManager]: defineId called for: class malte0811.industrialwires.entities.EntityBrokenPart from class malte0811.industrialwires.IndustrialWires
+[Client thread/WARN] [FML]: * Invalid registration attempt for an Ore Dictionary item with name etLaserLens has occurred. The registration has been denied to prevent crashes. The mod responsible for the registration needs to correct this.
+[Client thread/WARN] [net.minecraft.world.storage.loot.LootTableManager]: Couldn't find resource table betteranimalsplus:pheasant
+[Client thread/WARN] [net.minecraft.world.storage.loot.LootTableManager]: Couldn't find resource table betteranimalsplus:turkey
+[Client thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager]: Couldn't load loot table iceandfire:ice_dragon_female_cave from jar:file:/E:/mc/packs/E2E-E/minecraft/mods/iceandfire-1.9.1-1.12.2-patched.jar!/assets/iceandfire/loot_tables/ice_dragon_female_cave.json
+com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown string 'iceandfire:armor_silver_metal_chestplate'
+	at net.minecraft.util.JsonUtils.getItem(SourceFile:124) ~[rc.class:?]
+	at net.minecraft.util.JsonUtils.getItem(SourceFile:135) ~[rc.class:?]
+	at net.minecraft.world.storage.loot.LootEntryItem.deserialize(LootEntryItem.java:83) ~[bfp.class:?]
+  [...]
+[Client thread/WARN] [net.minecraft.network.datasync.EntityDataManager]: defineId called for: class com.github.alexthe666.iceandfire.entity.EntityDreadThrall from class com.github.alexthe666.iceandfire.entity.EntityDreadKnight
+[Client thread/WARN] [net.minecraft.world.storage.loot.functions.Smelt]: Couldn't smelt 1xitem.frog_leg@0 because there is no smelting recipe
+[Client thread/WARN] [net.minecraft.network.datasync.EntityDataManager]: defineId called for: class com.github.alexthe666.rats.server.entity.EntityFeralRatlantean from class com.github.alexthe666.rats.server.entity.EntityNeoRatlantean
+[Client thread/WARN] [mixin]: @Final field field_73244_f:Lit/unimi/dsi/fastutil/longs/Long2ObjectMap; in mixins.vintagefix.json:chunk_access.ChunkProviderServerMixin from mod unknown-owner should be final
 [Client thread/ERROR] [Had Enough Items]: An interpreter is already registered for this item: exnihilocreatio.modules.tconstruct.tools.SledgeHammer@xxxxxxxx
 java.lang.IllegalArgumentException: null
 	at mezz.jei.runtime.SubtypeRegistry.registerSubtypeInterpreter(SubtypeRegistry.java:46) [SubtypeRegistry.class:?]
@@ -69,14 +92,12 @@ java.lang.IllegalArgumentException: null
 	at exnihilocreatio.compatibility.jei.CompatJEI.registerItemSubtypes(CompatJEI.java:55) [CompatJEI.class:?]
 	at mezz.jei.api.IModPlugin.registerSubtypes(IModPlugin.java:29) [IModPlugin.class:?]
   [...]
-[Client thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager]: Couldn't load loot table endreborn:inject/chests/village_blacksmith from jar:file:/E:/mc/packs/E2E-E/minecraft/mods/EndReborn%20%5B0.3.9%5D-patched.jar!/assets/endreborn/loot_tables/inject/chests/village_blacksmith.json
-com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown string 'endreborn:tool_shovel_wolframium'
-	at net.minecraft.util.JsonUtils.getItem(SourceFile:124) ~[rc.class:?]
-	at net.minecraft.util.JsonUtils.getItem(SourceFile:135) ~[rc.class:?]
-	at net.minecraft.world.storage.loot.LootEntryItem.deserialize(LootEntryItem.java:83) ~[bfp.class:?]
+[Client thread/ERROR] [infinityeditor]: Failed to load void for: tconstruct.broadsword.nbt
+net.minecraft.util.ReportedException: Loading NBT data
+	at net.minecraft.nbt.NBTTagCompound.readNBT(NBTTagCompound.java:506) ~[fy.class:?]
+	at net.minecraft.nbt.NBTTagCompound.read(NBTTagCompound.java:58) ~[fy.class:?]
+	at net.minecraft.nbt.NBTTagCompound.readNBT(NBTTagCompound.java:497) ~[fy.class:?]
   [...]
-[Client thread/WARN] [net.minecraft.world.storage.loot.LootTableManager]: Couldn't find resource table betteranimalsplus:pheasant
-[Client thread/WARN] [net.minecraft.world.storage.loot.LootTableManager]: Couldn't find resource table betteranimalsplus:turkey
 [Client thread/ERROR] [Had Enough Items]: Failed to register mod plugin: class com.blakebr0.mysticalagriculture.compat.jei.CompatJEI
 java.lang.IllegalArgumentException: Invalid ingredient found. Parameter Name: ingredient Ingredient Info: 1xtile.air@0 minecraft:air
 	at mezz.jei.util.ErrorUtil.checkIsValidIngredient(ErrorUtil.java:248) ~[ErrorUtil.class:?]
@@ -85,12 +106,14 @@ java.lang.IllegalArgumentException: Invalid ingredient found. Parameter Name: in
   [...]
 [Client thread/ERROR] [Had Enough Items]: A Recipe Handler has already been registered for 'jeresources.plant': jeresources.entry.PlantEntry
 [Client thread/ERROR] [Had Enough Items]: A Recipe Handler has already been registered for 'jeresources.villager': jeresources.entry.VillagerEntry
-[Client thread/ERROR] [Had Enough Items]: A Recipe Handler has already been registered for this recipe class: com.github.alexthe666.iceandfire.recipe.DragonForgeRecipe
-[Client thread/ERROR] [Had Enough Items]: A Recipe Handler has already been registered for this recipe class: com.github.alexthe666.rats.server.recipes.SharedRecipe
-[Client thread/ERROR] [Had Enough Items]: A Recipe Handler has already been registered for this recipe class: com.github.alexthe666.rats.server.recipes.SharedRecipe
-[Client thread/ERROR] [Chisel]: Exception getting recipe wrappers:
-java.lang.NullPointerException: null
-	at team.chisel.common.integration.jei.ChiselRecipeRegistryPlugin.getRecipeWrappers(ChiselRecipeRegistryPlugin.java:73) ~[ChiselRecipeRegistryPlugin.class:?]
-	at mezz.jei.recipes.RecipeRegistryPluginSafeWrapper.lambda$getRecipeWrappers$1(RecipeRegistryPluginSafeWrapper.java:30) ~[RecipeRegistryPluginSafeWrapper.class:?]
-	at mezz.jei.recipes.RecipeRegistryPluginSafeWrapper.callPluginMethod(RecipeRegistryPluginSafeWrapper.java:42) [RecipeRegistryPluginSafeWrapper.class:?]
+[Client thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager]: Couldn't load loot table twilightforest:structures/graveyard/rare from jar:file:/E:/mc/packs/E2E-E/minecraft/mods/twilightforest-1.12.2-3.11.1021-universal.jar!/assets/twilightforest/loot_tables/structures/graveyard/rare.json
+com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown string 'twilightforest:golden_apple'
+	at net.minecraft.util.JsonUtils.getItem(SourceFile:124) ~[rc.class:?]
+	at net.minecraft.util.JsonUtils.getItem(SourceFile:135) ~[rc.class:?]
+	at net.minecraft.world.storage.loot.LootEntryItem.deserialize(LootEntryItem.java:83) ~[bfp.class:?]
   [...]
+[Client thread/ERROR] [Had Enough Items]: A Recipe Handler has already been registered for this recipe class: com.github.alexthe666.rats.server.recipes.SharedRecipe
+[Client thread/ERROR] [Had Enough Items]: A Recipe Handler has already been registered for this recipe class: com.github.alexthe666.rats.server.recipes.SharedRecipe
+[Client thread/ERROR] [Had Enough Items]: A Recipe Handler has already been registered for this recipe class: com.github.alexthe666.iceandfire.recipe.DragonForgeRecipe
+[Client thread/WARN] [Caliper]: Unable to parse event listener: ASM: ClientProxyComponent(commonProxyComponent=org.cyclops.integrateddynamics.proxy.CommonProxy@xxxxxxxx, iconProvider=org.cyclops.cyclopscore.client.icon.IconProvider@xxxxxxxx, tileEntityRenderers={}) onTextureStitch(Lnet/minecraftforge/client/event/TextureStitchEvent$Pre;)V.
+[Client thread/WARN] [LoliASM]: Clearing LoliVertexDataPool

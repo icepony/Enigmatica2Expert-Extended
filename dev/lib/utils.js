@@ -22,7 +22,6 @@ import chalk from 'chalk'
 import { parse as csvParseSync } from 'csv-parse/sync'
 import fast_glob from 'fast-glob'
 import pdf from 'pdf-parse/lib/pdf-parse.js'
-import replace_in_file from 'replace-in-file'
 
 function relative(relPath = './') {
   return fileURLToPath(new URL(relPath, import.meta.url))
@@ -117,14 +116,16 @@ export const config = createHashedFunction((filename) => {
     .replace(/^~.*$/gm, '') // config version
     .replace(/^ *(\w+|"[^"]+") *{ *$/gm, '$1:{') // class name
     .replace(/^ *} *$/gm, '},') // end of block
+    // Encapsulate values with ""
     .replace(
       /^ *\w:(?:([\w.]+)|"([^"]+)") *= *(.*)$/gm,
-      (match, p1, p2, p3) => {
-        return (isNaN(p3) && !(p3 === 'true' || p3 === 'false')) || p3 === ''
-          ? `"${p1 || p2}":"${p3.replace(/"/g, '\\"')}",`
-          : `"${p1 || p2}":${p3.replace(/"/g, '\\"')},`
+      (match, key1, key2, val) => {
+        return (isNaN(val) && !(val === 'true' || val === 'false')) || val === ''
+          ? `"${key1 || key2}":"${val.replace(/"/g, '\\"')}",`
+          : `"${key1 || key2}":${val.replace(/"/g, '\\"')},`
       }
-    ) // simple values
+    )
+    // Replace lists
     .replace(
       /^ *\w:(?:([\w.]+)|"([^"]+)") *< *[\s\S\n\r]*?> *$/gm,
       (match, p1, p2) => {
@@ -136,7 +137,8 @@ export const config = createHashedFunction((filename) => {
           '],',
         ].join('\n')
       }
-    ) // Replace lists
+    )
+    .replace(/\s*\n\s*\n+/gm, '\n') // remove residue newlines after converting
 
   /**
    * @type {object}
@@ -150,7 +152,7 @@ export const config = createHashedFunction((filename) => {
     console.error(error)
     writeFileSync(
       relative(`_error_${subFileName(filename)}.js`),
-      `return{${cfg.replace(/\n\n+/gm, '\n')}}`
+      `return{${cfg}}`
     )
   }
 
@@ -204,27 +206,39 @@ export function transpose(a) {
  * @param {string} text
  */
 export function injectInFile(filename, keyStart, keyFinish, text) {
-  /** @type {import('replace-in-file').ReplaceResult[]} */
-  let replaceResult
-  try {
-    const from = new RegExp(
-        `${escapeRegex(keyStart)}[\\s\\S\n\r]*?${escapeRegex(keyFinish)}`,
-        'm'
-    )
-    replaceResult = replace_in_file.sync({
-      files       : filename,
-      from,
-      to          : keyStart + text + keyFinish,
-      countMatches: true,
-    })
-  }
-  catch (error) {
-    console.error('Inject Error occurred:', error)
-    return []
-  }
+  return Array.isArray(filename)
+    ? filename.map(f => injectInSingleFile(f, keyStart, keyFinish, text))
+    : [injectInSingleFile(filename, keyStart, keyFinish, text)]
+}
 
-  if (!replaceResult?.[0]?.numMatches) throw new Error(`Cant replace in file ${filename}`)
-  return replaceResult
+/**
+ * @param {string} filename
+ * @param {string} keyStart
+ * @param {string} keyFinish
+ * @param {string} text
+ */
+function injectInSingleFile(filename, keyStart, keyFinish, text) {
+  const oldText = loadText(filename)
+  const result = {
+    file           : filename,
+    hasChanged     : true,
+    numMatches     : 0,
+    numReplacements: 0,
+  }
+  const newText = oldText.replace(new RegExp(
+    `${escapeRegex(keyStart)}[\\s\\S\n\r]*?${escapeRegex(keyFinish)}`,
+    'm'
+  ), () => {
+    result.numMatches++
+    result.numReplacements++
+    return keyStart + text + keyFinish
+  })
+
+  if (!result.numMatches) throw new Error(`Cant replace in file ${filename}`)
+
+  saveText(newText, filename)
+
+  return result
 }
 
 export function write(...args) {

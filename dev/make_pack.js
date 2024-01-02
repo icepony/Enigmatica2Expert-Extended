@@ -23,7 +23,6 @@ import fs_extra from 'fs-extra'
 import git_describe from 'git-describe'
 import ignore from 'ignore'
 import logUpdate from 'log-update'
-import numeral from 'numeral'
 import open from 'open'
 import replace_in_file from 'replace-in-file'
 import simpleGit from 'simple-git'
@@ -35,7 +34,6 @@ import {
   end,
   execSyncInherit,
   loadJson,
-  loadText,
   saveObjAsJson,
   saveText,
   write,
@@ -43,7 +41,7 @@ import {
 
 const { gitDescribeSync } = git_describe
 const { terminal: term } = terminal_kit
-const { rmSync, mkdirSync, existsSync, renameSync, copySync, readFileSync, writeFileSync, lstatSync }
+const { rmSync, mkdirSync, existsSync, renameSync, readFileSync, writeFileSync, lstatSync }
   = fs_extra
 const git = simpleGit()
 
@@ -136,6 +134,8 @@ const style = {
 */
   write(`${chalk.gray('-'.repeat(20))}\n`)
 
+  let STEP = 1
+
   /**
    * Prompt user to write something and press ENTER or ESC
    * @param {string} message message to show
@@ -143,7 +143,8 @@ const style = {
    * @returns {Promise<string|undefined>} inputted string or undefined
    */
   async function enterString(message, options) {
-    term(style.trace(message.replace(/(ENTER|ESC)/g, style.info('$1'))))
+    const msg = `[${STEP++}] ${message}`
+    term(style.trace(msg.replace(/(ENTER|ESC)/g, style.info('$1'))))
     const result = await term.inputField({
       cancelable: true,
       ...(options ?? {}),
@@ -166,15 +167,13 @@ const style = {
     return true
   }
 
-  let STEP = 1
-
   if (
     await pressEnterOrEsc(
-      `[${STEP++}] Press ENTER to perform Automation. Press ESC to skip.`
+      `Press ENTER to perform Automation. Press ESC to skip.`
     )
   ) {
     doTask('🪓 Doing automation ...\n\n', () =>
-      execSyncInherit('esno mc-tools/packages/run/src/cli.ts dev/tools/mct-run.json'))
+      execSyncInherit('esno mc-tools/packages/run/src/cli.ts "dev:(.*)"'))
   }
 
   /*
@@ -186,16 +185,18 @@ const style = {
  ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚══════╝╚══════╝ ╚═════╝  ╚═════╝
 */
 
-  const oldVersion = gitDescribeSync().tag
+  const oldVersion = gitDescribeSync().tag || undefined
 
   const inputVersion = (
-    await enterString(`[${STEP++}] Enter next version and press ENTER: `, {
-      default: oldVersion || undefined,
+    await enterString(`Enter next version and press ENTER: `, {
+      default: oldVersion,
     })
   )?.trim()
   const nextVersion = inputVersion || oldVersion || 'v???'
+  const zipBaseName = `E2E-Extended-${nextVersion}`
+  const serverSetupConfig = 'server/server-setup-config.yaml'
 
-  if (await pressEnterOrEsc(`[${STEP++}] Generate Changelog? ENTER / ESC.`)) {
+  if (await pressEnterOrEsc(`Generate Changelog? ENTER / ESC.`)) {
     const latestPath = 'CHANGELOG-latest.md'
 
     // Update version in files
@@ -205,6 +206,11 @@ const style = {
       files: 'manifest.json',
       from : /(^ {2}"version"[\s\n]*:[\s\n]*")[^"]+("[\s\n]*,)/m,
       to   : `$1${nextVersion}$2`,
+    })
+    replace_in_file.sync({
+      files: serverSetupConfig,
+      from : /^( {2}modpackUrl\s*:\s*)(.+)$/m,
+      to   : `$1https://github.com/Krutoy242/Enigmatica2Expert-Extended/releases/download/${nextVersion}/${zipBaseName}.zip`,
     })
 
     // Generate changelog
@@ -217,12 +223,12 @@ const style = {
   }
 
   await pressEnterOrEsc(
-    `[${STEP++}] Clear your working tree, rebase, and press ENTER. Press ESC to skip.`,
+    `Clear your working tree, rebase, and press ENTER. Press ESC to skip.`,
     async () => (await git.status()).isClean()
   )
 
-  if (await pressEnterOrEsc(`[${STEP++}] Add tag? ENTER / ESC.`))
-    execSyncInherit(`git tag -a -f -m "Next automating release" ${nextVersion}`)
+  if (await pressEnterOrEsc(`Add tag? ENTER / ESC.`))
+    execSyncInherit(`git tag -a -f -m "Next automated release" ${nextVersion}`)
 
   /*
 ██████╗ ██████╗ ███████╗██████╗ ███████╗██████╗  █████╗ ████████╗██╗ ██████╗ ███╗   ██╗███████╗
@@ -233,14 +239,14 @@ const style = {
 ╚═╝     ╚═╝  ╚═╝╚══════╝╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝
 */
 
-  const zipPath_base = join(distrDir, `E2E-Extended-${nextVersion}`)
+  const zipPath_base = join(distrDir, zipBaseName)
   const zipPath_EN = `${zipPath_base}.zip`
   const zipPath_server = `${zipPath_base}-server.zip`
 
   const isZipsExist = !argv.dryRun && [zipPath_EN, zipPath_server].some(f => existsSync(f))
 
   let rewriteOldZipFiles = false
-  if (isZipsExist && (await pressEnterOrEsc(`[${STEP++}] Rewrite old .zip files? ENTER / ESC`))) {
+  if (isZipsExist && (await pressEnterOrEsc(`Rewrite old .zip files? ENTER / ESC`))) {
     rewriteOldZipFiles = true
     doTask(
       '🪓 Removing old zip files ... ',
@@ -325,79 +331,8 @@ const style = {
     return zipHandler
   }
 
-  /********************************************************
-
-███████╗███╗   ██╗
-██╔════╝████╗  ██║
-█████╗  ██╔██╗ ██║
-██╔══╝  ██║╚██╗██║
-███████╗██║ ╚████║
-╚══════╝╚═╝  ╚═══╝
-
-********************************************************/
   makeZips && doTask('🏴󠁧󠁢󠁥󠁮󠁧󠁿 Create EN .zip ... \n', () => withZip(zipPath_EN)('.'), tmpDir)
-
-  /********************************************************
-
-███████╗███████╗██████╗ ██╗   ██╗███████╗██████╗
-██╔════╝██╔════╝██╔══██╗██║   ██║██╔════╝██╔══██╗
-███████╗█████╗  ██████╔╝██║   ██║█████╗  ██████╔╝
-╚════██║██╔══╝  ██╔══██╗╚██╗ ██╔╝██╔══╝  ██╔══██╗
-███████║███████╗██║  ██║ ╚████╔╝ ███████╗██║  ██║
-╚══════╝╚══════╝╚═╝  ╚═╝  ╚═══╝  ╚══════╝╚═╝  ╚═╝
-
-********************************************************/
-
-  /**
-   * Patterns of files that should be removed from server
-   */
-  const serveronlyIgnore = ignore().add(loadText('dev/.serveronly.ignore'))
-
-  /** List of all server-side mod JARs, except bansoukou and devonly */
-  const serverModsList = globs(['mods/*.jar', 'mods/*/*.jar'])
-    .filter(serveronlyIgnore.createFilter()) // Ignore clientside files
-    .filter(devonlyIgnore.createFilter()) // Ignore devonly files
-    .filter(f => !f.endsWith('-patched.jar')) // Bansoukou-patched files should be handled separately
-
-  // List of mods, patched with Bansoukou, but without extension
-  // mods/betteranimalsplus-1.12.2-9.0.1
-  // mods/NuclearCraft-2.18zz-1.12.2
-  const unpatchedList = globs('mods/*-patched.jar').map(f =>
-    f.replace('-patched.jar', '')
-  )
-
-  makeZips && doTask(
-    '🪑 Removing client-only files and folders ... ',
-    () => removeFiles(getIgnoredFiles(serveronlyIgnore)),
-    tmpOverrides
-  )
-  makeZips && doTask('🪑 Add server root files ... ', () => {
-    const files = globs('*', { cwd: serverRoot })
-    files.forEach(f => copySync(join(serverRoot, f), join(tmpOverrides, f)))
-    return `added: ${files.length}`
-  })
-
-  makeZips && doTask('📥 Create server zip ... \n', () => {
-    // Add everything in overrides dir
-    const zip = withZip(zipPath_server)
-    zip('.')
-
-    // Add mods
-    write('\n Add server mods\n')
-    process.chdir(mcClientPath)
-    zip(serverModsList)
-
-    // Add Unpatched by Bansoukou mods
-    write('\n Add & Rename Bansoukou-unpatched mods\n')
-    const disabledList = unpatchedList.map(f => `${f}.disabled`)
-    const renameList = unpatchedList.flatMap(f => [
-      `${f}.disabled`,
-      `${f}.jar`,
-    ])
-    process.chdir(mcClientPath)
-    zip(disabledList)
-    zip(renameList, 'rn')
-  }, tmpOverrides)
+  makeZips && doTask('📥 Create server zip ... \n', () => withZip(zipPath_server)('.'), serverRoot)
 
   /*
 ███████╗███████╗████████╗██████╗
@@ -411,45 +346,29 @@ const style = {
   /**
    * @type {{ dir:string, label:string, config: {[key:string]:string} }[]}
    */
-  const sftpConfigs = globs('secrets/sftp_servers/*/sftp.json').map(
-    (filename) => {
-      const dir = parse(filename).dir
-      return {
-        dir,
-        label : /** @type {string} */ (dir.split('/').pop()),
-        config: loadJson(filename),
-      }
+  const sftpConfigs = globs('secrets/sftp_servers/*/sftp.json').map((filename) => {
+    const dir = parse(filename).dir
+    return {
+      dir,
+      label : /** @type {string} */ (dir.split('/').pop()),
+      config: loadJson(filename),
     }
-  )
+  })
 
   // Relative to overrides
   const serverAllOverrides = globs('./*', { cwd: tmpOverrides })
 
-  // Relative paths of dirs like
-  // - bansoukou
-  // - config
+  // Relative paths of dirs like [bansoukou, config, ...]
   const serverRemoveDirs = serverAllOverrides
     .filter(f => lstatSync(join(tmpOverrides, f)).isDirectory())
     .concat('mods')
 
-  /** @type {import('boxen').Options} */
-  const defBoxStyle = {
-    borderStyle: 'round',
-    borderColor: '#22577a',
-    width      : 50,
-    padding    : { left: 1, right: 1 },
-  }
-
   for (const conf of sftpConfigs) {
     logUpdate.done()
 
-    if (
-      !(await pressEnterOrEsc(
-        `[${STEP++}] To upload SFTP ${style.string(
-          conf.label
-        )} press ENTER. Press ESC to skip.`
-      ))
-    )
+    if (!(await pressEnterOrEsc(
+        `To upload SFTP ${style.string(conf.label)} press ENTER. Press ESC to skip.`
+    )))
       continue
 
     const sftp = new Client()
@@ -459,8 +378,11 @@ const style = {
         boxen(
           args.map((v, i) => Object.values(style)[i](String(v))).join(' '),
           {
-            ...defBoxStyle,
-            title: style.info(conf.label),
+            borderStyle: 'round',
+            borderColor: '#22577a',
+            width      : 50,
+            padding    : { left: 1, right: 1 },
+            title      : style.info(conf.label),
           }
         )
       )
@@ -486,46 +408,19 @@ const style = {
       })
     )
 
-    const zipName = parse(zipPath_server).base
-    updateBox('Copy server pack')
-    const bytes = (/** @type {number} */ v) => numeral(v).format('0.0b')
-    let step = 0
-    await sftp.fastPut(zipPath_server, zipName, {
-      step: (total_transferred, chunk, total) => {
-        if (step++ % 10 !== 0) return
-        updateBox(
-          'Copy server pack',
-          bytes(total_transferred),
-          '/',
-          bytes(total)
-        )
-      },
-    })
-
-    await pressEnterOrEsc(
-      `Go to SFTP server, Unpack ${style.log(
-        zipName
-      )} and press ENTER to override`
-    )
+    updateBox(`Copy ${serverSetupConfig}`)
+    await sftp.fastPut(serverSetupConfig, serverSetupConfig)
 
     updateBox('Change and copy server overrides')
-    const configPath = join(
-      conf.dir,
-      'overrides/config/mc2discord.toml'
-    )
-
-    saveText(
-      loadText(configPath).replace(
-        /(start\s*=\s*")[^"]+"/,
-        `$1\`\`\`diff\\n+ Server Started! +\\n     ${nextVersion}\\n\`\`\`"`
-      ),
-      configPath
-    )
+    replace_in_file.sync({
+      files: join(conf.dir, 'overrides/config/mc2discord.toml'),
+      from : /(start\s*=\s*")[^"]+"/,
+      to   : `$1\`\`\`diff\\n+ Server Started! +\\n     ${nextVersion}\\n\`\`\`"`,
+    })
 
     let fileCounter = 0
     sftp.on('upload', () => updateBox('Copy overrides', ++fileCounter))
-    const allOverridesDir = join(conf.dir, 'overrides')
-    await sftp.uploadDir(allOverridesDir, './')
+    await sftp.uploadDir(join(conf.dir, 'overrides'), './')
 
     await sftp.end()
   }
@@ -539,11 +434,11 @@ const style = {
   ╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝╚═╝  ╚═╝╚══════╝╚══════╝
   */
 
-  if (await pressEnterOrEsc(`[${STEP++}] Push tag? ENTER / ESC`))
+  if (await pressEnterOrEsc(`Push tag? ENTER / ESC`))
     execSyncInherit('git push --follow-tags')
 
   const inputTitle = await enterString(
-    `[${STEP++}] Enter release title and press ENTER. Press ESC to skip release: `
+    `Enter release title and press ENTER. Press ESC to skip release: `
   )
 
   if (inputTitle !== undefined) {

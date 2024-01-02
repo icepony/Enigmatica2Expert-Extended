@@ -9,6 +9,8 @@
 
 // @ts-check
 
+import process from 'node:process'
+
 import { getPurged, getSubMetas } from '../lib/tellme.js'
 import {
   config,
@@ -30,9 +32,10 @@ export async function init(h = defaultHelper) {
   /** @type {string[]} */
   const pure = []
 
-  /** @type {Set<string>} */
-  const removedMods = new Set()
   const modList = getCSV('config/tellme/mod-list-csv.csv')
+
+  const itemsCsv = getCSV('config/tellme/items-csv.csv')
+  const definitions = Object.fromEntries(itemsCsv.map(o => [o['Registry name'], true]))
 
   /** @type {string[]} */
   const merged = [...config(jeiConfigPath).advanced.itemBlacklist, ...purged]
@@ -53,17 +56,21 @@ export async function init(h = defaultHelper) {
     if (next.includes(s)) return
 
     // If wildcarded
-    const def = s.match(/([^:]+:[^:]+)[:;].+/)?.[1]
-    if (def && merged.includes(def)) return
+    /** @type {string} */
+    // @ts-expect-error undef
+    const defMetaed = s.match(/([^:]+:[^:]+)[:;].+/)?.[1]
+    if (defMetaed && merged.includes(defMetaed)) return
 
-    // If mod not exist
-    const mod = s.split(':')[0]
-    if (
-      !['fluid', 'gas'].includes(mod)
-      && !modList.some(m => m.ModID === mod)
-    ) {
-      removedMods.add(mod)
-      return
+    // If definition doesnt exist
+    const splitted = s.split(':')
+    const mod = splitted[0]
+    const def = splitted.slice(0, 2).join(':')
+    if (mod !== 'fluid' && mod !== 'gas') {
+      // If mod not exist
+      if (!modList.some(m => m.ModID === mod)) return
+
+      // Item not exist
+      if (!definitions[def]) return
     }
 
     pure.push(s)
@@ -81,8 +88,8 @@ export async function init(h = defaultHelper) {
   await h.begin(`injected :>> ${injected[0].numMatches}`)
 
   h.result(
-    `Purged / Manually Blacklisted: ${purged.length} / ${
-      pure.length - purged.length
+    `Purged / Manually Blacklisted: ${purged.size} / ${
+      pure.length - purged.size
     }`
   )
 }

@@ -65,7 +65,6 @@ export async function init(h = defaultHelper, options = argv) {
       '<integrateddynamics:squeezer>',
       '<ic2:crafting:18>',
       '<extrautils2:spike_iron>',
-      '<valkyrielib:modifier_component>',
       '<environmentaltech:lightning_rod>',
       '<environmentaltech:lightning_cont_6>',
       '<environmentaltech:lightning_cont_5>',

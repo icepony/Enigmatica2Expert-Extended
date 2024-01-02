@@ -29,6 +29,10 @@ replace:
   - from: '@[0-9a-f]{4,8}'
     to: '@xxxxxxxx'
 
+  # Remove other obfuscated names
+  - from: \$[a-z]{3}000\$
+    to: $xxx000$
+
   # Cut long stack traces
   - from: '(?<cap>(^[^\n]*$\n){5})([^\n]*\n.*)+'
     to: $<cap>  [...]
@@ -163,6 +167,10 @@ ignore:
   - WARN. .Sledgehammer.. Certificate Fingerprint Violation Detected!
   - WARN. .justenoughdimensions.. \*{15}
   - 'WARN. .justenoughdimensions.. \*{5}   '
+
+  # Better Biome Blend safe warning that Optifine not installed
+  - WARN. .mixin.. Error loading class. net/optifine/CustomColors \(java\.lang\.ClassNotFoundException. The specified class 'net\.optifine\.CustomColors' was not found\)
+  - WARN. .mixin.. @Mixin target net\.optifine\.CustomColors was not found mixins\.betterbiomeblend\.json:MixinCustomColors from mod unknown-owner
 
   # Safe WARNings, just for information
   - '\[LLibrary Core\]: Unable to call Core API! It has not been initialized yet!'
@@ -310,6 +318,9 @@ ignore:
   - ERROR. .org.embeddedt.vintagefix.dynamicresources.model.DynamicBakedModelProvider.. Error occured while loading model .+
   - ERROR. .VintageFix.. Suppressing further model loading errors for namespace .+
 
+  # Hide all texture errors since they mostly have no effect on game (textures for unused items)
+  - ERROR. .FML.TEXTURE_ERRORS..
+
   # Universal Tweaks Warns:
   - WARN. .mixin.. Method overwrite conflict for getRenderBoundingBox in mixins.bugfixes.blocks.banner.json:UTBannerBoundingBoxMixin from mod \w+, previously written by meldexun.renderlib.mixin.MixinTileEntityBanner. Skipping method.
   - WARN. .probezs.. Do not know zenscript type for
@@ -318,3 +329,13 @@ ignore:
 
   # ProbeZS but its only for Dev environment
   - probezs
+
+  # Malek's Infinity Gauntlet make this error happens, but we dont care about this IC2 loot chest additions
+  - ERROR. .net.minecraft.world.storage.loot.LootTableManager.. Couldn't load loot table (ic2:chests/|endreborn:inject)
+
+  # In E2EE i removed Lua 5.2 and 5.4 libraries from .jar
+  - WARN. .opencomputers.. Native library with name 'libjnlua5(2|4)-windows-x86_64.dll' not found.
+  - WARN. .opencomputers.. Unsupported platform, you won't be able to host games with persistent computers.
+
+  # Hide infinity itemEditor since we dont care
+  - ERROR\] \[Had Enough Items\]. Creative tab crashed while getting items\. Some items from this tab will be missing from the item list\. ruukas\.infinityeditor\.tab\.InfinityTab
