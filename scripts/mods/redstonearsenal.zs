@@ -12,5 +12,5 @@ recipes.addShapeless('Fluxed Box',
     <botania:crystalbow>.anyDamage(),
     <bloodmagic:sentient_bow>.anyDamage(),
     <thaumcraft:turret:*>,
-    <twilightforest:ender_bow:*> | <twilightforest:triple_bow:*> | <twilightforest:seeker_bow:*> | <twilightforest:ice_bow:*>,
+    <twilightforest:triple_bow:*> | <twilightforest:seeker_bow:*> | <twilightforest:ice_bow:*>,
   ]);

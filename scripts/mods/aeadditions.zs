@@ -3,9 +3,6 @@
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 
-utils.rh(<aeadditions:terminal.fluid.wireless>);
-utils.rh(<aeadditions:hardmedrive>);
-
 // [ME Gas Interface] from [Annihilation Core][+3]
 craft.remake(<aeadditions:gas_interface>, ['pretty',
   '▬ d ▬',

@@ -1135,7 +1135,6 @@ static values as int[int][string] = {
   'ic2:iridium_reflector'                      : { 0: 99229 },
   'matc:inferiumcrystal'                       : { 0: 102746 },
   'libvulpes:structuremachine'                 : { 0: 104109 },
-  'environmentaltech:photovoltaic_cell'        : { 0: 104399 },
   'libvulpes:hatch'                            : { 0: 105455, 1: 105455 },
   'libvulpes:forgepowerinput'                  : { 0: 105550 },
   'enderio:block_soul_binder'                  : { 0: 112279 },

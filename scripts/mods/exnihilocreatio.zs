@@ -84,10 +84,8 @@ utils.rh(<excompressum:wooden_crucible:2>);
 utils.rh(<excompressum:wooden_crucible:3>);
 utils.rh(<excompressum:wooden_crucible:4>);
 utils.rh(<excompressum:wooden_crucible:5>);
-
-utils.rh(<exnihilocreatio:block_crucible>);
-utils.rh(<exnihilocreatio:block_crucible_wood>);
-utils.rh(<exnihilocreatio:block_crucible:1>);
+utils.rh(<exnihilocreatio:block_crucible>, false, -1, false);
+utils.rh(<exnihilocreatio:block_crucible_wood>, false, -1, false);
 
 // Ex Nihilo Dusts
 utils.rh(<exnihilocreatio:item_ore_gold:2>);
@@ -106,6 +104,10 @@ utils.rh(<excompressum:iron_mesh>);
 recipes.remove(<exnihilocreatio:item_mesh:2>);
 recipes.remove(<exnihilocreatio:item_mesh:3>);
 recipes.remove(<exnihilocreatio:item_mesh:4>);
+
+// Remove crooks (if removed with Malek's Infinity Gauntlet they produce error)
+utils.rh(<exnihilocreatio:crook_clay_uncooked>, false, -1, false);
+furnace.remove(<exnihilocreatio:crook_clay>);
 
 // [Artificial_Hive] from [Hay_Bale][+1]
 craft.remake(<exnihilocreatio:hive>, ['pretty',

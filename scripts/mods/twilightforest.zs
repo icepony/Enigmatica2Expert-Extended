@@ -6,7 +6,20 @@ import crafttweaker.item.WeightedItemStack;
 import loottweaker.vanilla.loot.Functions;
 
 scripts.lib.loot.tweak('twilightforest:entities/helmet_crab', 'fish', 'minecraft:fish', null, [<harvestcraft:crabrawitem>], [1, 3]);
-scripts.lib.loot.tweak('twilightforest:entities/deer', 'meat', 'twilightforest:raw_venison', <twilightforest:raw_venison>, [<harvestcraft:venisonrawitem>], [1, 3]);
+scripts.lib.loot.tweak('twilightforest:entities/deer', 'meat', 'twilightforest:raw_venison', null, [<harvestcraft:venisonrawitem>], [1, 3]);
+
+val toRemove = [
+  <twilightforest:knightmetal_chestplate>,
+  <twilightforest:steeleaf_boots>,
+  <twilightforest:steeleaf_chestplate>,
+  <twilightforest:steeleaf_helmet>,
+  <twilightforest:steeleaf_leggings>,
+  <twilightforest:steeleaf_pickaxe>,
+] as IItemStack[];
+
+for item in toRemove {
+  utils.rh(item, false, -1, false);
+}
 
 // Add Little Blueprints to Aurora caches
 loottweaker.LootTweaker
@@ -380,7 +393,6 @@ val spawnerRecycle = {
     <twilightforest:triple_bow> % 20,
     <twilightforest:seeker_bow> % 20,
     <twilightforest:ice_bow> % 20,
-    <twilightforest:ender_bow> % 20,
   ],
   <twilightforest:boss_spawner:7>: [
     <twilightforest:shader>.withTag({ shader_type: 'Alpha Yeti' }) % 100,

@@ -11,9 +11,6 @@
 
 import crafttweaker.item.IItemStack;
 
-// MFE -> MFSU Upgrade Kit removal
-utils.rh(<ic2:upgrade_kit>);
-
 // Industrial Diamond (Replaced with regular diamond)
 utils.rh(<ic2:crafting:19>);
 utils.rh(<ic2:ingot:8>);
@@ -144,7 +141,6 @@ furnace.remove(<*>, <thaumicwonders:eldritch_cluster:6>);
 furnace.remove(<*>, <thaumicwonders:eldritch_cluster:7>);
 furnace.remove(<*>, <thaumicwonders:eldritch_cluster:8>);
 furnace.remove(<*>, <thaumicwonders:eldritch_cluster>);
-furnace.remove(<*>, <twilightforest:raw_venison:*>);
 /**/
 
 // *======= Metal Blocks =======*
@@ -157,7 +153,6 @@ recipes.remove(<forestry:resource_storage:3>);
 recipes.remove(<forestry:resource_storage:1>);
 recipes.remove(<forestry:resource_storage:2>);
 recipes.remove(<tcomplement:storage>);
-recipes.remove(<forestry:charcoal:0>);
 recipes.remove(<chisel:block_charcoal2:1>);
 recipes.remove(<immersiveengineering:stone_decoration:3>);
 recipes.remove(<immersiveengineering:storage>);
@@ -190,8 +185,6 @@ utils.rh(<excompressum:ore_smasher>);
 utils.rh(<forestry:gear_tin>);
 utils.rh(<forestry:gear_bronze>);
 utils.rh(<forestry:gear_copper>);
-utils.rh(<forestry:greenhouse.window>);
-utils.rh(<forestry:greenhouse.window_up>);
 utils.rh(<appliedenergistics2:material:40>);
 utils.rh(<mysticalagriculture:chunk>);
 utils.rh(<mysticalagriculture:chunk:1>);

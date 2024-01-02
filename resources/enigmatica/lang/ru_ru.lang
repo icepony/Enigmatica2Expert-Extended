@@ -1421,7 +1421,6 @@ tile.mctsmelteryio:machine.fuel_controller.name=Топливный контро�
 tile.mctsmelteryio:machine.casting_machine.name=Литейная машина
 tile.mctsmelteryio:machine.smeltery_input.name=Плавильный завод
 tile.mctsmelteryio:machine.advanced_drain.name=Усовершенствованный дренаж
-item.mctsmelteryio:powdered_fuel.name=Порошковое топливо
 item.mctsmelteryio:upgrade.upgrade_base.name=Базовое обновление
 item.mctsmelteryio:upgrade.upgrade_slot1.name=Увеличение размера слота 1
 item.mctsmelteryio:upgrade.upgrade_slot2.name=Увеличение размера слота 2

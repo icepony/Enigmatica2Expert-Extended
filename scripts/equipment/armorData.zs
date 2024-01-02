@@ -74,7 +74,7 @@ static armorStaged as IData[string] =
       {id:"botania:elementiumchest"},
       {id:"botania:elementiumlegs"},
       {id:"botania:elementiumboots"},
-      {id:"botania:elementiumsword"},
+      {id:"botania:elementiumaxe"},
       {id:"botania:tinypotato"}
   ]},
   armor_terrasteel:{

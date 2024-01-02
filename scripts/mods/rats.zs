@@ -34,14 +34,6 @@ events.onAllowDespawn(function (e as crafttweaker.event.EntityLivingSpawnEvent) 
 recipes.remove(<rats:block_of_cheese>);
 mods.tconstruct.Casting.removeBasinRecipe(<rats:block_of_cheese>);
 
-for item in [
-  <rats:auto_curdler>,
-  <rats:cauldron_milk>,
-  <rats:cauldron_cheese>,
-] as IItemStack[] {
-  utils.rh(item);
-}
-
 // [Rat Cage] from [Wool (Suffolk, Brown)][+2]
 craft.remake(<rats:rat_cage>, ['pretty',
   '╱ ╱ ╱',

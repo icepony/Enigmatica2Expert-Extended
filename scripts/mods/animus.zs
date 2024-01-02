@@ -1,15 +1,5 @@
 #modloaded animus
 
-// Healing Shards
-mods.bloodmagic.BloodAltar.removeRecipe(<animus:fragmenthealing>);
-utils.rh(<animus:fragmenthealing>);
-
-// Removing Khopesh'
-utils.rh(<animus:kama_wood>);
-utils.rh(<animus:kama_stone>);
-utils.rh(<animus:kama_iron>);
-utils.rh(<animus:kama_gold>);
-
 // Leech Reagent
 mods.bloodmagic.TartaricForge.removeRecipe([<minecraft:sapling>, <minecraft:leaves>, <minecraft:tallgrass:1>, <minecraft:cooked_porkchop>]);
 mods.bloodmagic.TartaricForge.addRecipe(<animus:component:3>, [<ore:foodPloughmanslunch>, <ore:dropofevil>, <darkutils:charm_gluttony>, <ore:runeGluttonyB>], 500, 100);

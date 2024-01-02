@@ -61,15 +61,6 @@ for output, ingrs in {
 // *======= Remove & Hide =======*
 
 val chestsToHide = [
-
-  <ironchest:copper_silver_chest_upgrade>,
-  <ironchest:silver_gold_chest_upgrade>,
-  <ironchest:copper_iron_chest_upgrade>,
-  <ironchest:wood_copper_chest_upgrade>,
-  <ironchest:copper_silver_shulker_upgrade>,
-  <ironchest:silver_gold_shulker_upgrade>,
-  <ironchest:copper_iron_shulker_upgrade>,
-  <ironchest:vanilla_copper_shulker_upgrade>,
   <ironchest:iron_chest:3>,
   <ironchest:iron_chest:4>,
   <ironchest:iron_shulker_box_white:3>,

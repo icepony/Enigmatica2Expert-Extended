@@ -510,8 +510,6 @@ utils.rh(<nuclearcraft:ore:4>);
 // Unimplemented multiblocks
 utils.rh(<nuclearcraft:heat_exchanger_controller>);
 utils.rh(<nuclearcraft:condenser_controller>);
-utils.rh(<nuclearcraft:fission_computer_port>);
-utils.rh(<nuclearcraft:turbine_computer_port>);
 utils.rh(<nuclearcraft:heat_exchanger_casing>);
 utils.rh(<nuclearcraft:heat_exchanger_glass>);
 utils.rh(<nuclearcraft:heat_exchanger_vent>);

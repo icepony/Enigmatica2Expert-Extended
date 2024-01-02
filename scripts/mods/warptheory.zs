@@ -13,10 +13,6 @@ events.onEntityLivingUseItemFinish(function (event as crafttweaker.event.EntityL
   if (world.random.nextInt(100) == 0) event.player.give(<thaumcraft:pech_wand>);
 });
 
-// Remove [Inpure tear]
-mods.thaumcraft.Infusion.removeRecipe(<warptheory:item_cleanser_minor>);
-utils.rh(<warptheory:item_cleanser_minor>);
-
 // [Pure tear]
 mods.thaumcraft.Infusion.removeRecipe(<warptheory:item_cleanser>);
 mods.thaumcraft.Infusion.registerRecipe(

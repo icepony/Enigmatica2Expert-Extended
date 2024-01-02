@@ -324,7 +324,7 @@
       { "item": "minecraft:beef", "data": 0 }
     ],
     "result": {
-      "item": "twilightforest:raw_venison",
+      "item": "harvestcraft:venisonrawitem",
       "count": 8
     }
   }

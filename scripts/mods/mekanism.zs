@@ -242,7 +242,6 @@ mods.actuallyadditions.Empowerer.addRecipe(<mekanism:controlcircuit:3>, <mekanis
 // Removing unused ores & Walkietalkie
 utils.rh(<mekanism:oreblock:1>);
 utils.rh(<mekanism:oreblock:2>);
-utils.rh(<mekanism:walkietalkie>);
 
 // Tier applying
 recipes.addShapeless(<mekanism:machineblock:5>.withTag({ recipeType: 3, mekData: {} }), [<mekanism:machineblock:1>, <mekanism:tierinstaller>]);

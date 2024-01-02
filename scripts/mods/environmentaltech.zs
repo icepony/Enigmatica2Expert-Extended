@@ -99,11 +99,6 @@ recipes.addShapeless('Litherite Block -> Crystal',
   <environmentaltech:litherite_crystal> * 9,
   [<ore:blockLitherite>]);
 
-// Remove unused items
-utils.rh(<environmentaltech:laser_lens_crystal>);
-utils.rh(<valkyrielib:modifier_component>);
-utils.rh(<valkyrielib:modifier_speed>);
-
 // [Interconnect] from [Connector][+1]
 craft.remake(<environmentaltech:interconnect>, ['pretty',
   '⌃ C ⌃',
@@ -188,9 +183,6 @@ static evt as IIngredient[][string] = {
     <environmentaltech:solar_cell_aethium>,
   ],
 } as IIngredient[][string];
-
-// Photovoltaic cell remove since replaced with EnderIO one
-utils.rh(<environmentaltech:photovoltaic_cell>);
 
 // ######################################################################
 //

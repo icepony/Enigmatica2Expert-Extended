@@ -60,9 +60,6 @@ mods.tconstruct.Casting.addBasinRecipe(<tconstruct:metal>, null, <liquid:cobalt>
 // Item Rack
 utils.rh(<tconstruct:rack>);
 
-// Stone stick
-utils.rh(<tconstruct:stone_stick>);
-
 // Blank Cast Resmelting
 mods.tconstruct.Melting.addRecipe(<liquid:alubrass> * 144, <tconstruct:cast>);
 
@@ -190,11 +187,6 @@ mods.tconstruct.Casting.addTableRecipe(<tconstruct:cast_custom:4>, <thermalfound
 mods.tconstruct.Casting.addTableRecipe(<tconstruct:cast_custom:4>, <thermalfoundation:material:23>, <liquid:gold>, 288, true);
 mods.tconstruct.Casting.addTableRecipe(<tconstruct:cast_custom:4>, <thermalfoundation:material:23>, <liquid:alubrass>, 144, true);
 mods.tconstruct.Casting.addTableRecipe(<tconstruct:cast_custom:4>, <thermalfoundation:material:23>, <liquid:brass>, 144, true);
-
-// Slime Boots remove and hide (replaced by Conarm)
-for i in 0 .. 6 {
-  utils.rh(itemUtils.getItem('tconstruct:slime_boots', i));
-}
 
 // Slime Slings
 recipes.remove(<tconstruct:slimesling:*>);

@@ -8,9 +8,6 @@ utils.rh(<mctsmelteryio:upgrade:3>);
 <mctsmelteryio:upgrade:4>.maxStackSize = 16;
 <mctsmelteryio:upgrade:6>.maxStackSize = 64;
 
-// Recipes to remove
-utils.rh(<mctsmelteryio:powdered_fuel>);
-
 // Ice balls
 scripts.process.mash(<biomesoplenty:hard_ice>, <mctsmelteryio:iceball> * 8, 'No Exceptions');
 

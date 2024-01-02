@@ -3,12 +3,6 @@
 val piston = <minecraft:piston>;
 val blackIron = <ore:ingotBlackIron>;
 
-// Extended Crafting Table removal
-utils.rh(<extendedcrafting:crafting_table>);
-
-// Handheld Crafting Table
-utils.rh(<extendedcrafting:handheld_table>);
-
 // Black Iron
 recipes.remove(blackIron);
 recipes.addShapeless('Black Iron From Block',

@@ -73,8 +73,6 @@ recipes.addShapeless("Pam's Harvestcraft Lavender Shortbread",
   <harvestcraft:lavendershortbreaditem>,
   [<ore:toolBakeware>, <ore:foodDough>, <ore:flowerLavender>]);
 
-utils.rh(<harvestcraft:market>);
-
 oreDict.cropLychee.add(<harvestcraft:lycheeitem>);
 oreDict.cropJackfruit.add(<harvestcraft:jackfruititem>);
 

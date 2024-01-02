@@ -160,15 +160,11 @@ addItems(<ore:dirtCoarse>, [
 add(<ore:ingotEnderEnhanced>, <extendedcrafting:material:48>);
 
 // Venison Oredict
-add(<ore:listAllbeefraw>, <twilightforest:raw_venison>);
 addItems(<ore:listAllmeatraw>, [
-  <twilightforest:raw_venison>,
   <betteranimalsplus:eel_meat_raw>,
 ]);
 
-add(<ore:listAllbeefcooked>, <twilightforest:cooked_venison>);
 addItems(<ore:listAllmeatcooked>, [
-  <twilightforest:cooked_venison>,
   <betteranimalsplus:eel_meat_cooked>,
 ]);
 add(<ore:listAllmeatcooked>, <twilightforest:cooked_meef>);

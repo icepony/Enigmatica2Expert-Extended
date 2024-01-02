@@ -2166,7 +2166,6 @@ val removeItemAspectList = [
 <akashictome:tome:*>,
 <appliedenergistics2:wireless_terminal>,
 <appliedenergistics2:wireless_crafting_terminal>,
-<aeadditions:pattern.fluid>,
 <bloodmagic:upgrade_trainer>,
 <botania:flowerbag>,
 <botania:flowerbag:*>,

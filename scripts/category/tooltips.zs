@@ -103,7 +103,6 @@ desc.jei(<actuallyadditions:block_crystal_empowered:2>, 'requires.rf', '2.000.00
 desc.jei(<actuallyadditions:block_crystal_empowered:3>, 'requires.rf', '10.000.000'); // Void
 desc.jei(<actuallyadditions:block_crystal_empowered:4>, 'requires.rf', '2.000.000'); // Emeradic
 desc.jei(<actuallyadditions:block_crystal_empowered:5>, 'requires.rf', '1.000.000'); // Enori
-desc.jei(<harvestcraft:market>, 'removed.use_market'); // Pam's Harvestcraft Market
 desc.jei(<mekanism:controlcircuit:3>, 'requires.rf', '2.000.000'); // Mekanism Ultimate Circuit
 
 desc.jei(<thermalexpansion:cache>, 'crescent_hammer');

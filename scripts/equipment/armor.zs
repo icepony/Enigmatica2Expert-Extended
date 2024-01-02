@@ -19,39 +19,6 @@ val armorToRemove = [
   <immersiveengineering:faraday_suit_chest>,
   <immersiveengineering:faraday_suit_legs>,
   <immersiveengineering:faraday_suit_feet>,
-  // Tinkers' Complement
-  <tcomplement:knightslime_helmet>,
-  <tcomplement:knightslime_chestplate>,
-  <tcomplement:knightslime_leggings>,
-  <tcomplement:knightslime_boots>,
-  <tcomplement:manyullyn_helmet>,
-  <tcomplement:manyullyn_chestplate>,
-  <tcomplement:manyullyn_leggings>,
-  <tcomplement:manyullyn_boots>,
-  <tcomplement:steel_helmet>,
-  <tcomplement:steel_chestplate>,
-  <tcomplement:steel_leggings>,
-  <tcomplement:steel_boots>,
-  // HarvestCraft
-  <harvestcraft:hardenedleatherhelmitem>,
-  <harvestcraft:hardenedleatherchestitem>,
-  <harvestcraft:hardenedleatherleggingsitem>,
-  <harvestcraft:hardenedleatherbootsitem>,
-  // IndustrialCraft 2
-  <ic2:alloy_chestplate>,
-  // Twilight Forest
-  <twilightforest:fiery_helmet>,
-  <twilightforest:fiery_chestplate>,
-  <twilightforest:fiery_leggings>,
-  <twilightforest:fiery_boots>,
-  <twilightforest:knightmetal_helmet>,
-  <twilightforest:knightmetal_chestplate>,
-  <twilightforest:knightmetal_leggings>,
-  <twilightforest:knightmetal_boots>,
-  <twilightforest:steeleaf_helmet>,
-  <twilightforest:steeleaf_chestplate>,
-  <twilightforest:steeleaf_leggings>,
-  <twilightforest:steeleaf_boots>,
 ] as IItemStack[];
 
 for item in armorToRemove {
