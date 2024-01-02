@@ -7,7 +7,6 @@ val categoriesToHide as string[] = [
   'xu2_machine_extrautils2:furnace',
   'xu2_machine_extrautils2:generator_survival',
   'xu2_machine_extrautils2:generator',
-  'tcomplement:high_oven_melting',
   'mekanism.energizedsmelter',
 ];
 
