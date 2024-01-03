@@ -154,7 +154,7 @@ scripts.process.fill(<ore:dustHafnium>, <fluid:oxygen> * 1000, <qmd:chemical_dus
 // Remove Silicon Boule
 mods.nuclearcraft.Crystallizer.removeRecipeWithOutput(<libvulpes:productboule:3>);
 mods.nuclearcraft.Melter.addRecipe(<ore:blockSilicon>, <fluid:silicon> * 1296);
-utils.rh(<qmd:semiconductor:3>); // Wafer replaced by Adv. Rock.
+utils.rh(<qmd:semiconductor:3>); // Silicon Wafer, replaced by Adv. Rock.
 utils.rh(<qmd:semiconductor:2>); // Silicon boule
 mods.nuclearcraft.FissionIrradiator.removeRecipeWithOutput(<qmd:semiconductor:1>);
 mods.nuclearcraft.FissionIrradiator.addRecipe(<ore:waferSilicon>, <qmd:semiconductor:1>, 120000, 0, 0, 0);
@@ -169,19 +169,15 @@ mods.inworldcrafting.FluidToItem.transform(<libvulpes:productboule:3>, <fluid:si
 scripts.process.saw(<ore:bouleSilicon>, <advancedrocketry:wafer>, 'except: shapeless mekSawmill AdvRockCutter', null, 0, { hardness: 9 });
 
 // Unify P-Type Doped Silicon
+<ore:siliconWafer>.add(<advancedrocketry:wafer>);
 mods.qmd.target_chamber.removeRecipeWithInput(<qmd:semiconductor:3>, ((<particle:boron_ion> * 1000000) ^ 600) ~ 2.0);
-mods.qmd.target_chamber.addRecipe(<ore:waferSilicon>, null, ((<particle:boron_ion> * 1000000) ^ 600) ~ 2.0, <qmd:semiconductor>, null,
-  null, null, null,
-  1000, 1.0, 0);
+mods.qmd.target_chamber.addRecipe(
+  <ore:waferSilicon>, null, ((<particle:boron_ion> * 1000000) ^ 600) ~ 2.0, <qmd:semiconductor>, null,
+  null, null, null, 1000, 1.0, 0
+);
 
 // mods.qmd.nucleosynthesis_chamber.addRecipe(IIngredient inputFluid1, IIngredient inputFluid2, IIngredient inputParticle, IIngredient outputFluid1, IIngredient outputFluid2, {long maxEnergy}, {long heatRelased})
 mods.qmd.nucleosynthesis_chamber.addRecipe(<liquid:sky_stone> * 52, <liquid:enrichedlava> * 20, <particle:neutron> * 1000000, <liquid:neutronium> * 72, null, 1000000, 874000);
-
-// sodium, iridium, cobalt, and calcium source stack size fix
-<qmd:source:1>.maxStackSize = 1;
-<qmd:source:2>.maxStackSize = 1;
-<qmd:source:3>.maxStackSize = 1;
-<qmd:source:4>.maxStackSize = 1;
 
 // Remove tools
 utils.rh(<qmd:sword_tungsten_carbide>);
@@ -219,14 +215,14 @@ function remakeTarget(
 }
 
 // Tungsten ingot replacement
-val TG = <endreborn:item_ingot_wolframium>;
-remakeTarget(<qmd:ingot>, (<particle:proton> * 12500000) ^ 400000    , TG, <qmd:waste_fission>      , null                    , <particle:neutron>        , null                     , 600000  , 0.08, 0);
-remakeTarget(<qmd:ingot>, (<particle:photon> * 4000000) ^ 11000      , TG, <qmd:ingot:6>            , <particle:alpha>        , null                      , null                     , 16500   , 0.25, 2680);
-remakeTarget(<qmd:ingot>, (<particle:proton> * 5000000) ^ 600000     , TG, <qmd:waste_spallation2:1>, <particle:pion_plus>    , null                      , <particle:pion_minus>    , 5000000 , 0.2 , -279000);
-remakeTarget(<qmd:ingot>, (<particle:proton> * 5000000) ^ 5630000    , TG, <qmd:waste_spallation2:1>, <particle:proton>       , null                      , <particle:antiproton>    , 20000000, 0.2 , -1880000);
-remakeTarget(<qmd:ingot>, (<particle:deuteron> * 10000000) ^ 11300000, TG, <qmd:waste_spallation2:1>, <particle:deuteron>     , null                      , <particle:antideuteron>  , 20000000, 0.1 , -3750000);
-remakeTarget(<qmd:ingot>, (<particle:antiproton> * 1000000)        , TG, <qmd:waste_spallation2:1>, <particle:pion_plus>    , <particle:pion_naught>    , <particle:pion_minus>    , 10000000, 1   , 1460000);
-remakeTarget(<qmd:ingot>, (<particle:antideuteron> * 10000000)     , TG, <qmd:waste_spallation2:1>, <particle:pion_plus> * 4, <particle:pion_naught> * 4, <particle:pion_minus> * 4, 10000000, 1   , 2090000);
+// val TG = <endreborn:item_ingot_wolframium>;
+// remakeTarget(<qmd:ingot>, (<particle:proton> * 12500000) ^ 400000    , TG, <qmd:waste_fission>      , null                    , <particle:neutron>        , null                     , 600000  , 0.08, 0);
+// remakeTarget(<qmd:ingot>, (<particle:photon> * 4000000) ^ 11000      , TG, <qmd:ingot:6>            , <particle:alpha>        , null                      , null                     , 16500   , 0.25, 2680);
+// remakeTarget(<qmd:ingot>, (<particle:proton> * 5000000) ^ 600000     , TG, <qmd:waste_spallation2:1>, <particle:pion_plus>    , null                      , <particle:pion_minus>    , 5000000 , 0.2 , -279000);
+// remakeTarget(<qmd:ingot>, (<particle:proton> * 5000000) ^ 5630000    , TG, <qmd:waste_spallation2:1>, <particle:proton>       , null                      , <particle:antiproton>    , 20000000, 0.2 , -1880000);
+// remakeTarget(<qmd:ingot>, (<particle:deuteron> * 10000000) ^ 11300000, TG, <qmd:waste_spallation2:1>, <particle:deuteron>     , null                      , <particle:antideuteron>  , 20000000, 0.1 , -3750000);
+// remakeTarget(<qmd:ingot>, (<particle:antiproton> * 1000000)        , TG, <qmd:waste_spallation2:1>, <particle:pion_plus>    , <particle:pion_naught>    , <particle:pion_minus>    , 10000000, 1   , 1460000);
+// remakeTarget(<qmd:ingot>, (<particle:antideuteron> * 10000000)     , TG, <qmd:waste_spallation2:1>, <particle:pion_plus> * 4, <particle:pion_naught> * 4, <particle:pion_minus> * 4, 10000000, 1   , 2090000);
 
 // Melt tungsten misssed recipe
 scripts.process.melt(<endreborn:item_ingot_wolframium>, <fluid:tungsten> * 144);
@@ -237,33 +233,20 @@ mods.tconstruct.Casting.addTableRecipe(<endreborn:item_ingot_wolframium>, <tcons
 mods.tconstruct.Casting.addBasinRecipe(<endreborn:block_wolframium>, null, <liquid:tungsten>, 1296, false, 800);
 
 // Sodium Chlorde (salt)
-mods.nuclearcraft.Crystallizer.removeRecipeWithOutput(<qmd:chemical_dust:3>);
-mods.nuclearcraft.Crystallizer.addRecipe(<fluid:sodium_chloride_solution> * 666, <mekanism:salt>);
 utils.rh(<qmd:chemical_dust:3>);
 
 // Fix salt melting duplicate recipe
 mods.nuclearcraft.Melter.removeRecipeWithOutput(<fluid:sodium_chloride> * 666);
 
 // Sodium Nitrate (niter)
-mods.nuclearcraft.Crystallizer.removeRecipeWithOutput(<qmd:chemical_dust:2>);
-mods.nuclearcraft.Crystallizer.addRecipe(<fluid:sodium_nitrate_solution> * 666, <thermalfoundation:material:772> * 20);
 utils.rh(<qmd:chemical_dust:2>);
 
 ////////////////////////////////////////
 // Replacing Mercury with Quicksilver //
 ////////////////////////////////////////
 
-mods.nuclearcraft.Melter.removeRecipeWithOutput(<fluid:mercury> * 144);
-mods.qmd.nucleosynthesis_chamber.removeRecipeWithInput(<fluid:gold> * 144, null, (<particle:neutron> * 13980000) ~ 1);
-mods.qmd.nucleosynthesis_chamber.addRecipe(<fluid:gold> * 144, null, (<particle:neutron> * 13980000) ~ 1, <liquid:fluid_quicksilver> * 144, null, 10000000, 3610);
-mods.qmd.nucleosynthesis_chamber.removeRecipeWithInput(<fluid:mercury> * 144, null, (<particle:neutron> * 16940000) ~ 1);
-mods.qmd.nucleosynthesis_chamber.addRecipe(<fluid:fluid_quicksilver> * 144, null, (<particle:neutron> * 16940000) ~ 1, <liquid:lead> * 144, null, 10000000, 4180);
-mods.nuclearcraft.Turbine.removeRecipeWithOutput(<fluid:mercury>);
-mods.nuclearcraft.Turbine.addRecipe(<liquid:hot_mercury>, <liquid:fluid_quicksilver>, 8192.0, 4.0, 1.0);
-mods.nuclearcraft.Infuser.removeRecipeWithOutput(<qmd:discharge_lamp2:1>);
-mods.nuclearcraft.Infuser.addRecipe(<qmd:discharge_lamp:6>, <liquid:fluid_quicksilver> * 144, <qmd:discharge_lamp2:1>);
-mods.qmd.nucleosynthesis_chamber_heater.removeRecipeWithOutput(<fluid:hot_mercury>);
-mods.qmd.nucleosynthesis_chamber_heater.addRecipe(<liquid:fluid_quicksilver>, <fluid:hot_mercury>, 1);
+mods.industrialforegoing.FluidDictionary.add("fluid_quicksilver", "mercury", 1);
+mods.industrialforegoing.FluidDictionary.add("mercury", "fluid_quicksilver", 1);
 
 // Below, taken from Multiblock-Madness
 // https://github.com/Filostorm/Multiblock-Madness/blob/19659008c64234f96d5607df3f9ca6df7adee778/scripts/Non%20Mod%20Scripts/unification.zs#L150-L301
@@ -366,32 +349,6 @@ mods.nuclearcraft.FuelReprocessor.addRecipe(<qmd:waste_spallation:9>,
   null,
   null);
 
-// New Target Chamber Recipes
-mods.qmd.target_chamber.addRecipe(<thaumcraft:quicksilver>, null, (<particle:proton> * 50000000) ^ 200000, <qmd:waste_fission>, null,
-  null, <particle:neutron>, null,
-  1000000, 0.02, 0);
-
-mods.qmd.target_chamber.addRecipe(<thaumcraft:quicksilver>, null, (<particle:proton> * 5000000) ^ 6580000, <qmd:waste_spallation2:3>, null,
-  <particle:proton>, null, <particle:antiproton>,
-  20000000, 0.2, -6580000);
-
-mods.qmd.target_chamber.addRecipe(<thaumcraft:quicksilver>, null, (<particle:proton> * 5000000) ^ 1540000, <qmd:waste_spallation2:3>, null,
-  <particle:pion_plus>, null, <particle:pion_minus>,
-  5000000, 0.2, -1540000);
-
-mods.qmd.target_chamber.addRecipe(<thaumcraft:quicksilver>, null, <particle:antiproton> * 1000000, <qmd:waste_spallation2:3>, null,
-  <particle:pion_plus>, <particle:pion_naught>, <particle:pion_minus>,
-  10000000, 1.0, 1460000);
-
-mods.qmd.target_chamber.addRecipe(<thaumcraft:quicksilver>, null, (<particle:deuteron> * 10000000) ^ 13100000, <qmd:waste_spallation2:3>, null,
-  <particle:deuteron>, null, <particle:antideuteron>,
-  20000000, 0.1, -13100000);
-
-mods.qmd.target_chamber.addRecipe(<thaumcraft:quicksilver>, null, <particle:antideuteron> * 1000000, <qmd:waste_spallation2:3>, null,
-  <particle:pion_plus> * 4, <particle:pion_naught> * 4, <particle:pion_minus> * 4,
-  10000000, 1.0, 2090000);
-
-utils.rh(<qmd:ingot2:2>);
 ////////////////////////////////////////
 
 // Low-energy alt recipe
@@ -413,15 +370,3 @@ mods.qmd.target_chamber.addRecipe(
   null, null, null, null,
   2000, 1.0, 0
 );
-
-// mods.qmd.target_chamber.addRecipe(
-//   IIngredient inputItem,
-//   IIngredient inputParticle,
-//   IIngredient outputItem,
-//   IIngredient outputParticle1,
-//   IIngredient outputParticle2,
-//   IIngredient outputParticle3,
-//   long maxEnergy,
-//   double crossSection,
-//   {long energyReleased, double processRadiation}
-// )
