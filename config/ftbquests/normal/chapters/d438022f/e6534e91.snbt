@@ -15,7 +15,7 @@
 		items: [{
 			id: "openblocks:trophy",
 			tag: {
-				entity_id: "minecraft:cow"
+				entity_id: "minecraft:sheep"
 			}
 		}],
 		ignore_damage: true,

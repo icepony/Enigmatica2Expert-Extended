@@ -4,7 +4,7 @@
 static entityMap as int[string] = {
   wolf               : 0,
   chicken            : 1,
-  cow                : 2,
+  // cow                : 2, // Cow cant be crafted if Cooking For Blockheads installed. Event just dont happens
   creeper            : 3,
   skeleton           : 4,
   zombie_pigman      : 5,
