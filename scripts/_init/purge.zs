@@ -226,11 +226,6 @@ utils.rh(<thaumicwonders:eldritch_cluster:6>);
 utils.rh(<thaumicwonders:eldritch_cluster:7>);
 utils.rh(<thaumicwonders:eldritch_cluster:8>);
 
-// Purge removed items from furnace
-for item in itemUtils.getItemsByRegexRegistryName('thermalfoundation:((tool|armor)\\.|horse_armor_).*') {
-  furnace.remove(<*>, item);
-}
-
 // Gears
 val gearsToRemove = [
   <appliedenergistics2:material:40>,
