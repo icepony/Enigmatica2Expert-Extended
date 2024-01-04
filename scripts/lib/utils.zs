@@ -116,14 +116,20 @@ zenClass Utils {
   // ########################
   // Removing item everywhere
   // ########################
-  function rh(ingr as IIngredient, removeOredict as bool = true, meta as int = -1) as void {
-    if (isNull(ingr)) return;
+  function rh(ingr as IIngredient, removeOredict as bool = true, meta as int = -1, removeFurnace as bool = true) as void {
+    if (isNull(ingr)) {
+      if (DEBUG) log('Tried to purge ingredient, but its null.');
+      return;
+    }
 
+    var isPurgedSomething = false;
     for _item in ingr.items {
       val item = meta <= -1 ? _item : _item.withDamage(meta);
 
       if (removeOredict) {
         for ore in item.ores {
+          if (DEBUG && ore has item)
+            log('purging item ' ~ item.commandString, 'from oredict', ore.name);
           ore.remove(item);
         }
       }
@@ -131,11 +137,16 @@ zenClass Utils {
       val actualItem = (item.damage == 0 && item.isDamageable)
         ? item.anyDamage()
         : item;
-      // furnace.remove(<*>, actualItem); managed by JS script
-      furnace.remove(actualItem);
+
+      if (removeFurnace) furnace.remove(actualItem);
       recipes.remove(actualItem);
 
       if (DEBUG) log('purged: ' ~ actualItem.commandString, item.displayName);
+      isPurgedSomething = true;
+    }
+
+    if (!isPurgedSomething) {
+      if (DEBUG) log('Tried to purge ingredient, but it have no items.');
     }
   }
 
