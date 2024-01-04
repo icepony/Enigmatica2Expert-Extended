@@ -354,7 +354,7 @@ craft.remake(<industrialforegoing:block_placer>, ['pretty',
 // Remove barely all Ore benification to leave only meat washing
 function cleanupBenification(item as IItemStack, ingot as IItemStack, dust as IItemStack, fluid as ILiquidStack) as void {
   recipes.removeShapeless(<*>, [item, <immersiveengineering:tool>]);
-  furnace.remove(<*>, item.anyDamage());
+  // furnace.remove(ingot, item.anyDamage());
   mods.actuallyadditions.Crusher.removeRecipe(dust);
   mods.appliedenergistics2.Grinder.removeRecipe(item);
   mods.astralsorcery.Grindstone.removeRecipe(dust);
