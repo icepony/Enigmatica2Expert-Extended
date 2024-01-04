@@ -406,11 +406,12 @@ for item in [
 }
 
 // Make Ferrous Trees better integrated
-furnace.remove(<*>, <extrautils2:ironwood_planks>);
-furnace.remove(<*>, <extrautils2:ironwood_planks:1>);
+furnace.remove(<minecraft:iron_nugget>, <extrautils2:ironwood_planks:*>);
+
 // Unburnt
 scripts.process.melt(<extrautils2:ironwood_log:0>   , <liquid:iron> *  16, 'No Exceptions');
 scripts.process.melt(<extrautils2:ironwood_planks:0>, <liquid:iron> *  8, 'No Exceptions');
+
 // Burnt
 scripts.process.melt(<extrautils2:ironwood_log:1>   , <liquid:iron> * 144, 'No Exceptions');
 scripts.process.melt(<extrautils2:ironwood_planks:1>, <liquid:iron> *  80, 'No Exceptions');
