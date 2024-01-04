@@ -112,6 +112,7 @@
 			<gravitationalMultiplier>110</gravitationalMultiplier>
 			<rotationalPeriod>21100</rotationalPeriod>
 			<generateCaves>true</generateCaves>
+			<fillerBlock>biomesoplenty:hard_ice</fillerBlock>
 		</planet>
 	</star>
 	<star name="Proxima Centauri" temp="45" x="28" y="8" numPlanets="0" numGasGiants="0">
@@ -124,6 +125,7 @@
 			<orbitalDistance>50</orbitalDistance>
 			<rotationalPeriod>12000</rotationalPeriod>
 			<generateCaves>true</generateCaves>
+			<fillerBlock>iceandfire:frozen_stone</fillerBlock>
 		</planet>
 		<planet name="Twilight" DIMID="7" dimMapping="" customIcon="earthlike">
 			<skyColor>1,0,1</skyColor>
@@ -161,6 +163,7 @@
 			<rotationalPeriod>12000</rotationalPeriod>
 			<oceanBlock>tconstruct:molten_obsidian</oceanBlock>
 			<generateCaves>true</generateCaves>
+			<fillerBlock>nuclearcraft:ingot_block:8</fillerBlock>
 		</planet>
 		<planet name="Stella" DIMID="114" customIcon="earthlike">
 			<biomeIds>biomesoplenty:sacred_springs,biomesoplenty:mystic_grove</biomeIds>
@@ -229,6 +232,8 @@
 			<rotationalPeriod>8000</rotationalPeriod>
 			<generateCaves>true</generateCaves>
 			<generateCraters>true</generateCraters>
+			<craterOres>stoneBaratol,blockStrontium90,blockBerkelium247</craterOres>
+			<fillerBlock>minecraft:stone:1</fillerBlock>
 		</planet>
 	</star>
 	<star blackHole="false" name="Magnis Vulpes" temp="87" x="6" y="-142" numPlanets="0" numGasGiants="0">
@@ -266,9 +271,9 @@
 			<orbitalDistance>130</orbitalDistance>
 			<rotationalPeriod>18000</rotationalPeriod>
 			<generateCaves>true</generateCaves>
-			<generateVolcanos>true</generateVolcanos>
 			<generateGeodes>true</generateGeodes>
 			<generateCraters>true</generateCraters>
+			<fillerBlock>astralsorcery:blockblackmarble</fillerBlock>
 		</planet>
 		<planet name="Kepler 0119" DIMID="123" customIcon="marslike">
 			<biomeIds>advancedrocketry:hotdryrock</biomeIds>
@@ -280,6 +285,7 @@
 			<orbitalDistance>140</orbitalDistance>
 			<rotationalPeriod>100000</rotationalPeriod>
 			<generateCaves>true</generateCaves>
+			<fillerBlock>minecraft:stone:5</fillerBlock>
 		</planet>
 		<planet name="Asteroid Belt" DIMID="124">
 			<genType>2</genType>
