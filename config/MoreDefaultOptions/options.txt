@@ -190,7 +190,7 @@ key_key.fullscreen:0
 key_key.fuzzy:0
 key_key.gridfixy:79
 key_key.gridhere:35
-key_key.gridspawns:38
+key_key.gridspawns:0
 key_key.hotbar.1:2
 key_key.hotbar.2:3
 key_key.hotbar.3:4
@@ -202,6 +202,9 @@ key_key.hotbar.8:9
 key_key.hotbar.9:10
 key_key.immersiveengineering.chemthrowerSwitch:0
 key_key.immersiveengineering.magnetEquip:31
+key_key.infinity.desc:83
+key_key.infinitycopy.desc:47
+key_key.infinitysave.desc:34
 key_key.integrateddynamics.logic_programmer_focus_search:33:ALT
 key_key.integrateddynamics.logic_programmer_open_rename:0
 key_key.integratedterminals.terminal.craftinggrid.balance:48
