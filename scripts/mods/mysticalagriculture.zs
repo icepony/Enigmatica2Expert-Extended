@@ -870,7 +870,7 @@ remakeBlock   ('mysticalagriculture:gemtopaz'             , <blockstate:biomesop
 remakeBlock   ('mysticalagriculture:gemtanzanite'         , <blockstate:biomesoplenty:gem_ore:variant=tanzanite> , [<mysticalagriculture:tanzanite_essence>]);
 remakeBlock   ('mysticalagriculture:gemmalachite'         , <blockstate:biomesoplenty:gem_ore:variant=malachite> , [<mysticalagriculture:malachite_essence>]);
 remakeBlock   ('mysticalagriculture:gemsapphire'          , <blockstate:biomesoplenty:gem_ore:variant=sapphire>  , [<mysticalagriculture:sapphire_essence>]);
-remakeBlock   ('mysticalagriculture:gemamber'             , <blockstate:biomesoplenty:gem_ore:variant=amber>     , [<mysticalagriculture:amber_essence>]);
+remakeBlock   ('mysticalagriculture:gemamber'             , <blockstate:thaumcraft:ore_amber>                    , [<mysticalagriculture:amber_essence>]);
 remakeBlock   ('mysticalagriculture:ingotdraconium'       , <blockstate:draconicevolution:draconium_ore>         , [<mysticalagriculture:draconium_essence>]);
 remakeBlock   ('mysticalagriculture:gemapatite'           , <blockstate:forestry:resources>                      , [<mysticalagriculture:apatite_essence>]);
 // remakeBlock   ("mysticalagriculture:ingotosmium"          , <blockstate:mekanism:oreblock>                       , [<mysticalagriculture:osmium_essence>]);

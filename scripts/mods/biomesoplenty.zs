@@ -8,6 +8,9 @@ import crafttweaker.item.WeightedItemStack;
 recipes.addShapeless('BoP Amber', <biomesoplenty:gem:7> * 2, [<thaumcraft:amber>, <thaumcraft:amber>]);
 recipes.addShapeless('Thaumcraft Amber', <thaumcraft:amber> * 2, [<biomesoplenty:gem:7>, <biomesoplenty:gem:7>]);
 
+// Remove oredict from amber ore to prevent it generated from Botania Flower
+<ore:oreAmber>.remove(<biomesoplenty:gem_ore:7>);
+
 // Make Quicksand
 scripts.process.solution([<ore:soulSand>], [<liquid:blueslime> * 1000], [<liquid:sand> * 1000], null, 'except: highoven');
 
