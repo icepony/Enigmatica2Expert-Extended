@@ -39,7 +39,7 @@ zenClass Descriptor {
 	function tooltipRaw(item as IIngredient, localized as string) as void {
 		if(localized.startsWith(langPrefix)) return;
 		if(isNull(item)) return;
-		for line in localized.split('\\\\n') {
+		for line in localized.split('\n') {
 			item.addTooltip(line);
 		}
 	}
