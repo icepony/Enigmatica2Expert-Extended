@@ -16,6 +16,10 @@ recipes.addShapeless('Plutonium conversion', <nuclearcraft:plutonium:5> * 2, [<i
 utils.compact(<nuclearcraft:ingot:14>, <nuclearcraft:ingot_block:14>);
 utils.compact(<nuclearcraft:ingot:15>, <nuclearcraft:ingot_block:15>);
 
+// Remove Manganese ingot (and oxide) tooltip about smelting 3 times since its misleading
+<nuclearcraft:ingot:11>.removeTooltipLine(1);
+<nuclearcraft:ingot:14>.removeTooltipLine(1);
+
 // ------------------------------------------------------------------
 // Recipes and integrations
 // ------------------------------------------------------------------
