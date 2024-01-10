@@ -331,6 +331,7 @@ e2ee.danknull_dock.must_have=§7You need a %s in the inventory to insert %s into
 e2ee.restrict.vis_seeds=§7§eVis Seeds§7 can only be planted in §nthe Void§7 dimension or on §nplanets§7. They also need Oxygen.
 e2ee.creature_resisted_morb=§8This creature resist capture by the §n§8%s.
 e2ee.creature_uncapturable=§7This creature can't be captured.
+e2ee.skyblock.need_item=§bTo access the §3Skyblock§b dimension, hold %s in your hand and ascend to a height of §3%s§b blocks.
 tooltips.lang.morb_resist=§rEffective against monsters at §4<%s%%§r hearts, or with fewer than §c%s§r hearts total.
 # >
 
