@@ -29,9 +29,6 @@ console.log('Summ and bonus:', origSumm.map((v,i)=>[String(origSumm[i]).padStart
 
 */
 
-// en_us localisation for servers
-game.setLocalization('en_us', 'e2ee.do.charge.bonus', '§fLatest bonus: §b%s%%§r');
-
 function getBonus(v as double) as double {
   return max(0.0, pow(v, CHARGE_EXP) / CHARGE_RED - v) as double;
 }
