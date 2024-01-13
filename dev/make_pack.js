@@ -13,25 +13,21 @@
 
 // @ts-check
 
-import { join, parse, relative, resolve } from 'node:path'
+import { join, resolve } from 'node:path'
 
-import boxen from 'boxen'
 import chalk from 'chalk'
 import * as del from 'del'
-import fast_glob from 'fast-glob'
 import fs_extra from 'fs-extra'
 import git_describe from 'git-describe'
 import ignore from 'ignore'
-import logUpdate from 'log-update'
 import open from 'open'
 import replace_in_file from 'replace-in-file'
 import simpleGit from 'simple-git'
-import Client from 'ssh2-sftp-client'
-import terminal_kit from 'terminal-kit'
 import yargs from 'yargs'
 
+import { doTask, enterString, getIgnoredFiles, globs, pressEnterOrEsc, removeFiles } from './build/build_utils.ts'
+import { manageSFTP } from './build/sftp.ts'
 import {
-  end,
   execSyncInherit,
   loadJson,
   saveObjAsJson,
@@ -39,42 +35,13 @@ import {
   write,
 } from './lib/utils.js'
 
+const { lstatSync }
+  = fs_extra
+
 const { gitDescribeSync } = git_describe
-const { terminal: term } = terminal_kit
-const { rmSync, mkdirSync, existsSync, renameSync, readFileSync, writeFileSync, lstatSync }
+const { rmSync, mkdirSync, existsSync, renameSync, readFileSync, writeFileSync }
   = fs_extra
 const git = simpleGit()
-
-const { sync: _globs } = fast_glob
-
-/**
- * Globs with default options `dot: true, onlyFiles: false`
- * @param {string | string[]} source
- * @param {import('../node_modules/fast-glob/out/settings').Options} [options]
- */
-function globs(source, options) {
-  return _globs(source, { dot: true, onlyFiles: false, ...options })
-}
-
-/**
- * @param {any} ignored
- */
-function getIgnoredFiles(ignored) {
-  return globs(
-    ignored._rules.filter(r => !r.negative).map(r => r.pattern),
-    { ignore: ignored._rules.filter(r => r.negative).map(r => r.pattern) }
-  )
-}
-
-/**
- * @param {string | readonly string[]} files list of globs of files to remove
- */
-function removeFiles(files) {
-  const removed = del.deleteSync(files, { dryRun: false })
-  return `removed: ${removed.length}\n${
-    removed.map(s => chalk.gray(relative(process.cwd(), s))).join('\n')
-  }`
-}
 
 const argv = yargs(process.argv.slice(2))
   .alias('h', 'help')
@@ -90,18 +57,6 @@ const argv = yargs(process.argv.slice(2))
   })
   .parseSync()
 
-const style = {
-  trace : chalk.hex('#7b4618'),
-  info  : chalk.hex('#915c27'),
-  log   : chalk.hex('#ad8042'),
-  label : chalk.hex('#bfab67'),
-  string: chalk.hex('#bfc882'),
-  number: chalk.hex('#a4b75c'),
-  status: chalk.hex('#647332'),
-  chose : chalk.hex('#3e4c22'),
-  end   : chalk.hex('#2e401c'),
-}
-
 ;(async () => {
   const mcClientPath = process.cwd()
   const sZPath = 'D:/Program Files/7-Zip/7z.exe'
@@ -110,62 +65,7 @@ const style = {
   const tmpDir = 'D:/mc_tmp/'
   const tmpOverrides = resolve(tmpDir, 'overrides/')
 
-  /**
-   * Write task in log and execute it
-   * @param {string} s Name of the tast would be printed in Log
-   * @param {()=>void} fn Function of task
-   * @param {string} [cwd] Optional working path where task is executed
-   */
-  const doTask = (s, fn, cwd) => {
-    const oldCwd = process.cwd()
-    if (cwd) process.chdir(cwd)
-    write(style.label(s))
-    end(fn())
-    if (cwd) process.chdir(oldCwd)
-  }
-
-  /*
- █████╗ ██╗   ██╗████████╗ ██████╗ ███╗   ███╗ █████╗ ████████╗██╗ ██████╗ ███╗   ██╗
-██╔══██╗██║   ██║╚══██╔══╝██╔═══██╗████╗ ████║██╔══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║
-███████║██║   ██║   ██║   ██║   ██║██╔████╔██║███████║   ██║   ██║██║   ██║██╔██╗ ██║
-██╔══██║██║   ██║   ██║   ██║   ██║██║╚██╔╝██║██╔══██║   ██║   ██║██║   ██║██║╚██╗██║
-██║  ██║╚██████╔╝   ██║   ╚██████╔╝██║ ╚═╝ ██║██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║
-╚═╝  ╚═╝ ╚═════╝    ╚═╝    ╚═════╝ ╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝
-*/
   write(`${chalk.gray('-'.repeat(20))}\n`)
-
-  let STEP = 1
-
-  /**
-   * Prompt user to write something and press ENTER or ESC
-   * @param {string} message message to show
-   * @param {terminal_kit.Terminal.InputFieldOptions} [options] message to show
-   * @returns {Promise<string|undefined>} inputted string or undefined
-   */
-  async function enterString(message, options) {
-    const msg = `[${STEP++}] ${message}`
-    term(style.trace(msg.replace(/(ENTER|ESC)/g, style.info('$1'))))
-    const result = await term.inputField({
-      cancelable: true,
-      ...(options ?? {}),
-    }).promise
-    term('\n')
-    return result
-  }
-
-  /**
-   * Prompt user to press ENTER or ESC
-   * @param {string} message message to show
-   * @param {()=>Promise<boolean>} [condition] repeat until true
-   * @returns {Promise<boolean>} `true` if ENTER pressed, `false` otherwise
-   */
-  const pressEnterOrEsc = async (message, condition) => {
-    let oneTime = 0
-    while (condition ? !(await condition()) : !oneTime++)
-      if ((await enterString(message)) === undefined) return false
-
-    return true
-  }
 
   if (
     await pressEnterOrEsc(
@@ -217,7 +117,7 @@ const style = {
     execSyncInherit(`npx conventional-changelog-cli --config dev/tools/changelog/config.cjs -o ${latestPath}`)
 
     // Iconize
-    execSyncInherit(`esno E:/dev/mc-icons/src/cli.ts "${latestPath}" --silent --no-short --modpack=e2ee --treshold=2`)
+    execSyncInherit(`ts-node E:/dev/mc-icons/src/cli.ts "${latestPath}" --silent --no-short --modpack=e2ee --treshold=2`)
 
     await open(latestPath, { wait: true })
   }
@@ -262,7 +162,9 @@ const style = {
       try {
         rmSync(tmpDir, { recursive: true })
       }
-      catch (err) {}
+      catch (err) {
+        process.stdout.write(`\n${chalk.red(`Cannot remove TMP folder ${tmpDir}`)}\n${String(err)}\n`)
+      }
       mkdirSync(tmpOverrides, { recursive: true })
     })
 
@@ -335,25 +237,13 @@ const style = {
   makeZips && doTask('📥 Create server zip ... \n', () => withZip(zipPath_server)('.'), serverRoot)
 
   /*
-███████╗███████╗████████╗██████╗
-██╔════╝██╔════╝╚══██╔══╝██╔══██╗
-███████╗█████╗     ██║   ██████╔╝
-╚════██║██╔══╝     ██║   ██╔═══╝
-███████║██║        ██║   ██║
-╚══════╝╚═╝        ╚═╝   ╚═╝
+  ███████╗███████╗████████╗██████╗
+  ██╔════╝██╔════╝╚══██╔══╝██╔══██╗
+  ███████╗█████╗     ██║   ██████╔╝
+  ╚════██║██╔══╝     ██║   ██╔═══╝
+  ███████║██║        ██║   ██║
+  ╚══════╝╚═╝        ╚═╝   ╚═╝
   */
-
-  /**
-   * @type {{ dir:string, label:string, config: {[key:string]:string} }[]}
-   */
-  const sftpConfigs = globs('secrets/sftp_servers/*/sftp.json').map((filename) => {
-    const dir = parse(filename).dir
-    return {
-      dir,
-      label : /** @type {string} */ (dir.split('/').pop()),
-      config: loadJson(filename),
-    }
-  })
 
   // Relative to overrides
   const serverAllOverrides = globs('./*', { cwd: tmpOverrides })
@@ -363,67 +253,7 @@ const style = {
     .filter(f => lstatSync(join(tmpOverrides, f)).isDirectory())
     .concat('mods')
 
-  for (const conf of sftpConfigs) {
-    logUpdate.done()
-
-    if (!(await pressEnterOrEsc(
-        `To upload SFTP ${style.string(conf.label)} press ENTER. Press ESC to skip.`
-    )))
-      continue
-
-    const sftp = new Client()
-
-    const updateBox = (/** @type {any[]} */ ...args) =>
-      logUpdate(
-        boxen(
-          args.map((v, i) => Object.values(style)[i](String(v))).join(' '),
-          {
-            borderStyle: 'round',
-            borderColor: '#22577a',
-            width      : 50,
-            padding    : { left: 1, right: 1 },
-            title      : style.info(conf.label),
-          }
-        )
-      )
-
-    updateBox('Establishing connection')
-    try {
-      await sftp.connect(conf.config)
-    }
-    catch (error) {
-      end('Cant connect to SFTP')
-      continue
-    }
-
-    updateBox('Removing folders')
-    await Promise.all(
-      serverRemoveDirs.map(async (dir) => {
-        try {
-          if (!(await sftp.stat(dir)).isDirectory) return
-          await sftp.rmdir(dir, true)
-          updateBox('Removed folder:', dir)
-        }
-        catch (error) {}
-      })
-    )
-
-    updateBox(`Copy ${serverSetupConfig}`)
-    await sftp.fastPut(serverSetupConfig, serverSetupConfig)
-
-    updateBox('Change and copy server overrides')
-    replace_in_file.sync({
-      files: join(conf.dir, 'overrides/config/mc2discord.toml'),
-      from : /(start\s*=\s*")[^"]+"/,
-      to   : `$1\`\`\`diff\\n+ Server Started! +\\n     ${nextVersion}\\n\`\`\`"`,
-    })
-
-    let fileCounter = 0
-    sftp.on('upload', () => updateBox('Copy overrides', ++fileCounter))
-    await sftp.uploadDir(join(conf.dir, 'overrides'), './')
-
-    await sftp.end()
-  }
+  manageSFTP(serverRemoveDirs, serverSetupConfig)
 
   /*
   ██████╗ ███████╗██╗     ███████╗ █████╗ ███████╗███████╗

@@ -9,15 +9,33 @@
 - [ ] ✏️ Buff advanced generators
 - [ ] 📖 remove Eldritch Knowledge Rewards since newbies eat them all at once
 - [ ] ✏️ adv Rock Crystals Beneficate In QMD
-- [ ] ✏️ steel And Up Turbine Upgrades Not Working
-- [ ] 📖 note That Mithminite Armor Simplify Bores
 - [ ] ⚡ Replace `utils.rh` with subcommands to improve performance. `IItemStack.ores` is slow.
 - [ ] ✏️ QMDs `Sodium Chlorde` and `Sodium Nitrate` unify
-- [ ] 🌍 Fix Biome Tweaker block replacementsafter AdvRock filler block change
+- [ ] 🌍 Fix Biome Tweaker block replacements after AdvRock filler block change
 - [ ] 🖼️ Optimize Bibliocraft textures
-- [ ] ✏️ addVoidBeaconTab
-- [ ] addSkyblockTpMechanic
-- [ ] Fix Myrmexes have double JER trade tabs
+- [ ] ✏️ add Void Beacon Tab
+- [ ] 📖 add E2E book notes and quest about Skyblock Tp Mechanic
+- [ ] fix Black Quartz And Certus Untransformable Portal Spread
+- [ ] 🌍 Remove Poison Ivy from OTG generator
+- [ ] 🧩 make Backpacks Unbreakable to prevent destroying for several reasons
+- [ ] 📖 Getting Fire fix quest
+- [ ] 📖 Touching portal not working on server
+- [ ] 📖 15 health for portal should be shared for whole team
+- [ ] 📖 Piston Rewards add amount of reward
+- [ ] ✏️ Completely disable OreDict melting
+- [ ] Install Pixel Reality - Luminance
+- [ ] 📖 Add "Crafting" upgrade to Compressing robot
+- [ ] 📖 Add note about Assembler+Battery+Bottle
+- [ ] ✏️ Native Clusters should be made into Dirty Ores to prevent multiplication of recipes
+- [ ] 🟢 Add https://legacy.curseforge.com/minecraft/mc-mods/advanced-smelter
+- [ ] 💿 Add null check to fix Dynamism Table https://discord.com/channels/911676461050642432/1195650557004755056/1197080356604616704
+- [ ] 📖 Fix "Completed chapter" message
+- [ ] 🦆 Rewrite Goose logic https://github.com/friendlyhj/ZenUtils/issues/33
+- [x] ✏️ TE Sawmill fix Spectre wood => Planks (remove Camuflaged Panelling from game)
+- [ ] ✏️ Fix enderman still drop ghost Mysical Flesh
+- [ ] 🌍 Terra Nova (112) regenerate JER
+- [ ] 🟠 When update Precision Mining add `438451` to server-setup-config
+- [ ] ✏️ Remove removed item from Overworld Explorer villager trades
 
 ```sh
 /bcore_ticktime

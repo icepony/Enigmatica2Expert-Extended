@@ -6,9 +6,11 @@ export default antfu({
   rules    : {
 
     // Override @antfu rules to my personal prefferences
-    'style/key-spacing' : ['error', { align: 'colon' }],
-    'antfu/if-newline'  : 'off',
-    'style/comma-dangle': [
+    'style/key-spacing'    : ['error', { align: 'colon' }],
+    'style/no-multi-spaces': 'off',
+    // 'style/type-annotation-spacing': 'off',
+    'antfu/if-newline'     : 'off',
+    'style/comma-dangle'   : [
       'error',
       {
         functions: 'never',
