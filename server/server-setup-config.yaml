@@ -99,13 +99,14 @@ install:
       - 408853 # Particle Culling
       - 409087 # Entity Culling
       - 417557 # BilingualName
-      - 438451 # Precision Mining
       - 446253 # Better Biome Blend
       - 454215 # Just Enough Drags
       - 461660 # Mouse Tweaks Unofficial
+      - 502649 # Mini Effects
       - 616190 # JEI Utilities
       - 624967 # RenderLib
       - 782070 # Startup Timer
+      - 940521 # Just Enough Magiculture
 
     # The base path where the server should be installed to, ~ for current path
   baseInstallPath: ~
