@@ -42,7 +42,8 @@ events.onCustomReward(function (e as mods.zenutils.ftbq.CustomRewardEvent) {
     // notifyEveryone(e.player, 'e2ee.chapter_complete', e.reward.quest.chapter.titleText.formattedText);
     server.commandManager.executeCommandSilent(server,
       '/say §l' ~ e.player.name
-      ~ '§r has fully completed the §n' ~ e.reward.quest.chapter.titleText.formattedText
+      ~ '§r has fully completed the §n'
+      ~ e.reward.quest.chapter.titleText.formattedText.replaceAll('q\\.(.+)\\.name','$1')
       ~ '§r chapter after §l' ~ formatPlayTime(e.player) ~ '§r of play!§r ```Congrats!```'
     );
   }
