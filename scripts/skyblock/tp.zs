@@ -12,14 +12,12 @@ events.onPlayerTick(function (e as crafttweaker.event.PlayerTickEvent) {
   if (
     e.player.world.remote
     || e.player.world.getWorldTime() % 2 != 0
-    || isNull(e.player.currentItem)
     || e.player.getDimension() != 0
     || e.player.posY < SKY_TP_HEIGHT
   ) return;
 
-  print('~~~ entering onPlayerTick');
   // Show warning message if player doesnt hold book but only once per server restart
-  if (!(requiredItem has e.player.currentItem)) {
+  if (isNull(e.player.currentItem) || !(requiredItem has e.player.currentItem)) {
     if (isNull(playersNoted[e.player])) {
       playersNoted[e.player] = true;
       e.player.sendRichTextMessage(crafttweaker.text.ITextComponent.fromData([{
@@ -32,8 +30,8 @@ events.onPlayerTick(function (e as crafttweaker.event.PlayerTickEvent) {
     return;
   }
 
-  print('~~~ executing tp');
   e.player.addPotionEffect(<potion:minecraft:levitation>.makePotionEffect(600, 0));
-  e.player.changeDimension(3);
-  e.player.posY = SKY_TP_HEIGHT - 255.0;
+  server.commandManager.executeCommandSilent(server,
+    '/tpx ' ~ e.player.name ~ ' ' ~ e.player.posX ~ ' ' ~ (SKY_TP_HEIGHT - 255.0) ~ ' ' ~ e.player.posZ ~ ' 3'
+  );
 });
