@@ -96,7 +96,7 @@ key_FpsReducer.key.guiOpen:0
 key_gui.xaero_alternative_list_players:0
 key_gui.xaero_display_all_sets:0
 key_gui.xaero_enlarge_map:56
-key_gui.xaero_instant_waypoint:0
+key_gui.xaero_instant_waypoint:40:CONTROL
 key_gui.xaero_map_zoom_in:0
 key_gui.xaero_map_zoom_out:0
 key_gui.xaero_minimap_settings:50:SHIFT
