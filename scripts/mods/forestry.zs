@@ -9,8 +9,16 @@ recipes.remove(<forestry:bronze_shovel>);
 recipes.remove(<forestry:bronze_pickaxe>);
 
 // Remove deprecated recipes
-recipes.removeByRecipeName('forestry:greenhouse_window');
+recipes.removeByRecipeName('forestry:greenhouse_control');
+recipes.removeByRecipeName('forestry:greenhouse_dehumidifier');
+recipes.removeByRecipeName('forestry:greenhouse_fan');
+recipes.removeByRecipeName('forestry:greenhouse_gearbox');
+recipes.removeByRecipeName('forestry:greenhouse_heater');
+recipes.removeByRecipeName('forestry:greenhouse_humidifier');
+recipes.removeByRecipeName('forestry:greenhouse_hygro');
+recipes.removeByRecipeName('forestry:greenhouse_plain');
 recipes.removeByRecipeName('forestry:greenhouse_window_roof');
+recipes.removeByRecipeName('forestry:greenhouse_window');
 
 // Fixing fruit juice amount from tomatos
 for tomato in <ore:cropTomato>.items {
