@@ -661,7 +661,8 @@ craft.remake(<enderio:block_inventory_panel_sensor>, ['pretty',
 });
 
 // [Tiny Inventory System Storage] from [Oak Chest][+2]
-craft.remake(<enderio:block_inventory_chest_tiny>, ['pretty',
+recipes.remove(<enderio:block_inventory_chest_tiny>);
+craft.make(<enderio:block_inventory_chest_tiny>.withTag( {"enderio:energy": 1000000000} ), ['pretty',
   '  R  ',
   'S c S'], {
   'R': <ore:ingotSilicon>,

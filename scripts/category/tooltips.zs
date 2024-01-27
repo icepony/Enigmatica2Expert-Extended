@@ -328,15 +328,15 @@ desc.both(<tconstruct:shard>.withTag({ Material: 'ghostwood' }), 'tcon.ghostwood
 .matchAll(/(enderio:block_inventory_chest_\w+)\/size"\s*base="(\d+)"/g)]
 .map(([,id,size])=>`desc.tooltip(<${id}>, 'store_x_stacks', ${size});`)
 ) */
-desc.tooltip(<enderio:block_inventory_chest_tiny>, 'store_x_stacks', 94);
-desc.tooltip(<enderio:block_inventory_chest_small>, 'store_x_stacks', 170);
-desc.tooltip(<enderio:block_inventory_chest_medium>, 'store_x_stacks', 255);
-desc.tooltip(<enderio:block_inventory_chest_big>, 'store_x_stacks', 358);
-desc.tooltip(<enderio:block_inventory_chest_large>, 'store_x_stacks', 506);
-desc.tooltip(<enderio:block_inventory_chest_huge>, 'store_x_stacks', 699);
-desc.tooltip(<enderio:block_inventory_chest_enormous>, 'store_x_stacks', 973);
-desc.tooltip(<enderio:block_inventory_chest_warehouse>, 'store_x_stacks', 1373);
-desc.tooltip(<enderio:block_inventory_chest_warehouse13>, 'store_x_stacks', 1944);
+desc.tooltip(<enderio:block_inventory_chest_tiny>, 'store_x_stacks', 200);
+desc.tooltip(<enderio:block_inventory_chest_small>, 'store_x_stacks', 400);
+desc.tooltip(<enderio:block_inventory_chest_medium>, 'store_x_stacks', 600);
+desc.tooltip(<enderio:block_inventory_chest_big>, 'store_x_stacks', 1000);
+desc.tooltip(<enderio:block_inventory_chest_large>, 'store_x_stacks', 1400);
+desc.tooltip(<enderio:block_inventory_chest_huge>, 'store_x_stacks', 1800);
+desc.tooltip(<enderio:block_inventory_chest_enormous>, 'store_x_stacks', 2600);
+desc.tooltip(<enderio:block_inventory_chest_warehouse>, 'store_x_stacks', 3600);
+desc.tooltip(<enderio:block_inventory_chest_warehouse13>, 'store_x_stacks', 5000);
 /**/
 
 for lang, items in {
