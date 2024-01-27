@@ -17,6 +17,91 @@
           "Count": 1
         },
         "CareerLevel": 1
+      },
+      {
+        "action": "add",
+        "CareerLevel": 1,
+        "buy": { "id": "minecraft:emerald", "Count": { "min": 1, "max": 2 } },
+        "sell": [
+          { "id": "randomthings:beans", "Count": { "min": 8, "max": 16 } },
+          { "id": "actuallyadditions:item_food", "Damage": 16, "Count": { "min": 4, "max": 20 } },
+          { "id": "actuallyadditions:item_food", "Damage": 13, "Count": { "min": 4, "max": 20 } },
+          { "id": "immersiveengineering:seed", "Count": { "min": 5, "max": 20 } }
+        ]
+      },
+      {
+        "action": "add",
+        "CareerLevel": 2,
+        "buy": { "id": "minecraft:emerald", "Count": { "min": 1, "max": 2 } },
+        "sell": [
+          { "id": "actuallyadditions:item_coffee_beans", "Count": { "min": 4, "max": 8 } },
+          { "id": "exnihilocreatio:item_material", "Damage": 4, "Count": { "min": 10, "max": 30 } },
+          { "id": "exnihilocreatio:item_seed_cactus", "Count": { "min": 10, "max": 30 } },
+          { "id": "exnihilocreatio:item_seed_sugarcane", "Count": { "min": 10, "max": 30 } }
+        ]
+      },
+      {
+        "action": "add",
+        "CareerLevel": 3,
+        "buy": { "id": "minecraft:emerald", "Count": { "min": 1, "max": 2 } },
+        "sell": [
+          { "id": "rustic:tomato", "Count": { "min": 8, "max": 32 } },
+          { "id": "rustic:chili_pepper", "Count": { "min": 8, "max": 32 } },
+          { "id": "rustic:grapes", "Count": { "min": 8, "max": 32 } },
+          { "id": "rustic:olives", "Count": { "min": 8, "max": 32 } }
+        ]
+      },
+      {
+        "action": "add",
+        "CareerLevel": 4,
+        "buy": { "id": "minecraft:emerald", "Count": { "min": 1, "max": 2 } },
+        "sell": [
+          { "id": "biomesoplenty:persimmon", "Count": { "min": 4, "max": 10 } },
+          { "id": "biomesoplenty:peach", "Count": { "min": 4, "max": 10 } },
+          { "id": "biomesoplenty:pear", "Count": { "min": 4, "max": 10 } }
+        ]
+      },
+
+      {
+        "action": "add",
+        "CareerLevel": 5,
+        "buy": [
+          { "id": "forestry:farm_crops", "Count": 1 },
+          { "id": "forestry:farm_mushroom", "Count": 1 },
+          { "id": "forestry:farm_gourd", "Count": 1 },
+          { "id": "forestry:farm_nether", "Count": 1 },
+          { "id": "forestry:farm_ender", "Count": 1 }
+        ],
+        "sell": { "id": "minecraft:emerald", "Count": { "min": 50, "max": 64 } }
+      },
+      {
+        "action": "add",
+        "CareerLevel": 5,
+        "buy": [
+          { "id": "ic2:te", "Damage": 58, "Count": 1 },
+          { "id": "ic2:te", "Damage": 59, "Count": 1 },
+          { "id": "ic2:cropnalyzer", "Count": 1 }
+        ],
+        "sell": { "id": "minecraft:emerald", "Count": { "min": 32, "max": 64 } }
+      },
+      {
+        "action": "add",
+        "CareerLevel": 6,
+        "buy": [
+          { "id": "industrialforegoing:crop_sower", "Count": 1 },
+          { "id": "industrialforegoing:crop_enrich_material_injector", "Count": 1 },
+          { "id": "industrialforegoing:plant_interactor", "Count": 1 },
+          { "id": "actuallyadditions:block_farmer", "Count": 1 }
+        ],
+        "sell": { "id": "minecraft:emerald_block", "Count": { "min": 5, "max": 12 } }
+      },
+      {
+        "action": "add",
+        "CareerLevel": 7,
+        "buy": [
+          { "id": "industrialforegoing:crop_recolector", "Count": 1 }
+        ],
+        "sell": { "id": "minecraft:emerald_block", "Count": { "min": 10, "max": 30 } }
       }
     ]
   }

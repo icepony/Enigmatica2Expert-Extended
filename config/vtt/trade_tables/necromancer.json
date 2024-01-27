@@ -101,6 +101,55 @@
           "Count": 1,
           "Damage": 17
         }
+      },
+      {
+        "action": "add",
+        "CareerLevel": 5,
+        "buy": [
+          { "id": "iceandfire:myrmex_jungle_egg", "Count": 1, "Damage": 0 },
+          { "id": "iceandfire:myrmex_jungle_egg", "Count": 1, "Damage": 1 },
+          { "id": "iceandfire:myrmex_jungle_egg", "Count": 1, "Damage": 2 },
+          { "id": "iceandfire:myrmex_jungle_egg", "Count": 1, "Damage": 3 },
+          { "id": "iceandfire:myrmex_jungle_egg", "Count": 1, "Damage": 4 },
+          { "id": "iceandfire:myrmex_desert_egg", "Count": 1, "Damage": 0 },
+          { "id": "iceandfire:myrmex_desert_egg", "Count": 1, "Damage": 1 },
+          { "id": "iceandfire:myrmex_desert_egg", "Count": 1, "Damage": 2 },
+          { "id": "iceandfire:myrmex_desert_egg", "Count": 1, "Damage": 3 },
+          { "id": "iceandfire:myrmex_desert_egg", "Count": 1, "Damage": 4 }
+        ],
+        "buyB": { "id": "minecraft:emerald", "Count": { "min": 16, "max": 32 } },
+        "sell": { "id": "scalinghealth:heartcontainer", "Count": 1 }
+      },
+      {
+        "action": "add",
+        "CareerLevel": 6,
+        "buy": { "id": "iceandfire:gorgon_head", "Count": 1 },
+        "buyB": { "id": "minecraft:emerald", "Count": { "min": 12, "max": 18 } },
+        "sell": { "id": "thermalexpansion:morb", "Count": 1, "tag": { "id": "iceandfire:gorgon", "Generic": 1 } }
+      },
+      {
+        "action": "add",
+        "CareerLevel": 6,
+        "buy": { "id": "rats:marbled_cheese_rat_head", "Count": 1 },
+        "buyB": { "id": "minecraft:emerald", "Count": { "min": 12, "max": 18 } },
+        "sell": [
+          { "id": "thermalexpansion:morb", "Count": 1, "tag": { "id": "rats:ratlantean_spirit", "Generic": 1 } },
+          { "id": "thermalexpansion:morb", "Count": 1, "tag": { "id": "rats:feral_ratlantean", "Generic": 1 } }
+        ]
+      },
+      {
+        "action": "add",
+        "CareerLevel": 6,
+        "buy": { "id": "minecraft:skull", "Damage": 5, "Count": 1 },
+        "buyB": { "id": "minecraft:emerald", "Count": { "min": 12, "max": 18 } },
+        "sell": { "id": "minecraft:dragon_egg", "Count": 1 }
+      },
+      {
+        "action": "add",
+        "CareerLevel": 6,
+        "buy": { "id": "betteranimalsplus:hirschgeistskull_1", "Count": 1 },
+        "buyB": { "id": "minecraft:emerald", "Count": { "min": 12, "max": 18 } },
+        "sell": { "id": "thermalexpansion:morb", "Count": 1, "tag": { "id": "betteranimalsplus:hirschgeist", "Generic": 1 } }
       }
     ]
   }

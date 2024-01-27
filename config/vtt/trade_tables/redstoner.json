@@ -1,0 +1,62 @@
+{
+  "Profession": "vtt:redstoner",
+  "Career": "redstoner",
+  "Offers": {
+    "Recipes": [
+      {
+        "action": "add",
+        "CareerLevel": 3,
+        "buy": { "id": "minecraft:emerald", "Count": { "min": 2, "max": 8 } },
+        "sell": [
+          { "id": "appliedenergistics2:material", "Damage": 26, "Count": 1  },
+          { "id": "appliedenergistics2:part", "Damage": 461, "Count": 1 },
+          { "id": "cyclicmagic:clock", "Count": 1 },
+          { "id": "extrautils2:redstoneclock", "Count": 1  },
+          { "id": "extrautils2:redstonelantern", "Count": { "min": 2, "max": 4 } },
+          { "id": "extrautils2:scanner", "Count": 1  },
+          { "id": "immersiveengineering:connector", "Damage": 12, "Count": { "min": 2, "max": 4 } },
+          { "id": "immersiveengineering:connector", "Damage": 13, "Count": { "min": 2, "max": 4 } },
+          { "id": "immersiveengineering:wirecoil", "Damage": 5, "Count": { "min": 4, "max": 16 } },
+          { "id": "immersivetech:connectors", "Count": 1  },
+          { "id": "integrateddynamics:part_redstone_reader_item", "Count": 1  },
+          { "id": "integrateddynamics:part_redstone_writer_item", "Count": 1 },
+          { "id": "minecraft:redstone_lamp", "Count": { "min": 1, "max": 4 } },
+          { "id": "minecraft:redstone_torch", "Count": { "min": 2, "max": 8 } }
+        ]
+      },
+      {
+        "action": "add",
+        "CareerLevel": 3,
+        "buy": { "id": "minecraft:emerald", "Count": { "min": 2, "max": 8 } },
+        "sell": [
+          { "id": "quark:redstone_inductor", "Count": 1 },
+          { "id": "quark:redstone_randomizer", "Count": 1  },
+          { "id": "randomthings:advancedredstoneinterface", "Count": 1  },
+          { "id": "randomthings:advancedredstonerepeater", "Count": 1  },
+          { "id": "randomthings:advancedredstonetorch_on", "Count": 1  },
+          { "id": "randomthings:basicredstoneinterface", "Count": 1  },
+          { "id": "randomthings:diviningrod", "Damage": 4, "Count": 1 },
+          { "id": "randomthings:redstoneactivator", "Count": 1 },
+          { "id": "randomthings:redstoneobserver", "Count": 1  },
+          { "id": "randomthings:redstoneremote", "Count": 1  },
+          { "id": "randomthings:sidedredstone", "Count": 1  },
+          { "id": "storagedrawers:upgrade_redstone", "Damage": 1, "Count": { "min": 1, "max": 4 } },
+          { "id": "storagedrawers:upgrade_redstone", "Damage": 2, "Count": { "min": 1, "max": 4 } },
+          { "id": "storagedrawers:upgrade_redstone", "Count": { "min": 1, "max": 4 } },
+          { "id": "thaumcraft:redstone_relay", "Count": { "min": 2, "max": 8 } }
+        ]
+      },
+      {
+        "action": "add",
+        "CareerLevel": 4,
+        "buy": { "id": "minecraft:emerald", "Count": { "min": 8, "max": 32 } },
+        "sell": [
+          { "id": "actuallyadditions:block_phantom_redstoneface", "Count": 1  },
+          { "id": "compactmachines3:redstonetunneltool", "Count": { "min": 2, "max": 8 } },
+          { "id": "enderio:item_redstone_conduit", "Count": { "min": 2, "max": 8 } }
+
+        ]
+      }
+    ]
+  }
+}

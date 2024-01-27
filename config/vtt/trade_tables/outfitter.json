@@ -1,0 +1,57 @@
+{
+  "Profession": "immersiveengineering:engineer",
+  "Career": "immersiveengineering.outfitter",
+  "Offers": {
+    "Recipes": [
+      {
+        "action": "add",
+        "CareerLevel": 4,
+        "buy": [
+          { "id": "twilightforest:arctic_fur", "Count": { "min": 16, "max": 32 } },
+          { "id": "twilightforest:alpha_fur", "Count": { "min": 8, "max": 16 } }
+        ],
+        "buyB": { "id": "immersiveengineering:toolbox", "Count": 1 },
+        "sell": [
+          { "id": "twilightforest:shader", "Count": 1, "tag": { "shader_type": "Alpha Yeti" } },
+          { "id": "twilightforest:shader", "Count": 1, "tag": { "shader_type": "Auroralized" } },
+          { "id": "twilightforest:shader", "Count": 1, "tag": { "shader_type": "Carminite" } },
+          { "id": "twilightforest:shader", "Count": 1, "tag": { "shader_type": "Cube of Annihilation" } },
+          { "id": "twilightforest:shader", "Count": 1, "tag": { "shader_type": "Fiery" } },
+          { "id": "twilightforest:shader", "Count": 1, "tag": { "shader_type": "Final Castle" } },
+          { "id": "twilightforest:shader", "Count": 1, "tag": { "shader_type": "Firefly" } },
+          { "id": "twilightforest:shader", "Count": 1, "tag": { "shader_type": "Hydra" } },
+          { "id": "twilightforest:shader", "Count": 1, "tag": { "shader_type": "Ironwood" } },
+          { "id": "twilightforest:shader", "Count": 1, "tag": { "shader_type": "Knight Phantom" } },
+          { "id": "twilightforest:shader", "Count": 1, "tag": { "shader_type": "Knightly" } },
+          { "id": "twilightforest:shader", "Count": 1, "tag": { "shader_type": "Lich" } },
+          { "id": "twilightforest:shader", "Count": 1, "tag": { "shader_type": "Mazestone" } },
+          { "id": "twilightforest:shader", "Count": 1, "tag": { "shader_type": "Minoshroom" } },
+          { "id": "twilightforest:shader", "Count": 1, "tag": { "shader_type": "Naga" } },
+          { "id": "twilightforest:shader", "Count": 1, "tag": { "shader_type": "Pinch Beetle" } },
+          { "id": "twilightforest:shader", "Count": 1, "tag": { "shader_type": "Questing Ram" } },
+          { "id": "twilightforest:shader", "Count": 1, "tag": { "shader_type": "Snakestone" } },
+          { "id": "twilightforest:shader", "Count": 1, "tag": { "shader_type": "Snow Queen" } },
+          { "id": "twilightforest:shader", "Count": 1, "tag": { "shader_type": "Steeleaf" } },
+          { "id": "twilightforest:shader", "Count": 1, "tag": { "shader_type": "Towerwood" } },
+          { "id": "twilightforest:shader", "Count": 1, "tag": { "shader_type": "Twilight" } },
+          { "id": "twilightforest:shader", "Count": 1, "tag": { "shader_type": "Underbrick" } },
+          { "id": "twilightforest:shader", "Count": 1, "tag": { "shader_type": "Ur-Ghast" } }
+        ]
+      },
+      {
+        "action": "add",
+        "CareerLevel": 5,
+        "buy": { "id": "randomthings:spectreilluminator", "Count": { "min": 2, "max": 8 } },
+        "buyB": { "id": "twilightforest:shader", "Count": 1 },
+        "sell": [
+          { "id": "twilightforest:shader_bag", "Count": 1, "tag": { "shader_rarity": "COMMON" } },
+          { "id": "twilightforest:shader_bag", "Count": 1, "tag": { "shader_rarity": "RARE" } },
+          { "id": "twilightforest:shader_bag", "Count": 1, "tag": { "shader_rarity": "TWILIGHT" } },
+          { "id": "twilightforest:shader_bag", "Count": 1, "tag": { "shader_rarity": "UNCOMMON" } },
+          { "id": "twilightforest:shader_bag", "Count": 1, "tag": { "shader_rarity": "EPIC" } },
+          { "id": "twilightforest:shader_bag", "Count": 1, "tag": { "shader_rarity": "RELIC" } }
+        ]
+      }
+    ]
+  }
+}
