@@ -12,7 +12,6 @@
 	},
 	{
 		title: "6400",
-		icon: "chisel:concrete_lightblue 1 5",
 		item: "chisel:concrete_lightblue 1 5",
 		count: 6400
 	}]
