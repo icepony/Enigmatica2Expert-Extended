@@ -17,8 +17,10 @@ val MAIN_HAND = crafttweaker.entity.IEntityEquipmentSlot.mainHand();
 events.onPlayerInteractEntity(function (e as crafttweaker.event.PlayerInteractEntityEvent) {
   val player = e.player;
   if (
+    // Event already cancelled by other event handlers
+    e.canceled
     // Fake player not allowed
-    player.fake
+    || player.fake
     // Player must be sneaking
     || !player.isSneaking
     // Player must be holding something
