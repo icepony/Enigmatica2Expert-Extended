@@ -472,3 +472,9 @@ mods.tconstruct.Casting.addTableRecipe(
   <tconstruct:cast>.withTag({ PartType: 'tconstruct:sharpening_kit' }),
   <liquid:stone>, 144, false
 );
+
+// Alt recipe
+scripts.mods.forestry.ThermionicFabricator.addCast(<tconstruct:clear_glass> * 16, Grid([
+  'ggg', 'g g', 'ggg'], {
+  'g': <ore:blockGlass>,
+}).shaped(), <liquid:glass> * 8000, <forestry:wax_cast:*>);
