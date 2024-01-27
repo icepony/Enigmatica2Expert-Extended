@@ -20,18 +20,6 @@ craft.reshapeless(<aeadditions:certustank>, 'ABB', {
   B: <appliedenergistics2:quartz_glass>, // Quartz Glass
 });
 
-function newAdvCellRecipe(input as IIngredient, output as IItemStack) {
-  recipes.remove(output);
-  recipes.addShaped(output,
-    [[<appliedenergistics2:quartz_glass>, <appliedenergistics2:material:8>, <appliedenergistics2:quartz_glass>],
-      [<appliedenergistics2:material:8>, input, <appliedenergistics2:material:8>],
-      [<ironchest:iron_chest:2>, <ironchest:iron_chest:2>, <ironchest:iron_chest:2>]]);
-
-  if (!isNull(input)) {
-    recipes.addShapeless(output, [<aeadditions:storage.casing>, input]);
-  }
-}
-
 function newGasCellRecipe(input as IIngredient, output as IItemStack) {
   recipes.remove(output);
   recipes.addShaped(output,
@@ -45,12 +33,13 @@ function newGasCellRecipe(input as IIngredient, output as IItemStack) {
 
 // ---=== Storage Housings ===---
 
-newAdvCellRecipe(null, <aeadditions:storage.casing>);
+utils.rh(null, <aeadditions:storage.casing>);
 newGasCellRecipe(null, <aeadditions:storage.casing:2>);
 
 // ---=== Advanced Cells ===---
-for i in 0 .. 4 {
-  newAdvCellRecipe(<aeadditions:storage.component>.definition.makeStack(i), <aeadditions:storage.physical>.definition.makeStack(i));
+for i in 0 .. 4{
+  utils.rh(<aeadditions:storage.component>.definition.makeStack(i));
+  utils.rh(<aeadditions:storage.physical>.definition.makeStack(i));
 }
 
 // ---=== Gas Cells ===---

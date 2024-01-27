@@ -7,7 +7,7 @@ recipes.remove(<ae2wtlib:infinity_booster_card>);
 recipes.addShaped('Infinity Booster Card',
   <ae2wtlib:infinity_booster_card>,
   [[<appliedenergistics2:quantum_link>, <appliedenergistics2:material:47>, <appliedenergistics2:quantum_link>],
-    [<ore:gemAnglesite>, <aeadditions:storage.component:1>, <ore:gemAnglesite>],
+    [<ore:gemAnglesite>, <nae2:material:2>, <ore:gemAnglesite>],
     [<appliedenergistics2:quantum_link>, <appliedenergistics2:material:47>, <appliedenergistics2:quantum_link>]]);
 
 val wctIngrs = {

@@ -1180,11 +1180,11 @@ static values as int[int][string] = {
   'environmentaltech:solar_cell_erodium'       : { 0: 329906 },
   'deepmoblearning:simulation_chamber'         : { 0: 346287 },
   'extendedcrafting:table_advanced'            : { 0: 362555 },
-  'aeadditions:storage.component'              : {
-    0: 392933,
-    1: 1104835,
-    2: 3236879,
-    3: 9630727,
+  'nae2:material'                              : {
+    1: 392933,
+    2: 1104835,
+    3: 3236879,
+    4: 9630727,
   },
   'environmentaltech:void_res_miner_cont_3': { 0: 464048 },
   'environmentaltech:ionite_crystal'       : { 0: 498569 },

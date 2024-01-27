@@ -74,7 +74,7 @@ val list = {
   'Ж': <draconicevolution:draconium_capacitor:1>,
   '☑': utils.tryCatch('threng:material', 14, <gendustry:genetics_processor>), // Speculative Processor
   '☠': <extendedcrafting:material:13>,
-  'ⱋ': <aeadditions:storage.component:3>,
+  'ⱋ': <nae2:material:4>,
   '☒': <extrautils2:compressedcobblestone:7>,
   '◱': <extrautils2:decorativesolid:3>,
   '⩉': <extrautils2:drum:3>,
@@ -574,7 +574,7 @@ craft.make(<storagedrawers:upgrade_creative:1>, ['pretty',
   '♦': <ore:gemAnglesite>, // Anglesite
   '◘': <thermalexpansion:frame:148>, // Resonant Cell Frame (Full)
   'S': <threng:material:14>, // Speculative Processor
-  '1': <aeadditions:storage.component:3>, // 16384k ME Storage Component
+  '1': <nae2:material:4>, // 16384k ME Storage Component
   '■': <ore:blockAethium>, // Aethium
   'C': <draconicevolution:crafting_injector:3>, // Chaotic Injector
   '◊': <ore:gemBenitoite>, // Benitoite

@@ -527,10 +527,10 @@ val storCompIngrs = [
   [<appliedenergistics2:material:36>, /*     4k */ <ore:dustGlowstone>, <appliedenergistics2:material:22>, /* Logic Processor */              <ic2:re_battery>.withTag({ charge: 10000.0 })], // RE-Battery
   [<appliedenergistics2:material:37>, /*    16k */ <ore:dustGlowstone>, <appliedenergistics2:material:23>, /* Calculation Processor */        <ic2:advanced_re_battery>.withTag({ charge: 100000.0 })], // Advanced RE-Battery
   [<appliedenergistics2:material:38>, /*    64k */ <ore:dustGlowstone>, <appliedenergistics2:material:23>, /* Calculation Processor */        <ic2:energy_crystal>.withTag({ charge: 1000000.0 })], // Energy Crystal
-  [<aeadditions:storage.component>  , /*   256k */ <ore:dustGlowstone>, <appliedenergistics2:material:24>, /* Engineering Processor */        <ic2:lapotron_crystal>.withTag({ charge: 1.0e7 })], // Lapotron Crystal
-  [<aeadditions:storage.component:1>, /*  1024k */ <ore:dustGlowstone>, <appliedenergistics2:material:24>, /* Engineering Processor */        <requious:quantron>.withTag({ energy: 200000000 })], // Quantron
-  [<aeadditions:storage.component:2>, /*  4096k */ <ore:dustGlowstone>, <threng:material:6>              , /* Massively Parallel Processor */ <requious:positron_unit>.withTag({ energy: 2000000000 })], // Positron Unit
-  [<aeadditions:storage.component:3>, /* 16384k */ <ore:dustGlowstone>, <threng:material:6>              , /* Massively Parallel Processor */ <ore:blockDraconiumCharged>], // Charged Draconium Block
+  [<nae2:material:1>, /*   256k */ <ore:dustGlowstone>, <appliedenergistics2:material:24>, /* Engineering Processor */        <ic2:lapotron_crystal>.withTag({ charge: 1.0e7 })], // Lapotron Crystal
+  [<nae2:material:2>, /*  1024k */ <ore:dustGlowstone>, <appliedenergistics2:material:24>, /* Engineering Processor */        <requious:quantron>.withTag({ energy: 200000000 })], // Quantron
+  [<nae2:material:3>, /*  4096k */ <ore:dustGlowstone>, <threng:material:6>              , /* Massively Parallel Processor */ <requious:positron_unit>.withTag({ energy: 2000000000 })], // Positron Unit
+  [<nae2:material:4>, /* 16384k */ <ore:dustGlowstone>, <threng:material:6>              , /* Massively Parallel Processor */ <ore:blockDraconiumCharged>], // Charged Draconium Block
 ] as IIngredient[][];
 
 for i, inputs in storCompIngrs {
