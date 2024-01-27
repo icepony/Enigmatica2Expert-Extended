@@ -25,7 +25,6 @@ endreborn:armour_leggings_obsidian
 endreborn:block_end_forge
 endreborn:ender_bow
 endreborn:entropy_wand
-endreborn:food_ender_flesh
 endreborn:ingot_infused
 endreborn:item_shard_obsidian
 endreborn:tool_axe_endorium

@@ -2217,6 +2217,7 @@ val removeItemAspectList = [
 <wft:wft>,
 <wit:wit>,
 <wpt:wpt>,
+<endreborn:food_ender_flesh>,
 ] as IItemStack[];
 for item in removeItemAspectList {
   item.removeAspects(allAspects);

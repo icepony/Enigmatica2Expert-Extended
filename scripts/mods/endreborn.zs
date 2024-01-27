@@ -31,6 +31,8 @@ for recipeName in [
   recipes.removeByRecipeName(recipeName);
 }
 
+utils.rh(<endreborn:food_ender_flesh>, false, -1, false);
+
 scripts.process.fill(<ore:dustDimensional>, <liquid:crystal> * 1000, <endreborn:catalyst>);
 
 // Add dust because materializer can work only with this one
