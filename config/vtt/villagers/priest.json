@@ -1,8 +1,8 @@
 {
-    "profession": {
-        "name": "minecraft:priest"
-    },
-    "careers": [
-        "necromancer"
-    ]
+  "profession": {
+    "name": "minecraft:priest"
+  },
+  "careers": [
+    "necromancer"
+  ]
 }
