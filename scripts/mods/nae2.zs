@@ -20,3 +20,13 @@ for i, storage in [
     "D": <ironchest:iron_chest:2>, # Diamond Chest
   });
 }
+
+# [Reconstruction Chamber] from [Empowered Emeradic Crystal][+2]
+craft.remake(<nae2:reconstruction_chamber>, ["pretty",
+  "▬ ⌃ ▬",
+  "⌃ * ⌃",
+  "▬ ⌃ ▬"], {
+  "▬": <ore:ingotElectricalSteel>,         # Electrical Steel Ingot
+  "⌃": <appliedenergistics2:quartz_glass>, # Quartz Glass
+  "*": <actuallyadditions:item_crystal_empowered:4>, # Empowered Emeradic Crystal
+});
