@@ -172,7 +172,7 @@ utils.rh(<ic2:resource:5>); // Bronze
 utils.rh(<ic2:ingot:1>);
 // *============================*
 
-utils.rh(<contenttweaker:item_ore_tungsten:1>);
+utils.rh(<contenttweaker:item_ore_tungsten:1>, true, -1, false);
 utils.rh(<contenttweaker:item_ore_tungsten:2>);
 utils.rh(<contenttweaker:item_ore_tungsten:3>);
 utils.rh(<jaopca:block_blocktungsten>);
