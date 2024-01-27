@@ -14,7 +14,7 @@
 		count: 20
 	},
 	{
-		icon: "thaumcraft:curio 20 3",
+		icon: "thaumcraft:curio 1 3",
 		item: "thaumcraft:curio 1 3",
 		count: 20
 	}]
