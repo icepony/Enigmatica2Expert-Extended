@@ -543,6 +543,20 @@ for i, inputs in storCompIngrs {
     '⌃': i == 0 ? <appliedenergistics2:material:1> as IIngredient : storCompIngrs[i - 1][0], // Prev
     'C': inputs[3], // Battery
   });
+
+  if (i > 4) {
+    val curr = itemUtils.getItem('nae2:coprocessor_' ~ pow(4, i - 4) as int ~ 'x');
+    val prev = itemUtils.getItem('nae2:coprocessor_' ~ pow(4, i - 5) as int ~ 'x');
+    craft.remake(curr, ['pretty',
+      '♥ - ♥',
+      '⌃ C ⌃',
+      '♥ - ♥'], {
+      '♥': <ore:ingotFluixSteel>,
+      '-': inputs[2], // Processor
+      '⌃': i == 5 ? <appliedenergistics2:crafting_accelerator> as IIngredient : prev, // Prev
+      'C': inputs[3], // Battery
+    });
+  }
 }
 // ---------------------------------
 
