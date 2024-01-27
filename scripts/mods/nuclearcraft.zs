@@ -370,9 +370,9 @@ scripts.process.solution(null, [<fluid:nitrogen> * 800, <fluid:hydrogen> * 2400]
 scripts.processUtils.avdRockXmlRecipe('Crystallizer', [<ore:dustBoron> * 5], [<fluid:ammonia> * 5000], [<nuclearcraft:gem:1> * 10], null);
 
 // Platings Laser Alternatives
-scripts.processUtils.avdRockXmlRecipeEx('PrecisionLaserEtcher', [<ore:plateLead> * 12, <ore:dustCrystalBinder> * 32, <ore:ingotUranium238> * 32, <ore:ingotTough> * 32], null, [<nuclearcraft:part:3> * 8], null, { power: 160000, timeRequired: 20 });
-scripts.processUtils.avdRockXmlRecipeEx('PrecisionLaserEtcher', [<ore:plateLead> * 12, <ore:ingotUranium238> * 32, <ore:ingotTough> * 32], null, [<nuclearcraft:part:2> * 8], null, { power: 130000, timeRequired: 40 });
-scripts.processUtils.avdRockXmlRecipeEx('PrecisionLaserEtcher', [<ore:plateLead> * 12, <ore:ingotTough> * 32], null, [<nuclearcraft:part:1> * 8], null, { power: 100000, timeRequired: 60 });
+scripts.processUtils.avdRockXmlRecipeEx('PrecisionLaserEtcher', [<ore:plateLead> * 12, <ore:dustCrystalBinder> * 32, <ore:ingotUranium238> * 32, <ore:ingotTough> * 16], null, [<nuclearcraft:part:3> * 8], null, { power: 160000, timeRequired: 20 });
+scripts.processUtils.avdRockXmlRecipeEx('PrecisionLaserEtcher', [<ore:plateLead> * 12, <ore:ingotUranium238> * 32, <ore:ingotTough> * 16], null, [<nuclearcraft:part:2> * 8], null, { power: 130000, timeRequired: 40 });
+scripts.processUtils.avdRockXmlRecipeEx('PrecisionLaserEtcher', [<ore:plateLead> * 12, <ore:ingotTough> * 16], null, [<nuclearcraft:part:1> * 8], null, { power: 100000, timeRequired: 60 });
 scripts.processUtils.avdRockXmlRecipeEx('PrecisionLaserEtcher', [<ore:plateLead> * 12, <ore:ingotGraphite> * 16], null, [<nuclearcraft:part> * 8], null, { power: 70000, timeRequired: 80 });
 
 // ----------------------------------------

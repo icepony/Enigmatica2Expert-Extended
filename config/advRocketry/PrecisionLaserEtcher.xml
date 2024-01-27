@@ -52,7 +52,7 @@
 			<oreDict>plateLead 12</oreDict>
 			<oreDict>dustCrystalBinder 32</oreDict>
 			<oreDict>ingotUranium238 32</oreDict>
-			<oreDict>ingotTough 32</oreDict>
+			<oreDict>ingotTough 16</oreDict>
 		</input>
 		<output>
 			<itemStack>nuclearcraft:part 8 3</itemStack>
@@ -88,7 +88,7 @@
 		<input>
 			<oreDict>plateLead 12</oreDict>
 			<oreDict>ingotUranium238 32</oreDict>
-			<oreDict>ingotTough 32</oreDict>
+			<oreDict>ingotTough 16</oreDict>
 		</input>
 		<output>
 			<itemStack>nuclearcraft:part 8 2</itemStack>
@@ -99,7 +99,7 @@
 	<Recipe timeRequired="60" power="100000">
 		<input>
 			<oreDict>plateLead 12</oreDict>
-			<oreDict>ingotTough 32</oreDict>
+			<oreDict>ingotTough 16</oreDict>
 		</input>
 		<output>
 			<itemStack>nuclearcraft:part 8 1</itemStack>
