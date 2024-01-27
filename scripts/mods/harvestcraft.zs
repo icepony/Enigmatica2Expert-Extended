@@ -5,9 +5,10 @@ import crafttweaker.item.IItemStack;
 // Make Universal Tweaks highlite items that have usages in crafting table recipes
 /* Inject_js{
 const recipesIngredients = getTableRecipes()
-  .map(r => [...new Set([
+  ?.map(r => [...new Set([
     ...r.input.matchAll(/<([^:]+:[^:]+(?::\d+)?)>/g),
   ].map(o => o[1]))])
+if(!recipesIngredients) return
 
 const itemsMap = {}
 
