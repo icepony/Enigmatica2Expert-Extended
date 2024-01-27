@@ -1233,3 +1233,6 @@ LootTweaker.getTable('thaumicaugmentation:block/loot_rare').getPool('loot_rare')
 // TODO: Seems like this tweak not working
 loottweaker.LootTweaker.getTable('thaumicaugmentation:block/loot_common').getPool('loot_common').addItemEntry(<qmd:semiconductor:1>, 1);
 loottweaker.LootTweaker.getTable('thaumicaugmentation:block/loot_uncommon').getPool('loot_uncommon').addItemEntry(<qmd:semiconductor>, 1);
+
+// Pech wand peaceful alt
+mods.bloodmagic.BloodAltar.addRecipe(<thaumcraft:pech_wand>, <redstonerepository:tool.wrench_gelid>, 4, 80000, 200, 200);
