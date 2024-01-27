@@ -1,8 +1,8 @@
 {
-	"name": "Enigmatica2:Expert",
+  "name": "Enigmatica2:Expert",
   "subtitle": "EXTENDED",
-	"landing_text": "This book contain $(l)useful knowledges/$ about modpack.",
-	"version": 0,
+  "landing_text": "This book contain $(l)useful knowledges/$ about modpack.$(br)$(br)$(#0099aa)Hold this book in your hand and ascend to a height of 257 blocks./$",
+  "version": 0,
   "creative_tab": "tools",
   "pause_game": true,
   "book_texture": "patchouli:textures/gui/book_blue.png",
