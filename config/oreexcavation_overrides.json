@@ -8,5 +8,6 @@
     ,{"itemID": "ic2:drill"                     , "speed": 32, "limit":  32, "range": 24, "exaustion": 0.1, "experience": 0}
     ,{"itemID": "ic2:diamond_drill"             , "speed": 64, "limit":  64, "range": 24, "exaustion": 0.1, "experience": 0}
     ,{"itemID": "ic2:iridium_drill"             , "speed":128, "limit": 128, "range": 24, "exaustion": 0.1, "experience": 0}
+    ,{"itemID": "advancedrocketry:jackhammer"   , "speed":256, "limit": 256, "range": 48, "exaustion": 0.1, "experience": 0}
   ]
 }

@@ -55,6 +55,7 @@ desc.tooltip(<immersiveengineering:drill>        , 'excavate.overrides', '§7' +
 desc.tooltip(<ic2:drill>                         , 'excavate.overrides', '§7' + desc.local('speed') + ': §632' + ' ' + '§7' + desc.local('limit') + ': §632');
 desc.tooltip(<ic2:diamond_drill>                 , 'excavate.overrides', '§7' + desc.local('limit') + ': §664');
 desc.tooltip(<ic2:iridium_drill>                 , 'excavate.overrides', '§7' + desc.local('speed') + ': §6128' + ' ' + '§7' + desc.local('limit') + ': §6128');
+desc.tooltip(<advancedrocketry:jackhammer>       , 'excavate.overrides', '§7' + desc.local('speed') + ': §6256' + ' ' + '§7' + desc.local('range') + ': §648');
 desc.tooltip(<forestry:grafter>                  , 'excavate.overrides', '');
 desc.tooltip(<forestry:grafter_proven>           , 'excavate.overrides', '');
 desc.tooltip(<gendustry:industrial_grafter>      , 'excavate.overrides', '');
