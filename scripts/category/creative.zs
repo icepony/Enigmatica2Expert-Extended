@@ -381,11 +381,11 @@ craft.remake(<mekanism:gastank>.withTag({ tier: 4 }), ['pretty',
   'A': <draconicevolution:crafting_injector:2>,
   'B': <bloodmagic:blood_tank:9>, // Blood Tank Tier 10
   'C': <plustic:centrifuge>, // Centrifuge Tank
-  'n': FluidCell('aerotheum'), // Universal Fluid Cell
-  'i': FluidCell('exhauststeam'), // Universal Fluid Cell
-  'U': FluidCell('helium_3'), // Universal Fluid Cell
-  'v': FluidCell('tritium'), // Universal Fluid Cell
-  '◘': FluidCell('vapor_of_levity'), // Universal Fluid Cell
+  'n': FluidCell('aerotheum'),
+  'i': FluidCell('high_pressure_steam'),
+  'U': FluidCell('helium_3'),
+  'v': FluidCell('tritium'),
+  '◘': FluidCell('vapor_of_levity'),
 });
 
 recipes.addShapeless('Creative Gas Tank Clearing',
