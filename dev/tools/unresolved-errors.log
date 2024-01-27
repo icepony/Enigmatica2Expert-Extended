@@ -58,12 +58,6 @@ com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown st
   [...]
 [Client thread/WARN] [net.minecraft.world.storage.loot.functions.Smelt]: Couldn't smelt 1xitem.frog_leg@0 because there is no smelting recipe
 [Client thread/WARN] [mixin]: @Final field field_73244_f:Lit/unimi/dsi/fastutil/longs/Long2ObjectMap; in mixins.vintagefix.json:chunk_access.ChunkProviderServerMixin from mod unknown-owner should be final
-[Client thread/ERROR] [xaero.common.MinimapLogs]: suppressed exception
-java.net.SocketTimeoutException: Read timed out
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_352]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_352]
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_352]
-  [...]
 [Client thread/ERROR] [Had Enough Items]: An interpreter is already registered for this item: exnihilocreatio.modules.tconstruct.tools.SledgeHammer@xxxxxxxx
 java.lang.IllegalArgumentException: null
 	at mezz.jei.runtime.SubtypeRegistry.registerSubtypeInterpreter(SubtypeRegistry.java:46) [SubtypeRegistry.class:?]
@@ -78,7 +72,7 @@ java.lang.IllegalArgumentException: null
   [...]
 [Client thread/ERROR] [Had Enough Items]: A Recipe Handler has already been registered for 'jeresources.plant': jeresources.entry.PlantEntry
 [Client thread/ERROR] [Had Enough Items]: A Recipe Handler has already been registered for 'jeresources.villager': jeresources.entry.VillagerEntry
-[Client thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager]: Couldn't load loot table twilightforest:structures/graveyard/rare from jar:file:/E:/mc/packs/E2E-E/minecraft/mods/twilightforest-1.12.2-3.11.1021-universal.jar!/assets/twilightforest/loot_tables/structures/graveyard/rare.json
+[Client thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager]: Couldn't load loot table twilightforest:structures/graveyard/rare from jar:file:/E:/mc/packs/E2E-E/minecraft/mods/twilightforest-1.12.2-3.11.1021-universal-patched.jar!/assets/twilightforest/loot_tables/structures/graveyard/rare.json
 com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown string 'twilightforest:golden_apple'
 	at net.minecraft.util.JsonUtils.getItem(SourceFile:124) ~[rc.class:?]
 	at net.minecraft.util.JsonUtils.getItem(SourceFile:135) ~[rc.class:?]
@@ -93,4 +87,4 @@ java.lang.IllegalArgumentException: Invalid ingredient found. Parameter Name: in
 [Client thread/ERROR] [Had Enough Items]: A Recipe Handler has already been registered for this recipe class: com.github.alexthe666.rats.server.recipes.SharedRecipe
 [Client thread/ERROR] [Had Enough Items]: A Recipe Handler has already been registered for this recipe class: com.github.alexthe666.rats.server.recipes.SharedRecipe
 [Client thread/ERROR] [Had Enough Items]: A Recipe Handler has already been registered for this recipe class: com.github.alexthe666.iceandfire.recipe.DragonForgeRecipe
-[Client thread/WARN] [Caliper]: Unable to parse event listener: ASM: ClientProxyComponent(commonProxyComponent=org.cyclops.integrateddynamics.proxy.CommonProxy@xxxxxxxx, iconProvider=org.cyclops.cyclopscore.client.icon.IconProvider@xxxxxxxx, tileEntityRenderers={}) onTextureStitch(Lnet/minecraftforge/client/event/TextureStitchEvent$Pre;)V.
+[Client thread/WARN] [Caliper]: Unable to parse event listener: ASM: ClientProxyComponent(commonProxyComponent=org.cyclops.integrateddynamics.proxy.CommonProxy@xxxxxxxx, iconProvider=org.cyclops.cyclopscore.client.icon.IconProvider@xxxxxxxx, tileEntityRenderers={}) onTextureStitch(Lnet/minecraftforge/client/event/TextureStitchEvent$Pre;)V.

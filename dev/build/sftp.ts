@@ -81,7 +81,7 @@ export async function manageSFTP(
           if (!(await sftp.stat(dir)).isDirectory) return
           await sftp.rmdir(dir, true)
           stillToRemove.splice(stillToRemove.indexOf(dir), 1)
-          updateBox('Still to remove:', stillToRemove.join(', '))
+          updateBox('Removing folders:', stillToRemove.join(', '))
         }
         catch (error) {}
       })
@@ -102,7 +102,7 @@ export async function manageSFTP(
     })
 
     updateBox('Remove', 'serverstarter.lock')
-    sftp.delete('serverstarter.lock', true)
+    await sftp.delete('serverstarter.lock', true)
 
     if (replaceResult.length === 0)
       throw new Error('Nothing replaced! Code failure')

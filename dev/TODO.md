@@ -7,7 +7,7 @@
 - [ ] ✏️ add 3D Prints More Usage (maybe for QMD)
 - [ ] ✏️ Shift+Right click clear NC Multitool info
 - [ ] ✏️ Buff advanced generators
-- [ ] 📖 remove Eldritch Knowledge Rewards since newbies eat them all at once
+- [x] 📖 remove Eldritch Knowledge Rewards since newbies eat them all at once
 - [ ] ✏️ adv Rock Crystals Beneficate In QMD
 - [ ] ⚡ Replace `utils.rh` with subcommands to improve performance. `IItemStack.ores` is slow.
 - [ ] ✏️ QMDs `Sodium Chlorde` and `Sodium Nitrate` unify
@@ -20,65 +20,41 @@
 - [ ] 🧩 make Backpacks Unbreakable to prevent destroying for several reasons
 - [ ] 📖 Getting Fire fix quest
 - [ ] 📖 Touching portal not working on server
-- [ ] 📖 15 health for portal should be shared for whole team
-- [ ] 📖 Piston Rewards add amount of reward
+- [x] 📖 15 health for portal should be shared for whole team
+- [x] 📖 Piston Rewards add amount of reward
 - [ ] ✏️ Completely disable OreDict melting
 - [ ] Install Pixel Reality - Luminance
-- [ ] 📖 Add "Crafting" upgrade to Compressing robot
-- [ ] 📖 Add note about Assembler+Battery+Bottle
+- [x] 📖 Add "Crafting" upgrade to Compressing robot
+- [x] 📖 Add note about Assembler+Battery+Bottle
 - [ ] ✏️ Native Clusters should be made into Dirty Ores to prevent multiplication of recipes
 - [ ] 🟢 Add https://legacy.curseforge.com/minecraft/mc-mods/advanced-smelter
 - [ ] 💿 Add null check to fix Dynamism Table https://discord.com/channels/911676461050642432/1195650557004755056/1197080356604616704
 - [ ] 📖 Fix "Completed chapter" message
 - [ ] 🦆 Rewrite Goose logic https://github.com/friendlyhj/ZenUtils/issues/33
-- [x] ✏️ TE Sawmill fix Spectre wood => Planks (remove Camuflaged Panelling from game)
-- [ ] ✏️ Fix enderman still drop ghost Mysical Flesh
 - [ ] 🌍 Terra Nova (112) regenerate JER
 - [ ] 🟠 When update Precision Mining add `438451` to server-setup-config
 - [ ] ✏️ Remove removed item from Overworld Explorer villager trades
+- [x] ✏️ reconstruction chamber harder
+- [x] ✏️ dense storage cells replace recipe results from AEAdditions => Navee
+- [x] ✏️ compressed co-processing harder
+- [x] ✏️ Bronze pipes cheaper
+- [ ] ✏️ Remove Squeezer recipes of Capsules
+- [ ] Thaumic Wonders Void Fortress armor set, when placed on an armor stand, incures a massive fps lag spike that can kick people from a server
+- [ ] Use new kind of message sending https://github.com/friendlyhj/ZenUtils/issues/26
+- [ ] Replace Drains to Advanced Seared Drain
+- [ ] 📖 Add note about IC2 reactor require chunkloading to work inside compact machine.
+- [x] ✏️ Inventory System Storage cheaper and comeup precharged
+- [ ] ✏️ Comb Blocks should be back-crafted into combs
+- [ ] 📖 Fix not all quests required for finishing `Computers` chapter
+- [x] ✏️ 2x Glass" Into Alloy Smelter (EnderIO) in Alloy mode, gives 1xClear Glass (Tinkers)
+- [ ] ✏️ Fix Redstoner doesnt show any trades
+- [ ] ✏️ Remove Elixir from Base Upgrade (to make less clumsy NC upgrades)
+- [ ] ✏️ Rework `ME Storage Bus`
+- [ ] ✏️ Integrate `Orbital Laser Drill` better. It can mine ores on planet orbits for skyblock.
 
 ```sh
 /bcore_ticktime
 /bcore_util regenchunk
-```
-
-### Myrmex trades ideas:
-```less
-
-DESERT:
-dr~1 ; forestry:fruits:1               ; 56-64 =>
-dr~1 ; forestry:fruits:2               ;  1-1  =>
-dr~1 ; forestry:fruits:4               ;  1-1  =>
-dr~1 ; forestry:fruits:6               ;  1-1  =>
-dr~2 ; forestry:butterfly_ge:0         ;  1-1  =>
-dr~3 ; thermalfoundation:material:832  ;  1-1  =>
-dr~4 ; forestry:propolis:0             ;  1-1  =>
-dr~5 ; forestry:propolis:2             ;  1-1  =>
-dr~6 ; forestry:crafting_material:5    ;  1-1  =>
-dr~7 ; tconstruct:edible:31            ;  1-1  =>
-dr~7 ; tconstruct:edible:32            ;  1-1  =>
-dr~7 ; tconstruct:edible:33            ;  1-1  =>
-
-JUNGLE:
-jr~1 ; forestry:fruits:0               ; 1-1 =>
-jr~1 ; forestry:fruits:3               ; 1-1 =>
-jr~1 ; forestry:fruits:5               ; 1-1 =>
-jr~1 ; forestry:fruits:6               ; 1-1 =>
-jr~2 ; forestry:butterfly_ge:0         ; 1-1 =>
-jr~3 ; thermalfoundation:material:833  ; 1-1 =>
-jr~4 ; forestry:propolis:1             ; 1-1 =>
-jr~5 ; forestry:propolis:3             ; 1-1 =>
-jr~6 ; forestry:crafting_material:5    ; 1-1 =>
-jr~7 ; tconstruct:edible:30            ; 1-1 =>
-jr~7 ; tconstruct:edible:34            ; 1-1 =>
-jr~7 ; tconstruct:edible:33            ; 1-1 =>
-
-OUTPUTS:
-ic2:crafting:23 // Scrap
-<tconevo:edible> // Raw meat
-<thermalfoundation:fertilizer:2>
-iceandfire:shiny_scales
-minecraft:sponge
 ```
 
 ---
@@ -170,7 +146,6 @@ Planned non-urgent changes, or just good ideas:
 - [ ] ✏️ Glass fiber harder (clear glass maybe)
 - [ ] ✏️ NC Motor replace by IC2 motor or change recipes
 - [ ] ✏️ Better Comments of Framed Drawers recipes
-- [ ] ✏️ Integrate `Orbital Laser Drill` better. It can mine ores on planet orbits for skyblock.
 - [ ] 📀 Rain Tank buff even more
 - [ ] 🌍 AbandonedWoodTower less spawn
 - [ ] 🔄 Carryon change render for EIO warehouse

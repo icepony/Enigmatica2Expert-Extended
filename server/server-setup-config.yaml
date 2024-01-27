@@ -186,7 +186,7 @@ launch:
 
   # Time a crash should be still accounted for in the {crashLimit}
   # syntax is either [number]h or [number]min or [number]s
-  crashTimer: 60min
+  crashTimer: 5min
 
   # Arguments that need to go before the 'java' argument, something like linux niceness
   # This is only a string, not a list.

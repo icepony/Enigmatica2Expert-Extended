@@ -6,10 +6,14 @@
       "type": "object",
       "properties": {
         "min": {
-          "type": "integer"
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 64
         },
         "max": {
-          "type": "integer"
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 64
         }
       },
       "required": [
@@ -91,7 +95,8 @@
         }
       },
       "required": [
-        "id"
+        "id",
+        "Count"
       ]
     },
     "Item": {
@@ -119,7 +124,7 @@
     },
     "Career": {
       "type": "string",
-      "pattern": "^\\w+$"
+      "pattern": "^[\\w.]+$"
     },
     "Offers": {
       "type": "object",
