@@ -40,6 +40,8 @@ val predefined = <omniwand:wand>.withTag({
     iceandfire          : {id: "iceandfire:dragon_stick"                        , Count: 1, tag: { "omniwand:definedMod": "iceandfire"           }},
     iceandfire0         : {id: "iceandfire:dragon_flute"                        , Count: 1, tag: { "omniwand:definedMod": "iceandfire0"          }},
     iceandfire1         : {id: "iceandfire:dragon_horn"                         , Count: 1, tag: { "omniwand:definedMod": "iceandfire1"          }},
+    iceandfire2         : {id: "iceandfire:myrmex_desert_staff"                 , Count: 1, tag: { "omniwand:definedMod": "iceandfire2"          }},
+    iceandfire3         : {id: "iceandfire:myrmex_jungle_staff"                 , Count: 1, tag: { "omniwand:definedMod": "iceandfire3"          }},
     immersiveengineering: {id: "immersiveengineering:tool"                      , Count: 1, tag: { "omniwand:definedMod": "immersiveengineering" }},
     immersivepetroleum  : {id: "immersivepetroleum:oil_can"                     , Count: 1, tag: { "omniwand:definedMod": "immersivepetroleum"   }},
     integratedtunnels   : {id: "integrateddynamics:wrench"                      , Count: 1, tag: { "omniwand:definedMod": "integratedtunnels"    }},
@@ -60,6 +62,7 @@ val predefined = <omniwand:wand>.withTag({
     storagedrawers3     : {id: "storagedrawers:shroud_key"                      , Count: 1, tag: { "omniwand:definedMod": "storagedrawers3"      }},
     teslacorelib        : {id: "teslacorelib:wrench"                            , Count: 1, tag: { "omniwand:definedMod": "teslacorelib"         }},
     thermalfoundation   : {id: "thermalfoundation:wrench"                       , Count: 1, tag: { "omniwand:definedMod": "thermalfoundation"    }},
+    travelersbackpack   : {id: "travelersbackpack:hose"                         , Count: 1, tag: { "omniwand:definedMod": "travelersbackpack"    }},
   },
   "omniwand:is_transforming": 1 as byte,
 });
