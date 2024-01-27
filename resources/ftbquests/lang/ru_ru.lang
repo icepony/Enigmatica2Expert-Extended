@@ -107,7 +107,7 @@ q.getting_started.chargers.desc=This items and blocks can charge tools and armor
 q.getting_started.sharpness_modifier.name=Sharpness Modifier
 q.getting_started.sharpness_modifier.desc=Each level of §fSharpness§r adds:\n+ §a1§r bare damage\n+ §a10%%§r from base damage\n+ §abase*lvl⁴/20000§r as high-level bonus\n\nWhole formula is:\n§7base+lvl+\n0.1*lvl*base+\nbase*lvl^4/20000§r\n\nFor example, if your weapon deals 10 damage, there is\n§2Sharpness level§r : §atotal damage§r\n§21§r :§a 12§r\n§25§r :§a 20§r\n§210§r :§a 35§r\n§220§r :§a 130§r\n\n§6For 20 base damage§r\n§21§r :§a 23§r\n§25§r :§a 35§r\n§210§r :§a 60§r\n§220§r :§a 240§r\n\n§cFor base=40§r\n§21§r :§a 45§r\n§25§r :§a 66§r\n§210§r :§a 110§r\n§220§r :§a 460§r
 q.getting_started.harvest_level_7.name=Уровень урожая 7
-q.getting_started.harvest_level_7.desc=Кобальтовую руду в Нижнем мире можно найти редко. Ардитовая руда также завершит этот квест, поскольку у них обоих есть кобальт уровня урожая.
+q.getting_started.harvest_level_7.desc=Кобальтовую руду в Нижнем мире можно найти редко. Ардитовая руда также завершит этот квест, поскольку у них обоих есть кобальт уровня урожая.\n\n§2Выполнение этого задания предоставит доступ в Нижний мир, даже если ваше здоровье не в полном порядке.
 q.getting_started.loot_crate.desc=Вы можете объединить сундуки с лутом, чтобы создать следующие уровни.
 q.getting_started.chunk_loaders.name=Chunk loaders
 q.getting_started.chunk_loaders.desc=Blocks and items that could help to load more chunks.

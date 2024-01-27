@@ -40,5 +40,20 @@
 		uid: "17f8410d",
 		type: "choice",
 		table: 25
+	},
+	{
+		uid: "e91e93cf",
+		type: "command",
+		title: "Grand access to the Nether",
+		team_reward: true,
+		auto: "no_toast",
+		command: "/gamestages add @p healthy"
+	},
+	{
+		uid: "cbe428c2",
+		type: "command",
+		team_reward: true,
+		auto: "invisible",
+		command: "/tellraw @p [{\"translate\":\"tooltips.dim_stages.healthy_can\"}]"
 	}]
 }

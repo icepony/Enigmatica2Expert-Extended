@@ -107,7 +107,7 @@ q.getting_started.chargers.desc=This items and blocks can charge tools and armor
 q.getting_started.sharpness_modifier.name=Sharpness Modifier
 q.getting_started.sharpness_modifier.desc=Each level of §fSharpness§r adds:\n+ §a1§r bare damage\n+ §a10%%§r from base damage\n+ §abase*lvl⁴/20000§r as high-level bonus\n\nWhole formula is:\n§7base+lvl+\n0.1*lvl*base+\nbase*lvl^4/20000§r\n\nFor example, if your weapon deals 10 damage, there is\n§2Sharpness level§r : §atotal damage§r\n§21§r :§a 12§r\n§25§r :§a 20§r\n§210§r :§a 35§r\n§220§r :§a 130§r\n\n§6For 20 base damage§r\n§21§r :§a 23§r\n§25§r :§a 35§r\n§210§r :§a 60§r\n§220§r :§a 240§r\n\n§cFor base=40§r\n§21§r :§a 45§r\n§25§r :§a 66§r\n§210§r :§a 110§r\n§220§r :§a 460§r
 q.getting_started.harvest_level_7.name=挖掘等级7
-q.getting_started.harvest_level_7.desc=钴罕见地生成在下界。阿迪特也可以完成任务，它们具有相同的挖掘等级。
+q.getting_started.harvest_level_7.desc=钴罕见地生成在下界。阿迪特也可以完成任务，它们具有相同的挖掘等级。\n\n§2完成这个任务即可解锁通往下界的通道，即使你的健康状况不佳。
 q.getting_started.loot_crate.desc=你可以结合战利品箱来制作下一级别的产品。
 q.getting_started.chunk_loaders.name=Chunk loaders
 q.getting_started.chunk_loaders.desc=Blocks and items that could help to load more chunks.

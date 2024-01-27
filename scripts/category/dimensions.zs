@@ -2,6 +2,7 @@
 #reloadable
 
 import crafttweaker.player.IPlayer;
+import crafttweaker.text.ITextComponent.fromTranslation;
 
 static health_require as float = 30.0f;
 
@@ -14,12 +15,12 @@ function checkAndGrant(player as IPlayer) as void {
   ) {
     player.addGameStage('healthy');
 
-    val message = crafttweaker.text.ITextComponent.fromTranslation(
+    player.sendRichTextMessage(fromTranslation(
       'tooltips.dim_stages.healthy_grant',
       health_require as int,
       (health_require / 2.0f + 0.5f) as int
-    );
-    player.sendRichTextMessage(message);
+    ));
+    player.sendRichTextMessage(fromTranslation('tooltips.dim_stages.healthy_can'));
   }
 }
 
@@ -38,14 +39,14 @@ function isForbidTravel(player as IPlayer, dimension as int) as bool {
   if (player.hasGameStage('skyblock')) {
     // Show message that player playing skyblock and cant visit any dims
     if (isNether || restrictedDims has dimension) {
-      player.sendRichTextMessage(crafttweaker.text.ITextComponent.fromTranslation('tooltips.dim_stages.restricted'));
+      player.sendRichTextMessage(fromTranslation('tooltips.dim_stages.restricted'));
       return true;
     }
   }
   else {
     if (isNether && !player.hasGameStage('healthy')) {
       // Show message that player not healthy anough
-      player.sendRichTextMessage(crafttweaker.text.ITextComponent.fromTranslation(
+      player.sendRichTextMessage(fromTranslation(
         'tooltips.dim_stages.healthy',
         health_require as int,
         (health_require / 2.0f + 0.5f) as int
