@@ -212,7 +212,7 @@ Icon | Summary
 
 Mods that present only in `Extended` version:
 
-217 mods in this section.
+216 mods in this section.
 
 Icon | Summary
 ----:|:-------
@@ -429,7 +429,6 @@ Icon | Summary
 <img src="https://media.forgecdn.net/avatars/thumbnails/856/836/30/30/638260772226865253.png"            > |                             [**VisualOres**](https://www.curseforge.com/minecraft/mc-mods/visualores)                   <sup><sub>visualores-0.2.4.jar                             </sub></sup><br>VisualProspecting but for 1.12
 <img src="https://media.forgecdn.net/avatars/thumbnails/858/79/30/30/638263153200073671.png"             > |                     [**SerializationIsBad**](https://www.curseforge.com/minecraft/mc-mods/serializationisbad)           <sup><sub>serializationisbad-1.5.jar                       </sub></sup><br>A Minecraft coremod aiming to patch serious security vulnerabilities found in many different mods
 <img src="https://media.forgecdn.net/avatars/thumbnails/874/755/30/30/638296262646953159.png"            > |                [**Alfheim Lighting Engine**](https://www.curseforge.com/minecraft/mc-mods/alfheim-lighting-engine)      <sup><sub>Alfheim-1.2.jar                                  </sub></sup><br>Alfheim is a lighting engine replacement for Minecraft, optimized for performance and fixing many bugs
-<img src="https://media.forgecdn.net/avatars/thumbnails/875/257/30/30/638297518410895292.png"            > |                        [**ZenRecipeReload**](https://www.curseforge.com/minecraft/mc-mods/zenrecipereload)              <sup><sub>zenrecipereloading-1.2.2.jar                     </sub></sup><br>Reload recipes for CraftTweaker 1.12.2
 <img src="https://media.forgecdn.net/avatars/thumbnails/890/122/30/30/638330362828386354.png"            > |                               [**Omniwand**](https://www.curseforge.com/minecraft/mc-mods/omniwand)                     <sup><sub>omniwand-1.12.2-1.0.1.jar                        </sub></sup><br>One wand to rule them all.
 <img src="https://media.forgecdn.net/avatars/thumbnails/901/995/30/30/638349798526167681.png"            > |                             [**Finite Gas**](https://www.curseforge.com/minecraft/mc-mods/finite-gas)                   <sup><sub>Finite Gas-1.0.jar                               </sub></sup><br>Patches the &quot;infinite gas&quot; bug in Advanced Generators for 1.12.
 <img src="https://media.forgecdn.net/avatars/thumbnails/908/439/30/30/638360340448042423.png"            > |                [**Just Enough Magiculture**](https://www.curseforge.com/minecraft/mc-mods/just-enough-magiculture)      <sup><sub>justenoughmagiculture-1.12.2-1.1.2.jar           </sub></sup><br>This mod adds a large number of Just Enough Resources integrations.
