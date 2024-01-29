@@ -136,6 +136,8 @@ install:
     # For often there are config which the user wants to change, here is the place to put the local path to configs, jars or whatever
     # You can copy files or folders
   localFiles:
+    - from: overrides/
+      to: .
   # - from: setup/modpack-download.zip
   #  to: setup/test/modpack-download-copied.zip
   # - from: setup/AOF 2/.minecraft

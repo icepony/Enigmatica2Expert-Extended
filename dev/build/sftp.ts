@@ -109,7 +109,7 @@ export async function manageSFTP(
 
     let fileCounter = 0
     sftp.on('upload', () => updateBox('Copy overrides', ++fileCounter))
-    await sftp.uploadDir(join(conf.dir, 'overrides'), './')
+    await sftp.uploadDir(join(conf.dir, 'overrides'), 'overrides/')
 
     await sftp.end()
   }

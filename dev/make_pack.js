@@ -22,6 +22,7 @@ import git_describe from 'git-describe'
 import ignore from 'ignore'
 import open from 'open'
 import replace_in_file from 'replace-in-file'
+import { rimrafSync } from 'rimraf'
 import simpleGit from 'simple-git'
 import yargs from 'yargs'
 
@@ -39,7 +40,7 @@ const { lstatSync }
   = fs_extra
 
 const { gitDescribeSync } = git_describe
-const { rmSync, mkdirSync, existsSync, renameSync, readFileSync, writeFileSync }
+const { mkdirSync, existsSync, renameSync, readFileSync, writeFileSync }
   = fs_extra
 const git = simpleGit()
 
@@ -160,7 +161,7 @@ const argv = yargs(process.argv.slice(2))
   if (!argv.old && makeZips) {
     doTask(`🪓 Clearing tmp folder ${tmpDir} ... `, () => {
       try {
-        rmSync(tmpDir, { recursive: true })
+        rimrafSync(tmpDir)
       }
       catch (err) {
         process.stdout.write(`\n${chalk.red(`Cannot remove TMP folder ${tmpDir}`)}\n${String(err)}\n`)
@@ -253,7 +254,7 @@ const argv = yargs(process.argv.slice(2))
     .filter(f => lstatSync(join(tmpOverrides, f)).isDirectory())
     .concat('mods')
 
-  manageSFTP(serverRemoveDirs, serverSetupConfig)
+  await manageSFTP(serverRemoveDirs, serverSetupConfig)
 
   /*
   ██████╗ ███████╗██╗     ███████╗ █████╗ ███████╗███████╗

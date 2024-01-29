@@ -43,7 +43,7 @@ export function removeFiles(fileArg: readonly string[] | string) {
   const removed: string[] = []
   files.forEach((file) => {
     try {
-      rmSync(file, { recursive: true, maxRetries: 1 })
+      rmSync(file, { recursive: true, force: true })
       removed.push(file)
     }
     catch (error) {

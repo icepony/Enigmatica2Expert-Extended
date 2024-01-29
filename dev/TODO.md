@@ -51,6 +51,7 @@
 - [ ] ✏️ Remove Elixir from Base Upgrade (to make less clumsy NC upgrades)
 - [ ] ✏️ Rework `ME Storage Bus`
 - [ ] ✏️ Integrate `Orbital Laser Drill` better. It can mine ores on planet orbits for skyblock.
+- [ ] ✏️ Controlled Miner harder
 
 ```sh
 /bcore_ticktime
