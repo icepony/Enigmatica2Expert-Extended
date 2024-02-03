@@ -661,7 +661,7 @@
     <alloying energy="10000">
       <input name="itemEnderCrystalPowder"/>
       <input name="ingotCrystallineAlloy"/>
-      <input name="industrialforegoing:pink_slime_ingot"/>
+      <input name="ingotPinkMetal"/>
       <output name="enderio:item_alloy_endergy_ingot:4"/>
     </alloying>
   </recipe>

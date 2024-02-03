@@ -787,6 +787,9 @@ addItems(<ore:record>, [
 
 add(<ore:foodFriedegg>, <betteranimalsplus:fried_egg>);
 
+// For some reason, Industrial Foregoing register this oredict too late
+add(<ore:ingotPinkMetal>, <industrialforegoing:pink_slime_ingot>);
+
 //#################
 // Nuclearcraft
 //#################
