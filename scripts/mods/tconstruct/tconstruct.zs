@@ -3,6 +3,7 @@
 import crafttweaker.data.IData;
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
+import crafttweaker.liquid.ILiquidStack;
 
 <tconstruct:throwball>.maxStackSize = 64;
 
@@ -464,11 +465,6 @@ mods.mechanics.addTubeRecipe([<additionalcompression:stone_compressed:1>], <liqu
 // Stone sharpening kit alt for repairing automatisation
 mods.tconstruct.Casting.addTableRecipe(
   <tconstruct:sharpening_kit>.withTag({ Material: 'stone' }),
-  <tconstruct:clay_cast>.withTag({ PartType: 'tconstruct:sharpening_kit' }),
-  <liquid:stone>, 144, true
-);
-mods.tconstruct.Casting.addTableRecipe(
-  <tconstruct:sharpening_kit>.withTag({ Material: 'stone' }),
   <tconstruct:cast>.withTag({ PartType: 'tconstruct:sharpening_kit' }),
   <liquid:stone>, 144, false
 );
@@ -485,3 +481,39 @@ scripts.process.alloy([
   <ore:blockFlesh>,
   <ore:clay> * 9,
 ], <ore:blockPigiron>.firstItem, 'only: AdvRockArc');
+
+// ------------------------------------------------------------------------------
+// Melting / casting rework
+// based on Bansoukou chancges in TConstruct
+// ------------------------------------------------------------------------------
+
+// Blood Magic Tcon Integration adds many slate - cast recipes
+mods.tconstruct.Casting.removeTableRecipe(<tconstruct:cast_custom:3>);
+
+for castFluid in [
+  <fluid:alubrass> * 144,
+  <fluid:gold> * 288,
+] as ILiquidStack[] {
+  // Create casts from basic materials only such as stone
+  for id, cost in scripts.mods.tconstruct.vars.partCosts {
+    mods.tconstruct.Casting.addTableRecipe(
+      <tconstruct:cast>.withTag({ PartType: id }),
+      scripts.mods.tconstruct.vars.getSampleToolPart(id),
+      castFluid, castFluid.amount, true);
+  }
+
+  // ------------
+  // Special add cases
+  // ------------
+  mods.tconstruct.Casting.addTableRecipe(<tconstruct:cast_custom:1>, <minecraft:gold_nugget>, castFluid, castFluid.amount, true);
+  
+  for plate in [
+    <thermalfoundation:material:32>,
+    <thermalfoundation:material:33>,
+    <thermalfoundation:material:320>,
+    <thermalfoundation:material:321>,
+  ] as IItemStack[] {
+    mods.tconstruct.Casting.addTableRecipe(<tconstruct:cast_custom:3>, plate, castFluid, castFluid.amount, true);
+  }
+}
+// ------------------------------------------------------------------------------

@@ -50,9 +50,9 @@ static partCosts as double[string]$orderly = {
 
 function getSampleToolPart(baseId as string) as IItemStack {
   val materialName =
-    baseId == 'tconstruct:arrow_shaft' ? 'wood'
-      : 'tconstruct:bow_string' ? 'string'
-      : 'tconstruct:fletching' ? 'feather'
+        baseId == 'tconstruct:arrow_shaft' ? 'wood'
+      : baseId == 'tconstruct:bow_string' ? 'string'
+      : baseId == 'tconstruct:fletching' ? 'feather'
       : 'stone';
   return itemUtils.getItem(baseId).withTag({ Material: materialName });
 }
