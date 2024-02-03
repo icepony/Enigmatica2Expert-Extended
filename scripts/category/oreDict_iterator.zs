@@ -47,7 +47,13 @@ for ore_entry in oreDict {
   ore_name = getOreName(name, 'cluster');
   if (!isNull(ore_name)) {
     if (ore_name == 'Aluminum') continue;
-    beneficiate(ore_entry, ore_name, 2, benOpts);
+    
+    val dirtyGem = oreDict['dirtyGem' ~ ore_name].firstItem;
+    if (isNull(dirtyGem)) continue;
+
+    recipes.addShaped('beneficate native ' ~ ore_name, dirtyGem, [
+      [ore_entry, ore_entry, ore_entry],
+      [ore_entry, ore_entry, ore_entry]]);
 
     // Fix gems melting recipes
     //   Standart JAOPCA's furnace recipes for Ores that outputs
