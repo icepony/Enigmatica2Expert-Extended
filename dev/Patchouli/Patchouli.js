@@ -247,7 +247,7 @@ export async function init(h = defaultHelper) {
       ([f, s]) => [
         f,
         s,
-        [...s.matchAll(/\\* *(Patchouli_js\([\s\S\n\r]*?\))\*\//gm)],
+        [...s.matchAll(/\\*\s*(Patchouli_js\([\s\S\n\r]*?\))\s*\*\//gm)],
       ]
     )
     .filter(([, , matches]) => matches.length)

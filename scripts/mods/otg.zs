@@ -2,8 +2,8 @@
 #modloaded openterraingenerator
 
 static biomeIdToName as string[][int] = {
-/* Inject_js(
-Object.entries(_.groupBy(getCSV('config/tellme/biomes-csv.csv'), 'ID'))
+/* Inject_js{
+const list = Object.entries(_.groupBy(getCSV('config/tellme/biomes-csv.csv'), 'ID'))
     .map(([id, list]) => {
       return [id, list
         .map(v => [v['Registry name'], `'${v['Biome name']}'`])
@@ -11,7 +11,9 @@ Object.entries(_.groupBy(getCSV('config/tellme/biomes-csv.csv'), 'ID'))
     })
     .filter(ID => ID[1].length)
     .map(([id, names]) => [`  ${id.padEnd(3)}:`, ` [${names.map(([,b]) => b).join(', ')}],`])
-) */
+
+return list.length ? list : cmd.block
+} */
   0  : ['AlienOcean', 'Ocean', 'OceanKelpForest'],
   1  : ['AlienRiver', 'BirchGrove', 'BirchGroveBorder', 'Plains', 'TemperatePlains', 'Tropical Savanna Edge', 'Void'],
   2  : ['Desert', 'DesertFlats', 'DesertLowlands', 'DesertLowlandsEdge', 'DesertMountain', 'DesertRed', 'Mesa Sandstone', 'Mesa Sandstone Edge', 'Mesa Sandstone Peak', 'MesaPaintedCanyon', 'RedMountain', 'RiverDesert'],

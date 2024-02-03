@@ -11,7 +11,7 @@
     "build": "esno dev/make_pack.js",
     "dev": "concurrently --prefix-colors auto \"npm:dev:* --silent\"",
     "dev:bansoukou": "esno dev/automation/bansoukou.js",
-    "dev:benchmark": "npx mc-benchmark --output=dev/benchmarks/latest.md",
+    "dev:benchmark": "node E:/dev/mc-benchmark/index.js --output=dev/benchmarks/latest.md",
     "dev:conflicts": "esno dev/automation/recipe_conflicts.js",
     "dev:entities": "esno dev/automation/entities.js",
     "dev:errors": "esno mc-tools/packages/errors/src/cli.ts --config=dev/tools/mct-errors-config.yml --output=dev/tools/unresolved-errors.log",

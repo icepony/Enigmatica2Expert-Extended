@@ -47,12 +47,12 @@ export async function manageSFTP(
     - url: https://mediafilez.forgecdn.net/files/4886/383/mc2discord-forge-1.12.2-3.3.1.jar
       destination: mods/mc2discord-forge-1.12.2-3.3.1.jar`
     )
-  //     .replace(
-  //       /(localFiles:\s*)\n/m,
-  // `$1
-  //     - url: https://mediafilez.forgecdn.net/files/4886/383/mc2discord-forge-1.12.2-3.3.1.jar
-  //       destination: mods/mc2discord-forge-1.12.2-3.3.1.jar`
-  //     )
+    .replace(
+      /(localFiles:\s*)\n {4}\S.*$\n {4}\S.*$/m,
+`$1
+    - from: overrides/
+      to: .`
+    )
   writeFileSync(serverConfigTmp, confText)
 
   for (const conf of sftpConfigs) {

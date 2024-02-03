@@ -8,6 +8,12 @@
     "name": "Soft",
     "description": "Remove mods, that has impact on performance. Not server-safe",
     "list": [
+      "infinityeditor-",
+      "ae2-",
+      "Caliper-",
+      "nae2-",
+      "zenrecipereloading-",
+      "justenoughmagiculture-",
       "maleksinfinitygauntlet",
       "omniwand-",
       "justenoughdimensions-",
