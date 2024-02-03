@@ -102,7 +102,7 @@ val dataModels = {
   // dragon           : 'minecraft:ender_dragon',
   enderman         : 'minecraft:enderman',
   ghast            : 'minecraft:ghast',
-  guardian         : 'minecraft:elder_guardian',
+  guardian         : 'minecraft:guardian',
   shulker          : 'minecraft:shulker',
   skeleton         : 'minecraft:stray',
   slime            : 'minecraft:slime',
