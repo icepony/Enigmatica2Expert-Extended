@@ -1,4 +1,4 @@
-#modloaded zentoolforge crafttweakerutils
+#modloaded tconstruct zentoolforge crafttweakerutils
 
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
@@ -77,48 +77,6 @@ for i, toolId in validToolsList {
   validTools |= tool.anyDamage();
 }
 
-static partsCosts as int[string] = {
-  'conarm:armor_plate'          : 3,
-  'conarm:armor_trim'           : 1,
-  'conarm:boots_core'           : 4,
-  'conarm:chest_core'           : 6,
-  'conarm:helmet_core'          : 4,
-  'conarm:leggings_core'        : 5,
-  'conarm:polishing_kit'        : 2,
-  'plustic:battery_cell'        : 3,
-  'plustic:laser_medium'        : 3,
-  'plustic:pipe_piece'          : 4,
-  'tcomplement:chisel_head'     : 1,
-  'tcomplement:sledge_head'     : 2,
-  'tconevo:part_arcane_focus'   : 9,
-  'tconstruct:arrow_head'       : 2,
-  'tconstruct:arrow_shaft'      : 2,
-  'tconstruct:axe_head'         : 2,
-  'tconstruct:binding'          : 1,
-  'tconstruct:bow_limb'         : 3,
-  'tconstruct:bow_string'       : 1,
-  'tconstruct:broad_axe_head'   : 8,
-  'tconstruct:cross_guard'      : 1,
-  'tconstruct:excavator_head'   : 8,
-  'tconstruct:fletching'        : 2,
-  'tconstruct:hammer_head'      : 8,
-  'tconstruct:hand_guard'       : 1,
-  'tconstruct:kama_head'        : 2,
-  'tconstruct:knife_blade'      : 1,
-  'tconstruct:large_plate'      : 8,
-  'tconstruct:large_sword_blade': 8,
-  'tconstruct:pan_head'         : 3,
-  'tconstruct:pick_head'        : 2,
-  'tconstruct:scythe_head'      : 8,
-  'tconstruct:sharpening_kit'   : 2,
-  'tconstruct:shovel_head'      : 2,
-  'tconstruct:sign_head'        : 3,
-  'tconstruct:sword_blade'      : 2,
-  'tconstruct:tool_rod'         : 1,
-  'tconstruct:tough_binding'    : 3,
-  'tconstruct:tough_tool_rod'   : 3,
-  'tconstruct:wide_guard'       : 1,
-} as int[string];
 
 // -----------------------------------------------------------------------
 // ███╗   ███╗ █████╗ ████████╗██╗  ██╗
@@ -150,8 +108,8 @@ function getShard(
   val listCost = [1.0, 1.0, 1.0, 1.0] as double[];
   for i, dec in deconstructed {
     if (isNull(dec.tag.Material)) continue;
-    val partCost = partsCosts[dec.definition.id];
-    val cost = !isNull(partCost) ? partCost as double : 1.0;
+    val partCost = scripts.mods.tconstruct.vars.partCosts[dec.definition.id];
+    val cost = !isNull(partCost) ? partCost : 1.0;
     listCost[i] = max(1.0, cost * durabValue * 2.0 + 0.5);
   }
 
