@@ -18,6 +18,11 @@
 	rewards: [{
 		uid: "ec263bdf",
 		type: "item",
-		item: "enderio:block_inventory_chest_medium"
+		item: {
+			id: "enderio:block_inventory_chest_medium",
+			tag: {
+				"enderio:energy": 1000000000
+			}
+		}
 	}]
 }
