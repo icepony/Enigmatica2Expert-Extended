@@ -62,7 +62,7 @@ val predefined = <omniwand:wand>.withTag({
     storagedrawers3     : {id: "storagedrawers:shroud_key"                      , Count: 1, tag: { "omniwand:definedMod": "storagedrawers3"      }},
     teslacorelib        : {id: "teslacorelib:wrench"                            , Count: 1, tag: { "omniwand:definedMod": "teslacorelib"         }},
     thermalfoundation   : {id: "thermalfoundation:wrench"                       , Count: 1, tag: { "omniwand:definedMod": "thermalfoundation"    }},
-    travelersbackpack   : {id: "travelersbackpack:hose"                         , Count: 1, tag: { "omniwand:definedMod": "travelersbackpack"    }},
+    travelersbackpack   : {id: "travelersbackpack:hose"                         , Count: 1, tag: { "omniwand:definedMod": "travelersbackpack"    }, tag: { Tank: 1 }},
   },
   "omniwand:is_transforming": 1 as byte,
 });
