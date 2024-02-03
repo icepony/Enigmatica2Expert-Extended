@@ -222,6 +222,7 @@ q.gates.conflux_ii.name=Conflux II
 q.gates.conflux_ii.desc=通过FTBUtilities加载的最大块数增加。
 q.gates.gate_bragging_rig.name=门槛：值得炫耀的资本
 q.gates.gate_bragging_rig.desc=这个任务开启值得炫耀的资本的章节。
+q.skyblock.name=Skyblock
 q.animals.name=§2动物
 q.animals.desc=与动物相关的模组任务：§2更好的动物§r，§2老鼠§r，§2冰与火§r
 q.animals.animals_entry.name=动物章节入口

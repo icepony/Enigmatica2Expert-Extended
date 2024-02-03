@@ -222,6 +222,7 @@ q.gates.conflux_ii.name=Conflux II
 q.gates.conflux_ii.desc=Максимальное количество §lloaded chunks§r через FTBUtilities увеличивается.\nВаше имя становится §e§lYellow§r.\n\nMax claimed chunks: §6144§r\nMax загруженных блоков:   §610§r
 q.gates.gate_bragging_rig.name=Врата: право хвастовства
 q.gates.gate_bragging_rig.desc=Завершение этого квеста открывает главу «Права хвастовства».
+q.skyblock.name=Skyblock
 q.animals.name=Животные
 q.animals.desc=Квесты для модов, ориентированных на мобов: §2Анимания§r, §2Крысы§r, §2Лед и огонь
 q.animals.animals_entry.name=Вход с животными

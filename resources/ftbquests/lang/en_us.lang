@@ -222,6 +222,7 @@ q.gates.conflux_ii.name=Conflux II
 q.gates.conflux_ii.desc=The maximum number of §lloaded chunks§r through FTBUtilities increases.\nYour name becomes §e§lYellow§r.\n\nMax claimed chunks: §6144§r\nMax loaded chunks:   §610§r\n\n§8Chunks are loaded only if you are online.§r
 q.gates.gate_bragging_rig.name=Gate: Bragging Rights
 q.gates.gate_bragging_rig.desc=Completing this quest opens the Bragging Rights chapter.
+q.skyblock.name=Skyblock
 q.animals.name=§2Animals
 q.animals.desc=Quests for mob-oriented mods: §2Rats§r, §2Ice & Fire
 q.animals.animals_entry.name=Animals Entry
