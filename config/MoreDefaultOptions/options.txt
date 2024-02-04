@@ -272,9 +272,9 @@ key_key.next_item.desc:0
 key_key.nutrition:49
 key_key.open_danknull.desc:0
 key_key.open_menu:19
-key_key.open_wct.desc:18:CONTROL
+key_key.open_wct.desc:0
 key_key.open_wft.desc:0
-key_key.open_wireless_crafting_terminal.desc:18:SHIFT
+key_key.open_wireless_crafting_terminal.desc:18:CONTROL
 key_key.open_wireless_fluid_terminal.desc:33:SHIFT
 key_key.open_wireless_pattern_terminal.desc:19:SHIFT
 key_key.open_wireless_terminal.desc:20:SHIFT
@@ -294,7 +294,7 @@ key_key.plustic_toggle_tool.desc:51:ALT
 key_key.porterNextDestination:27
 key_key.porterPrevDestination:26
 key_key.previous_item.desc:0
-key_key.range:19
+key_key.range:18:ALT
 key_key.reloadSoundSystem:66:SHIFT
 key_key.right:32
 key_key.rotate_mirror:0
