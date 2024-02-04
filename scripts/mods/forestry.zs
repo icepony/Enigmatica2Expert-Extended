@@ -219,6 +219,29 @@ for oil in [<liquid:oliveoil>, <liquid:seed.oil>] as ILiquidStack[] {
   );
 }
 
+// Cheaper capsules
+mods.forestry.Carpenter.removeRecipe(<forestry:wood_pulp>);
+scripts.mods.forestry.Carpenter.addRecipe(<forestry:crafting_material:4>, [[<forestry:honeydew>, <ic2:fluid_cell>]], 100, <fluid:water> * 1000);
+scripts.mods.forestry.Carpenter.addRecipe(<forestry:iodine_capsule>, [[<forestry:honey_drop>, <ic2:fluid_cell>]], 100, <fluid:water> * 1000);
+
+# [Honey Pot] from [Honey Drop][+1]
+craft.remake(<forestry:honey_pot>, [
+  "B",
+  "H",
+  "B"], {
+  "B": <ore:itemBeeswax>, # Beeswax
+  "H": <ore:dropHoney>,   # Honey Drop
+});
+
+# [Ambrosia] from [Royal Jelly][+1]
+craft.remake(<forestry:ambrosia>, [
+  "B",
+  "R",
+  "B"], {
+  "B": <ore:itemBeeswax>,    # Beeswax
+  "R": <ore:dropRoyalJelly>, # Royal Jelly
+});
+
 // Proven Frames recycling
 // [Impregnated Stick]*16 from [Proven Frame]
 scripts.process.sawWood(<forestry:frame_proven>, <forestry:oak_stick> * 3);
@@ -316,13 +339,6 @@ for i, input in farmBlocks {
 
 // [Carton] from [Compressed Sawdust]
 scripts.process.crush(<thermalfoundation:material:801> /* Compressed Sawdust */, <forestry:carton>, 'only: CrushingBlock');
-
-// Fix wax capsule uncraftable
-// [Wax Capsule]*2 from [Pressed Wax]
-recipes.removeByRecipeName('forestry:pam_wax_capsule');
-craft.make(<forestry:capsule> * 2, ['PPP'], {
-  'P': <ore:materialPressedwax>, // Pressed Wax
-});
 
 // Remove all fireproof recipes. Fireproof only obtainable through breeding.
 for log, plank in scripts.lib.wood.logPlank {

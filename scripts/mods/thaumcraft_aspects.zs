@@ -2199,6 +2199,7 @@ val removeItemAspectList = [
 <forestry:lepidopterist_bag>,
 <forestry:miner_bag_t2>,
 <forestry:miner_bag>,
+<forestry:refractory:1>,
 <forge:bucketfilled>,
 <gendustry:gene_template>,
 <ic2:fluid_cell>,

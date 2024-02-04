@@ -49,7 +49,7 @@ craft.make(<gendustry:labware> * 16, ['pretty',
   'H   H',
   'H A H',
   '  B  '], {
-  H: <forestry:can>,
+  H: <ic2:fluid_cell>,
   A: <forestry:propolis>,
   B: <ore:dustEndstone>,
 });

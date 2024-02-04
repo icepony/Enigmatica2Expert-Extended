@@ -453,7 +453,7 @@ function morphDust(fruit as IItemStack, liquid as ILiquidStack, extra as IItemSt
 
   // Bigger fluid output + capsule
   val amount = (liquid.amount * 2) / 1000;
-  val capsule = <forestry:refractory:1>.withTag({ Fluid: { FluidName: liquid.name, Amount: 1000 } });
+  val capsule = FluidCell(liquid.name);
   mods.rats.recipes.addChefRatRecipe(fruit, amount > 1 ? capsule * amount : capsule);
 
   // Thaumcraft aspects
