@@ -73,7 +73,7 @@
     {
       "item": "thaumicaugmentation:research_notes",
       "type": "text",
-      "text": "$(li)Applied Energistics §nInterfaces§r are grouped together by their name in the §nInterface Terminal§r (can be named in an anvil).$(li)The §nAdvanced Morphing Tool§r (Morphing Tool crafted with 4 gears) is a good way to get all wrenches early. It also helps to keep your inventory neat.",
+      "text": "$(li)Applied Energistics §nInterfaces§r are grouped together by their name in the §nInterface Terminal§r (can be named in an anvil).$(li)The §nAdvanced Omniwand§r (Omniwand crafted with 4 gears) is a good way to get all wrenches early. It also helps to keep your inventory neat.",
       "title": "Tips"
     },
     {

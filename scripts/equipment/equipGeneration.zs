@@ -18,7 +18,7 @@ import modtweaker.tconstruct.ITICMaterial;
 /* Patchouli_js()
 var statics = {}
 match_regex_below(
-  /^static\s+(DEFAULT_EQUIP_CHANCE|OVERWORLD_EQUIP_CHANCE|NEXT_EQUIP_CHANCE).*= ([\d.]+)d/gm
+  /^static\s+(DEFAULT_EQUIP_CHANCE|OVERWORLD_EQUIP_CHANCE|NEXT_EQUIP_CHANCE).*= ([\d.]+)d?/gm
 ).map(m=>[m[1], Math.round(parseFloat(m[2])*100)])
 .forEach(m=>statics[m[0]] = m[1])
 

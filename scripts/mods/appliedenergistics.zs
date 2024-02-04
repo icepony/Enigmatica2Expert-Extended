@@ -219,7 +219,7 @@ Patchouli_js('Items/Matter Cannon', [
     title: "Matter Cannon Ammo",
     type:  "grid"
   },
-    match_block_below(/^<([^>]+)>\s*:\s*(\d+)\.0d,$/gm)
+    match_block_below(/^\s*<([^>]+)>\s*:\s*(\d+)\.0d?,$/gm)
 		.sort((a,b)=>b[2]-a[2])
     .map(match=>match[1] +'#'+ Math.round(match[2] / 10))
   )
