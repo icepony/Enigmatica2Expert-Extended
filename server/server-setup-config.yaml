@@ -179,7 +179,7 @@ launch:
   minRam: 2G
 
   # specifies whether the server is supposed to auto restart after crash
-  autoRestart: true
+  autoRestart: false
 
   # after a given amount of crashes in a given time the server will stop auto restarting
   crashLimit: 10
