@@ -45,5 +45,10 @@
 		type: "item",
 		item: "tconstruct:soil",
 		count: 64
+	},
+	{
+		uid: "e72bddf2",
+		type: "choice",
+		table: 152
 	}]
 }
