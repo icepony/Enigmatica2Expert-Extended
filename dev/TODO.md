@@ -52,6 +52,11 @@
 - [ ] ✏️ Fix Mek sawmill doesnt have log => planks recipes
 - [ ] ✏️ Remove Clay cast usages
 - [ ] ✏️ Fix there is two Fluid cell types.
+- [ ] ✏️ Portal spread cant spread Ardite
+- [ ] ✏️ Nerf necromances Hear Container trade
+- [ ] ✏️ Add Black Death Skythe from Mythminite Scythe, fix quest
+- [ ] 📖 Harvest Level 1 fix quest requre clay cast
+- [ ] 🔴 Remove `Block Drops` mod by moving its functionality into JER
 
 ```sh
 /bcore_ticktime

@@ -48,7 +48,7 @@ export async function manageSFTP(
       destination: mods/mc2discord-forge-1.12.2-3.3.1.jar`
     )
     .replace(
-      /(localFiles:\s*)\n {4}\S.*$\n {4}\S.*$/m,
+      /(localFiles:\s*)\n +\S.*$\n +\S.*$/m,
 `$1
     - from: overrides/
       to: .`
@@ -73,19 +73,19 @@ export async function manageSFTP(
       continue
     }
 
-    updateBox('Removing folders')
-    const stillToRemove = serverRemoveDirs.slice(0)
-    await Promise.all(
-      serverRemoveDirs.map(async (dir) => {
-        try {
-          if (!(await sftp.stat(dir)).isDirectory) return
-          await sftp.rmdir(dir, true)
-          stillToRemove.splice(stillToRemove.indexOf(dir), 1)
-          updateBox('Removing folders:', stillToRemove.join(', '))
-        }
-        catch (error) {}
-      })
-    )
+    // updateBox('Removing folders')
+    // const stillToRemove = serverRemoveDirs.slice(0)
+    // await Promise.all(
+    //   serverRemoveDirs.map(async (dir) => {
+    //     try {
+    //       if (!(await sftp.stat(dir)).isDirectory) return
+    //       await sftp.rmdir(dir, true)
+    //       stillToRemove.splice(stillToRemove.indexOf(dir), 1)
+    //       updateBox('Removing folders:', stillToRemove.join(', '))
+    //     }
+    //     catch (error) {}
+    //   })
+    // )
 
     updateBox(`Copy ${serverConfigTmp}`)
     await sftp.fastPut(serverConfigTmp, 'server-setup-config.yaml')
