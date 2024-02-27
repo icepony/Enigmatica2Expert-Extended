@@ -140,33 +140,43 @@ recipes.addShapeless('Clearing AdvRock Tank', <advancedrocketry:liquidtank>, [<a
 mods.thermalexpansion.EnervationDynamo.addFuel(<advancedrocketry:electricmushroom>, 90000000);
 
 // Crystalls recycling
-val alienCrystals = {
-  Red   : [<advancedrocketry:crystal:3>, <actuallyadditions:item_crystal_empowered:2>, <jaopca:item_crystalardite>, <environmentaltech:ionite_crystal>],
-  Blue  : [<advancedrocketry:crystal:1>, <actuallyadditions:item_crystal_empowered:1>, <jaopca:item_crystalcobalt>, <environmentaltech:pladium_crystal>],
-  Violet: [<advancedrocketry:crystal:0>, <actuallyadditions:item_crystal_empowered:4>, <jaopca:item_crystalplatinum>, <environmentaltech:litherite_crystal>],
-  Orange: [<advancedrocketry:crystal:5>, <actuallyadditions:item_crystal_empowered:0>, <jaopca:item_crystalthorium>, <environmentaltech:kyronite_crystal>],
-  Green : [<advancedrocketry:crystal:2>, <actuallyadditions:item_crystal_empowered:5>, <jaopca:item_crystaluranium>, <environmentaltech:erodium_crystal>],
-  Yellow: [<advancedrocketry:crystal:4>, <actuallyadditions:item_crystal_empowered:3>, <jaopca:item_crystaliridium>, <environmentaltech:aethium_crystal>],
-} as IItemStack[][string];
+val alienCrystals = [
+  {Violet: [<advancedrocketry:crystal:0>, <actuallyadditions:item_crystal_empowered:5>, <environmentaltech:kyronite_crystal>]},
+  {Green : [<advancedrocketry:crystal:2>, <actuallyadditions:item_crystal_empowered:4>, <environmentaltech:litherite_crystal>]},
+  {Orange: [<advancedrocketry:crystal:5>, <actuallyadditions:item_crystal_empowered:2>, <environmentaltech:erodium_crystal>]},
+  {Blue  : [<advancedrocketry:crystal:1>, <actuallyadditions:item_crystal_empowered:1>, <environmentaltech:pladium_crystal>]},
+  {Red   : [<advancedrocketry:crystal:3>, <actuallyadditions:item_crystal_empowered:0>, <environmentaltech:ionite_crystal>]},
+  {Yellow: [<advancedrocketry:crystal:4>, <actuallyadditions:item_crystal_empowered:3>, <environmentaltech:aethium_crystal>]},
+] as IItemStack[][string][];
 
-for crystalName, ingrs in alienCrystals {
-  val input       = ingrs[0];
-  val output      = ingrs[1];
-  val secondary   = ingrs[2];
-  val evt_crystal = ingrs[3];
+for tier, alienCrystal in alienCrystals {
+  for crystalName, ingrs in alienCrystal {
+    val input       = ingrs[0];
+    val output      = ingrs[1];
+    val evt_crystal = ingrs[2];
 
-  // Main output + secondary
-  scripts.process.crush(input, output, 'only: eu2Crusher AACrusher', [secondary], [0.3f]);
+    // Empowering
+    mods.qmd.target_chamber.addRecipe(input, null, (<particle:boron_ion> * 100000) ^ 2000, output, null, null, null, null, 10000, 1.0, 0);
 
-  // Meat washing for EVT crystals
-  val tag = { Ore: 'aliencrystal' + crystalName } as IData;
-  mods.industrialforegoing.WashingFactory.add('aliencrystal' + crystalName, <liquid:meat> * 200, <fluid:if.ore_fluid_raw>.withTag(tag) * 50);
-  mods.industrialforegoing.FermentationStation.add(<liquid:if.ore_fluid_raw>.withTag(tag), <liquid:if.ore_fluid_fermented>.withTag(tag));
-  mods.industrialforegoing.FluidSievingMachine.add(<liquid:if.ore_fluid_fermented>.withTag(tag) * 100, evt_crystal, <environmentaltech:mica>);
-
-  // Crystaltine extraction
-  scripts.process.fill(input, <liquid:ic2hot_water> * 250, <ore:nuggetCrystaltine>.firstItem, 'only: NCInfuser Transposer');
+    // Antideutron reaction
+    mods.qmd.target_chamber.addRecipe(
+      input, null,
+      (<particle:antideuteron> * 1000000) ^ pow(2, tier - 1),
+      evt_crystal, null,
+      <particle:pion_minus> * 4, <particle:pion_naught> * 4, <particle:pion_plus> * 4,
+      10000000 * pow(2, tier), 1, 2090000 * (tier + 1)
+    );
+  }
 }
+
+// Crystaltine creation
+mods.qmd.target_chamber.addRecipe(
+  <advancedrocketry:crystal:*>, null,
+  (<particle:photon> * 20000000) ^ 19500,
+  <ore:blockCrystaltine>.firstItem, null,
+  <particle:proton>, <particle:neutron>, null,
+  27000, 0.05,-16200
+);
 
 // Crystals creation - just photoning Dilithium with different power
 for i in 0 .. 6 {
