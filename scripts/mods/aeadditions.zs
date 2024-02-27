@@ -42,6 +42,14 @@ for i in 0 .. 4{
   utils.rh(<aeadditions:storage.physical>.definition.makeStack(i));
 }
 
+// Fluid storages
+utils.rh(<aeadditions:storage.component:4>, false, -1, false);
+utils.rh(<aeadditions:storage.component:5>, false, -1, false);
+utils.rh(<aeadditions:storage.component:6>, false, -1, false);
+utils.rh(<aeadditions:storage.fluid>, false, -1, false);
+utils.rh(<aeadditions:storage.fluid:1>, false, -1, false);
+utils.rh(<aeadditions:storage.fluid:2>, false, -1, false);
+
 // ---=== Gas Cells ===---
 for i in 0 .. 7 {
   newGasCellRecipe(<aeadditions:storage.component>.definition.makeStack(i + 7), <aeadditions:storage.gas>.definition.makeStack(i));
