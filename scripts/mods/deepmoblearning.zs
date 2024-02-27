@@ -26,10 +26,16 @@ remakeEx(<deepmoblearning:simulation_chamber>, [
   [<ore:gearEmerald>, <mekanism:glowpanel:6>, <ore:gearEmerald>],
   [<extrautils2:decorativesolid:7>, <deepmoblearning:machine_casing>, <extrautils2:decorativesolid:7>]]);
 
-remakeEx(<deepmoblearning:machine_casing>, [
-  [<deepmoblearning:soot_covered_plate>, <deepmoblearning:soot_covered_redstone>, <deepmoblearning:soot_covered_plate>],
-  [<tconstruct:fancy_frame:2>, <extendedcrafting:trimmed:2>, <tconstruct:fancy_frame:2>],
-  [<deepmoblearning:soot_covered_plate>, <deepmoblearning:soot_covered_redstone>, <deepmoblearning:soot_covered_plate>]]);
+# [Soot-covered Machine Casing]*2 from [3D Print][+3]
+craft.remake(<deepmoblearning:machine_casing> * 2, ["pretty",
+  "□ п □",
+  "□ 3 □",
+  "□ ■ □"], {
+  "□": <deepmoblearning:soot_covered_plate>, # Soot-covered Plate
+  "п": <tconstruct:large_plate>.withTag({Material: "manyullyn"}), # Manyullyn Large Plate
+  "3": <opencomputers:print>,                # 3D Print
+  "■": <ore:blockBlackIron>,                 # Block of Black Iron
+});
 
 recipes.remove(<deepmoblearning:polymer_clay> * 16);
 recipes.addShapeless(<deepmoblearning:polymer_clay> * 16, [LiquidIngr('concrete'), <ore:dustClay>, <ore:dustClay>, <ore:dustClay>, <ore:dustGold>, <ore:dustLapis>]);
