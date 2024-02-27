@@ -53,14 +53,6 @@
 		items: [{
 			item: "tconstruct:casting"
 		}]
-	},
-	{
-		uid: "dc8b53b4",
-		type: "item",
-		items: [{
-			item: "minecraft:clay_ball 2"
-		}],
-		count: 2L
 	}],
 	rewards: [{
 		uid: "ef07995b",
