@@ -1,5 +1,7 @@
 #modloaded mctsmelteryio
 
+import crafttweaker.item.IIngredient;
+
 // Remove unused upgrades
 utils.rh(<mctsmelteryio:upgrade:1>);
 utils.rh(<mctsmelteryio:upgrade:2>);
@@ -11,15 +13,22 @@ utils.rh(<mctsmelteryio:upgrade:3>);
 // Ice balls
 scripts.process.mash(<biomesoplenty:hard_ice>, <mctsmelteryio:iceball> * 8, 'No Exceptions');
 
-// [Base Upgrade]*10 from [Elixir of ][+2]
-craft.remake(<mctsmelteryio:upgrade> * 10, ['pretty',
-  '□ □ □',
-  'п E п',
-  '□ □ □'], {
-  '□': <ore:plateLapis>,    // Lapis Lazuli Plate
-  'п': <ore:plateAluminum>, // Aluminum Plate
-  'E': <rustic:elixir>.withTag({ display: { Name: 'ANY Elixir' } }, false), // Elixir
-});
+for input, amount in {
+  <minecraft:glass_bottle>: 1,
+  <minecraft:potion>.withTag({Potion: "minecraft:water"}): 2,
+  <minecraft:potion:*>: 3,
+  <rustic:elixir>.withTag({ display: { Name: 'ANY Elixir' } }, false): 10, // Elixir
+} as int[IIngredient]$orderly {
+  // [Base Upgrade]
+  craft.remake(<mctsmelteryio:upgrade> * amount, ['pretty',
+    '□ □ □',
+    'п E п',
+    '□ □ □'], {
+    '□': <ore:plateLapis>,    // Lapis Lazuli Plate
+    'п': <ore:plateAluminum>, // Aluminum Plate
+    'E': input,
+  });
+}
 
 // [Speed Upgrade] from [Base Upgrade][+1]
 craft.reshapeless(<mctsmelteryio:upgrade:6>, 'BAA', {
