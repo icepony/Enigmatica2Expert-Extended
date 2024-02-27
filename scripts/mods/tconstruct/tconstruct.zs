@@ -132,6 +132,10 @@ val pressPlates = {
   heavy           : <ore:blockHeavy>,
   constantan      : <ore:blockConstantan>,
   manyullyn       : <ore:blockManyullyn>,
+  pigiron         : <ore:blockPigiron>,
+  xu_evil_metal   : <ore:blockEvilMetal>,
+  void_metal      : <ore:blockVoid>,
+  neutronium      : <ore:blockCosmicNeutronium>,
 } as IIngredient[string];
 for out, inp in pressPlates {
   mods.immersiveengineering.MetalPress.addRecipe(<tconstruct:large_plate>.withTag({ Material: out }), inp, <immersiveengineering:mold>, 16000, inp.amount);
