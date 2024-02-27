@@ -33,23 +33,26 @@
 		</planet>
 		<planet name="Venus" DIMID="102" customIcon="lava">
 			<biomeIds>biomesoplenty:volcanic_island</biomeIds>
-			<skyColor>0,0,0</skyColor>
-			<fogColor>0.9,0.9,0.9</fogColor>
 			<atmosphereDensity>120</atmosphereDensity>
+			<fogColor>0.9,0.9,0.9</fogColor>
+			<generateCaves>true</generateCaves>
 			<gravitationalMultiplier>90</gravitationalMultiplier>
 			<orbitalDistance>72</orbitalDistance>
 			<rotationalPeriod>2784000</rotationalPeriod>
-			<generateCaves>true</generateCaves>
+			<skyColor>0,0,0</skyColor>
 		</planet>
 		<planet name="Mars" DIMID="103" customIcon="marslike">
 			<biomeIds>advancedrocketry:hotdryrock</biomeIds>
-			<skyColor>1,0.2,0</skyColor>
-			<fogColor>0.9,0.6,0.1</fogColor>
 			<atmosphereDensity>0</atmosphereDensity>
-			<orbitalDistance>105</orbitalDistance>
-			<gravitationalMultiplier>38</gravitationalMultiplier>
-			<rotationalPeriod>20000</rotationalPeriod>
+			<craterOres>stoneBaratol,blockStrontium90,blockBerkelium247</craterOres>
+			<fillerBlock>minecraft:stone:1</fillerBlock>
+			<fogColor>0.9,0.6,0.1</fogColor>
 			<generateCaves>true</generateCaves>
+			<generateCraters>true</generateCraters>
+			<gravitationalMultiplier>38</gravitationalMultiplier>
+			<orbitalDistance>105</orbitalDistance>
+			<rotationalPeriod>20000</rotationalPeriod>
+			<skyColor>1,0.2,0</skyColor>
 		</planet>
 		<planet name="Jupiter" DIMID="104" customIcon="gasgiantred">
 			<GasGiant>true</GasGiant>
@@ -69,11 +72,11 @@
 			<planet name="Europa" DIMID="106" customIcon="waterworld">
 				<biomeIds>minecraft:frozen_ocean</biomeIds>
 				<atmosphereDensity>0</atmosphereDensity>
+				<generateCaves>true</generateCaves>
 				<gravitationalMultiplier>30</gravitationalMultiplier>
 				<orbitalDistance>90</orbitalDistance>
 				<orbitalPhi>90</orbitalPhi>
 				<rotationalPeriod>10000</rotationalPeriod>
-				<generateCaves>true</generateCaves>
 			</planet>
 		</planet>
 		<planet name="Saturn" DIMID="107" customIcon="gasgiantblue">
@@ -153,18 +156,6 @@
 			<rotationalPeriod>24000</rotationalPeriod>
 			<generateCaves>true</generateCaves>
 		</planet>
-		<planet name="Novus" DIMID="113" customIcon="lava">
-			<biomeIds>biomesoplenty:volcanic_island</biomeIds>
-			<skyColor>1,0,1</skyColor>
-			<fogColor>1,0,0.5</fogColor>
-			<atmosphereDensity>0</atmosphereDensity>
-			<gravitationalMultiplier>75</gravitationalMultiplier>
-			<orbitalDistance>80</orbitalDistance>
-			<rotationalPeriod>12000</rotationalPeriod>
-			<oceanBlock>tconstruct:molten_obsidian</oceanBlock>
-			<generateCaves>true</generateCaves>
-			<fillerBlock>nuclearcraft:ingot_block:8</fillerBlock>
-		</planet>
 		<planet name="Stella" DIMID="114" customIcon="earthlike">
 			<biomeIds>biomesoplenty:sacred_springs,biomesoplenty:mystic_grove</biomeIds>
 			<skyColor>1,0,1</skyColor>
@@ -172,16 +163,6 @@
 			<atmosphereDensity>100</atmosphereDensity>
 			<gravitationalMultiplier>75</gravitationalMultiplier>
 			<orbitalDistance>200</orbitalDistance>
-			<rotationalPeriod>12000</rotationalPeriod>
-			<generateCaves>true</generateCaves>
-		</planet>
-		<planet name="Philucka" DIMID="115" customIcon="marslike">
-			<biomeIds>advancedrocketry:stormland</biomeIds>
-			<skyColor>1,0,1</skyColor>
-			<fogColor>1,0,0.5</fogColor>
-			<atmosphereDensity>0</atmosphereDensity>
-			<gravitationalMultiplier>75</gravitationalMultiplier>
-			<orbitalDistance>100</orbitalDistance>
 			<rotationalPeriod>12000</rotationalPeriod>
 			<generateCaves>true</generateCaves>
 		</planet>
@@ -198,7 +179,9 @@
 			<rotationalPeriod>12000</rotationalPeriod>
 		</planet>
 	</star>
-	<star name="HD 42176" temp="145" x="-90" y="-33" numPlanets="0" numGasGiants="0" blackHole="true">
+	<star blackHole="false" name="Magnis Vulpes" temp="87" x="6" y="-142" numPlanets="5" numGasGiants="1">
+		<star temp="200" separation="10.0"/>
+		<star temp="100" separation="6.0"/>
 		<planet name="KELT-1b" DIMID="117" customIcon="gasgiantred">
 			<skyColor>0,1,0.5</skyColor>
 			<fogColor>0,0,1</fogColor>
@@ -212,33 +195,6 @@
 			<orbitalDistance>35</orbitalDistance>
 			<rotationalPeriod>4000</rotationalPeriod>
 		</planet>
-		<planet name="KELT-2ab" DIMID="118" customIcon="waterworld">
-			<biomeIds>minecraft:frozen_ocean</biomeIds>
-			<skyColor>1,0,1</skyColor>
-			<fogColor>1,0,0.5</fogColor>
-			<atmosphereDensity>0</atmosphereDensity>
-			<gravitationalMultiplier>120</gravitationalMultiplier>
-			<orbitalDistance>40</orbitalDistance>
-			<rotationalPeriod>8000</rotationalPeriod>
-			<generateCaves>true</generateCaves>
-		</planet>
-		<planet name="KELT-3" DIMID="119" customIcon="marslike">
-			<biomeIds>advancedrocketry:hotdryrock</biomeIds>
-			<skyColor>1,0,1</skyColor>
-			<fogColor>1,0,0.5</fogColor>
-			<atmosphereDensity>0</atmosphereDensity>
-			<gravitationalMultiplier>120</gravitationalMultiplier>
-			<orbitalDistance>80</orbitalDistance>
-			<rotationalPeriod>8000</rotationalPeriod>
-			<generateCaves>true</generateCaves>
-			<generateCraters>true</generateCraters>
-			<craterOres>stoneBaratol,blockStrontium90,blockBerkelium247</craterOres>
-			<fillerBlock>minecraft:stone:1</fillerBlock>
-		</planet>
-	</star>
-	<star blackHole="false" name="Magnis Vulpes" temp="87" x="6" y="-142" numPlanets="0" numGasGiants="0">
-		<star temp="200" separation="10.0"/>
-		<star temp="100" separation="6.0"/>
 		<planet name="KELT-4ab" DIMID="120" customIcon="iceworld">
 			<biomeIds>biomesoplenty:alps,iceandfire:glacier,biomesoplenty:alps_foothills,biomesoplenty:glacier</biomeIds>
 			<skyColor>0,1,0</skyColor>
@@ -251,7 +207,7 @@
 			<generateCaves>true</generateCaves>
 		</planet>
 		<planet name="KELT-6a" DIMID="121" customIcon="earthlike">
-			<biomeIds>advancedrocketry:alien_forest,biomesoplenty:ominous_woods</biomeIds>
+			<biomeIds>advancedrocketry:alien_forest,biomesoplenty:ominous_woods,advancedrocketry:stormland</biomeIds>
 			<skyColor>1,0,1</skyColor>
 			<fogColor>1,0,0.5</fogColor>
 			<atmosphereDensity>80</atmosphereDensity>
@@ -262,18 +218,19 @@
 		</planet>
 		<planet name="Kepler 0118" DIMID="122" customIcon="lava">
 			<biomeIds>biomesoplenty:volcanic_island</biomeIds>
-			<skyColor>0,1,0</skyColor>
-			<fogColor>0,0,1</fogColor>
-			<hasRings>true</hasRings>
-			<generateVolcanos>true</generateVolcanos>
 			<atmosphereDensity>0</atmosphereDensity>
+			<fillerBlock>quark:basalt</fillerBlock>
+			<fogColor>0,0,1</fogColor>
+			<generateCaves>true</generateCaves>
+			<generateCraters>true</generateCraters>
+			<generateGeodes>true</generateGeodes>
+			<generateVolcanos>true</generateVolcanos>
 			<gravitationalMultiplier>60</gravitationalMultiplier>
+			<hasRings>true</hasRings>
+			<oceanBlock>tconstruct:molten_obsidian</oceanBlock>
 			<orbitalDistance>130</orbitalDistance>
 			<rotationalPeriod>18000</rotationalPeriod>
-			<generateCaves>true</generateCaves>
-			<generateGeodes>true</generateGeodes>
-			<generateCraters>true</generateCraters>
-			<fillerBlock>astralsorcery:blockblackmarble</fillerBlock>
+			<skyColor>0,1,0</skyColor>
 		</planet>
 		<planet name="Kepler 0119" DIMID="123" customIcon="marslike">
 			<biomeIds>advancedrocketry:hotdryrock</biomeIds>

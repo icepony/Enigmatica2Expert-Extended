@@ -29,7 +29,7 @@
 			"horizontal-density": 2,
 			"dimension": {
 				"restriction": "blacklist",
-				"value": [-1,1,111,112,119,123]
+				"value": [-1,1,103,111,112,123]
 			}
 		},
 		"large_vein_coal": {
@@ -60,7 +60,7 @@
 			"horizontal-density": 2,
 			"dimension": {
 				"restriction": "blacklist",
-				"value": [-1,1,111,112,119,123]
+				"value": [-1,1,103,111,112,123]
 			}
 		},
 		"large_vein_redstone": {
@@ -91,7 +91,7 @@
 			"horizontal-density": 2,
 			"dimension": {
 				"restriction": "blacklist",
-				"value": [-1,1,111,112,119,123]
+				"value": [-1,1,103,111,112,123]
 			}
 		},
 		"large_vein_copper_gold": {
@@ -123,7 +123,7 @@
 			"horizontal-density": 2,
 			"dimension": {
 				"restriction": "blacklist",
-				"value": [-1,1,111,112,119,123]
+				"value": [-1,1,103,111,112,123]
 			}
 		},
 		"large_vein_tin_lead": {
@@ -154,7 +154,7 @@
 			"horizontal-density": 2,
 			"dimension": {
 				"restriction": "blacklist",
-				"value": [-1,1,111,112,119,123]
+				"value": [-1,1,103,111,112,123]
 			}
 		}
 	}
