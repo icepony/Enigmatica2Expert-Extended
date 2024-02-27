@@ -23,18 +23,18 @@ Object.entries(
 .map(([fluid, consumption, manaTotal]) =>
   `  ${("'"+fluid+"'").padEnd(14)+':'} [${consumption}, ${manaTotal}],`
 )) */
-  'perfect_fuel': [12, 768000000],
-  'rocketfuel'  : [500, 480000],
-  'empoweredoil': [1200, 100000],
-  'refined_fuel': [1411, 85000],
-  'diesel'      : [3428, 17500],
-  'crystaloil'  : [3428, 17500],
-  'biodiesel'   : [4800, 12500],
-  'biomass'     : [4800, 12500],
-  'canolaoil'   : [8000, 7500],
-  'oil'         : [12000, 5000],
+  'perfect_fuel': [25, 384000000],
+  'rocketfuel'  : [1000, 240000],
+  'empoweredoil': [2400, 50000],
+  'refined_fuel': [2823, 42500],
+  'diesel'      : [6857, 8750],
+  'crystaloil'  : [6857, 8750],
+  'biodiesel'   : [9600, 6250],
+  'biomass'     : [9600, 6250],
+  'canolaoil'   : [16000, 3750],
+  'oil'         : [24000, 2500],
 /**/
-} as int[][string] {
+} as int[][string]$orderly {
   val consumption = arr[0];
   val manaTotal = arr[1];
   x.addJEIRecipe(AssemblyRecipe.create(function (container) {
