@@ -17,7 +17,7 @@ import scripts.processUtils.defaultChance0_int;
 import scripts.processUtils.defaultItem0;
 import scripts.processUtils.enderioXmlRecipe;
 import scripts.processUtils.info;
-import scripts.processUtils.isNotException;
+import scripts.processUtils.isException;
 import scripts.processUtils.isStrict;
 import scripts.processUtils.normalizeChances;
 import scripts.processUtils.warning;
@@ -51,15 +51,16 @@ function getOptionTime(options as IData, default as int) as int {
 // Function receive all possible combinations of input and outputs of one machine
 // Any argument can be null except machine name
 // Returns name of machine if recipe was added. If not, returns empty string
-function workEx(machineNameAnyCase as string, exceptions as string,
+function workEx(machineNameAnyCase as string, exceptionsAnyCase as string,
   inputItems as IIngredient[], inputLiquids as ILiquidStack[],
   outputItems as IItemStack[], outputLiquids as ILiquidStack[] = null,
   extra as IItemStack[] = null, extraChance as float[] = null, options as IData = null) as string {
   // Prepare machine name
   val machineName = machineNameAnyCase.toLowerCase();
+  val exceptions = isNull(exceptionsAnyCase) ? '' : exceptionsAnyCase.toLowerCase();
 
   // Machine is exception -> exit function
-  if (!isNotException(exceptions, machineName)) { return ''; }
+  if (isException(exceptions, machineName)) { return ''; }
 
   // Strict indicates that old recipe should be removed first
   val strict as bool = isStrict(exceptions, machineName);

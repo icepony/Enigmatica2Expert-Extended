@@ -16,20 +16,38 @@ import crafttweaker.liquid.ILiquidStack;
 function I(id as string, n as int) as IItemStack { return itemUtils.getItem(id, n); }
 
 // Check if exception string contains lookup string, case NOT sensetive
-function isNotException(exceptions as string, machineName as string) as bool {
-  if (isNull(exceptions)) {
-    return true;
-  }
-  else {
-    val exc = exceptions.toLowerCase();
-    val name = machineName.toLowerCase();
+function isException(exceptions as string, machineName as string) as bool {
+  if (exceptions == '') return false;
+  var exc = exceptions;
 
-    val isHaveWord = exc.matches('.*\b' ~ name ~ '\b.*');
-    val isAfterStrict = exc.matches('.*strict:.*' ~ name ~ '\b.*');
-    val isOnly = exc.matches('^(only|strict):.*');
-
-    return isAfterStrict || !(isHaveWord ^ isOnly);
+  var haveOnly = false;
+  val indexOfOnly = exc.indexOf('only:');
+  if (indexOfOnly != -1) {
+    haveOnly = true;
+    exc = exc.substring(indexOfOnly + 5);
   }
+
+  val isHaveName = exc.matches('.*\b'~machineName~'\b.*');
+
+  if (haveOnly) {
+    val result = !isHaveName;
+    return result;
+  }
+
+  var isAfterStrict = false;
+  var haveStrict = false;
+  val indexOfStrict = exc.indexOf('strict:');
+  if (indexOfStrict != -1) {
+    haveStrict = true;
+    isAfterStrict = exc.substring(indexOfStrict + 7).matches('.*\b'~machineName~'\b.*');
+  }
+
+  if (haveStrict) {
+    val result = !(isHaveName && isAfterStrict);
+    return result;
+  }
+
+  return isHaveName;
 }
 
 // Check machineName comes after keyword "strict:"
