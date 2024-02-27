@@ -1,5 +1,22 @@
 {
   "ignoredFiles": [
-    "resources/assets/fml/textures/gui/animated_enigmatica.gif"
+    "resources/assets/fml/textures/gui/animated_enigmatica.gif",
+    "resources/mysticalagriculture/textures/blocks/inferium_furnace_front.png",
+    "resources/mysticalagriculture/textures/blocks/inferium_furnace_front_on.png",
+    "resources/mysticalagriculture/textures/blocks/inferium_furnace_side.png",
+    "resources/mysticalagriculture/textures/blocks/intermedium_furnace_front.png",
+    "resources/mysticalagriculture/textures/blocks/intermedium_furnace_front_on.png",
+    "resources/mysticalagriculture/textures/blocks/intermedium_furnace_side.png",
+    "resources/mysticalagriculture/textures/blocks/prudentium_furnace_front.png",
+    "resources/mysticalagriculture/textures/blocks/prudentium_furnace_front_on.png",
+    "resources/mysticalagriculture/textures/blocks/prudentium_furnace_side.png",
+    "resources/mysticalagriculture/textures/blocks/superium_furnace_front.png",
+    "resources/mysticalagriculture/textures/blocks/superium_furnace_front_on.png",
+    "resources/mysticalagriculture/textures/blocks/superium_furnace_side.png",
+    "resources/mysticalagriculture/textures/blocks/supremium_furnace_front.png",
+    "resources/mysticalagriculture/textures/blocks/supremium_furnace_front_on.png",
+    "resources/mysticalagriculture/textures/blocks/supremium_furnace_side.png",
+    "resources/contenttweaker/textures/blocks/double_compressed_basalt.png",
+    "resources/contenttweaker/textures/blocks/compressed_basalt_double.png"
   ]
 }
