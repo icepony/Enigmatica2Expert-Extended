@@ -60,9 +60,6 @@ recipes.addShaped('ender_bucket2',
 // Clear reinforced bucket
 utils.clearFluid(<randomthings:reinforcedenderbucket>);
 
-// Add recipe
-mods.inworldcrafting.ExplosionCrafting.explodeBlockRecipe(<randomthings:ingredient:9> * 9, <minecraft:emerald_block>);
-
 // Floo dust
 recipes.remove(<randomthings:ingredient:7>);
 recipes.addShapeless('Floo Dust 8',  <randomthings:ingredient:7> * 8, [<ore:enderpearl>, <ore:dustRedstone>, <ore:gunpowder>, <ore:cropBean>]);

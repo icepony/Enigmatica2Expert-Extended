@@ -85,7 +85,7 @@ craft.remake(<rats:rat_upgrade_gemcutter>, ['pretty',
   'P M P',
   '▬ R ▬',
   'P M P'], {
-  'P': <randomthings:ingredient:9>,      // Precious Emerald
+  'P': <enderio:item_material:69>,
   'R': <rats:rat_upgrade_basic>,         // Rat Upgrade: Basic
   '▬': <ore:ingotCarbon>,                // Carbon Brick
   'M': <extrautils2:decorativesolidwood>, // Magical Planks
@@ -139,9 +139,9 @@ mods.rt.RandomThingsTweaker.addImbuingRecipe(
 
 // Ratlanean upgrade
 remake('rat_upgrade_basic_ratlantean', <rats:rat_upgrade_basic_ratlantean>, [
-  [<randomthings:ingredient:9>, <rats:marbled_cheese>, <randomthings:ingredient:9>],
+  [<enderio:item_material:69>, <rats:marbled_cheese>, <enderio:item_material:69>],
   [<rats:marbled_cheese>, <rats:rat_upgrade_basic>, <rats:marbled_cheese>],
-  [<randomthings:ingredient:9>, <rats:marbled_cheese>, <randomthings:ingredient:9>],
+  [<enderio:item_material:69>, <rats:marbled_cheese>, <enderio:item_material:69>],
 ]);
 
 // Archeologist upgrade

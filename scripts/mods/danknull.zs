@@ -35,7 +35,7 @@ craft.remake(<danknull:danknull_dock>, ['pretty',
   'P ♥ P',
   '♥ ■ ♥',
   'P ♥ P'], {
-  'P': <randomthings:ingredient:9>, // Precious Emerald
+  'P': <enderio:item_material:69>,
   '♥': <compactmachines3:redstonetunneltool>, // Redstone Tunnel
   '■': <appliedenergistics2:smooth_sky_stone_block>, // Sky Stone Block
 });

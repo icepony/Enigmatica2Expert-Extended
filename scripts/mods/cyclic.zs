@@ -501,13 +501,13 @@ craft.remake(<cyclicmagic:tool_swap>, ['pretty',
   'T': <cyclicmagic:glass_strong>, // Tempered Glass
 });
 
-// [Gentle Exchange Scepter] from [Precious Emerald][+2]
+// [Gentle Exchange Scepter]
 craft.remake(<cyclicmagic:tool_swap_match>, ['pretty',
   '  ▲ P',
   '  T ▲',
   'T    '], {
   '▲': <ore:dustDimensional>, // Dimensional Blend
-  'P': <randomthings:ingredient:9>, // Precious Emerald
+  'P': <openblocks:tank>,
   'T': <cyclicmagic:glass_strong>, // Tempered Glass
 });
 
@@ -543,14 +543,14 @@ craft.remake(<cyclicmagic:block_anvil_magma>, ['pretty',
   'T': <cyclicmagic:glass_strong>, // Tempered Glass
 });
 
-// [Ender Wing Prime] from [Precious Emerald][+2]
+// [Ender Wing Prime]
 recipes.remove(<cyclicmagic:tool_warp_home>);
 craft.make(<cyclicmagic:tool_warp_home:16>, ['pretty',
   '  f f',
   '  P f',
   'E    '], {
   'f': <twilightforest:raven_feather>,
-  'P': <randomthings:ingredient:9>, // Precious Emerald
+  'P': <openblocks:tank>,
   'E': <randomthings:ingredient:1>, // Evil Tear
 });
 
@@ -692,7 +692,7 @@ craft.remake(<cyclicmagic:harvester_block>, ['pretty',
   'P e P',
   'M B M',
   'L L L'], {
-  'P': <randomthings:ingredient:9>, // Precious Emerald
+  'P': <enderio:item_material:69>,
   'e': <ore:essence>, // Essence
   'M': <extrautils2:decorativesolidwood>, // Magical Planks
   'B': <cyclicmagic:battery>, // Battery
