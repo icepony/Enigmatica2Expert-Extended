@@ -29803,5 +29803,1728 @@
     "distrib": "0,0.0;3,0.0;4,1.171875E-5;5,3.90625E-5;6,4.296875E-5;7,4.4921875E-5;8,1.953125E-5;9,4.8828126E-5;10,3.984375E-5;11,5.078125E-5;12,2.734375E-5;13,3.0078125E-5;14,1.796875E-5;15,1.328125E-5;16,7.03125E-6;17,1.875E-5;18,1.25E-5;19,1.484375E-5;20,8.203125E-6;21,1.2109375E-5;22,1.25E-5;23,1.1328125E-5;24,1.015625E-5;25,9.765625E-6;26,2.7226564E-4;27,5.382812E-4;28,8.59375E-5;29,2.4179688E-4;30,2.03125E-5;31,5.359375E-4;32,1.3398437E-4;33,1.0820312E-4;34,1.25E-4;35,2.0625E-4;36,1.875E-5;37,1.484375E-4;38,1.8359375E-5;39,8.984375E-5;40,6.210938E-5;41,1.515625E-4;42,1.8320313E-4;43,1.4023438E-4;44,2.4335938E-4;45,2.8828124E-4;46,5.121094E-4;47,7.800781E-4;48,5.296875E-4;49,6.1328127E-4;50,7.3007814E-4;51,7.101562E-4;52,5.394531E-4;53,5.371094E-4;54,5.105469E-4;55,5.605469E-4;56,3.0546874E-4;57,2.8007812E-4;58,2.1835938E-4;59,2.6523438E-4;60,1.3007813E-4;61,1.796875E-4;62,9.8046876E-5;63,1.5625E-4;64,2.109375E-5;65,3.4765624E-5;66,1.796875E-5;67,3.046875E-5;68,1.6796876E-5;69,3.6328125E-5;70,2.109375E-5;71,6.015625E-5;72,5.2734376E-5;73,5.9765625E-5;74,1.0585938E-4;75,6.25E-5;76,1.0E-4;77,2.78125E-4;78,2.515625E-4;79,2.5585937E-4;80,2.0859374E-4;81,1.03125E-4;82,2.2695313E-4;83,9.84375E-5;84,1.3984375E-4;85,3.2617187E-4;86,7.617187E-4;87,8.4375E-5;88,3.9765626E-4;89,2.34375E-5;90,7.683594E-4;91,4.6914062E-4;92,3.8359375E-4;93,1.3554687E-4;94,4.8945314E-4;95,1.2773437E-4;96,4.8476562E-4;97,1.765625E-4;98,3.6054687E-4;99,7.382812E-5;100,2.6796875E-4;101,6.796875E-5;102,9.375E-5;103,2.8125E-5;104,1.7929687E-4;105,2.1445313E-4;106,7.1875E-5;107,1.40625E-4;108,2.0703124E-5;109,2.0234376E-4;110,1.03125E-4;111,1.1367188E-4;112,1.09375E-5;113,9.648438E-5;114,0.0;115,5.15625E-5;116,7.03125E-6;117,5.1953124E-5;118,2.34375E-6;119,2.09375E-4;120,3.5859374E-4;121,1.1757812E-4;122,3.34375E-4;123,7.03125E-6;124,4.1992188E-4;125,1.0429687E-4;126,8.75E-5;127,2.421875E-5;128,0.0;129,0.0;130,9.84375E-5;131,0.0;132,9.8828124E-5;133,0.0;",
     "silktouch": false,
     "dim": "Emptiness (14676)"
+  },
+  {
+    "block": "astralsorcery:blockgemcrystals:1",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "astralsorcery:itemperkgem:2",
+        "fortunes": {
+          "0": 1,
+          "1": 1,
+          "2": 1,
+          "3": 1
+        }
+      }
+    ],
+    "dim": "Block Drops"
+  },
+  {
+    "block": "astralsorcery:blockgemcrystals:2",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "astralsorcery:itemperkgem:0",
+        "fortunes": {
+          "0": 1,
+          "1": 1,
+          "2": 1,
+          "3": 1
+        }
+      }
+    ],
+    "dim": "Block Drops"
+  },
+  {
+    "block": "astralsorcery:blockgemcrystals:3",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "astralsorcery:itemperkgem:1",
+        "fortunes": {
+          "0": 1,
+          "1": 1,
+          "2": 1,
+          "3": 1
+        }
+      }
+    ],
+    "dim": "Block Drops"
+  },
+  {
+    "block": "biomesoplenty:grass:0",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "minecraft:end_stone",
+        "fortunes": {
+          "0": 1,
+          "1": 1,
+          "2": 1,
+          "3": 1
+        }
+      }
+    ],
+    "dim": "Block Drops"
+  },
+  {
+    "block": "botania:enchanter:0",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "minecraft:lapis_block",
+        "fortunes": {
+          "0": 1,
+          "1": 1,
+          "2": 1,
+          "3": 1
+        }
+      }
+    ],
+    "dim": "Block Drops"
+  },
+  {
+    "block": "buildinggadgets:constructionblock_dense:0",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "buildinggadgets:constructionpaste:0",
+        "fortunes": {
+          "0": 9,
+          "1": 9,
+          "2": 9,
+          "3": 9
+        }
+      }
+    ],
+    "dim": "Block Drops"
+  },
+  {
+    "block": "buildinggadgets:constructionblock:0",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "buildinggadgets:constructionpaste:0",
+        "fortunes": {
+          "0": 6,
+          "1": 6,
+          "2": 6,
+          "3": 6
+        }
+      }
+    ],
+    "dim": "Block Drops"
+  },
+  {
+    "block": "extrautils2:ironwood_leaves:1",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "minecraft:blaze_powder",
+        "fortunes": {
+          "0": 0.2,
+          "1": 0.4,
+          "2": 0.8,
+          "3": 0.9
+        }
+      },
+      {
+        "itemStack": "extrautils2:ironwood_sapling:1",
+        "fortunes": {
+          "0": 0.2,
+          "1": 0.4,
+          "2": 0.8,
+          "3": 0.9
+        }
+      }
+    ],
+    "dim": "Block Drops"
+  },
+  {
+    "block": "extrautils2:ironwood_leaves",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "extrautils2:ironwood_sapling",
+        "fortunes": {
+          "0": 1,
+          "1": 1,
+          "2": 1,
+          "3": 1
+        }
+      }
+    ],
+    "dim": "Block Drops"
+  },
+  {
+    "block": "extrautils2:ironwood_log",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "extrautils2:ironwood_planks",
+        "fortunes": {
+          "0": 1,
+          "1": 1,
+          "2": 1,
+          "3": 1
+        }
+      }
+    ],
+    "dim": "Block Drops"
+  },
+  {
+    "block": "forestry:bog_earth:3",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "forestry:peat:0",
+        "fortunes": {
+          "0": 1,
+          "1": 1,
+          "2": 1,
+          "3": 1
+        }
+      }
+    ],
+    "dim": "Block Drops"
+  },
+  {
+    "block": "ic2:sheet:0",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "ic2:misc_resource:4",
+        "fortunes": {
+          "0": 1,
+          "1": 1,
+          "2": 1,
+          "3": 1
+        }
+      }
+    ],
+    "dim": "Block Drops"
+  },
+  {
+    "block": "iceandfire:chared_grass_path",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "iceandfire:chared_dirt",
+        "fortunes": {
+          "0": 1,
+          "1": 1,
+          "2": 1,
+          "3": 1
+        }
+      }
+    ],
+    "dim": "Block Drops"
+  },
+  {
+    "block": "iceandfire:frozen_grass_path",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "iceandfire:frozen_dirt",
+        "fortunes": {
+          "0": 1,
+          "1": 1,
+          "2": 1,
+          "3": 1
+        }
+      }
+    ],
+    "dim": "Block Drops"
+  },
+  {
+    "block": "iceandfire:jar_pixie",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "iceandfire:jar_empty",
+        "fortunes": {
+          "0": 1,
+          "1": 1,
+          "2": 1,
+          "3": 1
+        }
+      }
+    ],
+    "dim": "Block Drops"
+  },
+  {
+    "block": "lootr:lootr_trapped_chest",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "minecraft:trapped_chest",
+        "fortunes": {
+          "0": 1,
+          "1": 1,
+          "2": 1,
+          "3": 1
+        }
+      }
+    ],
+    "dim": "Block Drops"
+  },
+  {
+    "block": "mekanism:saltblock:0",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "mekanism:salt:0",
+        "fortunes": {
+          "0": 4,
+          "1": 4,
+          "2": 4,
+          "3": 4
+        }
+      }
+    ],
+    "dim": "Block Drops"
+  },
+  {
+    "block": "minecraft:vine:0",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "rustic:grape_stem",
+        "fortunes": {
+          "0": 1,
+          "1": 1,
+          "2": 1,
+          "3": 1
+        }
+      }
+    ],
+    "dim": "Block Drops"
+  },
+  {
+    "block": "mysticalagriculture:end_inferium_ore",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "mysticalagriculture:crafting:0",
+        "fortunes": {
+          "0": 1,
+          "1": 1,
+          "2": 1,
+          "3": 1
+        }
+      }
+    ],
+    "dim": "Block Drops"
+  },
+  {
+    "block": "mysticalagriculture:end_prosperity_ore",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "mysticalagriculture:crafting:5",
+        "fortunes": {
+          "0": 1,
+          "1": 1,
+          "2": 1,
+          "3": 1
+        }
+      }
+    ],
+    "dim": "Block Drops"
+  },
+  {
+    "block": "mysticalagriculture:inferium_ore",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "mysticalagriculture:crafting:0",
+        "fortunes": {
+          "0": 1,
+          "1": 1,
+          "2": 1,
+          "3": 1
+        }
+      }
+    ],
+    "dim": "Block Drops"
+  },
+  {
+    "block": "mysticalagriculture:nether_inferium_ore",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "mysticalagriculture:crafting:0",
+        "fortunes": {
+          "0": 1,
+          "1": 1,
+          "2": 1,
+          "3": 1
+        }
+      }
+    ],
+    "dim": "Block Drops"
+  },
+  {
+    "block": "mysticalagriculture:nether_prosperity_ore",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "mysticalagriculture:crafting:5",
+        "fortunes": {
+          "0": 1,
+          "1": 1,
+          "2": 1,
+          "3": 1
+        }
+      }
+    ],
+    "dim": "Block Drops"
+  },
+  {
+    "block": "mysticalagriculture:prosperity_ore",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "mysticalagriculture:crafting:5",
+        "fortunes": {
+          "0": 1,
+          "1": 1,
+          "2": 1,
+          "3": 1
+        }
+      }
+    ],
+    "dim": "Block Drops"
+  },
+  {
+    "block": "mysticalagriculture:soulstone:0",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "mysticalagriculture:soulstone:1",
+        "fortunes": {
+          "0": 1,
+          "1": 1,
+          "2": 1,
+          "3": 1
+        }
+      }
+    ],
+    "dim": "Block Drops"
+  },
+  {
+    "block": "rustic:leaves_apple",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "rustic:sapling_apple",
+        "fortunes": {
+          "0": 1,
+          "1": 1,
+          "2": 1,
+          "3": 1
+        }
+      }
+    ],
+    "dim": "Block Drops"
+  },
+  {
+    "block": "scalinghealth:crystalore:0",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "scalinghealth:crystalshard:0",
+        "fortunes": {
+          "0": 1,
+          "1": 1,
+          "2": 1,
+          "3": 1
+        }
+      }
+    ],
+    "dim": "Block Drops"
+  },
+  {
+    "block": "tconstruct:slime_leaves",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "tconstruct:slime_sapling",
+        "fortunes": {
+          "0": 1,
+          "1": 1,
+          "2": 1,
+          "3": 1
+        }
+      }
+    ],
+    "dim": "Block Drops"
+  },
+  {
+    "block": "twilightforest:magic_log_core:0",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "twilightforest:magic_log:0",
+        "fortunes": {
+          "0": 1,
+          "1": 1,
+          "2": 1,
+          "3": 1
+        }
+      }
+    ],
+    "dim": "Block Drops"
+  },
+  {
+    "block": "twilightforest:magic_log_core:1",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "twilightforest:magic_log:1",
+        "fortunes": {
+          "0": 1,
+          "1": 1,
+          "2": 1,
+          "3": 1
+        }
+      }
+    ],
+    "dim": "Block Drops"
+  },
+  {
+    "block": "twilightforest:magic_log_core:2",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "twilightforest:magic_log:2",
+        "fortunes": {
+          "0": 1,
+          "1": 1,
+          "2": 1,
+          "3": 1
+        }
+      }
+    ],
+    "dim": "Block Drops"
+  },
+  {
+    "block": "twilightforest:magic_log_core:3",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "twilightforest:magic_log:3",
+        "fortunes": {
+          "0": 1,
+          "1": 1,
+          "2": 1,
+          "3": 1
+        }
+      }
+    ],
+    "dim": "Block Drops"
+  },
+  {
+    "block": "minecraft:mob_spawner",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "enderio:item_broken_spawner",
+        "fortunes": {
+          "0": 1,
+          "1": 1,
+          "2": 1,
+          "3": 1
+        }
+      },
+      {
+        "itemStack": "actuallyadditions:item_misc:20",
+        "fortunes": {
+          "0": 1,
+          "1": 1,
+          "2": 1,
+          "3": 1
+        }
+      }
+    ],
+    "dim": "Block Drops"
+  },
+  {
+    "block": "endreborn:crop_ender_flower",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "minecraft:ender_pearl",
+        "fortunes": {
+          "0": 1,
+          "1": 1,
+          "2": 1,
+          "3": 1
+        }
+      }
+    ],
+    "dim": "Block Drops"
+  },
+  {
+    "block": "exnihilocreatio:block_infested_leaves",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "minecraft:string:0",
+        "fortunes": {
+          "0": 2,
+          "1": 2,
+          "2": 2,
+          "3": 2
+        }
+      }
+    ],
+    "dim": "Block Drops"
+  },
+  {
+    "block": "randomthings:spectreleaf:0",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "randomthings:spectresapling:0",
+        "fortunes": {
+          "0": 1,
+          "1": 1,
+          "2": 1,
+          "3": 1
+        }
+      },
+      {
+        "itemStack": "randomthings:ingredient:2",
+        "fortunes": {
+          "0": 1,
+          "1": 1,
+          "2": 1,
+          "3": 1
+        }
+      }
+    ],
+    "dim": "Block Drops"
+  },
+  {
+    "block": "minecraft:glass:0",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "quark:glass_shards:0",
+        "fortunes": {
+          "0": 2,
+          "1": 3,
+          "2": 4,
+          "3": 4
+        }
+      }
+    ],
+    "dim": "Block Drops"
+  },
+  {
+    "block": "minecraft:stained_glass:0",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "quark:glass_shards:1",
+        "fortunes": {
+          "0": 2,
+          "1": 3,
+          "2": 4,
+          "3": 4
+        }
+      }
+    ],
+    "dim": "Block Drops"
+  },
+  {
+    "block": "minecraft:stained_glass:1",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "quark:glass_shards:2",
+        "fortunes": {
+          "0": 2,
+          "1": 3,
+          "2": 4,
+          "3": 4
+        }
+      }
+    ],
+    "dim": "Block Drops"
+  },
+  {
+    "block": "minecraft:stained_glass:2",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "quark:glass_shards:3",
+        "fortunes": {
+          "0": 2,
+          "1": 3,
+          "2": 4,
+          "3": 4
+        }
+      }
+    ],
+    "dim": "Block Drops"
+  },
+  {
+    "block": "minecraft:stained_glass:3",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "quark:glass_shards:4",
+        "fortunes": {
+          "0": 2,
+          "1": 3,
+          "2": 4,
+          "3": 4
+        }
+      }
+    ],
+    "dim": "Block Drops"
+  },
+  {
+    "block": "minecraft:stained_glass:4",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "quark:glass_shards:5",
+        "fortunes": {
+          "0": 2,
+          "1": 3,
+          "2": 4,
+          "3": 4
+        }
+      }
+    ],
+    "dim": "Block Drops"
+  },
+  {
+    "block": "minecraft:stained_glass:5",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "quark:glass_shards:6",
+        "fortunes": {
+          "0": 2,
+          "1": 3,
+          "2": 4,
+          "3": 4
+        }
+      }
+    ],
+    "dim": "Block Drops"
+  },
+  {
+    "block": "minecraft:stained_glass:6",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "quark:glass_shards:7",
+        "fortunes": {
+          "0": 2,
+          "1": 3,
+          "2": 4,
+          "3": 4
+        }
+      }
+    ],
+    "dim": "Block Drops"
+  },
+  {
+    "block": "minecraft:stained_glass:7",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "quark:glass_shards:8",
+        "fortunes": {
+          "0": 2,
+          "1": 3,
+          "2": 4,
+          "3": 4
+        }
+      }
+    ],
+    "dim": "Block Drops"
+  },
+  {
+    "block": "minecraft:stained_glass:8",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "quark:glass_shards:9",
+        "fortunes": {
+          "0": 2,
+          "1": 3,
+          "2": 4,
+          "3": 4
+        }
+      }
+    ],
+    "dim": "Block Drops"
+  },
+  {
+    "block": "minecraft:stained_glass:9",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "quark:glass_shards:10",
+        "fortunes": {
+          "0": 2,
+          "1": 3,
+          "2": 4,
+          "3": 4
+        }
+      }
+    ],
+    "dim": "Block Drops"
+  },
+  {
+    "block": "minecraft:stained_glass:10",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "quark:glass_shards:11",
+        "fortunes": {
+          "0": 2,
+          "1": 3,
+          "2": 4,
+          "3": 4
+        }
+      }
+    ],
+    "dim": "Block Drops"
+  },
+  {
+    "block": "minecraft:stained_glass:11",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "quark:glass_shards:12",
+        "fortunes": {
+          "0": 2,
+          "1": 3,
+          "2": 4,
+          "3": 4
+        }
+      }
+    ],
+    "dim": "Block Drops"
+  },
+  {
+    "block": "minecraft:stained_glass:12",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "quark:glass_shards:13",
+        "fortunes": {
+          "0": 2,
+          "1": 3,
+          "2": 4,
+          "3": 4
+        }
+      }
+    ],
+    "dim": "Block Drops"
+  },
+  {
+    "block": "minecraft:stained_glass:13",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "quark:glass_shards:14",
+        "fortunes": {
+          "0": 2,
+          "1": 3,
+          "2": 4,
+          "3": 4
+        }
+      }
+    ],
+    "dim": "Block Drops"
+  },
+  {
+    "block": "minecraft:stained_glass:14",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "quark:glass_shards:15",
+        "fortunes": {
+          "0": 2,
+          "1": 3,
+          "2": 4,
+          "3": 4
+        }
+      }
+    ],
+    "dim": "Block Drops"
+  },
+  {
+    "block": "minecraft:stained_glass:15",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "quark:glass_shards:16",
+        "fortunes": {
+          "0": 2,
+          "1": 3,
+          "2": 4,
+          "3": 4
+        }
+      }
+    ],
+    "dim": "Block Drops"
+  },
+  {
+    "block": "harvestcraft:aridgarden:0",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "harvestcraft:cactusfruititem:0",
+        "fortunes": {
+          "0": 0.2222222222222222,
+          "1": 0.2222222222222222,
+          "2": 0.2222222222222222,
+          "3": 0.2222222222222222
+        }
+      },
+      {
+        "itemStack": "harvestcraft:agaveitem:0",
+        "fortunes": {
+          "0": 0.2222222222222222,
+          "1": 0.2222222222222222,
+          "2": 0.2222222222222222,
+          "3": 0.2222222222222222
+        }
+      },
+      {
+        "itemStack": "harvestcraft:sisalitem:0",
+        "fortunes": {
+          "0": 0.2222222222222222,
+          "1": 0.2222222222222222,
+          "2": 0.2222222222222222,
+          "3": 0.2222222222222222
+        }
+      },
+      {
+        "itemStack": "harvestcraft:cassavaitem:0",
+        "fortunes": {
+          "0": 0.2222222222222222,
+          "1": 0.2222222222222222,
+          "2": 0.2222222222222222,
+          "3": 0.2222222222222222
+        }
+      },
+      {
+        "itemStack": "harvestcraft:chickpeaitem:0",
+        "fortunes": {
+          "0": 0.2222222222222222,
+          "1": 0.2222222222222222,
+          "2": 0.2222222222222222,
+          "3": 0.2222222222222222
+        }
+      },
+      {
+        "itemStack": "harvestcraft:lentilitem:0",
+        "fortunes": {
+          "0": 0.2222222222222222,
+          "1": 0.2222222222222222,
+          "2": 0.2222222222222222,
+          "3": 0.2222222222222222
+        }
+      },
+      {
+        "itemStack": "minecraft:cactus:0",
+        "fortunes": {
+          "0": 0.2222222222222222,
+          "1": 0.2222222222222222,
+          "2": 0.2222222222222222,
+          "3": 0.2222222222222222
+        }
+      },
+      {
+        "itemStack": "harvestcraft:tomatilloitem:0",
+        "fortunes": {
+          "0": 0.2222222222222222,
+          "1": 0.2222222222222222,
+          "2": 0.2222222222222222,
+          "3": 0.2222222222222222
+        }
+      },
+      {
+        "itemStack": "immersiveengineering:seed:0",
+        "fortunes": {
+          "0": 0.2222222222222222,
+          "1": 0.2222222222222222,
+          "2": 0.2222222222222222,
+          "3": 0.2222222222222222
+        }
+      }
+    ],
+    "dim": "Block Drops"
+  },
+  {
+    "block": "harvestcraft:frostgarden:0",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "harvestcraft:raspberryitem:0",
+        "fortunes": {
+          "0": 0.125,
+          "1": 0.125,
+          "2": 0.125,
+          "3": 0.125
+        }
+      },
+      {
+        "itemStack": "harvestcraft:oatsitem:0",
+        "fortunes": {
+          "0": 0.125,
+          "1": 0.125,
+          "2": 0.125,
+          "3": 0.125
+        }
+      },
+      {
+        "itemStack": "harvestcraft:ryeitem:0",
+        "fortunes": {
+          "0": 0.125,
+          "1": 0.125,
+          "2": 0.125,
+          "3": 0.125
+        }
+      },
+      {
+        "itemStack": "harvestcraft:celeryitem:0",
+        "fortunes": {
+          "0": 0.125,
+          "1": 0.125,
+          "2": 0.125,
+          "3": 0.125
+        }
+      },
+      {
+        "itemStack": "harvestcraft:peasitem:0",
+        "fortunes": {
+          "0": 0.125,
+          "1": 0.125,
+          "2": 0.125,
+          "3": 0.125
+        }
+      },
+      {
+        "itemStack": "harvestcraft:beetitem:0",
+        "fortunes": {
+          "0": 0.125,
+          "1": 0.125,
+          "2": 0.125,
+          "3": 0.125
+        }
+      },
+      {
+        "itemStack": "harvestcraft:rutabagaitem:0",
+        "fortunes": {
+          "0": 0.125,
+          "1": 0.125,
+          "2": 0.125,
+          "3": 0.125
+        }
+      },
+      {
+        "itemStack": "harvestcraft:broccoliitem:0",
+        "fortunes": {
+          "0": 0.125,
+          "1": 0.125,
+          "2": 0.125,
+          "3": 0.125
+        }
+      },
+      {
+        "itemStack": "harvestcraft:caulifloweritem:0",
+        "fortunes": {
+          "0": 0.125,
+          "1": 0.125,
+          "2": 0.125,
+          "3": 0.125
+        }
+      },
+      {
+        "itemStack": "harvestcraft:cabbageitem:0",
+        "fortunes": {
+          "0": 0.125,
+          "1": 0.125,
+          "2": 0.125,
+          "3": 0.125
+        }
+      },
+      {
+        "itemStack": "harvestcraft:spinachitem:0",
+        "fortunes": {
+          "0": 0.125,
+          "1": 0.125,
+          "2": 0.125,
+          "3": 0.125
+        }
+      },
+      {
+        "itemStack": "harvestcraft:cottonitem:0",
+        "fortunes": {
+          "0": 0.125,
+          "1": 0.125,
+          "2": 0.125,
+          "3": 0.125
+        }
+      },
+      {
+        "itemStack": "harvestcraft:huckleberryitem:0",
+        "fortunes": {
+          "0": 0.125,
+          "1": 0.125,
+          "2": 0.125,
+          "3": 0.125
+        }
+      },
+      {
+        "itemStack": "harvestcraft:kohlrabiitem:0",
+        "fortunes": {
+          "0": 0.125,
+          "1": 0.125,
+          "2": 0.125,
+          "3": 0.125
+        }
+      },
+      {
+        "itemStack": "harvestcraft:quinoaitem:0",
+        "fortunes": {
+          "0": 0.125,
+          "1": 0.125,
+          "2": 0.125,
+          "3": 0.125
+        }
+      },
+      {
+        "itemStack": "harvestcraft:juniperberryitem:0",
+        "fortunes": {
+          "0": 0.125,
+          "1": 0.125,
+          "2": 0.125,
+          "3": 0.125
+        }
+      }
+    ],
+    "dim": "Block Drops"
+  },
+  {
+    "block": "harvestcraft:shadedgarden:0",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "harvestcraft:whitemushroomitem:0",
+        "fortunes": {
+          "0": 0.13333333333333333,
+          "1": 0.13333333333333333,
+          "2": 0.13333333333333333,
+          "3": 0.13333333333333333
+        }
+      },
+      {
+        "itemStack": "harvestcraft:blackberryitem:0",
+        "fortunes": {
+          "0": 0.13333333333333333,
+          "1": 0.13333333333333333,
+          "2": 0.13333333333333333,
+          "3": 0.13333333333333333
+        }
+      },
+      {
+        "itemStack": "harvestcraft:zucchiniitem:0",
+        "fortunes": {
+          "0": 0.13333333333333333,
+          "1": 0.13333333333333333,
+          "2": 0.13333333333333333,
+          "3": 0.13333333333333333
+        }
+      },
+      {
+        "itemStack": "harvestcraft:radishitem:0",
+        "fortunes": {
+          "0": 0.13333333333333333,
+          "1": 0.13333333333333333,
+          "2": 0.13333333333333333,
+          "3": 0.13333333333333333
+        }
+      },
+      {
+        "itemStack": "harvestcraft:rhubarbitem:0",
+        "fortunes": {
+          "0": 0.13333333333333333,
+          "1": 0.13333333333333333,
+          "2": 0.13333333333333333,
+          "3": 0.13333333333333333
+        }
+      },
+      {
+        "itemStack": "harvestcraft:tealeafitem:0",
+        "fortunes": {
+          "0": 0.13333333333333333,
+          "1": 0.13333333333333333,
+          "2": 0.13333333333333333,
+          "3": 0.13333333333333333
+        }
+      },
+      {
+        "itemStack": "harvestcraft:garlicitem:0",
+        "fortunes": {
+          "0": 0.13333333333333333,
+          "1": 0.13333333333333333,
+          "2": 0.13333333333333333,
+          "3": 0.13333333333333333
+        }
+      },
+      {
+        "itemStack": "harvestcraft:sweetpotatoitem:0",
+        "fortunes": {
+          "0": 0.13333333333333333,
+          "1": 0.13333333333333333,
+          "2": 0.13333333333333333,
+          "3": 0.13333333333333333
+        }
+      },
+      {
+        "itemStack": "harvestcraft:turnipitem:0",
+        "fortunes": {
+          "0": 0.13333333333333333,
+          "1": 0.13333333333333333,
+          "2": 0.13333333333333333,
+          "3": 0.13333333333333333
+        }
+      },
+      {
+        "itemStack": "harvestcraft:spiceleafitem:0",
+        "fortunes": {
+          "0": 0.13333333333333333,
+          "1": 0.13333333333333333,
+          "2": 0.13333333333333333,
+          "3": 0.13333333333333333
+        }
+      },
+      {
+        "itemStack": "randomthings:beans:0",
+        "fortunes": {
+          "0": 0.13333333333333333,
+          "1": 0.13333333333333333,
+          "2": 0.13333333333333333,
+          "3": 0.13333333333333333
+        }
+      },
+      {
+        "itemStack": "harvestcraft:leekitem:0",
+        "fortunes": {
+          "0": 0.13333333333333333,
+          "1": 0.13333333333333333,
+          "2": 0.13333333333333333,
+          "3": 0.13333333333333333
+        }
+      },
+      {
+        "itemStack": "harvestcraft:scallionitem:0",
+        "fortunes": {
+          "0": 0.13333333333333333,
+          "1": 0.13333333333333333,
+          "2": 0.13333333333333333,
+          "3": 0.13333333333333333
+        }
+      },
+      {
+        "itemStack": "harvestcraft:juteitem:0",
+        "fortunes": {
+          "0": 0.13333333333333333,
+          "1": 0.13333333333333333,
+          "2": 0.13333333333333333,
+          "3": 0.13333333333333333
+        }
+      },
+      {
+        "itemStack": "rustic:tomato:0",
+        "fortunes": {
+          "0": 0.13333333333333333,
+          "1": 0.13333333333333333,
+          "2": 0.13333333333333333,
+          "3": 0.13333333333333333
+        }
+      }
+    ],
+    "dim": "Block Drops"
+  },
+  {
+    "block": "harvestcraft:soggygarden:0",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "harvestcraft:brusselsproutitem:0",
+        "fortunes": {
+          "0": 0.14285714285714285,
+          "1": 0.14285714285714285,
+          "2": 0.14285714285714285,
+          "3": 0.14285714285714285
+        }
+      },
+      {
+        "itemStack": "harvestcraft:spiceleafitem:0",
+        "fortunes": {
+          "0": 0.14285714285714285,
+          "1": 0.14285714285714285,
+          "2": 0.14285714285714285,
+          "3": 0.14285714285714285
+        }
+      },
+      {
+        "itemStack": "harvestcraft:blueberryitem:0",
+        "fortunes": {
+          "0": 0.14285714285714285,
+          "1": 0.14285714285714285,
+          "2": 0.14285714285714285,
+          "3": 0.14285714285714285
+        }
+      },
+      {
+        "itemStack": "harvestcraft:asparagusitem:0",
+        "fortunes": {
+          "0": 0.14285714285714285,
+          "1": 0.14285714285714285,
+          "2": 0.14285714285714285,
+          "3": 0.14285714285714285
+        }
+      },
+      {
+        "itemStack": "harvestcraft:cranberryitem:0",
+        "fortunes": {
+          "0": 0.14285714285714285,
+          "1": 0.14285714285714285,
+          "2": 0.14285714285714285,
+          "3": 0.14285714285714285
+        }
+      },
+      {
+        "itemStack": "actuallyadditions:item_rice_seed",
+        "fortunes": {
+          "0": 0.14285714285714285,
+          "1": 0.14285714285714285,
+          "2": 0.14285714285714285,
+          "3": 0.14285714285714285
+        }
+      },
+      {
+        "itemStack": "harvestcraft:seaweeditem:0",
+        "fortunes": {
+          "0": 0.14285714285714285,
+          "1": 0.14285714285714285,
+          "2": 0.14285714285714285,
+          "3": 0.14285714285714285
+        }
+      },
+      {
+        "itemStack": "harvestcraft:waterchestnutitem:0",
+        "fortunes": {
+          "0": 0.14285714285714285,
+          "1": 0.14285714285714285,
+          "2": 0.14285714285714285,
+          "3": 0.14285714285714285
+        }
+      },
+      {
+        "itemStack": "harvestcraft:okraitem:0",
+        "fortunes": {
+          "0": 0.14285714285714285,
+          "1": 0.14285714285714285,
+          "2": 0.14285714285714285,
+          "3": 0.14285714285714285
+        }
+      },
+      {
+        "itemStack": "harvestcraft:cottonitem:0",
+        "fortunes": {
+          "0": 0.14285714285714285,
+          "1": 0.14285714285714285,
+          "2": 0.14285714285714285,
+          "3": 0.14285714285714285
+        }
+      },
+      {
+        "itemStack": "harvestcraft:kaleitem:0",
+        "fortunes": {
+          "0": 0.14285714285714285,
+          "1": 0.14285714285714285,
+          "2": 0.14285714285714285,
+          "3": 0.14285714285714285
+        }
+      },
+      {
+        "itemStack": "harvestcraft:milletitem:0",
+        "fortunes": {
+          "0": 0.14285714285714285,
+          "1": 0.14285714285714285,
+          "2": 0.14285714285714285,
+          "3": 0.14285714285714285
+        }
+      },
+      {
+        "itemStack": "harvestcraft:jicamaitem:0",
+        "fortunes": {
+          "0": 0.14285714285714285,
+          "1": 0.14285714285714285,
+          "2": 0.14285714285714285,
+          "3": 0.14285714285714285
+        }
+      },
+      {
+        "itemStack": "harvestcraft:mulberryitem:0",
+        "fortunes": {
+          "0": 0.14285714285714285,
+          "1": 0.14285714285714285,
+          "2": 0.14285714285714285,
+          "3": 0.14285714285714285
+        }
+      }
+    ],
+    "dim": "Block Drops"
+  },
+  {
+    "block": "harvestcraft:tropicalgarden:0",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "harvestcraft:pineappleitem:0",
+        "fortunes": {
+          "0": 0.16666666666666666,
+          "1": 0.16666666666666666,
+          "2": 0.16666666666666666,
+          "3": 0.16666666666666666
+        }
+      },
+      {
+        "itemStack": "harvestcraft:kiwiitem:0",
+        "fortunes": {
+          "0": 0.16666666666666666,
+          "1": 0.16666666666666666,
+          "2": 0.16666666666666666,
+          "3": 0.16666666666666666
+        }
+      },
+      {
+        "itemStack": "harvestcraft:sesameseedsitem:0",
+        "fortunes": {
+          "0": 0.16666666666666666,
+          "1": 0.16666666666666666,
+          "2": 0.16666666666666666,
+          "3": 0.16666666666666666
+        }
+      },
+      {
+        "itemStack": "harvestcraft:curryleafitem:0",
+        "fortunes": {
+          "0": 0.16666666666666666,
+          "1": 0.16666666666666666,
+          "2": 0.16666666666666666,
+          "3": 0.16666666666666666
+        }
+      },
+      {
+        "itemStack": "harvestcraft:bambooshootitem:0",
+        "fortunes": {
+          "0": 0.16666666666666666,
+          "1": 0.16666666666666666,
+          "2": 0.16666666666666666,
+          "3": 0.16666666666666666
+        }
+      },
+      {
+        "itemStack": "harvestcraft:cantaloupeitem:0",
+        "fortunes": {
+          "0": 0.16666666666666666,
+          "1": 0.16666666666666666,
+          "2": 0.16666666666666666,
+          "3": 0.16666666666666666
+        }
+      },
+      {
+        "itemStack": "harvestcraft:gingeritem:0",
+        "fortunes": {
+          "0": 0.16666666666666666,
+          "1": 0.16666666666666666,
+          "2": 0.16666666666666666,
+          "3": 0.16666666666666666
+        }
+      },
+      {
+        "itemStack": "harvestcraft:soybeanitem:0",
+        "fortunes": {
+          "0": 0.16666666666666666,
+          "1": 0.16666666666666666,
+          "2": 0.16666666666666666,
+          "3": 0.16666666666666666
+        }
+      },
+      {
+        "itemStack": "harvestcraft:eggplantitem:0",
+        "fortunes": {
+          "0": 0.16666666666666666,
+          "1": 0.16666666666666666,
+          "2": 0.16666666666666666,
+          "3": 0.16666666666666666
+        }
+      },
+      {
+        "itemStack": "harvestcraft:kenafitem:0",
+        "fortunes": {
+          "0": 0.16666666666666666,
+          "1": 0.16666666666666666,
+          "2": 0.16666666666666666,
+          "3": 0.16666666666666666
+        }
+      },
+      {
+        "itemStack": "harvestcraft:arrowrootitem:0",
+        "fortunes": {
+          "0": 0.16666666666666666,
+          "1": 0.16666666666666666,
+          "2": 0.16666666666666666,
+          "3": 0.16666666666666666
+        }
+      },
+      {
+        "itemStack": "harvestcraft:taroitem:0",
+        "fortunes": {
+          "0": 0.16666666666666666,
+          "1": 0.16666666666666666,
+          "2": 0.16666666666666666,
+          "3": 0.16666666666666666
+        }
+      }
+    ],
+    "dim": "Block Drops"
+  },
+  {
+    "block": "harvestcraft:windygarden:0",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "harvestcraft:strawberryitem:0",
+        "fortunes": {
+          "0": 0.11764705882352941,
+          "1": 0.11764705882352941,
+          "2": 0.11764705882352941,
+          "3": 0.11764705882352941
+        }
+      },
+      {
+        "itemStack": "harvestcraft:barleyitem:0",
+        "fortunes": {
+          "0": 0.11764705882352941,
+          "1": 0.11764705882352941,
+          "2": 0.11764705882352941,
+          "3": 0.11764705882352941
+        }
+      },
+      {
+        "itemStack": "harvestcraft:cornitem:0",
+        "fortunes": {
+          "0": 0.11764705882352941,
+          "1": 0.11764705882352941,
+          "2": 0.11764705882352941,
+          "3": 0.11764705882352941
+        }
+      },
+      {
+        "itemStack": "harvestcraft:cucumberitem:0",
+        "fortunes": {
+          "0": 0.11764705882352941,
+          "1": 0.11764705882352941,
+          "2": 0.11764705882352941,
+          "3": 0.11764705882352941
+        }
+      },
+      {
+        "itemStack": "harvestcraft:wintersquashitem:0",
+        "fortunes": {
+          "0": 0.11764705882352941,
+          "1": 0.11764705882352941,
+          "2": 0.11764705882352941,
+          "3": 0.11764705882352941
+        }
+      },
+      {
+        "itemStack": "harvestcraft:mustardseedsitem:0",
+        "fortunes": {
+          "0": 0.11764705882352941,
+          "1": 0.11764705882352941,
+          "2": 0.11764705882352941,
+          "3": 0.11764705882352941
+        }
+      },
+      {
+        "itemStack": "harvestcraft:onionitem:0",
+        "fortunes": {
+          "0": 0.11764705882352941,
+          "1": 0.11764705882352941,
+          "2": 0.11764705882352941,
+          "3": 0.11764705882352941
+        }
+      },
+      {
+        "itemStack": "harvestcraft:parsnipitem:0",
+        "fortunes": {
+          "0": 0.11764705882352941,
+          "1": 0.11764705882352941,
+          "2": 0.11764705882352941,
+          "3": 0.11764705882352941
+        }
+      },
+      {
+        "itemStack": "harvestcraft:peanutitem:0",
+        "fortunes": {
+          "0": 0.11764705882352941,
+          "1": 0.11764705882352941,
+          "2": 0.11764705882352941,
+          "3": 0.11764705882352941
+        }
+      },
+      {
+        "itemStack": "harvestcraft:lettuceitem:0",
+        "fortunes": {
+          "0": 0.11764705882352941,
+          "1": 0.11764705882352941,
+          "2": 0.11764705882352941,
+          "3": 0.11764705882352941
+        }
+      },
+      {
+        "itemStack": "harvestcraft:artichokeitem:0",
+        "fortunes": {
+          "0": 0.11764705882352941,
+          "1": 0.11764705882352941,
+          "2": 0.11764705882352941,
+          "3": 0.11764705882352941
+        }
+      },
+      {
+        "itemStack": "harvestcraft:bellpepperitem:0",
+        "fortunes": {
+          "0": 0.11764705882352941,
+          "1": 0.11764705882352941,
+          "2": 0.11764705882352941,
+          "3": 0.11764705882352941
+        }
+      },
+      {
+        "itemStack": "harvestcraft:flaxitem:0",
+        "fortunes": {
+          "0": 0.11764705882352941,
+          "1": 0.11764705882352941,
+          "2": 0.11764705882352941,
+          "3": 0.11764705882352941
+        }
+      },
+      {
+        "itemStack": "harvestcraft:amaranthitem:0",
+        "fortunes": {
+          "0": 0.11764705882352941,
+          "1": 0.11764705882352941,
+          "2": 0.11764705882352941,
+          "3": 0.11764705882352941
+        }
+      },
+      {
+        "itemStack": "harvestcraft:elderberryitem:0",
+        "fortunes": {
+          "0": 0.11764705882352941,
+          "1": 0.11764705882352941,
+          "2": 0.11764705882352941,
+          "3": 0.11764705882352941
+        }
+      },
+      {
+        "itemStack": "immersiveengineering:seed:0",
+        "fortunes": {
+          "0": 0.11764705882352941,
+          "1": 0.11764705882352941,
+          "2": 0.11764705882352941,
+          "3": 0.11764705882352941
+        }
+      },
+      {
+        "itemStack": "rustic:chili_pepper",
+        "fortunes": {
+          "0": 0.11764705882352941,
+          "1": 0.11764705882352941,
+          "2": 0.11764705882352941,
+          "3": 0.11764705882352941
+        }
+      }
+    ],
+    "dim": "Block Drops"
   }
 ]
