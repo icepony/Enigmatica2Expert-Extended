@@ -126,6 +126,7 @@ val blacklist = [
   <thermalexpansion:reservoir:4>,
   <thermalexpansion:reservoir>,
   <thermalexpansion:tank>,
+  <thermalexpansion:cell>,
   <thermalinnovation:injector:1>,
   <thermalinnovation:injector:2>,
   <thermalinnovation:injector:3>,
