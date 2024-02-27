@@ -15,10 +15,13 @@
 		"ab77ca11"
 	],
 	tasks: [{
-		uid: "bebc070a",
-		type: "kill",
-		entity: "rats:black_death",
-		value: 1L
+		uid: "8c260e23",
+		type: "item",
+		items: [{
+			item: "rats:plague_scythe"
+		}],
+		ignore_damage: true,
+		ignore_nbt: 1b
 	}],
 	rewards: [{
 		uid: "bde01118",

@@ -448,3 +448,13 @@ mods.immersiveengineering.MetalPress.addRecipe(<rats:string_cheese>, <ore:foodCh
 // Containment food
 // [Contaminated Food] alter non-rat recipe
 mods.nuclearcraft.FissionIrradiator.addRecipe(<ore:foodNutrients5>, <rats:contaminated_food>, 5000000, 0, 0, 0);
+
+// Peaceful alt
+# [Black Death Scythe] from [Mithminite Scythe][+1]
+craft.make(<rats:plague_scythe>, ["pretty",
+  "P P P",
+  "P M P",
+  "P P P"], {
+  "P": <rats:plague_essence>,              # Plague Essence
+  "M": <thaumadditions:mithminite_scythe>, # Mithminite Scythe
+});
