@@ -237,9 +237,12 @@ utils.rh(<qmd:chemical_dust:3>);
 
 // Fix salt melting duplicate recipe
 mods.nuclearcraft.Melter.removeRecipeWithOutput(<fluid:sodium_chloride> * 666);
+mods.nuclearcraft.Crystallizer.removeRecipeWithInput(<fluid:sodium_chloride_solution> * 666);
 
 // Sodium Nitrate (niter)
 utils.rh(<qmd:chemical_dust:2>);
+mods.nuclearcraft.Crystallizer.removeRecipeWithInput(<fluid:sodium_nitrate_solution> * 666);
+mods.nuclearcraft.Crystallizer.addRecipe(<fluid:sodium_nitrate_solution> * 666, <thermalfoundation:material:772>);
 
 ////////////////////////////////////////
 // Replacing Mercury with Quicksilver //
