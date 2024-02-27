@@ -1,6 +1,6 @@
 {
 	title: "{q.getting_started.getting_fire.name}",
-	icon: "kirosblocks:default_fire_block",
+	icon: "engineersdecor:sign_firehazard",
 	x: -2.375d,
 	y: 6.0d,
 	text: [
