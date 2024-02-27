@@ -1,4 +1,5 @@
 #modloaded twilightforest twilighttweaks
+#ignoreBracketErrors
 
 import crafttweaker.item.IItemStack;
 
@@ -138,6 +139,7 @@ val blacklist = [
 ] as IItemStack[];
 
 for item in blacklist {
+  if(isNull(item)) continue;
   mods.twilighttweaks.uncrafting.banUncraft(item);
 }
 
