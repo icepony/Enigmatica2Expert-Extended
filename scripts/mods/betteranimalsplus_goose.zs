@@ -16,19 +16,10 @@ function clearPlayerInventory(player as IPlayer) as void {
 // --------------------------------
 // Geese use items
 // --------------------------------
-events.onWorldTick(function (e as crafttweaker.event.WorldTickEvent) {
-  val world = e.world;
-  if (world.remote || world.time % 10 != 0) return;
-  
-  for entity in world.getEntities() {
-    if (!(entity instanceof IEntityAnimal) || !entity.alive) continue;
-    val animal as IEntityAnimal = entity;
-    if (!animal.canPickUpLoot) continue;
-    if (animal.definition.id != 'betteranimalsplus:goose') continue;
-    val base as IEntityLivingBase = animal;
-    tickGoose(base);
-  }
-});
+<entity:betteranimalsplus:goose>.onTick(function(entity) {
+  val entityLiving as IEntityLivingBase = entity;
+  tickGoose(entityLiving);
+}, 10);
 
 function tickGoose(entity as IEntityLivingBase) as void {
   val item = entity.getItemInSlot(crafttweaker.entity.IEntityEquipmentSlot.mainHand());
