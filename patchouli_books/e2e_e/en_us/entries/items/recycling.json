@@ -17,12 +17,12 @@
     },
     {
       "title": "Tool recycling",
-      "text": "$(li)So, cycling tools order you can descrease damage, finding perfect order eventually.$(br)$(li)Each time you perform recipe, tools damaged on 10$(br)$(li)You can get shards of material softer than average mining level or tools. For example, you cant get Iron Shards by disassembling with Wooden tools.",
+      "text": "$(li)So, cycling tools order you can descrease damage, finding perfect order eventually.$(br)$(li)Each time you perform recipe, tools damaged on 1$(br)$(li)You can get shards of material softer than average mining level or tools. For example, you cant get Iron Shards by disassembling with Wooden tools.",
       "type": "text"
     },
     {
       "title": "Tool recycling",
-      "text": "$(li)If you disassembling gear, which every tool part have higher mining level than your tools, you get Stone Shard as result.$(br)$(li)There is also Paper and Bone shards - when you disassemble buggy tool.",
+      "text": "$(li)If you disassembling gear, which every tool part have higher mining level than your tools, you get Stone Shard as result.$(br)$(li)There is also Paper and Bone shards - when you disassemble buggy tool.$(br)$(li)Unbreakable trait on tools will not work - tools will still take damage on recycling.$(br)$(li)You can disassemble sealed Artifacts.",
       "type": "text"
     }
   ]

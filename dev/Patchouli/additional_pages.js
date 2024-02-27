@@ -66,14 +66,16 @@ export function init(Patchouli_js, helpers) {
       title: 'Tool recycling',
       _text: `
       $(li)So, cycling tools order you can descrease damage, finding perfect order eventually.
-      $(li)Each time you perform recipe, tools damaged on 10
+      $(li)Each time you perform recipe, tools damaged on 1
       $(li)You can get shards of material softer than average mining level or tools. For example, you cant get Iron Shards by disassembling with Wooden tools.`,
     },
     {
       title: 'Tool recycling',
       _text: `
       $(li)If you disassembling gear, which every tool part have higher mining level than your tools, you get Stone Shard as result.
-      $(li)There is also Paper and Bone shards - when you disassemble buggy tool.`,
+      $(li)There is also Paper and Bone shards - when you disassemble buggy tool.
+      $(li)Unbreakable trait on tools will not work - tools will still take damage on recycling.
+      $(li)You can disassemble sealed Artifacts.`,
     },
   ])
 
@@ -140,6 +142,5 @@ export function init(Patchouli_js, helpers) {
         .replace(/^(.+)/gm, '$(li)$1')
         .replace(/§e/gm, '§6') // Yellow too bright to read with default Patchouli background texture
         .replace(/\n/gm, ''),
-    }))
-  )
+    })))
 }
