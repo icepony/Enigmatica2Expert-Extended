@@ -3,6 +3,9 @@
 
 <entity:netherendingores:netherfish>.addPlayerOnlyDrop(<forestry:ash>, 3, 12);
 
+// Add missed gold ore crushing (probably missed by MIA)
+mods.actuallyadditions.Crusher.addRecipe(<thermalfoundation:material:1>, <ore:oreNetherGold>);
+
 /*
 
 // setHarvestLevel doesnt change harvest level of netherendingores.
