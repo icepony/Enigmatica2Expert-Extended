@@ -10,18 +10,27 @@ static requiredItem as IItemStack = <patchouli:guide_book>.withTag({ 'patchouli:
 static playersNoted as bool[IPlayer] = {};
 
 events.onPlayerTick(function (e as crafttweaker.event.PlayerTickEvent) {
+  val player = e.player;
   if (
-    e.player.world.remote
-    || e.player.world.getWorldTime() % 2 != 0
-    || e.player.getDimension() != 0
-    || e.player.posY < SKY_TP_HEIGHT
+    player.world.remote
+    || player.world.time % 2 != 0
   ) return;
+  
+  if (player.dimension == 0
+    && player.posY >= SKY_TP_HEIGHT
+  ) return tpToSky(player);
 
+  if (player.dimension == 3
+    && player.posY <= -100
+  ) return tpFromSky(player);
+});
+
+function tpToSky(player as IPlayer) as void {
   // Show warning message if player doesnt hold book but only once per server restart
-  if (isNull(e.player.currentItem) || !(requiredItem has e.player.currentItem)) {
-    if (isNull(playersNoted[e.player])) {
-      playersNoted[e.player] = true;
-      e.player.sendRichTextMessage(crafttweaker.text.ITextComponent.fromData([{
+  if (isNull(player.currentItem) || !(requiredItem has player.currentItem)) {
+    if (isNull(playersNoted[player])) {
+      playersNoted[player] = true;
+      player.sendRichTextMessage(crafttweaker.text.ITextComponent.fromData([{
         translate: 'e2ee.skyblock.need_item',
         with     : [
           scripts.lib.tellraw.itemObj(requiredItem, 'gold'),
@@ -31,17 +40,25 @@ events.onPlayerTick(function (e as crafttweaker.event.PlayerTickEvent) {
     return;
   }
 
-  e.player.addPotionEffect(<potion:minecraft:levitation>.makePotionEffect(600, 0));
+  player.addPotionEffect(<potion:minecraft:levitation>.makePotionEffect(600, 0));
   server.commandManager.executeCommandSilent(server,
-    '/tpx ' ~ e.player.name ~ ' ' ~ e.player.posX ~ ' ' ~ (SKY_TP_HEIGHT - 255.0) ~ ' ' ~ e.player.posZ ~ ' 3'
+    '/tpx ' ~ player.name ~ ' ' ~ player.posX ~ ' ' ~ (SKY_TP_HEIGHT - 255.0) ~ ' ' ~ player.posZ ~ ' 3'
   );
 
   // Show message about staying in skyblock forever
-  e.player.world.catenation().sleep(60).run(function (world, context) {
-    if(isNull(e.player)) return;
-    e.player.sendRichTextMessage(crafttweaker.text.ITextComponent.fromTranslation('e2ee.skyblock.stay_forever'));
+  player.world.catenation().sleep(60).run(function (world, context) {
+    if(isNull(player)) return;
+    player.sendRichTextMessage(crafttweaker.text.ITextComponent.fromTranslation('e2ee.skyblock.stay_forever'));
   }).start();
-});
+}
+
+function tpFromSky(player as IPlayer) as void {
+  if (player.hasGameStage('skyblock')) return;
+  player.addPotionEffect(<potion:cyclicmagic:potion.slowfall>.makePotionEffect(60, 0));
+  server.commandManager.executeCommandSilent(server,
+    '/tpx ' ~ player.name ~ ' ' ~ player.posX ~ ' ' ~ (SKY_TP_HEIGHT + 60) ~ ' ' ~ player.posZ ~ ' 0'
+  );
+}
 
 events.onCommand(function(e as crafttweaker.event.CommandEvent) {
   if(isNull(e.command)
@@ -53,7 +70,7 @@ events.onCommand(function(e as crafttweaker.event.CommandEvent) {
   }
 
   val player as IPlayer = e.commandSender;
-  if (player.hasGameStage('skyblock') || player.getDimension() != 3) return;
+  if (player.hasGameStage('skyblock') || player.dimension != 3) return;
 
   scripts.skyblock.addGameStage.grant(player);
   player.sendRichTextMessage(crafttweaker.text.ITextComponent.fromTranslation('e2ee.skyblock.now_skyblocker'));

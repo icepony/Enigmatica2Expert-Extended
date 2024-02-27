@@ -332,7 +332,7 @@ e2ee.restrict.vis_seeds=§7Вы можете сажать §6Семена Вис
 e2ee.creature_resisted_morb=§8Существо сопротивлялось захвату §n§8%s.
 e2ee.creature_uncapturable=§7Это существо нельзя поймать.
 e2ee.skyblock.need_item=§bЧтобы попасть в измерение §3Скайблока§b, держите %s§b в руке и поднимитесь на высоту §3%s§b блоков.
-e2ee.skyblock.stay_forever=§bЧтобы навсегда остаться в мире §3Skyblock§b, используйте команду §n/island create§r§b.
+e2ee.skyblock.stay_forever=§bЧтобы покинуть мир §3Skyblock§b, прыгните в пустоту.\n§bЧтобы навсегда остаться в мире §3Skyblock§b, используйте команду §n/island create§r§b.
 e2ee.skyblock.now_skyblocker=§bТеперь вы привязаны к миру §3Skyblock§b!\n§8Если это было сделано случайно, вы можете отменить привязку к Skyblock, выполнив команду §n/gamestage remove @p skyblock§r§8.
 tooltips.lang.morb_resist=Эффективен против монстров с §4<%s%%§r сердец или менее §c%s§r сердец.
 # >

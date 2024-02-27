@@ -332,7 +332,7 @@ e2ee.restrict.vis_seeds=§7§e魔力种子§7只能被种在§nthe Void§7维度
 e2ee.creature_resisted_morb=§8这个生物在反抗 §n§8%s 的捕捉。
 e2ee.creature_uncapturable=§7该生物不能被捕捉。 
 e2ee.skyblock.need_item=§b要进入 §3Skyblock§b 维度，您需要手持 %s§b 并达到 §3%s§b 方块的高度。
-e2ee.skyblock.stay_forever=§b如果您想永久居住在 §3Skyblock§b 世界，使用命令 §n/island create§r§b。
+e2ee.skyblock.stay_forever=§b要离开 §3Skyblock§b 世界，请跳入虚空。\n§b如果您想永久居住在 §3Skyblock§b 世界，使用命令 §n/island create§r§b。
 e2ee.skyblock.now_skyblocker=§b您现在已绑定至 §3Skyblock§b 世界！\n§8如果这是一次意外操作，您可以通过执行命令 §n/gamestage remove @p skyblock§r§8 来撤销绑定。
 tooltips.lang.morb_resist=§r对血量低于总血量的 §4<%s%%§r，或者少于 §c%s§r 颗心的怪物有效。
 # >
