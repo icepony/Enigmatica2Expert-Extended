@@ -2,6 +2,7 @@
 #reloadable
 
 import crafttweaker.player.IPlayer;
+import crafttweaker.data.IData;
 
 function formatPlayTime(player as IPlayer) as string {
   val t = player.readStat(mods.zenutils.PlayerStat.getBasicStat('stat.playOneMinute')) as double;
@@ -18,20 +19,13 @@ function formatPlayTime(player as IPlayer) as string {
 }
 
 function notifyEveryone(player as IPlayer, langCode as string, titleCode as string) as string {
-  server.commandManager.executeCommandSilent(server,
-    // '/tellraw @a [{"translate": "' ~ langCode ~ '", "with": [' ~
-    // '{"text": "' ~ player.name ~ '"},' ~
-    // // '{"translate": "' ~ titleCode ~ '" },' ~
-    // '{"text": "' ~ titleCode ~ '" },' ~
-    // '{"text": "' ~ formatPlayTime(player) ~ '"}' ~
-    // ']}]'
-    '/say ' ~ mods.zenutils.I18n.format(
-      game.localize(langCode),
+  server.broadcastMessage(crafttweaker.text.ITextComponent.fromData([{
+    translate: langCode,
+    with     : [
       player.name,
-      titleCode,
+      { translate: titleCode },
       formatPlayTime(player)
-    )
-  );
+  ]}]));
 }
 
 events.onCustomReward(function (e as mods.zenutils.ftbq.CustomRewardEvent) {
@@ -39,13 +33,7 @@ events.onCustomReward(function (e as mods.zenutils.ftbq.CustomRewardEvent) {
   * Endorse player with message to whole server as its finished chapter
   */
   if (e.reward.tags has 'chapcomplete') {
-    // notifyEveryone(e.player, 'e2ee.chapter_complete', e.reward.quest.chapter.titleText.formattedText);
-    server.commandManager.executeCommandSilent(server,
-      '/say §l' ~ e.player.name
-      ~ '§r has fully completed the §n'
-      ~ e.reward.quest.chapter.titleText.formattedText.replaceAll('q\\.(.+)\\.name','$1')
-      ~ '§r chapter after §l' ~ formatPlayTime(e.player) ~ '§r of play!§r ```Congrats!```'
-    );
+    notifyEveryone(e.player, 'e2ee.chapter_complete', e.reward.quest.chapter.titleText.formattedText);
   }
 
   /**
@@ -58,11 +46,7 @@ events.onCustomReward(function (e as mods.zenutils.ftbq.CustomRewardEvent) {
         '/ranks add ' ~ e.player.name ~ ' conflux_' ~ k
       );
 
-      // notifyEveryone(e.player, 'e2ee.player_achieved', 'q.gates.conflux_'~k~'.name');
-      // notifyEveryone(e.player, 'e2ee.player_achieved', e.reward.quest.titleText.formattedText);
-      server.commandManager.executeCommandSilent(server,
-        '/say §l' ~ e.player.name ~ '§r achieved §nConflux §n' ~ k.toUpperCase() ~ '§r after §l' ~ formatPlayTime(e.player) ~ '§r of play!§r'
-      );
+      notifyEveryone(e.player, 'e2ee.player_achieved', e.reward.quest.titleText.formattedText);
     }
   }
 });
