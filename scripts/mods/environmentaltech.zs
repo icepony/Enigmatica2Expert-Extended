@@ -34,13 +34,6 @@ val blockAethium = <ore:blockAethium>;
 
 val mekSolar = <mekanismgenerators:generator:5>;
 
-// Light Gray Alabaster
-recipes.addShaped('Light Gray Alabaster',
-  <environmentalmaterials:alabaster:8> * 8,
-  [[<ore:emcraftingAlabasterNormal>, <ore:emcraftingAlabasterNormal>, <ore:emcraftingAlabasterNormal>],
-    [<ore:emcraftingAlabasterNormal>, <ore:dyeLightGray>, <ore:emcraftingAlabasterNormal>],
-    [<ore:emcraftingAlabasterNormal>, <ore:emcraftingAlabasterNormal>, <ore:emcraftingAlabasterNormal>]]);
-
 // Environmental Tech Guide
 recipes.addShapeless('Environmental Tech Guide',
   <valkyrielib:guide>,
@@ -372,17 +365,6 @@ for i in 0 .. 6 {
       '. . . . . . . . .'], evtIngrs);
   }
 }
-
-// Remake alabaster from cobblestone instead of stone
-// Because alabaster is yet another building colored stone and should be a bit less pricy
-recipes.removeByRecipeName('environmentalmaterials:m_alabaster/normal/alabaster_c_white_temp');
-craft.make(<environmentalmaterials:alabaster> * 20, ['pretty',
-  '░ d ░',
-  'd ░ d',
-  '░ d ░'], {
-  '░': <ore:cobblestone>, // Cobblestone
-  'd': <ore:dyeWhite>,
-});
 
 // [Flight Speed Modifier] from [Null Modifier][+4]
 craft.remake(<environmentaltech:modifier_flight_speed>, ['pretty',

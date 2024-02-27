@@ -13,11 +13,6 @@ recipes.addShapedMirrored('Chisel Lavastone',
 
 addVariation('basalt', <quark:basalt:1>);
 addVariation('basalt', <quark:basalt>);
-addVariation('basalt', <environmentalmaterials:basalt>);
-addVariation('basalt', <environmentalmaterials:basalt_paver>);
-addVariation('basalt', <environmentalmaterials:basalt_bricks>);
-addVariation('basalt', <environmentalmaterials:basalt_tiles>);
-
 addVariation('marble', <quark:marble>);
 
 addVariation('limestone', <quark:limestone>);
@@ -40,19 +35,6 @@ addVariation('castlebrickdoor', <twilightforest:castle_door:0>);
 addVariation('castlebrickdoor', <twilightforest:castle_door:1>);
 addVariation('castlebrickdoor', <twilightforest:castle_door:2>);
 addVariation('castlebrickdoor', <twilightforest:castle_door:3>);
-
-// Environmental Materials
-for i in 0 .. 16 {
-  addVariation('alabaster ' ~ i, <environmentalmaterials:alabaster>.definition.makeStack(i));
-  addVariation('alabaster ' ~ i, <environmentalmaterials:alabaster_paver>.definition.makeStack(i));
-  addVariation('alabaster ' ~ i, <environmentalmaterials:alabaster_bricks>.definition.makeStack(i));
-  addVariation('alabaster ' ~ i, <environmentalmaterials:alabaster_tiles>.definition.makeStack(i));
-}
-
-addVariation('hardened_stone', <environmentalmaterials:hardened_stone>);
-addVariation('hardened_stone', <environmentalmaterials:hardened_stone_paver>);
-addVariation('hardened_stone', <environmentalmaterials:hardened_stone_bricks>);
-addVariation('hardened_stone', <environmentalmaterials:hardened_stone_tiles>);
 
 // Sonar Core
 val sonarColors as string[] = [

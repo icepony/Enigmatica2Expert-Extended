@@ -170,13 +170,6 @@ val packagerList = [
 
   [<mctsmelteryio:iceball>], [<minecraft:snow> * 2],
 
-  [<environmentalmaterials:alabaster> * 16], [<minecraft:cobblestone> * 4, <minecraft:dye:15> * 5],
-  [<environmentalmaterials:alabaster> * 16], [<minecraft:cobblestone> * 4, <biomesoplenty:white_dye> * 5],
-  [<environmentalmaterials:alabaster> * 16], [<minecraft:cobblestone> * 4, <thermalfoundation:dye:15> * 5],
-  [<environmentalmaterials:alabaster> * 16], [<minecraft:cobblestone> * 4, <botania:dye> * 5],
-  [<environmentalmaterials:alabaster> * 16], [<minecraft:cobblestone> * 4, <industrialforegoing:artificial_dye> * 5],
-  [<environmentalmaterials:alabaster> * 16], [<minecraft:cobblestone> * 4, <quark:root_dye:2> * 5],
-
   [<nuclearcraft:part:1>], [<ore:plateLead>.firstItem, <ic2:casing:4>, <ore:ingotTough>.firstItem * 4, <minecraft:redstone> * 4],
   [<nuclearcraft:part>], [<ore:plateLead>.firstItem, <ic2:casing:4>, <ore:ingotGraphite>.firstItem * 2],
 
