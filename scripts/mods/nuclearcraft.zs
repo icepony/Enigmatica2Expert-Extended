@@ -352,6 +352,9 @@ for ingr, fluid in {
   <botania:storage:1>        : <liquid:terrasteel> * 1296,
   <ore:slimeballPurple>      : <liquid:purpleslime> * 250,
   <minecraft:rotten_flesh>   : <liquid:blood> * 40,
+  <ore:nuggetAlubrass>       : <liquid:alubrass> * 16,
+  <ore:ingotAlubrass>        : <liquid:alubrass> * 144,
+  <ore:blockAlubrass>        : <liquid:alubrass> * 1296,
 } as ILiquidStack[IIngredient] {
   mods.nuclearcraft.Melter.addRecipe(ingr, fluid);
 }
