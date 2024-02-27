@@ -1,0 +1,143 @@
+# Change the language of the mod. Delete the rest of this file to translate the config. Big thanks to the translators : Morty#0273 (ru_ru), PixelVoxel#4327 (ko_kr)
+# Supported language : en_us, fr_fr, ru_ru, ko_kr
+lang = "en_us"
+
+# Minecraft2Discord configuration
+#  - Curseforge: https://www.curseforge.com/minecraft/mc-mods/minecraft2discord
+#  - Modrinth: https://modrinth.com/mod/minecraft2discord
+#  - Discord: https://discord.gg/rzzd76c
+#  - Github: https://github.com/DenisD3D/Minecraft2Discord
+#  - Wiki: https://github.com/DenisD3D/Minecraft2Discord/wiki
+#
+# Read the wiki for a quick start guide or for more advanced customization
+# You can also join the discord to get some help
+#
+# You can use discord markdown
+# Many variables are available to customize the behavior. Check them on the wiki: https://github.com/DenisD3D/Minecraft2Discord/wiki/Variables
+[General]
+	# Token for the bot. This is a secret string that can be generated on discord website. More info here: https://github.com/DenisD3D/Minecraft2Discord/wiki/Discord-token
+	token = "xxxxxxxxxxxxxxxxxxxxxxxxxx.xxxxxx.-xxxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxxxx"
+
+# Channels configuration. You may duplicate this block. Each one correspond to one channel
+# id is the discord id of the channel. See: https://github.com/DenisD3D/Minecraft2Discord/wiki/Discord-ids
+# subscriptions is an array of what type of message you want in this channel. Currently supported are: 
+#   - chat (player chat message in both direction)
+#   - info (join, leave, start, stop, death, advancement)
+#   - command (listen to command, see Commands section)
+#   - log (all the log of the server)
+#   - discord_announcement (for relaying announcement channel to Discord)
+# mode define how to send messages (WEBHOOK, PLAIN_TEXT or EMBED)
+[Channels]
+
+	[[Channels.Channel]]
+		id = 000000000000000000
+		subscriptions = ["info", "chat", "command"]
+		mode = "WEBHOOK"
+
+# Customize here the message that are sent on discord. To disable one, set an empty value ("")
+# For the list of available variables see: https://github.com/DenisD3D/Minecraft2Discord/wiki/Variables
+[Messages]
+	# Global variables only
+	start = "```diff\n+ Server Started! +\n```"
+	# Global variables only
+	stop = "```fix\nServer Stopped!\n```"
+	# Global variables and Player variables
+	join = "🔵 `${player_display_name}` *joined*"
+	# Global variables and Player variables
+	leave = "🟠 `${player_display_name}` *left*"
+	# Global variables, Player variables and Death variables
+	death = "💀 *${death_message}*"
+	# Global variables, Player variables and Advancement variables
+	advancement = "> `${player_display_name}` has made the advancement **${advancement_title}**\n> *${advancement_description}*"
+
+[Commands]
+	# Prefix used before each command. Minecraft default one is '/' (eg : /help)
+	prefix = "/"
+	# If true, text returned by commands will be in a Discord code block
+	use_codeblocks = true
+	# Response when the user isn't allowed to use the command
+	error = "Sorry, you're not allowed to use that command!"
+
+	# Commands permissions configuration. You may duplicate the block. Each block correspond to one rule
+	# id is an user id or a role id. The rule (current block) will apply for this user or users with this role
+	# commands is a list of the commands that are allowed in addition of the permission level
+	# permission_level allow all the commands with this permission or under level. -1 mean only the commands in the list commands above and 0 mean all non op commands
+	# comment not used by the mod. You can use it to remember what the rule is for
+	# see https://minecraft.gamepedia.com/Server.properties#op-permission-level
+	[[Commands.Command]]
+		id = 0
+		commands = ["list", "weather clear", "spark tps", "forge entity list"]
+		permission_level = 1
+		comment = ""
+
+[Status]
+
+	[Status.Presence]
+		# Message to display under the bot in the member list on Discord
+		message = "${online_players} / ${max_players} players"
+		#The type of presence (PLAYING, STREAMING, LISTENING, WATCHING, COMPETING)
+		type = "PLAYING"
+		# Update frequency of the presence message (in seconds). A too low number might result in limitation from Discord
+		update = 60
+		# Only if type is STREAMING, ignored for others. Must be a valid youtube or twitch link.
+		link = ""
+
+	# Status channels configuration. You may duplicate the block. Each block correspond to one channel
+	# id is the discord id of the channel. See : https://github.com/DenisD3D/Minecraft2Discord/wiki/Discord-ids
+	# update_period is the update frequency of the channel (in seconds). A too low number might result in limitation form Discord (max 2 update per 10 minutes as of writing)
+	# name_message is the message to set as a name of the channel. You can use Global variables. If the channel is a text channel, whitespace will be replaced by '-'
+	# topic_message is the message to set as the description of the channel. You can use Global variables
+	[Status.Channels]
+
+		[[Status.Channels.Channel]]
+			id = 000000000000000000
+			update_period = 600
+			name_message = "📦Public-${online_players}-${max_players}"
+			topic_message = "IP: ???\nCommands: \n/spark tps, /list, /team info PlayeName, /leaderboards ftbutilities:time_played, /leaderboards ftbquests:progress"
+
+[Features]
+	# /!\ Account linking feature is disabled on 1.12.2 /!\ Enable account linking features (use /mc2discord restart to generate the associated config). Require SERVER MEMBERS INTENT to be enabled for all features to work
+	account_linking = false
+
+# Style configuration
+[Style]
+	# Override the bot name in webhook mode. You may use global variable here
+	bot_name = ""
+	# Override the bot avatar in webhook mode. Must be a valid an url. You may use global variable here
+	bot_avatar = ""
+	# Url to fetch player avatar from. Must be a valid url and not empty. You may use Global variables and Player variables here
+	avatar_api = "https://mc-heads.net/head/${player_uuid}/right"
+	# Format for the messages sent in the minecraft chat. You may use Global variables, Member variables and Message variable here. You may change the color with '${color_start_COLOR} CONTENT ${color_end}' where COLOR is a hex color or 'top_role' for discord highest role color. ${reply} will be replaced with reply_format if the message has a referenced message.
+	minecraft_chat_format = "<Discord - ${member_nickname}> ${reply}${message}"
+	# Format for chat messages sent in discord when webhook mode is turned to false. You may use Global variables, Player variables and Message variable here
+	discord_chat_format = "`${player_display_name}` ${message}"
+	# Replace ${reply} in minecraft_chat_format if the message has a referenced message. You may use Global variables and Member (author of the referenced message) variables here.
+	reply_format = "Replying to `${member_nickname}`: "
+	# If true, the server avatar will be shown in the embed for info messages
+	embed_show_server_avatar = false
+
+	[Style.embed_color]
+		# Color for the embeds. A int color or one of https://github.com/DenisD3D/Mc2Discord/blob/main/mc2discord-core/src/main/java/ml/denisd3d/mc2discord/core/M2DUtils.java#L102-L134
+		info = "SUMMER_SKY"
+		chat = "MEDIUM_SEA_GREEN"
+		command = "MEDIUM_SEA_GREEN"
+		log = "SUMMER_SKY"
+
+# The rest of the settings
+[Misc]
+	# Define if other bots messages must be sent in the minecraft chat
+	relay_bot_messages = false
+	# Define if /say & /me command must be relayed on Discord
+	relay_say_me_tellraw_command = true
+	# List of allowed mention type. Supported value : "EVERYONE_AND_HERE", "ROLE", "USER"
+	# Eg : ["ROLE", "USER"] to allow all mention except @everyone & @here
+	allowed_mention = []
+	# Message for the /discord command
+	discord_text = "Invitation link not set"
+	# Link for the /discord command
+	discord_link = "https://discord.gg/"
+	# /!\ Logs feature is disabled on 1.12.2 /!\ Format for forwarding the log on Discord
+	logs_format = "[${log_time!HH:mm:ss}] [${log_thread_name}/${log_level}] [${log_logger_name}]: ${log_message}"
+	# /!\ Logs feature is disabled on 1.12.2 /!\ Level for the log on Discord (FATAL, ERROR, WARN, INFO, DEBUG, TRACE, ALL)
+	logs_level = "INFO"
+
