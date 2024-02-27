@@ -1,8 +1,10 @@
 #modloaded advancedrocketry
 #priority 950
+#reloadable
 
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
+import mods.randomtweaker.jei.IJeiUtils;
 
 import scripts.jei.requious.add as addRecipe;
 
@@ -55,3 +57,36 @@ addAsteroid('Rock Crystal asteroid'         , [64, 75, 0.7, 5, 1, 0.5]  , [<astr
 addAsteroid('Steel asteroid'                , [64, 75, 0.3, 7, 1, 0.2]  , [<thermalfoundation:storage_alloy>.withLore(['§8Chance: §b100']), <advancedrocketry:hotturf>.withLore(['§8Chance: §b25'])]);
 addAsteroid('Moon Turf asteroid'            , [64, 50, 0.9, 8, 10, 0.1] , [<advancedrocketry:moonturf>.withLore(['§8Chance: §b50']), <advancedrocketry:moonturf_dark>.withLore(['§8Chance: §b50'])]);
 /**/
+
+// -----------------------------------------------------------------------
+val p = mods.jei.JEI.createJei('orbital_laser_drill', "Orbital Laser Drill")
+.setBackground(IJeiUtils.createBackground(7*18, 3*18))
+.addRecipeCatalyst(<advancedrocketry:spacelaser>)
+.setIcon(<advancedrocketry:spacelaser>)
+.setModid('advancedrocketry');
+for y in 0 .. 3 {
+  for x in 0 .. 7 {
+    p.addSlot(IJeiUtils.createItemSlot('output', x*18, y*18, false, false));
+  }
+}
+p.register();
+
+mods.jei.JEI.createJeiRecipe("orbital_laser_drill").setOutputs([
+/* Inject_js(
+config('config/advRocketry/advancedRocketry.cfg')
+['world and ore generation'].laserDrillOres
+.map(l=>`  <ore:${l}>,`)
+) */
+  <ore:oreClathrateEnder>,
+  <ore:oreClathrateGlowstone>,
+  <ore:oreClathrateRedstone>,
+  <ore:oreDraconium>,
+  <ore:oreProsperity>,
+  <ore:oreAstralStarmetal>,
+  <ore:oreDilithium>,
+  <ore:oreIridium>,
+  <ore:oreMithril>,
+  <ore:orePlatinum>,
+  <ore:oreTitanium>,
+/**/
+]).build();
