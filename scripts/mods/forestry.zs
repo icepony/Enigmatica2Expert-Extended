@@ -108,43 +108,13 @@ val FermenterFluid = {
   <liquid:for.honey>     : 1.50,
   <liquid:honey>         : 1.50,
   <liquid:water>         : 1.00,
-}   as float[ILiquidStack];
+} as float[ILiquidStack]$orderly;
 
-val thingsToferment = [
-  <minecraft:carrot>,
-  <harvestcraft:peanutitem>,
-  <harvestcraft:waterchestnutitem>,
-  <harvestcraft:sesameseedsitem>,
-  <harvestcraft:curryleafitem>,
-  <minecraft:beetroot>,
-  <minecraft:melon>,
-  <harvestcraft:gigapickleitem>,
-  <harvestcraft:kaleitem>,
-  <harvestcraft:agaveitem>,
-  <harvestcraft:amaranthitem>,
-  <harvestcraft:arrowrootitem>,
-  <harvestcraft:quinoaitem>,
-  <harvestcraft:sisalitem>,
-  <harvestcraft:cassavaitem>,
-  <harvestcraft:chickpeaitem>,
-  <harvestcraft:elderberryitem>,
-  <harvestcraft:flaxitem>,
-  <harvestcraft:greengrapeitem>,
-  <harvestcraft:huckleberryitem>,
-  <harvestcraft:jicamaitem>,
-  <harvestcraft:juteitem>,
-  <harvestcraft:kenafitem>,
-  <harvestcraft:kohlrabiitem>,
-  <harvestcraft:lentilitem>,
-  <harvestcraft:milletitem>,
-  <harvestcraft:mulberryitem>,
-  <harvestcraft:taroitem>,
-] as IItemStack[];
-
-for thing in thingsToferment {
-  for liquid, ratio in FermenterFluid {
-    mods.forestry.Fermenter.addRecipe(<liquid:biomass>, thing, liquid, 50, ratio);
-  }
+for liquid, ratio in FermenterFluid {
+  // Most vanilla plants replacement
+  mods.forestry.Fermenter.addRecipe(<liquid:biomass>, <harvestcraft:oliveoilitem>, liquid, 60, ratio); // was ~50
+  mods.forestry.Fermenter.addRecipe(<liquid:biomass>, <ic2:crafting:20>, liquid, 1000, ratio); // Was 450
+  mods.forestry.Fermenter.addRecipe(<liquid:biomass>, <ic2:crafting:21>, liquid, 1500, ratio); // Was 450
 }
 
 // Make melons give fruit juice
