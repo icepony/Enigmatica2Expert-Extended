@@ -248,6 +248,30 @@ craft.remake(<extendedcrafting:material:10>, ['pretty',
   'M': <rftoolsdim:material_absorber>.withTag({ meta: 0, absorbing: 0, block: 'minecraft:stone' }), // Material Absorber
 });
 
+# [Ultimate Component] from [Titanium Iridium Alloy Sheet][+5]
+craft.remake(<extendedcrafting:material:17>, ["pretty",
+  "O L O",
+  "B T B",
+  "§ m §"], {
+  "O": <enderio:item_material:48>,               # Organic Green Dye
+  "L": <extendedcrafting:material:7>,            # Luminessence
+  "B": <bloodmagic:slate>,                       # Blank Slate
+  "T": <ore:sheetTitaniumIridium>,               # Titanium Iridium Alloy Sheet
+  "§": <mysticalagriculture:fertilized_essence>, # Fertilized Essence
+  "m": <ore:mica>,                               # Mica
+});
+
+# [Ultimate Catalyst] from [Draconium Infused Obsidian][+3]
+craft.remake(<extendedcrafting:material:11>, ["pretty",
+  "U ◊ U",
+  "◊ D ◊",
+  "U § U"], {
+  "U": <extendedcrafting:material:17>,         # Ultimate Component
+  "◊": <ore:gemDimensionalShard>,              # Dimensional Shard
+  "D": <draconicevolution:infused_obsidian>,   # Draconium Infused Obsidian
+  "§": <deepmoblearning:glitch_infused_ingot>, # Glitch Infused Ingot
+});
+
 // [Black Iron Frame]*8 from [Quartz Glass][+1]
 craft.remake(<extendedcrafting:frame> * 8, ['pretty',
   '‚ ⌃ ‚',
