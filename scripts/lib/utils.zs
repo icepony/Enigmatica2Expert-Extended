@@ -317,7 +317,7 @@ zenClass Utils {
         || key == 'spectreAnchor'
         || key == 'display'
       )
-        newTag += { key: value } as IData;
+        newTag += { [key]: value } as IData;
     }
 
     return out.withTag(newTag);
