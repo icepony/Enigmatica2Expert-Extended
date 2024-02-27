@@ -5,15 +5,38 @@
     "Recipes": [
       {
         "action": "add",
-        "CareerLevel": 3,
-        "buy": { "id": "minecraft:emerald", "Count": { "min": 2, "max": 8 } },
+        "CareerLevel": 1,
+        "buy": [
+          { "id": "minecraft:emerald", "Count": { "min": 2, "max": 8 } },
+          { "id": "minecraft:emerald", "Count": { "min": 2, "max": 8 } },
+          { "id": "minecraft:emerald", "Count": { "min": 2, "max": 8 } },
+          { "id": "minecraft:emerald", "Count": { "min": 2, "max": 8 } },
+          { "id": "minecraft:emerald", "Count": { "min": 2, "max": 8 } },
+          { "id": "minecraft:emerald", "Count": { "min": 2, "max": 8 } }
+        ],
         "sell": [
           { "id": "appliedenergistics2:material", "Damage": 26, "Count": 1  },
           { "id": "appliedenergistics2:part", "Damage": 461, "Count": 1 },
           { "id": "cyclicmagic:clock", "Count": 1 },
           { "id": "extrautils2:redstoneclock", "Count": 1  },
           { "id": "extrautils2:redstonelantern", "Count": { "min": 2, "max": 4 } },
-          { "id": "extrautils2:scanner", "Count": 1  },
+          { "id": "extrautils2:scanner", "Count": 1  }
+        ]
+      },
+      {
+        "action": "add",
+        "CareerLevel": 1,
+        "buy": [
+          { "id": "minecraft:emerald", "Count": { "min": 2, "max": 8 } },
+          { "id": "minecraft:emerald", "Count": { "min": 2, "max": 8 } },
+          { "id": "minecraft:emerald", "Count": { "min": 2, "max": 8 } },
+          { "id": "minecraft:emerald", "Count": { "min": 2, "max": 8 } },
+          { "id": "minecraft:emerald", "Count": { "min": 2, "max": 8 } },
+          { "id": "minecraft:emerald", "Count": { "min": 2, "max": 8 } },
+          { "id": "minecraft:emerald", "Count": { "min": 1, "max": 6 } },
+          { "id": "minecraft:emerald", "Count": { "min": 1, "max": 3 } }
+        ],
+        "sell": [
           { "id": "immersiveengineering:connector", "Damage": 12, "Count": { "min": 2, "max": 4 } },
           { "id": "immersiveengineering:connector", "Damage": 13, "Count": { "min": 2, "max": 4 } },
           { "id": "immersiveengineering:wirecoil", "Damage": 5, "Count": { "min": 4, "max": 16 } },
@@ -26,7 +49,7 @@
       },
       {
         "action": "add",
-        "CareerLevel": 3,
+        "CareerLevel": 2,
         "buy": { "id": "minecraft:emerald", "Count": { "min": 2, "max": 8 } },
         "sell": [
           { "id": "quark:redstone_inductor", "Count": 1 },
@@ -48,13 +71,12 @@
       },
       {
         "action": "add",
-        "CareerLevel": 4,
+        "CareerLevel": 3,
         "buy": { "id": "minecraft:emerald", "Count": { "min": 8, "max": 32 } },
         "sell": [
           { "id": "actuallyadditions:block_phantom_redstoneface", "Count": 1  },
           { "id": "compactmachines3:redstonetunneltool", "Count": { "min": 2, "max": 8 } },
           { "id": "enderio:item_redstone_conduit", "Count": { "min": 2, "max": 8 } }
-
         ]
       }
     ]
