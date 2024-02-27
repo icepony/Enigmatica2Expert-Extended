@@ -599,6 +599,17 @@ craft.reshapeless(<enderio:item_material:38>, '▲▲▲©S©▲▲▲', {
   '©': <randomthings:ingredient:13>,
 });
 
+// Cheaper to make teleport stations easier
+# [Telepad Block] from [Pulsating Crystal][+2]
+craft.remake(<enderio:block_tele_pad>, ["pretty",
+  "■ C ■",
+  "C * C",
+  "■ C ■"], {
+  "■": <ore:fusedQuartz>, # Fused Quartz
+  "C": <ore:itemConduitBinder>, # Conduit Binder
+  "*": <ore:itemPulsatingCrystal>, # Pulsating Crystal
+});
+
 // Low-level machines (original in Alloy Smelter)
 scripts.process.compress(<ore:itemPowderPhotovoltaic> * 4, <enderio:item_material:3>, 'Except: Compressor');
 mods.mekanism.compressor.addRecipe(<ore:itemPowderPhotovoltaic> * 4, <enderio:item_material:3>);
