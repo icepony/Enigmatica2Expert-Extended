@@ -384,6 +384,43 @@ scripts.process.alloy([<ore:blockDarkSteel>, <endreborn:item_ingot_wolframium>, 
 // Excess ender dust recipe
 recipes.removeByRecipeName('enderio:ender_dust');
 
+# [Stirling Generator] from [Industrial Machine Chassis][+5]
+craft.remake(<enderio:block_stirling_generator>, ["pretty",
+  "¤ G ¤",
+  "E M E",
+  "☼ 3 ☼"], {
+  "¤": <ore:gearEnergized>,                # Energized Bimetal Gear
+  "G": <advgenerators:turbine_controller>, # Gas Turbine controller
+  "E": <mekanism:electrolyticcore>,        # Electrolytic Core
+  "M": <ore:itemMachineChassi>,            # Industrial Machine Chassis
+  "☼": <ore:gearDark>,                     # Dark Bimetal Gear
+  "3": <opencomputers:print>,              # 3D Print
+});
+
+# [SAG Mill] from [Industrial Machine Chassis][+4]
+craft.remake(<enderio:block_sag_mill>, ["pretty",
+  "¤ □ ¤",
+  "□ M □",
+  "☼ 3 ☼"], {
+  "¤": <ore:gearEnergized>,     # Energized Bimetal Gear
+  "□": <tconstruct:large_plate>.withTag({Material: "flint"}), # Flint Large Plate
+  "M": <ore:itemMachineChassi>, # Industrial Machine Chassis
+  "☼": <ore:gearDark>,          # Dark Bimetal Gear
+  "3": <opencomputers:print>,   # 3D Print
+});
+
+# [Alloy Smelter] from [Industrial Machine Chassis][+4]
+craft.remake(<enderio:block_alloy_smelter>, ["pretty",
+  "¤ H ¤",
+  "H M H",
+  "☼ 3 ☼"], {
+  "¤": <ore:gearEnergized>,                # Energized Bimetal Gear
+  "H": <tcomplement:high_oven_controller>, # High Oven Controller
+  "M": <ore:itemMachineChassi>,            # Industrial Machine Chassis
+  "☼": <ore:gearDark>,                     # Dark Bimetal Gear
+  "3": <opencomputers:print>,              # 3D Print
+});
+
 // [Simple_Inventory_Charger] from [LV_Capacitor][+2]
 craft.remake(<enderio:item_inventory_charger_simple>, ['D', 'L', '▬'], {
   'D': <ore:nuggetDarkSteel>, // Dark Steel Nugget
