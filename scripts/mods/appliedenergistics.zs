@@ -311,13 +311,33 @@ craft.make(<appliedenergistics2:interface>, ['pretty',
   '▬': <ore:ingotTungsten>, // Tungsten Ingot
 });
 
-// [ME Storage Bus] from [Resonant Requester][+2]
-recipes.remove(<appliedenergistics2:part:220>);
-recipes.addShaped('ME Storage Bus', <appliedenergistics2:part:220>, [
-  [utils.tryCatch('thermallogistics:requester', 4, <thermaldynamics:retriever:4>)], // Resonant Requester
-  [<actuallyadditions:block_giant_chest>], // Small Storage Crate
-  [<appliedenergistics2:interface>], // ME Interface
-]);
+# [ME Storage Bus] from [Mono-Directional Connector][+3]
+craft.remake(<appliedenergistics2:part:220>, ["pretty",
+  "□ п",
+  "E M",
+  "□ п"], {
+  "□": <ore:plateEnderium>,             # Enderium Plate
+  "п": <ore:plateSilver>,               # Silver Plate
+  "E": <appliedenergistics2:interface>, # ME Interface
+  "M": <integrateddynamics:part_connector_mono_directional_item>, # Mono-Directional Connector
+});
+
+# [ME Fluid Storage Bus] from [Mono-Directional Connector][+3]
+craft.remake(<appliedenergistics2:part:221>, ["pretty",
+  "□ п",
+  "E M",
+  "□ п"], {
+  "□": <ore:plateEnderium>,                   # Enderium Plate
+  "п": <ore:plateSilver>,                     # Silver Plate
+  "E": <appliedenergistics2:fluid_interface>, # ME Fluid Interface
+  "M": <integrateddynamics:part_connector_mono_directional_item>, # Mono-Directional Connector
+});
+
+# [ME OreDict Storage Bus] from [Oak Bookshelf][+1]
+craft.reshapeless(<appliedenergistics2:part:222>, "Mb", {
+  "M": <appliedenergistics2:part:220>,       # ME Storage Bus
+  "b": <ore:bookshelf>, # Oak Bookshelf
+});
 
 // ---------------------------------------------------------
 // Universal facade crafting recipe
