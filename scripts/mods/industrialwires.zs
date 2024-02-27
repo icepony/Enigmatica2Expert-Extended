@@ -62,4 +62,10 @@ for wire, c in cables {
     if (isNull(ins.marked) || isNull(ins.marked.tag) || isNull(ins.marked.tag.wireLength)) return null;
     return out * max(1, min(64, ins.marked.tag.wireLength.asInt()));
   }, null);
+
+  // "Infinity" coil
+  mods.extendedcrafting.CompressionCrafting.addRecipe(
+    wire.withTag({ wireLength: 2000000000 }),
+    c, 10000,
+    <immersiveengineering:metal_device1:8>, 100000000, 1000000);
 }
