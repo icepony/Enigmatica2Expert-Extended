@@ -519,6 +519,18 @@ craft.make(<appliedenergistics2:material:58>, ['pretty',
   'M': <appliedenergistics2:part:440>, // ME Interface
 });
 
+# [Quantum Link Card] from [1024k ME Storage Component][+3]
+mods.appliedenergistics2.Inscriber.removeRecipe(<appliedenergistics2:material:59>);
+craft.remake(<appliedenergistics2:material:59>, ["pretty",
+  "M S M",
+  "◊ § ◊",
+  "M S M"], {
+  "M": <appliedenergistics2:quantum_link>, # ME Quantum Link Chamber
+  "S": <appliedenergistics2:material:47>,  # Singularity
+  "◊": <ore:gemAnglesite>,                 # Anglesite
+  "§": <nae2:material:2>,                  # 1024k ME Storage Component
+});
+
 val terminalIngrs = {
   'F': <ore:pearlFluix>, // Fluix Pearl
   'W': <ae2stuff:wireless>,
