@@ -1,8 +1,8 @@
 {
   "quality": {
     "cloud_quality": "DEFAULT",
-    "weather_quality": "DEFAULT",
-    "leaves_quality": "DEFAULT",
+    "weather_quality": "FAST",
+    "leaves_quality": "FAST",
     "biome_blend_radius": 2,
     "entity_distance_scaling": 1.0,
     "enable_vignette": true,
