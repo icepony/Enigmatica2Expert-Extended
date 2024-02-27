@@ -5,7 +5,7 @@
 		"{q.utils.controlled_miner.desc}"
 	],
 	dependencies: [
-		"727feb19"
+		"f644da81"
 	],
 	tasks: [{
 		uid: "fb013900",

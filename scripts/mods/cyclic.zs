@@ -683,15 +683,15 @@ craft.remake(<cyclicmagic:builder_block>, ['pretty',
   'L': <tconstruct:firewood>, // Lavawood
 });
 
-// [Controlled Miner] from [Battery][+3]
-craft.remake(<cyclicmagic:block_miner_smart>, ['pretty',
-  '■ ░ ■',
-  '░ B ░',
-  'L L L'], {
-  '■': <ore:blockLapis>, // Lapis Lazuli Block
-  '░': <appliedenergistics2:smooth_sky_stone_block>,
-  'B': <cyclicmagic:battery>, // Battery
-  'L': <tconstruct:firewood>, // Lavawood
+// [Controlled Miner] from [Structure Builder][+3]
+craft.remake(<cyclicmagic:block_miner_smart>, ["pretty",
+  "L □ L",
+  "□ S □",
+  "# # #"], {
+  "L": <ore:compressedLapis2x>,     # Double Compressed Lapis Lazuli
+  "□": <tconstruct:large_plate>.withTag({Material: "sky_stone"}), # Sky Stone Large Plate
+  "S": <cyclicmagic:builder_block>, # Structure Builder
+  "#": <randomthings:spectrelog>,   # Spectre Wood
 });
 
 // [Harvester] from [Battery][+4]
