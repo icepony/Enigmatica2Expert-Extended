@@ -27,7 +27,7 @@
 
       ,{"name": "extrautils2:compressedsand"                ,"metadata": "1", "rewards": [{"name": "exnihilocreatio:block_dust"              ,"count": 81 ,"metadata": "0","chance": 1.0,"luck": 0.0}]}
       ,{"name": "extrautils2:compressedgravel"              ,"metadata": "1", "rewards": [{"name": "minecraft:sand"                          ,"count": 81 ,"metadata": "0","chance": 1.0,"luck": 0.0}]}
-      ,{"name": "extrautils2:compressednetherrack"          ,"metadata": "1", "rewards": [{"name": "exnihilocreatio:block_netherrack_crushed","count": 729,"metadata": "0","chance": 1.0,"luck": 0.0}]}
+      ,{"name": "extrautils2:compressednetherrack"          ,"metadata": "1", "rewards": [{"name": "exnihilocreatio:block_netherrack_crushed","count": 81 ,"metadata": "0","chance": 1.0,"luck": 0.0}]}
       ,{"name": "extrautils2:compressednetherrack"          ,"metadata": "2", "rewards": [{"name": "exnihilocreatio:block_netherrack_crushed","count": 729,"metadata": "0","chance": 1.0,"luck": 0.0}]}
 
       ,{"name": "additionalcompression:meatporkchop_compressed", "metadata": "0", "rewards": [{"name": "harvestcraft:groundporkitem"   ,"count": 18  ,"metadata": "0","chance": 1.0,"luck": 0.0}]}
