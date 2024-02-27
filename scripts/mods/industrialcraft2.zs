@@ -651,7 +651,7 @@ craft.remake(<advgenerators:eu_output_lv>, ['pretty',
   '  L  ',
   '◙ C ◙',
   '  R  '], {
-  'L': <advgenerators:eu_output_lv>, // Low Voltage Emitter
+  'L': <mekanism:energyupgrade>,
   '◙': <advgenerators:iron_frame>,   // Iron Frame
   'C': copperCoil,
   'R': <advgenerators:iron_wiring>,  // Redstone-Iron Wiring
