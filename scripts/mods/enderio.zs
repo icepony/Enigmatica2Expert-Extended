@@ -240,7 +240,7 @@ recipes.addShapedMirrored('The Vat',
   <enderio:block_vat>,
   [[<ore:ingotElectricalSteel>, <minecraft:cauldron>, <ore:ingotElectricalSteel>],
     [<enderio:block_tank>, <thermalexpansion:machine:7>, <enderio:block_tank>],
-	 [<ore:ingotElectricalSteel>, <minecraft:cauldron>, <ore:ingotElectricalSteel>]]);
+   [<ore:ingotElectricalSteel>, <minecraft:cauldron>, <ore:ingotElectricalSteel>]]);
 
 // Crafter simplify
 recipes.remove(<enderio:block_simple_crafter>);
@@ -909,3 +909,80 @@ recipes.addShapeless(<enderio:item_material>, [<enderio:block_simple_furnace>.an
 recipes.addShapeless(<enderio:item_material>, [<enderio:block_simple_alloy_smelter>.anyDamage()]);
 recipes.addShapeless(<enderio:item_material>, [<enderio:block_simple_stirling_generator>.anyDamage()]);
 recipes.addShapeless(<enderio:item_material>, [<enderio:block_simple_sag_mill>.anyDamage()]);
+
+// Chemical Reactor alt recipes
+val chemReactor = mods.advancedrocketry.RecipeTweaker.forMachine('ChemicalReactor');
+
+chemReactor.builder().power(30000).timeRequired(25)
+  .inputs(
+    <fluid:short.mead> * 32000,
+    <ore:itemPrecientPowder> * 2,
+    <ore:itemEnderCrystalPowder> * 2,
+    <ore:itemPulsatingPowder> * 4,
+    <ore:itemSkull> * 16
+  )
+  .outputs(<fluid:vapor_of_levity> * 2000).build();
+
+chemReactor.builder().power(30000).timeRequired(10)
+  .inputs(
+    <fluid:short.mead> * 32000,
+    <ore:itemEnderCrystalPowder> * 2,
+    <ore:itemPulsatingPowder> * 2,
+    <minecraft:skull> * 1
+  )
+  .outputs(<fluid:ender_distillation> * 2000).build();
+
+chemReactor.builder().power(30000).timeRequired(5)
+  .inputs(
+    <fluid:short.mead> * 2000,
+    <minecraft:skull:2> * 2
+  )
+  .outputs(<fluid:nutrient_distillation> * 1000).build();
+
+// EnderIO Liquids (Hootch line)
+chemReactor.builder().power(30000).timeRequired(15)
+  .inputs(
+    <fluid:milk> * 32000,
+    <minecraft:poisonous_potato> * 2,
+    <minecraft:double_plant> * 2
+  )
+  .outputs(<fluid:liquid_sunshine> * 4000).build();
+
+chemReactor.builder().power(30000).timeRequired(10)
+  .inputs(
+    <fluid:milk> * 32000,
+    <minecraft:poisonous_potato> * 2,
+    <ore:dustBlaze> * 2
+  )
+  .outputs(<fluid:fire_water> * 4000).build();
+
+chemReactor.builder().power(30000).timeRequired(15)
+  .inputs(
+    <fluid:milk> * 32000,
+    <minecraft:poisonous_potato> * 2,
+    <ore:gunpowder> * 2
+  )
+  .outputs(<fluid:rocket_fuel> * 4000).build();
+
+chemReactor.builder().power(30000).timeRequired(5)
+  .inputs(
+    <fluid:milk> * 32000,
+    <minecraft:poisonous_potato> * 2,
+    <ore:cropPotato> * 2
+  )
+  .outputs(<fluid:hootch> * 4000).build();
+
+// EnderIO liquids (Cloud Seed line)
+chemReactor.builder().power(30000).timeRequired(10)
+  .inputs(
+    <fluid:ice> * 800,
+    <ore:dustSilver> * 6,
+    <ore:ice> * 4
+  )
+  .outputs(<fluid:cloud_seed_concentrated> * 2500).build();
+
+chemReactor.builder().power(30000).timeRequired(5)
+  .inputs(
+    <fluid:hot_spring_water> * 400
+  )
+  .outputs(<fluid:cloud_seed> * 2000).build();
