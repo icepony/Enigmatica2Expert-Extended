@@ -120,6 +120,15 @@ mods.mechanics.addCrushingBlockRecipe(
   [0.3f, 0.05f, 0.65f]
 );
 
+// Convert Comb blocks back to combs
+for i in 0 .. 17 {
+  recipes.addShapeless(
+    'bloc to comb ' ~ i,
+    <forestry:bee_combs>.definition.makeStack(i) * 9,
+    [(i<16 ? <forestry:bee_combs_0> : <forestry:bee_combs_1>).definition.makeStack(i%16)]
+  );
+}
+
 // ---------------------------
 // Remake old combs
 function crushComb(comb as IItemStack, outputs as WeightedItemStack[]) as void {
