@@ -27,7 +27,10 @@
 		uid: "390ea917",
 		type: "item",
 		items: [{
-			item: "tconstruct:seared 2 3"
+			item: "tconstruct:seared 1 3"
+		},
+		{
+			item: "searedladder:seared_ladder"
 		}]
 	},
 	{
