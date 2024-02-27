@@ -118,7 +118,7 @@
           { "id": "iceandfire:myrmex_desert_egg", "Count": 1, "Damage": 4 }
         ],
         "buyB": { "id": "minecraft:emerald", "Count": { "min": 16, "max": 32 } },
-        "sell": { "id": "scalinghealth:heartcontainer", "Count": 1 }
+        "sell": { "id": "contenttweaker:conglomerate_of_life", "Count": { "min": 1, "max": 3 } }
       },
       {
         "action": "add",
