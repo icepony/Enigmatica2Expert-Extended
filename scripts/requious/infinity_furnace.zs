@@ -168,6 +168,7 @@ infinFurnace(<ore:logWood>, <minecraft:coal:1>);
 const manualBlacklist = new Set(`
 biomesoplenty:mud
 biomesoplenty:mudball
+botania:biomestonea
 ic2:dust:3
 iceandfire:dread_stone_bricks
 minecraft:sponge:1
@@ -302,14 +303,14 @@ infinFurnace(utils.get('biomesoplenty:plant_1', 6), utils.get('minecraft:dye', 2
 infinFurnace(utils.get('biomesoplenty:white_sand'), utils.get('minecraft:glass'));
 blacklist('bloodmagic:component', 19);
 blacklist('bloodmagic:component', 20);
-infinFurnace(utils.get('botania:biomestonea', 8), utils.get('botania:biomestonea'));
-infinFurnace(utils.get('botania:biomestonea', 9), utils.get('botania:biomestonea', 1));
-infinFurnace(utils.get('botania:biomestonea', 10), utils.get('botania:biomestonea', 2));
-infinFurnace(utils.get('botania:biomestonea', 11), utils.get('botania:biomestonea', 3));
-infinFurnace(utils.get('botania:biomestonea', 12), utils.get('botania:biomestonea', 4));
-infinFurnace(utils.get('botania:biomestonea', 13), utils.get('botania:biomestonea', 5));
-infinFurnace(utils.get('botania:biomestonea', 14), utils.get('botania:biomestonea', 6));
-infinFurnace(utils.get('botania:biomestonea', 15), utils.get('botania:biomestonea', 7));
+blacklist('botania:biomestonea');
+blacklist('botania:biomestonea', 1);
+blacklist('botania:biomestonea', 2);
+blacklist('botania:biomestonea', 3);
+blacklist('botania:biomestonea', 4);
+blacklist('botania:biomestonea', 5);
+blacklist('botania:biomestonea', 6);
+blacklist('botania:biomestonea', 7);
 infinFurnace(utils.get('claybucket:unfiredclaybucket', W), utils.get('claybucket:claybucket'));
 infinFurnace(utils.get('contenttweaker:ore_phosphor'), utils.get('contenttweaker:nugget_phosphor'));
 infinFurnace(utils.get('cookingforblockheads:recipe_book'), utils.get('cookingforblockheads:recipe_book', 1));
