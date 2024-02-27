@@ -545,18 +545,6 @@ craft.make(creativeCube, ['pretty',
 
 recipes.addHiddenShapeless('Recharging cube', creativeCube, [<mekanism:energycube>.withTag({ tier: 4, mekData: {} })]);
 
-// [Creative Wireless Ultimate Terminal] from [Creative Energy Cube][+4]
-craft.make(<ae2wtlib:wut_creative>, ['pretty',
-  '  e  ',
-  'r Ϟ i',
-  '  W  '], {
-  'e': <wct:wct:*>.withTag({}), // Wireless Crafting Terminal
-  'r': <wpt:wpt:*>.withTag({}), // Wireless Pattern Terminal
-  'Ϟ': utils.reuse(creativeCube), // Creative Energy Cube
-  'i': <wft:wft:*>.withTag({}), // Wireless Fluid Terminal
-  'W': <wit:wit:*>.withTag({}), // Wireless Interface Terminal
-});
-
 // [Creative Vending Upgrade] from [Lamp of Cinders][+18]
 craft.make(<storagedrawers:upgrade_creative:1>, ['pretty',
   '* B T T ♦ T T B *',

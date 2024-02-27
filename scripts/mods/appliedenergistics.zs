@@ -519,6 +519,36 @@ craft.make(<appliedenergistics2:material:58>, ['pretty',
   'M': <appliedenergistics2:part:440>, // ME Interface
 });
 
+val terminalIngrs = {
+  'F': <ore:pearlFluix>, // Fluix Pearl
+  'W': <ae2stuff:wireless>,
+  'M': <appliedenergistics2:quantum_ring>, // ME Quantum Ring
+  'C': <appliedenergistics2:part:360>, // ME Crafting Terminal
+  '○': <appliedenergistics2:part:520>, // ME Fluid Terminal
+  'P': <appliedenergistics2:part:340>, // ME Pattern Terminal
+} as IIngredient[string];
+
+// [Wireless Crafting Terminal]
+craft.remake(<appliedenergistics2:wireless_crafting_terminal>, ['pretty',
+  '  C  ',
+  'F W F',
+  'F M F'], terminalIngrs
+);
+
+// [Wireless Fluid Terminal]
+craft.remake(<appliedenergistics2:wireless_fluid_terminal>, ['pretty',
+  '  ○  ',
+  'F W F',
+  'F M F'], terminalIngrs
+);
+
+// [Wireless Pattern Terminal]
+craft.remake(<appliedenergistics2:wireless_pattern_terminal>, ['pretty',
+  '  P  ',
+  'F W F',
+  'F M F'], terminalIngrs
+);
+
 // ---------------------------------
 // Storage Component rework
 // ---------------------------------
