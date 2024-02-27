@@ -9,7 +9,7 @@ import crafttweaker.item.IIngredient;
 #modloaded zenutils
 
 // Logs to planks recipes
-static logPlank as IItemStack[IItemStack]$orderly = {
+static logPlank as IItemStack[IItemStack] = {
 // Vanilla
   <minecraft:log>    : <minecraft:planks>,
   <minecraft:log:1>  : <minecraft:planks:1>,
@@ -99,10 +99,10 @@ static logPlank as IItemStack[IItemStack]$orderly = {
   <botania:livingwood>               : <botania:livingwood:1>,
   <botania:dreamwood>                : <botania:dreamwood:1>,
   <astralsorcery:blockinfusedwood>   : <astralsorcery:blockinfusedwood:1>,
-} as IItemStack[IItemStack];
+} as IItemStack[IItemStack]$orderly;
 
 // Forestry fireproof
-static logPlankFireproof as IItemStack[IItemStack]$orderly = {
+static logPlankFireproof as IItemStack[IItemStack] = {
   <forestry:logs.fireproof.0:1>        : <forestry:planks.fireproof.0:1>,
   <forestry:logs.fireproof.0:2>        : <forestry:planks.fireproof.0:2>,
   <forestry:logs.fireproof.0:3>        : <forestry:planks.fireproof.0:3>,
@@ -138,7 +138,7 @@ static logPlankFireproof as IItemStack[IItemStack]$orderly = {
   <forestry:logs.vanilla.fireproof.0>  : <forestry:planks.vanilla.fireproof.0>,
   <forestry:logs.vanilla.fireproof.1:1>: <forestry:planks.vanilla.fireproof.0:5>,
   <forestry:logs.vanilla.fireproof.1>  : <forestry:planks.vanilla.fireproof.0:4>,
-} as IItemStack[IItemStack];
+} as IItemStack[IItemStack]$orderly;
 
 // Copy values to main list
 for log, plank in logPlankFireproof {
