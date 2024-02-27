@@ -11,9 +11,10 @@
 		uid: "55db32bc",
 		type: "item",
 		items: [{
-			id: "wct:wct",
+			id: "appliedenergistics2:wireless_crafting_terminal",
 			tag: {}
 		}],
+		ignore_damage: true,
 		ignore_nbt: 1b
 	}],
 	rewards: [{
