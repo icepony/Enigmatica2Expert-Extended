@@ -22,7 +22,6 @@ import {
   naturalSort,
   saveObjAsJson,
   saveText,
-  setBlockDropsList,
 } from '../lib/utils.js'
 
 const argv = yargs(process.argv.slice(2))
@@ -127,68 +126,6 @@ export async function init(h = defaultHelper, options = argv) {
       { dryRun: false }
     ).length
   }
-
-  // ###############################################################################
-  // ###############################################################################
-  // ###############################################################################
-
-  /*
-
-    Manually handle blockdrops.txt
-
-  */
-  await h.begin('Handling blockdrops.txt')
-  setBlockDropsList([
-    // Remove noisy urns
-    { block_stack: 'thaumcraft:loot_crate_common', dropList: undefined },
-    { block_stack: 'thaumcraft:loot_urn_common', dropList: undefined },
-    { block_stack: 'thaumcraft:loot_crate_uncommon', dropList: undefined },
-    { block_stack: 'thaumcraft:loot_urn_uncommon', dropList: undefined },
-    { block_stack: 'thaumcraft:loot_crate_rare', dropList: undefined },
-    { block_stack: 'thaumcraft:loot_urn_rare', dropList: undefined },
-
-    // Remove Forestry bees since they not useful
-    { block_stack: 'forestry:beehives:0', dropList: undefined },
-    { block_stack: 'forestry:beehives:1', dropList: undefined },
-    { block_stack: 'forestry:beehives:2', dropList: undefined },
-    { block_stack: 'forestry:beehives:3', dropList: undefined },
-    { block_stack: 'forestry:beehives:4', dropList: undefined },
-    { block_stack: 'forestry:beehives:5', dropList: undefined },
-    { block_stack: 'forestry:beehives:6', dropList: undefined },
-
-    {
-      block_stack: 'minecraft:mob_spawner',
-      dropList   : [
-        { stack: 'enderio:item_broken_spawner' },
-        { stack: 'actuallyadditions:item_misc:20', luck: [1, 3] },
-      ],
-    },
-
-    {
-      block_stack: 'astralsorcery:blockgemcrystals:3',
-      dropList   : [{ stack: 'astralsorcery:itemperkgem:1' }],
-    },
-    {
-      block_stack: 'astralsorcery:blockgemcrystals:1',
-      dropList   : [{ stack: 'astralsorcery:itemperkgem:2' }],
-    },
-    {
-      block_stack: 'astralsorcery:blockgemcrystals:2',
-      dropList   : [{ stack: 'astralsorcery:itemperkgem' }],
-    },
-
-    { block_stack: 'forestry:bog_earth:3', dropList: [{ stack: 'forestry:peat', luck: [2, 2] }] },
-    { block_stack: 'endreborn:crop_ender_flower', dropList: [{ stack: 'minecraft:ender_pearl' }] },
-    { block_stack: 'exnihilocreatio:block_infested_leaves', dropList: [{ stack: 'minecraft:string', luck: [1, 3] }] },
-
-    {
-      block_stack: 'randomthings:spectreleaf',
-      dropList   : [
-        { stack: 'randomthings:spectresapling', luck: [0, 1] },
-        { stack: 'randomthings:ingredient:2' },
-      ],
-    },
-  ])
 
   // ###############################################################################
   // ###############################################################################

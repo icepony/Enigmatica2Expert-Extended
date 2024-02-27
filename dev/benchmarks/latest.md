@@ -5,10 +5,10 @@
 
 <p align="center" style="font-size:160%;">
 MC total load time:<br>
-435.19 sec
+419.97 sec
 <br>
 <sup><sub>(
-7:15 min
+6:59 min
 )</sub></sup>
 </p>
 
@@ -20,8 +20,8 @@ MC total load time:<br>
   type: 'horizontalBar',
   data: {
     datasets: [
-      {label:      'MODS:', data: [287.94]},
-      {label: 'FML stuff:', data: [147.25]}
+      {label:      'MODS:', data: [311.64]},
+      {label: 'FML stuff:', data: [108.34]}
     ]
   },
   options: {
@@ -60,31 +60,31 @@ MC total load time:<br>
   },
   data: {...
 `
-436e17  12.96s Had Enough Items;
-3C6315  12.89s Had Enough Items (Plugins);
-3C6315   1.74s Had Enough Items (Ingredient Filter);
-516fa8  11.33s Ender IO;
-5161a8   9.67s CraftTweaker2;
-813e81   8.14s OpenComputers;
-5c308f   7.05s Mod Tweaker;
-8f3087   6.91s Forge Mod Loader;
-8f304e   6.84s Astral Sorcery;
-cd922c   6.17s NuclearCraft;
-a651a8   5.80s IndustrialCraft 2;
-8c2ccd   5.66s Immersive Engineering;
-6e175e   5.29s Recurrent Complex;
-213664   4.62s Forestry;
-8f4d30   3.86s Open Terrain Generator;
-308f53   3.54s Village Names;
-216364   3.53s Xaero's Minimap;
-3e7d81   3.44s ProbeZS;
-176e43   3.38s Thaumic Additions: Reconstructed;
-436e17   3.37s Integrated Dynamics;
-a86e51   3.33s Extra Utilities 2;
-2c3e5a   3.19s Xaero's World Map;
-444444  87.82s 48 Other mods;
-333333  60.84s 180 'Fast' mods (load 1.0s - 0.1s);
-222222   6.59s 200 'Instant' mods (load %3C 0.1s)
+436e17  15.02s Had Enough Items;
+3C6315  14.85s Had Enough Items (Plugins);
+3C6315   2.08s Had Enough Items (Ingredient Filter);
+516fa8  12.09s Ender IO;
+5161a8  11.11s CraftTweaker2;
+5c308f   9.97s Mod Tweaker;
+813e81   8.69s OpenComputers;
+8f3087   7.52s Forge Mod Loader;
+8f304e   7.34s Astral Sorcery;
+a651a8   6.71s IndustrialCraft 2;
+cd922c   6.38s NuclearCraft;
+6e175e   6.08s Recurrent Complex;
+8c2ccd   6.06s Immersive Engineering;
+213664   5.27s Forestry;
+8f4d30   4.10s Open Terrain Generator;
+3e7d81   3.79s ProbeZS;
+308f53   3.77s Village Names;
+436e17   3.56s Integrated Dynamics;
+a86e51   3.56s Extra Utilities 2;
+216364   3.45s Xaero's Minimap;
+216364   3.42s Thermal Expansion;
+308f7e   3.38s Quark: RotN Edition;
+444444  94.59s 51 Other mods;
+333333  62.26s 182 'Fast' mods (load 1.0s - 0.1s);
+222222   6.61s 195 'Instant' mods (load %3C 0.1s)
 `
     .split(';').reduce((a, l) => {
       l.match(/(\w{6}) *(\d*\.\d*)s (.*)/)
@@ -154,18 +154,18 @@ a86e51   3.33s Extra Utilities 2;
       .forEach(([name]) => a.datasets.push({ label: name, data: [] }));
 `
                            1      2      3      4      5      6      7      8  ;
-Ender IO               |  1.65|  0.01|  3.42|  0.50|  3.38|  1.15|  0.00|  1.22;
-CraftTweaker2          |  0.56|  0.00|  3.98|  0.01|  0.00|  5.05|  0.07|  0.00;
-OpenComputers          |  0.45|  0.02|  4.31|  3.15|  0.21|  0.00|  0.00|  0.00;
-Mod Tweaker            |  0.00|  0.00|  0.01|  0.00|  0.00|  0.00|  7.04|  0.00;
-Astral Sorcery         |  0.22|  0.01|  4.46|  1.50|  0.00|  0.66|  0.00|  0.00;
-NuclearCraft           |  1.45|  0.01|  3.41|  0.45|  0.00|  0.81|  0.00|  0.06;
-IndustrialCraft 2      |  0.72|  0.02|  3.97|  0.82|  0.00|  0.27|  0.00|  0.00;
-Immersive Engineering  |  0.91|  0.01|  1.11|  0.98|  0.00|  2.65|  0.00|  0.00;
-Recurrent Complex      |  0.31|  0.00|  0.71|  0.91|  0.00|  3.36|  0.00|  0.00;
-Forestry               |  0.35|  0.01|  2.94|  0.99|  0.00|  0.32|  0.00|  0.00;
-Open Terrain Generator |  0.09|  0.01|  0.00|  3.76|  0.00|  0.00|  0.00|  0.00;
-Village Names          |  0.12|  0.00|  3.23|  0.20|  0.00|  0.00|  0.00|  0.00
+Ender IO               |  1.78|  0.01|  4.30|  0.57|  4.06|  0.17|  0.00|  1.20;
+CraftTweaker2          |  0.65|  0.00|  4.32|  0.01|  0.00|  6.05|  0.08|  0.00;
+Mod Tweaker            |  0.01|  0.00|  0.01|  0.00|  0.00|  0.00|  9.96|  0.00;
+OpenComputers          |  0.35|  0.02|  4.68|  3.39|  0.25|  0.00|  0.00|  0.00;
+Astral Sorcery         |  0.24|  0.01|  4.82|  1.61|  0.00|  0.66|  0.00|  0.00;
+IndustrialCraft 2      |  0.78|  0.02|  4.59|  1.02|  0.00|  0.29|  0.00|  0.00;
+NuclearCraft           |  1.33|  0.01|  3.65|  0.49|  0.00|  0.86|  0.00|  0.06;
+Recurrent Complex      |  0.33|  0.00|  0.77|  0.98|  0.00|  4.00|  0.00|  0.00;
+Immersive Engineering  |  0.95|  0.01|  1.26|  1.15|  0.00|  2.69|  0.00|  0.00;
+Forestry               |  0.41|  0.01|  3.31|  1.19|  0.00|  0.35|  0.00|  0.00;
+Open Terrain Generator |  0.07|  0.01|  0.00|  4.03|  0.00|  0.00|  0.00|  0.00;
+ProbeZS                |  0.04|  0.00|  0.11|  0.00|  0.00|  3.64|  0.00|  0.00
 `
     .split(';').slice(1)
       .map(l => l.split('|').map(s => s.trim()))
@@ -196,22 +196,22 @@ Village Names          |  0.12|  0.00|  3.23|  0.20|  0.00|  0.00|  0.00|  0.00
         }]
       };
 `
-  2.17: jeresources.jei.JEIConfig;
-  1.06: com.rwtema.extrautils2.crafting.jei.XUJEIPlugin;
-  0.82: crazypants.enderio.machines.integration.jei.MachinesPlugin;
-  0.76: ic2.jeiIntegration.SubModule;
-  0.72: mezz.jei.plugins.vanilla.VanillaPlugin;
-  0.51: com.buuz135.industrial.jei.JEICustomPlugin;
-  0.47: com.buuz135.thaumicjei.ThaumcraftJEIPlugin;
-  0.42: cofh.thermalexpansion.plugins.jei.JEIPluginTE;
-  0.41: nc.integration.jei.NCJEI;
-  0.40: crazypants.enderio.base.integration.jei.JeiPlugin;
-  0.25: ninjabrain.gendustryjei.GendustryJEIPlugin;
-  0.24: net.bdew.jeibees.BeesJEIPlugin;
-  0.21: knightminer.tcomplement.plugin.jei.JEIPlugin;
-  0.21: lach_01298.qmd.jei.QMDJEI;
-  0.20: astavie.thermallogistics.compat.jei.CompatJEI;
-  4.03: Other 126 Plugins
+  2.51: jeresources.jei.JEIConfig;
+  1.26: com.rwtema.extrautils2.crafting.jei.XUJEIPlugin;
+  0.90: mezz.jei.plugins.vanilla.VanillaPlugin;
+  0.89: crazypants.enderio.machines.integration.jei.MachinesPlugin;
+  0.87: ic2.jeiIntegration.SubModule;
+  0.66: com.buuz135.industrial.jei.JEICustomPlugin;
+  0.50: com.buuz135.thaumicjei.ThaumcraftJEIPlugin;
+  0.50: crazypants.enderio.base.integration.jei.JeiPlugin;
+  0.46: nc.integration.jei.NCJEI;
+  0.44: cofh.thermalexpansion.plugins.jei.JEIPluginTE;
+  0.30: ninjabrain.gendustryjei.GendustryJEIPlugin;
+  0.28: net.bdew.jeibees.BeesJEIPlugin;
+  0.26: knightminer.tcomplement.plugin.jei.JEIPlugin;
+  0.25: forestry.factory.recipes.jei.FactoryJeiPlugin;
+  0.23: lach_01298.qmd.jei.QMDJEI;
+  4.54: Other 126 Plugins
 `
         .split(';')
         .map(l => l.split(':'))
@@ -248,7 +248,7 @@ Village Names          |  0.12|  0.00|  3.23|  0.20|  0.00|  0.00|  0.00|  0.00
             font: {size: 18}
           },
           {
-            text: [147.25,'s'].join(''),
+            text: [108.34,'s'].join(''),
             color: 'rgba(128, 128, 128, 1)',
             font: {size: 22}
           }
@@ -268,15 +268,12 @@ Village Names          |  0.12|  0.00|  3.23|  0.20|  0.00|  0.00|  0.00|  0.00
       }]
     };
 `
-993A00   0.56s Loading sounds;
-994400   0.63s Loading Resource - SoundHandler;
-994F00  35.85s ModelLoader: blocks;
-995900  12.16s ModelLoader: items;
-996300  15.55s ModelLoader: baking;
-996D00   2.39s Applying remove recipe actions;
-997700   0.19s Applying remove furnace recipe actions;
-998200   0.88s Indexing ingredients;
-444444  79.05s Other
+993A00   0.58s Loading sounds;
+994400   0.66s Loading Resource - SoundHandler;
+994F00   2.72s Applying remove recipe actions;
+995900   0.23s Applying remove furnace recipe actions;
+996300   0.97s Indexing ingredients;
+444444 103.18s Other
 `
     .split(';')
       .map(l => l.match(/(\w{6}) *(\d*\.\d*)s (.*)/))

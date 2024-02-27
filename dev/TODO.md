@@ -2,61 +2,14 @@
 
 🚧✅❌ List of priorities:
 
-- [ ] ⚡ Remove lot of `Fermenter` recipes
-- [ ] ⚡ Replace `utils.rh` with subcommands to improve performance. `IItemStack.ores` is slow.
-- [x] ⚡ Native Clusters should be made into Dirty Ores to prevent multiplication of recipes
-- [ ] 🐛 fix when unlog on entity causing it to dissapear
 - [ ] 🤖 Nanomachines still lost on servers
-- [ ] ✏️ add 3D Prints More Usage (maybe for QMD)
-- [ ] ✏️ Shift+Right click clear NC Multitool info
-- [ ] ✏️ Buff advanced generators
-- [x] 📖 remove Eldritch Knowledge Rewards since newbies eat them all at once
-- [ ] ✏️ adv Rock Crystals Beneficate In QMD
-- [ ] ✏️ QMDs `Sodium Chlorde` and `Sodium Nitrate` unify
-- [ ] 🌍 Fix Biome Tweaker block replacements after AdvRock filler block change
-- [ ] 🖼️ Optimize Bibliocraft textures
-- [ ] ✏️ add Void Beacon Tab
-- [ ] 📖 add E2E book notes and quest about Skyblock Tp Mechanic
-- [ ] fix Black Quartz And Certus Untransformable Portal Spread
-- [ ] 🌍 Remove Poison Ivy from OTG generator
-- [ ] 🧩 make Backpacks Unbreakable to prevent destroying for several reasons
-- [ ] 📖 Getting Fire fix quest
+- [ ] ⚡ Replace `utils.rh` with subcommands to improve performance. `IItemStack.ores` is slow.
+- [ ] 🐛 fix when unlog on entity causing it to dissapear. Doesnt happen on single.
 - [ ] 📖 Touching portal not working on server
-- [ ] ✏️ Completely disable OreDict melting
 - [ ] Install Pixel Reality - Luminance
-- [ ] 🟢 Add https://legacy.curseforge.com/minecraft/mc-mods/advanced-smelter
-- [ ] 💿 Add null check to fix Dynamism Table https://discord.com/channels/911676461050642432/1195650557004755056/1197080356604616704
-- [ ] 📖 Fix "Completed chapter" message
-- [ ] 🦆 Rewrite Goose logic https://github.com/friendlyhj/ZenUtils/issues/33
-- [ ] 🌍 Terra Nova (112) regenerate JER
-- [ ] 🟠 When update Precision Mining add `438451` to server-setup-config
 - [ ] ✏️ Remove removed item from Overworld Explorer villager trades
-- [ ] Thaumic Wonders Void Fortress armor set, when placed on an armor stand, incures a massive fps lag spike that can kick people from a server
-- [ ] Use new kind of message sending https://github.com/friendlyhj/ZenUtils/issues/26
-- [ ] Replace Drains to Advanced Seared Drain
-- [ ] 📖 Add note about IC2 reactor require chunkloading to work inside compact machine.
-- [ ] ✏️ Comb Blocks should be back-crafted into combs
-- [ ] 📖 Fix not all quests required for finishing `Computers` chapter
-- [ ] ✏️ Fix Redstoner doesnt show any trades
-- [ ] ✏️ Remove Elixir from Base Upgrade (to make less clumsy NC upgrades)
-- [ ] ✏️ Rework `ME Storage Bus`
-- [ ] ✏️ Integrate `Orbital Laser Drill` better. It can mine ores on planet orbits for skyblock.
-- [ ] ✏️ Controlled Miner harder
-- [ ] ✏️ Upgrading EnderIO armor should keep enchants and upgrades
-- [ ] ✏️ Remove Charcoal exploding recipe since its not obivious that you need stronger explosion
-- [ ] ✏️ Add Alum Brass in NC melter
-- [ ] ✏️ Telepad cheaper
-- [ ] ✏️ Manuscript Peaceful Skyblock source
-- [ ] ✏️ Quantum Link card harder
-- [ ] 🔴 Remove Passwor's terminals
-- [ ] ✏️ Fix Mek sawmill doesnt have log => planks recipes
-- [ ] ✏️ Remove Clay cast usages
-- [ ] ✏️ Fix there is two Fluid cell types.
-- [ ] ✏️ Portal spread cant spread Ardite
-- [ ] ✏️ Nerf necromances Hear Container trade
-- [ ] ✏️ Add Black Death Skythe from Mythminite Scythe, fix quest
-- [ ] 📖 Harvest Level 1 fix quest requre clay cast
-- [ ] 🔴 Remove `Block Drops` mod by moving its functionality into JER
+- [ ] 🌍 Stop using `iceandfire:frozen_*` as this is random ticking blocks, causing TPS strain
+- [ ] ✏️ Bring back removed IceAndFire meltable items to handle erroring icon
 
 ```sh
 /bcore_ticktime
@@ -71,6 +24,9 @@
 
 Planned non-urgent changes, or just good ideas:
 
+- [ ] 🌍 Remove Poison Ivy from OTG generator. Its `biomesoplenty:plant_0:4` but i cant find where it defined
+- [ ] 🌍 `122 Kepler 0118` improve generation (right now its just plain graphite)
+- [ ] ✏️ Integrate `Orbital Laser Drill` better. It can mine ores on planet orbits for skyblock.
 - [ ] 🌎 fix Tropical Gardens Spawn In OTG Frozen Ocean
 - [ ] ✏️ Star Of Psi should be obtainable in no-power run
 - [ ] 🕸 Create issues about IC2 Reactor in compact machine and cables disconnection
@@ -271,15 +227,15 @@ Items that should have more uses:
 
 ### Tier 2
 
-![](https://github.com/Krutoy242/mc-icons/raw/master/i/forestry/mulch__0.png "Mulch")
-![](https://github.com/Krutoy242/mc-icons/raw/master/i/computercraft/printout__0.png "Printed Page")
+![](http://tinyurl.com/forestry-mulch "Mulch")
+![](http://tinyurl.com/Printed-Page "Printed Page")
 ![](https://git.io/JLhhL "Infinity Reagent")
 ![](https://git.io/JGGh7 "Mana Infused Ingot")
 ![](https://git.io/JnN1t "Sun Crystal")
 ![](https://git.io/JRLSJ "Ice Shard")
 ![](https://git.io/JRnDa "Tar")
-![](https://github.com/Krutoy242/mc-icons/raw/master/i/iceandfire/gorgon_head__0.png "Gorgon Head")
-![](https://github.com/Krutoy242/mc-icons/raw/master/i/iceandfire/cyclops_eye__0.png "Eye of Cyclops")
+![](http://tinyurl.com/iceandfire-gorgon-head "Gorgon Head")
+![](http://tinyurl.com/Eye-of-Cyclops "Eye of Cyclops")
 
 ### Tier 3
 
@@ -299,8 +255,8 @@ Items that should have more uses:
 
 ![](https://git.io/JG5U9 "Decay Generator")
 ![](https://git.io/JtDnO "Chemical Thrower")
-![](https://github.com/Krutoy242/mc-icons/raw/master/i/biomesoplenty/jar_filled__1.png "Blue Fire Jar")
-![](https://github.com/Krutoy242/mc-icons/raw/master/i/immersiveengineering/metal_decoration0__7.png "Radiator Block")
+![](http://tinyurl.com/Blue-Fire-Jar "Blue Fire Jar")
+![](http://tinyurl.com/Radiator-Block "Radiator Block")
 
 ---
 

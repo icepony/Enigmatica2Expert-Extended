@@ -58,7 +58,6 @@ import {
   loadText,
   naturalSort,
   saveText,
-  setBlockDrops,
 } from '../lib/utils.js'
 
 // const argv = yargs(process.argv.slice(2))
