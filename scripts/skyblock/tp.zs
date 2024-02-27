@@ -1,4 +1,5 @@
 #modloaded zenutils ctintegration patchouli
+#priority -10
 #reloadable
 
 import crafttweaker.item.IItemStack;
@@ -34,4 +35,26 @@ events.onPlayerTick(function (e as crafttweaker.event.PlayerTickEvent) {
   server.commandManager.executeCommandSilent(server,
     '/tpx ' ~ e.player.name ~ ' ' ~ e.player.posX ~ ' ' ~ (SKY_TP_HEIGHT - 255.0) ~ ' ' ~ e.player.posZ ~ ' 3'
   );
+
+  // Show message about staying in skyblock forever
+  e.player.world.catenation().sleep(60).run(function (world, context) {
+    if(isNull(e.player)) return;
+    e.player.sendRichTextMessage(crafttweaker.text.ITextComponent.fromTranslation('e2ee.skyblock.stay_forever'));
+  }).start();
+});
+
+events.onCommand(function(e as crafttweaker.event.CommandEvent) {
+  if(isNull(e.command)
+    || (e.command.name != "island")
+    || (e.parameters.length == 0)
+    || (e.parameters[0] != "create")
+    || !(e.commandSender instanceof IPlayer)) {
+    return;
+  }
+
+  val player as IPlayer = e.commandSender;
+  if (player.hasGameStage('skyblock') || player.getDimension() != 3) return;
+
+  scripts.skyblock.addGameStage.grant(player);
+  player.sendRichTextMessage(crafttweaker.text.ITextComponent.fromTranslation('e2ee.skyblock.now_skyblocker'));
 });
