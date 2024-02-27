@@ -72,3 +72,20 @@ recipes.addShaped('Superwrench', predefined, [
   [<ore:gearAluminium>, <omniwand:wand>, <ore:gearTin>],
   [null, <ore:gearLead>, null],
 ]);
+
+// Prevent NuclerCraft: Overhauled destroy omniwand on right-click with Multitool
+// Since I cant actually cancel event, i will just give player another Omniwant
+events.onPlayerInteractBlock(function(e as crafttweaker.event.PlayerInteractBlockEvent) {
+  if(
+    e.world.remote
+    || !e.player.isSneaking
+    || isNull(e.item)
+    || e.item.definition.id != 'nuclearcraft:multitool'
+    || isNull(e.item.tag)
+    || isNull(e.item.tag.memberGet('omniwand:data'))
+  ) return;
+
+  e.player.give(e.item);
+  e.item.mutable().shrink(e.item.amount);
+  e.cancel();
+});
