@@ -44,6 +44,16 @@ craft.remake(<mctsmelteryio:machine:1>, ['pretty',
   '□ i □'], {
   '□': <ore:blockSeared>,        // Seared Stone
   'C': <tconstruct:casting>,     // Casting Table
-  'S': <tconstruct:smeltery_io>, // Smeltery Drain
+  'S': <mctsmelteryio:machine:3>,
   'i': <ore:ice>,                 // Ice
+});
+
+// Same as drain just not disconnects from Conduits
+// [Advanced Seared Drain]
+recipes.remove(<tconstruct:smeltery_io>);
+craft.remake(<mctsmelteryio:machine:3>, ['pretty',
+  '-   -',
+  '-   -',
+  '-   -'], {
+  '-': <ore:blockSeared>, // Seared Stone
 });

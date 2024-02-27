@@ -34,7 +34,7 @@
 		uid: "d0ed978c",
 		type: "item",
 		items: [{
-			item: "tconstruct:smeltery_io"
+			item: "mctsmelteryio:machine 1 3"
 		}]
 	},
 	{
