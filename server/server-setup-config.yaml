@@ -71,7 +71,6 @@ install:
       - 238891 # Dynamic Surroundings
       - 240630 # Just Enough Resources (JER)
       - 243478 # More Overlays
-      - 244181 # Block Drops (JEI Addon)
       - 245733 # ToroHealth Damage Indicators
       - 250398 # Controlling
       - 262366 # Keyboard Wizard
