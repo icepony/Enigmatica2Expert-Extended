@@ -332,7 +332,7 @@ craft.make(<twilightforest:lamp_of_cinders>, ['pretty',
   'i w T',
   '■ ■ ■'], {
   '▲': <ore:dustGelidEnderium>, // Gelid Enderium Dust
-  'i': <twilightforest:shader>.withTag({ shader_type: 'Alpha Yeti' }), // Twilit Shader: Alpha Yeti
+  'i': <twilightforest:shader>.withTag({ shader_type: 'Hydra' }), // Twilit Shader: Alpha Yeti
   'w': <twilightforest:shader>.withTag({ shader_type: 'Snow Queen' }), // Twilit Shader: Snow Queen
   'T': <twilightforest:shader>.withTag({ shader_type: 'Ur-Ghast' }), // Twilit Shader: Ur-Ghast
   '■': <ore:blockAlubrass>, // Block of Aluminum Brass
