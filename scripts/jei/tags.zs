@@ -142,6 +142,7 @@ static list as IItemStack[][string] = {
     <ic2:te:69>,
     <ic2:te:70>,
     <ic2:te:71>,
+    <immersiveengineering:metal_device1:5>,
     <industrialforegoing:biofuel_generator>,
     <industrialforegoing:petrified_fuel_generator>,
     <industrialforegoing:pitiful_fuel_generator>,
