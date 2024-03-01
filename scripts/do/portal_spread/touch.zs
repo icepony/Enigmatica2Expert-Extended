@@ -28,7 +28,7 @@ events.onPlayerRightClickBlock(function (e as crafttweaker.event.PlayerInteractB
   if (isNull(world) || world.remote || e.hand != 'MAIN_HAND') return;
 
   val player as IPlayer = e.player;
-  if (isNull(player) || !player.creative) return;
+  if (isNull(player)) return;
 
   val currentItem = e.item;
   if (!isNull(currentItem)) return;
