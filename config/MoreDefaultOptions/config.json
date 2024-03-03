@@ -56,11 +56,11 @@
   ],
   "NbtSortRules": [
     {
-      "name": "enchantment",
+      "name": "enchantment_book",
       "inverted": false
     },
     {
-      "name": "enchantment_book",
+      "name": "enchantment",
       "inverted": false
     },
     {
