@@ -10,32 +10,32 @@ java.io.FileNotFoundException: twilighttweaks-1.12.2-v1.0.2.jar.jar does not exi
 	at zone.rong.bansoukou.BansoukouCoreMod.<init>(BansoukouCoreMod.java:61) [_bansoukou-4.3.1.jar:1]
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_402]
   [...]
-[main/ERROR] [VintageFix]: There was an error reading the jar discoverer cache. A new one will be created. The previous one has been saved as jarDiscoverer.cache.errored for inspection.
 [Client thread/WARN] [mixin]: Mixin apply for mod unknown-owner failed mixins.tweaks.blocks.sapling.json:UTSaplingMixin from mod unknown-owner -> net.minecraft.block.BlockSapling: org.spongepowered.asm.mixin.transformer.throwables.InvalidMixinException @Overwrite method TickCentral_TrueUpdateTick in mixins.tweaks.blocks.sapling.json:UTSaplingMixin from mod unknown-owner was not located in the target class net.minecraft.block.BlockSapling. Using refmap universaltweaks.refmap.json
 org.spongepowered.asm.mixin.transformer.throwables.InvalidMixinException: @Overwrite method TickCentral_TrueUpdateTick in mixins.tweaks.blocks.sapling.json:UTSaplingMixin from mod unknown-owner was not located in the target class net.minecraft.block.BlockSapling. Using refmap universaltweaks.refmap.json
 	at org.spongepowered.asm.mixin.transformer.MixinPreProcessorStandard.attachSpecialMethod(MixinPreProcessorStandard.java:436) ~[!mixinbooter-9.1.jar:?]
 	at org.spongepowered.asm.mixin.transformer.MixinPreProcessorStandard.attachOverwriteMethod(MixinPreProcessorStandard.java:416) ~[!mixinbooter-9.1.jar:?]
 	at org.spongepowered.asm.mixin.transformer.MixinPreProcessorStandard.attachMethods(MixinPreProcessorStandard.java:346) ~[!mixinbooter-9.1.jar:?]
   [...]
+[Client thread/WARN] [mixin]: @Final field field_73236_b:Lit/unimi/dsi/fastutil/longs/Long2ObjectMap; in mixins.vintagefix.json:chunk_access.ChunkProviderClientMixin from mod unknown-owner should be final
+[Client thread/WARN] [Config]: [OptiFine] Ambiguous shader option: colortexR
+[Client thread/WARN] [Config]: [OptiFine]  - in world-1/deferred1.vsh: colortex5
+[Client thread/WARN] [Config]: [OptiFine]  - in world-1/deferred1.vsh: colortex0
+[Client thread/WARN] [Config]: [OptiFine] Ambiguous shader option: colortexR
+[Client thread/WARN] [Config]: [OptiFine]  - in world-1/deferred1.vsh, world-1/deferred1.fsh: colortex5
+[Client thread/WARN] [Config]: [OptiFine]  - in world-1/deferred1.fsh: colortex0
+[Client thread/WARN] [Config]: [OptiFine] Ambiguous shader option: colortexR
+[Client thread/WARN] [Config]: [OptiFine]  - in world-1/deferred1.vsh, world-1/deferred1.fsh, world0/deferred1.vsh: colortex5
+[Client thread/WARN] [Config]: [OptiFine]  - in world0/deferred1.vsh: colortex0
+[Client thread/WARN] [Config]: [OptiFine] Ambiguous shader option: colortexR
+[Client thread/WARN] [Config]: [OptiFine]  - in world-1/deferred1.vsh, world-1/deferred1.fsh, world0/deferred1.vsh, world0/deferred1.fsh: colortex5
+[Client thread/WARN] [Config]: [OptiFine]  - in world0/deferred1.fsh: colortex0
+[Client thread/WARN] [Config]: [OptiFine] Ambiguous shader option: colortexR
+[Client thread/WARN] [Config]: [OptiFine]  - in world-1/deferred1.vsh, world-1/deferred1.fsh, world0/deferred1.vsh, world0/deferred1.fsh, world1/deferred1.vsh: colortex5
+[Client thread/WARN] [Config]: [OptiFine]  - in world1/deferred1.vsh: colortex0
+[Client thread/WARN] [Config]: [OptiFine] Ambiguous shader option: colortexR
+[Client thread/WARN] [Config]: [OptiFine]  - in world-1/deferred1.vsh, world-1/deferred1.fsh, world0/deferred1.vsh, world0/deferred1.fsh, world1/deferred1.vsh, world1/deferred1.fsh: colortex5
+[Client thread/WARN] [Config]: [OptiFine]  - in world1/deferred1.fsh: colortex0
 [Client thread/WARN] [mixin]: @Inject(@At("INVOKE")) Shift.BY=2 on mixins.zenutils.vanilla.json:MixinForgeHooks from mod unknown-owner::handler$xxx000$passPlayer exceeds the maximum allowed value: 0. Increase the value of maxShiftBy to suppress this warning.
-[Client thread/ERROR] [FML]: Unable to read a class file correctly
-java.lang.IllegalArgumentException: null
-	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:185) ~[asm-debug-all-5.2.jar:5.2]
-	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:168) ~[asm-debug-all-5.2.jar:5.2]
-	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:439) ~[asm-debug-all-5.2.jar:5.2]
-  [...]
-[Client thread/ERROR] [FML]: There was a problem reading the entry module-info.class in the jar E:\mc\packs\E2E-E\minecraft\mods\PrecisionMining-1.12.2-5.2.jar - probably a corrupt zip
-net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
-
-	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
-	at net.minecraftforge.fml.common.discovery.JarDiscoverer.redirect$xxx000$redirectNewASMModParser(JarDiscoverer.java:561) ~[JarDiscoverer.class:?]
-  [...]
-[Client thread/WARN] [FML]: Zip file PrecisionMining-1.12.2-5.2.jar failed to read properly, it will be ignored
-net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentException
-
-	at net.minecraftforge.fml.common.discovery.asm.ASMModParser.<init>(ASMModParser.java:63) ~[ASMModParser.class:?]
-	at net.minecraftforge.fml.common.discovery.JarDiscoverer.redirect$xxx000$redirectNewASMModParser(JarDiscoverer.java:561) ~[JarDiscoverer.class:?]
-  [...]
 [Client thread/ERROR] [FML]: Unable to read a class file correctly
 java.lang.IllegalArgumentException: null
 	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:185) ~[asm-debug-all-5.2.jar:5.2]
@@ -74,20 +74,11 @@ net.minecraftforge.fml.common.LoaderException: java.lang.IllegalArgumentExceptio
   [...]
 [Client thread/WARN] [mixin]: Reference map 'mixins.randomtweaker.refmap.json' for mixins.randomtweaker.mods.json could not be read. If this is a development environment you can ignore this message
 [Client thread/WARN] [mixin]: @Mixin target com.feed_the_beast.mods.ftbultimine.client.FTBUltimineClient was not found mixins.randomtweaker.mods.json:ftbultimine.MixinFTBUltimineClient from mod unknown-owner
-[Client thread/WARN] [mixin]: Mixin apply for mod UniversalTweaks-1.12.2-1.10.0.jar failed mixins.bugfixes.world.frustumculling.json:UTFrustumCullingMixin from mod UniversalTweaks-1.12.2-1.10.0.jar -> net.minecraft.client.renderer.RenderGlobal: org.spongepowered.asm.mixin.injection.throwables.InvalidInjectionException @At("INVOKE") on net/minecraft/client/renderer/RenderGlobal::utOverrideOpposingSideCheck with priority 1000 cannot inject into net/minecraft/client/renderer/RenderGlobal::func_174970_a(Lnet/minecraft/entity/Entity;DLnet/minecraft/client/renderer/culling/ICamera;IZ)V merged by me.jellysquid.mods.sodium.mixin.features.chunk_rendering.MixinWorldRenderer with priority 1000 [ -> redirect$xxx000$utOverrideOpposingSideCheck(Ljava/util/Set;)I -> Prepare]
-org.spongepowered.asm.mixin.injection.throwables.InvalidInjectionException: @At("INVOKE") on net/minecraft/client/renderer/RenderGlobal::utOverrideOpposingSideCheck with priority 1000 cannot inject into net/minecraft/client/renderer/RenderGlobal::func_174970_a(Lnet/minecraft/entity/Entity;DLnet/minecraft/client/renderer/culling/ICamera;IZ)V merged by me.jellysquid.mods.sodium.mixin.features.chunk_rendering.MixinWorldRenderer with priority 1000 [ -> redirect$xxx000$utOverrideOpposingSideCheck(Ljava/util/Set;)I -> Prepare]
-	at org.spongepowered.asm.mixin.injection.code.Injector.findTargetNodes(Injector.java:305) ~[!mixinbooter-9.1.jar:?]
-	at org.spongepowered.asm.mixin.injection.code.Injector.find(Injector.java:240) ~[!mixinbooter-9.1.jar:?]
-	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.prepare(InjectionInfo.java:421) ~[!mixinbooter-9.1.jar:?]
-  [...]
 [Client thread/WARN] [ResourceLoader]: [NormalResourceLoader] Resource Location vtt:lang/en_us.lang only matches the file en_US.lang because RL is running in an environment that isn't case sensitive in regards to file names. This will not work properly on for example Linux.
 [Client thread/WARN] [mixin]: @Final field field_146253_i:Ljava/util/List; in mixins.tweaks.misc.chat.compactmessage.json:UTCompactMessageMixin from mod UniversalTweaks-1.12.2-1.10.0.jar should be final
 [Client thread/WARN] [mixin]: @Final field field_146252_h:Ljava/util/List; in mixins.tweaks.misc.chat.compactmessage.json:UTCompactMessageMixin from mod UniversalTweaks-1.12.2-1.10.0.jar should be final
 [Client thread/WARN] [ResourceLoader]: [NormalResourceLoader] Resource Location vtt:lang/en_us.lang only matches the file en_US.lang because RL is running in an environment that isn't case sensitive in regards to file names. This will not work properly on for example Linux.
-[Client thread/WARN] [net.minecraft.network.datasync.EntityDataManager]: defineId called for: class net.minecraft.entity.item.EntityMinecartFurnace from class com.lothrazar.cyclicmagic.item.minecart.EntityGoldFurnaceMinecart
 [Client thread/WARN] [ResourceLoader]: [NormalResourceLoader] Resource Location vtt:lang/en_us.lang only matches the file en_US.lang because RL is running in an environment that isn't case sensitive in regards to file names. This will not work properly on for example Linux.
-[Client thread/WARN] [net.minecraft.network.datasync.EntityDataManager]: defineId called for: class net.minecraft.entity.monster.EntitySlime from class teamroots.emberroot.entity.slime.EntityRainbowSlime
-[Client thread/WARN] [net.minecraft.network.datasync.EntityDataManager]: defineId called for: class malte0811.industrialwires.entities.EntityBrokenPart from class malte0811.industrialwires.IndustrialWires
 [Client thread/WARN] [FML]: * Invalid registration attempt for an Ore Dictionary item with name etLaserLens has occurred. The registration has been denied to prevent crashes. The mod responsible for the registration needs to correct this.
 [Client thread/WARN] [net.minecraft.world.storage.loot.LootTableManager]: Couldn't find resource table betteranimalsplus:pheasant
 [Client thread/WARN] [net.minecraft.world.storage.loot.LootTableManager]: Couldn't find resource table betteranimalsplus:turkey
@@ -97,23 +88,33 @@ com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown st
 	at net.minecraft.util.JsonUtils.getItem(SourceFile:135) ~[rc.class:?]
 	at net.minecraft.world.storage.loot.LootEntryItem.deserialize(LootEntryItem.java:83) ~[bfp.class:?]
   [...]
-[Client thread/WARN] [net.minecraft.network.datasync.EntityDataManager]: defineId called for: class com.github.alexthe666.iceandfire.entity.EntityDreadThrall from class com.github.alexthe666.iceandfire.entity.EntityDreadKnight
 [Client thread/WARN] [net.minecraft.world.storage.loot.functions.Smelt]: Couldn't smelt 1xitem.frog_leg@0 because there is no smelting recipe
-[Client thread/WARN] [net.minecraft.network.datasync.EntityDataManager]: defineId called for: class com.github.alexthe666.rats.server.entity.EntityFeralRatlantean from class com.github.alexthe666.rats.server.entity.EntityNeoRatlantean
+[Client thread/ERROR] [xaero.map.WorldMap]: suppressed exception
+java.net.SocketTimeoutException: Read timed out
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_402]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_402]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_402]
+  [...]
+[Client thread/WARN] [THAUMCRAFT]: Research [MIA.FOCUS_SIZE_NEUTRAL] not added as it overlaps with existing research [FOCUSANCIENT] at 2,-3
 [Client thread/WARN] [mixin]: @Final field field_73244_f:Lit/unimi/dsi/fastutil/longs/Long2ObjectMap; in mixins.vintagefix.json:chunk_access.ChunkProviderServerMixin from mod unknown-owner should be final
 [Client thread/ERROR] [Had Enough Items]: An interpreter is already registered for this item: exnihilocreatio.modules.tconstruct.tools.SledgeHammer@xxxxxxxx
 java.lang.IllegalArgumentException: null
 	at mezz.jei.runtime.SubtypeRegistry.registerSubtypeInterpreter(SubtypeRegistry.java:46) [SubtypeRegistry.class:?]
-	at slimeknights.tconstruct.plugin.jei.JEIPlugin.registerItemSubtypes(JEIPlugin.java:103) [JEIPlugin.class:?]
+	at exnihilocreatio.compatibility.jei.CompatJEI.registerItemSubtypes(CompatJEI.java:53) [CompatJEI.class:?]
 	at mezz.jei.api.IModPlugin.registerSubtypes(IModPlugin.java:29) [IModPlugin.class:?]
   [...]
 [Client thread/ERROR] [Had Enough Items]: An interpreter is already registered for this item: exnihilocreatio.modules.tconstruct.tools.TiCrook@xxxxxxxx
 java.lang.IllegalArgumentException: null
 	at mezz.jei.runtime.SubtypeRegistry.registerSubtypeInterpreter(SubtypeRegistry.java:46) [SubtypeRegistry.class:?]
-	at slimeknights.tconstruct.plugin.jei.JEIPlugin.registerItemSubtypes(JEIPlugin.java:103) [JEIPlugin.class:?]
+	at exnihilocreatio.compatibility.jei.CompatJEI.registerItemSubtypes(CompatJEI.java:55) [CompatJEI.class:?]
 	at mezz.jei.api.IModPlugin.registerSubtypes(IModPlugin.java:29) [IModPlugin.class:?]
   [...]
-[Client thread/WARN] [jetif]: Couldn't load config field for Flux Networks, report this issue on JETIF's GitHub
+[Client thread/ERROR] [Had Enough Items]: Failed to register mod plugin: class com.blakebr0.mysticalagriculture.compat.jei.CompatJEI
+java.lang.IllegalArgumentException: Invalid ingredient found. Parameter Name: ingredient Ingredient Info: 1xtile.air@0 minecraft:air
+	at mezz.jei.util.ErrorUtil.checkIsValidIngredient(ErrorUtil.java:248) ~[ErrorUtil.class:?]
+	at mezz.jei.startup.ModRegistry.addIngredientInfo(ModRegistry.java:260) ~[ModRegistry.class:?]
+	at mezz.jei.startup.ModRegistry.addIngredientInfo(ModRegistry.java:271) ~[ModRegistry.class:?]
+  [...]
 [Client thread/ERROR] [Had Enough Items]: A Recipe Handler has already been registered for 'jeresources.plant': jeresources.entry.PlantEntry
 [Client thread/ERROR] [Had Enough Items]: A Recipe Handler has already been registered for 'jeresources.villager': jeresources.entry.VillagerEntry
 [Client thread/ERROR] [net.minecraft.world.storage.loot.LootTableManager]: Couldn't load loot table twilightforest:structures/graveyard/rare from jar:file:/E:/mc/packs/E2E-E/minecraft/mods/twilightforest-1.12.2-3.11.1021-universal-patched.jar!/assets/twilightforest/loot_tables/structures/graveyard/rare.json
@@ -122,25 +123,15 @@ com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown st
 	at net.minecraft.util.JsonUtils.getItem(SourceFile:135) ~[rc.class:?]
 	at net.minecraft.world.storage.loot.LootEntryItem.deserialize(LootEntryItem.java:83) ~[bfp.class:?]
   [...]
-[Client thread/ERROR] [Had Enough Items]: Failed to register mod plugin: class com.blakebr0.mysticalagriculture.compat.jei.CompatJEI
-java.lang.IllegalArgumentException: Invalid ingredient found. Parameter Name: ingredient Ingredient Info: 1xtile.air@0 minecraft:air
-	at mezz.jei.util.ErrorUtil.checkIsValidIngredient(ErrorUtil.java:248) ~[ErrorUtil.class:?]
-	at mezz.jei.startup.ModRegistry.addIngredientInfo(ModRegistry.java:260) ~[ModRegistry.class:?]
-	at mezz.jei.startup.ModRegistry.addIngredientInfo(ModRegistry.java:271) ~[ModRegistry.class:?]
-  [...]
+[Client thread/WARN] [jetif]: Couldn't load config field for Flux Networks, report this issue on JETIF's GitHub
 [Client thread/ERROR] [Had Enough Items]: A Recipe Handler has already been registered for this recipe class: com.github.alexthe666.iceandfire.recipe.DragonForgeRecipe
 [Client thread/ERROR] [Had Enough Items]: A Recipe Handler has already been registered for this recipe class: com.github.alexthe666.rats.server.recipes.SharedRecipe
 [Client thread/ERROR] [Had Enough Items]: A Recipe Handler has already been registered for this recipe class: com.github.alexthe666.rats.server.recipes.SharedRecipe
 [Client thread/WARN] [ResourceLoader]: [NormalResourceLoader] Resource Location vtt:lang/en_us.lang only matches the file en_US.lang because RL is running in an environment that isn't case sensitive in regards to file names. This will not work properly on for example Linux.
-[Client thread/WARN] [LoliASM]: Clearing LoliVertexDataPool
-[Client thread/ERROR] [FML]: Unidentified mapping from registry minecraft:recipes
-[Client thread/ERROR] [FML]:     unidict:oreuranium_x1_size.4: 18759
-[Client thread/ERROR] [FML]:     unidict:oretitanium_x1_size.4: 18795
-[Client thread/ERROR] [FML]:     unidict:orelithium_x1_size.4: 18744
-[Client thread/ERROR] [FML]:     unidict:oreplatinum_x1_size.4: 18871
-[Client thread/ERROR] [FML]:     unidict:oretungsten_x1_size.4: 18737
-[Client thread/ERROR] [FML]:     unidict:oreiridium_x1_size.4: 18736
-[Client thread/ERROR] [FML]:     unidict:oreosmium_x1_size.4: 18880
-[Client thread/ERROR] [FML]:     qmd:item.patchouli:guide_book: 13404
-[Client thread/WARN] [mixin]: @Final field field_73236_b:Lit/unimi/dsi/fastutil/longs/Long2ObjectMap; in mixins.vintagefix.json:chunk_access.ChunkProviderClientMixin from mod unknown-owner should be final
-[Thread-48/WARN] [HammerLib]: HammerCore custom data file not found! (this is not an issue!)
+[Client thread/WARN] [Config]: [OptiFine] Shaders: Block not found for name: minecraft:cobweb
+[Client thread/WARN] [Config]: [OptiFine] Shaders: Block not found for name: minecraft:repeater
+[Client thread/WARN] [Config]: [OptiFine] Shaders: Block not found for name: minecraft:comparator
+[Client thread/WARN] [Config]: [OptiFine] Shaders: Block not found for name: minecraft:lit_redstone_torch
+[Client thread/WARN] [Config]: [OptiFine] Shaders: Block not found for name: minecraft:nether_portal
+[Client thread/WARN] [Config]: [OptiFine] [Shaders] Invalid block ID mapping: block.10303=minecraft:nether_portal
+[Client thread/WARN] [Config]: [OptiFine] Shaders: Block not found for name: minecraft:sign
