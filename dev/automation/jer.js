@@ -8,6 +8,7 @@
 import {
   config,
   loadJson,
+  loadText,
   saveObjAsJson,
 } from '../lib/utils.js'
 
@@ -22,14 +23,28 @@ function addMeta(item) {
   return item.replace(/(:[a-zA-Z]+)$/, '$1:0')
 }
 
-function simple(input, outputs, chance) {
+/**
+ * @param {string} input
+ * @param {string | string[]} outputs
+ * @param {number[] | number[][]} [chances]
+ */
+function simple(input, outputs, chances) {
+  /** @type {number[][]} */
+  const chance = !chances
+    ? [[]]
+    : Array.isArray(chances[0]) ? chances : [chances ?? []]
   worldGen.push({
     block    : addMeta(input),
     distrib  : '0,1.0;255,1.0;',
     silktouch: false,
-    dropsList: [outputs].flat().map(output => ({
+    dropsList: [outputs].flat().map((output, i) => ({
       itemStack: addMeta(output),
-      fortunes : { 0: chance?.[0] ?? 1, 1: chance?.[1] ?? 1, 2: chance?.[2] ?? 1, 3: chance?.[3] ?? 1 },
+      fortunes : {
+        0: chance[i % chance.length]?.[0] ?? 1,
+        1: chance[i % chance.length]?.[1] ?? 1,
+        2: chance[i % chance.length]?.[2] ?? 1,
+        3: chance[i % chance.length]?.[3] ?? 1,
+      },
     })),
     dim: 'Block Drops',
   })
@@ -71,6 +86,29 @@ simple('minecraft:mob_spawner', ['enderio:item_broken_spawner', 'actuallyadditio
 simple('endreborn:crop_ender_flower', 'minecraft:ender_pearl')
 simple('exnihilocreatio:block_infested_leaves', 'minecraft:string', [2, 2, 2, 2])
 simple('randomthings:spectreleaf', ['randomthings:spectresapling', 'randomthings:ingredient:2'])
+simple('randomthings:beanpod', [
+  'biomesoplenty:gem:1',
+  'biomesoplenty:gem:2',
+  'biomesoplenty:gem:3',
+  'biomesoplenty:gem:4',
+  'biomesoplenty:gem:5',
+  'biomesoplenty:gem:6',
+  'minecraft:iron_ingot',
+  'minecraft:gold_ingot',
+  'minecraft:emerald',
+  'randomthings:beans',
+], [
+  [0.5, 0.5, 0.5, 0.5],
+  [0.5, 0.5, 0.5, 0.5],
+  [0.5, 0.5, 0.5, 0.5],
+  [0.5, 0.5, 0.5, 0.5],
+  [0.5, 0.5, 0.5, 0.5],
+  [0.5, 0.5, 0.5, 0.5],
+  [8, 12, 16, 20],
+  [4, 7, 11, 15],
+  [0.5, 1, 1.5, 2],
+  [4, 5, 7, 8],
+])
 
 for (let i = -1; i < 16; i++) {
   simple(
@@ -93,6 +131,11 @@ for (const garden of [
   const list = harvestcraft[garden]
   simple(`harvestcraft:${garden.toLowerCase()}`, list, [1, 1, 1, 1].fill(2.0 / list.length))
 }
+
+;[...loadText('crafttweaker.log')
+  .matchAll(/Modify drop; Block: (?<block>.+) Drop: (?<stack>.+) (?<luck>\[.*\])/gm),
+].forEach(({ groups: { block, stack, luck } }) =>
+  simple(block, stack, eval(luck).slice(0, 4).map(([o]) => o)))
 
 ///////////////////////////////////////////////////////////////////////
 saveObjAsJson(worldGen, worldgenJsonPath)

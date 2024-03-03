@@ -12,20 +12,6 @@ Manually add block drops info.
 
 */
 
-/* Inject_js(
-[...loadText('crafttweaker.log')
-  .matchAll(/Modify drop; Block: (?<block>.+) Drop: (?<stack>.+) (?<luck>\[.*\])/gm)
-].forEach(({groups: {block, stack, luck}}) =>
-  setBlockDrops(block, [{
-    stack: stack,
-    luck: eval(luck).slice(0, 4)
-  }])
-),
-'// Done!'
-) */
-// Done!
-/**/
-
 function addDrop(block as IItemStack, drop as IItemStack, exponent as double = 1.5, tool as string = null) as void {
   val blockStr = block.definition.id ~ ':' ~ block.metadata;
   val list = Dropt.list(blockStr.replaceAll(':', '_'));
