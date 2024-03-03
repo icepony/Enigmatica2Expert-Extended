@@ -184,19 +184,19 @@ return cfg
 })
 } */
 addSyngas(<contenttweaker:saturated_phosphor>, 450000);
-addSyngas(<ore:compressedCharcoal3x>, 256000);
-addSyngas(<ore:compressedCoal3x>, 256000);
 addSyngas(<contenttweaker:empowered_phosphor>, 180000);
 addSyngas(<contenttweaker:blasted_coal>, 120000);
-addSyngas(<ore:compressedCharcoal2x>, 64000);
-addSyngas(<ore:compressedCoal2x>, 64000);
+addSyngas(<ore:compressedCharcoal3x>, 102400);
+addSyngas(<ore:compressedCoal3x>, 102400);
 addSyngas(<contenttweaker:conglomerate_of_coal>, 60000);
 // addSyngas(<railcraft:cube:0>, 32000);
 addSyngas(<ore:blockFuelCoke>, 32000);
 addSyngas(<ore:crystalCrudeOil>, 32000);
-addSyngas(<ore:blockCharcoal>, 16000);
-addSyngas(<ore:blockGraphite>, 16000);
+addSyngas(<ore:compressedCharcoal2x>, 25600);
+addSyngas(<ore:compressedCoal2x>, 25600);
+addSyngas(<ore:blockGraphite>, 14400);
 addSyngas(<rats:little_black_squash_balls>, 8000);
+addSyngas(<ore:blockCharcoal>, 6400);
 addSyngas(<ore:fuelCoke>, 3200);
 addSyngas(<mekanism:compressedcarbon>, 3200);
 addSyngas(<ore:logWood>, 1600);
