@@ -60,6 +60,7 @@ craft.remake(<mctsmelteryio:machine:1>, ['pretty',
 // Same as drain just not disconnects from Conduits
 // [Advanced Seared Drain]
 recipes.remove(<tconstruct:smeltery_io>);
+recipes.addShapeless(<tconstruct:smeltery_io>, [<mctsmelteryio:machine:3>]);
 craft.remake(<mctsmelteryio:machine:3>, ['pretty',
   '-   -',
   '-   -',
