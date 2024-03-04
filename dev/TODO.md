@@ -2,6 +2,7 @@
 
 🚧✅❌⚠️ List of priorities:
 
+- [ ] 🟡 Downgrade REID
 - [ ] 🤖 Nanomachines still lost on servers
 - [ ] ⚡ Replace `utils.rh` with subcommands to improve performance. `IItemStack.ores` is slow.
 - [ ] 🐛 fix when unlog on entity causing it to dissapear. Doesnt happen on single.
@@ -12,6 +13,7 @@
 - [ ] 🐛 Gaia stage 2 crashing game https://discord.com/channels/911676461050642432/959878900278784030/1213561666646573106
 - [ ] 🟢 Return `Precision Mining` when fixed https://codeberg.org/PORTB/PrecisionMiningRewrite/issues/4
 - [ ] 🟢 Add `psideas` mod
+- [ ] ✏️ Return seared drain since seared tank not working without it
 
 ### Java 21 migration
 | Java 8           | Java 21     |
