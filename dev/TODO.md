@@ -2,7 +2,7 @@
 
 🚧✅❌⚠️ List of priorities:
 
-- [ ] 🟡 Downgrade REID
+- [ ] 🟡 Update REID https://github.com/TerraFirmaCraft-The-Final-Frontier/RoughlyEnoughIDs/issues/37#issuecomment-1978121247
 - [ ] 🤖 Nanomachines still lost on servers
 - [ ] ⚡ Replace `utils.rh` with subcommands to improve performance. `IItemStack.ores` is slow.
 - [ ] 🐛 fix when unlog on entity causing it to dissapear. Doesnt happen on single.
@@ -14,6 +14,14 @@
 - [ ] 🟢 Return `Precision Mining` when fixed https://codeberg.org/PORTB/PrecisionMiningRewrite/issues/4
 - [ ] 🟢 Add `psideas` mod
 - [ ] ✏️ Return seared drain since seared tank not working without it
+- [ ] 📖 `Ratlantis World Generation` add reward
+- [ ] ✏️ Spectral lens harder, but enable beacon size tweaks
+- [ ] ✏️ Add Phosphor saturation in world
+- [ ] 🔴 Remove Village Names
+- [ ] ✏️ `High Stride` modifier not working on TCon armor
+- [ ] ✏️ Fix Impregnated Sticks uncraftable in fluid transposer
+- [ ] ✏️ `Fluid Output Hatch` doesnt drop when breaking Elyctrolizer
+- [ ] ✏️ Add Vaultopic to omniwand
 
 ### Java 21 migration
 | Java 8           | Java 21     |
