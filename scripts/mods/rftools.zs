@@ -95,7 +95,7 @@ recipes.addShaped('Quarry Card Clearing to Normal',
 craft.remake(<rftools:crafter1>, ['pretty',
   '  U  ',
   '♥ ■ ♥'], {
-  '■': <extrautils2:machine>, // Machine Block
+  '■': scripts.mods.extrautilities2.machineBlock,
   '♥': <ore:gearRedstone>,    // Redstone Gear
   'U': <ore:xuUpgradeSpeed>,  // Upgrade Speed
 });

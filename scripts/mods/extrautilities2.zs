@@ -1,7 +1,10 @@
 #modloaded extrautils2
+#priority 1
 
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
+
+static machineBlock as IIngredient = <extrautils2:machine>.only(function(item){return !item.hasTag;});
 
 function getCreativeHarvest(item as IItemStack) as IItemStack {
   return <extrautils2:creativeharvest>.withTag({ creative_block: { meta: item.damage, block: item.definition.id }, display_stack: { id: item.definition.id, Count: 1 as byte, Damage: item.damage as short } });
@@ -103,7 +106,7 @@ recipes.addShaped('Analog Crafter',
 recipes.remove(<extrautils2:resonator>);
 recipes.addShaped('Resonator',
   <extrautils2:resonator>,
-  [[<ore:circuitAdvanced>, <extrautils2:machine>, <ore:circuitAdvanced>],
+  [[<ore:circuitAdvanced>, machineBlock, <ore:circuitAdvanced>],
     [<ore:plateSteel>, <chisel:glass:1>, <ore:plateSteel>],
     [<ore:plateSteel>, <ore:blockCoalCoke>, <ore:plateSteel>]]);
 
@@ -426,7 +429,7 @@ craft.remake(<extrautils2:terraformer:9>, ['pretty',
   '▬': <ore:ingotFakeIron>,  // Iron Ingot
   '◊': <ore:gemDiamondRat>,  // Diamond
   'S': <ic2:crafting:20>,
-  '■': <extrautils2:machine>,// Machine Block
+  '■': machineBlock,
 });
 
 // Skyblock alt
