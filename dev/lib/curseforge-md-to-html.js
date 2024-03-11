@@ -70,29 +70,6 @@ for (const o of ['d', 'h']) {
 //   $(this).html(codeContent.replace(/\n/g, '<br/>\n').replace(/ /g, ' '))
 // })
 
-// 𝑷𝒓𝒆𝒇𝒊𝒙𝒆𝒔
-$('body').prepend(
-  $('<p></p>').append(
-    $('<a></a>')
-      .attr(
-        'href',
-        'https://github.com/Krutoy242/Enigmatica2Expert-Extended/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3Abug'
-      )
-      .append('< Known bugs >')
-  )
-)
-
-$('body').prepend(
-  $('<p></p>').append(
-    $('<a></a>')
-      .attr(
-        'href',
-        'https://github.com/Krutoy242/Enigmatica2Expert-Extended/releases'
-      )
-      .append('< Full Changelog with better formatting on GitHub >')
-  )
-)
-
 // Remove html and body tags
 $('html').contents().unwrap()
 $('body').replaceWith($('body').contents())

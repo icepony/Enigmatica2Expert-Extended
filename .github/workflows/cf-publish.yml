@@ -44,6 +44,10 @@ jobs:
       - name: 📋 Generate html instead of markdown
         run: node dev/lib/curseforge-md-to-html.js latest_release.md
 
+      - name: ⤵️ Prepend Header to HTML
+        run: |
+          echo -e '<p><a href="https://github.com/Krutoy242/Enigmatica2Expert-Extended/releases">Changelog</a> ● <a href="https://github.com/Krutoy242/Enigmatica2Expert-Extended/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3Abug">Known Bugs</a> ● <a href="https://github.com/Krutoy242/Enigmatica2Expert-Extended#considerations-before-updating">Update Caution</a></p>' | cat - latest_release.html > temp && mv temp latest_release.html
+
       - name: 📋 Get content of changelog html
         id: latest_html
         uses: andstor/file-reader-action@v1
