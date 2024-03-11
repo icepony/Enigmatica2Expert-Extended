@@ -190,7 +190,6 @@ Generate mods screenshot with command:
 
 </td><td>
 
-
 [<img src="https://i.imgur.com/rw3nyn7.png" alt="Modpack beaten in peaceful mode" width=251>](https://www.reddit.com/r/feedthebeast/comments/10p6uva/the_whole_modpack_beaten_in_only_peaceful_mode/)
 
 </td></tr><tr><td>
@@ -379,6 +378,10 @@ Some screenshots of new worldgen:
 - **It's still reporting about duplicates.**
 
   Remove `.jar` files without the `-patched` postfix.
+
+### Considerations Before Updating
+
+Updates can bring exciting new features, but they also carry the risk of instability, such as crashes or loading issues. Despite thorough testing, unexpected problems can arise. If your current version of the modpack is stable and enjoyable, staying with it might be the best choice for uninterrupted gameplay.
 
 -----------------
 
