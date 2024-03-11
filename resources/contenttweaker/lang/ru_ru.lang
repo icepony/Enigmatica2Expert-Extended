@@ -477,7 +477,7 @@ tooltips.lang.range=Дальность
 tooltips.lang.exaustion=Усталость
 tooltips.lang.experience=Опыт
 
-tooltips.dim_stages.healthy=§4Вам нужно иметь хотя бы §6%s HP§4 (%s сердец) что бы посетить §cНезер
+tooltips.dim_stages.healthy=§4Вам нужно иметь хотя бы §6%s HP§4 (%s сердец§4) что бы посетить §cНезер
 tooltips.dim_stages.healthy_grant=Вы набрали §6%s HP§r (%s сердец)!
 tooltips.dim_stages.healthy_can=Теперь вы можете посетить §cНезер
 tooltips.dim_stages.restricted=§cВ мире §bСкайблока §c. Вы не можете посетить другие измерения §8(кроме личных, RFTools и Космоса)§r.
