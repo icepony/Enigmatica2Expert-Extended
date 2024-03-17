@@ -42,4 +42,4 @@ mods.threng.Aggregator.addRecipe(<threng:material:1>, <ore:dustFluix>, <ore:dust
 
 // Remake [Resonating Crystal] to use harder ingredients
 mods.threng.Aggregator.removeRecipe(<threng:material:5>);
-mods.threng.Aggregator.addRecipe(<threng:material:5>, <biomesoplenty:terrestrial_artifact>, <ore:gemAmethyst>, <ore:dustSkyStone>);
+mods.threng.Aggregator.addRecipe(<threng:material:5>, <biomesoplenty:terrestrial_artifact>, <ore:gemAmethyst>, <appliedenergistics2:material:45>);

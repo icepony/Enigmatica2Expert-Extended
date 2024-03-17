@@ -42,7 +42,7 @@ mods.jei.JEI.addItem(<endreborn:catalyst>);
 mods.appliedenergistics2.Inscriber.removeRecipe(<threng:material:2>);
 mods.appliedenergistics2.Inscriber.addRecipe(<threng:material:2>, <endreborn:item_ingot_wolframium>, false, <threng:material:1>, <appliedenergistics2:material:45>);
 mods.threng.Aggregator.removeRecipe(<threng:material>);
-mods.threng.Aggregator.addRecipe(<threng:material>, <endreborn:item_ingot_wolframium>, <threng:material:1>, <ore:dustSkyStone>);
+mods.threng.Aggregator.addRecipe(<threng:material>, <endreborn:item_ingot_wolframium>, <threng:material:1>, <appliedenergistics2:material:45>);
 
 // Lormite rework
 recipes.remove(<endreborn:block_lormyte_crystal>);
