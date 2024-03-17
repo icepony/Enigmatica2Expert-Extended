@@ -282,7 +282,7 @@ q.animals.black_death.name=Black Death
 q.animals.black_death.desc=The Black Death is a boss mob that summons many other mobs to defend it, to spread plague and wreak havoc on any mob in its reach.\n\nStrike §0Plague Doctor§r with §3lightning§r to turn into §0Black Death§r.
 q.animals.golden_egg.desc=Golden egg makes golden chickens that lay gold ingots when you feed them with §6Native Gold Cluster
 q.animals.ratlantis_world_ge.name=Ratlantis World Generation
-q.animals.ratlantis_world_ge.desc=Blue Quartz blocks generate once per 8 chunks but always spawn a Glimmering Light Blue Flower on the surface.\n\nUU-Metal Ore spawn on cave ceilings under y=20.
+q.animals.ratlantis_world_ge.desc=§nBlue Quartz§r blocks can be found within §lCheese Marble§r formations.\n\nUU-Metal Ore is found on the ceilings of caves below y-level 20.
 q.animals.avatar_of_ratlantis.desc=Crafting ingredient
 q.animals.purifying_liquid.desc=Cures Zombie Villagers and Plague
 q.animals.rat_ore_doubling.name=Rat Ore Doubling

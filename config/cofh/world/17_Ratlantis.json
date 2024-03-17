@@ -41,10 +41,10 @@
       "dimension": {"restriction": "whitelist","value": [-8]}
 		},
 
-		"ratlantis_blue_queartz": {
+		"ratlantis_blue_quartz": {
 			"distribution": "uniform",
 			"generator": {
-				"material": "minecraft:stone",
+        "material": ["rats:marbled_cheese", "rats:marbled_cheese_brick", "rats:marbled_cheese_brick_chiseled", "rats:marbled_cheese_brick_cracked", "rats:marbled_cheese_brick_mossy", "rats:marbled_cheese_chiseled", "rats:marbled_cheese_pillar", "rats:marbled_cheese_raw", "rats:marbled_cheese_tile"],
 				"block": {
           "name": "extrautils2:decorativesolid",
           "properties": {
@@ -53,10 +53,10 @@
         },
 				"cluster-size": 1
 			},
-			"cluster-count": 1,
-			"chunk-chance": 8,
-			"min-height": 9,
-			"max-height": 32,
+			"cluster-count": 40,
+			"chunk-chance": 1,
+			"min-height": 45,
+			"max-height": 100,
 			"dimension": {"restriction": "whitelist","value": [-8]}
 		},
 
@@ -79,7 +79,7 @@
 			"generator": {
         "type": "structure",
         "structure": "rat_statue.nbt",
-        "material": "minecraft:grass"
+        "material": "grass"
 			},
 			"cluster-count": 1,
 			"chunk-chance": 20,
