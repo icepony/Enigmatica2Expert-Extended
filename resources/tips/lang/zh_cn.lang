@@ -72,3 +72,4 @@ e2ee.tips.70=§lVis 不够使?§r 把§n奥术工作台§r放在§2暮色森林�
 e2ee.tips.71=§o环境科技§r的多方块结构互相可以§l共享方块§r！
 e2ee.tips.72=那些具有 NBT 的§n头颅§r通过 ME 终端查看时会造成 FPS 降低。
 e2ee.tips.73=同时按下 "§lShift+C§r"，你就可以爬了。这不是骂人。
+e2ee.tips.74=OP 命令 §n/bcore_util regenchunk§r 用于重新生成整个区块。

@@ -72,3 +72,4 @@ e2ee.tips.70=§lNeed Vis?§r Place the §nArcane Workbench§r in the §2Twilight
 e2ee.tips.71=§oEnvironmental Tech§r multiblocks can §lshare blocks§r!
 e2ee.tips.72=§nHeads§r with NBT tags in ME terminal cause FPS lag
 e2ee.tips.73=Press "§lShift+C§r" to crawl
+e2ee.tips.74=The OP command §n/bcore_util regenchunk§r regenerates the entire chunk.
