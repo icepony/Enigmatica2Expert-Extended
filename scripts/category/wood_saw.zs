@@ -27,7 +27,7 @@ for log, plank in scripts.lib.wood.logPlank {
     || id == 'extrautils2:decorativesolidwood'
     || id == 'thaumcraft:taint_log'
       ? 'no exceptions'
-      : 'only: mekSawmill';
+      : 'only: mekSawmill AdvRockCutter';
   saw(log, plank, exceptions);
 }
 
