@@ -178,7 +178,7 @@ mods.forestry.Carpenter.removeRecipe(<forestry:impregnated_casing>);
 for oil in [<liquid:oliveoil>, <liquid:seed.oil>] as ILiquidStack[] {
   // Use OreDict recipe for impregnated stick
   scripts.mods.forestry.Carpenter.addRecipe(<forestry:oak_stick> * 2, [[<ore:logWood>],[<ore:logWood>]], 40, oil * 100);
-  mods.thermalexpansion.Transposer.addFillRecipe(<forestry:oak_stick>, <ore:logWood>.firstItem, oil * 100, 1000);
+  mods.thermalexpansion.Transposer.addFillRecipe(<forestry:oak_stick> * 9, <additionalcompression:logwood_compressed>, oil * 900, 9000);
 
   // Use OreDict recipe for Impregnated Casing
   mods.forestry.Carpenter.addRecipe(<forestry:impregnated_casing>,
