@@ -153,7 +153,6 @@ recipes.remove(<forestry:resource_storage:3>);
 recipes.remove(<forestry:resource_storage:1>);
 recipes.remove(<forestry:resource_storage:2>);
 recipes.remove(<tcomplement:storage>);
-recipes.remove(<chisel:block_charcoal2:1>);
 recipes.remove(<immersiveengineering:stone_decoration:3>);
 recipes.remove(<immersiveengineering:storage>);
 recipes.remove(<immersiveengineering:storage:1>);

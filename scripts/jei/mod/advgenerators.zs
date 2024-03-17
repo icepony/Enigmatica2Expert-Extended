@@ -128,7 +128,7 @@ return _(cfg
 addHeatExch(<fluid:ic2hot_coolant>, 0, <fluid:ic2coolant>, null, 40);
 addHeatExch(<fluid:lava>, 0, null, <minecraft:obsidian>, 30);
 addHeatExch(<fluid:ic2pahoehoe_lava>, 0, null, <advancedrocketry:basalt>, 40);
-addHeatExch(<fluid:pyrotheum>, 0, null, <chisel:basalt2:7>, 60);
+addHeatExch(<fluid:pyrotheum>, 0, null, utils.tryCatch("chisel:basalt2", 7, <quark:basalt>), 60);
 addHeatExch(<fluid:fire_water>, 0, null, <botania:blazeblock>, 200);
 addHeatExch(<fluid:enrichedlava>, 0, null, <draconicevolution:infused_obsidian>, 500);
 addHeatExch(<fluid:water> * 5, 3, <fluid:steam> * 15, null, 0);

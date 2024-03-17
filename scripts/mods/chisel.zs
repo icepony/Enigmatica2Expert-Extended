@@ -3,6 +3,8 @@
 import crafttweaker.item.IItemStack;
 import mods.chisel.Carving.addVariation;
 
+recipes.remove(<chisel:block_charcoal2:1>);
+
 // Chisel Lavastone / Environmental Tech Basalt
 recipes.remove(<chisel:lavastone>);
 recipes.addShapedMirrored('Chisel Lavastone',
