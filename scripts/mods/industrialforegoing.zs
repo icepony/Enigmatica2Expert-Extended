@@ -379,6 +379,10 @@ cleanupBenification(<libvulpes:ore0:8>, <libvulpes:productingot:7>, <libvulpes:p
 
 // Peaceful alt
 mods.rustic.EvaporatingBasin.addRecipe(<industrialforegoing:pink_slime>, <liquid:if.pink_slime> * 1000, 30 * 20);
+mods.advancedrocketry.RecipeTweaker.forMachine('Crystallizer').builder()
+  .outputs(<industrialforegoing:pink_slime> * 16)
+  .input(<fluid:if.pink_slime> * 16000)
+  .power(30000).timeRequired(10).build();
 
 // [White Laser Lens] from [Purple Dye][+3]
 for i, dye in scripts.vars.oreDye {
