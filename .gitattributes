@@ -12,4 +12,4 @@ config/craftpresence.properties filter=remove_date
 config/ice_and_fire.cfg filter=ice_and_fire
 
 # > git config filter.randomtweaks.clean "if ! grep -q 'pickUpSkeletonArrows' ./config/randomtweaks/randomtweaks.cfg; then sed -i -e '/armorStandSwapping=/a \\n    # Whether burning arrows can set blocks on fire.\n    # Default: true\n    B:burningArrowsSetBlocksOnFire=true' -e '/entityNaNHealthFix=/a \\n    # The farmland trample behavior.\n    # Valid values:\n    # VANILLA\n    # DONT_TRAMPLE_IF_FEATHER_FALLING\n    # DONT_TRAMPLE_IF_FEATHER_FALLING_OR_WET\n    # DONT_TRAMPLE_IF_WET\n    # DONT_TRAMPLE\n    # Default: DONT_TRAMPLE_IF_FEATHER_FALLING\n    S:farmlandTrampleBehavior=DONT_TRAMPLE_IF_FEATHER_FALLING' -e '/moreRomanNumerals=/a \\n    # Allows skeleton arrows to be picked up.\n    # Default: false\n    B:pickUpSkeletonArrows=true' ./config/randomtweaks/randomtweaks.cfg; fi"
-config/randomtweaks/randomtweaks.cfg filter=randomtweaks
+# config/randomtweaks/randomtweaks.cfg filter=randomtweaks
