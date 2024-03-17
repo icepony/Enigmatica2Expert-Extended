@@ -2,40 +2,13 @@
 
 🚧✅❌⚠️ List of priorities:
 
-- [ ] 🟡 Update REID https://github.com/TerraFirmaCraft-The-Final-Frontier/RoughlyEnoughIDs/issues/37#issuecomment-1978121247
-- [ ] 🤖 Nanomachines still lost on servers
-- [ ] ⚡ Replace `utils.rh` with subcommands to improve performance. `IItemStack.ores` is slow.
-- [ ] 🐛 fix when unlog on entity causing it to dissapear. Doesnt happen on single.
-- [ ] Install Pixel Reality - Luminance
+- [ ] 🟢 Integrate `psideas` mod
+- [x] 🔴 Remove `WorldgenIndicators` since causing 20% worldgen lag https://github.com/Buuz135/WorldGen-Indicators/issues/7
 - [ ] ✏️ Remove removed item from Overworld Explorer villager trades
 - [ ] 🌍 Stop using `iceandfire:frozen_*` as this is random ticking blocks, causing TPS strain
-- [ ] ✏️ Bring back removed IceAndFire meltable items to handle erroring icon
-- [ ] 🐛 Gaia stage 2 crashing game https://discord.com/channels/911676461050642432/959878900278784030/1213561666646573106
-- [ ] 🟢 Return `Precision Mining` when fixed https://codeberg.org/PORTB/PrecisionMiningRewrite/issues/4
-- [ ] 🟢 Add `psideas` mod
-- [ ] ✏️ Return seared drain since seared tank not working without it
-- [ ] 📖 `Ratlantis World Generation` add reward
-- [ ] ✏️ Spectral lens harder, but enable beacon size tweaks
-- [ ] ✏️ Add Phosphor saturation in world
-- [ ] 🔴 Remove Village Names
-- [ ] ✏️ `High Stride` modifier not working on TCon armor
-- [ ] ✏️ Fix Impregnated Sticks uncraftable in fluid transposer
-- [ ] ✏️ `Fluid Output Hatch` doesnt drop when breaking Elyctrolizer
-- [ ] ✏️ Add Vaultopic to omniwand
-
-### Java 21 migration
-| Java 8           | Java 21     |
-|------------------|-------------|
-| ● Optifine       | ● Vintagium |
-| ● Render Lib     |             |
-| ● Entity Culling |             |
-| ● MixinBooter    |             |
-| ● SledgeHammer   |             |
-
-```sh
-/bcore_ticktime
-/bcore_util regenchunk
-```
+- [ ] ✏️ Rework size changings
+- [ ] ❓ Skeletons shoot tipped arrows
+- [ ] 🌍 monster boxes are broken?
 
 ---
 
@@ -45,6 +18,9 @@
 
 Planned non-urgent changes, or just good ideas:
 
+- [ ] 🟢 Return Village Names https://legacy.curseforge.com/minecraft/mc-mods/village-names/issues/18
+- [ ] 🟡 Update `Precision Mining` when fixed https://codeberg.org/PORTB/PrecisionMiningRewrite/issues/4
+- [ ] 🟡 Update REID when fixed https://github.com/TerraFirmaCraft-The-Final-Frontier/RoughlyEnoughIDs/issues/37
 - [ ] 🌍 Remove Poison Ivy from OTG generator. Its `biomesoplenty:plant_0:4` but i cant find where it defined
 - [ ] 🌍 `122 Kepler 0118` improve generation (right now its just plain graphite)
 - [ ] ✏️ Integrate `Orbital Laser Drill` better. It can mine ores on planet orbits for skyblock.
