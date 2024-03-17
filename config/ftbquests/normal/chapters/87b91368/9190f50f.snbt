@@ -5133,5 +5133,15 @@
 		}],
 		ignore_damage: true,
 		ignore_nbt: 2b
+	}],
+	rewards: [{
+		uid: "a4ad6fa6",
+		type: "item",
+		item: {
+			id: "ftbquests:lootcrate",
+			tag: {
+				type: "uncommon"
+			}
+		}
 	}]
 }
