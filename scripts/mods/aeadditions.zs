@@ -33,22 +33,22 @@ function newGasCellRecipe(input as IIngredient, output as IItemStack) {
 
 // ---=== Storage Housings ===---
 
-utils.rh(<aeadditions:storage.casing>);
+Purge(<aeadditions:storage.casing>);
 newGasCellRecipe(null, <aeadditions:storage.casing:2>);
 
 // ---=== Advanced Cells ===---
 for i in 0 .. 4{
-  utils.rh(<aeadditions:storage.component>.definition.makeStack(i));
-  utils.rh(<aeadditions:storage.physical>.definition.makeStack(i));
+  Purge(<aeadditions:storage.component>.definition.makeStack(i));
+  Purge(<aeadditions:storage.physical>.definition.makeStack(i));
 }
 
 // Fluid storages
-utils.rh(<aeadditions:storage.component:4>, false, -1, false);
-utils.rh(<aeadditions:storage.component:5>, false, -1, false);
-utils.rh(<aeadditions:storage.component:6>, false, -1, false);
-utils.rh(<aeadditions:storage.fluid>, false, -1, false);
-utils.rh(<aeadditions:storage.fluid:1>, false, -1, false);
-utils.rh(<aeadditions:storage.fluid:2>, false, -1, false);
+Purge(<aeadditions:storage.component:4>);
+Purge(<aeadditions:storage.component:5>);
+Purge(<aeadditions:storage.component:6>);
+Purge(<aeadditions:storage.fluid>);
+Purge(<aeadditions:storage.fluid:1>);
+Purge(<aeadditions:storage.fluid:2>);
 
 // ---=== Gas Cells ===---
 for i in 0 .. 7 {

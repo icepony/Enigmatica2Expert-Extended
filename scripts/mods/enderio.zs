@@ -536,12 +536,12 @@ craft.remake(<enderio:item_material:14>, ['pretty',
 });
 
 // Remove Death urn (we have special mod for this. Urn not as handy)
-utils.rh(<enderio:item_material:81>, false);
-utils.rh(<enderio:block_death_pouch>, false);
+Purge(<enderio:item_material:81>);
+Purge(<enderio:block_death_pouch>).furn();
 
 // Remove unused Cobalt and Ardite dust
-utils.rh(<enderio:item_material:30>);
-utils.rh(<enderio:item_material:31>);
+Purge(<enderio:item_material:30>);
+Purge(<enderio:item_material:31>);
 
 // [Experience Rod] from [Pulsating Crystal][+1]
 craft.remake(<enderio:item_xp_transfer>, ['pretty',

@@ -21,7 +21,7 @@ val toolsToRemove = [
 ] as IItemStack[];
 
 for tool in toolsToRemove {
-  utils.rh(tool);
+  Purge(tool);
 }
 
 // Vanilla tool nerfs

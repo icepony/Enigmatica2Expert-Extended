@@ -154,8 +154,8 @@ scripts.process.fill(<ore:dustHafnium>, <fluid:oxygen> * 1000, <qmd:chemical_dus
 // Remove Silicon Boule
 mods.nuclearcraft.Crystallizer.removeRecipeWithOutput(<libvulpes:productboule:3>);
 mods.nuclearcraft.Melter.addRecipe(<ore:blockSilicon>, <fluid:silicon> * 1296);
-utils.rh(<qmd:semiconductor:3>); // Silicon Wafer, replaced by Adv. Rock.
-utils.rh(<qmd:semiconductor:2>); // Silicon boule
+Purge(<qmd:semiconductor:3>).ores(); // Silicon Wafer, replaced by Adv. Rock.
+Purge(<qmd:semiconductor:2>).ores(); // Silicon boule
 mods.nuclearcraft.FissionIrradiator.removeRecipeWithOutput(<qmd:semiconductor:1>);
 mods.nuclearcraft.FissionIrradiator.addRecipe(<ore:waferSilicon>, <qmd:semiconductor:1>, 120000, 0, 0, 0);
 mods.rats.recipes.addArcheologistRatRecipe(<advancedrocketry:wafer>, <qmd:semiconductor:1>);
@@ -180,21 +180,21 @@ mods.qmd.target_chamber.addRecipe(
 mods.qmd.nucleosynthesis_chamber.addRecipe(<liquid:sky_stone> * 52, <liquid:enrichedlava> * 20, <particle:neutron> * 1000000, <liquid:neutronium> * 72, null, 1000000, 874000);
 
 // Remove tools
-utils.rh(<qmd:sword_tungsten_carbide>);
-utils.rh(<qmd:pickaxe_tungsten_carbide>);
-utils.rh(<qmd:shovel_tungsten_carbide>);
-utils.rh(<qmd:axe_tungsten_carbide>);
-utils.rh(<qmd:hoe_tungsten_carbide>);
+Purge(<qmd:sword_tungsten_carbide>);
+Purge(<qmd:pickaxe_tungsten_carbide>);
+Purge(<qmd:shovel_tungsten_carbide>);
+Purge(<qmd:axe_tungsten_carbide>);
+Purge(<qmd:hoe_tungsten_carbide>);
 
 ////////////////////////////////////////
 //               Unify                //
 ////////////////////////////////////////
-utils.rh(<qmd:dust:4>); // Cobalt
-utils.rh(<qmd:ingot:4>); // Cobalt
-utils.rh(<qmd:ingot>); // Tungsten
-utils.rh(<qmd:ingot:10>); // Platinum
-utils.rh(<qmd:ingot_alloy:4>); // Osmiridium
-utils.rh(<qmd:ingot:9>); // Iridium
+Purge(<qmd:dust:4>).ores(); // Cobalt
+Purge(<qmd:ingot:4>).ores(); // Cobalt
+Purge(<qmd:ingot>).furn().ores(); // Tungsten
+Purge(<qmd:ingot:10>).ores(); // Platinum
+Purge(<qmd:ingot_alloy:4>).ores(); // Osmiridium
+Purge(<qmd:ingot:9>).ores(); // Iridium
 
 mods.immersiveengineering.ArcFurnace.removeRecipe(<qmd:ingot>); // Tungsten from Ore and Dust
 
@@ -233,14 +233,14 @@ mods.tconstruct.Casting.addTableRecipe(<endreborn:item_ingot_wolframium>, <tcons
 mods.tconstruct.Casting.addBasinRecipe(<endreborn:block_wolframium>, null, <liquid:tungsten>, 1296, false, 800);
 
 // Sodium Chlorde (salt)
-utils.rh(<qmd:chemical_dust:3>);
+Purge(<qmd:chemical_dust:3>).ores();
 
 // Fix salt melting duplicate recipe
 mods.nuclearcraft.Melter.removeRecipeWithOutput(<fluid:sodium_chloride> * 666);
 mods.nuclearcraft.Crystallizer.removeRecipeWithInput(<fluid:sodium_chloride_solution> * 666);
 
 // Sodium Nitrate (niter)
-utils.rh(<qmd:chemical_dust:2>);
+Purge(<qmd:chemical_dust:2>).ores();
 mods.nuclearcraft.Crystallizer.removeRecipeWithInput(<fluid:sodium_nitrate_solution> * 666);
 mods.nuclearcraft.Crystallizer.addRecipe(<fluid:sodium_nitrate_solution> * 666, <thermalfoundation:material:772>);
 

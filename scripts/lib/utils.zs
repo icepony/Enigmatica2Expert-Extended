@@ -114,43 +114,6 @@ zenClass Utils {
   }
 
   // ########################
-  // Removing item everywhere
-  // ########################
-  function rh(ingr as IIngredient, removeOredict as bool = true, meta as int = -1, removeFurnace as bool = true) as void {
-    if (isNull(ingr)) {
-      if (DEBUG) log('Tried to purge ingredient, but its null.');
-      return;
-    }
-
-    var isPurgedSomething = false;
-    for _item in ingr.items {
-      val item = meta <= -1 ? _item : _item.withDamage(meta);
-
-      if (removeOredict) {
-        for ore in item.ores {
-          if (DEBUG && ore has item)
-            log('purging item ' ~ item.commandString, 'from oredict', ore.name);
-          ore.remove(item);
-        }
-      }
-
-      val actualItem = (item.damage == 0 && item.isDamageable)
-        ? item.anyDamage()
-        : item;
-
-      if (removeFurnace) furnace.remove(actualItem);
-      recipes.remove(actualItem);
-
-      if (DEBUG) log('purged: ' ~ actualItem.commandString, item.displayName);
-      isPurgedSomething = true;
-    }
-
-    if (!isPurgedSomething) {
-      if (DEBUG) log('Tried to purge ingredient, but it have no items.');
-    }
-  }
-
-  // ########################
   // Conditional Loging
   // ########################
   function log(a as string) as void { log(a, null, null); }

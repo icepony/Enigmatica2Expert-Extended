@@ -31,7 +31,7 @@ for recipeName in [
   recipes.removeByRecipeName(recipeName);
 }
 
-utils.rh(<endreborn:food_ender_flesh>, false, -1, false);
+Purge(<endreborn:food_ender_flesh>);
 
 scripts.process.fill(<ore:dustDimensional>, <liquid:crystal> * 1000, <endreborn:catalyst>);
 

@@ -8,7 +8,7 @@ import crafttweaker.item.IItemStack;
 <iceandfire:iceandfire.deathworm_egg:1>.maxStackSize = 64;
 
 // Removed items
-utils.rh(<iceandfire:silver_sword>, false, -1, false);
+Purge(<iceandfire:silver_sword>);
 
 // *======= Recipes =======*
 
@@ -71,24 +71,12 @@ recipes.addShaped('Ash To Coal Coke',
     [<iceandfire:ash>, <iceandfire:ash>, <iceandfire:ash>],
     [<iceandfire:ash>, <iceandfire:ash>, <iceandfire:ash>]]);
 
-// Removals
-val removals = [
-  <iceandfire:sapphire_ore>,
-  <iceandfire:sapphire_block>,
-  <iceandfire:sapphire_gem>,
-  <iceandfire:silver_ore>,
-  <iceandfire:silver_block>,
-] as IItemStack[];
-
-for item in removals {
-  utils.rh(item);
-}
-
-for item in [
-  <iceandfire:silver_nugget>,
-] as IItemStack[] {
-  utils.rh(item, false);
-}
+Purge(<iceandfire:sapphire_ore>).ores().furn();
+Purge(<iceandfire:sapphire_block>).ores().furn();
+Purge(<iceandfire:sapphire_gem>).ores().furn();
+Purge(<iceandfire:silver_ore>).ores().furn();
+Purge(<iceandfire:silver_block>).ores().furn();
+Purge(<iceandfire:silver_nugget>).furn();
 
 // Dragons Breath from Dragon Forges
 mods.iceandfire.recipes.addFireDragonForgeRecipe(<integrateddynamics:crystalized_chorus_chunk>, <botania:manaresource:15>, <minecraft:dragon_breath>);

@@ -22,7 +22,7 @@ val armorToRemove = [
 ] as IItemStack[];
 
 for item in armorToRemove {
-  utils.rh(item);
+  Purge(item);
 }
 
 // Only remove recipes but keep in JEI

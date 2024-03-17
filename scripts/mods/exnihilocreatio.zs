@@ -68,37 +68,37 @@ for i, inputArr in crushingInMachines {
 // *======= Remove & Hide =======*
 
 // Uncompressed Coal
-utils.rh(<excompressum:uncompressed_coal>);
+Purge(<excompressum:uncompressed_coal>);
 
 // Duplicate compressed blocks
-utils.rh(<excompressum:compressed_block:2>);
-utils.rh(<excompressum:compressed_block:3>);
-utils.rh(<excompressum:compressed_block:4>);
-utils.rh(<excompressum:compressed_block:1>);
-utils.rh(<excompressum:compressed_block:9>);
+Purge(<excompressum:compressed_block:2>).ores();
+Purge(<excompressum:compressed_block:3>).ores();
+Purge(<excompressum:compressed_block:4>).ores();
+Purge(<excompressum:compressed_block:1>).ores();
+Purge(<excompressum:compressed_block:9>).ores();
 
 // Crucibles
-utils.rh(<excompressum:wooden_crucible>);
-utils.rh(<excompressum:wooden_crucible:1>);
-utils.rh(<excompressum:wooden_crucible:2>);
-utils.rh(<excompressum:wooden_crucible:3>);
-utils.rh(<excompressum:wooden_crucible:4>);
-utils.rh(<excompressum:wooden_crucible:5>);
-utils.rh(<exnihilocreatio:block_crucible>, false, -1, false);
-utils.rh(<exnihilocreatio:block_crucible_wood>, false, -1, false);
+Purge(<excompressum:wooden_crucible>);
+Purge(<excompressum:wooden_crucible:1>);
+Purge(<excompressum:wooden_crucible:2>);
+Purge(<excompressum:wooden_crucible:3>);
+Purge(<excompressum:wooden_crucible:4>);
+Purge(<excompressum:wooden_crucible:5>);
+Purge(<exnihilocreatio:block_crucible>);
+Purge(<exnihilocreatio:block_crucible_wood>);
 
 // Ex Nihilo Dusts
-utils.rh(<exnihilocreatio:item_ore_gold:2>);
-utils.rh(<exnihilocreatio:item_ore_iron:2>);
-utils.rh(<exnihilocreatio:item_ore_copper:2>);
-utils.rh(<exnihilocreatio:item_ore_tin:2>);
-utils.rh(<exnihilocreatio:item_ore_aluminium:2>);
-utils.rh(<exnihilocreatio:item_ore_lead:2>);
-utils.rh(<exnihilocreatio:item_ore_silver:2>);
-utils.rh(<exnihilocreatio:item_ore_nickel:2>);
+Purge(<exnihilocreatio:item_ore_gold:2>).ores();
+Purge(<exnihilocreatio:item_ore_iron:2>).ores();
+Purge(<exnihilocreatio:item_ore_copper:2>).ores();
+Purge(<exnihilocreatio:item_ore_tin:2>).ores();
+Purge(<exnihilocreatio:item_ore_aluminium:2>).ores();
+Purge(<exnihilocreatio:item_ore_lead:2>).ores();
+Purge(<exnihilocreatio:item_ore_silver:2>).ores();
+Purge(<exnihilocreatio:item_ore_nickel:2>).ores();
 
 // Remove excess mesh
-utils.rh(<excompressum:iron_mesh>);
+Purge(<excompressum:iron_mesh>);
 
 // Remove Sieves (defined in CompactMachines)
 recipes.remove(<exnihilocreatio:item_mesh:2>);
@@ -106,7 +106,7 @@ recipes.remove(<exnihilocreatio:item_mesh:3>);
 recipes.remove(<exnihilocreatio:item_mesh:4>);
 
 // Remove crooks (if removed with Malek's Infinity Gauntlet they produce error)
-utils.rh(<exnihilocreatio:crook_clay_uncooked>, false, -1, false);
+Purge(<exnihilocreatio:crook_clay_uncooked>);
 furnace.remove(<exnihilocreatio:crook_clay>);
 
 // [Artificial_Hive] from [Hay_Bale][+1]

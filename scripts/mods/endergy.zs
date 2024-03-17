@@ -18,8 +18,7 @@ for s in [
   'item_alloy_endergy_ball',
 ] as string[] {
   for i in [0, 5] as int[] {
-    val it = itemUtils.getItem('enderio:' ~ s, i);
-    if (!isNull(it)) utils.rh(it, false);
+    Purge(itemUtils.getItem('enderio:' ~ s, i));
   }
 }
 
@@ -37,18 +36,18 @@ mods.nuclearcraft.AlloyFurnace.removeRecipeWithOutput(<enderio:item_alloy_enderg
 mods.nuclearcraft.AlloyFurnace.removeRecipeWithOutput(<enderio:item_alloy_endergy_ingot:5>);
 mods.nuclearcraft.AlloyFurnace.removeRecipeWithOutput(<enderio:item_alloy_endergy_ingot:6>);
 
-utils.rh(<enderio:item_endergy_conduit>);
-utils.rh(<enderio:item_endergy_conduit:1>);
-utils.rh(<enderio:item_endergy_conduit:2>);
-utils.rh(<enderio:item_endergy_conduit:3>);
-utils.rh(<enderio:item_endergy_conduit:4>);
-utils.rh(<enderio:item_endergy_conduit:5>);
-utils.rh(<enderio:item_endergy_conduit:6>);
-utils.rh(<enderio:item_endergy_conduit:7>);
-utils.rh(<enderio:item_capacitor_grainy>);
-utils.rh(<enderio:item_capacitor_silver>);
-utils.rh(<enderio:item_capacitor_energetic_silver>);
-utils.rh(<enderio:item_capacitor_vivid>);
+Purge(<enderio:item_endergy_conduit>);
+Purge(<enderio:item_endergy_conduit:1>);
+Purge(<enderio:item_endergy_conduit:2>);
+Purge(<enderio:item_endergy_conduit:3>);
+Purge(<enderio:item_endergy_conduit:4>);
+Purge(<enderio:item_endergy_conduit:5>);
+Purge(<enderio:item_endergy_conduit:6>);
+Purge(<enderio:item_endergy_conduit:7>);
+Purge(<enderio:item_capacitor_grainy>);
+Purge(<enderio:item_capacitor_silver>);
+Purge(<enderio:item_capacitor_energetic_silver>);
+Purge(<enderio:item_capacitor_vivid>);
 recipes.removeByRecipeName('enderio:capacitor_crystalline_alt');
 
 // Remove liquids of removed alloys

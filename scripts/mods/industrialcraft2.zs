@@ -16,7 +16,7 @@ import scripts.jei.mod.ic2.addCrop;
 <ic2:lzh_condensator>.maxStackSize = 1;
 <ic2:rsh_condensator>.maxStackSize = 1;
 
-utils.rh(<ic2:te:76>); // Electrolyzer
+Purge(<ic2:te:76>); // Electrolyzer
 
 // Hydrated Coal Dust recipe consumes containers that can store 1000mB + liquid, this fixes that
 recipes.addShapeless('ic2_hydrated_coal_dust_liquid_fix', <ic2:dust:3>, [<ore:dustCoal>, LiquidIngr('water')]);

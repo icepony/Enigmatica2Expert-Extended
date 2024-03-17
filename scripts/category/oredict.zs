@@ -490,7 +490,7 @@ function removeHunkOre(item as IItemStack) as void {
     }
   }
   if (needRemoveAndHide) {
-    utils.rh(item);
+    Purge(item);
     mods.appliedenergistics2.Grinder.removeRecipe(item);
   }
 }

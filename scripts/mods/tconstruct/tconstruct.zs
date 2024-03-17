@@ -43,8 +43,8 @@ for slime, dirts in slimeDirts {
 }
 
 // Remove redundant slimes
-utils.rh(<tconstruct:edible:5>);
-utils.rh(<tconstruct:slime_congealed:5>);
+Purge(<tconstruct:edible:5>).ores();
+Purge(<tconstruct:slime_congealed:5>).ores();
 
 // Removing Bronze / Steel dupes
 mods.tconstruct.Melting.removeRecipe(<liquid:bronze>, <ic2:pipe>);
@@ -59,7 +59,7 @@ mods.tconstruct.Casting.removeBasinRecipe(<chisel:blockcobalt>);
 mods.tconstruct.Casting.addBasinRecipe(<tconstruct:metal>, null, <liquid:cobalt>, 1296);
 
 // Item Rack
-utils.rh(<tconstruct:rack>);
+Purge(<tconstruct:rack>);
 
 // Blank Cast Resmelting
 mods.tconstruct.Melting.addRecipe(<liquid:alubrass> * 144, <tconstruct:cast>);

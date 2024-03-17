@@ -61,14 +61,14 @@ val platesToRemove = [
 ] as IItemStack[];
 
 for item in platesToRemove {
-  utils.rh(item);
+  Purge(item).ores();
 }
 
 for i in 30 .. 41 {
   if (i == 35) continue;
   val plate = itemUtils.getItem('immersiveengineering:metal', i);
   mods.immersiveengineering.MetalPress.removeRecipe(plate);
-  utils.rh(plate);
+  Purge(plate).ores();
 }
 
 recipes.addShapeless('steel_casing_with_tool', <ic2:casing:5> * 2, [<ore:plateSteel>, anyHammer]);

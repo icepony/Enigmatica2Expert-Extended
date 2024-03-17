@@ -95,11 +95,10 @@ val chestsToHide = [
   <ironchest:iron_shulker_box_red:4>,
   <ironchest:iron_shulker_box_black:3>,
   <ironchest:iron_shulker_box_black:4>,
-
 ] as IItemStack[];
 
 for item in chestsToHide {
-  utils.rh(item);
+  Purge(item);
 }
 
 // Alt for animals

@@ -240,8 +240,8 @@ recipes.remove(<mekanism:controlcircuit:3>);
 mods.actuallyadditions.Empowerer.addRecipe(<mekanism:controlcircuit:3>, <mekanism:controlcircuit:2>, <mekanism:atomicalloy>, <mekanism:atomicalloy>, <mekanism:atomicalloy>, <mekanism:atomicalloy>, 500000, 100, [0.5, 0.3, 0.2]);
 
 // Removing unused ores & Walkietalkie
-utils.rh(<mekanism:oreblock:1>);
-utils.rh(<mekanism:oreblock:2>);
+Purge(<mekanism:oreblock:1>);
+Purge(<mekanism:oreblock:2>);
 
 // Tier applying
 recipes.addShapeless(<mekanism:machineblock:5>.withTag({ recipeType: 3, mekData: {} }), [<mekanism:machineblock:1>, <mekanism:tierinstaller>]);
@@ -536,7 +536,7 @@ craft.remake(<mekanismgenerators:generator:8>, ['pretty',
 });
 
 // Conflicts
-utils.rh(<mekanism:nugget:5>);
+Purge(<mekanism:nugget:5>).ores();
 
 // Cardboard Box spawner entity
 <mekanism:cardboardbox:1>.addAdvancedTooltip(function (item) {

@@ -73,38 +73,30 @@ recipes.addShapedMirrored('Control Circuit Board',
     [<ore:circuitElite>, <immersiveengineering:metal_decoration0>, <ore:circuitElite>]]);
 
 // *======= Remove & Hide =======*
-
-val removals = [
-  <libvulpes:productdust:1>,
-  <libvulpes:productdust:2>,
-  <libvulpes:productdust:3>,
-  <libvulpes:productdust:4>,
-  <libvulpes:productdust:5>,
-  <libvulpes:productdust:6>,
-  <libvulpes:productdust:9>,
-  <libvulpes:productdust:10>,
-  <libvulpes:productingot:4>,
-  <libvulpes:productingot:5>,
-  <libvulpes:productingot:6>,
-  <libvulpes:productingot:9>,
-  <libvulpes:productingot:10>,
-  <libvulpes:productnugget:4>,
-  <libvulpes:productnugget:5>,
-  <libvulpes:productnugget:6>,
-  <libvulpes:productnugget:9>,
-  <libvulpes:productnugget:10>,
-  <libvulpes:ore0:4>,
-  <libvulpes:ore0:5>,
-  <libvulpes:ore0:9>,
-  <libvulpes:ore0:10>,
-  <libvulpes:productrod:1>,
-  <libvulpes:productrod:6>,
-
-] as IItemStack[];
-
-for item in removals {
-  utils.rh(item);
-}
+Purge(<libvulpes:productdust:1>).ores().furn();
+Purge(<libvulpes:productdust:2>).ores().furn();
+Purge(<libvulpes:productdust:3>).ores().furn();
+Purge(<libvulpes:productdust:4>).ores().furn();
+Purge(<libvulpes:productdust:5>).ores().furn();
+Purge(<libvulpes:productdust:6>).ores().furn();
+Purge(<libvulpes:productdust:9>).ores().furn();
+Purge(<libvulpes:productdust:10>).ores().furn();
+Purge(<libvulpes:productingot:4>).ores().furn();
+Purge(<libvulpes:productingot:5>).ores().furn();
+Purge(<libvulpes:productingot:6>).ores().furn();
+Purge(<libvulpes:productingot:9>).ores().furn();
+Purge(<libvulpes:productingot:10>).ores().furn();
+Purge(<libvulpes:productnugget:4>).ores().furn();
+Purge(<libvulpes:productnugget:5>).ores().furn();
+Purge(<libvulpes:productnugget:6>).ores().furn();
+Purge(<libvulpes:productnugget:9>).ores().furn();
+Purge(<libvulpes:productnugget:10>).ores().furn();
+Purge(<libvulpes:ore0:4>).ores().furn();
+Purge(<libvulpes:ore0:5>).ores().furn();
+Purge(<libvulpes:ore0:9>).ores().furn();
+Purge(<libvulpes:ore0:10>).ores().furn();
+Purge(<libvulpes:productrod:1>).ores().furn();
+Purge(<libvulpes:productrod:6>).ores().furn();
 
 val recipesToRemove = [
 

@@ -100,7 +100,7 @@ recipes.addShapeless('Overgrown Stone2', <biomesoplenty:grass:1>, [<minecraft:st
 recipes.addShapeless('Overgrown Stone3', <biomesoplenty:grass:1>, [<minecraft:stone:*>, <ore:vine>]);
 
 // Amber Block
-utils.rh(<biomesoplenty:gem_block:7>);
+Purge(<biomesoplenty:gem_block:7>).ores();
 
 // Terrestrial Artifact
 <biomesoplenty:terrestrial_artifact>.maxStackSize = 64;

@@ -16,4 +16,4 @@ java.lang.NullPointerException: Rendering Block Entity
     at net.minecraft.client.renderer.tileentity.TileEntityRendererDispatcher.render(TileEntityRendererDispatcher.java:157)
     at meldexun.renderlib.renderer.tileentity.TileEntityRenderer.renderTileEntities(TileEntityRenderer.java:67)
 */
-utils.rh(<hole_filler_mod:throwable_hole_filler_smart>);
+Purge(<hole_filler_mod:throwable_hole_filler_smart>);

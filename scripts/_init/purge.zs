@@ -12,69 +12,67 @@
 import crafttweaker.item.IItemStack;
 
 // Industrial Diamond (Replaced with regular diamond)
-utils.rh(<ic2:crafting:19>);
-utils.rh(<ic2:ingot:8>);
+Purge(<ic2:crafting:19>).ores();
 
 // Unused dusts
-utils.rh(<ic2:ingot:3>);
-utils.rh(<ic2:dust:4>);
-utils.rh(<ic2:dust:7>);
-utils.rh(<ic2:dust:10>);
-utils.rh(<ic2:dust:12>);
-utils.rh(<ic2:dust:14>);
-utils.rh(<ic2:dust:17>);
-utils.rh(<ic2:dust:25>);
-utils.rh(<ic2:nuclear:6>);
-utils.rh(<ic2:nuclear:8>);
-utils.rh(<ic2:nuclear:9>);
-utils.rh(<ic2:resource:8>); // Steel blocks
-utils.rh(<ic2:resource:6>); // Copper blocks
-utils.rh(<ic2:resource:9>); // Tin blocks
-utils.rh(<ic2:resource:15>); // Silver blocks
-utils.rh(<ic2:resource:7>); // Lead blocks
-utils.rh(<ic2:misc_resource>); // Ashes
-utils.rh(<ic2:misc_resource:5>); // Slag
-utils.rh(<openblocks:generic:1>); // Crane ingredient
-utils.rh(<openblocks:generic:2>);
-utils.rh(<openblocks:generic:3>);
-utils.rh(<openblocks:generic:4>);
-utils.rh(<openblocks:generic:5>);
-utils.rh(<openblocks:cursor>);
-utils.rh(<actuallyadditions:item_misc:17>);
-utils.rh(<actuallyadditions:item_food:9>);
-utils.rh(<avaritia:compressed_crafting_table>);
-utils.rh(<avaritia:double_compressed_crafting_table>);
-utils.rh(<avaritia:resource>); // Diamond Lattice
+Purge(<ic2:dust:4>).ores();
+Purge(<ic2:dust:7>).ores();
+Purge(<ic2:dust:10>).ores();
+Purge(<ic2:dust:12>).ores();
+Purge(<ic2:dust:14>).ores();
+Purge(<ic2:dust:17>).ores();
+Purge(<ic2:dust:25>).ores();
+Purge(<ic2:nuclear:6>);
+Purge(<ic2:nuclear:8>);
+Purge(<ic2:nuclear:9>);
+Purge(<ic2:resource:8>).ores(); // Steel blocks
+Purge(<ic2:resource:6>).ores(); // Copper blocks
+Purge(<ic2:resource:9>).ores(); // Tin blocks
+Purge(<ic2:resource:15>).ores(); // Silver blocks
+Purge(<ic2:resource:7>).ores(); // Lead blocks
+Purge(<ic2:misc_resource>).ores(); // Ashes
+Purge(<ic2:misc_resource:5>).ores(); // Slag
+Purge(<openblocks:generic:1>); // Crane ingredient
+Purge(<openblocks:generic:2>);
+Purge(<openblocks:generic:3>);
+Purge(<openblocks:generic:4>);
+Purge(<openblocks:generic:5>);
+Purge(<openblocks:cursor>);
+Purge(<actuallyadditions:item_misc:17>).ores();
+Purge(<actuallyadditions:item_food:9>);
+Purge(<avaritia:compressed_crafting_table>);
+Purge(<avaritia:double_compressed_crafting_table>);
+Purge(<avaritia:resource>); // Diamond Lattice
 
 // Purge saltpeter and sulfur
-utils.rh(<bloodmagic:component:24>);
-utils.rh(<bloodmagic:component:23>);
+Purge(<bloodmagic:component:24>);
+Purge(<bloodmagic:component:23>);
 
 // TC nuggets
 for i in 0 .. 5 {
-  utils.rh(<thaumcraft:nugget>, true, i);
+  Purge(<thaumcraft:nugget>.definition.makeStack(i)).ores();
 }
 
 // *======= Metal Nuggets =======*
 
-utils.rh(<immersiveengineering:metal:29>);
-utils.rh(<immersiveengineering:metal:20>);
-utils.rh(<immersiveengineering:metal:21>);
-utils.rh(<immersiveengineering:metal:22>);
-utils.rh(<immersiveengineering:metal:23>);
-utils.rh(<immersiveengineering:metal:24>);
-utils.rh(<immersiveengineering:metal:26>);
-utils.rh(<immersiveengineering:metal:27>);
-utils.rh(<immersiveengineering:metal:28>);
-utils.rh(<extendedcrafting:material:128>);
-utils.rh(<extendedcrafting:material:129>);
-utils.rh(<opencomputers:material:29>); // Diamond nugget
-utils.rh(<opencomputers:material>);
+Purge(<immersiveengineering:metal:29>).ores();
+Purge(<immersiveengineering:metal:20>).ores();
+Purge(<immersiveengineering:metal:21>).ores();
+Purge(<immersiveengineering:metal:22>).ores();
+Purge(<immersiveengineering:metal:23>).ores();
+Purge(<immersiveengineering:metal:24>).ores();
+Purge(<immersiveengineering:metal:26>).ores();
+Purge(<immersiveengineering:metal:27>).ores();
+Purge(<immersiveengineering:metal:28>).ores();
+Purge(<extendedcrafting:material:128>).ores();
+Purge(<extendedcrafting:material:129>).ores();
+Purge(<opencomputers:material:29>).ores(); // Diamond nugget
+Purge(<opencomputers:material>);
 
 // Remove Refined storage cables
 if (isNull(loadedMods['refinedstorage'])) {
-  utils.rh(<immersivecables:coil_block:3>);
-  utils.rh(<immersivecables:wire_coil:3>);
+  Purge(<immersivecables:coil_block:3>);
+  Purge(<immersivecables:wire_coil:3>);
 }
 
 /* Inject_js(
@@ -166,71 +164,71 @@ recipes.remove(<ic2:ingot:3>);
 recipes.remove(<ic2:ingot:4>);
 recipes.remove(<ic2:ingot:5>);
 recipes.remove(<ic2:ingot:6>);
-recipes.remove(<ic2:resource:5>);
-utils.rh(<ic2:resource:5>); // Bronze
-utils.rh(<ic2:ingot:1>);
+Purge(<ic2:resource:5>).ores(); // Bronze
+Purge(<ic2:ingot:1>).furn().ores();
+Purge(<ic2:ingot:8>).ores();
+Purge(<ic2:ingot:3>).furn().ores();
 // *============================*
 
-utils.rh(<contenttweaker:item_ore_tungsten:1>, true, -1, false);
-utils.rh(<contenttweaker:item_ore_tungsten:2>);
-utils.rh(<contenttweaker:item_ore_tungsten:3>);
-utils.rh(<jaopca:block_blocktungsten>);
-utils.rh(<jaopca:item_nuggettungsten>);
-utils.rh(<enderio:item_owl_egg>, false);
-utils.rh(<thermalfoundation:material:656>);
-utils.rh(<ae2stuff:visualiser>);
-utils.rh(<itemfilters:filter>);
-utils.rh(<excompressum:ore_smasher>);
-utils.rh(<forestry:gear_tin>);
-utils.rh(<forestry:gear_bronze>);
-utils.rh(<forestry:gear_copper>);
-utils.rh(<forestry:capsule>);
-utils.rh(<forestry:can>);
-utils.rh(<forestry:refractory>);
-utils.rh(<appliedenergistics2:material:40>);
-utils.rh(<mysticalagriculture:chunk>);
-utils.rh(<mysticalagriculture:chunk:1>);
-utils.rh(<mysticalagriculture:chunk:2>);
-utils.rh(<mysticalagriculture:chunk:3>);
-utils.rh(<mysticalagriculture:chunk:4>);
-utils.rh(<mysticalagradditions:insanium:4>);
-utils.rh(<mysticalagradditions:stuff:69>);
-utils.rh(<immersiveengineering:ore:1>);
-utils.rh(<qmd:ingot:3>); // Titanium Ingot
-utils.rh(<betteranimalsplus:cheese>);
+Purge(<contenttweaker:item_ore_tungsten:1>).ores();
+Purge(<contenttweaker:item_ore_tungsten:2>).ores();
+Purge(<contenttweaker:item_ore_tungsten:3>).furn().ores();
+Purge(<jaopca:block_blocktungsten>).ores();
+Purge(<jaopca:item_nuggettungsten>).ores();
+Purge(<enderio:item_owl_egg>);
+Purge(<thermalfoundation:material:656>);
+Purge(<ae2stuff:visualiser>);
+Purge(<itemfilters:filter>);
+Purge(<excompressum:ore_smasher>);
+Purge(<forestry:gear_bronze>).ores();
+Purge(<forestry:gear_copper>).ores();
+Purge(<forestry:gear_tin>).ores();
+Purge(<forestry:capsule>);
+Purge(<forestry:can>);
+Purge(<forestry:refractory>);
+Purge(<appliedenergistics2:material:40>).ores();
+Purge(<mysticalagriculture:chunk>);
+Purge(<mysticalagriculture:chunk:1>);
+Purge(<mysticalagriculture:chunk:2>);
+Purge(<mysticalagriculture:chunk:3>);
+Purge(<mysticalagriculture:chunk:4>);
+Purge(<mysticalagradditions:insanium:4>);
+Purge(<mysticalagradditions:stuff:69>);
+Purge(<immersiveengineering:ore:1>).ores();
+Purge(<qmd:ingot:3>).ores(); // Titanium Ingot
+Purge(<betteranimalsplus:cheese>);
 
 // Pams replacements
-utils.rh(<harvestcraft:chilipepperitem>);
-utils.rh(<harvestcraft:chilipepperseeditem>);
-utils.rh(<harvestcraft:coffeebeanitem>);
-utils.rh(<harvestcraft:coffeeseeditem>);
-utils.rh(<harvestcraft:grapeitem>);
-utils.rh(<harvestcraft:grapeseeditem>);
-utils.rh(<harvestcraft:olive_sapling>);
-utils.rh(<harvestcraft:oliveitem>);
-utils.rh(<harvestcraft:pamolive>);
-utils.rh(<harvestcraft:tomatoitem>);
-utils.rh(<harvestcraft:tomatoseeditem>);
-utils.rh(<harvestcraft:beanseeditem>);
-utils.rh(<harvestcraft:beanitem>);
-utils.rh(<harvestcraft:riceseeditem>);
-utils.rh(<harvestcraft:riceitem>);
-utils.rh(<harvestcraft:cocoapowderitem>);
-utils.rh(<harvestcraft:chocolatebaritem>);
+Purge(<harvestcraft:chilipepperitem>).ores();
+Purge(<harvestcraft:chilipepperseeditem>).ores();
+Purge(<harvestcraft:coffeebeanitem>).ores();
+Purge(<harvestcraft:coffeeseeditem>).ores();
+Purge(<harvestcraft:grapeitem>).ores();
+Purge(<harvestcraft:grapeseeditem>).ores();
+Purge(<harvestcraft:olive_sapling>).ores();
+Purge(<harvestcraft:oliveitem>).ores();
+Purge(<harvestcraft:pamolive>).ores();
+Purge(<harvestcraft:tomatoitem>).ores();
+Purge(<harvestcraft:tomatoseeditem>).ores();
+Purge(<harvestcraft:beanseeditem>).ores();
+Purge(<harvestcraft:beanitem>).ores();
+Purge(<harvestcraft:riceseeditem>).ores();
+Purge(<harvestcraft:riceitem>).ores();
+Purge(<harvestcraft:cocoapowderitem>).ores();
+Purge(<harvestcraft:chocolatebaritem>).ores();
 
-utils.rh(<thaumicwonders:eldritch_cluster:0>);
-utils.rh(<thaumicwonders:eldritch_cluster:1>);
-utils.rh(<thaumicwonders:eldritch_cluster:2>);
-utils.rh(<thaumicwonders:eldritch_cluster:3>);
-utils.rh(<thaumicwonders:eldritch_cluster:4>);
-utils.rh(<thaumicwonders:eldritch_cluster:5>);
-utils.rh(<thaumicwonders:eldritch_cluster:6>);
-utils.rh(<thaumicwonders:eldritch_cluster:7>);
-utils.rh(<thaumicwonders:eldritch_cluster:8>);
+Purge(<thaumicwonders:eldritch_cluster:0>);
+Purge(<thaumicwonders:eldritch_cluster:1>);
+Purge(<thaumicwonders:eldritch_cluster:2>);
+Purge(<thaumicwonders:eldritch_cluster:3>);
+Purge(<thaumicwonders:eldritch_cluster:4>);
+Purge(<thaumicwonders:eldritch_cluster:5>);
+Purge(<thaumicwonders:eldritch_cluster:6>);
+Purge(<thaumicwonders:eldritch_cluster:7>);
+Purge(<thaumicwonders:eldritch_cluster:8>);
 
 // Gears
 val gearsToRemove = [
-  <appliedenergistics2:material:40>,
   <thermalfoundation:material:22>,
   <thermalfoundation:material:23>,
   <thermalfoundation:material:24>,

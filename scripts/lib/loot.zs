@@ -58,11 +58,7 @@ function tweak(
   // Remove old item from JEI and crafts
   // usually need when unify meat
   if (!isNull(itemToRemove)) {
-    var smelted = utils.smelt(itemToRemove);
-    if (!isNull(smelted)) {
-      furnace.remove(smelted);
-      utils.rh(smelted);
-    }
-    utils.rh(itemToRemove);
+    Purge(utils.smelt(itemToRemove)).ores().furn();
+    Purge(itemToRemove).ores();
   }
 }

@@ -3,10 +3,10 @@
 import crafttweaker.item.IIngredient;
 
 // Remove and hide creative innovation items
-utils.rh(<thermalinnovation:quiver:32000>.withTag({}));
-utils.rh(<thermalinnovation:injector:32000>.withTag({}));
-utils.rh(<thermalinnovation:drill:32000>.withTag({ Energy: 600000, Mode: 4 }));
-utils.rh(<thermalinnovation:saw:32000>.withTag({ Energy: 600000, Mode: 4 }));
+Purge(<thermalinnovation:quiver:32000>.withTag({}));
+Purge(<thermalinnovation:injector:32000>.withTag({}));
+Purge(<thermalinnovation:drill:32000>.withTag({ Energy: 600000, Mode: 4 }));
+Purge(<thermalinnovation:saw:32000>.withTag({ Energy: 600000, Mode: 4 }));
 
 // ===============================================
 // Remake magnet
@@ -24,7 +24,7 @@ function remakeMagnet(meta as int, i1 as IIngredient, i2 as IIngredient) {
 }
 
 if (!isNull(magnetDef)) {
-  utils.rh(itemUtils.getItem('thermalinnovation:magnet', 32000).withTag({ Energy: 600000 })); // creative
+  Purge(itemUtils.getItem('thermalinnovation:magnet', 32000).withTag({ Energy: 600000 })); // creative
   recipes.removeByRecipeName('thermalinnovation:magnet');
   recipes.removeByRecipeName('thermalinnovation:magnet_1');
   recipes.removeByRecipeName('thermalinnovation:magnet_2');

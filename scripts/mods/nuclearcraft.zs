@@ -316,7 +316,7 @@ mods.tconstruct.Casting.removeTableRecipe(<nuclearcraft:alloy:9>);
 mods.nuclearcraft.AlloyFurnace.removeRecipeWithOutput(<nuclearcraft:alloy:9> * 4);
 mods.nuclearcraft.IngotFormer.removeRecipeWithOutput(<nuclearcraft:alloy:9>);
 mods.nuclearcraft.SaltMixer.removeRecipeWithInput(<fluid:lead_platinum> * 144, <fluid:ender> * 250);
-utils.rh(<nuclearcraft:alloy:9>);
+Purge(<nuclearcraft:alloy:9>).ores();
 
 // More melting compat
 for ingr, fluid in {
@@ -494,39 +494,39 @@ scripts.process.electrolyze(<fluid:nitric_oxide> * 100, [<fluid:nitrogen> * 500,
 // ------------------------------------------------------------
 
 // Common resources
-utils.rh(<nuclearcraft:alloy>);
-utils.rh(<nuclearcraft:alloy:5>);
-utils.rh(<nuclearcraft:dust>);
-utils.rh(<nuclearcraft:dust:1>);
-utils.rh(<nuclearcraft:dust:2>);
-utils.rh(<nuclearcraft:dust:4>);
-utils.rh(<nuclearcraft:gem_dust>);
-utils.rh(<nuclearcraft:gem_dust:2>);
-utils.rh(<nuclearcraft:gem_dust:3>);
-utils.rh(<nuclearcraft:gem_dust:6>);
-utils.rh(<nuclearcraft:gem:6>);
-utils.rh(<nuclearcraft:ingot>);
-utils.rh(<nuclearcraft:ingot:1>);
-utils.rh(<nuclearcraft:ingot:2>);
-utils.rh(<nuclearcraft:ingot:4>);
-utils.rh(<nuclearcraft:ore>);
-utils.rh(<nuclearcraft:ore:1>);
-utils.rh(<nuclearcraft:ore:2>);
-utils.rh(<nuclearcraft:ore:4>);
+Purge(<nuclearcraft:alloy>).ores();
+Purge(<nuclearcraft:alloy:5>).ores();
+Purge(<nuclearcraft:dust>).ores();
+Purge(<nuclearcraft:dust:1>).ores();
+Purge(<nuclearcraft:dust:2>).ores();
+Purge(<nuclearcraft:dust:4>).ores();
+Purge(<nuclearcraft:gem_dust>).ores();
+Purge(<nuclearcraft:gem_dust:2>);
+Purge(<nuclearcraft:gem_dust:3>).ores();
+Purge(<nuclearcraft:gem_dust:6>).ores();
+Purge(<nuclearcraft:gem:6>);
+Purge(<nuclearcraft:ingot>).ores();
+Purge(<nuclearcraft:ingot:1>).ores();
+Purge(<nuclearcraft:ingot:2>).ores();
+Purge(<nuclearcraft:ingot:4>).ores();
+Purge(<nuclearcraft:ore>);
+Purge(<nuclearcraft:ore:1>);
+Purge(<nuclearcraft:ore:2>);
+Purge(<nuclearcraft:ore:4>);
 
 // Unimplemented multiblocks
-utils.rh(<nuclearcraft:heat_exchanger_controller>);
-utils.rh(<nuclearcraft:condenser_controller>);
-utils.rh(<nuclearcraft:heat_exchanger_casing>);
-utils.rh(<nuclearcraft:heat_exchanger_glass>);
-utils.rh(<nuclearcraft:heat_exchanger_vent>);
-utils.rh(<nuclearcraft:heat_exchanger_tube_copper>);
-utils.rh(<nuclearcraft:heat_exchanger_tube_hard_carbon>);
-utils.rh(<nuclearcraft:heat_exchanger_tube_thermoconducting>);
-utils.rh(<nuclearcraft:heat_exchanger_computer_port>);
-utils.rh(<nuclearcraft:condenser_tube_copper>);
-utils.rh(<nuclearcraft:condenser_tube_hard_carbon>);
-utils.rh(<nuclearcraft:condenser_tube_thermoconducting>);
+Purge(<nuclearcraft:heat_exchanger_controller>);
+Purge(<nuclearcraft:condenser_controller>);
+Purge(<nuclearcraft:heat_exchanger_casing>);
+Purge(<nuclearcraft:heat_exchanger_glass>);
+Purge(<nuclearcraft:heat_exchanger_vent>);
+Purge(<nuclearcraft:heat_exchanger_tube_copper>);
+Purge(<nuclearcraft:heat_exchanger_tube_hard_carbon>);
+Purge(<nuclearcraft:heat_exchanger_tube_thermoconducting>);
+Purge(<nuclearcraft:heat_exchanger_computer_port>);
+Purge(<nuclearcraft:condenser_tube_copper>);
+Purge(<nuclearcraft:condenser_tube_hard_carbon>);
+Purge(<nuclearcraft:condenser_tube_thermoconducting>);
 
 // Alloy furnace meant to be only for blocks
 // Remove all ingot and nugget recipes that have blocks
@@ -558,8 +558,8 @@ for alloy in [
 }
 
 // Pebble ingredients
-utils.rh(<nuclearcraft:part:15>);
-utils.rh(<nuclearcraft:alloy:13>);
+Purge(<nuclearcraft:part:15>).ores();
+Purge(<nuclearcraft:alloy:13>).ores();
 
 // [mod][data_type][name][count]
 val nuclearData = {
@@ -609,12 +609,12 @@ for mod, types in nuclearData {
         furnace.addRecipe(isotope, isotope_zirc);
 
       // Pebbles
-      utils.rh(fuel);
+      Purge(fuel).ores().furn();
 
       // Pebbles in fuel reprocessor
       if (key != 'americium' || i != 2) {
         mods.nuclearcraft.FuelReprocessor.removeRecipeWithInput(depleted_fuel * 9);
-        utils.rh(depleted_fuel);
+        Purge(depleted_fuel).ores().furn();
 
         // Everything except Pebbles
         scripts.category.oredict.addItems(<ore:fuelReactor>, [
@@ -632,7 +632,7 @@ for mod, types in nuclearData {
       }
       if (!(key == 'americium' && i == 2)) {
         mods.nuclearcraft.AlloyFurnace.removeRecipeWithOutput(pellet_carbide);
-        utils.rh(pellet_carbide);
+        Purge(pellet_carbide).ores().furn();
       }
 
       if (key != 'mixed' && key != 'thorium'
@@ -648,7 +648,7 @@ for mod, types in nuclearData {
         ) {
           mods.nuclearcraft.DecayHastener.removeRecipeWithOutput(isotope_carbide);
         }
-        utils.rh(isotope_carbide);
+        Purge(isotope_carbide).ores().furn();
       }
     }
   }
@@ -818,7 +818,7 @@ for i, item in batteries {
 
 // --------------------------------------------------------------
 // Remove Hazmat since radiation is disabled
-utils.rh(<nuclearcraft:helm_hazmat>);
-utils.rh(<nuclearcraft:chest_hazmat>);
-utils.rh(<nuclearcraft:legs_hazmat>);
-utils.rh(<nuclearcraft:boots_hazmat>);
+Purge(<nuclearcraft:helm_hazmat>);
+Purge(<nuclearcraft:chest_hazmat>);
+Purge(<nuclearcraft:legs_hazmat>);
+Purge(<nuclearcraft:boots_hazmat>);

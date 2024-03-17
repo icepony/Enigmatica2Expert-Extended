@@ -18,7 +18,7 @@ val toRemove = [
 ] as IItemStack[];
 
 for item in toRemove {
-  utils.rh(item, false, -1, false);
+  Purge(item);
 }
 
 // Add Little Blueprints to Aurora caches

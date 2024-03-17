@@ -3,9 +3,9 @@
 import crafttweaker.item.IIngredient;
 
 // Remove unused upgrades
-utils.rh(<mctsmelteryio:upgrade:1>);
-utils.rh(<mctsmelteryio:upgrade:2>);
-utils.rh(<mctsmelteryio:upgrade:3>);
+Purge(<mctsmelteryio:upgrade:1>);
+Purge(<mctsmelteryio:upgrade:2>);
+Purge(<mctsmelteryio:upgrade:3>);
 
 <mctsmelteryio:upgrade:4>.maxStackSize = 16;
 <mctsmelteryio:upgrade:6>.maxStackSize = 64;

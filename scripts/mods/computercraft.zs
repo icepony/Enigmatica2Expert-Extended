@@ -2,8 +2,8 @@
 
 <computercraft:printout>.maxStackSize = 64;
 
-utils.rh(<computercraft:turtle:1>);
-utils.rh(<computercraft:turtle_advanced>.withTag({ leftUpgrade: 5 as short }));
+Purge(<computercraft:turtle:1>);
+Purge(<computercraft:turtle_advanced>.withTag({ leftUpgrade: 5 as short }));
 
 // Wired Modem
 recipes.remove(<computercraft:cable:1>);

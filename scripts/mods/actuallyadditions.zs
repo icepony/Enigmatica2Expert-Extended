@@ -170,18 +170,13 @@ recipes.addShaped('Atomic Reconstructor',
     [<ore:plateSteel>, <forestry:thermionic_tubes:4>, <ore:plateSteel>]]);
 
 // Removing Recipes
-val recipesToRemove = [
-  <actuallyadditions:item_dust>,
-  <actuallyadditions:item_dust:1>,
-  <actuallyadditions:item_dust:2>,
-  <actuallyadditions:item_dust:4>,
-  <actuallyadditions:item_dust:6>,
-  <actuallyadditions:block_misc:5>,
-] as IItemStack[];
+Purge(<actuallyadditions:item_dust>).ores().furn();
+Purge(<actuallyadditions:item_dust:1>).ores().furn();
+Purge(<actuallyadditions:item_dust:2>).ores().furn();
+Purge(<actuallyadditions:item_dust:4>).ores().furn();
+Purge(<actuallyadditions:item_dust:6>).ores().furn();
+Purge(<actuallyadditions:block_misc:5>).ores().furn();
 
-for items in recipesToRemove {
-  utils.rh(items);
-}
 
 // *======= Empowerer =======*
 
