@@ -65,5 +65,5 @@ craft.remake(<mctsmelteryio:machine:3>, ['pretty',
   '-   -',
   '-   -',
   '-   -'], {
-  '-': <ore:blockSeared>, // Seared Stone
+  '-': <ore:ingotBrickSeared>,
 });
