@@ -7,6 +7,19 @@ import crafttweaker.liquid.ILiquidStack;
 
 <tconstruct:throwball>.maxStackSize = 64;
 
+mods.tconstruct.Melting.addEntityMelting(<entity:iceandfire:hippocampus>, <fluid:liquid_helium> * 20);
+
+// Remove and re-add dragon steel meltable items since they was removed with Gauntlet mod
+mods.tconstruct.Melting.removeRecipe(<fluid:dragonsteel_fire>);
+mods.tconstruct.Melting.addRecipe(<fluid:dragonsteel_fire> * 144, <iceandfire:dragonsteel_fire_ingot>);
+mods.tconstruct.Melting.addRecipe(<fluid:dragonsteel_fire> * 1296, <iceandfire:dragonsteel_fire_block>);
+mods.tconstruct.Melting.addRecipe(<fluid:dragonsteel_fire> * 72, <tconstruct:shard>.withTag({Material: "dragonsteel_fire"}));
+
+mods.tconstruct.Melting.removeRecipe(<fluid:dragonsteel_ice>);
+mods.tconstruct.Melting.addRecipe(<fluid:dragonsteel_ice> * 144, <iceandfire:dragonsteel_ice_ingot>);
+mods.tconstruct.Melting.addRecipe(<fluid:dragonsteel_ice> * 1296, <iceandfire:dragonsteel_ice_block>);
+mods.tconstruct.Melting.addRecipe(<fluid:dragonsteel_ice> * 72, <tconstruct:shard>.withTag({Material: "dragonsteel_ice"}));
+
 // Slime Dirt -> Slime
 val slimeDirts as IItemStack[][IItemStack] = {
   <minecraft:slime_ball>: [
