@@ -290,8 +290,10 @@ craft.remake(<randomthings:spectrecoil_ender>, ['pretty',
 // [Spectre Lens] from [Spectre Ingot][+2]
 craft.remake(<randomthings:spectrelens>, ['pretty',
   '◊ ◊ ◊',
+  '- - -',
   '# ▬ #'], {
   '◊': <ore:gemPearl>,              // Shulker Pearl
+  '-': <ore:plateMithril>,
   '#': <randomthings:spectreplank>, // Spectre Planks
   '▬': <ore:ingotSpectre>,          // Spectre Ingot
 });
