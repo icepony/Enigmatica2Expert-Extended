@@ -33,7 +33,7 @@ function newGasCellRecipe(input as IIngredient, output as IItemStack) {
 
 // ---=== Storage Housings ===---
 
-utils.rh(null, <aeadditions:storage.casing>);
+utils.rh(<aeadditions:storage.casing>);
 newGasCellRecipe(null, <aeadditions:storage.casing:2>);
 
 // ---=== Advanced Cells ===---
