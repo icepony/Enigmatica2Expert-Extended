@@ -72,6 +72,22 @@ for i, poolTuple in garanteedPools {
   pool.addItemEntry(newDrops[i], 1);
 }
 scripts.jei.entity_drop.add(<entity:twilightforest:quest_ram>, newDrops, false);
+
+function abs(n as double) as double { return n < 0 ? -n : n; }
+scripts.do.build_mob.add(<entity:twilightforest:quest_ram>, [
+  ['cw  '],
+  [' xww'],
+  [' w w'],
+], {
+  c: <twilightforest:cicada>,
+  w: <contenttweaker:compressed_string>,
+  x: <contenttweaker:conglomerate_of_life>,
+}, function(world as crafttweaker.world.IWorld, p as crafttweaker.world.IBlockPos) as void {
+  for pl in world.getAllPlayers() {
+    if (abs(pl.x - p.x) > 20 || abs(pl.y - p.y) > 20 || abs(pl.z - p.z) > 20) continue;
+    pl.sendPlaySoundPacket('minecraft:entity.sheep.ambient', 'ambient', p, 1, 1);
+  }
+});
 /////////////////////////////////////////
 
 for tuple in [

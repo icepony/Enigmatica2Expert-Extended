@@ -47,7 +47,10 @@ val lifeRecipes = {
   'minecraft:ocelot'       : { <actuallyadditions:item_hairy_ball>: 4 },
 } as int[IItemStack][string];
 
-<cotBlock:conglomerate_of_life>.onBlockPlace = function (world, p, blockState) { createParticles(world, p); };
+<cotBlock:conglomerate_of_life>.onBlockPlace = function (world, p, blockState) {
+  if (!world.remote) scripts.do.build_mob.build(world, p, blockState);
+  createParticles(world, p);
+};
 <cotBlock:conglomerate_of_life>.onBlockBreak = function (world, p, blockState) { createParticles(world, p); };
 <cotBlock:conglomerate_of_life>.onRandomTick = function (world, p, blockState) {
   if (world.remote) return;
@@ -68,7 +71,10 @@ val lifeRecipes = {
   }
 };
 
-<cotBlock:conglomerate_of_sun>.onBlockPlace = function (world, p, blockState) { createParticles(world, p, 10, 'endRod'); };
+<cotBlock:conglomerate_of_sun>.onBlockPlace = function (world, p, blockState) {
+  if (!world.remote) scripts.do.build_mob.build(world, p, blockState);
+  createParticles(world, p, 10, 'endRod');
+};
 <cotBlock:conglomerate_of_sun>.onBlockBreak = function (world, p, blockState) { createParticles(world, p, 10, 'endRod'); };
 <cotBlock:conglomerate_of_sun>.onRandomTick = function (world, p, blockState) {
   if (world.remote) return;

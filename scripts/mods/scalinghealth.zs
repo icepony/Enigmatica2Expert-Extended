@@ -33,11 +33,5 @@ for mobId, ingr in {
     [h,h,h], ingr, <thermalexpansion:morb>, <fluid:water> * 50, 40);
 }
 
-// Special case for Questing Ram
-mods.rustic.Condenser.addRecipe(
-  <thermalexpansion:morb>.withTag({ id: 'twilightforest:quest_ram' }),
-  [h,<ore:dustMithril>,<twilightforest:cicada>], <twilightforest:magic_map_focus>, <thermalexpansion:morb>, <fluid:water> * 50, 40
-);
-
 // Peaceful alt
 mods.inworldcrafting.ExplosionCrafting.explodeBlockRecipe(<scalinghealth:crystalore>, <minecraft:redstone_ore>, 1);

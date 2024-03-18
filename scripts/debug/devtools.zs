@@ -1,6 +1,8 @@
 #modloaded ctintegration draconicevolution
 #reloadable
 
+#priority 3999
+
 import crafttweaker.block.IBlock;
 import crafttweaker.block.IBlockState;
 import crafttweaker.data.IData;

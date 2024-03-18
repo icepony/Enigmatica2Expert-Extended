@@ -1,8 +1,9 @@
 {
+	title: "{q.twilight_forest.spawn_questing_ram.name}",
 	x: 1.4d,
 	y: -0.4d,
 	text: [
-		"{q.twilight_forest.morb_entity_twilig.desc}"
+		"{q.twilight_forest.spawn_questing_ram.desc}"
 	],
 	dependencies: [
 		"b42dc050"
@@ -10,16 +11,17 @@
 	dependency_requirement: "one_started",
 	size: 0.5d,
 	tasks: [{
-		uid: "f72f1182",
-		type: "item",
-		items: [{
-			id: "thermalexpansion:morb",
+		uid: "b6a5c668",
+		type: "checkmark",
+		icon: {
+			id: "minecraft:spawn_egg",
 			tag: {
-				id: "twilightforest:quest_ram"
+				EntityTag: {
+					id: "twilightforest:quest_ram"
+				}
 			}
-		}],
-		ignore_damage: true,
-		ignore_nbt: 1b
+		},
+		disable_toast: true
 	}],
 	rewards: [{
 		uid: "0fcab2df",
