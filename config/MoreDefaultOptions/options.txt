@@ -393,6 +393,19 @@ key_quark.keybind.playerSort:0
 key_quark.keybind.toggleAutojump:0
 key_Rotate Vehicle Left:30
 key_Rotate Vehicle Right:32
+key_rpsideas.kb.offhandcast:0
+key_rpsideas.kb.switchslot01:0
+key_rpsideas.kb.switchslot02:0
+key_rpsideas.kb.switchslot03:0
+key_rpsideas.kb.switchslot04:0
+key_rpsideas.kb.switchslot05:0
+key_rpsideas.kb.switchslot06:0
+key_rpsideas.kb.switchslot07:0
+key_rpsideas.kb.switchslot08:0
+key_rpsideas.kb.switchslot09:0
+key_rpsideas.kb.switchslot10:0
+key_rpsideas.kb.switchslot11:0
+key_rpsideas.kb.switchslot12:0
 key_schematica.key.control:72
 key_schematica.key.layerDec:0
 key_schematica.key.layerInc:0
