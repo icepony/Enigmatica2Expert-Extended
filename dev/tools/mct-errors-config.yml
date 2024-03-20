@@ -224,7 +224,7 @@ ignore:
   - '\[main/WARN\] \[ModDirector/ForgeLateLoader\[Launchwrapper\]\]: Failed to find deobf tweaker'
 
   # Known, "It's just logging, you can ignore it." https://github.com/LoliKingdom/LoliASM/issues/51'
-  - '\[Finalizer/WARN\] \[LoliASM\]: Clearing LoliStringPool 1'
+  - WARN. .LoliASM.. Clearing (LoliVertexDataPool|LoliStringPool 1)
 
   # LoliASM dev say i need to ignore that
   - .main/WARN. .LoliASM.. Replacing CA Certs with an updated one...
@@ -252,6 +252,7 @@ ignore:
   - '\[main/WARN\] \[Bansoukou\]: Removing .+'
 
   - 'ERROR. \[(jei|HadEnoughItems)\]: Failed to register mod categories: class lykrast.jetif.JETIFPlugin'
+  - WARN. .jetif.. Couldn't load config field for Flux Networks, report this issue on JETIF's GitHub
   - '\[FML\]: Overriding existing radiation moderator data for '
   - 'ERROR\] \[reborncore\]: Invalid fingerprint detected for RebornCore'
   - 'WARN\] \[mixin\]: Reference map .mixins\.forkedproxy\.refmap\.json. for mixins\.forkedproxyearlymixins\.json could not be read'
@@ -284,8 +285,14 @@ ignore:
   # Some Universal Tweaks Mixin problems. Reported https://github.com/ACGaming/UniversalTweaks/issues/181
   - WARN. .mixin.. @Mixin target net/minecraft/client/renderer/BlockModelRenderer.AmbientOcclusionFace is public in mixins.bugfixes.misc.smoothlighting.json:UTSmoothLightingMixin and should be specified in value
 
+  # Universal Tweaks corrupted jar. Reported: https://github.com/ACGaming/UniversalTweaks/issues/406
+  - .Client thread/ERROR. .FML.. Unable to read a class file correctly
+
   # Even if you disable this configs, its still erroring
   - .main/ERROR. .Aqua Acrobatics Transformer.. Disabling soul sand and magma mixins as requested in config
+  - UniversalTweaks-.+.jar - probably a corrupt zip
+  - Zip file UniversalTweaks-.+.jar failed to read properly, it will be ignored
+  - WARN. .mixin.. @Final .+UTCompactMessageMixin from mod UniversalTweaks.+ should be final
 
   # CraftPresence error - dont know how to configure this
   - ERROR. .craftpresence.. Asset name "enigmatica2expert-extended" does not exist, attempting to use an alternative icon "curse"...
@@ -317,6 +324,13 @@ ignore:
   - ERROR. .org.embeddedt.vintagefix.dynamicresources.model.DynamicModelProvider.. Failed to load model .+
   - ERROR. .org.embeddedt.vintagefix.dynamicresources.model.DynamicBakedModelProvider.. Error occured while loading model .+
   - ERROR. .VintageFix.. Suppressing further model loading errors for namespace .+
+  - WARN. .mixin.. @Mixin target mod.chiselsandbits.chiseledblock.data.VoxelBlob was not found mixins.vintagefix.late.json:dynamic_resources.VoxelBlobMixin from mod unknown-owner
+  - WARN. .mixin.. @Mixin target com.raoulvdberge.refinedstorage.proxy.ProxyClient was not found mixins.vintagefix.late.json:dynamic_resources.RSProxyClientMixin from mod unknown-owner
+  - WARN. .mixin.. @Mixin target pl.asie.ucw.util.ModelLoaderEarlyView was not found mixins.vintagefix.late.json:dynamic_resources.MixinModelLoaderEarlyView from mod unknown-owner
+  - WARN. .mixin.. @Mixin target thebetweenlands.client.render.model.loader.CustomModelLoader was not found mixins.vintagefix.late.json:dynamic_resources.MixinCustomBetweenlandsModels from mod unknown-owner
+
+  # Other VintageFix warns
+  - WARN. .mixin.. @Final field field_73244_f:Lit/unimi/dsi/fastutil/longs/Long2ObjectMap; in mixins.vintagefix.+ from mod unknown-owner should be final
 
   # Hide all texture errors since they mostly have no effect on game (textures for unused items)
   - ERROR. .FML.TEXTURE_ERRORS..
@@ -327,11 +341,18 @@ ignore:
   - WARN. .VintageFix Mixin Loader.. Not applying mixin '.+' as '.+' is disabled in config
   - WARN. .VintageFix.. Can't preload sprite class
 
+  # Reported: https://github.com/ACGaming/UniversalTweaks/issues/408
+  - Mixin apply for mod unknown-owner failed mixins.tweaks.blocks.sapling.json:UTSaplingMixin from mod unknown-owner -> net.minecraft.block.BlockSapling. org.spongepowered.asm.mixin.transformer.throwables.InvalidMixinException @Overwrite method TickCentral_TrueUpdateTick in mixins.tweaks.blocks.sapling.json:UTSaplingMixin from mod unknown-owner was not located in the target class net.minecraft.block.BlockSapling. Using refmap universaltweaks.refmap.json
+
   # ProbeZS but its only for Dev environment
   - probezs
+  - ProbeZS
 
   # Malek's Infinity Gauntlet make this error happens, but we dont care about this IC2 loot chest additions
   - ERROR. .net.minecraft.world.storage.loot.LootTableManager.. Couldn't load loot table (ic2:chests/|endreborn:inject)
+
+  # Malek's Infinity Gauntlet oredict errors
+  - WARN. .FML.. . Invalid registration attempt for an Ore Dictionary item with name etLaserLens has occurred. The registration has been denied to prevent crashes. The mod responsible for the registration needs to correct this.
 
   # In E2EE i removed Lua 5.2 and 5.4 libraries from .jar
   - WARN. .opencomputers.. Native library with name 'libjnlua5(2|4)-windows-x86_64.dll' not found.
@@ -339,3 +360,57 @@ ignore:
 
   # Hide infinity itemEditor since we dont care
   - ERROR\] \[Had Enough Items\]. Creative tab crashed while getting items\. Some items from this tab will be missing from the item list\. ruukas\.infinityeditor\.tab\.InfinityTab
+
+  # Seed Reprocessor and Tinkering Table doesnt show in JEI
+  # Its funny since we actually dont need them
+  - ERROR. .Had Enough Items.. Failed to register mod plugin. class com.blakebr0.mysticalagriculture.compat.jei.CompatJEI
+
+  # JustEnoughMagiculture problems. Reported: https://github.com/Invadermonky/JustEnoughMagiculture/issues/4
+  - ERROR. .net.minecraft.world.storage.loot.LootTableManager.. Couldn't load loot table twilightforest:structures/graveyard/rare from .+twilightforest.+
+  - WARN. .net.minecraft.world.storage.loot.LootTableManager.. Couldn't find resource table betteranimalsplus:pheasant
+  - WARN. .net.minecraft.world.storage.loot.LootTableManager.. Couldn't find resource table betteranimalsplus:turkey
+  - WARN. .net.minecraft.world.storage.loot.functions.Smelt.. Couldn't smelt 1xitem.frog_leg@0 because there is no smelting recipe
+
+  # Harmless, "interpreter" is a function that handles items with different NBT
+  - ERROR. .Had Enough Items.. An interpreter is already registered for this item. exnihilocreatio.modules.tconstruct.tools.SledgeHammer.+
+  - ERROR. .Had Enough Items.. An interpreter is already registered for this item. exnihilocreatio.modules.tconstruct.tools.TiCrook.+
+
+  # zenutils warn, reported https://github.com/friendlyhj/ZenUtils/issues/42
+  - WARN. .+ mixins.zenutils.vanilla.json:MixinForgeHooks .+ exceeds the maximum allowed value. 0. Increase the value of maxShiftBy to suppress this warning.
+
+  # RandomTweaker warning caused by not installed mod, reported https://github.com/Project-RT/RandomTweaker/issues/78
+  - WARN. .mixin.. @Mixin target .+FTBUltimineClient was not found mixins.randomtweaker.mods.json:ftbultimine.MixinFTBUltimineClient from mod unknown-owner
+
+  # Developers usually lazy to add refmaps
+  - WARN. .mixin.. Reference map 'mixins.randomtweaker.refmap.json' for mixins.randomtweaker.mods.json could not be read. If this is a development environment you can ignore this message
+
+  # MIA ERRORS when its modules partially disabled
+  - ERROR. .Had Enough Items.. A Recipe Handler has already been registered for 'jeresources.+'. jeresources.entry.+
+
+  # ##################
+  # Java 21 errors
+  # ##################
+
+  # geeky_kappa explanation:
+  # "Many mods bundle a copy of Mixin and add MixinTweaker to its manifest. Launchwrapper/Bouncepad don't like to call same tweaker twice. If you have lots of mod doing this that's what you got."
+  - WARN. .Bouncepad.. Tweak class name org.spongepowered.asm.launch.MixinTweaker has already been visited -- skipping
+
+  # "It's trying to inject itself into coremod, but launchwrapper was broken on codesource"
+  - at snownee.minieffects.core.CoreMod..init..CoreMod.java:26. ~.CoreMod.class:?.
+
+  # Fixed in later cleanroom versions
+  - ERROR. .org.spongepowered.asm.service.mojang.MixinServiceLaunchWrapper.. MixinBootstrap.doInit.. called during a tweak constructor!
+
+  # Other warnings and errors
+  - WARN. .LaunchWrapper.. .Bouncepad. Uppatched ASM\d+ to ASM9 on class. .+, please port the mod to Cleanroom!
+  - WARN. .FML.. A mod is using javax classes. .+, please find it out using recaf or similar and report to its mod author.
+  - ERROR. .FML.. UUID .+ is being processed with the approach from Java 8 for compatibility's sake. This UUID is malformed!
+  - ERROR. .Aqua Acrobatics.. Please consider installing MixinBooter to ensure compatibility with more mods
+  - WARN. .mixin.. Reference map 'fugue.mixin.refmap.json' for .+ could not be read. If this is a development environment you can ignore this message
+
+  # Errors even Cleanroom devs doesnt know what means
+  - WARN\] \[mixin\]. Mixin apply for mod UniversalTweaks.+ from mod UniversalTweaks.+::utOverrideOpposingSideCheck with priority 1000 cannot inject into .+RenderGlobal
+  - WARN. .mixin.. Injection warning. LVT in twilightforest/block/BlockTFMagicLogSpecial::doTreeOfTransformationEffect
+
+  # class malfunction, should be harmful but not sure
+  - WARN. .FML.. Couldn't remap class net.minecraft.entity.ai.attributes.AbstractAttributeMap

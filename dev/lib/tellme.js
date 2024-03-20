@@ -59,7 +59,8 @@ export function isJEIBlacklisted(def, meta) {
 
 /** @param {string} ctCapture */
 export function isPurged(ctCapture) {
-  return getPurged().has(ctCapture) || getPurged().has(ctCapture.replace(':0>', '>'))
+  const capNoAmount = ctCapture.replace(/ \* \d+/, '')
+  return getPurged().has(capNoAmount) || getPurged().has(capNoAmount.replace(':0>', '>'))
 }
 
 /** @type {Set<string>} */

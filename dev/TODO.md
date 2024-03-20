@@ -3,12 +3,23 @@
 🚧✅❌⚠️ List of priorities:
 
 - [ ] 🟢 Integrate `psideas` mod
-- [x] 🔴 Remove `WorldgenIndicators` since causing 20% worldgen lag https://github.com/Buuz135/WorldGen-Indicators/issues/7
 - [ ] ✏️ Remove removed item from Overworld Explorer villager trades
 - [ ] 🌍 Stop using `iceandfire:frozen_*` as this is random ticking blocks, causing TPS strain
-- [ ] ✏️ Rework size changings
 - [ ] ❓ Skeletons shoot tipped arrows
 - [ ] 🌍 monster boxes are broken?
+- [ ] ✏️ Remove Bibliocraft's chests + Add little tiles fancy chest with lot of space instead
+- [ ] 🌍 Add world generation methods warnings
+- [ ] 🌍 Populate villager's chests
+- [ ] ✏️ Tweak Botania Extended Crafting Tables recipes to non-tech
+- [ ] 📖 Advanced Crafting Tables should accept Botania tables too
+- [ ] 📖 Creative Builder Wand ignore nbt
+- [ ] 📖 Move High Oven tip to quest instead of tips
+- [ ] ✏️ Buff EU saber - give it more damage? But better split entities in two. Material changer cant change its attack speed. BHT cant skip its frames too
+- [ ] ✏️ Golem should grow bigger on kills
+- [ ] ✏️ Remove fluid housing from AE Additions, it has no use
+- [ ] 👩‍🦰 Add warning of not installed mods like MCTSmelteryIO or Netherending Ores
+- [ ] 👩‍🦰 Add warnings about wrong world type
+- [ ] 🌍 SavannaEdge doesnt show light level
 
 ---
 
@@ -18,82 +29,118 @@
 
 Planned non-urgent changes, or just good ideas:
 
-- [ ] 🟢 Return Village Names https://legacy.curseforge.com/minecraft/mc-mods/village-names/issues/18
-- [ ] 🟡 Update `Precision Mining` when fixed https://codeberg.org/PORTB/PrecisionMiningRewrite/issues/4
-- [ ] 🟡 Update REID when fixed https://github.com/TerraFirmaCraft-The-Final-Frontier/RoughlyEnoughIDs/issues/37
-- [ ] 🌍 Remove Poison Ivy from OTG generator. Its `biomesoplenty:plant_0:4` but i cant find where it defined
-- [ ] 🌍 `122 Kepler 0118` improve generation (right now its just plain graphite)
-- [ ] ✏️ Integrate `Orbital Laser Drill` better. It can mine ores on planet orbits for skyblock.
-- [ ] 🌎 fix Tropical Gardens Spawn In OTG Frozen Ocean
-- [ ] ✏️ Star Of Psi should be obtainable in no-power run
-- [ ] 🕸 Create issues about IC2 Reactor in compact machine and cables disconnection
-- [ ] 🐛 If Conarm armor have huge durability (>65,000), when it get damage over 50% its repairing to 100% and become unbreakable. On some cases it void armor from inventory instead
-- [ ] 🟢 Return `TwilightTweaks` when fixed https://github.com/LoliKingdom/Bansoukou/issues/5
-- [ ] ✏️ `Critical Matter Cluster` add usages and mechanics (obtained with shift+right click of World Breaker)
-- [ ] ✏️ Add bar for diverse/charge singularity by making custon CoT item with durability.
-- [ ] 📖 sort TC book By Material Power, need fix: https://github.com/Project-RT/RandomTweaker/issues/67
-- [ ] ✏️ Apiarist Villagers should sell Combs cor Cacoa. Seems like its impossible to remove Apiarist trades with `vtt` mod
-- [ ] 📖 Improve messages "Player Obtained [...]" with `tellraw` command. Cant untill fix `/tellraw` for Discord
+### "Flora & Fauna" expansion
+- [ ] ✏️ Rework size changings
+- [ ] ✏️ Woodweave singularity add required amount
+- [ ] ✏️ Rework Entity melting in Smeltery + add JEI category
+- [ ] ✏️ Use `Mulch` as ingredient
+- [ ] ✏️ Use `Gorgon Head` as ingredient
+- [ ] ✏️ Use `Eye of Cyclops` as ingredient
+- [ ] ✏️ Use `Huge Stalk` as ingredient
+- [ ] 🌌 Add `Meat singilarity` - diversity of raw or cooked meat
 - [ ] ✏️ `Harbinger Cube` must spawn with strong Iron/Diamond skin effects and as Blight
-- [ ] 🌍 fix Mercury Have Water
-- [ ] ✏️ Add more seeds compat for Graden Cloche https://github.com/michelegargiulo/ZenCloche/wiki
-- [ ] 🔨 fix Invincible Combo `Strength Of Will` + `Runic Shield`
-- [ ] ✏️ Fix Health boost potion recipe (one from gold ingot)
-- [ ] 📖 Add new `Conflux VI` level based on 100% trophy completion
 - [ ] ✏️ Add mobs that always blights (probably breedable mobs)
 - [ ] ✏️ Moon stone could be used in Animals chapter
-- [ ] ✏️ Dank Null go out of ExtendedCrafting (keep EC recipes for end-tier)
-- [ ] 📖 Fix achievments: end reborn hammer, Rats cauldron, Quark decor
-- [ ] 📖 Fix conflux and chapter messages to be localized
-- [ ] 📖 FTBQuest can have links by `Custom Click` field
-- [ ] ✏️ Completely move AdvRocketry to tweaker mod instead of XML
-- [ ] 🟢 Add https://github.com/Olivoz/ExtendedConfigs
+- [ ] ✏️ Add more seeds compat for Graden Cloche https://github.com/michelegargiulo/ZenCloche/wiki
 - [ ] ✏️ Add `Block Shrooms` + `salis mundus` => `something` recipe
 - [ ] ✏️ blight Tamed Always Drop Something. Problem: dont know how to determine if entity is tamed
+- [ ] 🐀 Fix rats not spawn on garbage piles (they actually spawn in singleplayer)
+- [ ] 🐀 Add Ratlantis Portal spread
+- [ ] 🌳 Flora rework: Add immersive usage of trees. Padauk Tree could be used to get Gold. Fireproof obtainable only by breeding
+- [ ] ✏️ Quark Frog Drop Cooked Legs on death
+- [ ] 🐀 Compressed Garbage Piles should spawn rats sometimes
+- [ ] ✏️ Add Ethereal trees usage
+- [ ] ✏️ Add craft `Rat hole` + `Salis Mundus` -> `Something`
+- [ ] ✏️ Milk Questing Ram to color essence
+- [ ] 🔄 Add `Cow Hacker` feature. Buff cow with 2-3 special potions based on their UUID to turn it into drop generator.
+- [ ] ✏️ Dragon Ice better craft isages
+
+### "Endgame" expansion
+- [ ] ✏️ Integrate `Orbital Laser Drill` better. It can mine ores on planet orbits for skyblock.
+- [ ] ✏️ `Critical Matter Cluster` add usages and mechanics (obtained with shift+right click of World Breaker)
+- [ ] 📖 Add new `Conflux VI` level based on 100% trophy completion
+- [ ] 🌍 Alien Forest add JER data
+- [ ] 📖 add Note that QMD multiblocks need `Liquid Helium` Cooler
+- [ ] ✏️ Draconic Metals made in QMD multiblocks
+- [ ] ✏️ `.numericalId` may be used to LibVulpes ghost blocks to preview structures. It can be preview for possible QMD coolers
+- [ ] 🪐 NC have its own "Wasteland" dim - make Use Of it
+- [ ] ✏️ RFTools `Dimension building` make cheaper by balancing possible dimlets
+- [ ] ✏️ QMD atmosphere collector for other dims
+- [ ] ✏️ Better Integrate `QMD`
+- [ ] ✏️ Better Integrate `Trinity`
+- [ ] ✏️ Add usage of `Perfect Fuel` in NCO (with `flux goo` as sub-product)
+- [ ] ✏️ Some QMD / NCO craft MUST use <opencomputers:print>
+- [ ] 🌍 AdvRock geodes should contain modded ores (use <geodeOres> XML tag)
+- [ ] ✏️ Nerf IO spike metals (carapace with `Bedrock cobblestone` + `Bedrock Ore` inside instead of pure blocks)
+- [ ] ✏️ Creative Impetus add recipe
+- [ ] ✏️ Draconic Evolution infusion can use trillions RF
+- [ ] ✏️ Add [](https://is.gd/OcNNZN "Uncrafting Grinder") as Endgame item, right before creative upgrade
+
+### "Multiplayer" expansion
+
+- [ ] 💬 Add messages "Player killex xxx mobs! WOW" with respective loot box reward. Ideas: Mined blocks, Jumps
+
+### Mods
+- [ ] 🟠 Do not update `Xaero's Map` - Crash on world join
+- [ ] 🟢 Return Village Names when fixed https://legacy.curseforge.com/minecraft/mc-mods/village-names/issues/18
+- [ ] 🟡 Update `Precision Mining` when fixed https://codeberg.org/PORTB/PrecisionMiningRewrite/issues/4
+- [ ] 🟡 Update REID when fixed https://github.com/TerraFirmaCraft-The-Final-Frontier/RoughlyEnoughIDs/issues/37
+- [ ] 🟢 Add **Legendary Tooltips** when fixed: https://github.com/AHilyard/LegendaryTooltips/issues/47
+- [ ] 🟢 Add **Fancier Particles** (note gitignore) when fixed: https://github.com/Red-Studio-Ragnarok/Fancier-Block-Particles/issues/12
+- [ ] 🟢 Add **quality-tools**
+- [ ] 🟢 Add **everlastingabilities**
+- [ ] 🟢 Install `Steve Carts` when someone make complete integration
+- [ ] 🟢 Install `OpenGlasses2` - could help to find turnable blocks from coal
+- [ ] 🟠 Do not update `JAOPCA` - uncompatible with JAOPCACustom
+- [ ] 🟠 Do not update `spark` (not working propertly)
+- [ ] 🟢 Add Nothirium when fixed https://github.com/Meldexun/Nothirium/issues/9
+- [ ] 🟢 Return Custom Loading Screen when fixed [this](https://github.com/AlexIIL/CustomLoadingScreen/issues/74)
+- [ ] 🟢 Add [Heat And Climate](https://www.curseforge.com/minecraft/mc-mods/heat-and-climate)
+- [ ] 🟢 Add https://github.com/Olivoz/ExtendedConfigs
+
+### Other
+
+- [ ] ✏️ Add bar for diverse/charge singularity by making custon CoT item with durability.
+- [ ] 🌍 Remove Poison Ivy from OTG generator. Its `biomesoplenty:plant_0:4` but i cant find where it defined
+- [ ] 🌍 `122 Kepler 0118` improve generation (right now its just plain graphite)
+- [ ] 🌎 fix Tropical Gardens Spawn In OTG Frozen Ocean
+- [ ] 🕸 Create issues about IC2 Reactor in compact machine and cables disconnection
+- [ ] 🐛 If Conarm armor have huge durability (>65,000), when it get damage over 50% its repairing to 100% and become unbreakable. On some cases it void armor from inventory instead
+- [ ] 📖 sort TC book By Material Power, need fix: https://github.com/Project-RT/RandomTweaker/issues/67
+- [ ] ✏️ Apiarist Villagers should sell Combs cor Cacoa. Seems like its impossible to remove Apiarist trades with `vtt` mod
+- [ ] 🌍 fix Mercury Have Water
+- [ ] 🔨 fix Invincible Combo `Strength Of Will` + `Runic Shield`
+- [ ] ✏️ Fix Health boost potion recipe (one from gold ingot)
+- [ ] ✏️ Dank Null go out of ExtendedCrafting (keep EC recipes for end-tier)
+- [ ] 📖 Fix achievments: end reborn hammer, Rats cauldron, Quark decor
+- [ ] ✏️ Completely move AdvRocketry to tweaker mod instead of XML
 - [ ] 🧩 Make Platforms from Random Things with metal texture instead of wood
 - [ ] ✏️ disable Excavate Ench For Pickarang
 - [ ] ✏️ Transfer liquid interaction to Witch Water, remove `Plus Tweaks`
 - [ ] ✏️ invent Tool For Robot With Low Durability
 - [ ] ✏️ Printing and assembling Chaos Guardian spawns Chaos Guardian
-- [ ] 🟢 Add https://github.com/Project-RT have `string[] IItemStack.getAspects()` method
 - [ ] 🔄 Disable Skeletons on horses since they cause random explosions
 - [ ] 💥 going Between Dims Causing Client Freezez / memory leak
-- [ ] 🌍 Alien Forest add JER data
-- [ ] 📖 add Note that QMD multiblocks need `Liquid Helium` Cooler
 - [ ] ✏️ `Burnt in fluid` fix accept any meta
 - [ ] 📖 Describe Skyblock quests
 - [ ] 📀 Rustic's barrel make as x4 chests but without GUI or change somehow else to make more fun.
-- [ ] ✏️ Add recipes of throwing items into Ratlantis portal
-- [ ] 🐀 Fix rats not spawn on garbage piles (they actually spawn in singleplayer)
-- [ ] 🌍 Teleport player to Alien Forest on Alfheim interaction or with Blood Magic TP ritual
+- [ ] 🌍 Teleport player to Alien Forest with Blood Magic TP ritual
 - [ ] ✏️ Lootr still turn Dispensers into Lootr Chests https://github.com/noobanidus/Lootr/issues/189
 - [ ] ✏️ Nature chests still turn into Lootr
-- [ ] ✏️ twlight forest advancement not showing up in advancement tab v1.2.1. Need conformation
+- [ ] 💅 twlight forest advancement not showing up in advancement tab v1.2.1. Need conformation
 - [ ] ✏️ Make use of IC2 brewing
-- [ ] ✏️ Buff EU saber and give it more damage. Material changer cant change its attack speed. BHT cant skip its frames too
-- [ ] ✏️ Draconic Metals made in QMD multiblocks
 - [ ] 🔄 Implement https://github.com/Divine-Journey-2/Divine-Journey-2/pull/829
-- [ ] ✏️ `.numericalId` may be used to LibVulpes ghost blocks to preview structures. It can be preview for possible QMD coolers
-- [ ] ✏️ Thaumic Slime add interesting drop
 - [ ] ✏️ reduce Dungeon Loot Chest Item kinds to not overfill containers
-- [ ] 🌳 Flora rework: Add immersive usage of trees. Padauk Tree could be used to get Gold. Fireproof obtainable only by breeding
-- [ ] 🪐 NC have its own "Wasteland" dim - make Use Of it
-- [ ] ✏️ Buff mek steam a little
+- [ ] 🚂 Buff mek steam a little
 - [ ] 📖 Better document Butterfly => Wasp transform in Nether Portal
 - [ ] 📖 Fix completion of quest chapters
 - [ ] ✏️ Chemical thrower turns stone into ore if spreading on exact block (calculated based on world seed). Can be determined with Computer
-- [ ] ✏️ RFTools `Dimension building` make cheaper by balancing possible dimlets
 - [ ] ✏️ `Conglomerate of Life` spawns Foxes and Pigmen near portal
 - [ ] 🔨 rework Difficulty Trait, add efficiency growth
-- [ ] ✏️ Quark Frog Drop Cooked Legs on death
 - [ ] ✏️ Rebalance Sage and Druids trades
 - [ ] ✏️ Add compressed `Charged Creeper chunk`
 - [ ] ✏️ Make `Seared Stone` + `Essence` alternative in adv. machinesl
 - [ ] 🔄 Make use of Trait table https://docs.google.com/spreadsheets/d/1b12aEIsTEViJtkW69HohADqaEVMkhb4rkbpwV3G6pIw/edit#gid=872731912
-- [ ] ✏️ QMD atmosphere collector for other dims
-- [ ] ✏️ Better Integrate `QMD`
-- [ ] ✏️ Better Integrate `Trinity`
-- [ ] 🐀 Compressed Garbage Piles should spawn rats sometimes
 - [ ] ✏️ Glass fiber harder (clear glass maybe)
 - [ ] ✏️ NC Motor replace by IC2 motor or change recipes
 - [ ] ✏️ Better Comments of Framed Drawers recipes
@@ -102,10 +149,8 @@ Planned non-urgent changes, or just good ideas:
 - [ ] 🔄 Carryon change render for EIO warehouse
 - [ ] ✏️ Find a peaceful way for `scan crimson cultists` `get dimensional fracture` `get to emptyness dimension`. Could be skipped with Tome. https://discord.com/channels/911676461050642432/1064813931966779392/1078266283910496409
 - [ ] 🌍 Some OTG biomes have no Ore spawn because they use not Stone. (Biome serach: `StoneBlock: (?!STONE)\w+`)
-- [ ] ✏️ Add usage of `Perfect Fuel` in NCO (with `flux goo` as sub-product)
 - [ ] 📀 Make ic2 crops scanned by default
 - [ ] ⚙️ Make Replicator Accept Mem Crystals
-- [ ] ✏️ Some QMD / NCO craft MUST use <opencomputers:print>
 - [ ] ✏️ Remove Fiery fruit from Target Chamber recipe
 - [ ] 🔄 Inspect crash when placing Replicator near energy and break it
 - [ ] 📖 Add quest book chapter about built-in excavators
@@ -121,57 +166,33 @@ Planned non-urgent changes, or just good ideas:
 - [ ] 🔨 Add trait that auto-consume Sharpening Kits to repair TCon Tools
 - [ ] 🔨 Rework Grinding trait
 - [ ] ✏️ Add AS Grindstone recipe that rely on doubling chance mechanic
-- [ ] ✏️ Add Ethereal trees usage
 - [ ] 📖 Add AS ritual to quest book
 - [ ] 💻 Add info about OC changes like https://www.reddit.com/r/feedthebeast/comments/98phxv/filtering_by_nbt_tag/
 - [ ] 🔄 Make `scripts/jei` files not loaded on server
-- [ ] 🔄 Items textures not animated too when **Animated Terrain** disabled
+- [ ] 🐛 Items textures not animated too when **Animated Terrain** disabled
 - [ ] 📖 Obtaining any **sharpening kit** finishes quest for this **mining level**
-- [ ] 🟢 Add **Legendary Tooltips** when fixed: https://github.com/AHilyard/LegendaryTooltips/issues/47
-- [ ] 🟢 Add **Fancier Particles** (note gitignore) when fixed: https://github.com/Red-Studio-Ragnarok/Fancier-Block-Particles/issues/12
-- [ ] 🟢 Add **quality-tools**
-- [ ] 🟢 Add **everlastingabilities**
 - [ ] ✏️ Petrotheum `Conflux I` craft, probably Quicksand => Tube => Petrotheum
 - [ ] ⚡ Remove automatic IE armor recycling to speed up game load
-- [ ] ✏️ Compressed Block remove too much aspects - they could be easy used to spawn rifts
 - [ ] ✏️ Add craft mechanic - Mud Ball hit something (called "humilate")
-- [ ] 📖 Add little tiles fancy chest with lot of space
 - [ ] ✏️ Add mobs in Mek's gear
-- [ ] 🌍 AdvRock geodes should contain modded ores (use <geodeOres> XML tag)
-- [ ] ✏️ Nerf IO spike metals (carapace with `Bedrock cobblestone` + `Bedrock Ore` inside instead of pure blocks)
 - [ ] ✏️ Remove Cyclic's machines completely because they are laggy
-- [ ] ✏️ Add craft `Rat hole` + `Salis Mundus` -> `Something`
 - [ ] 📖 List of items that may be add into loot boxes in future: https://i.imgur.com/G0A2KF1.png
 - [ ] 🔄 Add custom progression for Twilight Forest based on Quest Book, since achievments can be disabled
-- [ ] ✏️ More Alien Crystal blocks + mica to get Crystaltine and ET gems
-- [ ] ✏️ Milk Questing Ram to color essence
-- [ ] 🟢 Install `Steve Carts`
-- [ ] 🟢 Install `OpenGlasses2`
 - [ ] 📀 Fix NPE https://is.gd/wZprY2
-- [ ] 🔄 `/punish` command - players can punish other players on server
 - [ ] ✏️ Add multiblock structure that speed up blocks like Time In Bottle, but based on numbers of mobs around https://is.gd/tPPqt2
 - [ ] 📀 Adv. Rock tank left 64 buckets when broken
-- [ ] 🟠 Do not update `JAOPCA` - uncompatible with JAOPCACustom
-- [ ] 🟠 Do not update `spark` (not working propertly)
 - [ ] 🔄 After getting 30 hearts, player need to relog to enter nether
 - [ ] 🔄 Check why mobs are not spawned enough (less then 70 for whole server)
-- [ ] ✏️ Creative Impetus add recipe
 - [ ] ✏️ Rethink HedgeAlchemy, add recipes for essential tech-alike ingredients
 - [ ] ✏️ Fix main Vis Crystals doubled in JEI (happens because of Rustic add into JEI everything in output of Alchemical)
-- [ ] 🟢 Add Nothirium when fixed https://github.com/Meldexun/Nothirium/issues/9
 - [ ] 📀 Colossal Chests make bigger interface
 - [ ] ✏️ Drop items onto garbage piles to make pile bigger
 - [ ] ✏️ ? Quark Crystals: orange -> topaz nuggets, violet -> tanzanite nuggets, yellow -> brass nuggets
 - [ ] ✏️ Fix Green fertilizer output additional crop even if not grown (carrots)
-- [ ] 🔄 Add `Cow Hacker` feature. Buff cow with 2-3 special potions based on their UUID to turn it into drop generator.
-- [ ] ✏️ Dragon Ice better craft isages
-- [ ] ⚡ Remake Inworld Crafting
-- [ ] ✏️ Draconic Evolution infusion can use trillions RF
 - [ ] ✏️ Spray Pyrotheum or other liquids to turn blocks into charcoal or other stuff.
 - [ ] ✏️ Change `Expire in block` craft to be faster
-- [ ] ✏️ ![](https://github.com/Krutoy242/mc-icons/raw/master/i/iceandfire/ash__0.png "Ash") add to liquid interaction
+- [ ] ✏️ `Ash` add to liquid interaction
 - [ ] ✏️ Remove wrong nuggets from Infernal Furnace
-- [ ] ✏️ Add [](https://is.gd/OcNNZN "Uncrafting Grinder") as Endgame item, right before creative upgrade
 - [ ] ✏️ Fix Omega Potion Elixir ingredient have weird scrolling
 - [ ] 🔄 Add neural interface searching: with neural interface and special program find special blocks
 - [ ] ✏️ ![](https://git.io/JCt00 "Creative Harvest") add more crafts
@@ -180,20 +201,19 @@ Planned non-urgent changes, or just good ideas:
 - [ ] 🌍 Add new AdvRocke atmospheres
 - [ ] 🌍 Add water animals at dim 118
 - [ ] 🌿 Patchouli: Change **texture** of book
-- [ ] 🏪 ![](https://git.io/J3p8B "Infinity Furnace") add speed upgrades
-- [ ] 🔄 **Perfect Fuel** Fix texture. Now it uses default one.
 - [ ] 🔄 Fix Custom Animals drops non-cooked meat
 - [ ] 🔨 ![](https://git.io/JnzzI "Glitch Infused Ingot") add material. Ability: drom matter from mobs
 - [ ] 🔨 Add armor trait that speed up gain for `Time In Bottle`
-- [ ] 🔨 Add teleportation trait. 1. Set point, 2. Break special glass-like block to teleport
 - [ ] 🔨 Ironwood Add material. Drop Armor from mobs on hit
-- [ ] 🟢 Return Custom Loading Screen when fixed [this](https://github.com/AlexIIL/CustomLoadingScreen/issues/74)
-- [ ] 🟢 Add [Heat And Climate](https://www.curseforge.com/minecraft/mc-mods/heat-and-climate)
 - [ ] ⛏️ Mining levels rework. There is too much mining levels.
   > * [ ] Higher Mining level Ore should spawn lower
   > * [ ] Remove Excess Mining levels:
   >   1. Collapse first 7 tiers in 5, as in vanilla. (Flint, Iron, Redstone, Obsidian, Cobalt)
   >   2. Collapse last 7 tiers into 3. (Osgloglas, Enderium/Titanium, Supremium).
+
+### Mods to remove for "Lite" version
+
+- `Libnine`: `Fluid Drawers`
 
 ---
 
@@ -224,28 +244,21 @@ Items that should have more uses:
 
 ### Tier 2
 
-![](http://tinyurl.com/forestry-mulch "Mulch")
 ![](http://tinyurl.com/Printed-Page "Printed Page")
 ![](https://git.io/JLhhL "Infinity Reagent")
 ![](https://git.io/JGGh7 "Mana Infused Ingot")
 ![](https://git.io/JnN1t "Sun Crystal")
 ![](https://git.io/JRLSJ "Ice Shard")
 ![](https://git.io/JRnDa "Tar")
-![](http://tinyurl.com/iceandfire-gorgon-head "Gorgon Head")
-![](http://tinyurl.com/Eye-of-Cyclops "Eye of Cyclops")
 
 ### Tier 3
 
 ![](https://git.io/JLjsf "Basalt Sediment")
 ![](https://git.io/JLhhf "Energized Clathrate")
 ![](https://git.io/JLhph "Destabilized Clathrate")
-![](https://git.io/JRLSU "Huge Stalk")
 
 ### Tier 4
 
-![](https://git.io/JLhhe "Oxidized Ferric Sand")
-![](https://git.io/JLhhs "Vitrified Sand")
-![](https://git.io/JCqV9 "Particle Generator")
 ![](https://git.io/JuMlF "Material Absorber")
 
 ## 🔧 Crafting Methods

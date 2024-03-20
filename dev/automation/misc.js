@@ -48,7 +48,7 @@ export async function init(h = defaultHelper, options = argv) {
     h.warn('No /ct recipes found in crafttweaker.log')
   }
   else {
-    remakes = fakeIron_zs.match(/^# Start of automatically generated recipes:$.*/ms)?.[0]
+    remakes = fakeIron_zs.match(/^(?:#|\/\/) Start of automatically generated recipes:$.*/ms)?.[0]
     if (!remakes)
       h.warn('Can not find automatically generated recipes for Fake Iron')
   }
@@ -78,7 +78,7 @@ export async function init(h = defaultHelper, options = argv) {
     ]
 
     for (const match of remakes.matchAll(
-      /^remakeShape.{1,4}\("[^"]+", (?<output><[^>]+>).*$/gm
+      /^remakeShape.{1,4}\(["'][^"']+["'], (?<output><[^>]+>).*$/gm
     )) {
       if (match.groups && whitelist.includes(match.groups.output))
         resultArr.push(match[0])
@@ -108,8 +108,8 @@ export async function init(h = defaultHelper, options = argv) {
 
     injectInFile(
       'scripts/mods/enderio_fakeIron.zs',
-      '# Start of automatically generated recipes:\n',
-      '\n# End of automatically generated recipes',
+      '// Start of automatically generated recipes:\n',
+      '\n// End of automatically generated recipes',
       resultArr.sort().join('\n')
     )
   }
