@@ -28,7 +28,7 @@
 		uid: "64c0c4cb",
 		type: "command",
 		auto: "invisible",
-		command: "/say @p has obtained the Creative Sacrifice Dagger!"
+		command: "/tellraw @a [{\"text\":\"# `\",\"color\":\"dark_gray\",\"extra\":[{\"text\":\"@p\",\"bold\":true,\"color\":\"light_purple\"},\"`\",{\"text\":\" has obtained the \",\"color\":\"white\"},\"*\",{\"translate\":\"Creative Sacrifice Dagger\",\"color\":\"gold\",\"bold\":true},\"*\",{\"text\":\"!\",\"color\":\"white\"}]}]"
 	},
 	{
 		uid: "489a4bd0",

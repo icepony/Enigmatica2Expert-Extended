@@ -20,6 +20,6 @@
 		uid: "36e05c16",
 		type: "command",
 		auto: "invisible",
-		command: "/say @p has obtained the Hoe of the Green Earth!"
+		command: "/tellraw @a [{\"text\":\"# `\",\"color\":\"dark_gray\",\"extra\":[{\"text\":\"@p\",\"bold\":true,\"color\":\"light_purple\"},\"`\",{\"text\":\" has obtained the \",\"color\":\"white\"},\"*\",{\"translate\":\"Hoe of the Green Earth\",\"color\":\"gold\",\"bold\":true},\"*\",{\"text\":\"!\",\"color\":\"white\"}]}]"
 	}]
 }

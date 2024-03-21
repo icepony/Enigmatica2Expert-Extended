@@ -25,7 +25,7 @@
 		uid: "df6501f4",
 		type: "command",
 		auto: "invisible",
-		command: "/say @p has obtained the Creative Gas Tank!"
+		command: "/tellraw @a [{\"text\":\"# `\",\"color\":\"dark_gray\",\"extra\":[{\"text\":\"@p\",\"bold\":true,\"color\":\"light_purple\"},\"`\",{\"text\":\" has obtained the \",\"color\":\"white\"},\"*\",{\"translate\":\"Creative Gas Tank\",\"color\":\"gold\",\"bold\":true},\"*\",{\"text\":\"!\",\"color\":\"white\"}]}]"
 	},
 	{
 		uid: "ec375d5b",

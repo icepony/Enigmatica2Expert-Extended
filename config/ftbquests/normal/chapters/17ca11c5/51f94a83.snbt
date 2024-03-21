@@ -20,6 +20,6 @@
 		uid: "9e9242b8",
 		type: "command",
 		auto: "invisible",
-		command: "/say @p has obtained the Sword of the Cosmos!"
+		command: "/tellraw @a [{\"text\":\"# `\",\"color\":\"dark_gray\",\"extra\":[{\"text\":\"@p\",\"bold\":true,\"color\":\"light_purple\"},\"`\",{\"text\":\" has obtained the \",\"color\":\"white\"},\"*\",{\"translate\":\"Sword of the Cosmos\",\"color\":\"gold\",\"bold\":true},\"*\",{\"text\":\"!\",\"color\":\"white\"}]}]"
 	}]
 }

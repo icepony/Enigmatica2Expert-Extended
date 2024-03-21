@@ -20,7 +20,7 @@
 		uid: "d1013e6f",
 		type: "command",
 		auto: "invisible",
-		command: "/say @p has obtained the (non-guilty) Creative Mana Pool!"
+		command: "/tellraw @a [{\"text\":\"# `\",\"color\":\"dark_gray\",\"extra\":[{\"text\":\"@p\",\"bold\":true,\"color\":\"light_purple\"},\"`\",{\"text\":\" has obtained the \",\"color\":\"white\"},\"*\",{\"translate\":\"(non-guilty) Creative Mana Pool\",\"color\":\"gold\",\"bold\":true},\"*\",{\"text\":\"!\",\"color\":\"white\"}]}]"
 	},
 	{
 		uid: "604cc116",

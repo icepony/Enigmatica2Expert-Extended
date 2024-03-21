@@ -22,7 +22,7 @@
 		uid: "6ed8266e",
 		type: "command",
 		auto: "invisible",
-		command: "/say @p has obtained the Creative Flux Capacitor!"
+		command: "/tellraw @a [{\"text\":\"# `\",\"color\":\"dark_gray\",\"extra\":[{\"text\":\"@p\",\"bold\":true,\"color\":\"light_purple\"},\"`\",{\"text\":\" has obtained the \",\"color\":\"white\"},\"*\",{\"translate\":\"Creative Flux Capacitor\",\"color\":\"gold\",\"bold\":true},\"*\",{\"text\":\"!\",\"color\":\"white\"}]}]"
 	},
 	{
 		uid: "8f62c4be",

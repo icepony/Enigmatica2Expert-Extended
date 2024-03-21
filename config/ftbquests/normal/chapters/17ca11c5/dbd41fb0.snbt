@@ -18,7 +18,7 @@
 		uid: "45a9ef9c",
 		type: "command",
 		auto: "invisible",
-		command: "/say @p has obtained the Creative Mill!"
+		command: "/tellraw @a [{\"text\":\"# `\",\"color\":\"dark_gray\",\"extra\":[{\"text\":\"@p\",\"bold\":true,\"color\":\"light_purple\"},\"`\",{\"text\":\" has obtained the \",\"color\":\"white\"},\"*\",{\"translate\":\"Creative Mill\",\"color\":\"gold\",\"bold\":true},\"*\",{\"text\":\"!\",\"color\":\"white\"}]}]"
 	},
 	{
 		uid: "d3ffaa21",

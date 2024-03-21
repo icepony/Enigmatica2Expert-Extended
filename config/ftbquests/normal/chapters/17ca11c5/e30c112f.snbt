@@ -18,7 +18,7 @@
 		uid: "9b8b3d0c",
 		type: "command",
 		auto: "invisible",
-		command: "/say @p has obtained the Creative Builder's Wand!"
+		command: "/tellraw @a [{\"text\":\"# `\",\"color\":\"dark_gray\",\"extra\":[{\"text\":\"@p\",\"bold\":true,\"color\":\"light_purple\"},\"`\",{\"text\":\" has obtained the \",\"color\":\"white\"},\"*\",{\"translate\":\"Creative Builder's Wand\",\"color\":\"gold\",\"bold\":true},\"*\",{\"text\":\"!\",\"color\":\"white\"}]}]"
 	},
 	{
 		uid: "af6519a5",

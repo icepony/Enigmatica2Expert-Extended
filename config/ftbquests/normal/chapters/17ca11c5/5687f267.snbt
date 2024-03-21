@@ -24,7 +24,7 @@
 		uid: "86c23788",
 		type: "command",
 		auto: "invisible",
-		command: "/say @p has obtained the Scroll Of Massive Knowledge!"
+		command: "/tellraw @a [{\"text\":\"# `\",\"color\":\"dark_gray\",\"extra\":[{\"text\":\"@p\",\"bold\":true,\"color\":\"light_purple\"},\"`\",{\"text\":\" has obtained the \",\"color\":\"white\"},\"*\",{\"translate\":\"Scroll Of Massive Knowledge\",\"color\":\"gold\",\"bold\":true},\"*\",{\"text\":\"!\",\"color\":\"white\"}]}]"
 	},
 	{
 		uid: "9dc113a3",

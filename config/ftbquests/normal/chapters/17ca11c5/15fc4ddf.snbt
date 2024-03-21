@@ -19,6 +19,6 @@
 		uid: "510234b4",
 		type: "command",
 		auto: "invisible",
-		command: "/say @p has obtained the Infinity Leggings!"
+		command: "/tellraw @a [{\"text\":\"# `\",\"color\":\"dark_gray\",\"extra\":[{\"text\":\"@p\",\"bold\":true,\"color\":\"light_purple\"},\"`\",{\"text\":\" has obtained the \",\"color\":\"white\"},\"*\",{\"translate\":\"Infinity Leggings\",\"color\":\"gold\",\"bold\":true},\"*\",{\"text\":\"!\",\"color\":\"white\"}]}]"
 	}]
 }

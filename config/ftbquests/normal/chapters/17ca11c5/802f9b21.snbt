@@ -20,6 +20,6 @@
 		uid: "603a7b71",
 		type: "command",
 		auto: "invisible",
-		command: "/say @p has obtained the Planet Eater!"
+		command: "/tellraw @a [{\"text\":\"# `\",\"color\":\"dark_gray\",\"extra\":[{\"text\":\"@p\",\"bold\":true,\"color\":\"light_purple\"},\"`\",{\"text\":\" has obtained the \",\"color\":\"white\"},\"*\",{\"translate\":\"Planet Eater\",\"color\":\"gold\",\"bold\":true},\"*\",{\"text\":\"!\",\"color\":\"white\"}]}]"
 	}]
 }

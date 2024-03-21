@@ -20,6 +20,6 @@
 		uid: "e2ae7f0e",
 		type: "command",
 		auto: "invisible",
-		command: "/say @p has obtained the Longbow of the Heavens!"
+		command: "/tellraw @a [{\"text\":\"# `\",\"color\":\"dark_gray\",\"extra\":[{\"text\":\"@p\",\"bold\":true,\"color\":\"light_purple\"},\"`\",{\"text\":\" has obtained the \",\"color\":\"white\"},\"*\",{\"translate\":\"Longbow of the Heavens\",\"color\":\"gold\",\"bold\":true},\"*\",{\"text\":\"!\",\"color\":\"white\"}]}]"
 	}]
 }
