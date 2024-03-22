@@ -104,8 +104,6 @@ iceandfire:armor_silver_boots
 iceandfire:armor_silver_chestplate
 iceandfire:armor_silver_helmet
 iceandfire:armor_silver_leggings
-iceandfire:armor_silver_metal_boots
-iceandfire:armor_silver_metal_leggings
 iceandfire:armor_white_boots
 iceandfire:armor_white_chestplate
 iceandfire:armor_white_helmet
