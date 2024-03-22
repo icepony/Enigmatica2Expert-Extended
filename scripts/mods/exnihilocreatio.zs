@@ -107,7 +107,7 @@ recipes.remove(<exnihilocreatio:item_mesh:4>);
 
 // Remove crooks (if removed with Malek's Infinity Gauntlet they produce error)
 Purge(<exnihilocreatio:crook_clay_uncooked>);
-furnace.remove(<exnihilocreatio:crook_clay>);
+Purge(<exnihilocreatio:crook_clay>).furn();
 
 // [Artificial_Hive] from [Hay_Bale][+1]
 craft.remake(<exnihilocreatio:hive>, ['pretty',
