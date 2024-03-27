@@ -101,29 +101,42 @@ function addHeatExch(fluid_in as ILiquidStack, heat_in as int, fluid_out as ILiq
 }
 
 /* Inject_js{
-const cfg = [...
-  loadText('config/AdvGenerators/overrides/exchanger.cfg')
-  .matchAll(/^\s*exchanger\s*:\s*(.*)$/gm)
-].map(([,m])=>m.trim())
-const bl = (id)=>{const s=id.split(':'); return s.length>=2?id.replace(/@(\d+)/,':$1'):'minecraft:'+s[0]}
-const B = (block,amount)=>`<${bl(block)}>${parseFloat(amount)>1?' * ' + amount : ''}`
-const H = (h)=>Math.round(h)
+const cfg = [...loadText('config/AdvGenerators/overrides/exchanger.cfg')
+  .matchAll(/^\s*exchanger\s*:\s*(.*)$/gm),
+].map(([,m]) => m.trim())
+function bl(id) {
+  const s = id.split(':')
+  return s.length >= 2 ? id.replace(/@(\d+)/, ':$1') : `minecraft:${s[0]}`
+}
+const B = (block, amount) => `<${bl(block)}>${Number.parseFloat(amount) > 1 ? ` * ${amount}` : ''}`
+const H = h => Math.round(h)
 return _(cfg
-.map(g=>g.match(
-  /fluid:(\w+) (\d+) mB(?: \+ (\d+) HU)? =>(?: fluid:(\w+) (\d+) ?mB)?(?: [BI]:(\w+(?::\w+)?(?:@\d+)?) (\d+\.\d+))?(?: \+ (\d+) HU)?/
-)?.slice(1))
-.filter(m=>m))
-.sortBy(o=>parseInt(o[7]) * 1000 + parseInt(o[4])).value()
-.map(([
-  fluid_in, fluid_in_amount, heat_in,
-  fluid_out, fluid_out_amount, item_out, item_out_amount, heat_out
-])=>
-  `addHeatExch(${B('fluid:'+fluid_in, fluid_in_amount)}, ` +
-  `${H(heat_in ?? 0)}, ` +
-  `${fluid_out ? B('fluid:'+fluid_out, fluid_out_amount) : 'null'}, ` +
-  `${item_out ? B(item_out, item_out_amount) : 'null'}, ` +
-  `${H(heat_out ?? 0)});`
-)
+  .map(g => g.match(
+    /fluid:(\w+) (\d+) mB(?: \+ (\d+) HU)? =>(?: fluid:(\w+) (\d+) ?mB)?(?: [BI]:(\w+(?::\w+)?(?:@\d+)?) (\d+\.\d+))?(?: \+ (\d+) HU)?(?:\s*\/\/\s*alt\s*-\s*(\S+))?/
+  )?.slice(1))
+  .filter(m => m))
+  .sortBy(o => Number.parseInt(o[7]) * 1000 + Number.parseInt(o[4])).value()
+  .map(([
+    fluid_in,
+    fluid_in_amount,
+    heat_in,
+    fluid_out,
+    fluid_out_amount,
+    item_out,
+    item_out_amount,
+    heat_out,
+    alt_out,
+  ]) =>
+  `addHeatExch(${B(`fluid:${fluid_in}`, fluid_in_amount)}, `
+  + `${H(heat_in ?? 0)}, `
+  + `${fluid_out ? B(`fluid:${fluid_out}`, fluid_out_amount) : 'null'}, `
+  + `${
+    alt_out
+      ? `utils.tryCatch("${bl(item_out.replace(/@.+/, ''))}", ${item_out.replace(/.+@/, '') || 0}, <${alt_out}>)`
+      : item_out ? B(item_out, item_out_amount) : 'null'
+  }, `
+  + `${H(heat_out ?? 0)});`
+  )
 } */
 addHeatExch(<fluid:ic2hot_coolant>, 0, <fluid:ic2coolant>, null, 40);
 addHeatExch(<fluid:lava>, 0, null, <minecraft:obsidian>, 30);
