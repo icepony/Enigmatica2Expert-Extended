@@ -133,7 +133,7 @@
     {
       "item": "thaumicaugmentation:research_notes",
       "type": "text",
-      "text": "$(li)Press \"§lShift+C§r\" to crawl",
+      "text": "$(li)Press \"§lShift+C§r\" to crawl$(li)The OP command §n/bcore_util regenchunk§r regenerates the entire chunk.",
       "title": "Tips"
     }
   ]
