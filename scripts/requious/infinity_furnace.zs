@@ -204,6 +204,7 @@ function composeRecipe({ out_id, out_meta, out_tag, out_amount, in_id, in_meta, 
   if (
     involved.some(([id, meta]) => isJEIBlacklisted(id, meta))
     || manualBlacklist.has(in_id + ((in_meta && in_meta !== '*') ? `:${in_meta}` : ''))
+    || manualBlacklist.has(in_id)
   )
     return blacklisted++, `blacklist(${inpCommandStr});`
 
@@ -240,7 +241,7 @@ ${filtered.join('\n')}`
 } */
 
 // Total Furnace recipes registered: 1143
-// Blacklisted by JEI or manually: 101
+// Blacklisted by JEI or manually: 109
 // Filtered by oredict: 151
 infinFurnace(utils.get('actuallyadditions:block_misc', 3), utils.get('actuallyadditions:item_misc', 5));
 blacklist('actuallyadditions:item_dust', 1);
@@ -303,14 +304,14 @@ infinFurnace(utils.get('biomesoplenty:plant_1', 6), utils.get('minecraft:dye', 2
 infinFurnace(utils.get('biomesoplenty:white_sand'), utils.get('minecraft:glass'));
 blacklist('bloodmagic:component', 19);
 blacklist('bloodmagic:component', 20);
-blacklist('botania:biomestonea');
-blacklist('botania:biomestonea', 1);
-blacklist('botania:biomestonea', 2);
-blacklist('botania:biomestonea', 3);
-blacklist('botania:biomestonea', 4);
-blacklist('botania:biomestonea', 5);
-blacklist('botania:biomestonea', 6);
-blacklist('botania:biomestonea', 7);
+blacklist('botania:biomestonea', 8);
+blacklist('botania:biomestonea', 9);
+blacklist('botania:biomestonea', 10);
+blacklist('botania:biomestonea', 11);
+blacklist('botania:biomestonea', 12);
+blacklist('botania:biomestonea', 13);
+blacklist('botania:biomestonea', 14);
+blacklist('botania:biomestonea', 15);
 infinFurnace(utils.get('claybucket:unfiredclaybucket', W), utils.get('claybucket:claybucket'));
 infinFurnace(utils.get('contenttweaker:ore_phosphor'), utils.get('contenttweaker:nugget_phosphor'));
 infinFurnace(utils.get('cookingforblockheads:recipe_book'), utils.get('cookingforblockheads:recipe_book', 1));

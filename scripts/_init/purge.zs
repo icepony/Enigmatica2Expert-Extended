@@ -77,38 +77,41 @@ if (isNull(loadedMods['refinedstorage'])) {
 
 /* Inject_js(
 (getUnchangedFurnaceRecipes()??[])
-.filter((r) => isJEIBlacklisted(r.in_id, r.in_meta) && !isPurged(r.input))
+.filter((r) => isJEIBlacklisted(r.in_id, r.in_meta) && !isPurged(r.output))
 .map(({output,input})=>[`furnace.remove(${output}`,`, ${input});`])
 ) */
+furnace.remove(<minecraft:gold_ingot>                , <actuallyadditions:item_dust:1>);
+furnace.remove(<minecraft:diamond>                   , <actuallyadditions:item_dust:2>);
+furnace.remove(<minecraft:dye:4>                     , <actuallyadditions:item_dust:4>);
 furnace.remove(<appliedenergistics2:material:5>      , <actuallyadditions:item_dust:5>);
+furnace.remove(<minecraft:coal>                      , <actuallyadditions:item_dust:6>);
+furnace.remove(<minecraft:iron_ingot>                , <actuallyadditions:item_dust>);
 furnace.remove(<biomesoplenty:gem:7>                 , <biomesoplenty:gem_ore:7>);
-furnace.remove(<contenttweaker:item_ore_tungsten:3>  , <contenttweaker:item_ore_tungsten:1>);
-furnace.remove(<contenttweaker:item_ore_tungsten:3>  , <contenttweaker:item_ore_tungsten:2>);
 furnace.remove(<appliedenergistics2:material:5>      , <enderio:item_material:33>);
+furnace.remove(<exnihilocreatio:crook_clay>          , <exnihilocreatio:crook_clay_uncooked>);
 furnace.remove(<exnihilocreatio:item_ore_aluminium:3>, <exnihilocreatio:item_ore_aluminium:1>);
+furnace.remove(<exnihilocreatio:item_ore_aluminium:3>, <exnihilocreatio:item_ore_aluminium:2>);
 furnace.remove(<tconstruct:ingots:1>                 , <exnihilocreatio:item_ore_ardite:1>);
 furnace.remove(<tconstruct:ingots>                   , <exnihilocreatio:item_ore_cobalt:1>);
 furnace.remove(<exnihilocreatio:item_ore_copper:3>   , <exnihilocreatio:item_ore_copper:1>);
+furnace.remove(<exnihilocreatio:item_ore_copper:3>   , <exnihilocreatio:item_ore_copper:2>);
 furnace.remove(<minecraft:gold_ingot>                , <exnihilocreatio:item_ore_gold:1>);
+furnace.remove(<minecraft:gold_ingot>                , <exnihilocreatio:item_ore_gold:2>);
 furnace.remove(<minecraft:iron_ingot>                , <exnihilocreatio:item_ore_iron:1>);
+furnace.remove(<minecraft:iron_ingot>                , <exnihilocreatio:item_ore_iron:2>);
 furnace.remove(<exnihilocreatio:item_ore_lead:3>     , <exnihilocreatio:item_ore_lead:1>);
+furnace.remove(<exnihilocreatio:item_ore_lead:3>     , <exnihilocreatio:item_ore_lead:2>);
 furnace.remove(<exnihilocreatio:item_ore_nickel:3>   , <exnihilocreatio:item_ore_nickel:1>);
+furnace.remove(<exnihilocreatio:item_ore_nickel:3>   , <exnihilocreatio:item_ore_nickel:2>);
 furnace.remove(<exnihilocreatio:item_ore_silver:3>   , <exnihilocreatio:item_ore_silver:1>);
+furnace.remove(<exnihilocreatio:item_ore_silver:3>   , <exnihilocreatio:item_ore_silver:2>);
 furnace.remove(<exnihilocreatio:item_ore_tin:3>      , <exnihilocreatio:item_ore_tin:1>);
+furnace.remove(<exnihilocreatio:item_ore_tin:3>      , <exnihilocreatio:item_ore_tin:2>);
 furnace.remove(<thermalfoundation:material:128>      , <forestry:resources:1>);
 furnace.remove(<thermalfoundation:material:129>      , <forestry:resources:2>);
-furnace.remove(<ic2:ingot:2>                         , <ic2:dust:4>);
 furnace.remove(<minecraft:gold_ingot>                , <ic2:dust:7>);
 furnace.remove(<minecraft:iron_ingot>                , <ic2:dust:8>);
-furnace.remove(<ic2:ingot:3>                         , <ic2:dust:10>);
-furnace.remove(<ic2:ingot:4>                         , <ic2:dust:14>);
-furnace.remove(<ic2:ingot:6>                         , <ic2:dust:17>);
-furnace.remove(<ic2:ingot:1>                         , <ic2:dust>);
-furnace.remove(<ic2:ingot:2>                         , <ic2:resource:1>);
-furnace.remove(<ic2:ingot:3>                         , <ic2:resource:2>);
-furnace.remove(<ic2:ingot:6>                         , <ic2:resource:3>);
 furnace.remove(<immersiveengineering:metal:5>        , <ic2:resource:4>);
-furnace.remove(<iceandfire:sapphire_gem>             , <iceandfire:sapphire_ore:*>);
 furnace.remove(<iceandfire:silver_ingot>             , <iceandfire:silver_ore:*>);
 furnace.remove(<immersiveengineering:metal>          , <immersiveengineering:metal:9>);
 furnace.remove(<immersiveengineering:metal:1>        , <immersiveengineering:metal:10>);
@@ -130,11 +133,27 @@ furnace.remove(<nuclearcraft:ingot:6>                , <jaopca:item_hunklithium>
 furnace.remove(<nuclearcraft:ingot:7>                , <jaopca:item_hunkmagnesium>);
 furnace.remove(<nuclearcraft:ingot:3>                , <jaopca:item_hunkthorium>);
 furnace.remove(<immersiveengineering:metal:5>        , <jaopca:item_hunkuranium>);
+furnace.remove(<thermalfoundation:material:128>      , <libvulpes:ore0:4>);
+furnace.remove(<thermalfoundation:material:129>      , <libvulpes:ore0:5>);
+furnace.remove(<minecraft:iron_ingot>                , <libvulpes:productdust:1>);
+furnace.remove(<minecraft:gold_ingot>                , <libvulpes:productdust:2>);
+furnace.remove(<thermalfoundation:material:128>      , <libvulpes:productdust:4>);
+furnace.remove(<thermalfoundation:material:129>      , <libvulpes:productdust:5>);
+furnace.remove(<thermalfoundation:material:132>      , <libvulpes:productdust:9>);
+furnace.remove(<thermalfoundation:material:135>      , <libvulpes:productdust:10>);
+furnace.remove(<mekanism:ingot:5>                    , <mekanism:oreblock:1>);
+furnace.remove(<mekanism:ingot:6>                    , <mekanism:oreblock:2>);
+furnace.remove(<thermalfoundation:material:129>      , <nuclearcraft:dust:1>);
+furnace.remove(<thermalfoundation:material:131>      , <nuclearcraft:dust:2>);
+furnace.remove(<immersiveengineering:metal:5>        , <nuclearcraft:dust:4>);
+furnace.remove(<thermalfoundation:material:128>      , <nuclearcraft:dust>);
+furnace.remove(<appliedenergistics2:material:5>      , <nuclearcraft:gem_dust:2>);
+furnace.remove(<thermalfoundation:material:129>      , <nuclearcraft:ore:1>);
+furnace.remove(<thermalfoundation:material:131>      , <nuclearcraft:ore:2>);
+furnace.remove(<immersiveengineering:metal:5>        , <nuclearcraft:ore:4>);
+furnace.remove(<thermalfoundation:material:128>      , <nuclearcraft:ore>);
+furnace.remove(<tconstruct:ingots>                   , <qmd:dust:4>);
 furnace.remove(<minecraft:gold_ingot> * 3            , <thaumicwonders:eldritch_cluster:1>);
-furnace.remove(<ic2:ingot:2> * 3                     , <thaumicwonders:eldritch_cluster:2>);
-furnace.remove(<ic2:ingot:6> * 3                     , <thaumicwonders:eldritch_cluster:3>);
-furnace.remove(<ic2:ingot:4> * 3                     , <thaumicwonders:eldritch_cluster:4>);
-furnace.remove(<ic2:ingot:3> * 3                     , <thaumicwonders:eldritch_cluster:5>);
 furnace.remove(<thaumcraft:quicksilver> * 3          , <thaumicwonders:eldritch_cluster:6>);
 furnace.remove(<minecraft:quartz> * 3                , <thaumicwonders:eldritch_cluster:7>);
 furnace.remove(<thaumcraft:ingot:1> * 2              , <thaumicwonders:eldritch_cluster:8>);
@@ -159,11 +178,11 @@ recipes.remove(<immersiveengineering:storage:3>);
 recipes.remove(<immersiveengineering:storage:4>);
 recipes.remove(<immersiveengineering:storage:7>);
 recipes.remove(<immersiveengineering:storage:8>);
-recipes.remove(<ic2:ingot:2>);
-recipes.remove(<ic2:ingot:3>);
-recipes.remove(<ic2:ingot:4>);
+Purge(<ic2:ingot:2>).furn().ores();
+Purge(<ic2:ingot:3>).furn().ores();
+Purge(<ic2:ingot:4>).furn().ores();
 recipes.remove(<ic2:ingot:5>);
-recipes.remove(<ic2:ingot:6>);
+Purge(<ic2:ingot:6>).furn().ores();
 Purge(<ic2:resource:5>).ores(); // Bronze
 Purge(<ic2:ingot:1>).furn().ores();
 Purge(<ic2:ingot:8>).ores();
