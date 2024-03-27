@@ -1,12 +1,10 @@
-# v1.34.0 (2024-3-18)
+# v1.35.0 (2024-3-27)
 ## Mods changes
 ### 🟢 Added Mods
 
 Icon | Summary
 ----:|:-------
-<img src="https://media.forgecdn.net/avatars/thumbnails/293/39/30/30/637327777527263486.png"             > |                           [**LibrarianLib**](https://www.curseforge.com/minecraft/mc-mods/librarianlib)                 <sup><sub>librarianlib-1.12.2-4.22.jar                     </sub></sup><br>An extensive collection of tools, utilities, and frameworks.
-<img src="https://media.forgecdn.net/avatars/thumbnails/200/446/30/30/636913462602634216.png"            > |                         [**Random PSIdeas**](https://www.curseforge.com/minecraft/mc-mods/random-psideas)               <sup><sub>rpsideas-2.4.4.jar                               </sub></sup><br>A mod which aims to enhance your PSI experience with some useful additions
-<img src="https://media.forgecdn.net/avatars/thumbnails/334/385/30/30/637468213328449243.png"            > |                       [**Precision Mining**](https://www.curseforge.com/minecraft/mc-mods/precision-mining)             <sup><sub>PrecisionMining-1.12.2-5.2.jar                   </sub></sup><br>QOL mod that prevents overmining
+<img src="https://media.forgecdn.net/avatars/thumbnails/837/293/30/30/638230425147423727.png"            > |                           [**Enhanced P2P**](https://www.curseforge.com/minecraft/mc-mods/enhancedp2p)                  <sup><sub>betterp2p-1.12.2-1.2.3-extended_life.jar         </sub></sup><br>Improved Fork of Better P2P
 -----------
 
 
@@ -14,120 +12,104 @@ Icon | Summary
 
 Icon | Summary
 ----:|:-------
-<img src="https://media.forgecdn.net/avatars/thumbnails/200/673/30/30/636914940710758684.png"            > |                          [**Village Names**](https://www.curseforge.com/minecraft/mc-mods/village-names)                <sup><sub>VillageNames-1.12.2-4.4.8.jar                    </sub></sup><br>Generate names for villages and villagers, as well as for other entities and structures.
-<img src="https://media.forgecdn.net/avatars/thumbnails/171/151/30/30/636727105621055703.png"            > |                    [**WorldGen Indicators**](https://www.curseforge.com/minecraft/mc-mods/worldgen-indicators)          <sup><sub>WorldGenIndicators-1.12.2-1.1.0-6.jar            </sub></sup><br>Add worldgen depending of another worldgen, like ore samples (Using craftweaker)
+<img src="https://media.forgecdn.net/avatars/thumbnails/64/742/30/30/636155881760450813.png"             > |              [**Pixel Reality - Luminance**](https://www.curseforge.com/minecraft/texture-packs/pixel-reality-luminance)<sup><sub>Pixel Reality Luminance 1.12.2.zip               </sub></sup><br>Realistic(ish) light effects without shaders! Use it on top of vanilla or your chosen pack! Needs Optifine.
 -----------
 
 ### 🟡 Updated Mods
 
 Icon | Summary | Old / New
 ----:|:--------|:---------
-<img src="https://media.forgecdn.net/avatars/thumbnails/86/235/30/30/636207507685344289.png"             > |                            [**LittleTiles**](https://www.curseforge.com/minecraft/mc-mods/littletiles)                 | <nobr>LittleTiles_v1.5.86_mc1.12.2</nobr><br><nobr>LittleTiles_v1.5.87_mc1.12.2</nobr>
-<img src="https://media.forgecdn.net/avatars/thumbnails/180/855/30/30/636796143936766724.png"            > |                           [**PackagedAuto**](https://www.curseforge.com/minecraft/mc-mods/packagedauto)                | <nobr>PackagedAuto-1.12.2-1.0.11.41</nobr><br><nobr>PackagedAuto-1.12.2-1.0.12.43</nobr>
-<img src="https://media.forgecdn.net/avatars/thumbnails/194/704/30/30/636874517756132934.png"            > |                        [**Thaumic Wonders**](https://www.curseforge.com/minecraft/mc-mods/thaumic-wonders)             | <nobr>thaumicwonders-1.8.2</nobr><br><nobr>thaumicwonders-1.8.3</nobr>
-<img src="https://media.forgecdn.net/avatars/thumbnails/205/161/30/30/636946414091294708.png"            > |                     [**PackagedExCrafting**](https://www.curseforge.com/minecraft/mc-mods/packagedexcrafting)          | <nobr>PackagedExCrafting-1.12.2-1.0.2.19</nobr><br><nobr>PackagedExCrafting-1.12.2-1.0.2.20</nobr>
-<img src="https://media.forgecdn.net/avatars/thumbnails/548/30/30/30/637882959576383371.png"             > |              [**AE2 Fluid Crafting Rework**](https://www.curseforge.com/minecraft/mc-mods/ae2-fluid-crafting-rework)   | <nobr>Fluid Craft for AE2-2.5.7-r</nobr><br><nobr>Fluid Craft for AE2-2.5.8-r</nobr>
+<img src="https://media.forgecdn.net/avatars/thumbnails/92/854/30/30/636258666554688823.png"             > |                        [**Xaero's Minimap**](https://www.curseforge.com/minecraft/mc-mods/xaeros-minimap)              | <nobr>Xaeros_Minimap_23.9.7_Forge_1.12</nobr><br><nobr>Xaeros_Minimap_24.0.1_Forge_1.12</nobr>
+<img src="https://media.forgecdn.net/avatars/thumbnails/196/654/30/30/636886857118683130.png"            > |                      [**Xaero's World Map**](https://www.curseforge.com/minecraft/mc-mods/xaeros-world-map)            | <nobr>XaerosWorldMap_1.37.8_Forge_1.12</nobr><br><nobr>XaerosWorldMap_1.38.1_Forge_1.12</nobr>
+<img src="https://media.forgecdn.net/avatars/thumbnails/289/63/30/30/637313892155541419.png"             > |                   [**Thaumic Augmentation**](https://www.curseforge.com/minecraft/mc-mods/thaumic-augmentation)        | <nobr>ThaumicAugmentation-1.12.2-2.1.13</nobr><br><nobr>ThaumicAugmentation-1.12.2-2.1.13</nobr>
+<img src="https://media.forgecdn.net/avatars/thumbnails/248/435/30/30/637168261428598002.png"            > |                                    [**QMD**](https://www.curseforge.com/minecraft/mc-mods/qmd)                         | <nobr>QMD-1.3-1.12.2</nobr><br><nobr>QMD-1.3.1-1.12.2</nobr>
+<img src="https://media.forgecdn.net/avatars/thumbnails/417/700/30/30/637642020488223140.png"            > |                          [**RandomTweaker**](https://www.curseforge.com/minecraft/mc-mods/randomtweaker)               | <nobr>RandomTweaker-1.4.2</nobr><br><nobr>RandomTweaker-1.4.4</nobr>
+<img src="https://media.forgecdn.net/avatars/thumbnails/468/506/30/30/637752171904887013.jpeg"           > |                       [**Had Enough Items**](https://www.curseforge.com/minecraft/mc-mods/had-enough-items)            | <nobr>HadEnoughItems_1.12.2-4.25.2</nobr><br><nobr>HadEnoughItems_1.12.2-4.25.3</nobr>
+<img src="https://media.forgecdn.net/avatars/thumbnails/799/137/30/30/638161375230095246.png"            > |                          [**File Director**](https://www.curseforge.com/minecraft/mc-mods/filedirector)                | <nobr>!mod-director-launchwrapper-1.8.1-all</nobr><br><nobr>!mod-director-launchwrapper-1.8.2-all</nobr>
+<img src="https://media.forgecdn.net/avatars/thumbnails/858/79/30/30/638263153200073671.png"             > |                     [**SerializationIsBad**](https://www.curseforge.com/minecraft/mc-mods/serializationisbad)          | <nobr>serializationisbad-1.5</nobr><br><nobr>serializationisbad-1.5.2</nobr>
+<img src="https://media.forgecdn.net/avatars/thumbnails/874/755/30/30/638296262646953159.png"            > |                [**Alfheim Lighting Engine**](https://www.curseforge.com/minecraft/mc-mods/alfheim-lighting-engine)     | <nobr>Alfheim-1.2</nobr><br><nobr>Alfheim-1.3-Dev-2</nobr>
 -----------
 
 ## ⚡ Performance Improvements
 
-
-#### Recipes
-
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/5065c169cd0364a9fcac60379f47a33c486ad3cc)⚡Rewrite internal purging script to be faster
-  > Now removing items from the game, like 4 types of copper dusts, would be little bit faster (1-2 seconds).
+* <img src="https://i.imgur.com/fIRFwLz.png" align=right> [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/f17bc7462d9c900b2e9000d52a26c8ca2be709ab)⚡Add config option to disable generating Aspects from recipes
+  > Before this change, Thaumcraft for each item in game recursively iterated all its recipes to determine Aspect cost. This was caused lot of computation and took 10-30 seconds of game load.
+  > 
+  > Usually, this issue handled by `Thaumic Speedup` mod, but in some environment like Java21 its not working.
+  > 
+  > New config option will allow to disable this feature.
+  > Side effect - most of items that doesnt have hardcoded aspects would not have aspects.
+  > 
+  > Note:
+  > This option is harmless set to `true` if you playing on server with `false` value.
+  > 
+  > Related https://github.com/CleanroomMC/Cleanroom/issues/61
+* <img src="https://i.imgur.com/kSR7WHw.png" align=right> [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/7be36dafd15dd4a7d4de4e7b87919b4ffb78c0ab)⚡Disable "Discord Rich Presence" by UTeamCore
+  > This would save ~2 seconds of game load and probably removed some conflicts.
+  > 
+  > Rich Presence handled by mod `CraftPresence`
+* <img src="https://i.imgur.com/oJL6CZr.png" align=right> [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/c991ed9cf3722556825a654469f6dbfe7ccca21f)⚡Disable "Pathfinder" villager trades
+  > Save 1-4 seconds of game load.
+  > 
+  > This trades was useless anyway since Narute Compas is a thing.
+* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/da1d943bc4e16a57606c04717a87fa1077b39237)⚡Disable Xaero map internet acces
+  > Should save about 3 seconds on game load.
+  > 
+  > Disables parteon and update check.
+  > 
+  > Related to https://legacy.curseforge.com/minecraft/mc-mods/xaeros-world-map/issues/824
 
 ## ✨ New Features
 
-* <img src="https://i.imgur.com/MFD9MSy.gif" align=right> [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/767b1e30ac0dd8c153ebc6c21f1678fff83af61a)🐏Add ![](https://github.com/Krutoy242/mc-icons/raw/master/i/draconicevolution/mob_soul__0__95c2b7e0.png "Questing Ram Soul") building mechanic
-  > Now you can build Questing Ram just like Vanilla golem!
 
-* <img src="https://i.imgur.com/b053Vuw.png" align=right> [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/225198f8abf09b0b15f91a776f81bbfe94e5bc1a)🦯Entities aspects update
-  > > Contributed by [TabakaSIM](78695622+TabakaSIM@users.noreply.github.com)
-  >
-  > All creatures with spawn egg now have custom aspect and can be displayed in JEI.
-  > 
-  > Some additional notes:
-  > - Some entities that were a little buggy (or didn't spawn naturally) get one "amogus" aspect
-  > - Bosses (only spawn eggs) got 314 "caeles" aspect
+#### Quest
 
-#### Recipes
-
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/08f1892044cb474f44bc82e8b7d02a75dd1eab43)✏️add ![](https://github.com/Krutoy242/mc-icons/raw/master/i/contenttweaker/empowered_phosphor__0.png "Empowered Phosphor")=>![](https://github.com/Krutoy242/mc-icons/raw/master/i/contenttweaker/saturated_phosphor__0.png "Saturated Phosphor") in world recipe
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/b24950273dbd6f89b1637f5f1a4011fe7cb31059)✏️add ![](https://github.com/Krutoy242/mc-icons/raw/master/i/industrialforegoing/pink_slime__0.png "Pink Slime") in ![](https://github.com/Krutoy242/mc-icons/raw/master/i/advancedrocketry/chemicalreactor__0.png "Crystallizer")
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/27b52ed65fa4c3deb94f5ecf125890502b3bf0e4)✏️add ![](https://github.com/Krutoy242/mc-icons/raw/master/i/advancedrocketry/pipesealer__0.png "Silicon Block")=>![](https://github.com/Krutoy242/mc-icons/raw/master/i/appliedenergistics2/material__20.png "Printed Silicon") in ![](https://github.com/Krutoy242/mc-icons/raw/master/i/advancedrocketry/cuttingmachine__0.png "Cutting Machine")
+* <img src="https://i.imgur.com/Dj3EfDu.png" align=right> [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/64f4a167238413aff042f0232eb989304c60d6e2)📖 Improve messages "Player Obtained [...]"
+  > Now it colored and have nice Discord formatting
 
 ## 🐛 Fixes
 
 
-#### Bug
-
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/a3e695d4fbb8b94b9f7b08c209c18f4b81976609)🐛Fix world not loaded after ![](https://github.com/Krutoy242/mc-icons/raw/master/i/randomthings/spectrekey__0.png "Spectre Key") usage
-  > After teleporting to `Spectre` dimension player was hanging in non-loaded world for a minute or so.
-  > 
-  > I was fixed it before but now need to fix it again since its handled by UniversalTweaks now.
-
 #### Configs
 
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/abf270087f149954ee318365b749e738a306d040)🏇 Fix mount disapear on unlog server
-  > Very sad and dissapointing bug make your dragon, horse or any other ridden entity just disapear if you unlog mounting  it.
-  > 
-  > Also fix Nanomachines cleared from player on unlog.
-  > 
-  > Fix https://github.com/ACGaming/UniversalTweaks/issues/397
-  > Fix https://github.com/ACGaming/UniversalTweaks/issues/398
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/b8b06d3ff7c3acfb33b84c0ebedd24a62f658c68)💥Fix bug that made it unable to attune AstralSorcery crystals
-  > Fix https://github.com/Project-RT/RandomTweaker/issues/76
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/8c1f319d06be7aa3c54a3c33c5c8b48505b84cf8)💥Fix unable to connect server with port specified
-  > I dont know but im changing this option each version and without changing it its not working.
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/72a61bd5836eea7ebfb9d7c256368e17d0851eb4)💻![](https://github.com/Krutoy242/mc-icons/raw/master/i/opencomputers/tool__5.png "Nanomachines") consume x10 more energy
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/248e159f1e2b3c88dcebf0288fe3746c02f53ee5)🔔Attempt to add ding on MC started
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/a1345fbbab5afdcc827d8cce9ab0fac111c7d2f8)🧩Disable "Compact Messages" setting of UT
-  > Compact messages more annoying than useful
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/1c859248b2aa99bd116f03fc3a4fba6ed8d8fb3b)🧩Enable `onDemandAnimatedTextures`
-  > This option will break all block animations (fire, lava, etc.) when Optifine installed. But it give so huge boost to FPS that its affordable cost.
+* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/6765b7f7c2990cd5d9f5f0638b4eb55c09c2a063)🌠Remove " asteroid" postfix on asteroid names to let them fit screen
+* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/3489fd7a0f1b56baa53cdce227ead882a359a27e)💥Fix unable to connect server with port specified
+  > This is nice and thrilling story about changing this option each patch.
+* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/36d4aebed9b130c71f4417e1239f963d9db22bba)🦯Fix size-changing focus not showed in Thaumcraft researches
 
 #### Docs
 
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/d56367b4694392504c8438b2fd9b1eda7e0d18d9)📝Add tip about `/bcore_util regenchunk` command
+* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/ab136fef1fce96a2dfe90f5b4fd875642adc10bf)📝Add tip in Patchouli book `/bcore_util regenchunk`
+
+#### Gear
+
+* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/49021a0292f5c0673563aedf0142ca433c915e68) ⛏️Fix Invincible Combo `Strength Of Will` + `Runic Shield`
+  > There was an exploit allowing be invincible by combing this features. Now `Strength Of Will` will have 400 ticks cooldown.
+
+#### JEI
+
+* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/b291bc994342d77aae78baa796fbce85b3608233)🌍Add `Alien Jungle (200)` distribution
 
 #### Quest
 
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/f93ab95715c49c7a61fce002d18eaad8249256be)📖Add extra information for AdvRocketry's satellite and astrobody quests, mostly related to Skyblock
-  > > Contributed by [TrashboxBobylev](trashbox.bobylev@gmail.com)
-  >
-  > * misc: extended Satellite Builder and Astrobody Data Processor quests:
-  > 
-  > - added disclaimers about asteroid mining missions not working in Skyblock dimension
-  > - added info about what sensors are applicable for satellites
-  > - added info about how to encode asteroid chips with asteroids
-  > - fixed some errors, like incorrect links and translation, in Russian text
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/bdc4297640ec22bbd4562e8a948df9874edfeefb)📖Add reward to `Ratlantis World Generation`
-  > Also change rewards on near quests
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/d10fb7ace13ee49886a2cf81c8ffac87aff16b51)📖Fix `/gamestage` command typo
-  > > Contributed by [luckylamball](158814506+luckylamball@users.noreply.github.com)
-  >
-  > Now you can actually grand The Nether access by finishing `Harvest level 7` quest.
+* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/124e1dd28d6e49c22f34bda57ec7c306ca15d9ef)📖Fix typo in `Teleporter` quest
+* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/8ce132b7c1c520a3c79fdd9448a52af9cd060b93)📖Improve Ru translation of `Getting Started` chapter
 
 #### Recipes
 
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/be4b9ef77aaa1687c6074f5afb63a593259313c9)✏️![](https://github.com/Krutoy242/mc-icons/raw/master/i/mctsmelteryio/machine__3.png "Advanced Seared Drain") fix recipe from ingots instead of bricks
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/fd6fc0bdf079d374322ee3a7a61963116cabb1a1)✏️![](https://github.com/Krutoy242/mc-icons/raw/master/i/advancedrocketry/cuttingmachine__0.png "Cutting Machine") add all missed Log=>Planks recipes including Vanilla
-* <img src="https://i.imgur.com/SFDYcm8.png" align=right> [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/68b1694f90184f6e08ca0db6f9e49d608b086769)✏️[Omniwand] allow ![](https://github.com/Krutoy242/mc-icons/raw/master/i/vaultopic/vice__0.png "V.I.C.E. (Vaultopic Item Crafting Entity)")
+* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/89be061867c4c589cb09c88833a7de0963adc759)✏️![](https://github.com/Krutoy242/mc-icons/raw/master/i/advancedrocketry/microwavereciever__0.png "Microwave Receiver") buff output x20
+* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/bdd2c4e4120f5e6040d4e308721ef1e1b4384485)✏️add antidupe for ![](https://github.com/Krutoy242/mc-icons/raw/master/i/twilightforest/uncrafting_table__0.png "Uncrafting Table")
+  > Now Uncrafting Table mechanic improved - you cant uncraft items that have several recipes with 2+ recipes output with same ID but different tags.
   > 
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/1478275fed447cc9d4ddcdccc285193a86b60af8)✏️Fix ![](https://github.com/Krutoy242/mc-icons/raw/master/i/forestry/oak_stick__0.png "Impregnated Stick") recipe in ![](https://github.com/Krutoy242/mc-icons/raw/master/i/thermalexpansion/machine__8__45e2e59d.png "Fluid Transposer (Basic)")
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/8953c406cb2220ab4da2772181199b5ae933679b)✏️fix Dragon Steel smelted from unexisted items in ![](https://github.com/Krutoy242/mc-icons/raw/master/i/tconstruct/smeltery_controller__0.png "Smeltery Controller")
-* <img src="https://i.imgur.com/PCNsUvP.png" align=right> [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/2a0667c7d0b16a4ca325cc6b6680c04c922fdead)✏️Harder ![](https://github.com/Krutoy242/mc-icons/raw/master/i/randomthings/spectrelens__0.png "Spectre Lens")
+  > For example, you cant Uncraft Mekanism Tanks or Cubes, since before fix this was allowed to create Creative Tank from Basic one.
   > 
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/15ac87de033669aa788c80ffd5bd2ce07c5eb221)✏️Remove ![](https://github.com/Krutoy242/mc-icons/raw/master/i/aeadditions/storage.casing__0.png "Advanced Storage Housing") recipe
+  > Please remember that Uncrafting Table is experemental feature and there could be still many unreported dupes.
 
 #### Worldgen
 
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/c193014ba5add95aac2e3bc44a74ccece924bbe0)🌍![](https://github.com/Krutoy242/mc-icons/raw/master/i/extrautils2/decorativesolid__6.png "Blue Quartz") change spawn
-  > Now they spawn inside Cheese Marble structures instead of underground.
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/df956a9575fb902c9caa4e9881c6f3cec377750a)🌍Set max chunk time to `5` => `500`
-  > I dont know what this option actually do, but in theory, it should make worldgen more smoothly.
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/a800de15857414985bf5d049aa364114929cdadf)🌍X4 descrease of ![](https://github.com/Krutoy242/mc-icons/raw/master/i/quark/root__0.png "Cave Root") spawning chance but more flowers on them
+* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/d06bd03177ad83c4d1a1892415ec984603eac986)🌍Fix AdvRocketry spam new planets on `Magnis Vulpes` system
+  > I accidentally enabled generation of ~15 dimensions in one of planetary systems. All generated planets was called like "Magnis Vulpes xxx" and was actually mostly featureless. This bug only affected worlds created from `v1.31.0`.
+* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/d9680cccd05dd0d463ffed5a9cda0b3e63202cfa)🌍Fix Ice dragon cave chests was empty
 
 
 
