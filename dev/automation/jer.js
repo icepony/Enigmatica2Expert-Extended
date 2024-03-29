@@ -94,6 +94,7 @@ simple('randomthings:beanpod', [
   'biomesoplenty:gem:4',
   'biomesoplenty:gem:5',
   'biomesoplenty:gem:6',
+  'randomthings:ingredient:11',
   'minecraft:iron_ingot',
   'minecraft:gold_ingot',
   'minecraft:emerald',
