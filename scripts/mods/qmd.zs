@@ -179,13 +179,6 @@ mods.qmd.target_chamber.addRecipe(
 // mods.qmd.nucleosynthesis_chamber.addRecipe(IIngredient inputFluid1, IIngredient inputFluid2, IIngredient inputParticle, IIngredient outputFluid1, IIngredient outputFluid2, {long maxEnergy}, {long heatRelased})
 mods.qmd.nucleosynthesis_chamber.addRecipe(<liquid:sky_stone> * 52, <liquid:enrichedlava> * 20, <particle:neutron> * 1000000, <liquid:neutronium> * 72, null, 1000000, 874000);
 
-// Remove tools
-Purge(<qmd:sword_tungsten_carbide>);
-Purge(<qmd:pickaxe_tungsten_carbide>);
-Purge(<qmd:shovel_tungsten_carbide>);
-Purge(<qmd:axe_tungsten_carbide>);
-Purge(<qmd:hoe_tungsten_carbide>);
-
 ////////////////////////////////////////
 //               Unify                //
 ////////////////////////////////////////
