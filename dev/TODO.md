@@ -2,24 +2,8 @@
 
 🚧✅❌⚠️ List of priorities:
 
-- [ ] 🟢 Integrate `psideas` mod
-- [ ] ✏️ Remove removed item from Overworld Explorer villager trades
-- [ ] 🌍 Stop using `iceandfire:frozen_*` as this is random ticking blocks, causing TPS strain
-- [ ] ❓ Skeletons shoot tipped arrows
-- [ ] 🌍 monster boxes are broken?
-- [ ] ✏️ Remove Bibliocraft's chests + Add little tiles fancy chest with lot of space instead
-- [ ] 🌍 Add world generation methods warnings
-- [ ] 🌍 Populate villager's chests
-- [ ] ✏️ Tweak Botania Extended Crafting Tables recipes to non-tech
-- [ ] 📖 Advanced Crafting Tables should accept Botania tables too
-- [ ] 📖 Creative Builder Wand ignore nbt
-- [ ] 📖 Move High Oven tip to quest instead of tips
-- [ ] ✏️ Buff EU saber - give it more damage? But better split entities in two. Material changer cant change its attack speed. BHT cant skip its frames too
-- [ ] ✏️ Golem should grow bigger on kills
-- [ ] ✏️ Remove fluid housing from AE Additions, it has no use
-- [ ] 👩‍🦰 Add warning of not installed mods like MCTSmelteryIO or Netherending Ores
-- [ ] 👩‍🦰 Add warnings about wrong world type
-- [ ] 🌍 SavannaEdge doesnt show light level
+- [ ] 🧩 Prevent Alchemical Construct from picking up by carryOn
+- [ ] ✏️ Remove Absorber from Catalyst recipe (too slow, hard to automate)
 
 ---
 
@@ -29,10 +13,19 @@
 
 Planned non-urgent changes, or just good ideas:
 
+### Quests and Docs expansion
+- [ ] 📖 Write Neutron Shields localization
+- [ ] 📖 Add note about pregen spoiling Lootr chests https://github.com/LootrMinecraft/Lootr/issues/195
+- [ ] 📖 Add little tiles fancy chest with lot of space
+
+### "Battle" expansion
+- [ ] ✏️ Buff EU saber - give it more damage? But better split entities in two.
+- [ ] ✏️ Golem should grow bigger on kills
+
 ### "Flora & Fauna" expansion
 - [ ] ✏️ Rework size changings
 - [ ] ✏️ Woodweave singularity add required amount
-- [ ] ✏️ Rework Entity melting in Smeltery + add JEI category
+- [ ] ✏️ Rework Entity melting in Smeltery, migrate from Barrel Milking, add JEI category
 - [ ] ✏️ Use `Mulch` as ingredient
 - [ ] ✏️ Use `Gorgon Head` as ingredient
 - [ ] ✏️ Use `Eye of Cyclops` as ingredient
@@ -54,8 +47,10 @@ Planned non-urgent changes, or just good ideas:
 - [ ] ✏️ Milk Questing Ram to color essence
 - [ ] 🔄 Add `Cow Hacker` feature. Buff cow with 2-3 special potions based on their UUID to turn it into drop generator.
 - [ ] ✏️ Dragon Ice better craft isages
+- [ ] ✏️ Fish rework: All automated fishing options way harder to make sense of manual fishing. All fish usages lower
 
 ### "Endgame" expansion
+- [ ] ✏️ Tweak Botania Extended Crafting Tables recipes to non-tech
 - [ ] ✏️ Integrate `Orbital Laser Drill` better. It can mine ores on planet orbits for skyblock.
 - [ ] ✏️ `Critical Matter Cluster` add usages and mechanics (obtained with shift+right click of World Breaker)
 - [ ] 📖 Add new `Conflux VI` level based on 100% trophy completion
@@ -81,7 +76,6 @@ Planned non-urgent changes, or just good ideas:
 - [ ] 💬 Add messages "Player killex xxx mobs! WOW" with respective loot box reward. Ideas: Mined blocks, Jumps
 
 ### Mods
-- [ ] 🟠 Do not update `Xaero's Map` - Crash on world join
 - [ ] 🟢 Return Village Names when fixed https://legacy.curseforge.com/minecraft/mc-mods/village-names/issues/18
 - [ ] 🟡 Update `Precision Mining` when fixed https://codeberg.org/PORTB/PrecisionMiningRewrite/issues/4
 - [ ] 🟡 Update REID when fixed https://github.com/TerraFirmaCraft-The-Final-Frontier/RoughlyEnoughIDs/issues/37

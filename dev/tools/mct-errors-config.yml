@@ -41,6 +41,14 @@ replace:
   - from: Recipe registry plugin is slow, took .+ ms
     to: Recipe registry plugin is slow, took xxx.x ms
 
+  # Other plugin too slow
+  - from: '(Sending runtime to plugin: \S+ took) \d{4} (ms)'
+    to: $1 xxxx $2
+
+# Gather all errors that include this regex togother and sort them naturally
+groupBy:
+  - A Recipe Handler has already been registered for this recipe class. com.github.alexthe666.\S+
+
 # RegExps to remove entries from output
 ignore:
   # FML errors that most mods have, no harm
