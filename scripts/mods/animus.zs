@@ -1,5 +1,8 @@
 #modloaded animus
 
+// Remove health shard recipe (actually no output)
+mods.bloodmagic.BloodAltar.removeRecipe(<minecraft:prismarine_shard>);
+
 // Leech Reagent
 mods.bloodmagic.TartaricForge.removeRecipe([<minecraft:sapling>, <minecraft:leaves>, <minecraft:tallgrass:1>, <minecraft:cooked_porkchop>]);
 mods.bloodmagic.TartaricForge.addRecipe(<animus:component:3>, [<ore:foodPloughmanslunch>, <ore:dropofevil>, <darkutils:charm_gluttony>, <ore:runeGluttonyB>], 500, 100);
