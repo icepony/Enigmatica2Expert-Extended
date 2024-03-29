@@ -119,7 +119,7 @@ recipes.addShaped("Blood Letter's Pack", <bloodmagic:pack_self_sacrifice>,
 recipes.remove(<bloodmagic:pack_sacrifice>);
 recipes.addShaped('Coat of Arms', <bloodmagic:pack_sacrifice>,
   [[<botania:managlass>, <minecraft:bucket>, <botania:managlass>],
-    [<thermalfoundation:tool.sword_invar>.anyDamage(), <minecraft:leather_chestplate>, <thermalfoundation:tool.sword_invar>.anyDamage()],
+    [<thermalfoundation:material:354>, <minecraft:leather_chestplate>, <thermalfoundation:material:354>],
     [<botania:managlass>, <bloodmagic:slate>, <botania:managlass>]]);
 
 // Sacrificial Dagger
