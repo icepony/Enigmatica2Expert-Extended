@@ -1,0 +1,71 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "village_pack_wizard",
+  "items": [
+    {
+      "weight": 2.9194812774658203,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "betterbuilderswands:wandstone",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0950840711593628,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "betterbuilderswands:wandiron",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.7755888104438782,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "betterbuilderswands:wanddiamond",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.4858947992324829,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "extrautils2:itemdestructionwand",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.4858947992324829,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "rats:radius_stick",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {}
+        }
+      }
+    },
+    {
+      "weight": 1.5121370553970337,
+      "min": 6,
+      "max": 16,
+      "item": {
+        "id": "extrautils2:decorativesolidwood",
+        "damage": 0,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

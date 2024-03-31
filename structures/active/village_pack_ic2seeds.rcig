@@ -1,0 +1,2698 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "village_pack_ic2seeds",
+  "items": [
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "beetroots"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "pumpkin"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "wheat"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "blackthorn"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "brown_mushroom"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "carrots"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "cyazint"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "dandelion"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "flax"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "melon"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "potato"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "red_mushroom"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "reed"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "rose"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "tulip"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "cocoa"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "venomilia"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "stickreed"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "corpse_plant"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "nether_wart"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "eatingplant"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "egg_plant"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "meat_rose"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "beetroots"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "pumpkin"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "wheat"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "blackthorn"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "brown_mushroom"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "carrots"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "cyazint"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "dandelion"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "flax"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "melon"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "potato"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "red_mushroom"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "reed"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "rose"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "tulip"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "cocoa"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "venomilia"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "stickreed"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "corpse_plant"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "nether_wart"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "eatingplant"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "egg_plant"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "meat_rose"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "beetroots"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "pumpkin"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "wheat"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "blackthorn"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "brown_mushroom"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "carrots"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "cyazint"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "dandelion"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "flax"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "melon"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "potato"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "red_mushroom"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "reed"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "rose"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "tulip"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "cocoa"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "venomilia"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "stickreed"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "corpse_plant"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "nether_wart"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "eatingplant"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "egg_plant"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:crop_seed_bag",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "owner": {
+              "nbtType": "string",
+              "nbt": "ic2"
+            },
+            "growth": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "gain": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "resistance": {
+              "nbtType": "byte",
+              "nbt": 10
+            },
+            "scan": {
+              "nbtType": "byte",
+              "nbt": 4
+            },
+            "id": {
+              "nbtType": "string",
+              "nbt": "meat_rose"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

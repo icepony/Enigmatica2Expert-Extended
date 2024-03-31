@@ -1,0 +1,87 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "village_pack_rail",
+  "items": [
+    {
+      "weight": 5.889627456665039,
+      "min": 46,
+      "max": 64,
+      "item": {
+        "id": "tconstruct:wood_rail",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.763644814491272,
+      "min": 16,
+      "max": 37,
+      "item": {
+        "id": "minecraft:rail",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.646636426448822,
+      "min": 5,
+      "max": 16,
+      "item": {
+        "id": "minecraft:golden_rail",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 8,
+      "item": {
+        "id": "minecraft:detector_rail",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.6340234279632568,
+      "min": 6,
+      "max": 21,
+      "item": {
+        "id": "tconstruct:wood_rail_trapdoor",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 19,
+      "max": 28,
+      "item": {
+        "id": "usefulrailroads:rail_direction",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.7087690830230713,
+      "min": 27,
+      "max": 42,
+      "item": {
+        "id": "usefulrailroads:rail_highspeed",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.4400899410247803,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "usefulrailroads:rail_teleport",
+        "damage": 0,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

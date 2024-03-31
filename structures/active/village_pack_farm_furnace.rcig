@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "village_pack_farm_furnace",
+  "items": [
+    {
+      "weight": 1.0,
+      "min": 44,
+      "max": 64,
+      "item": {
+        "id": "actuallyadditions:item_misc",
+        "damage": 9,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

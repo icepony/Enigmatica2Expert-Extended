@@ -1,0 +1,97 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "village_pack_food",
+  "items": [
+    {
+      "weight": 1.290178656578064,
+      "min": 1,
+      "max": 12,
+      "item": {
+        "id": "tconstruct:edible",
+        "damage": 34,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.7755888104438782,
+      "min": 1,
+      "max": 13,
+      "item": {
+        "id": "tconstruct:edible",
+        "damage": 32,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2.202605724334717,
+      "min": 1,
+      "max": 12,
+      "item": {
+        "id": "tconstruct:edible",
+        "damage": 33,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.1894346475601196,
+      "min": 1,
+      "max": 12,
+      "item": {
+        "id": "tconstruct:edible",
+        "damage": 31,
+        "count": 1
+      }
+    },
+    {
+      "weight": 3.3419337272644043,
+      "min": 1,
+      "max": 13,
+      "item": {
+        "id": "tconstruct:edible",
+        "damage": 30,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.5354365706443787,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "ic2:mug",
+        "damage": 3,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 8,
+      "item": {
+        "id": "biomesoplenty:jar_filled",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.5354365706443787,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "actuallyadditions:item_coffee",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 64,
+      "item": {
+        "id": "betteranimalsplus:turkey_cooked",
+        "damage": 0,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

@@ -1,0 +1,121 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "village_pack_armor_parts",
+  "items": [
+    {
+      "weight": 5.889627456665039,
+      "min": 1,
+      "max": 9,
+      "item": {
+        "id": "conarm:armor_plate",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "Material": {
+              "nbtType": "string",
+              "nbt": "steel"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "conarm:boots_core",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "Material": {
+              "nbtType": "string",
+              "nbt": "osmium"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "conarm:leggings_core",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "Material": {
+              "nbtType": "string",
+              "nbt": "osmium"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "conarm:chest_core",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "Material": {
+              "nbtType": "string",
+              "nbt": "osmium"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "conarm:helmet_core",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "Material": {
+              "nbtType": "string",
+              "nbt": "osmium"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 2.540874481201172,
+      "min": 1,
+      "max": 4,
+      "item": {
+        "id": "conarm:armor_trim",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "Material": {
+              "nbtType": "string",
+              "nbt": "lead"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

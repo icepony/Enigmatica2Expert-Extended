@@ -1,0 +1,194 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "village_pack_ammo",
+  "items": [
+    {
+      "weight": 1.0,
+      "min": 6,
+      "max": 21,
+      "item": {
+        "id": "immersiveengineering:bullet",
+        "damage": 2,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "bullet": {
+              "nbtType": "string",
+              "nbt": "dragonsbreath"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 6,
+      "max": 20,
+      "item": {
+        "id": "immersiveengineering:bullet",
+        "damage": 2,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "bullet": {
+              "nbtType": "string",
+              "nbt": "flare"
+            },
+            "flareColour": {
+              "nbtType": "int",
+              "nbt": 13381126
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 6,
+      "max": 20,
+      "item": {
+        "id": "immersiveengineering:bullet",
+        "damage": 2,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "bullet": {
+              "nbtType": "string",
+              "nbt": "casull"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 6,
+      "max": 21,
+      "item": {
+        "id": "immersiveengineering:bullet",
+        "damage": 2,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "bullet": {
+              "nbtType": "string",
+              "nbt": "armor_piercing"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 6,
+      "max": 18,
+      "item": {
+        "id": "immersiveengineering:bullet",
+        "damage": 2,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "bullet": {
+              "nbtType": "string",
+              "nbt": "silver"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 6,
+      "max": 19,
+      "item": {
+        "id": "immersiveengineering:bullet",
+        "damage": 2,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "bullet": {
+              "nbtType": "string",
+              "nbt": "he"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 6,
+      "max": 20,
+      "item": {
+        "id": "immersiveengineering:bullet",
+        "damage": 2,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "bullet": {
+              "nbtType": "string",
+              "nbt": "buckshot"
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 0.3978064954280853,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "immersiveengineering:material",
+        "damage": 13,
+        "count": 1
+      }
+    },
+    {
+      "weight": 3.8119313716888428,
+      "min": 1,
+      "max": 64,
+      "item": {
+        "id": "quark:arrow_explosive",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 17.973718643188477,
+      "min": 1,
+      "max": 64,
+      "item": {
+        "id": "minecraft:arrow",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 8.788166999816895,
+      "min": 1,
+      "max": 64,
+      "item": {
+        "id": "quark:arrow_torch",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.3978064954280853,
+      "min": 1,
+      "max": 8,
+      "item": {
+        "id": "immersiveengineering:material",
+        "damage": 14,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

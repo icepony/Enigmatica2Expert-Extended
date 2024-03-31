@@ -1,0 +1,173 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "village_pack_mechanisms",
+  "items": [
+    {
+      "weight": 0.32298368215560913,
+      "min": 1,
+      "max": 6,
+      "item": {
+        "id": "mysticalagriculture:inferium_furnace",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.5889394283294678,
+      "min": 1,
+      "max": 8,
+      "item": {
+        "id": "darkutils:trap_anchor",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 6,
+      "max": 18,
+      "item": {
+        "id": "darkutils:trap_move_hyper",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 9.281763076782227,
+      "min": 26,
+      "max": 39,
+      "item": {
+        "id": "tconstruct:punji",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 3,
+      "item": {
+        "id": "darkutils:timer",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.39763605594635,
+      "min": 4,
+      "max": 12,
+      "item": {
+        "id": "ic2:cover",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.39763605594635,
+      "min": 4,
+      "max": 12,
+      "item": {
+        "id": "ic2:cover",
+        "damage": 1,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2.202605724334717,
+      "min": 24,
+      "max": 33,
+      "item": {
+        "id": "randomthings:ingredient",
+        "damage": 8,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.4858947992324829,
+      "min": 1,
+      "max": 64,
+      "item": {
+        "id": "storagedrawers:upgrade_storage",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.5889394283294678,
+      "min": 1,
+      "max": 64,
+      "item": {
+        "id": "storagedrawers:upgrade_template",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 22.68061065673828,
+      "min": 11,
+      "max": 23,
+      "item": {
+        "id": "thermalfoundation:material",
+        "damage": 22,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.0,
+      "min": 10,
+      "max": 23,
+      "item": {
+        "id": "thermalfoundation:material",
+        "damage": 23,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.7755888104438782,
+      "min": 6,
+      "max": 20,
+      "item": {
+        "id": "ic2:pipe",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "type": {
+              "nbtType": "byte",
+              "nbt": 0
+            },
+            "size": {
+              "nbtType": "byte",
+              "nbt": 3
+            }
+          }
+        }
+      }
+    },
+    {
+      "weight": 0.7755888104438782,
+      "min": 6,
+      "max": 24,
+      "item": {
+        "id": "ic2:pipe",
+        "damage": 1,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "type": {
+              "nbtType": "byte",
+              "nbt": 1
+            },
+            "size": {
+              "nbtType": "byte",
+              "nbt": 3
+            }
+          }
+        }
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

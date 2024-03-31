@@ -1,0 +1,87 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "village_pack_carrot",
+  "items": [
+    {
+      "weight": 14.082878112792969,
+      "min": 49,
+      "max": 64,
+      "item": {
+        "id": "minecraft:carrot",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2.540874481201172,
+      "min": 1,
+      "max": 8,
+      "item": {
+        "id": "additionalcompression:cropcarrot_compressed",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.9013646841049194,
+      "min": 1,
+      "max": 8,
+      "item": {
+        "id": "actuallyadditions:item_food",
+        "damage": 2,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2.9194812774658203,
+      "min": 1,
+      "max": 14,
+      "item": {
+        "id": "exnihilocreatio:item_seed_carrot",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.5121370553970337,
+      "min": 8,
+      "max": 21,
+      "item": {
+        "id": "harvestcraft:carrotjuiceitem",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 6,
+      "max": 18,
+      "item": {
+        "id": "harvestcraft:carrotsoupitem",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 9,
+      "item": {
+        "id": "harvestcraft:glazedcarrotsitem",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 9,
+      "item": {
+        "id": "harvestcraft:honeyglazedcarrotsitem",
+        "damage": 0,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

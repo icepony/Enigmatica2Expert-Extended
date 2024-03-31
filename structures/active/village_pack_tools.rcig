@@ -1,0 +1,117 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "village_pack_tools",
+  "items": [
+    {
+      "weight": 0.25986868143081665,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "actuallyadditions:item_knife",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.3978064954280853,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "darkutils:charm_gluttony",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.5889394283294678,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "darkutils:charm_sleep",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.6340234279632568,
+      "min": 1,
+      "max": 2,
+      "item": {
+        "id": "tconstruct:materials",
+        "damage": 12,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.290178656578064,
+      "min": 1,
+      "max": 2,
+      "item": {
+        "id": "tconstruct:materials",
+        "damage": 13,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 6,
+      "item": {
+        "id": "tconstruct:materials",
+        "damage": 14,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.3978064954280853,
+      "min": 1,
+      "max": 7,
+      "item": {
+        "id": "tconstruct:materials",
+        "damage": 15,
+        "count": 1
+      }
+    },
+    {
+      "weight": 11.482789039611816,
+      "min": 2,
+      "max": 10,
+      "item": {
+        "id": "tconstruct:materials",
+        "damage": 18,
+        "count": 1
+      }
+    },
+    {
+      "weight": 3.8119313716888428,
+      "min": 4,
+      "max": 14,
+      "item": {
+        "id": "thermalexpansion:morb",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 1,
+      "item": {
+        "id": "travelersbackpack:hose",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 5.2210845947265625,
+      "min": 2,
+      "max": 6,
+      "item": {
+        "id": "vaultopic:vault_searcher",
+        "damage": 0,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

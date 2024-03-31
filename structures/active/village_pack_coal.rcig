@@ -1,0 +1,47 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "village_pack_coal",
+  "items": [
+    {
+      "weight": 3.5707483291625977,
+      "min": 10,
+      "max": 40,
+      "item": {
+        "id": "actuallyadditions:item_misc",
+        "damage": 10,
+        "count": 1
+      }
+    },
+    {
+      "weight": 8.315797805786133,
+      "min": 10,
+      "max": 41,
+      "item": {
+        "id": "actuallyadditions:item_misc",
+        "damage": 11,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.20703016221523285,
+      "min": 10,
+      "max": 25,
+      "item": {
+        "id": "actuallyadditions:item_misc",
+        "damage": 22,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 10,
+      "max": 31,
+      "item": {
+        "id": "mechanics:fuel_dust_tiny",
+        "damage": 0,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

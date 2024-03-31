@@ -1,0 +1,197 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "village_pack_decor_uncommon",
+  "items": [
+    {
+      "weight": 16.325912475585938,
+      "min": 21,
+      "max": 45,
+      "item": {
+        "id": "extrautils2:decorativesolidwood",
+        "damage": 2,
+        "count": 1
+      }
+    },
+    {
+      "weight": 10.897062301635742,
+      "min": 10,
+      "max": 25,
+      "item": {
+        "id": "openblocks:elevator",
+        "damage": 12,
+        "count": 1
+      }
+    },
+    {
+      "weight": 3.8119313716888428,
+      "min": 30,
+      "max": 48,
+      "item": {
+        "id": "quark:magma_bricks",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2.0475566387176514,
+      "min": 1,
+      "max": 18,
+      "item": {
+        "id": "tconstruct:soil",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 8,
+      "max": 19,
+      "item": {
+        "id": "tconstruct:soil",
+        "damage": 4,
+        "count": 1
+      }
+    },
+    {
+      "weight": 8.315797805786133,
+      "min": 48,
+      "max": 64,
+      "item": {
+        "id": "xtones:base",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.9013646841049194,
+      "min": 15,
+      "max": 37,
+      "item": {
+        "id": "tcomplement:scorched_block",
+        "damage": 3,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.763644814491272,
+      "min": 16,
+      "max": 40,
+      "item": {
+        "id": "tconstruct:seared",
+        "damage": 3,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.35883715748786926,
+      "min": 1,
+      "max": 30,
+      "item": {
+        "id": "randomthings:platform",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.2900550961494446,
+      "min": 1,
+      "max": 32,
+      "item": {
+        "id": "randomthings:platform",
+        "damage": 1,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.2900550961494446,
+      "min": 1,
+      "max": 31,
+      "item": {
+        "id": "randomthings:platform",
+        "damage": 2,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.32298368215560913,
+      "min": 1,
+      "max": 30,
+      "item": {
+        "id": "randomthings:platform",
+        "damage": 3,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.23224952816963196,
+      "min": 1,
+      "max": 24,
+      "item": {
+        "id": "randomthings:platform",
+        "damage": 4,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.23224952816963196,
+      "min": 1,
+      "max": 26,
+      "item": {
+        "id": "randomthings:platform",
+        "damage": 5,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.5354365706443787,
+      "min": 11,
+      "max": 30,
+      "item": {
+        "id": "rustic:iron_lantern",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.4400899410247803,
+      "min": 1,
+      "max": 14,
+      "item": {
+        "id": "rustic:barrel",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 7.019199371337891,
+      "min": 43,
+      "max": 64,
+      "item": {
+        "id": "ic2:scaffold",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 41,
+      "max": 64,
+      "item": {
+        "id": "ic2:crop_stick",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 4,
+      "max": 39,
+      "item": {
+        "id": "randomthings:grassseeds",
+        "damage": 0,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

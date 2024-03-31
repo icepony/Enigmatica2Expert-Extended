@@ -1,0 +1,77 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "village_pack_lights",
+  "items": [
+    {
+      "weight": 0.4400899410247803,
+      "min": 38,
+      "max": 64,
+      "item": {
+        "id": "mia:torch_gold",
+        "damage": 1,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.6340234279632568,
+      "min": 40,
+      "max": 64,
+      "item": {
+        "id": "integrateddynamics:menril_torch",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.763644814491272,
+      "min": 39,
+      "max": 64,
+      "item": {
+        "id": "integrateddynamics:menril_torch_stone",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.5121370553970337,
+      "min": 23,
+      "max": 42,
+      "item": {
+        "id": "rustic:lantern_wood",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.3978064954280853,
+      "min": 10,
+      "max": 26,
+      "item": {
+        "id": "immersiveengineering:metal_decoration2",
+        "damage": 4,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 14,
+      "max": 30,
+      "item": {
+        "id": "rustic:iron_lantern",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.5354365706443787,
+      "min": 1,
+      "max": 18,
+      "item": {
+        "id": "rats:rat_lantern",
+        "damage": 0,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

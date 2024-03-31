@@ -1,0 +1,174 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "village_pack_decor_common",
+  "items": [
+    {
+      "weight": 10.335477828979492,
+      "min": 44,
+      "max": 64,
+      "item": {
+        "id": "sonarcore:reinforcedstonebrick",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 5.547300815582275,
+      "min": 43,
+      "max": 64,
+      "item": {
+        "id": "extrautils2:decorativesolid",
+        "damage": 1,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2.9194812774658203,
+      "min": 42,
+      "max": 64,
+      "item": {
+        "id": "tconstruct:brownstone",
+        "damage": 2,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2.9194812774658203,
+      "min": 42,
+      "max": 64,
+      "item": {
+        "id": "tconstruct:brownstone",
+        "damage": 3,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.6340234279632568,
+      "min": 34,
+      "max": 64,
+      "item": {
+        "id": "tconstruct:brownstone_slab2",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.6340234279632568,
+      "min": 37,
+      "max": 64,
+      "item": {
+        "id": "tconstruct:brownstone_stairs_brick",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.6340234279632568,
+      "min": 33,
+      "max": 64,
+      "item": {
+        "id": "quark:stonebrick_wall",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.763644814491272,
+      "min": 31,
+      "max": 64,
+      "item": {
+        "id": "quark:brick_wall",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 26,
+      "max": 64,
+      "item": {
+        "id": "sonarcore:stablestone_normal",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 27,
+      "max": 64,
+      "item": {
+        "id": "sonarcore:stablestone_black",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 28,
+      "max": 64,
+      "item": {
+        "id": "immersiveengineering:stone_decoration",
+        "damage": 5,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 27,
+      "max": 64,
+      "item": {
+        "id": "engineersdecor:gas_concrete_wall",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 30,
+      "max": 64,
+      "item": {
+        "id": "sonarcore:reinforcedstonebrickfence",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 29,
+      "max": 64,
+      "item": {
+        "id": "tconstruct:stone_ladder",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 28,
+      "max": 64,
+      "item": {
+        "id": "architecturecraft:shape",
+        "damage": 0,
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "Shape": {
+              "nbtType": "int",
+              "nbt": 0
+            },
+            "BaseName": {
+              "nbtType": "string",
+              "nbt": "chisel:basalt2"
+            },
+            "BaseData": {
+              "nbtType": "int",
+              "nbt": 7
+            }
+          }
+        }
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}
