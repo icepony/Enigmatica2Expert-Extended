@@ -22,7 +22,7 @@ BiomeRarity: 100
 
 BiomeColor: #BDB25F
 
-ReplaceToBiomeName: 
+ReplaceToBiomeName: minecraft:savanna
 
 ####################
 # Isle biomes only #
