@@ -125,7 +125,7 @@
     {
       "weight": 1.0,
       "min": 1,
-      "max": 64,
+      "max": 10,
       "item": {
         "id": "harvestcraft:applejellysandwichitem",
         "damage": 0,
@@ -135,7 +135,7 @@
     {
       "weight": 1.0,
       "min": 1,
-      "max": 64,
+      "max": 10,
       "item": {
         "id": "harvestcraft:blackberryjellysandwichitem",
         "damage": 0,
@@ -145,7 +145,7 @@
     {
       "weight": 1.0,
       "min": 1,
-      "max": 64,
+      "max": 10,
       "item": {
         "id": "harvestcraft:blueberryjellysandwichitem",
         "damage": 0,
@@ -155,7 +155,7 @@
     {
       "weight": 1.0,
       "min": 1,
-      "max": 64,
+      "max": 10,
       "item": {
         "id": "harvestcraft:cranberryjellysandwichitem",
         "damage": 0,
@@ -165,7 +165,7 @@
     {
       "weight": 1.0,
       "min": 1,
-      "max": 64,
+      "max": 10,
       "item": {
         "id": "harvestcraft:cherryjellysandwichitem",
         "damage": 0,
@@ -175,7 +175,7 @@
     {
       "weight": 1.0,
       "min": 1,
-      "max": 64,
+      "max": 10,
       "item": {
         "id": "harvestcraft:kiwijellysandwichitem",
         "damage": 0,
@@ -185,7 +185,7 @@
     {
       "weight": 1.0,
       "min": 1,
-      "max": 64,
+      "max": 10,
       "item": {
         "id": "harvestcraft:lemonjellysandwichitem",
         "damage": 0,
@@ -195,7 +195,7 @@
     {
       "weight": 1.0,
       "min": 1,
-      "max": 64,
+      "max": 10,
       "item": {
         "id": "harvestcraft:limejellysandwichitem",
         "damage": 0,
@@ -205,7 +205,7 @@
     {
       "weight": 1.0,
       "min": 1,
-      "max": 64,
+      "max": 10,
       "item": {
         "id": "harvestcraft:mangojellysandwichitem",
         "damage": 0,
@@ -215,7 +215,7 @@
     {
       "weight": 1.0,
       "min": 1,
-      "max": 64,
+      "max": 10,
       "item": {
         "id": "harvestcraft:orangejellysandwichitem",
         "damage": 0,
@@ -225,7 +225,7 @@
     {
       "weight": 1.0,
       "min": 1,
-      "max": 64,
+      "max": 10,
       "item": {
         "id": "harvestcraft:papayajellysandwichitem",
         "damage": 0,
@@ -235,7 +235,7 @@
     {
       "weight": 1.0,
       "min": 1,
-      "max": 64,
+      "max": 10,
       "item": {
         "id": "harvestcraft:peachjellysandwichitem",
         "damage": 0,
@@ -245,7 +245,7 @@
     {
       "weight": 1.0,
       "min": 1,
-      "max": 64,
+      "max": 10,
       "item": {
         "id": "harvestcraft:pomegranatejellysandwichitem",
         "damage": 0,
@@ -255,7 +255,7 @@
     {
       "weight": 1.0,
       "min": 1,
-      "max": 64,
+      "max": 10,
       "item": {
         "id": "harvestcraft:toastsandwichitem",
         "damage": 0,
@@ -265,7 +265,7 @@
     {
       "weight": 1.0,
       "min": 1,
-      "max": 64,
+      "max": 10,
       "item": {
         "id": "harvestcraft:persimmonjellysandwichitem",
         "damage": 0,
@@ -275,7 +275,7 @@
     {
       "weight": 1.0,
       "min": 1,
-      "max": 64,
+      "max": 10,
       "item": {
         "id": "harvestcraft:grapefruitjellysandwichitem",
         "damage": 0,
@@ -285,7 +285,7 @@
     {
       "weight": 1.0,
       "min": 1,
-      "max": 64,
+      "max": 10,
       "item": {
         "id": "harvestcraft:figjellysandwichitem",
         "damage": 0,
@@ -295,7 +295,7 @@
     {
       "weight": 1.0,
       "min": 1,
-      "max": 64,
+      "max": 10,
       "item": {
         "id": "harvestcraft:apricotjellysandwichitem",
         "damage": 0,
@@ -305,7 +305,7 @@
     {
       "weight": 1.0,
       "min": 1,
-      "max": 64,
+      "max": 10,
       "item": {
         "id": "harvestcraft:watermelonjellysandwichitem",
         "damage": 0,
@@ -315,7 +315,7 @@
     {
       "weight": 1.0,
       "min": 1,
-      "max": 64,
+      "max": 10,
       "item": {
         "id": "harvestcraft:strawberryjellysandwichitem",
         "damage": 0,
@@ -325,7 +325,7 @@
     {
       "weight": 1.0,
       "min": 1,
-      "max": 64,
+      "max": 10,
       "item": {
         "id": "harvestcraft:starfruitjellysandwichitem",
         "damage": 0,
@@ -335,7 +335,7 @@
     {
       "weight": 1.0,
       "min": 1,
-      "max": 64,
+      "max": 10,
       "item": {
         "id": "harvestcraft:raspberryjellysandwichitem",
         "damage": 0,
@@ -345,7 +345,7 @@
     {
       "weight": 1.0,
       "min": 1,
-      "max": 64,
+      "max": 10,
       "item": {
         "id": "harvestcraft:gooseberryjellysandwichitem",
         "damage": 0,
@@ -355,7 +355,7 @@
     {
       "weight": 1.0,
       "min": 1,
-      "max": 64,
+      "max": 10,
       "item": {
         "id": "harvestcraft:pearjellysandwichitem",
         "damage": 0,
@@ -365,7 +365,7 @@
     {
       "weight": 1.0,
       "min": 1,
-      "max": 64,
+      "max": 10,
       "item": {
         "id": "harvestcraft:plumjellysandwichitem",
         "damage": 0,
@@ -375,7 +375,7 @@
     {
       "weight": 1.0,
       "min": 1,
-      "max": 64,
+      "max": 10,
       "item": {
         "id": "harvestcraft:honeysandwichitem",
         "damage": 0,
@@ -385,7 +385,7 @@
     {
       "weight": 1.0,
       "min": 1,
-      "max": 64,
+      "max": 10,
       "item": {
         "id": "harvestcraft:hamandcheesesandwichitem",
         "damage": 0,
