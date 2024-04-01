@@ -78,7 +78,7 @@ val chemIngrs = {
   'E': <mekanism:tierinstaller:2>,           // Elite Tier Installer
   'I': <rftools:infused_diamond>,            // Infused Diamond
   '*': <extrautils2:suncrystal>,             // Sun Crystal
-  '~': Bucket('sulfuric_acid') | Bucket('sulfuricacid'), // Sulfuric Acid Bucket
+  '~': LiquidIngr('sulfuric_acid') | LiquidIngr('sulfuricacid'), // Sulfuric Acid Bucket
   'O': <ic2:te:56>,                          // Ore Washing Plant
 } as IIngredient[string];
 

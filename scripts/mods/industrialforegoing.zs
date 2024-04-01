@@ -238,7 +238,7 @@ craft.remake(<industrialforegoing:crop_recolector>, ['pretty',
   'R': <ore:itemRubber>,            // Plastic
   'E': <ore:gearElectrumFlux>,      // Fluxed Electrum Gear
   'M': <teslacorelib:machine_case>, // Machine Case
-  '~': Bucket('if.protein'), // Protein Bucket
+  '~': LiquidIngr('if.protein'), // Protein Bucket
 });
 
 // Remake IF addons to being much harder at huge (+12) ranges

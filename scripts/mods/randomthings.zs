@@ -194,7 +194,7 @@ craft.remake(<randomthings:fertilizeddirt> * 8, ['pretty',
   'F f F'], {
   'F': <randomthings:ingredient:7>, // Floo Powder
   'f': <ore:fertilizer>,            // Fertilizer
-  '~': Bucket('witchwater'),
+  '~': LiquidIngr('witchwater'),
 });
 
 val weatherIngrs = {

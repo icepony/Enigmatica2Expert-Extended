@@ -386,7 +386,7 @@ craft.make(<extrautils2:drum:3>, ['pretty',
   'R': <extrautils2:drum:2>,            // Reinforced Large Drum
   '⌃': <extrautils2:decorativesolid:6>, // Blue Quartz
   'K': <extrautils2:klein>,             // Klein Bottle
-  '~': Bucket('high_pressure_steam'), // High Pressure Steam Bucket
+  '~': LiquidIngr('high_pressure_steam'), // High Pressure Steam Bucket
 });
 
 // Infinity item sources

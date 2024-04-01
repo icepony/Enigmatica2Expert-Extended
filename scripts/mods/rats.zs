@@ -311,7 +311,7 @@ mods.appliedenergistics2.Inscriber.addRecipe(<appliedenergistics2:material:17>, 
 mods.threng.Etcher.addRecipe(<appliedenergistics2:material:24>, <rats:rat_diamond>, <ore:dustRedstone>, <ore:itemSilicon>);
 mods.thermalexpansion.Compactor.addGearRecipe(<thermalfoundation:material:26>, <rats:rat_diamond> * 4, 36000);
 mods.immersiveengineering.MetalPress.addRecipe(<thermalfoundation:material:26>, <rats:rat_diamond>, <immersiveengineering:mold:1>, 16000, 4);
-recipes.addShapeless('gem_crystal_flux from rat', <redstonearsenal:material:160> * 2, [<rats:rat_diamond>, <rats:rat_diamond>, Bucket('redstone')]);
+recipes.addShapeless('gem_crystal_flux from rat', <redstonearsenal:material:160> * 2, [<rats:rat_diamond>, <rats:rat_diamond>, LiquidIngr('redstone')]);
 mods.thermalexpansion.Transposer.addFillRecipe(<redstonearsenal:material:160>, <rats:rat_diamond>, <fluid:redstone> * 500, 2000);
 mods.nuclearcraft.Infuser.addRecipe(<ore:gemDiamondRat>, <fluid:redstone> * 500, <redstonearsenal:material:160>);
 // ################################################################################

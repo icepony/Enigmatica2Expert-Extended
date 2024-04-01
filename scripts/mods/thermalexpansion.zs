@@ -734,7 +734,7 @@ mods.tconstruct.Alloy.addRecipe(<liquid:signalum> * 144, [<liquid:silver> * 108,
 craft.reshapeless(<thermalfoundation:material:101> * 4, '▲▲▲♠♥', {
   '▲': <ore:dustSilver>, // Pulverized Silver
   '♠': <ore:dustCopper>, // Pulverized Copper
-  '♥': Bucket('redstone'), // Destabilized Redstone Bucket
+  '♥': LiquidIngr('redstone'), // Destabilized Redstone Bucket
 });
 mods.nuclearcraft.AlloyFurnace.removeRecipeWithOutput(<nuclearcraft:alloy:7> * 4);
 scripts.process.alloy([<ore:ingotSilver> * 3, <ore:ingotCopper>], <nuclearcraft:alloy:7> * 4, 'only: alloyFurnace induction');

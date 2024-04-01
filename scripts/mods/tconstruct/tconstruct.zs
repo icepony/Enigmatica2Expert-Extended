@@ -371,7 +371,7 @@ craft.remake(<tconstruct:firewood:1>, ['pretty',
   'L B L'], {
   'B': <forestry:bituminous_peat>, // Bituminous Peat
   'L': <tconstruct:firewood>, // Lavawood
-  '~': Bucket('ic2pahoehoe_lava'), // Pahoehoe Lava Bucket
+  '~': LiquidIngr('ic2pahoehoe_lava'), // Pahoehoe Lava Bucket
 });
 
 // Nerf stone torch light level

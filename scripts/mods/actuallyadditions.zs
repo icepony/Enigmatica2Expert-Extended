@@ -117,7 +117,7 @@ craft.remake(<actuallyadditions:block_xp_solidifier>, ['pretty',
   '  ~  '], {
   'A': <actuallyadditions:item_misc:8>, // Advanced Coil
   '☼': <actuallyadditions:block_crystal:2>, // Diamatine Crystal Block
-  '~': Bucket('xpjuice') | Bucket('experience') | Bucket('essence'),
+  '~': LiquidIngr('xpjuice') | LiquidIngr('experience') | LiquidIngr('essence'),
 });
 
 // Wood Casing

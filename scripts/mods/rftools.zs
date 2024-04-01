@@ -269,7 +269,7 @@ craft.remake(<rftools:booster>, ['pretty',
   'I': <ore:itemInsulatedGlassCable>, // Glass Fibre Cable
   '▬': <ore:ingotPinkMetal>,          // Pink Slime Ingot
   'M': <rftools:machine_base>,        // Machine Base
-  '~': Bucket('ic2hot_water') | Bucket('hot_spring_water'), // Hotspring Water Bucket
+  '~': LiquidIngr('ic2hot_water') | LiquidIngr('hot_spring_water'), // Hotspring Water Bucket
 });
 
 // [Elevator] from [Machine Base][+4]
