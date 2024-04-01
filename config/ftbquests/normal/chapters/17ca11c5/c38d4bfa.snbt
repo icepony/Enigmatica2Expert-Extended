@@ -9,9 +9,13 @@
 	tasks: [{
 		uid: "99565dad",
 		type: "item",
+		icon: "extendedcrafting:table_ultimate",
 		disable_toast: true,
 		items: [{
 			item: "extendedcrafting:table_ultimate"
+		},
+		{
+			item: "botania_tweaks:ultimate_extended_crafty_crate"
 		}]
 	}],
 	rewards: [{

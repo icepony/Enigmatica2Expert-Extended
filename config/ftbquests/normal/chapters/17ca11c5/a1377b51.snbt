@@ -11,8 +11,12 @@
 	tasks: [{
 		uid: "9d81279b",
 		type: "item",
+		icon: "extendedcrafting:table_elite",
 		items: [{
 			item: "extendedcrafting:table_elite"
+		},
+		{
+			item: "botania_tweaks:elite_extended_crafty_crate"
 		}],
 		ignore_nbt: 1b
 	}],
