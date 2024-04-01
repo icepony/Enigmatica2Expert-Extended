@@ -19,10 +19,5 @@
 		uid: "39db7808",
 		type: "choice",
 		table: 11
-	},
-	{
-		uid: "14ba96a7",
-		type: "item",
-		item: "forestry:pipette"
 	}]
 }
