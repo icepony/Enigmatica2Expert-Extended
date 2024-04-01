@@ -1,5 +1,7 @@
 #modloaded ftbquests
 
+furnace.setFuel(<ftbquests:chest>, 0);
+
 val rarities = [
   'common',
   'uncommon',
