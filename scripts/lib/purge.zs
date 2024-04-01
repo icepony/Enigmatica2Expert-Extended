@@ -29,6 +29,14 @@ zenClass CPurge {
     }
     return this;
   }
+  
+  function fuel() as CPurge {
+    if (isNull(ingr)) return this;
+    for item in ingr.items {
+      furnace.setFuel(actualItem(item), 0);
+    }
+    return this;
+  }
 
   function ores() as CPurge {
     if (isNull(ingr)) return this;
