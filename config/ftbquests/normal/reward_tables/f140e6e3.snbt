@@ -1,84 +1,14 @@
 {
 	loot_size: 1,
 	rewards: [{
-		icon: {
-			id: "bibliocraft:framedchest",
-			Count: 6,
-			Damage: 6s,
-			tag: {
-				renderTexture: "quark:blocks/iron_plate_rusted"
-			}
-		},
-		item: {
-			id: "bibliocraft:framedchest",
-			Damage: 6s,
-			tag: {
-				renderTexture: "quark:blocks/iron_plate_rusted"
-			}
-		},
-		count: 6
+		item: "appliedenergistics2:smooth_sky_stone_chest"
 	},
 	{
-		icon: {
-			id: "bibliocraft:framedchest",
-			Count: 4,
-			Damage: 6s,
-			tag: {
-				renderTexture: "chisel:blocks/metals/cobalt/badgreggy"
-			}
-		},
-		item: {
-			id: "bibliocraft:framedchest",
-			Damage: 6s,
-			tag: {
-				renderTexture: "chisel:blocks/metals/cobalt/badgreggy"
-			}
-		},
+		icon: "rustic:barrel 4",
+		item: "rustic:barrel",
 		count: 4
 	},
 	{
-		icon: {
-			id: "bibliocraft:framedchest",
-			Count: 4,
-			Damage: 6s,
-			tag: {
-				renderTexture: "chisel:blocks/factory/goldplate"
-			}
-		},
-		item: {
-			id: "bibliocraft:framedchest",
-			Damage: 6s,
-			tag: {
-				renderTexture: "chisel:blocks/factory/goldplate"
-			}
-		},
-		count: 4
-	},
-	{
-		icon: {
-			id: "bibliocraft:framedchest",
-			Count: 4,
-			Damage: 6s,
-			tag: {
-				renderTexture: "sonarcore:blocks/connected/stablestonerimmedblack_green"
-			}
-		},
-		item: {
-			id: "bibliocraft:framedchest",
-			Damage: 6s,
-			tag: {
-				renderTexture: "sonarcore:blocks/connected/stablestonerimmedblack_green"
-			}
-		},
-		count: 4
-	},
-	{
-		item: {
-			id: "bibliocraft:framedchest",
-			Damage: 6s,
-			tag: {
-				renderTexture: "extendedcrafting:blocks/trimmed_ultimate"
-			}
-		}
+		item: "mekanism:machineblock 1 13"
 	}]
 }
