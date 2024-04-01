@@ -91,7 +91,7 @@
     {
       "item": "thaumicaugmentation:research_notes",
       "type": "text",
-      "text": "$(li)The §nMaim Trap§r from Dark Utilities is the best way to kill mobs on high §5difficulty§r.$(li)Higher §oHigh Oven§rs output more §lheat§r.$(li)The Ice Bomb from Twilight Forest turns even flowing §nLava§r into §nObsidian§r.$(li)Press §lShift+F§r to lock stairs rotation.$(li)You can §lshear§r Creepers.",
+      "text": "$(li)The §nMaim Trap§r from Dark Utilities is the best way to kill mobs on high §5difficulty§r.$(li)The Ice Bomb from Twilight Forest turns even flowing §nLava§r into §nObsidian§r.$(li)Press §lShift+F§r to lock stairs rotation.$(li)You can §lshear§r Creepers.",
       "title": "Tips"
     },
     {
@@ -133,7 +133,7 @@
     {
       "item": "thaumicaugmentation:research_notes",
       "type": "text",
-      "text": "$(li)Press \"§lShift+C§r\" to crawl$(li)The OP command §n/bcore_util regenchunk§r regenerates the entire chunk.",
+      "text": "$(li)Press \"§lShift+C§r\" to crawl$(li)The OP command §n/bcore_util regenchunk§r regenerates the entire chunk.$(li)Use the command §n/tmg_deathlist [TAB] [TAB]§r to assist in locating your grave.",
       "title": "Tips"
     }
   ]
