@@ -11,22 +11,7 @@
 		uid: "11b64541",
 		type: "item",
 		items: [{
-			id: "littletiles:chisel",
-			tag: {
-				preview: {
-					bBox: [I;
-						0i,
-						0i,
-						0i,
-						1i,
-						1i,
-						1i
-					],
-					tile: {
-						block: "minecraft:stone"
-					}
-				}
-			}
+			item: "littletiles:chisel"
 		}],
 		ignore_nbt: 1b
 	}],
