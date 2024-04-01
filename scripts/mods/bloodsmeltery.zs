@@ -6,3 +6,19 @@ mods.tconstruct.Casting.addBasinRecipe(<bloodmagic:blood_rune>, null, <liquid:ru
 
 // Fix slates dupe
 mods.tconstruct.Melting.removeRecipe(<fluid:rune>, <bloodmagic:blood_rune>);
+
+// Remove from Crucible since it cant handle NBT tags propertly
+for i in 0 .. 5 {
+  mods.thermalexpansion.Crucible.removeRecipe(<bloodmagic:monster_soul>.definition.makeStack(i).withTag({souls: 1.0 as float}));
+
+  // For some reason, this recipes cannot be found despite being exact.
+  // for will in [
+  //   'vengeful',
+  //   'corrosive',
+  //   'steadfast',
+  //   'raw',
+  //   'destructive',
+  // ] as string[] {
+  //   mods.thermalexpansion.Crucible.removeRecipe(<bloodmagic:soul_gem>.definition.makeStack(i).withTag({souls: 1.0, demonWillType: will}));
+  // }
+}
