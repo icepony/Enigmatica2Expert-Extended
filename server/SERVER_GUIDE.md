@@ -31,13 +31,10 @@ For hosting services with control panels like `Pterodactyl`:
 
 2) **Backup** any custom configuration changes.
 
-3) **Delete** the following folders: `bansoukou`, `config`, `mods`, `patchouli_books`, `scripts`, `structures`.
-    > This prevents conflicts from old files that were removed in the new version.
-
-4) **Delete** the `serverstarter.lock` file.
+3) **Delete** the `serverstarter.lock` file.
     > This signals the *serverstarter* script to reinstall the modpack.
 
-5) **Extract** the new `.zip` into the server folder, allowing files to be overwritten.
+4) **Extract** the new `.zip` into the server folder, allowing files to be overwritten.
 
-6) **Restore** your custom configurations.
+5) **Restore** your custom configurations.
     > Keep a separate archive of your changes to simplify reapplication after updates.
