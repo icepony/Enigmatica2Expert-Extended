@@ -1,10 +1,24 @@
 #modloaded netherendingores
-#ignoreBracketErrors
 
 <entity:netherendingores:netherfish>.addPlayerOnlyDrop(<forestry:ash>, 3, 12);
 
 // Add missed gold ore crushing (probably missed by MIA)
 mods.actuallyadditions.Crusher.addRecipe(<thermalfoundation:material:1>, <ore:oreNetherGold>);
+
+mods.immersiveengineering.Crusher.addRecipe(<thermalfoundation:material:65> * 4, <netherendingores:ore_nether_modded_1:8>, 6000, <minecraft:netherrack>, 0.15);
+mods.immersiveengineering.Crusher.addRecipe(<thermalfoundation:material:0> * 4, <netherendingores:ore_nether_vanilla:4>, 6000, <minecraft:netherrack>, 0.15);
+
+
+/*
+_  _ ____ ___ _  _ ____ ____ ____ _  _ ___  _ _  _ ____ ____ ____ ____ ____
+|\ | |___  |  |__| |___ |__/ |___ |\ | |  \ | |\ | | __ |  | |__/ |___ [__
+| \| |___  |  |  | |___ |  \ |___ | \| |__/ | | \| |__] |__| |  \ |___ ___]
+
+*/
+
+<minecraft:spawn_egg>.withTag({EntityTag: {id: "netherendingores:netherfish"}})
+                                                .setAspects(<aspect:bestia>*10, <aspect:ignis>*10, <aspect:infernum>*5);
+<entity:netherendingores:netherfish>            .setAspects(<aspect:bestia>*10, <aspect:ignis>*10, <aspect:infernum>*5);
 
 /*
 

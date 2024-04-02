@@ -68,7 +68,7 @@ craft.remake(<environmentaltech:diode>, ['pretty',
   'M Ϟ M',
   'I r I'], {
   'r': <ic2:crafting:4>, // Iridium Reinforced Plate
-  'I': <mctsmelteryio:iceball>, // Iceball
+  'I': utils.tryCatch('mctsmelteryio:iceball', <iceandfire:dragon_ice>), // Iceball
   '☼': <actuallyadditions:block_crystal_empowered:3>, // Empowered Void Crystal Block
   'M': <ore:gearMithril>, // Mana Infused Gear
   'Ϟ': <thermalexpansion:frame:128>, // Energy Cell Frame

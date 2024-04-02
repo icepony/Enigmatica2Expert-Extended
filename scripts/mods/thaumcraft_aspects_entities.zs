@@ -351,18 +351,7 @@ _ _  _ ___  _  _ ____ ___ ____ _ ____ _    ____ ____ ____ ____ ____ ____ _ _  _ 
 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "industrialforegoing:pink_slime"}})
                                                 .setAspects(<aspect:aqua>*10          ,<aspect:victus>*10     ,<aspect:desiderium>*5); 
-<entity:industrialforegoing:pink_slime>         .setAspects(<aspect:aqua>*10          ,<aspect:victus>*10     ,<aspect:desiderium>*5); 
-
-/*
-_  _ ____ ___ _  _ ____ ____ ____ _  _ ___  _ _  _ ____ ____ ____ ____ ____ 
-|\ | |___  |  |__| |___ |__/ |___ |\ | |  \ | |\ | | __ |  | |__/ |___ [__  
-| \| |___  |  |  | |___ |  \ |___ | \| |__/ | | \| |__] |__| |  \ |___ ___] 
-                                                                            
-*/
-
-<minecraft:spawn_egg>.withTag({EntityTag: {id: "netherendingores:netherfish"}})
-                                                .setAspects(<aspect:bestia>*10        ,<aspect:ignis>*10      ,<aspect:infernum>*5); 
-<entity:netherendingores:netherfish>            .setAspects(<aspect:bestia>*10        ,<aspect:ignis>*10      ,<aspect:infernum>*5); 
+<entity:industrialforegoing:pink_slime>         .setAspects(<aspect:aqua>*10          ,<aspect:victus>*10     ,<aspect:desiderium>*5);
 
 /*
 _  _ _  _ ____ _    ____ ____ ____ ____ ____ ____ ____ ___ 

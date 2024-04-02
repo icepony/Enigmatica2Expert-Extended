@@ -204,7 +204,7 @@ mods.iceandfire.recipes.addIceDragonForgeRecipe(<integrateddynamics:crystalized_
 // ######################################################################
 
 // Compressed ice variant
-utils.compact(<mctsmelteryio:iceball>, <iceandfire:dragon_ice>);
+utils.compact(utils.tryCatch('mctsmelteryio:iceball', <iceandfire:dragon_ice>), <iceandfire:dragon_ice>);
 
 // Simplify bricks for less grind
 remakeEx(<iceandfire:dragonforge_fire_brick> * 2, [

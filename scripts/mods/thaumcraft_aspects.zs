@@ -2,6 +2,8 @@ import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;
 import thaumcraft.aspect.CTAspectStack;
 
+#ignoreBracketErrors
+
 #modloaded thaumcraft
 
 /*

@@ -253,6 +253,7 @@ return result.map((line) => {
 
 function getOutputForBlock(block as IBlock) as IItemStack {
   for inputStack, output in recipesJumpOnBlock {
+    if(isNull(inputStack)) continue;
     if (inputStack.asBlock() in block) return output;
   }
   return null;

@@ -57,6 +57,7 @@ zenClass Descriptor {
 		a4 as string = null,
 		a5 as string = null
 	) as void {
+		if(isNull(item)) return;
 		if(isNull(a1)) return describe(item, local(lang));
 		if(isNull(a2)) return describe(item, I18n.format(local(lang), a1));
 		if(isNull(a3)) return describe(item, I18n.format(local(lang), a1, a2));
@@ -69,10 +70,12 @@ zenClass Descriptor {
 		Add JEI description tab helper
 	*/
 	function describe(item as IItemStack, localized as string) as void {
+		if(isNull(item)) return;
 		if(localized.startsWith(langPrefix)) return;
 		addDescription(item, localized.split("\n|<br>"));
 	}
 	function describe(item as ILiquidStack, localized as string) as void {
+		if(isNull(item)) return;
 		if(localized.startsWith(langPrefix)) return;
 		addDescription(item, localized.split("\n|<br>"));
 	}
@@ -81,6 +84,7 @@ zenClass Descriptor {
 		Other functions
 	*/
 	function autoLang(item as IItemStack) as string {
+		if(isNull(item)) return '';
 		val id = item.commandString.replaceAll('<|>.*', '');
 		val nbt = !item.hasTag ? ''
 			: ':'~item.tag.toNBTString().replaceAll('"', "'");

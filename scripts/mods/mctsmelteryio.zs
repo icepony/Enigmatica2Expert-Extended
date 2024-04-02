@@ -11,7 +11,7 @@ Purge(<mctsmelteryio:upgrade:3>);
 <mctsmelteryio:upgrade:6>.maxStackSize = 64;
 
 // Ice balls
-scripts.process.mash(<biomesoplenty:hard_ice>, <mctsmelteryio:iceball> * 8, 'No Exceptions');
+scripts.process.mash(<biomesoplenty:hard_ice>, utils.tryCatch('mctsmelteryio:iceball', <iceandfire:dragon_ice>) * 8, 'No Exceptions');
 
 for input, amount in {
   <minecraft:glass_bottle>: 1,

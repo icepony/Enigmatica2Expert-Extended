@@ -1,4 +1,4 @@
-#modloaded actuallyadditions
+#modloaded actuallyadditions netherendingores
 #priority 950
 
 import crafttweaker.item.IIngredient;

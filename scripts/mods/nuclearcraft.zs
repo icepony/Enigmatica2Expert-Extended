@@ -64,7 +64,7 @@ craft.remake(<nuclearcraft:upgrade>, ['pretty',
   'T ⌂ T'], {
   'T': <ic2:nuclear:5>,         // Tiny Pile of Uranium 235
   '⌂': <ic2:casing>,            // Bronze Item Casing
-  'B': <mctsmelteryio:upgrade>, // Base Upgrade
+  'B': utils.tryCatch('mctsmelteryio:upgrade', <mekanism:speedupgrade>),
 });
 
 // [Energy Upgrade] from [Base Upgrade][+2]
@@ -74,7 +74,7 @@ craft.remake(<nuclearcraft:upgrade:1>, ['pretty',
   'T ⌂ T'], {
   'T': <ic2:nuclear:5>,         // Tiny Pile of Uranium 235
   '⌂': <ic2:casing:5>,          // Steel Item Casing
-  'B': <mctsmelteryio:upgrade>, // Base Upgrade
+  'B': utils.tryCatch('mctsmelteryio:upgrade', <mekanism:energyupgrade>),
 });
 
 // Uranium RTG should require [Advanced Plating] instead of Basic
@@ -104,8 +104,8 @@ craft.remake(<nuclearcraft:ingot_former>, ['pretty',
   'S c S',
   '□ C □'], {
   '□': <ore:plateAdvanced>,       // Advanced Plating
-  'C': <mctsmelteryio:machine:1>, // Casting Machine
-  'S': <mctsmelteryio:upgrade:4>, // Slot Size Upgrade 4
+  'C': utils.tryCatch('mctsmelteryio:machine', 1, <forestry:wax_cast:*>), // Casting Machine
+  'S': utils.tryCatch('mctsmelteryio:upgrade', 4, <tconstruct:materials:12>), // Slot Size Upgrade 4
   'c': <ore:chassis>,             // Machine Chassis
 });
 
