@@ -142,71 +142,71 @@
   ],
 
   "highlight.regexes": {
-    "(§0)(.+?)(§[^lmno0]|\r?\n|$)": {
+    "(§0)(.+?)(§[^lmno0]|\r?\n|\\\\n|$)": {
       "filterFileRegex": ".*\\.lang",
       "decorations": [{}, { "color": "#000000" }, {}]
     },
-    "(§1)(.+?)(§[^lmno1]|\r?\n|$)": {
+    "(§1)(.+?)(§[^lmno1]|\r?\n|\\\\n|$)": {
       "filterFileRegex": ".*\\.lang",
       "decorations": [{}, { "color": "#0000AA" }, {}]
     },
-    "(§2)(.+?)(§[^lmno2]|\r?\n|$)": {
+    "(§2)(.+?)(§[^lmno2]|\r?\n|\\\\n|$)": {
       "filterFileRegex": ".*\\.lang",
       "decorations": [{}, { "color": "#00AA00" }, {}]
     },
-    "(§3)(.+?)(§[^lmno3]|\r?\n|$)": {
+    "(§3)(.+?)(§[^lmno3]|\r?\n|\\\\n|$)": {
       "filterFileRegex": ".*\\.lang",
       "decorations": [{}, { "color": "#00AAAA" }, {}]
     },
-    "(§4)(.+?)(§[^lmno4]|\r?\n|$)": {
+    "(§4)(.+?)(§[^lmno4]|\r?\n|\\\\n|$)": {
       "filterFileRegex": ".*\\.lang",
       "decorations": [{}, { "color": "#AA0000" }, {}]
     },
-    "(§5)(.+?)(§[^lmno5]|\r?\n|$)": {
+    "(§5)(.+?)(§[^lmno5]|\r?\n|\\\\n|$)": {
       "filterFileRegex": ".*\\.lang",
       "decorations": [{}, { "color": "#AA00AA" }, {}]
     },
-    "(§6)(.+?)(§[^lmno6]|\r?\n|$)": {
+    "(§6)(.+?)(§[^lmno6]|\r?\n|\\\\n|$)": {
       "filterFileRegex": ".*\\.lang",
       "decorations": [{}, { "color": "#FFAA00" }, {}]
     },
-    "(§7)(.+?)(§[^lmno7]|\r?\n|$)": {
+    "(§7)(.+?)(§[^lmno7]|\r?\n|\\\\n|$)": {
       "filterFileRegex": ".*\\.lang",
       "decorations": [{}, { "color": "#AAAAAA" }, {}]
     },
-    "(§8)(.+?)(§[^lmno8]|\r?\n|$)": {
+    "(§8)(.+?)(§[^lmno8]|\r?\n|\\\\n|$)": {
       "filterFileRegex": ".*\\.lang",
       "decorations": [{}, { "color": "#555555" }, {}]
     },
-    "(§9)(.+?)(§[^lmno9]|\r?\n|$)": {
+    "(§9)(.+?)(§[^lmno9]|\r?\n|\\\\n|$)": {
       "filterFileRegex": ".*\\.lang",
       "decorations": [{}, { "color": "#5555FF" }, {}]
     },
-    "(§a)(.+?)(§[^lmnoa]|\r?\n|$)": {
+    "(§a)(.+?)(§[^lmnoa]|\r?\n|\\\\n|$)": {
       "filterFileRegex": ".*\\.lang",
       "decorations": [{}, { "color": "#55FF55" }, {}]
     },
-    "(§b)(.+?)(§[^lmnob]|\r?\n|$)": {
+    "(§b)(.+?)(§[^lmnob]|\r?\n|\\\\n|$)": {
       "filterFileRegex": ".*\\.lang",
       "decorations": [{}, { "color": "#55FFFF" }, {}]
     },
-    "(§c)(.+?)(§[^lmnoc]|\r?\n|$)": {
+    "(§c)(.+?)(§[^lmnoc]|\r?\n|\\\\n|$)": {
       "filterFileRegex": ".*\\.lang",
       "decorations": [{}, { "color": "#FF5555" }, {}]
     },
-    "(§d)(.+?)(§[^lmnod]|\r?\n|$)": {
+    "(§d)(.+?)(§[^lmnod]|\r?\n|\\\\n|$)": {
       "filterFileRegex": ".*\\.lang",
       "decorations": [{}, { "color": "#FF55FF" }, {}]
     },
-    "(§e)(.+?)(§[^lmnoe]|\r?\n|$)": {
+    "(§e)(.+?)(§[^lmnoe]|\r?\n|\\\\n|$)": {
       "filterFileRegex": ".*\\.lang",
       "decorations": [{}, { "color": "#FFFF55" }, {}]
     },
-    "(§f)(.+?)(§[^lmnof]|\r?\n|$)": {
+    "(§f)(.+?)(§[^lmnof]|\r?\n|\\\\n|$)": {
       "filterFileRegex": ".*\\.lang",
       "decorations": [{}, { "color": "#FFFFFF" }, {}]
     },
-    "(§g)(.+?)(§[^lmnog]|\r?\n|$)": {
+    "(§g)(.+?)(§[^lmnog]|\r?\n|\\\\n|$)": {
       "filterFileRegex": ".*\\.lang",
       "decorations": [{}, { "color": "#DDD605" }, {}]
     },
@@ -227,71 +227,71 @@
       "decorations": [{}, { "fontStyle": "italic" }]
     },
 
-    "(§0)(.+?)(§[^lmno0]|\r?\n|$|\"|')": {
+    "(§0)(.+?)(§[^lmno0]|\r?\n|\\\\n|$|\"|')": {
       "filterFileRegex": ".*\\.zs",
       "decorations": [{}, { "color": "#000000" }, {}]
     },
-    "(§1)(.+?)(§[^lmno1]|\r?\n|$|\"|')": {
+    "(§1)(.+?)(§[^lmno1]|\r?\n|\\\\n|$|\"|')": {
       "filterFileRegex": ".*\\.zs",
       "decorations": [{}, { "color": "#0000AA" }, {}]
     },
-    "(§2)(.+?)(§[^lmno2]|\r?\n|$|\"|')": {
+    "(§2)(.+?)(§[^lmno2]|\r?\n|\\\\n|$|\"|')": {
       "filterFileRegex": ".*\\.zs",
       "decorations": [{}, { "color": "#00AA00" }, {}]
     },
-    "(§3)(.+?)(§[^lmno3]|\r?\n|$|\"|')": {
+    "(§3)(.+?)(§[^lmno3]|\r?\n|\\\\n|$|\"|')": {
       "filterFileRegex": ".*\\.zs",
       "decorations": [{}, { "color": "#00AAAA" }, {}]
     },
-    "(§4)(.+?)(§[^lmno4]|\r?\n|$|\"|')": {
+    "(§4)(.+?)(§[^lmno4]|\r?\n|\\\\n|$|\"|')": {
       "filterFileRegex": ".*\\.zs",
       "decorations": [{}, { "color": "#AA0000" }, {}]
     },
-    "(§5)(.+?)(§[^lmno5]|\r?\n|$|\"|')": {
+    "(§5)(.+?)(§[^lmno5]|\r?\n|\\\\n|$|\"|')": {
       "filterFileRegex": ".*\\.zs",
       "decorations": [{}, { "color": "#AA00AA" }, {}]
     },
-    "(§6)(.+?)(§[^lmno6]|\r?\n|$|\"|')": {
+    "(§6)(.+?)(§[^lmno6]|\r?\n|\\\\n|$|\"|')": {
       "filterFileRegex": ".*\\.zs",
       "decorations": [{}, { "color": "#FFAA00" }, {}]
     },
-    "(§7)(.+?)(§[^lmno7]|\r?\n|$|\"|')": {
+    "(§7)(.+?)(§[^lmno7]|\r?\n|\\\\n|$|\"|')": {
       "filterFileRegex": ".*\\.zs",
       "decorations": [{}, { "color": "#AAAAAA" }, {}]
     },
-    "(§8)(.+?)(§[^lmno8]|\r?\n|$|\"|')": {
+    "(§8)(.+?)(§[^lmno8]|\r?\n|\\\\n|$|\"|')": {
       "filterFileRegex": ".*\\.zs",
       "decorations": [{}, { "color": "#555555" }, {}]
     },
-    "(§9)(.+?)(§[^lmno9]|\r?\n|$|\"|')": {
+    "(§9)(.+?)(§[^lmno9]|\r?\n|\\\\n|$|\"|')": {
       "filterFileRegex": ".*\\.zs",
       "decorations": [{}, { "color": "#5555FF" }, {}]
     },
-    "(§a)(.+?)(§[^lmnoa]|\r?\n|$|\"|')": {
+    "(§a)(.+?)(§[^lmnoa]|\r?\n|\\\\n|$|\"|')": {
       "filterFileRegex": ".*\\.zs",
       "decorations": [{}, { "color": "#55FF55" }, {}]
     },
-    "(§b)(.+?)(§[^lmnob]|\r?\n|$|\"|')": {
+    "(§b)(.+?)(§[^lmnob]|\r?\n|\\\\n|$|\"|')": {
       "filterFileRegex": ".*\\.zs",
       "decorations": [{}, { "color": "#55FFFF" }, {}]
     },
-    "(§c)(.+?)(§[^lmnoc]|\r?\n|$|\"|')": {
+    "(§c)(.+?)(§[^lmnoc]|\r?\n|\\\\n|$|\"|')": {
       "filterFileRegex": ".*\\.zs",
       "decorations": [{}, { "color": "#FF5555" }, {}]
     },
-    "(§d)(.+?)(§[^lmnod]|\r?\n|$|\"|')": {
+    "(§d)(.+?)(§[^lmnod]|\r?\n|\\\\n|$|\"|')": {
       "filterFileRegex": ".*\\.zs",
       "decorations": [{}, { "color": "#FF55FF" }, {}]
     },
-    "(§e)(.+?)(§[^lmnoe]|\r?\n|$|\"|')": {
+    "(§e)(.+?)(§[^lmnoe]|\r?\n|\\\\n|$|\"|')": {
       "filterFileRegex": ".*\\.zs",
       "decorations": [{}, { "color": "#FFFF55" }, {}]
     },
-    "(§f)(.+?)(§[^lmnof]|\r?\n|$|\"|')": {
+    "(§f)(.+?)(§[^lmnof]|\r?\n|\\\\n|$|\"|')": {
       "filterFileRegex": ".*\\.zs",
       "decorations": [{}, { "color": "#FFFFFF" }, {}]
     },
-    "(§g)(.+?)(§[^lmnog]|\r?\n|$|\"|')": {
+    "(§g)(.+?)(§[^lmnog]|\r?\n|\\\\n|$|\"|')": {
       "filterFileRegex": ".*\\.zs",
       "decorations": [{}, { "color": "#DDD605" }, {}]
     },
