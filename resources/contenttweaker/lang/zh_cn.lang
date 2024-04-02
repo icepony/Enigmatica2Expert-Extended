@@ -317,6 +317,7 @@ e2ee.written_book.Creeper=苦力怕
 e2ee.written_book.Zombie=僵尸
 
 # Misc 杂项
+e2ee.warn.wrong_installation=§6✖ §4您的模组包安装不正确！§6 ✖\n§c缺少模组：§nSmeltery IO§c、§nNetherending Ores§c等。\n§c这通常发生在通过启动器手动下载这些模组时。\n§c在§4Prism Launcher§c中，安装模组包时，只需点击弹出窗口中的☛[§n打开缺失§c]。\n§8E2E-E包含4个模组，其创建者声明这些模组不能通过第三方启动器下载。
 e2ee.warn.wrong_world_type=§6✖ §4看起来您错误地生成了世界！§6 ✖\n§c若要玩Skyblock，在主菜单中导航至\n§6Mods§c ▶ §6Just Enough Dimensions§c 配置 ▶ §6Generic§c ▶ 并将 §6initialSpawnDimensionId§c 设置为 §63§c。之后，创建一个新世界。
 e2ee.do.charge=§f充电: §6%s§r
 e2ee.do.charge.bonus=§f最新奖金: §7x§b%s§r
