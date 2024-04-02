@@ -105,27 +105,27 @@ craft.remake(<extendedcrafting:table_elite>, ['pretty',
 
 // [Ultimate Crafting Table] from [Extreme Crafting Table][+14]
 craft.remake(<extendedcrafting:table_ultimate>, ['pretty',
-  '◘ ■ * A * ■ ◘',
-  '■ e V ◙ V ▀ ■',
-  '* V d E d V *',
-  'A Ϟ I x I Ϟ A',
-  '* V d E d V *',
-  '■ i V ◙ V ▄ ■',
-  '◘ ■ * A * ■ ◘'], {
+  '◘ ■ * d * ■ ◘',
+  '■ ▀ U ◙ U n ■',
+  '* U A E A U *',
+  'd Ϟ I x I Ϟ d',
+  '* U A E A U *',
+  '■ V U ◙ U ▄ ■',
+  '◘ ■ * d * ■ ◘'], {
   '◘': <thermalexpansion:frame:147>,           // Signalum Cell Frame (Full)
   '■': <extendedcrafting:trimmed:4>,           // Block of Black Iron
   '*': <ore:crystalDraconium>,                 // Draconium Crystal
-  'A': <advancedrocketry:ic:2>,                // Advanced Circuit
-  'e': <ore:blockAethium>,                     // Aethium
-  'V': <vaultopic:vice>,                       // V.I.C.E. (Vaultopic Item Crafting Entity)
+  'd': <advancedrocketry:ic:2>,                // Advanced Circuit
+  '▀': <ore:blockAethium>,                     // Aethium
+  'U': <extendedcrafting:material:11>,         // Ultimate Catalyst
   '◙': <thermalexpansion:frame:148>,           // Resonant Cell Frame (Full)
-  '▀': <ore:blockEnderium>,                    // Block of Enderium
-  'd': <extendedcrafting:table_advanced>,      // Advanced Crafting Table
+  'n': <ore:blockEnderium>,                    // Block of Enderium
+  'A': <extendedcrafting:table_advanced>,      // Advanced Crafting Table
   'E': <extendedcrafting:table_elite>,         // Elite Crafting Table
   'Ϟ': <draconicevolution:wyvern_energy_core>, // Wyvern Energy Core
   'I': <ic2:iridium_reflector>,                // Iridium Neutron Reflector
   'x': <avaritia:extreme_crafting_table>,      // Extreme Crafting Table
-  'i': <ore:blockVividAlloy>,                  // Vivid Alloy Block
+  'V': <ore:blockVividAlloy>,                  // Vivid Alloy Block
   '▄': <ore:blockMirion>,                      // Mirion Block
 });
 
