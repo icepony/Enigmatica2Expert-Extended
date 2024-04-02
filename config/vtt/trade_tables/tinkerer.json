@@ -14,6 +14,35 @@
         "buy": { "id": "minecraft:emerald", "Count": { "min": 8, "max": 16 } },
         "sell": { "id": "endreborn:item_end_essence", "Count": { "min": 1, "max": 3 } },
         "CareerLevel": 1
+      },
+      {
+        "action": "add",
+        "buy": { "id": "minecraft:emerald", "Count": { "min": 8, "max": 16 } },
+        "sell": { "id": "enderio:block_decoration2", "Damage": 4, "Count": 1 },
+        "CareerLevel": 2
+      },
+      {
+        "action": "add",
+        "buy": {
+          "id": "minecraft:emerald",
+          "Count": {
+            "min": 16,
+            "max": 32
+          }
+        },
+        "buyB": {
+          "id": "enderio:item_material",
+          "Damage": 69,
+          "Count": 2
+        },
+        "sell": [
+          { "id": "libvulpes:hatch", "Damage": 0, "Count": 1 },
+          { "id": "libvulpes:hatch", "Damage": 1, "Count": 1 },
+          { "id": "libvulpes:hatch", "Damage": 2, "Count": 1 },
+          { "id": "libvulpes:hatch", "Damage": 3, "Count": 1 },
+          { "id": "libvulpes:forgepowerinput", "Damage": 0, "Count": 1 }
+        ],
+        "CareerLevel": 6
       }
     ]
   }
