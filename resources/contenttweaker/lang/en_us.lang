@@ -317,6 +317,7 @@ e2ee.written_book.Creeper=Creeper
 e2ee.written_book.Zombie=Zombie
 
 # Misc
+e2ee.warn.wrong_world_type=§6✖ §4It seems you've generated the world incorrectly!§6 ✖\n§cTo play Skyblock, from the main menu navigate to\n§6Mods§c ▶ §6Just Enough Dimensions§c Config ▶ §6Generic§c ▶ and set §6initialSpawnDimensionId§c to §63§c. Afterwards, create a new world.
 e2ee.do.charge=§fCharge: §6%s§r
 e2ee.do.charge.bonus=§fLatest bonus: §7x§b%s§r
 e2ee.do.diverse.power=§fPower: §6%s§r

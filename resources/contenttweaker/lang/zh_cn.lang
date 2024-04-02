@@ -317,6 +317,7 @@ e2ee.written_book.Creeper=苦力怕
 e2ee.written_book.Zombie=僵尸
 
 # Misc 杂项
+e2ee.warn.wrong_world_type=§6✖ §4看起来您错误地生成了世界！§6 ✖\n§c若要玩Skyblock，在主菜单中导航至\n§6Mods§c ▶ §6Just Enough Dimensions§c 配置 ▶ §6Generic§c ▶ 并将 §6initialSpawnDimensionId§c 设置为 §63§c。之后，创建一个新世界。
 e2ee.do.charge=§f充电: §6%s§r
 e2ee.do.charge.bonus=§f最新奖金: §7x§b%s§r
 e2ee.do.diverse.power=§f功率: §6%s§r

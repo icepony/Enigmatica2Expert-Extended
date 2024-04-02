@@ -317,6 +317,7 @@ e2ee.written_book.Creeper=Крипером
 e2ee.written_book.Zombie=Зомби
 
 # Misc
+e2ee.warn.wrong_world_type=§6✖ §4Похоже, вы неправильно создали мир!§6 ✖\n§cЧтобы играть в Skyblock, из главного меню перейдите в\n§6Моды§c ▶ §6Just Enough Dimensions§c Настройки ▶ §6Общие§c ▶ и установите значение §6initialSpawnDimensionId§c на §63§c. Затем создайте новый мир.
 e2ee.do.charge=§fЗаряд: §6%s
 e2ee.do.charge.bonus=§fПоследний бонус: §7x§b%s§r
 e2ee.do.diverse.power=§fСила: §6%s§r

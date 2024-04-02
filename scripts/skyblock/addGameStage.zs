@@ -20,7 +20,7 @@ events.onPlayerLoggedIn(function (e as crafttweaker.event.PlayerLoggedInEvent) {
 });
 
 function onFirstLogin(e as crafttweaker.event.PlayerLoggedInEvent) as void {
-  if (e.player.world.getWorldType() == 'voidworld' && !e.player.hasGameStage('skyblock')) {
+  if (e.player.world.worldType == 'voidworld' && e.player.world.dimension == 3 && !e.player.hasGameStage('skyblock')) {
     grant(e.player);
   }
 }
