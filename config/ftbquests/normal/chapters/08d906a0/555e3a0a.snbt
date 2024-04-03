@@ -5,10 +5,18 @@
 		"e8818eb6"
 	],
 	optional: true,
+	or_tasks: true,
 	tasks: [{
 		uid: "2d37ddeb",
 		type: "fluid",
+		disable_toast: true,
 		fluid: "ic2creosote"
+	},
+	{
+		uid: "c7b70d57",
+		type: "fluid",
+		disable_toast: true,
+		fluid: "creosote"
 	}],
 	rewards: [{
 		uid: "9e6f2ebb",
