@@ -26,13 +26,15 @@
 //
 // ######################################################################
 
-#modloaded jaopca mekanism
+#modloaded crafttweakerutils jaopca mekanism
 #priority 50
 
 import crafttweaker.data.IData;
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 import crafttweaker.liquid.ILiquidStack;
+import mods.ctutils.utils.Math.max;
+import mods.ctutils.utils.Math.min;
 
 import scripts.processUtils.wholesCalc;
 import scripts.processWork.work;
@@ -47,7 +49,7 @@ import scripts.processWork.workEx;
 // Multiply item amount on double value
 function iF(output as IItemStack, mult as double) as IItemStack {
   if (isNull(output)) { return null; }
-  return output * max(1.0, min(output.maxStackSize as double, (output.amount as double * mult) as int));
+  return output * max(1, min(output.maxStackSize, (output.amount as double * mult) as int));
 }
 
 static fluidSteps as double[] = [144, 666, 100, 250] as double[];
