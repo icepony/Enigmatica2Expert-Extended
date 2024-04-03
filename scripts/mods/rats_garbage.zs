@@ -1,4 +1,5 @@
 #modloaded rats crafttweakerutils
+#reloadable
 
 import crafttweaker.item.IItemStack;
 import mods.ctutils.utils.Math.max;
@@ -12,7 +13,7 @@ recipes.addShapeless('Garbage_placeholder', <rats:garbage_pile> * 6, [<rats:cont
 // Dirt       - 0.5 = 0
 // Obsidian   - 50 = 0.6
 // Maze Stone - 100 = 0.9
-function getValue_hardness(a as IItemStack) as double { return max(0.0, (sqrt(a.hardness as double + 1.0) - 1.0) / 3.0); }
+function getValue_hardness(a as IItemStack) as double { return max(0.0, (pow(1.0 + a.hardness, 0.25) - 1.0) / 10.0); }
 
 function getValue_harvestLevel(a as IItemStack) as double { return !isNull(a.asBlock()) && !isNull(a.asBlock().definition) ? a.asBlock().definition.harvestLevel as double / 10.0 : 0.0; }
 
