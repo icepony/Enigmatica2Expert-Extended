@@ -61,7 +61,7 @@ for ore_entry in oreDict {
     val smelted = utils.smelt(ore_entry);
     if (isNull(smelted)) {
       furnace.remove(<*>, ore_entry);
-      val gem = utils.getSomething(ore_name, ['gem', 'dust', 'any'], 2);
+      val gem = utils.getSomething(ore_name, ['ingot', 'gem', 'dust', 'any'], 2);
       if (!isNull(gem)) furnace.addRecipe(gem, ore_entry);
     }
 
