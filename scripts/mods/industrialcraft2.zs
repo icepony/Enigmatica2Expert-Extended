@@ -27,10 +27,16 @@ furnace.remove(<ic2:dust:2>);
 furnace.addRecipe(<thermalfoundation:material:768>, <ic2:dust:3>);
 
 // Missed ingot smeltings
-furnace.addRecipe(<thermalfoundation:material:131>, <ic2:crushed:3>);
-furnace.addRecipe(<immersiveengineering:metal:5>,   <ic2:crushed:6>);
-furnace.addRecipe(<thermalfoundation:material:131>, <ic2:purified:3>);
-furnace.addRecipe(<immersiveengineering:metal:5>,   <ic2:purified:6>);
+for input, output in {
+  <ic2:crushed>: <thermalfoundation:material:128>,
+  <ic2:crushed:4>: <thermalfoundation:material:130>,
+  <ic2:crushed:5>: <thermalfoundation:material:129>,
+  <ic2:crushed:3>: <thermalfoundation:material:131>,
+  <ic2:crushed:6>: <immersiveengineering:metal:5>,  
+} as IItemStack[IItemStack] {
+  furnace.addRecipe(output, input, 0.5);
+  furnace.addRecipe(output, <ic2:purified>.withDamage(input.damage), 0.5);
+}
 
 // [RE-Battery] from [Rubber][+2]
 craft.make(<ic2:re_battery:26>.withTag({}), ['pretty',
@@ -423,7 +429,7 @@ addCrop('blazereed'     , [<ic2:dust:16>, <minecraft:blaze_rod>, <minecraft:blaz
 addCrop('corium'        , [<minecraft:leather>]                                           , 6 , 'Cow Silk Vine');
 addCrop('stagnium'      , [<ic2:dust:28>]                                                 , 6 , 'Shiny Leaves Metal'                          , '§6Only matures if there is an §nTin Ore§r§6 or §nTin Block§r§6 below it');
 addCrop('cyprium'       , [<ic2:dust:19>]                                                 , 6 , 'Copper Leaves Metal'                         , '§6Only matures if there is an §nCopper Ore§r§6 or §nCopper Block§r§6 below it');
-addCrop('eatingplant'   , [<minecraft:cactus>]                                            , 6 , 'Bad Food'                                    , '§6Light level of at least 10; Only matures if §nLava§r§6 is below it; Will attack the player if not wearing metal armor and drop §nRotten Flesh');
+addCrop('eatingplant'   , [<minecraft:cactus>, <minecraft:rotten_flesh>]                                            , 6 , 'Bad Food'                                    , '§6Light level of at least 10; Only matures if §nLava§r§6 is below it; Will attack the player if not wearing metal armor and drop §nRotten Flesh');
 addCrop('egg_plant'     , [<minecraft:egg>,<minecraft:chicken>,<minecraft:feather>]       , 6 , 'Chicken Egg Edible Feather Flower Addictive');
 addCrop('ferru'         , [<ic2:dust:21>]                                                 , 6 , 'Gray Leaves Metal'                           , '§6Only matures if there is an §nIron Ore§r§6 or §nBlock of Iron§r§6 below it');
 addCrop('milk_wart'     , [<ic2:crop_res:6>]                                              , 6 , 'Edible Milk Cow');
