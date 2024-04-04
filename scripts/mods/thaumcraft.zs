@@ -13,6 +13,9 @@ import thaumcraft.aspect.CTAspectStack;
 
 // Missed Cluster furnace recipes
 furnace.addRecipe(<thaumcraft:quicksilver> * 2, <thaumcraft:cluster:6>);
+furnace.addRecipe(<thermalfoundation:material:128> * 2, <thaumcraft:cluster:2>);
+furnace.addRecipe(<thermalfoundation:material:129> * 2, <thaumcraft:cluster:3>);
+furnace.addRecipe(<thermalfoundation:material:130> * 2, <thaumcraft:cluster:4>);
 furnace.addRecipe(<thermalfoundation:material:131> * 2, <thaumcraft:cluster:5>);
 
 // Fix Infernal Furnace unchangeable nuggets output
