@@ -3,7 +3,7 @@
  
      public int getSourceTier() {
 -        return 5;
-+        return 6;
++        return 8;
      }
  
      public double getReactorEUEnergyOutput() {
