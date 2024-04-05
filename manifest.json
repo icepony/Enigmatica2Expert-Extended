@@ -406,7 +406,7 @@
     {"projectID":833931,"fileID":5153630,"___name":"PackagedDraconic"                        ,"downloadUrl":"https://edge.forgecdn.net/files/5153/630/PackagedDraconic-1.12.2-1.0.0.11.jar","required":true},
     {"projectID":836009,"fileID":4690550,"___name":"Deep Blood Evolution"                    ,"downloadUrl":"https://edge.forgecdn.net/files/4690/550/DeepBloodEvolution-1.1.6-e.jar","required":true},
     {"projectID":849094,"fileID":4513158,"___name":"Thaumic Energistics Extended Life"       ,"downloadUrl":"https://edge.forgecdn.net/files/4513/158/thaumicenergistics-extended_life-2.2.7.jar","required":true},
-    {"projectID":870276,"fileID":5212709,"___name":"ConfigAnytime"                           ,"downloadUrl":"https://edge.forgecdn.net/files/5212/709/!configanytime-3.0.jar","required":true},
+    {"projectID":870276,"fileID":5169620,"___name":"ConfigAnytime"                           ,"downloadUrl":"https://edge.forgecdn.net/files/5169/620/!configanytime-2.0.jar","required":true},
     {"projectID":871198,"fileID":5010926,"___name":"VintageFix"                              ,"downloadUrl":"https://edge.forgecdn.net/files/5010/926/vintagefix-0.4.0.jar","required":true},
     {"projectID":873867,"fileID":4883852,"___name":"Red Core"                                ,"downloadUrl":"https://edge.forgecdn.net/files/4883/852/!Red-Core-MC-1.7-1.12-0.5.1.jar","required":true},
     {"projectID":876339,"fileID":4815198,"___name":"Enhanced P2P"                            ,"downloadUrl":"https://edge.forgecdn.net/files/4815/198/betterp2p-1.12.2-1.2.3-extended_life.jar","required":true},
