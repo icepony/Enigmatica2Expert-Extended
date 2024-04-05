@@ -279,3 +279,19 @@ Items that should have more uses:
   > Cant stay in same chunk for long time
 - Speedrunning item
   > Item that can replace many other items inrecipes but only if you play fast enough
+
+## Player data reset
+
+- /BBOP-Extended/advancements/[UUID].json
+- /BBOP-Extended/data/ApiaristTracker.[UUID].dat
+- /BBOP-Extended/data/ArboristTracker.[UUID].dat
+- /BBOP-Extended/data/LepidopteristTracker.[UUID].dat
+- /BBOP-Extended/data/POBox_player-[PLAYERNAME]-[UUID].dat
+- /BBOP-Extended/playerdata/[UUID].astral
+- /BBOP-Extended/playerdata/[UUID].astralback
+- /BBOP-Extended/playerdata/[UUID].cosarmor
+- /BBOP-Extended/playerdata/[UUID].cyclicinvo
+- /BBOP-Extended/playerdata/[UUID].dat
+- /BBOP-Extended/playerdata/[UUID].ocnm
+- /BBOP-Extended/playerdata/gamestages/[UUID].dat
+- /BBOP-Extended/stats/[UUID].json
