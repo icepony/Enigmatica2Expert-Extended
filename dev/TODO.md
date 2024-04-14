@@ -2,6 +2,8 @@
 
 🚧✅❌⚠️ List of priorities:
 
+- Recipe suggestion: In Fluid Transposer: 1000mb Demonic Will -> Coalescence Matrix = Sentient Ingot
+
 ---
 
 ---
