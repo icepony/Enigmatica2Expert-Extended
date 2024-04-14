@@ -133,7 +133,7 @@ function mash(input as IIngredient, output as IItemStack, exceptions as string =
 // Alloy two or more metals into one
 // [📦+] → 📦
 function alloy(input as IIngredient[], output as IItemStack, exceptions as string = null) {
-  work(['alloyFurnace', 'induction', 'alloySmelter', 'arcFurnance', 'AdvRockArc', 'kiln'],
+  work(['alloyFurnace', 'induction', 'alloySmelter', 'ArcFurnace', 'AdvRockArc', 'kiln'],
     exceptions, input, null, [output], null, null, null);
 }
 
@@ -194,7 +194,7 @@ function evaporate(inputLiquid as ILiquidStack, output as IItemStack, exceptions
 // Output can be liquid or item form, based on machine
 // 📦 → 📦|💧
 function recycleMetal(input as IIngredient, output as IItemStack, liquid as ILiquidStack = null, exceptions as string = null) {
-  work(['arcFurnance'], exceptions, [input], null, [output], null, null, null);
+  work(['ArcFurnace'], exceptions, [input], null, [output], null, null, null);
   work(['induction']  , exceptions, [input, <minecraft:sand>], null, [output], null, [itemUtils.getItem('thermalfoundation:material', 864)], [0.1f]);
 
   if (!isNull(liquid)) {

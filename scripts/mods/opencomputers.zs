@@ -9,7 +9,7 @@ import crafttweaker.item.IItemStack;
 
 // [Transistor]*8 from [Basalt][+3]
 recipes.remove(<opencomputers:material:6>);
-scripts.process.alloy([<ore:stoneBasalt>, <minecraft:redstone> * 5], <opencomputers:material:6> * 8, 'except: arcFurnance AdvRockArc induction');
+scripts.process.alloy([<ore:stoneBasalt>, <minecraft:redstone> * 5], <opencomputers:material:6> * 8, 'except: ArcFurnace AdvRockArc induction');
 scripts.process.alloy([<chisel:basalt2:7>, <minecraft:redstone> * 5], <opencomputers:material:6> * 8, 'only: induction');
 
 // [Microchip (Tier 1)]*8 from [Iron Ingot][+1]
@@ -17,21 +17,21 @@ recipes.remove(<opencomputers:material:7>);
 scripts.process.alloy([
   <opencomputers:material:6>, // Transistor
   <ore:ingotFakeIron>, // Iron Ingot
-], <opencomputers:material:7> * 16, 'except: arcFurnance AdvRockArc');
+], <opencomputers:material:7> * 16, 'except: ArcFurnace AdvRockArc');
 
 // [Microchip (Tier 2)]*4 from [Nickel Ingot][+1]
 recipes.remove(<opencomputers:material:8>);
 scripts.process.alloy([
   <opencomputers:material:6>, // Transistor
   <ore:ingotNickel>,           // Nickel Ingot
-], <opencomputers:material:8> * 8, 'except: arcFurnance AdvRockArc');
+], <opencomputers:material:8> * 8, 'except: ArcFurnace AdvRockArc');
 
 // [Microchip (Tier 3)]*2 from [Platinum Ingot][+1]
 recipes.remove(<opencomputers:material:9>);
 scripts.process.alloy([
   <opencomputers:material:6>, // Transistor
   <ore:ingotPlatinum>,         // Platinum Ingot
-], <opencomputers:material:9> * 4, 'except: arcFurnance AdvRockArc');
+], <opencomputers:material:9> * 4, 'except: ArcFurnace AdvRockArc');
 
 // [Inventory Upgrade] from [Mini Chest][+4]
 craft.remake(<opencomputers:upgrade:17>, ['pretty',
@@ -178,14 +178,14 @@ recipes.remove(<opencomputers:endstone>);
 scripts.process.alloy([
   <randomthings:ingredient:7> * 5, // Floo Powder
   <opencomputers:material:28> * 4, // Chamelium
-], <opencomputers:endstone>, 'except: arcFurnance AdvRockArc alloySmelter');
+], <opencomputers:endstone>, 'except: ArcFurnace AdvRockArc alloySmelter');
 
 // [Interweb] from [Floo Powder][+1]
 recipes.remove(<opencomputers:material:13>);
 scripts.process.alloy([
   <randomthings:ingredient:7> * 5, // Floo Powder
   <minecraft:string> * 4,          // String
-], <opencomputers:material:13>, 'except: arcFurnance AdvRockArc');
+], <opencomputers:material:13>, 'except: ArcFurnace AdvRockArc');
 
 // [Drone Case (Tier 1)] from [Microcontroller Case (Tier 1)][+4]
 craft.remake(<opencomputers:material:23>, ['pretty',
