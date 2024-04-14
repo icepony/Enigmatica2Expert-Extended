@@ -308,10 +308,10 @@ heavy.localizedName = game.localize('e2ee.tconstruct.material.heavy.name');
 heavy.itemLocalizer = function (thisMaterial, itemName) {
   return game.localize('e2ee.tconstruct.material.heavy.name') + ' ' + itemName;
 };
-heavy.addHeadMaterialStats(-200, 0.1, 25.0, 5);
+heavy.addHeadMaterialStats(-200, 0.1, 15.0, 5);
 heavy.addExtraMaterialStats(-40);
 heavy.addHandleMaterialStats(0.5, -10);
-heavy.addBowMaterialStats(0.1, 0.1, 25);
+heavy.addBowMaterialStats(0.1, 0.1, 15);
 heavy.addArrowShaftMaterialStats(0.2, -10);
 
 heavy.addCoreMaterialStats(10, 2.5);
