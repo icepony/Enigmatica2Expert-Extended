@@ -38,6 +38,17 @@ addVariation('castlebrickdoor', <twilightforest:castle_door:1>);
 addVariation('castlebrickdoor', <twilightforest:castle_door:2>);
 addVariation('castlebrickdoor', <twilightforest:castle_door:3>);
 
+addVariation('soulstone', <mysticalagriculture:soulstone:2>);
+addVariation('soulstone', <mysticalagriculture:soulstone:3>);
+addVariation('soulstone', <mysticalagriculture:soulstone:4>);
+addVariation('soulstone', <mysticalagriculture:soulstone:5>);
+addVariation('soulstone', <mysticalagriculture:soulstone:6>);
+addVariation('soulstone', <mysticalagriculture:soulstone>);
+
+addVariation('soulstone_slab', <mysticalagriculture:cobbled_soulstone_slab>);
+addVariation('soulstone_slab', <mysticalagriculture:soulstone_brick_slab>);
+addVariation('soulstone_slab', <mysticalagriculture:soulstone_slab>);
+
 // Sonar Core
 val sonarColors as string[] = [
   'normal',	'lightgrey', 'plain', 'lime', 'blue',
