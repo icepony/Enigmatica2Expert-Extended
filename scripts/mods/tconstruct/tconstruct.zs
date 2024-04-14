@@ -507,6 +507,9 @@ scripts.process.alloy([
 // Blood Magic Tcon Integration adds many slate - cast recipes
 mods.tconstruct.Casting.removeTableRecipe(<tconstruct:cast_custom:3>);
 
+// Manyullin block alt
+scripts.process.alloy([<ore:blockCobalt>, <ore:blockArdite>], <tconstruct:metal:2>, 'only: AdvRockArc');
+
 for castFluid in [
   <fluid:alubrass> * 144,
   <fluid:gold> * 288,

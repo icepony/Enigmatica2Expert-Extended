@@ -21,3 +21,7 @@ for output, input in {
   if(isNull(output) || isNull(input)) continue;
   furnace.remove(output, input);
 }
+
+// Faster AdvRockArc recipes
+scripts.process.alloy([<ore:blockCopper>, <ore:blockNickel>], <thermalfoundation:storage_alloy:4> * 2, 'only: AdvRockArc');
+scripts.process.alloy([<ore:blockCopper> * 3, <ore:blockTin>], <thermalfoundation:storage_alloy:3> * 4, 'only: AdvRockArc');
