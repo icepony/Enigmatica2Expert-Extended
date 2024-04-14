@@ -250,7 +250,7 @@ craft.remake(<extendedcrafting:material:10>, ['pretty',
   '▲ E ▲'], {
   '▲': <ore:dustPsi>,                  // Psidust
   'E': <extendedcrafting:material:16>, // Elite Component
-  'M': <rftoolsdim:material_absorber>.withTag({ meta: 0, absorbing: 0, block: 'minecraft:stone' }), // Material Absorber
+  'M': <rftoolsdim:fake_gravel>, // Material Absorber
 });
 
 # [Ultimate Component] from [Titanium Iridium Alloy Sheet][+5]

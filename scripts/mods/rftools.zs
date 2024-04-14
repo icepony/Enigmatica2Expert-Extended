@@ -337,3 +337,10 @@ mods.mekanism.infuser.addRecipe('REDSTONE', 160, <rftoolscontrol:card_base>, <rf
 // [CPU Core S1000] from [Rat Diamond][+1]
 recipes.remove(<rftoolscontrol:cpu_core_1000>);
 mods.mekanism.infuser.addRecipe('DIAMOND', 160, <rftoolscontrol:cpu_core_500>, <rftoolscontrol:cpu_core_1000>);
+
+// Non-dimensional source of "levarG"
+val MA = <rftoolsdim:material_absorber>.withTag({meta: 0, absorbing: 0, block: "minecraft:stone"});
+val FG = <rftoolsdim:fake_gravel>;
+scripts.processWork.workEx('SagMill', null, [MA], null, [FG * 64], null, [FG * 32, FG * 16, FG * 8], [0.5, 0.5, 0.5], { bonusType: 'MULTIPLY_OUTPUT' });
+scripts.process.crush(MA, FG * 64, 'only: eu2Crusher', [FG * 32], [0.5]);
+mods.astralsorcery.Grindstone.addRecipe(MA, FG * 64, 0.25);
