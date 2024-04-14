@@ -382,7 +382,7 @@
     {"projectID":616190,"fileID":4630499,"___name":"JEI Utilities"                           ,"downloadUrl":"https://edge.forgecdn.net/files/4630/499/JEI-Utilities-1.12.2-0.2.12.jar","required":true},
     {"projectID":623955,"fileID":5255932,"___name":"AE2 Fluid Crafting Rework"               ,"downloadUrl":"https://edge.forgecdn.net/files/5255/932/Fluid%20Craft%20for%20AE2-2.5.10-r.jar","required":true},
     {"projectID":624243,"fileID":5153413,"___name":"ModularUI"                               ,"downloadUrl":"https://edge.forgecdn.net/files/5153/413/modularui-2.4.3.jar","required":true},
-    {"projectID":629017,"fileID":5248866,"___name":"Roughly Enough IDs"                      ,"downloadUrl":"https://edge.forgecdn.net/files/5248/866/RoughlyEnoughIDs-2.1.0.jar","required":true},
+    {"projectID":629017,"fileID":4949840,"___name":"Roughly Enough IDs"                      ,"downloadUrl":"https://edge.forgecdn.net/files/4949/840/RoughlyEnoughIDs-2.0.7.jar","required":true},
     {"projectID":632327,"fileID":5162169,"___name":"Inventory Bogo Sorter"                   ,"downloadUrl":"https://edge.forgecdn.net/files/5162/169/bogosorter-1.4.8.jar","required":true},
     {"projectID":633720,"fileID":3852709,"___name":"Crafting Tweaks Unofficial"              ,"downloadUrl":"https://edge.forgecdn.net/files/3852/709/CraftingTweaks_1.12.2-9.0.1.jar","required":true},
     {"projectID":634242,"fileID":5111624,"___name":"Ender Storage continuation"              ,"downloadUrl":"https://edge.forgecdn.net/files/5111/624/EnderStorage-1.12.2-2.5.0.jar","required":true},
