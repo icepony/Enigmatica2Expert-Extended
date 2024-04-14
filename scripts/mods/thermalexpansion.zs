@@ -262,13 +262,6 @@ recipes.remove(<ore:dustEnderium>.firstItem * 4);
 // Remove Lead platinum alloy -> Enderium (used only to two-step craft for enderium)
 mods.nuclearcraft.Infuser.removeRecipeWithOutput(<ore:ingotEnderium>.firstItem);
 
-// Remake ender ingot recipe
-val enderIngot = <extendedcrafting:material:36>;
-craft.reshapeless(enderIngot * 2, 'ABB', {
-  A: <ore:ingotPlatinum>,
-  B: <ore:dustEnder> });
-mods.mekanism.infuser.addRecipe('ENDER', 20, <ore:ingotPlatinum>, enderIngot * 2);
-
 // Remake Pulsating ender recipe
 mods.thermalexpansion.InductionSmelter.removeRecipe(<ore:dustIron>.firstItem, <minecraft:ender_pearl>);
 mods.thermalexpansion.InductionSmelter.removeRecipe(<minecraft:iron_ingot>, <minecraft:ender_pearl>);
@@ -278,7 +271,7 @@ scripts.process.alloy([<minecraft:iron_ingot>, <ore:dustEnderEye>], <ore:ingotPu
 scripts.process.crush(<minecraft:ender_eye>, <ic2:dust:32>, 'No Exceptions', [<minecraft:blaze_powder>], [0.2]);
 
 // Enderium base
-scripts.process.alloy([<ore:ingotPulsatingIron>, enderIngot * 2], <enderio:item_material:39>, 'no exception');
+scripts.process.alloy([<ore:ingotPulsatingIron>, <extendedcrafting:material:36> * 2], <enderio:item_material:39>, 'no exception');
 
 // Enderium base -> Enderium ingot
 scripts.process.fill(<enderio:item_material:39>, <liquid:ender> * 500, <thermalfoundation:material:167>, 'only: NCInfuser Transposer');
