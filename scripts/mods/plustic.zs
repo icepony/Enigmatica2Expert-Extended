@@ -32,11 +32,11 @@ mods.tconstruct.Casting.removeTableRecipe(<plustic:battery_cell>.withTag({ Mater
 // -------------------------------------------------------------------------------
 
 val laserMediums = {
-  blaze     : [<ore:rodBlaze>            , <ore:ingotStellarAlloy>],
-  prismarine: [<ore:gemPrismarine>       , <ore:ingotPrimordial>],
-  psigem    : [<ore:gemPsi>              , <ore:ingotCrystalMatrix>],
+  blaze     : [<ore:rodBlaze>            , <ore:ingotMelodicAlloy>],
+  prismarine: [<ore:gemPrismarine>       , <ore:ingotVoid>],
+  psigem    : [<ore:gemPsi>              , <ore:ingotEnderEnhanced>],
   starmetal : [<ore:ingotAstralStarmetal>, <ore:ingotGlitch>],
-  endrod    : [<minecraft:end_rod>       , <ore:ingotMithminite>],
+  endrod    : [<minecraft:end_rod>       , <ore:ingotMithrillium>],
 } as IIngredient[][string];
 
 // [Blazerod Laser Medium] from [Chaos Shard][+3]
