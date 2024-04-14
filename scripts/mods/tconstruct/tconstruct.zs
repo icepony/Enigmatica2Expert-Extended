@@ -537,3 +537,11 @@ for castFluid in [
   }
 }
 // ------------------------------------------------------------------------------
+
+// [Stone Ladder]*3 from [Stone Rod]
+craft.remake(<tconstruct:stone_ladder> * 3, ['pretty',
+  '/   /',
+  '/ / /',
+  '/   /'], {
+  '/': <ore:stickStone>, // Stone Rod
+});
