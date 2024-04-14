@@ -48,6 +48,8 @@ for item in [
   <farmingforblockheads:feeding_trough>,
   <ic2:quantum_chestplate>,
   <ic2:te:48>,
+  <ic2:upgrade:4>,
+  <ic2:upgrade:6>,
   <immersivetech:stone_decoration>,
   <minecraft:torch>,
   <oeintegration:excavatemodifier>,
