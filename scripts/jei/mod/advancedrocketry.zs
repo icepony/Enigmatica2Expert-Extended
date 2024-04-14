@@ -50,20 +50,20 @@ xml_to_js(loadText('config/advRocketry/asteroidConfig.xml')).elements[0].element
       }>: ${item.attributes.chance} }`)
       .join(', ')}]);`]
 )) */
-addAsteroid('Iridium Enriched'     , [25, 100, 0.8, 3, 10, 0.2], [{ <minecraft:iron_ore>: 25 }, { <thermalfoundation:ore:7>: 25 }]);
-addAsteroid('Draconium'            , [64, 75, 0.7, 5, 1, 0.5]  , [{ <draconicevolution:draconium_ore>: 100 }, { <advancedrocketry:hotturf>: 25 }]);
-addAsteroid('Prosperity'           , [64, 75, 0.7, 5, 1, 0.5]  , [{ <mysticalagriculture:prosperity_ore>: 100 }, { <advancedrocketry:hotturf>: 25 }]);
-addAsteroid('Dimensional Shard'    , [64, 75, 0.7, 5, 1, 0.5]  , [{ <rftools:dimensional_shard_ore>: 100 }, { <advancedrocketry:hotturf>: 25 }]);
-addAsteroid('Mana Infused'         , [64, 75, 0.7, 5, 1, 0.5]  , [{ <thermalfoundation:ore:8>: 100 }, { <advancedrocketry:hotturf>: 25 }]);
-addAsteroid('Destabilized Redstone', [64, 75, 0.7, 5, 1, 0.5]  , [{ <thermalfoundation:ore_fluid:2>: 100 }, { <advancedrocketry:hotturf>: 25 }]);
-addAsteroid('Energized Netherrack' , [64, 75, 0.7, 5, 1, 0.5]  , [{ <thermalfoundation:ore_fluid:3>: 100 }, { <advancedrocketry:hotturf>: 25 }]);
-addAsteroid('Resonant End Stone'   , [64, 75, 0.7, 5, 1, 0.5]  , [{ <thermalfoundation:ore_fluid:4>: 100 }, { <advancedrocketry:hotturf>: 25 }]);
-addAsteroid('Dilithium'            , [64, 75, 0.7, 5, 1, 0.5]  , [{ <netherendingores:ore_end_modded_1:14>: 100 }, { <advancedrocketry:hotturf>: 25 }]);
-addAsteroid('Titanium'             , [64, 75, 0.7, 5, 1, 0.5]  , [{ <libvulpes:ore0:8>: 100 }, { <advancedrocketry:hotturf>: 25 }]);
-addAsteroid('Starmetal'            , [64, 75, 0.7, 5, 1, 0.5]  , [{ <astralsorcery:blockcustomore:1>: 100 }, { <advancedrocketry:hotturf>: 25 }]);
-addAsteroid('Rock Crystal'         , [64, 75, 0.7, 5, 1, 0.5]  , [{ <astralsorcery:blockcustomore>: 100 }, { <advancedrocketry:hotturf>: 25 }]);
-addAsteroid('Steel'                , [64, 75, 0.3, 7, 1, 0.2]  , [{ <thermalfoundation:storage_alloy>: 100 }, { <advancedrocketry:hotturf>: 25 }]);
-addAsteroid('Moon Turf'            , [64, 50, 0.9, 8, 10, 0.1] , [{ <advancedrocketry:moonturf>: 50 }, { <advancedrocketry:moonturf_dark>: 50 }]);
+addAsteroid('Iridium Enriched'     , [25, 100, 0.8, 3, 1, 0.2], [{ <minecraft:iron_ore>: 25 }, { <thermalfoundation:ore:7>: 25 }]);
+addAsteroid('Draconium'            , [64, 75, 0.7, 5, 1, 0.5] , [{ <draconicevolution:draconium_ore>: 100 }, { <advancedrocketry:hotturf>: 25 }]);
+addAsteroid('Prosperity'           , [64, 75, 0.7, 5, 1, 0.5] , [{ <mysticalagriculture:prosperity_ore>: 100 }, { <advancedrocketry:hotturf>: 25 }]);
+addAsteroid('Dimensional Shard'    , [64, 75, 0.7, 5, 1, 0.5] , [{ <rftools:dimensional_shard_ore>: 100 }, { <advancedrocketry:hotturf>: 25 }]);
+addAsteroid('Mana Infused'         , [64, 75, 0.7, 5, 1, 0.5] , [{ <thermalfoundation:ore:8>: 100 }, { <advancedrocketry:hotturf>: 25 }]);
+addAsteroid('Destabilized Redstone', [64, 75, 0.7, 5, 1, 0.5] , [{ <thermalfoundation:ore_fluid:2>: 100 }, { <advancedrocketry:hotturf>: 25 }]);
+addAsteroid('Energized Netherrack' , [64, 75, 0.7, 5, 1, 0.5] , [{ <thermalfoundation:ore_fluid:3>: 100 }, { <advancedrocketry:hotturf>: 25 }]);
+addAsteroid('Resonant End Stone'   , [64, 75, 0.7, 5, 1, 0.5] , [{ <thermalfoundation:ore_fluid:4>: 100 }, { <advancedrocketry:hotturf>: 25 }]);
+addAsteroid('Dilithium'            , [64, 75, 0.7, 5, 1, 0.5] , [{ <netherendingores:ore_end_modded_1:14>: 100 }, { <advancedrocketry:hotturf>: 25 }]);
+addAsteroid('Titanium'             , [64, 75, 0.7, 5, 1, 0.5] , [{ <libvulpes:ore0:8>: 100 }, { <advancedrocketry:hotturf>: 25 }]);
+addAsteroid('Starmetal'            , [64, 75, 0.7, 5, 1, 0.5] , [{ <astralsorcery:blockcustomore:1>: 100 }, { <advancedrocketry:hotturf>: 25 }]);
+addAsteroid('Rock Crystal'         , [64, 75, 0.7, 5, 1, 0.5] , [{ <astralsorcery:blockcustomore>: 100 }, { <advancedrocketry:hotturf>: 25 }]);
+addAsteroid('Steel'                , [64, 75, 0.3, 7, 1, 0.2] , [{ <thermalfoundation:storage_alloy>: 100 }, { <advancedrocketry:hotturf>: 25 }]);
+addAsteroid('Moon Turf'            , [64, 50, 0.9, 8, 1, 0.1] , [{ <advancedrocketry:moonturf>: 50 }, { <advancedrocketry:moonturf_dark>: 50 }]);
 /**/
 
 // -----------------------------------------------------------------------
