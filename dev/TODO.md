@@ -2,9 +2,6 @@
 
 🚧✅❌⚠️ List of priorities:
 
-- [ ] 🧩 Prevent Alchemical Construct from picking up by carryOn
-- [ ] ✏️ Remove Absorber from Catalyst recipe (too slow, hard to automate)
-
 ---
 
 ---
@@ -13,10 +10,17 @@
 
 Planned non-urgent changes, or just good ideas:
 
+### Difficulty increase
+- Vanilla Chests
+
 ### Quests and Docs expansion
+- [ ] 📖 Add Blast Furnace heat source
 - [ ] 📖 Write Neutron Shields localization
 - [ ] 📖 Add note about pregen spoiling Lootr chests https://github.com/LootrMinecraft/Lootr/issues/195
 - [ ] 📖 Add little tiles fancy chest with lot of space
+- [ ] 📖 Add not that /dev/null is infinite for Robot
+- [ ] 📖 Distilled water add JEI entries
+- [ ] 🐉 Bestiary book have missed item icons
 
 ### "Battle" expansion
 - [ ] ✏️ Buff EU saber - give it more damage? But better split entities in two.
@@ -94,6 +98,9 @@ Planned non-urgent changes, or just good ideas:
 
 ### Other
 
+- [ ] 🏡 Fix one of the Recurrent Complex houses have lava that fire up whole building
+- [ ] ✏️ Empty Rod cant be seen on table
+- [ ] ⚒️ Make TE cache drop itself with content on break
 - [ ] ✏️ Add bar for diverse/charge singularity by making custon CoT item with durability.
 - [ ] 🌍 Remove Poison Ivy from OTG generator. Its `biomesoplenty:plant_0:4` but i cant find where it defined
 - [ ] 🌍 `122 Kepler 0118` improve generation (right now its just plain graphite)
@@ -282,16 +289,22 @@ Items that should have more uses:
 
 ## Player data reset
 
-- /BBOP-Extended/advancements/[UUID].json
-- /BBOP-Extended/data/ApiaristTracker.[UUID].dat
-- /BBOP-Extended/data/ArboristTracker.[UUID].dat
-- /BBOP-Extended/data/LepidopteristTracker.[UUID].dat
-- /BBOP-Extended/data/POBox_player-[PLAYERNAME]-[UUID].dat
-- /BBOP-Extended/playerdata/[UUID].astral
-- /BBOP-Extended/playerdata/[UUID].astralback
-- /BBOP-Extended/playerdata/[UUID].cosarmor
-- /BBOP-Extended/playerdata/[UUID].cyclicinvo
-- /BBOP-Extended/playerdata/[UUID].dat
-- /BBOP-Extended/playerdata/[UUID].ocnm
-- /BBOP-Extended/playerdata/gamestages/[UUID].dat
-- /BBOP-Extended/stats/[UUID].json
+**Remove files:**
+- advancements/[UUID].json
+- data/ApiaristTracker.[UUID].dat
+- data/ArboristTracker.[UUID].dat
+- data/ftb_lib/players/[NAME].dat
+- data/LepidopteristTracker.[UUID].dat
+- data/POBox_player-[NAME]-[UUID].dat
+- playerdata/[UUID].astral
+- playerdata/[UUID].astralback
+- playerdata/[UUID].cosarmor
+- playerdata/[UUID].cyclicinvo
+- playerdata/[UUID].dat
+- playerdata/[UUID].ocnm
+- playerdata/gamestages/[UUID].dat
+- stats/[UUID].json
+
+**Execute commands:**
+- Leave team
+- `/ftbquests change_progress reset [NAME]`
