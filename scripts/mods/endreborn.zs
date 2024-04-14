@@ -67,14 +67,20 @@ mods.tconstruct.Casting.addBasinRecipe(<endreborn:block_essence_ore>, <endreborn
 mods.immersiveengineering.ArcFurnace.addRecipe(<endreborn:item_ingot_wolframium> * 2, <endreborn:block_wolframium_ore>, <immersiveengineering:material:7>, 20, 2048);
 
 // [Angel Feather] from [Blue Peacock Feather][+2]
-craft.remake(<endreborn:item_angel_feather>, ['pretty',
-  '  D  ',
-  'M f M',
-  '  D  '], {
-  'D': <minecraft:dragon_breath>, // Dragon's Breath
-  'f': <iceandfire:amphithere_feather>,
-  'M': <mysticalagriculture:crafting:24>, // Mystical Feather
-});
+for feather in [
+  <iceandfire:amphithere_feather>,
+  <iceandfire:stymphalian_bird_feather>,
+  <twilightforest:raven_feather>,
+] as IItemStack[] {
+  craft.remake(<endreborn:item_angel_feather>, ['pretty',
+    '  D  ',
+    'M f M',
+    '  D  '], {
+    'D': <botania:manaresource:15>,
+    'f': feather,
+    'M': <mysticalagriculture:crafting:24>, // Mystical Feather
+  });
+}
 
 // [Purpur Shards] from [End Essence]
 craft.remake(<endreborn:item_end_shard>, ['pretty',

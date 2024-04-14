@@ -96,7 +96,7 @@ recipes.removeByRecipeName('mekanism:paper'); // Removed because CHEATS
 recipes.removeShaped(<minecraft:elytra>);
 craft.make(<minecraft:elytra>, ['pretty',
   'A   A',
-  '  C  ',
+  'A C A',
   'X   X'], {
   A: <endreborn:item_angel_feather>, // Angel Feather
   C: <minecraft:web>, // Cobweb
