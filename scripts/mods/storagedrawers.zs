@@ -91,8 +91,8 @@ remakeDrawerUpgrade(<storagedrawers:upgrade_storage:4>, <ore:nuggetUltimate>);
 // [Upgrade Template]*2 from [Basic Drawer][+2]
 craft.remake(<storagedrawers:upgrade_template> * 2, ['pretty',
   '# D #',
-  '# B #',
-  '# D #'], {
+  '# # #',
+  '# B #'], {
   'B': <ore:drawerBasic>,    // Basic Drawer
   '#': <ore:stickWood>,      // Stick
   'D': <minecraft:deadbush>, // Dead Bush
