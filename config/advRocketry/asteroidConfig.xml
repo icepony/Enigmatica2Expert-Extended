@@ -1,5 +1,5 @@
 <Asteroids>
-	<asteroid name="Iridium Enriched" distance="100" mass="25" massVariability="10" probability="3" richness="0.8" richnessVariability="0.2">
+	<asteroid name="Iridium Enriched" distance="100" mass="25" massVariability="1" probability="3" richness="0.8" richnessVariability="0.2">
 		<ore itemStack="minecraft:iron_ore" chance="25"/>
 		<ore itemStack="thermalfoundation:ore 7" chance="25"/>
 	</asteroid>
@@ -51,7 +51,7 @@
 		<ore itemStack="thermalfoundation:storage_alloy" chance="100"/>
 		<ore itemStack="advancedrocketry:hotturf" chance="25"/>
 	</asteroid>
-	<asteroid name="Moon Turf" distance="50" mass="64" massVariability="10" probability="8" richness="0.9" richnessVariability="0.1">
+	<asteroid name="Moon Turf" distance="50" mass="64" massVariability="1" probability="8" richness="0.9" richnessVariability="0.1">
 		<ore itemStack="advancedrocketry:moonturf" chance="50"/>
 		<ore itemStack="advancedrocketry:moonturf_dark" chance="50"/>
 	</asteroid>
