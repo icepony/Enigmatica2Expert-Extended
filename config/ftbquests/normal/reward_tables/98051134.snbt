@@ -4,9 +4,6 @@
 		item: "twilightforest:ice_sword"
 	},
 	{
-		item: "thermalfoundation:tool.shield_diamond"
-	},
-	{
 		item: {
 			id: "ftbquests:lootcrate",
 			tag: {

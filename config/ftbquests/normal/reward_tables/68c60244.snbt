@@ -4,9 +4,6 @@
 		item: "ic2:wrench_new"
 	},
 	{
-		item: "thermalfoundation:tool.shield_copper"
-	},
-	{
 		item: {
 			id: "ftbquests:lootcrate",
 			tag: {
