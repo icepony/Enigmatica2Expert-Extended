@@ -822,3 +822,14 @@ Purge(<nuclearcraft:helm_hazmat>);
 Purge(<nuclearcraft:chest_hazmat>);
 Purge(<nuclearcraft:legs_hazmat>);
 Purge(<nuclearcraft:boots_hazmat>);
+
+// Additional alloying recipes
+for inputs, output in {
+  [<ore:ingotBoron>, <ore:ingotSteel>]: <nuclearcraft:alloy:6> * 2,
+  [<ore:ingotFerroboron>, <ore:ingotLithium>]: <nuclearcraft:alloy:1> * 2,
+  [<nuclearcraft:ingot:8> * 2, <ore:gemDiamondRat>]: <nuclearcraft:alloy:2> * 2,
+  [<ore:ingotTough>, <ore:ingotHardCarbon>]: <nuclearcraft:alloy:10>,
+} as IItemStack[IIngredient[]]$orderly {
+  scripts.process.alloy(inputs, output, 'only: ArcFurnace Kiln');
+  scripts.process.alloy([inputs[0] * (inputs[0].amount * 9), inputs[1] * (inputs[1].amount * 9)], output * (output.amount * 9), 'only: AdvRockArc');
+}
