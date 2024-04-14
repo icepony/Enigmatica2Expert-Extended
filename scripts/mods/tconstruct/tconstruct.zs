@@ -123,7 +123,7 @@ mods.tconstruct.Alloy.addRecipe(<liquid:alubrass> * 288, [<liquid:copper> * 72, 
 mods.tconstruct.Alloy.addRecipe(<liquid:alubrass> * 576, [<liquid:copper> * 144, <liquid:aluminum> * 432]);
 
 // Aluminium Brass in other machines
-scripts.process.alloy([<ore:ingotCopper>, <ore:ingotAluminium> * 3], <tconstruct:ingots:5> * 4, 'only: Kiln');
+scripts.process.alloy([<ore:ingotCopper>, <ore:ingotAluminium> * 3], <tconstruct:ingots:5> * 4, 'only: Kiln strict: ArcFurnace');
 
 // Tinkers' Complement Melter
 recipes.remove(<tcomplement:melter>);
