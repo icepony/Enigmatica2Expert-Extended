@@ -6,6 +6,10 @@ import crafttweaker.item.IItemStack;
 import crafttweaker.liquid.ILiquidStack;
 import crafttweaker.recipes.IRecipeFunction;
 
+// Return disabled pulverizing of Bows and Fish rods
+mods.thermalexpansion.Pulverizer.addRecipe(<thermalfoundation:material:800> * 2, <minecraft:bow:*>, 1000, <thermalfoundation:material:800>, 50);
+mods.thermalexpansion.Pulverizer.addRecipe(<thermalfoundation:material:800> * 2, <minecraft:fishing_rod:*>, 1000, <thermalfoundation:material:800>, 50);
+
 // Planks/Slabs -> Sticks
 for plank in <ore:plankWood>.items {
   mods.thermalexpansion.Sawmill.addRecipe(<minecraft:stick> * 6, plank, 500, <thermalfoundation:material:800>, 30);
