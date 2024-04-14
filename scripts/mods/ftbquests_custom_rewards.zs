@@ -19,13 +19,8 @@ function formatPlayTime(player as IPlayer) as string {
 }
 
 function notifyEveryone(player as IPlayer, langCode as string, titleCode as string) as string {
-  server.broadcastMessage(crafttweaker.text.ITextComponent.fromData([{
-    translate: langCode,
-    with     : [
-      player.name,
-      { translate: titleCode },
-      formatPlayTime(player)
-  ]}]));
+  server.commandManager.executeCommandSilent(server,
+    '/tellraw @a [{"translate":"'~langCode~'","with":["'~player.name~'",{"translate":"'~titleCode~'"},"'~formatPlayTime(player)~'"]}]');
 }
 
 events.onCustomReward(function (e as mods.zenutils.ftbq.CustomRewardEvent) {
