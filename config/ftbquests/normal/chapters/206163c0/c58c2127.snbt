@@ -3,7 +3,6 @@
 	icon: "forestry:habitat_former",
 	x: 4.5d,
 	y: 0.8d,
-	description: "{q.forestry.the_perfect_place_.desc}",
 	text: [
 		"{q.forestry.the_perfect_place_.desc}"
 	],
