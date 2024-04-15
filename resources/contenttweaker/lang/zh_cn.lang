@@ -434,7 +434,7 @@ tooltips.lang.burn_in_fluid_chance=§3把数个 §n%s§r§3 扔入 §n%s§r§3 �
 tooltips.lang.infuse_bedrock=§3拿着 §n%s§r§3 右击 §n%s§r§3
 
 tooltips.lang.dropper_into_world=§c在死亡时掉落到了地上
-tooltips.lang.power_tier_5=§c能量等级 5, §4任何 IC2 的线缆都会融毁
+tooltips.lang.power_tier_7=§c能量等级 7, §4任何 IC2 的线缆都会融毁
 tooltips.lang.fluid.corium=§a可以通过使裂变反应堆融毁得到
 tooltips.lang.vanilla_tools=§4原版工具已被削弱，请改用匠魂工具
 tooltips.lang.ae_lag=§c不要把这个物品放入 AE 存储系统中，否则会造成卡顿。

@@ -434,7 +434,7 @@ tooltips.lang.burn_in_fluid_chance=§3Спалите несколько §n%s§r
 tooltips.lang.infuse_bedrock=§3ПКМ §n%s§r§3 поверх §n%s§r§3
 
 tooltips.lang.dropper_into_world=§cПадает в мир после смерти
-tooltips.lang.power_tier_5=§cУровень мощности 5, §4любой IC2 кабель взорвется
+tooltips.lang.power_tier_7=§cУровень мощности 7, §4любой IC2 кабель взорвется
 tooltips.lang.fluid.corium=§a Можно получить путем плавления реактора деления
 tooltips.lang.vanilla_tools=§4Ванильные инструменты не работают. Используйте инструменты Tinkers' Construct
 tooltips.lang.ae_lag=§cНе помещайте это в систему хранения AE, иначе это вызовет лаги.

@@ -434,7 +434,7 @@ tooltips.lang.burn_in_fluid_chance=§3Burn several §n%s§r§3 in §n%s§r§3
 tooltips.lang.infuse_bedrock=§3Right-click §n%s§r§3 over §n%s§r§3
 
 tooltips.lang.dropper_into_world=§cDropped into the world on death
-tooltips.lang.power_tier_5=§cPower Tier 5, §4any IC2 cable explodes
+tooltips.lang.power_tier_7=§cPower Tier 7, §4any IC2 cable explodes
 tooltips.lang.fluid.corium=§aObtainable by melting down a Fission Reactor
 tooltips.lang.vanilla_tools=§4Vanilla tools don't work. Use Tinkers' Construct tools
 tooltips.lang.ae_lag=§cDo not put this into AE storage system or it will cause lag.

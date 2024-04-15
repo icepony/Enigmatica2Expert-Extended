@@ -370,7 +370,7 @@ for lang, items in {
     <danknull:dank_null_5>,
     <danknull:dank_null_6>,
   ],
-  power_tier_5: [
+  power_tier_7: [
     <ic2:te:24>,
     <ic2:te:22>,
   ],
