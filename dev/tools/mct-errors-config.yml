@@ -57,7 +57,7 @@ ignore:
   - '\[FML\]: Found .+ should be in a separate jar from the coremod.'
   - '\[FML\]: Potentially Dangerous alternative prefix `.+`'
   - '\[FML\]: Mod .+ is missing the required element ''version'''
-  - '\[LaunchWrapper\]: Tweak class name .+ has already been visited'
+  - '\[(LaunchWrapper|Foundation)\]: Tweak class name .+ has already been visited'
 
   # Warning about Forge Debug
   - ': ==( Forge Debug Logging is ENABLED|=+)?'
@@ -229,7 +229,7 @@ ignore:
   - '\[net.blay09.mods.kleeslabs.KleeSlabs\]: Slab .* could not be found.'
 
   # Reported: https://github.com/Janrupf/mod-director/issues/22'
-  - '\[main/WARN\] \[ModDirector/ForgeLateLoader\[Launchwrapper\]\]: Failed to find deobf tweaker'
+  - '\[main/WARN\] \[(ModDirector/ForgeLateLoader\[Launchwrapper\]|Foundation)\]: Failed to find deobf tweaker'
 
   # Known, "It's just logging, you can ignore it." https://github.com/LoliKingdom/LoliASM/issues/51'
   - WARN. .LoliASM.. Clearing (LoliVertexDataPool|LoliStringPool 1)
@@ -395,13 +395,33 @@ ignore:
   # MIA ERRORS when its modules partially disabled
   - ERROR. .Had Enough Items.. A Recipe Handler has already been registered for 'jeresources.+'. jeresources.entry.+
 
+  # Shader warnings = normal behaviour since working fine
+  - WARN. .Config.. .OptiFine.  - in world
+  - WARN. .Config.. .OptiFine. .Shaders. Invalid block ID mapping.
+  - WARN. .Config.. .OptiFine. .Shaders. Invalid item ID mapping.
+  - WARN. .Config.. .OptiFine. Ambiguous shader option.
+  - WARN. .Config.. .OptiFine. Shaders. Block not found for name.
+  - WARN. .Config.. .OptiFine. Shaders. Item not found.
+  - WARN. .Config.. .OptiFine. Shaders. Property not found.
+  - WARN. .net.optifine.shaders.SMCLog.. .Shaders. net.optifine.expr.ParseException. Model variable not found.
+
+  # Contributors loading errors
+  - .Thread-\d+/ERROR. .draconicevolution.. Download Timed Out. https.//raw.githubusercontent.com/brandon3055/Project-Intelligence-Docs/master/ModDocs/manifest.json
+  - .Client thread/ERROR. .draconicevolution.. Failed to download mod manifest.
+  - .Client thread/WARN. .biomesoplenty.. There was an issue retrieving trail info from remote!
+  - .Thread-\d+/ERROR. .randomtweaks.. Failed to download conbtributor list
+  - .Thread-\d+/WARN. .Cyclops Core.. Could not get version important users. java.net.SocketException
+  - .Actually Additions Special Fetcher/ERROR. .Actually Additions.. Fetching Special People Stuff failed! .You can ignore this error technically..
+  - .CraftPresence/ERROR. .craftpresence.. Failed to check for updates, enable verbose mode to see errors...
+  - ERROR. .Foundation.. Thread.#\d+,Thread-\d+,\d+,main.[\s\S\n]+lumien.custommainmenu.handler.LoadStringURL.run
+
   # ##################
   # Java 21 errors
   # ##################
 
   # geeky_kappa explanation:
   # "Many mods bundle a copy of Mixin and add MixinTweaker to its manifest. Launchwrapper/Bouncepad don't like to call same tweaker twice. If you have lots of mod doing this that's what you got."
-  - WARN. .Bouncepad.. Tweak class name org.spongepowered.asm.launch.MixinTweaker has already been visited -- skipping
+  - WARN. .(Bouncepad|Foundation).. Tweak( class)? name org.spongepowered.asm.launch.MixinTweaker has already been visited -- skipping
 
   # "It's trying to inject itself into coremod, but launchwrapper was broken on codesource"
   - at snownee.minieffects.core.CoreMod..init..CoreMod.java:26. ~.CoreMod.class:?.
@@ -410,11 +430,17 @@ ignore:
   - ERROR. .org.spongepowered.asm.service.mojang.MixinServiceLaunchWrapper.. MixinBootstrap.doInit.. called during a tweak constructor!
 
   # Other warnings and errors
-  - WARN. .LaunchWrapper.. .Bouncepad. Uppatched ASM\d+ to ASM9 on class. .+, please port the mod to Cleanroom!
+  - WARN. .(LaunchWrapper|Foundation).. .(Bouncepad|Foundation). Uppatched ASM\d+ to ASM9 on class. .+, please port the mod to Cleanroom!
+  - can't handle Java 21 class, please update the mod!
   - WARN. .FML.. A mod is using javax classes. .+, please find it out using recaf or similar and report to its mod author.
   - ERROR. .FML.. UUID .+ is being processed with the approach from Java 8 for compatibility's sake. This UUID is malformed!
   - ERROR. .Aqua Acrobatics.. Please consider installing MixinBooter to ensure compatibility with more mods
   - WARN. .mixin.. Reference map 'fugue.mixin.refmap.json' for .+ could not be read. If this is a development environment you can ignore this message
+  - WARN. .Foundation.. Exception encountered attempting classloading of .+ java.lang.ClassNotFoundException
+  - WARN. .Foundation.. Successfully replaced CA certificates with updated ones!
+
+  # "Sledge is a hacky mod. It's entire point is to hack mixins early. So that error is not as much of an error. As it is a warning."
+  - .Client thread/ERROR. .mixin.. Critical problem. mixins.sledgehammer.quark.json:base.module.ModuleLoaderMixin from mod unknown-owner target vazkii.quark.base.module.ModuleLoader was loaded too early.
 
   # Errors even Cleanroom devs doesnt know what means
   - WARN\] \[mixin\]. Mixin apply for mod UniversalTweaks.+ from mod UniversalTweaks.+::utOverrideOpposingSideCheck with priority 1000 cannot inject into .+RenderGlobal

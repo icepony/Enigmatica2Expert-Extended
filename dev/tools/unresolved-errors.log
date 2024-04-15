@@ -1,10 +1,24 @@
-[main/WARN] [ModDirector[CORE]]: Successfully replaced CA certificates with updated ones!
-[Client thread/WARN] [net.minecraft.network.datasync.EntityDataManager]: defineId called for: class net.minecraft.entity.item.EntityMinecartFurnace from class com.lothrazar.cyclicmagic.item.minecart.EntityGoldFurnaceMinecart
-[Client thread/WARN] [net.minecraft.network.datasync.EntityDataManager]: defineId called for: class net.minecraft.entity.monster.EntitySlime from class teamroots.emberroot.entity.slime.EntityRainbowSlime
-[Client thread/WARN] [net.minecraft.network.datasync.EntityDataManager]: defineId called for: class malte0811.industrialwires.entities.EntityBrokenPart from class malte0811.industrialwires.IndustrialWires
-[Client thread/WARN] [net.minecraft.network.datasync.EntityDataManager]: defineId called for: class com.github.alexthe666.iceandfire.entity.EntityDreadThrall from class com.github.alexthe666.iceandfire.entity.EntityDreadKnight
-[Client thread/WARN] [net.minecraft.network.datasync.EntityDataManager]: defineId called for: class com.github.alexthe666.rats.server.entity.EntityFeralRatlantean from class com.github.alexthe666.rats.server.entity.EntityNeoRatlantean
+[main/WARN] [Foundation]: The jar file D:\Program Files\PrismLauncher\libraries\lzma\lzma\0.0.1\lzma-0.0.1.jar has a security seal for path LZMA, but that path is defined and not secure
+[main/WARN] [Foundation]: The jar file D:\Program Files\PrismLauncher\libraries\lzma\lzma\0.0.1\lzma-0.0.1.jar has a security seal for path LZMA, but that path is defined and not secure
+[main/WARN] [mixin]: Error loading class: lykrast/jetif/compat/CompatFluxNetworks (java.lang.ClassNotFoundException: The specified class 'lykrast.jetif.compat.CompatFluxNetworks' was not found)
+[main/WARN] [mixin]: @Mixin target lykrast.jetif.compat.CompatFluxNetworks was not found mixins.sledgehammer.jetif.json:compat.CompatFluxNetworksMixin from mod unknown-owner
+[main/WARN] [mixin]: Error loading class: journeymap/client/task/multi/TaskController (java.lang.ClassNotFoundException: The specified class 'journeymap.client.task.multi.TaskController' was not found)
+[main/WARN] [mixin]: @Mixin target journeymap.client.task.multi.TaskController was not found mixins.sledgehammer.journeymap.json:client.task.multi.TaskControllerMixin from mod unknown-owner
+[main/WARN] [mixin]: Error loading class: journeymap/client/JourneymapClient (java.lang.ClassNotFoundException: The specified class 'journeymap.client.JourneymapClient' was not found)
+[main/WARN] [mixin]: @Mixin target journeymap.client.JourneymapClient was not found mixins.sledgehammer.journeymap.json:client.JourneymapClientMixin from mod unknown-owner
+[Client thread/ERROR] [Fugue]: java.lang.NullPointerException: Cannot read the array length because "buf" is null
+[Client thread/WARN] [mixin]: @Final field field_73236_b:Lit/unimi/dsi/fastutil/longs/Long2ObjectMap; in mixins.vintagefix.json:chunk_access.ChunkProviderClientMixin from mod unknown-owner should be final
+[Client thread/WARN] [FML]: Mod scalar has been disabled through configuration
+[Client thread/WARN] [Foundation]: Exception encountered attempting classloading of co.neeve.nae2.common.parts.implementations.PartBeamFormer$1: java.lang.NoClassDefFoundError: gregtech/client/utils/BloomEffectUtil$IBloomRenderFast
+[Client thread/WARN] [Foundation]: Exception encountered attempting classloading of com.minerarcana.floralchemy.block.flower.SubTilePetroPetunia: net.minecraftforge.fml.common.asm.ASMTransformerWrapper$TransformerException: Exception in class transformer quaternary.botaniatweaks.asm.BotaniaTweakerTransformer@xxxxxxxx from coremod Botania Tweaks Core
+[Client thread/ERROR] [Had Enough Items]: Failed to register mod plugin: class lykrast.jetif.JETIFPlugin
+java.lang.NoClassDefFoundError: lykrast/jetif/compat/CompatFluxNetworks
+	at lykrast.jetif.JETIFPlugin.register(JETIFPlugin.java:27) ~[jetif-1.12.2-1.5.2.jar:?]
+	at mezz.jei.startup.JeiStarter.registerPlugins(JeiStarter.java:203) ~[HadEnoughItems_1.12.2-4.25.4.jar:?]
+	at mezz.jei.startup.JeiStarter.start(JeiStarter.java:77) ~[HadEnoughItems_1.12.2-4.25.4.jar:?]
+  [...]
 [Client thread/ERROR] [Had Enough Items]: A Recipe Handler has already been registered for this recipe class: com.github.alexthe666.iceandfire.recipe.DragonForgeRecipe
 [Client thread/ERROR] [Had Enough Items]: A Recipe Handler has already been registered for this recipe class: com.github.alexthe666.rats.server.recipes.SharedRecipe
 [Client thread/ERROR] [Had Enough Items]: A Recipe Handler has already been registered for this recipe class: com.github.alexthe666.rats.server.recipes.SharedRecipe
-[Client thread/WARN] [Had Enough Items]: Sending runtime to plugin: thelm.packagedauto.integration.jei.PackagedAutoJEIPlugin took xxxx ms
+[Client thread/WARN] [Had Enough Items]: Sending runtime to plugin: thelm.packagedauto.integration.jei.PackagedAutoJEIPlugin took xxxx ms
+[Client thread/WARN] [OTG]: The biome Cold Plains tried to inherit mobs from itself.

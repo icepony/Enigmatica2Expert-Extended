@@ -3,6 +3,11 @@
 🚧✅❌⚠️ List of priorities:
 
 - Recipe suggestion: In Fluid Transposer: 1000mb Demonic Will -> Coalescence Matrix = Sentient Ingot
+- [x] ✏️ Ender Ingot remove default recipe
+- [x] ✏️ End Steel reduce defence
+- [ ] ✏️ Add "Machine Frame Singularity"
+- [ ] KELT-6a recreate JER
+- [x] ✏️ Add Hemp Fiber recipe for Phytogogenic Insolator
 
 ---
 
