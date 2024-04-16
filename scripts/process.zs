@@ -141,9 +141,9 @@ function alloy(input as IIngredient[], output as IItemStack, exceptions as strin
 // 📦 → 📦 + 📦?
 function grow(input as IIngredient, output as IItemStack, exceptions as string = null,
   secondaryOutput as IItemStack = null, secondaryChance as float = 1.0f) {
-  workEx('Insolator', exceptions, [input, <thermalfoundation:fertilizer>], null, [iF(output, 0.333f)], null, [secondaryOutput], [secondaryChance], { energy: 4800 });
-  workEx('Insolator', exceptions, [input, <thermalfoundation:fertilizer:1>], null, [iF(output, 0.666f)], null, [secondaryOutput], [secondaryChance], { energy: 7200 });
-  workEx('Insolator', exceptions, [input, <thermalfoundation:fertilizer:2>], null, [output], null, [secondaryOutput], [secondaryChance], { energy: 9600 });
+  workEx('Insolator', exceptions, [input, <thermalfoundation:fertilizer>], null, [output * min(64, output.amount * 3)], null, [secondaryOutput], [secondaryChance], { energy: 4800 });
+  workEx('Insolator', exceptions, [input, <thermalfoundation:fertilizer:1>], null, [output * min(64, output.amount * 6)], null, [secondaryOutput], [secondaryChance], { energy: 7200 });
+  workEx('Insolator', exceptions, [input, <thermalfoundation:fertilizer:2>], null, [output * min(64, output.amount * 9)], null, [secondaryOutput], [secondaryChance], { energy: 9600 });
 }
 
 // Crushing rocks (like granite, andesite, etc..) to obtain dusts

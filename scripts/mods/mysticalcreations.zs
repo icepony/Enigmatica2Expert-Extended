@@ -7,5 +7,5 @@ recipes.addShaped(Bucket('creosote'), [[null, <mysticalcreations:creosolite_esse
 scripts.process.melt(<mysticalcreations:creosolite_essence>, <fluid:creosote> * 250);
 
 // Add Mystical Creations processing in Insolator
-scripts.process.grow(<mysticalcreations:creosolite_seeds>, <mysticalcreations:creosolite_essence> * 9, 'No exceptions', <mysticalcreations:creosolite_seeds>, 1);
-scripts.process.grow(<mysticalagriculture:starmetal_seeds>, 		<mysticalagriculture:starmetal_essence> * 9,      'No exceptions', <mysticalagriculture:starmetal_seeds>, 1);
+scripts.process.grow(<mysticalcreations:creosolite_seeds>, <mysticalcreations:creosolite_essence>, 'No exceptions', <mysticalcreations:creosolite_seeds>, 1);
+scripts.process.grow(<mysticalagriculture:starmetal_seeds>, 		<mysticalagriculture:starmetal_essence>,      'No exceptions', <mysticalagriculture:starmetal_seeds>, 1);

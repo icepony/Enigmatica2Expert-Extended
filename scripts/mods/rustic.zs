@@ -16,7 +16,7 @@ recipes.addShaped(<rustic:crushing_tub>, [
   [<ore:slabWood>, <ore:slabWood>, <ore:slabWood>]]);
 
 // Growing olives
-scripts.process.grow(<rustic:olives>, <rustic:olives> * 9, null, null, 0);
+scripts.process.grow(<rustic:olives>, <rustic:olives>, null, null, 0);
 
 /*
   Sadly, but cabinet recipe cant be removed
