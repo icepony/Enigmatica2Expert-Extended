@@ -635,3 +635,6 @@ craft.remake(<immersiveengineering:wooden_device0:2>, ['pretty',
 mods.immersiveengineering.Refinery.addRecipe(<fluid:biodiesel> * 24, <fluid:biomass> * 8, <fluid:ethanol> * 16, 400);
 mods.immersiveengineering.Refinery.addRecipe(<fluid:biodiesel> * 20, <fluid:ic2biomass> * 12, <fluid:ethanol> * 8, 200);
 mods.immersiveengineering.Refinery.addRecipe(<fluid:biodiesel> * 88, <fluid:biocrude> * 8, <fluid:ethanol> * 80, 1600);
+
+// Add missed Insolator recipe
+scripts.process.grow(<immersiveengineering:seed>, <immersiveengineering:material:4>, null, <immersiveengineering:seed>, 1);
