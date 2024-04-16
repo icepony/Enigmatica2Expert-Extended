@@ -153,6 +153,7 @@ recipes.addShaped(<extendedcrafting:interface>, [
   [<ore:ingotBlackIron>, <extendedcrafting:material:2>, <ore:ingotBlackIron>]]);
 
 // Remake ender ingot recipe
+recipes.removeByRecipeName('extendedcrafting:ender_ingot');
 scripts.process.alloy([<ore:ingotPlatinum>, <ore:dustEnder> * 2], <extendedcrafting:material:36>, "only: kiln ArcFurnace");
 scripts.process.alloy([<ore:blockPlatinum>, <ore:dustEnder> * 9], <extendedcrafting:storage:5>, "only: AdvRockArc");
 mods.mekanism.infuser.addRecipe('ENDER', 20, <ore:ingotPlatinum>, <extendedcrafting:material:36> * 2);
