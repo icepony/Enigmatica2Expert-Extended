@@ -2,12 +2,13 @@
 
 🚧✅❌⚠️ List of priorities:
 
-- Recipe suggestion: In Fluid Transposer: 1000mb Demonic Will -> Coalescence Matrix = Sentient Ingot
-- [x] ✏️ Ender Ingot remove default recipe
-- [x] ✏️ End Steel reduce defence
+- [x] ✏️ Recipe suggestion: In Fluid Transposer: 1000mb Demonic Will -> Coalescence Matrix = Sentient Ingot
 - [ ] ✏️ Add "Machine Frame Singularity"
-- [ ] KELT-6a recreate JER
-- [x] ✏️ Add Hemp Fiber recipe for Phytogogenic Insolator
+- [ ] ✏️ Induction Smelter page for Draconium Ore has a ghost page (1/2, but page 2 is empty)
+- [ ] ✏️ Make Botania Rods cheaper
+- [ ] ✏️ Potentia Inverter and Cold Light Projector cheaper
+- [ ] ✏️ Add Compressed Cobble => 9 Gravel in Immersive Crusher
+- [ ] ✏️ Add Any Compressed Items => Crushed versions in Alchemy Table
 
 ---
 
