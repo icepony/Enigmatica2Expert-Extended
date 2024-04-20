@@ -410,3 +410,18 @@ craft.remake(<botania:hourglass>, ['pretty',
 // Alt recipe for magic-only space exploration
 // [Dilithium Crystal] from [Dilithium Dust]
 mods.botania.ManaInfusion.addInfusion(<libvulpes:productgem>, <ore:dustDilithium>, 10000);
+
+// ////////////////////////////////////////////////////////////////
+// Rods rework
+// ////////////////////////////////////////////////////////////////
+
+// [Rod of the Shifting Crust] from [Rune of Fire][+2]
+craft.remake(<botania:exchangerod>, ['pretty',
+  '  s F',
+  '  T s',
+  'T    '], {
+  's': <ore:stone>,          // Stone
+  'F': <ore:runeFireB>,      // Rune of Fire
+  'T': <ore:livingwoodTwig>, // Livingwood Twig
+});
+// ////////////////////////////////////////////////////////////////
