@@ -22,3 +22,6 @@ for i in 0 .. 5 {
   //   mods.thermalexpansion.Crucible.removeRecipe(<bloodmagic:soul_gem>.definition.makeStack(i).withTag({souls: 1.0, demonWillType: will}));
   // }
 }
+
+// Alt easier automatable recipe
+mods.thermalexpansion.Transposer.addFillRecipe(<tconevo:metal:30>, <tconevo:material>, <fluid:raw_will> * 1000, 2000);
