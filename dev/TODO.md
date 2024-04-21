@@ -2,13 +2,14 @@
 
 🚧✅❌⚠️ List of priorities:
 
-- [x] ✏️ Recipe suggestion: In Fluid Transposer: 1000mb Demonic Will -> Coalescence Matrix = Sentient Ingot
-- [ ] ✏️ Add "Machine Frame Singularity"
 - [ ] ✏️ Induction Smelter page for Draconium Ore has a ghost page (1/2, but page 2 is empty)
+- [ ] ✏️ Fix Pulverizer have recipes with removed items
 - [ ] ✏️ Make Botania Rods cheaper
 - [ ] ✏️ Potentia Inverter and Cold Light Projector cheaper
-- [ ] ✏️ Add Compressed Cobble => 9 Gravel in Immersive Crusher
 - [ ] ✏️ Add Any Compressed Items => Crushed versions in Alchemy Table
+- [ ] 📖 High Oven fix description
+- [ ] ✏️ Black hole generator can work on cobble
+- [ ] ✏️ Make safe aspects for: `caeles|exitium|fluctus|imperium|infernum|sonus|ventus|visum`
 
 ---
 
@@ -62,6 +63,7 @@ Planned non-urgent changes, or just good ideas:
 - [ ] ✏️ Fish rework: All automated fishing options way harder to make sense of manual fishing. All fish usages lower
 
 ### "Endgame" expansion
+- [ ] ✏️ Add "Machine Frame Singularity"
 - [ ] ✏️ Tweak Botania Extended Crafting Tables recipes to non-tech
 - [ ] ✏️ Integrate `Orbital Laser Drill` better. It can mine ores on planet orbits for skyblock.
 - [ ] ✏️ `Critical Matter Cluster` add usages and mechanics (obtained with shift+right click of World Breaker)
