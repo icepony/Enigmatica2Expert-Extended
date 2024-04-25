@@ -304,8 +304,9 @@ zenClass Utils {
   function get(id as string) as IItemStack { return get(id, 0, 1, null); }
   function get(id as string, meta as short) as IItemStack { return get(id, meta, 1, null); }
   function get(id as string, meta as short, amount as int) as IItemStack { return get(id, meta, amount, null); }
-  function get(id as string, meta as short, amount as int, nbt as IData) as IItemStack {
-    val item = itemUtils.getItem(id, meta);
+  function get(id as string, meta as short, amount as int, nbt as IData) as IItemStack { return get(itemUtils.getItem(id, meta), amount, nbt); }
+  function get(item as IItemStack, amount as int) as IItemStack { return get(item, amount, null); }
+  function get(item as IItemStack, amount as int, nbt as IData) as IItemStack {
     if (isNull(item)) return null;
 
     return isNull(nbt)
