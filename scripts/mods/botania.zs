@@ -152,11 +152,10 @@ mods.thaumcraft.Infusion.registerRecipe(
 
 // Peaceful alt
 // [Dice of Fate] from [Chaos Shard][+4]
-mods.thaumcraft.Infusion.removeRecipe(<botania:dice>);
 mods.thaumcraft.Infusion.registerRecipe(
   'dice', // Name
   'INFUSION', // Research
-  <botania:dice>.withTag({ soulbindUUID: 'e23a4a76-82ed-47e0-9ea3-fef726675065' }), // Output
+  <botania:dice>, // Output
   10, // Instability
   [Aspect.caeles * 160, <aspect:mana> * 160],
   <draconicevolution:chaos_shard>, // Central Item
