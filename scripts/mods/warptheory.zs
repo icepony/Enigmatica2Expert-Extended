@@ -33,6 +33,6 @@ mods.thaumcraft.Infusion.registerRecipe(
   <warptheory:item_cleansing_amulet>, // Output
   5, // Instability
   [<aspect:mana> * 100, <aspect:cognitio> * 200, <aspect:permutatio> * 50, <aspect:amogus> * 69],
-  <thaumadditions:fragnant_pendant>, // CentralItem
+  utils.tryCatch('thaumadditions:fragnant_pendant', <deepmoblearning:pristine_matter_enderman>), // CentralItem
   [<thaumcraft:bath_salts>, <warptheory:item_cleanser>, <thaumcraft:bath_salts>, <thaumcraft:sanity_soap>, <thaumcraft:bath_salts>, <thaumicwonders:cleansing_charm>, <thaumcraft:bath_salts>, <thaumcraft:sanity_soap>]
 );

@@ -1,4 +1,4 @@
-#modloaded randomtweaker ctintegration crafttweakerutils
+#modloaded randomtweaker ctintegration crafttweakerutils thaumadditions
 #priority -1
 
 import crafttweaker.entity.IEntity;

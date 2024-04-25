@@ -18,7 +18,7 @@ mods.thaumcraft.Infusion.registerRecipe(
   <thaumictinkerer:osmotic_enchanter>, // Output
   8, // Instability
   [<aspect:praecantatio> * 100, <aspect:cognitio> * 100, <aspect:alienis> * 100],
-  <thaumadditions:shadow_enchanter>, // Central Item
+  utils.tryCatch('thaumadditions:shadow_enchanter', <draconicevolution:diss_enchanter>), // Central Item
   Grid(['pretty',
     '▬ S ▬',
     'p   p',

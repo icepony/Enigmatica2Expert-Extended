@@ -2,12 +2,37 @@
 
 import crafttweaker.data.IData;
 import crafttweaker.item.IItemStack;
+import crafttweaker.item.IIngredient;
 import mods.zenutils.DataUpdateOperation.APPEND;
 import mods.zenutils.DataUpdateOperation.MERGE;
 import mods.zenutils.DataUpdateOperation.REMOVE;
 import mods.zenutils.DataUpdateOperation.OVERWRITE;
 
 mods.thaumcraft.Infusion.removeRecipe(<minecraft:golden_apple:1>);
+
+scripts.process.sawWood(<thaumcraft:taint_log>, <thaumadditions:taintwood_planks>, 'only: TESawmill'); 
+
+/*
+___ _  _ ____ _  _ _  _ ____ ___  ___  _ ___ _ ____ _  _ ____ 
+ |  |__| |__| |  | |\/| |__| |  \ |  \ |  |  | |  | |\ | [__  
+ |  |  | |  | |__| |  | |  | |__/ |__/ |  |  | |__| | \| ___] 
+                                                              
+*/
+
+<minecraft:spawn_egg>.withTag({EntityTag: {id: "thaumadditions:blue_wolf"}})
+                                                .setAspects(<aspect:bestia>*20        ,<aspect:auram>*20      ,<aspect:mana>*10); 
+<entity:thaumadditions:blue_wolf>               .setAspects(<aspect:bestia>*20        ,<aspect:auram>*20      ,<aspect:mana>*10);
+
+<thaumadditions:mithrillium_ingot>              .setAspects(<aspect:metallum>*15  ,<aspect:mana>*10           ,<aspect:praecantatio>*10 ,<aspect:ordo>*2      ,<aspect:vitreus>*3);
+<thaumadditions:mithrillium_block>              .setAspects(<aspect:metallum>*150 ,<aspect:mana>*100          ,<aspect:praecantatio>*100,<aspect:ordo>*20     ,<aspect:vitreus>*30);
+<thaumadditions:mithrillium_plate>              .setAspects(<aspect:metallum>*15  ,<aspect:mana>*10           ,<aspect:praecantatio>*10 ,<aspect:ordo>*2      ,<aspect:vitreus>*3, <aspect:instrumentum>*2);
+<thaumadditions:adaminite_ingot>                .setAspects(<aspect:metallum>*15  ,<aspect:infernum>*66       ,<aspect:sanguis>*10      ,<aspect:spiritus>*10 ,<aspect:vitium>*3);
+<thaumadditions:adaminite_block>                .setAspects(<aspect:metallum>*150 ,<aspect:infernum>*666      ,<aspect:sanguis>*100     ,<aspect:spiritus>*100,<aspect:vitium>*30);
+<thaumadditions:adaminite_plate>                .setAspects(<aspect:metallum>*15  ,<aspect:infernum>*66       ,<aspect:sanguis>*10      ,<aspect:spiritus>*10 ,<aspect:vitium>*3, <aspect:instrumentum>*2);
+<thaumadditions:mithminite_ingot>               .setAspects(<aspect:metallum>*15  ,<aspect:draco>*10          ,<aspect:mythus>*10       ,<aspect:caeles>*10   ,<aspect:auram>*20);
+<thaumadditions:mithminite_block>               .setAspects(<aspect:metallum>*150 ,<aspect:draco>*100         ,<aspect:mythus>*100      ,<aspect:caeles>*100  ,<aspect:auram>*200);
+<thaumadditions:mithminite_plate>               .setAspects(<aspect:metallum>*15  ,<aspect:draco>*10          ,<aspect:mythus>*10       ,<aspect:caeles>*10   ,<aspect:auram>*20, <aspect:instrumentum>*2);
+<thaumadditions:puriflower>                     .setAspects(<aspect:auram>*10     ,<aspect:herba>*20          ,<aspect:praecantatio>*10 ,<aspect:sensus>*20);
 
 /*
 ██╗    ██╗ ██████╗ ██████╗ ██╗  ██╗██████╗ ███████╗███╗   ██╗ ██████╗██╗  ██╗
@@ -17,6 +42,16 @@ mods.thaumcraft.Infusion.removeRecipe(<minecraft:golden_apple:1>);
 ╚███╔███╔╝╚██████╔╝██║  ██║██║  ██╗██████╔╝███████╗██║ ╚████║╚██████╗██║  ██║
  ╚══╝╚══╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═══╝ ╚═════╝╚═╝  ╚═╝
 */
+
+// [Thaumonomicon Lectern] from [Lectern][+2]
+craft.remake(<thaumadditions:thaumic_lectern>, ['pretty',
+  '  T  ',
+  '# L #',
+  '# # #'], {
+  'T': <thaumcraft:thaumonomicon>, // Thaumonomicon
+  '#': <thaumcraft:slab_greatwood>, // Greatwood Slab
+  'L': <iceandfire:lectern>, // Lectern
+});
 
 // [Crystal crusher]
 mods.thaumcraft.Infusion.removeRecipe(<thaumadditions:crystal_crusher>);
@@ -1645,3 +1680,150 @@ scripts.jei.crafting_hints.add1to1(Soul('minecraft:zombie_villager'), Soul('mine
 scripts.jei.crafting_hints.addInsOutCatl([<minecraft:arrow>, <minecraft:fire_charge>], null, <thaumadditions:mithminite_scythe>.withLore(['§2permutatio§r']));
 
 scripts.jei.crafting_hints.add1to1(Soul('minecraft:cow') | Soul('minecraft:chicken') | Soul('minecraft:sheep') | Soul('minecraft:pig'), null, <thaumadditions:mithminite_scythe>.withLore(['§cvictus§r']));
+
+
+// [Adaminite armor set]
+mods.thaumcraft.ArcaneWorkbench.removeRecipe(<thaumadditions:adaminite_hood>);
+mods.thaumcraft.Infusion.registerRecipe(
+  'adaminite_hood', // Name
+  'ADAMINITEFABRIC', // Research
+  <thaumadditions:adaminite_hood>, // Output
+  6, // Instability
+  [<aspect:infernum> * 100, <aspect:sanguis> * 100, <aspect:spiritus> * 50],
+  <thaumcraft:void_robe_helm:*>, // CentralItem
+  [<thaumicwonders:void_fortress_helm:*>, <bloodmagic:item_demon_crystal>, <bloodmagic:slate:3>, <thaumadditions:adaminite_fabric>, <thaumadditions:adaminite_fabric>, <thaumadditions:adaminite_fabric>]
+);
+mods.thaumcraft.ArcaneWorkbench.removeRecipe(<thaumadditions:adaminite_robe>);
+mods.thaumcraft.Infusion.registerRecipe(
+  'adaminite_robe', // Name
+  'ADAMINITEFABRIC', // Research
+  <thaumadditions:adaminite_robe>, // Output
+  6, // Instability
+  [<aspect:infernum> * 100, <aspect:sanguis> * 100, <aspect:mortuus> * 50],
+  <thaumcraft:void_robe_chest:*>, // CentralItem
+  [<thaumicwonders:void_fortress_chest:*>, <bloodmagic:item_demon_crystal>, <bloodmagic:slate:3>, <thaumadditions:adaminite_fabric>, <thaumadditions:adaminite_fabric>, <thaumadditions:adaminite_fabric>, <thaumadditions:adaminite_fabric>]
+);
+mods.thaumcraft.ArcaneWorkbench.removeRecipe(<thaumadditions:adaminite_belt>);
+mods.thaumcraft.Infusion.registerRecipe(
+  'adaminite_belt', // Name
+  'ADAMINITEFABRIC', // Research
+  <thaumadditions:adaminite_belt>, // Output
+  6, // Instability
+  [<aspect:infernum> * 100, <aspect:sanguis> * 100, <aspect:ordo> * 50],
+  <thaumcraft:void_robe_legs:*>, // CentralItem
+  [<thaumicwonders:void_fortress_legs:*>, <bloodmagic:item_demon_crystal>, <bloodmagic:slate:3>, <thaumadditions:adaminite_fabric>, <thaumadditions:adaminite_fabric>, <thaumadditions:adaminite_fabric>]
+);
+mods.thaumcraft.ArcaneWorkbench.removeRecipe(<thaumadditions:adaminite_boots>);
+mods.thaumcraft.Infusion.registerRecipe(
+  'adaminite_boots', // Name
+  'ADAMINITEFABRIC', // Research
+  <thaumadditions:adaminite_boots>, // Output
+  6, // Instability
+  [<aspect:infernum> * 100, <aspect:sanguis> * 100, <aspect:motus> * 50],
+  <thaumicaugmentation:void_boots:*>, // CentralItem
+  [<thaumcraft:void_boots:*>, <bloodmagic:item_demon_crystal>, <bloodmagic:slate:3>, <thaumadditions:adaminite_fabric>, <thaumadditions:adaminite_fabric>]
+);
+
+function makeArmor(
+  name as string,
+  research as string,
+  armor as IItemStack,
+  aspects as thaumcraft.aspect.CTAspectStack[],
+  central as IIngredient,
+  ingrs as IIngredient[]
+) as void {
+  armor.addEnchantment(<enchantment:advancedrocketry:spacebreathing>.makeEnchantment(1));
+  mods.thaumcraft.Infusion.registerRecipe(name, research, armor, 10, aspects, central, ingrs);
+}
+
+//
+mods.thaumcraft.Infusion.removeRecipe(<thaumadditions:mithminite_hood>);
+makeArmor(
+  'mithminite_hood', // Name
+  'HOOD', // Research
+  <thaumadditions:mithminite_hood>, // Output
+  [
+    <aspect:caeles> * 100,
+    <aspect:praemunio> * 50,
+    <aspect:visum> * 200,
+    <aspect:sensus> * 200,
+    <aspect:amogus> * 42,
+  ],
+  <thaumadditions:adaminite_hood:*>, // CentralItem
+  [
+    <thaumcraft:sanity_checker>,
+    <thaumadditions:zeith_fur>,
+    <thaumadditions:mithminite_fabric>,
+    <thaumadditions:mithminite_fabric>,
+    <thaumadditions:mithminite_fabric>,
+    <thaumadditions:zeith_fur>,
+    <thaumadditions:fragnant_pendant>,
+    <thaumadditions:seal_globe>,
+  ]);
+
+mods.thaumcraft.Infusion.removeRecipe(<thaumadditions:mithminite_robe>);
+makeArmor(
+  'mithminite_robe', // Name
+  'ROBE', // Research
+  <thaumadditions:mithminite_robe>.withTag({ air: 36000 }),
+  [
+    <aspect:caeles> * 100,
+    <aspect:praemunio> * 50,
+    <aspect:victus> * 200,
+    <aspect:draco> * 200,
+    <aspect:amogus> * 42,
+  ],
+  <thaumadditions:adaminite_robe:*>, // CentralItem
+  [
+    <thaumadditions:mithminite_fabric>,
+    <thaumadditions:zeith_fur>,
+    <thaumadditions:mithminite_fabric>,
+    <thaumicaugmentation:thaumostatic_harness:*>,
+    <thaumadditions:mithminite_fabric>,
+    <thaumadditions:zeith_fur>,
+    <thaumadditions:mithminite_fabric>,
+    <thaumicwonders:panacea:1>,
+  ]);
+
+mods.thaumcraft.Infusion.removeRecipe(<thaumadditions:mithminite_belt>);
+makeArmor(
+  'mithminite_belt', // Name
+  'BELT', // Research
+  <thaumadditions:mithminite_belt>, // Output
+  [
+    <aspect:caeles> * 100,
+    <aspect:praemunio> * 50,
+    <aspect:volatus> * 200,
+    <aspect:ventus> * 200,
+    <aspect:amogus> * 42,
+  ],
+  <thaumadditions:adaminite_belt:*>, // CentralItem
+  [
+    <thaumadditions:mithminite_fabric>,
+    <thaumadditions:zeith_fur>,
+    <thaumadditions:mithminite_fabric>,
+    <thaumicwonders:flying_carpet:*>,
+    <thaumadditions:mithminite_fabric>,
+    <thaumadditions:zeith_fur>,
+  ]);
+
+mods.thaumcraft.Infusion.removeRecipe(<thaumadditions:mithminite_boots>);
+makeArmor(
+  'mithminite_boots', // Name
+  'BOOTS', // Research
+  <thaumadditions:mithminite_boots>, // Output
+  [
+    <aspect:caeles> * 100,
+    <aspect:praemunio> * 50,
+    <aspect:sonus> * 200,
+    <aspect:exitium> * 200,
+    <aspect:amogus> * 42,
+  ],
+  <thaumadditions:adaminite_boots:*>, // CentralItem
+  [
+    <thaumadditions:mithminite_fabric>,
+    <thaumadditions:zeith_fur>,
+    <thaumadditions:zeith_fur>,
+    <thaumadditions:mithminite_fabric>,
+    <thaumicaugmentation:research_notes>,
+  ]);

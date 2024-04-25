@@ -7,7 +7,9 @@ import crafttweaker.item.IItemStack;
 // plankWood -@chisel -"(fireproof)" -"Vertical" -" Painted "
 
 // Helper Function
-function saw(input as IIngredient, output as IItemStack, exceptions as string) {
+function saw(input as IIngredient, output as IItemStack, exceptions as string) as void {
+  if(isNull(input) || isNull(output)) return;
+
   // BlockCutter should add all recipes.
   // All table recipes should be replaced
   scripts.process.sawWood(input, output, 'only: blockCutter strict: shapeless');
@@ -36,7 +38,6 @@ recipes.removeByRecipeName('astralsorcery:shapeless/infused_wood_planks');
 
 // Magical wood special
 scripts.process.sawWood(<extrautils2:decorativesolidwood:1>, <extrautils2:decorativesolidwood>, 'only: TESawmill');
-scripts.process.sawWood(<thaumcraft:taint_log>, <thaumadditions:taintwood_planks>, 'only: TESawmill');
 
 // Sawdust compat
 mods.mekanism.sawmill.removeRecipe(<ore:plankWood>);

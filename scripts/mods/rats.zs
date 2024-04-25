@@ -456,5 +456,5 @@ craft.make(<rats:plague_scythe>, ["pretty",
   "P M P",
   "P P P"], {
   "P": <rats:plague_essence>,              # Plague Essence
-  "M": <thaumadditions:mithminite_scythe>, # Mithminite Scythe
+  "M": utils.tryCatch('thaumadditions:mithminite_scythe', <draconicevolution:wyvern_sword>), # Mithminite Scythe
 });

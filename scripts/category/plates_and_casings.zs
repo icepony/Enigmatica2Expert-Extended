@@ -1,4 +1,5 @@
 #modloaded immersiveengineering
+#ignoreBracketErrors
 
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
@@ -40,6 +41,7 @@ val platesData = {
 } as IItemStack[string];
 
 for oreName, plate in platesData {
+  if(isNull(plate)) continue;
   recipes.remove(plate);
   val ingot = oreDict['ingot' ~ oreName];
   recipes.addShapeless('plate EngHammer ' ~ oreName, plate, [ingot, ingot, anyHammer]);

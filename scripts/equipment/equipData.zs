@@ -521,7 +521,9 @@ function addMatRequirment(item as IItemStack) as void {
 function getMatsRequired(matName as string) as int {
   if (isNull(matsRequired.__initialized)) {
     for modName in ['tconstruct', 'conarm', 'tconevo'] as string[] {
-      for item in loadedMods[modName].items { addMatRequirment(item); }
+      val mod = loadedMods[modName];
+      if(isNull(mod)) continue;
+      for item in mod.items { addMatRequirment(item); }
     }
     matsRequired['__initialized'] = 1;
   }

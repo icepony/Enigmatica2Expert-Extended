@@ -11,6 +11,7 @@ https://github.com/Krutoy242
 */
 
 #modloaded jei ctintegration
+#ignoreBracketErrors
 #reloadable
 
 import crafttweaker.entity.IEntityDefinition;

@@ -69,12 +69,15 @@ function getAnyVisCrystal(key as string = '8', col as int = 0x333333, matchNBTCh
 }
 
 function getAnyVisSalt(key as string = '8', col as int = 0x333333) as IItemStack {
-  return <thaumadditions:salt_essence>.withTag(
-    utils.shiningTag(col) + {
-      Aspects: [{ key: 'ordo', amount: 1 }],
-      display: { Name: '§' ~ key ~ '§lAny Vis Salt' },
-    } as IData,
-    false);
+  val salt = itemUtils.getItem('thaumadditions:salt_essence');
+  return isNull(salt)
+    ? <thaumcraft:salis_mundus>
+    : salt.withTag(
+      utils.shiningTag(col) + {
+        Aspects: [{ key: 'ordo', amount: 1 }],
+        display: { Name: '§' ~ key ~ '§lAny Vis Salt' },
+      } as IData,
+      false);
 }
 
 /*
@@ -216,16 +219,6 @@ craft.make(<thaumcraft:brain> * 8, ['pretty',
   'T T',
   'T T'], {
   'T': <mysticalagriculture:zombie_essence>, // Zombie Essence
-});
-
-// [Thaumonomicon Lectern] from [Lectern][+2]
-craft.remake(<thaumadditions:thaumic_lectern>, ['pretty',
-  '  T  ',
-  '# L #',
-  '# # #'], {
-  'T': <thaumcraft:thaumonomicon>, // Thaumonomicon
-  '#': <thaumcraft:slab_greatwood>, // Greatwood Slab
-  'L': <iceandfire:lectern>, // Lectern
 });
 
 // Bath salt recipe (this one works)
@@ -727,7 +720,7 @@ craft.remake(<thaumcraft:crimson_blade>, ['pretty',
   'п F C п      ',
   'F п   п      '], {
   '□': <ore:plateMithminite>, // Mithminite Plate
-  'T': <thaumadditions:taintkin>, // Taintkin
+  'T': utils.tryCatch('thaumadditions:taintkin', <thaumcraft:taint_soil>), // Taintkin
   'п': <ore:plateVoid>, // Void Metal Plate
   'B': <bloodmagic:bound_sword>.withTag({ Unbreakable: 1 as byte, activated: 1 as byte }, false), // Bound Blade
   'S': <avaritia:skullfire_sword>.anyDamage(), // Skullfire Sword
@@ -1186,12 +1179,12 @@ scripts.process.crushRock(<thaumicaugmentation:stone>,
   'only: rockCrusher');
 
 scripts.process.crushRock(<thaumicaugmentation:stone:1>,
-  [<jaopca:item_dusttanzanite>, <jaopca:item_dustdimensionalshard>, <thaumadditions:salt_essence>.withTag({ Aspects: [{ amount: 1, key: 'vitium' }] })],
+  [<jaopca:item_dusttanzanite>, <jaopca:item_dustdimensionalshard>, utils.tryCatch(utils.get('thaumadditions:salt_essence', 0, 1, { Aspects: [{ amount: 1, key: 'vitium' }] }), <harvestcraft:saltitem>)],
   [0.8, 0.2, 0.1],
   'only: rockCrusher');
 
 scripts.process.crushRock(<thaumicaugmentation:stone:2>,
-  [<jaopca:item_dusttanzanite>, <jaopca:item_dustdimensionalshard>, <thaumadditions:salt_essence>.withTag({ Aspects: [{ amount: 1, key: 'vitium' }] })],
+  [<jaopca:item_dusttanzanite>, <jaopca:item_dustdimensionalshard>, utils.tryCatch(utils.get('thaumadditions:salt_essence', 0, 1, { Aspects: [{ amount: 1, key: 'vitium' }] }), <harvestcraft:saltitem>)],
   [0.8, 0.3, 0.1],
   'only: rockCrusher');
 
@@ -1214,7 +1207,7 @@ mods.astralsorcery.Altar.addConstellationAltarRecipe(
     + 'LERP'
     + 'HHGGGGHH'], {
     'K': <astralsorcery:itemknowledgeshare>, // Scroll of written expertise
-    'V': <thaumadditions:void_fruit>, // Void fruit
+    'V': utils.tryCatch('thaumadditions:void_fruit', <thaumicwonders:void_beacon>), // Void fruit
     'C': <thaumcraft:curiosity_band>, // Curiosity band
     'I': <thaumicaugmentation:material:3>, // Impetus Cell
     'G': <thaumicwonders:primordial_grain>, // Primordial grain

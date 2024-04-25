@@ -119,13 +119,13 @@ craft.remake(<rftools:crafter3>, ['pretty',
 });
 
 // Storage Modules
-recipes.remove(<rftools:storage_module>);
+recipes.removeByRecipeName('rftools:storage_module_0');
 recipes.addShaped('rftools_storage_module_0', <rftools:storage_module>, [
   [<storagedrawers:upgrade_storage:0>, null, <storagedrawers:upgrade_storage:0>],
   [<ore:oc:materialCircuitBoardPrinted>, <ore:chest>, <ore:oc:materialCircuitBoardPrinted>],
   [<storagedrawers:upgrade_storage:0>, null, <storagedrawers:upgrade_storage:0>]]);
 
-recipes.remove(<rftools:storage_module:1>);
+recipes.removeByRecipeName('rftools:storage_module_1');
 recipes.addShaped('rftools_storage_module_1', <rftools:storage_module:1>, [
   [<storagedrawers:upgrade_storage:0>, null, <storagedrawers:upgrade_storage:0>],
   [<ore:circuitAdvanced>, <rftools:storage_module>.marked('module'), <ore:circuitAdvanced>],
@@ -137,7 +137,7 @@ recipes.addShaped('rftools_storage_module_1', <rftools:storage_module:1>, [
   return out;
 }, null);
 
-recipes.remove(<rftools:storage_module:2>);
+recipes.removeByRecipeName('rftools:storage_module_2');
 recipes.addShaped('rftools_storage_module_2', <rftools:storage_module:2>, [
   [<storagedrawers:upgrade_storage:1>, null, <storagedrawers:upgrade_storage:1>],
   [<ore:circuitBoard>, <rftools:storage_module:1>.marked('module'), <ore:circuitBoard>],

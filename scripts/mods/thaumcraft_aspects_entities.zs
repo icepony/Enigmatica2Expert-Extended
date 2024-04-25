@@ -432,18 +432,7 @@ ___ _  _ ____ _  _ _  _ ____ ____ ____ ____ ___
 <entity:thaumcraft:taintswarm>                  .setAspects(<aspect:vitium>*20        ,<aspect:sanguis>*20); 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "thaumcraft:wisp"}})
                                                 .setAspects(<aspect:auram>*20); 
-<entity:thaumcraft:wisp>                        .setAspects(<aspect:auram>*20); 
-
-/*
-___ _  _ ____ _  _ _  _ ____ ___  ___  _ ___ _ ____ _  _ ____ 
- |  |__| |__| |  | |\/| |__| |  \ |  \ |  |  | |  | |\ | [__  
- |  |  | |  | |__| |  | |  | |__/ |__/ |  |  | |__| | \| ___] 
-                                                              
-*/
-
-<minecraft:spawn_egg>.withTag({EntityTag: {id: "thaumadditions:blue_wolf"}})
-                                                .setAspects(<aspect:bestia>*20        ,<aspect:auram>*20      ,<aspect:mana>*10); 
-<entity:thaumadditions:blue_wolf>               .setAspects(<aspect:bestia>*20        ,<aspect:auram>*20      ,<aspect:mana>*10); 
+<entity:thaumcraft:wisp>                        .setAspects(<aspect:auram>*20);
 
 /*
 ___ _  _ ____ _  _ _  _ _ ____ ____ _  _ ____ _  _ ____ _  _ ___ ____ ___ _ ____ _  _ 

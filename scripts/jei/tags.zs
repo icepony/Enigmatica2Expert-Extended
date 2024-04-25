@@ -289,7 +289,7 @@ static list as IItemStack[][string] = {
     <randomthings:itemcollector>,
     <randomthings:plate_collection>,
     <tconstruct:wooden_hopper>,
-    <thaumadditions:seal_symbol>.withTag({ Aspect: 'vacuos' }),
+    utils.get('thaumadditions:seal_symbol', 0, 1, { Aspect: 'vacuos' }),
     <thaumcraft:hungry_chest>,
     <thermalexpansion:device:12>,
   ],

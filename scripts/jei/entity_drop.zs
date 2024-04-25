@@ -231,7 +231,7 @@ return list.map(({ groups: { id, display, items } }) => {
   add(<entity:rats:rat>                               , [<rats:rat_pelt> * 50, <rats:raw_rat> * 100]); // Rat
   add(<entity:rats:ratlantean_spirit>                 , [<rats:marbled_cheese_rat_head> * 7, <rats:ratlantean_flame> * 50]); // Ratlantean Spirit
   add(<entity:tconstruct:blueslime>                   , [<tconstruct:edible:1> * 88]); // Blue Slime
-  add(<entity:thaumadditions:blue_wolf>               , [<thaumadditions:zeith_fur> * 241]); // Blue Wolf
+  add(<entity:thaumadditions:blue_wolf>               , [utils.get('thaumadditions:zeith_fur', 0, 241)]); // Blue Wolf
 # add(<entity:thaumcraft:arcanebore>                  , []); // Arcane Bore
   add(<entity:thaumcraft:brainyzombie>                , [<minecraft:carrot> * 3, <minecraft:potato> * 1, <minecraft:rotten_flesh> * 95, <minecraft:skull:2> * 3, <thaumcraft:brain> * 48]); // Angry Zombie
   add(<entity:thaumcraft:cultistcleric>               , [<minecraft:gold_nugget> * 103, <thaumcraft:crimson_boots> * 2, <thaumcraft:crimson_robe_chest> * 3, <thaumcraft:crimson_robe_helm> * 7, <thaumcraft:crimson_robe_legs> * 6, <thaumcraft:curio:6> * 27]); // Crimson Cleric
