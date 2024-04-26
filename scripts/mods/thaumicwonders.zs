@@ -216,7 +216,7 @@ mods.thaumcraft.Infusion.registerRecipe(
   'TWOND_ALKAHEST', // Research
   <thaumicwonders:alkahest_vat>, // Output
   5, // Instability
-  [<aspect:alkimia> * 100, <aspect:caeles> * 25, <aspect:infernum> * 100, <aspect:fluctus> * 50, <aspect:auram> * 200],
+  [<aspect:alkimia> * 100, Aspect.caeles * 25, Aspect.infernum * 100, Aspect.fluctus * 50, <aspect:auram> * 200],
   <thaumcraft:crucible>, // CentralItem
   [
     <thaumicaugmentation:material:5>,

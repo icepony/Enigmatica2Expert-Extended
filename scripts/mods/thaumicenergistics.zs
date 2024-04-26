@@ -75,7 +75,7 @@ mods.thaumcraft.Infusion.registerRecipe(
   'INFUSION', // Research
   <thaumicenergistics:infusion_provider>, // Output
   7, // Instability
-  [<aspect:fabrico> * 100, <aspect:imperium> * 100, <aspect:praecantatio> * 100],
+  [<aspect:fabrico> * 100, Aspect.imperium * 100, <aspect:praecantatio> * 100],
   <appliedenergistics2:interface>, // Central Item
   Grid(['pretty',
     '▬ ‚ ▬',

@@ -503,7 +503,7 @@ mods.nuclearcraft.Melter.addRecipe(<ore:dustSulfur>, <liquid:sulfur> * 100);
 <ic2:crop_res:6>.setAspects(<aspect:aqua> * 20,<aspect:alkimia> * 40); // Milk Wart
 <ic2:crop_res>.setAspects(<aspect:cognitio> * 60); // Coffee Beans
 <ic2:crop_res:7>.setAspects(<aspect:motus> * 100); // Oil Berry
-<ic2:crop_res:8>.setAspects(<aspect:visum> * 20); // Bobs-Yer-Uncle-Ranks Berry
+<ic2:crop_res:8>.setAspects(Aspect.visum * 20); // Bobs-Yer-Uncle-Ranks Berry
 <ic2:crop_res:1>.setAspects(<aspect:cognitio> * 50); // Coffee Powder
 
 // [Biogas Bucket] from [Hops]

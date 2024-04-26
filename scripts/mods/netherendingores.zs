@@ -17,8 +17,8 @@ _  _ ____ ___ _  _ ____ ____ ____ _  _ ___  _ _  _ ____ ____ ____ ____ ____
 */
 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "netherendingores:netherfish"}})
-                                                .setAspects(<aspect:bestia>*10, <aspect:ignis>*10, <aspect:infernum>*5);
-<entity:netherendingores:netherfish>            .setAspects(<aspect:bestia>*10, <aspect:ignis>*10, <aspect:infernum>*5);
+                                                .setAspects(<aspect:bestia>*10, <aspect:ignis>*10, Aspect.infernum*5);
+<entity:netherendingores:netherfish>            .setAspects(<aspect:bestia>*10, <aspect:ignis>*10, Aspect.infernum*5);
 
 /*
 

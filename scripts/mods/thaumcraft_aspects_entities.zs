@@ -40,11 +40,11 @@ ___  ____ ___ ___ ____ ____    ____ _  _ _ _  _ ____ _    ____
                                                 .setAspects(<aspect:bestia>*10        ,<aspect:aqua>*10       ,<aspect:potentia>*5); 
 <entity:betteranimalsplus:eel_freshwater>       .setAspects(<aspect:bestia>*10        ,<aspect:aqua>*10       ,<aspect:potentia>*5);
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "betteranimalsplus:eel_saltwater"}})
-                                                .setAspects(<aspect:bestia>*10        ,<aspect:aqua>*10       ,<aspect:fluctus>*5); 
-<entity:betteranimalsplus:eel_saltwater>        .setAspects(<aspect:bestia>*10        ,<aspect:aqua>*10       ,<aspect:fluctus>*5);
+                                                .setAspects(<aspect:bestia>*10        ,<aspect:aqua>*10       ,Aspect.fluctus*5); 
+<entity:betteranimalsplus:eel_saltwater>        .setAspects(<aspect:bestia>*10        ,<aspect:aqua>*10       ,Aspect.fluctus*5);
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "betteranimalsplus:feralwolf"}})
-                                                .setAspects(<aspect:bestia>*15        ,<aspect:victus>*15     ,<aspect:sonus>*5); 
-<entity:betteranimalsplus:feralwolf>            .setAspects(<aspect:bestia>*15        ,<aspect:victus>*15     ,<aspect:sonus>*5); 
+                                                .setAspects(<aspect:bestia>*15        ,<aspect:victus>*15     ,Aspect.sonus*5); 
+<entity:betteranimalsplus:feralwolf>            .setAspects(<aspect:bestia>*15        ,<aspect:victus>*15     ,Aspect.sonus*5); 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "betteranimalsplus:fox"}})
                                                 .setAspects(<aspect:bestia>*15        ,<aspect:victus>*15     ,<aspect:desiderium>*5); 
 <entity:betteranimalsplus:fox>                  .setAspects(<aspect:bestia>*15        ,<aspect:victus>*15     ,<aspect:desiderium>*5); 
@@ -61,8 +61,8 @@ ___  ____ ___ ___ ____ ____    ____ _  _ _ _  _ ____ _    ____
                                                 .setAspects(<aspect:bestia>*10        ,<aspect:aqua>*10       ,<aspect:potentia>*5); 
 <entity:betteranimalsplus:jellyfish>            .setAspects(<aspect:bestia>*10        ,<aspect:aqua>*10       ,<aspect:potentia>*5);
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "betteranimalsplus:lammergeier"}})
-                                                .setAspects(<aspect:bestia>*10        ,<aspect:volatus>*10    ,<aspect:visum>*5); 
-<entity:betteranimalsplus:lammergeier>          .setAspects(<aspect:bestia>*10        ,<aspect:volatus>*10    ,<aspect:visum>*5);
+                                                .setAspects(<aspect:bestia>*10        ,<aspect:volatus>*10    ,Aspect.visum*5); 
+<entity:betteranimalsplus:lammergeier>          .setAspects(<aspect:bestia>*10        ,<aspect:volatus>*10    ,Aspect.visum*5);
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "betteranimalsplus:lamprey"}})
                                                 .setAspects(<aspect:bestia>*10        ,<aspect:aqua>*10       ,<aspect:motus>*5); 
 <entity:betteranimalsplus:lamprey>              .setAspects(<aspect:bestia>*10        ,<aspect:aqua>*10       ,<aspect:motus>*5);
@@ -73,8 +73,8 @@ ___  ____ ___ ___ ____ ____    ____ _  _ _ _  _ ____ _    ____
                                                 .setAspects(<aspect:aqua>*10          ,<aspect:praemunio>*10  ,<aspect:bestia>*10); 
 <entity:betteranimalsplus:nautilus>             .setAspects(<aspect:aqua>*10          ,<aspect:praemunio>*10  ,<aspect:bestia>*10); 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "betteranimalsplus:pheasant"}})
-                                                .setAspects(<aspect:bestia>*15        ,<aspect:volatus>*10    ,<aspect:ventus>*10); 
-<entity:betteranimalsplus:pheasant>             .setAspects(<aspect:bestia>*15        ,<aspect:volatus>*10    ,<aspect:ventus>*10); 
+                                                .setAspects(<aspect:bestia>*15        ,<aspect:volatus>*10    ,Aspect.ventus*10); 
+<entity:betteranimalsplus:pheasant>             .setAspects(<aspect:bestia>*15        ,<aspect:volatus>*10    ,Aspect.ventus*10); 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "betteranimalsplus:reindeer"}})
                                                 .setAspects(<aspect:bestia>*40        ,<aspect:victus>*20     ,<aspect:gelum>*20); 
 <entity:betteranimalsplus:reindeer>             .setAspects(<aspect:bestia>*40        ,<aspect:victus>*20     ,<aspect:gelum>*20);
@@ -85,14 +85,14 @@ ___  ____ ___ ___ ____ ____    ____ _  _ _ _  _ ____ _    ____
                                                 .setAspects(<aspect:bestia>*10        ,<aspect:herba>*10      ,<aspect:vacuos>*10); 
 <entity:betteranimalsplus:squirrel>             .setAspects(<aspect:bestia>*10        ,<aspect:herba>*10      ,<aspect:vacuos>*10); 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "betteranimalsplus:songbird"}})
-                                                .setAspects(<aspect:bestia>*15        ,<aspect:volatus>*10    ,<aspect:sonus>*20); 
-<entity:betteranimalsplus:songbird>             .setAspects(<aspect:bestia>*15        ,<aspect:volatus>*10    ,<aspect:sonus>*20); 
+                                                .setAspects(<aspect:bestia>*15        ,<aspect:volatus>*10    ,Aspect.sonus*20); 
+<entity:betteranimalsplus:songbird>             .setAspects(<aspect:bestia>*15        ,<aspect:volatus>*10    ,Aspect.sonus*20); 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "betteranimalsplus:tarantula"}})
-                                                .setAspects(<aspect:bestia>*50        ,<aspect:vinculum>*30   ,<aspect:sensus>*20       ,<aspect:infernum>*20); 
-<entity:betteranimalsplus:tarantula>            .setAspects(<aspect:bestia>*50        ,<aspect:vinculum>*30   ,<aspect:sensus>*20       ,<aspect:infernum>*20); 
+                                                .setAspects(<aspect:bestia>*50        ,<aspect:vinculum>*30   ,<aspect:sensus>*20       ,Aspect.infernum*20); 
+<entity:betteranimalsplus:tarantula>            .setAspects(<aspect:bestia>*50        ,<aspect:vinculum>*30   ,<aspect:sensus>*20       ,Aspect.infernum*20); 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "betteranimalsplus:turkey"}})
-                                                .setAspects(<aspect:bestia>*15        ,<aspect:volatus>*10    ,<aspect:ventus>*10); 
-<entity:betteranimalsplus:turkey>               .setAspects(<aspect:bestia>*15        ,<aspect:volatus>*10    ,<aspect:ventus>*10); 
+                                                .setAspects(<aspect:bestia>*15        ,<aspect:volatus>*10    ,Aspect.ventus*10); 
+<entity:betteranimalsplus:turkey>               .setAspects(<aspect:bestia>*15        ,<aspect:volatus>*10    ,Aspect.ventus*10); 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "betteranimalsplus:walrus"}})
                                                 .setAspects(<aspect:bestia>*20        ,<aspect:victus>*20     ,<aspect:gelum>*10); 
 <entity:betteranimalsplus:walrus>               .setAspects(<aspect:bestia>*20        ,<aspect:victus>*20     ,<aspect:gelum>*10);
@@ -123,11 +123,11 @@ ____ _  _ ____ ____ _  _
                                                 .setAspects(<aspect:bestia>*10        ,<aspect:aqua>*10       ,<aspect:praemunio>*5); 
 <entity:quark:crab>                             .setAspects(<aspect:bestia>*10        ,<aspect:aqua>*10       ,<aspect:praemunio>*5); 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "quark:dweller"}})
-                                                .setAspects(<aspect:exanimis>*10      ,<aspect:mortuus>*10    ,<aspect:humanus>*20     ,<aspect:visum>*10); 
-<entity:quark:dweller>                          .setAspects(<aspect:exanimis>*10      ,<aspect:mortuus>*10    ,<aspect:humanus>*20     ,<aspect:visum>*10); 
+                                                .setAspects(<aspect:exanimis>*10      ,<aspect:mortuus>*10    ,<aspect:humanus>*20     ,Aspect.visum*10); 
+<entity:quark:dweller>                          .setAspects(<aspect:exanimis>*10      ,<aspect:mortuus>*10    ,<aspect:humanus>*20     ,Aspect.visum*10); 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "quark:foxhound"}})
-                                                .setAspects(<aspect:bestia>*20        ,<aspect:ignis>*10      ,<aspect:infernum>*10         ,<aspect:potentia>*10); 
-<entity:quark:foxhound>                         .setAspects(<aspect:bestia>*20        ,<aspect:ignis>*10      ,<aspect:infernum>*10         ,<aspect:potentia>*10); 
+                                                .setAspects(<aspect:bestia>*20        ,<aspect:ignis>*10      ,Aspect.infernum*10         ,<aspect:potentia>*10); 
+<entity:quark:foxhound>                         .setAspects(<aspect:bestia>*20        ,<aspect:ignis>*10      ,Aspect.infernum*10         ,<aspect:potentia>*10); 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "quark:frog"}})
                                                 .setAspects(<aspect:bestia>*10        ,<aspect:aqua>*10       ,<aspect:vinculum>*5); 
 <entity:quark:frog>                             .setAspects(<aspect:bestia>*10        ,<aspect:aqua>*10       ,<aspect:vinculum>*5);
@@ -138,8 +138,8 @@ ____ _  _ ____ ____ _  _
                                                 .setAspects(<aspect:terra>*10         ,<aspect:vinculum>*10   ,<aspect:desiderium>*20); 
 <entity:quark:stoneling>                        .setAspects(<aspect:terra>*10         ,<aspect:vinculum>*10   ,<aspect:desiderium>*20); 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "quark:wraith"}})
-                                                .setAspects(<aspect:mortuus>*10       ,<aspect:spiritus>*20   ,<aspect:imperium>*20); 
-<entity:quark:wraith>                           .setAspects(<aspect:mortuus>*10       ,<aspect:spiritus>*20   ,<aspect:imperium>*20); 
+                                                .setAspects(<aspect:mortuus>*10       ,<aspect:spiritus>*20   ,Aspect.imperium*20); 
+<entity:quark:wraith>                           .setAspects(<aspect:mortuus>*10       ,<aspect:spiritus>*20   ,Aspect.imperium*20); 
 
 /* 
 ___  ____ ____ ___  _  _ ____ ___  _    ____ ____ ____ _  _ _ _  _ ____ 
@@ -149,8 +149,8 @@ ___  ____ ____ ___  _  _ ____ ___  _    ____ ____ ____ _  _ _ _  _ ____
 */ 
 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "deepmoblearning:glitch"}})
-                                                .setAspects(<aspect:victus>*50        ,<aspect:machina>*50    ,<aspect:imperium>*25     ,<aspect:caeles>*30); 
-<entity:deepmoblearning:glitch>                 .setAspects(<aspect:victus>*50        ,<aspect:machina>*50    ,<aspect:imperium>*25     ,<aspect:caeles>*30);
+                                                .setAspects(<aspect:victus>*50        ,<aspect:machina>*50    ,Aspect.imperium*25     ,Aspect.caeles*30); 
+<entity:deepmoblearning:glitch>                 .setAspects(<aspect:victus>*50        ,<aspect:machina>*50    ,Aspect.imperium*25     ,Aspect.caeles*30);
 
 /*
 ___  _ ____ _  _ ____ ____ ____ ___  _    ____ _  _ ___ _   _ 
@@ -160,8 +160,8 @@ ___  _ ____ _  _ ____ ____ ____ ___  _    ____ _  _ ___ _   _
 */
 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "biomesoplenty:wasp"}})
-                                                .setAspects(<aspect:bestia>*10        ,<aspect:desiderium>*10 ,<aspect:infernum>*5); 
-<entity:biomesoplenty:wasp>                     .setAspects(<aspect:bestia>*10        ,<aspect:desiderium>*10 ,<aspect:infernum>*5); 
+                                                .setAspects(<aspect:bestia>*10        ,<aspect:desiderium>*10 ,Aspect.infernum*5); 
+<entity:biomesoplenty:wasp>                     .setAspects(<aspect:bestia>*10        ,<aspect:desiderium>*10 ,Aspect.infernum*5); 
 
 /*
 ____ _  _ ___  ____ ____ ____ ____ ____ ___ ___  ____ ____ 
@@ -171,8 +171,8 @@ ____ _  _ ___  ____ ____ ____ ____ ____ ___ ___  ____ ____
 */
 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "emberroot:creeper"}})
-                                                .setAspects(<aspect:exitium>*20       ,<aspect:ignis>*10      ,<aspect:alkimia>*5        ,<aspect:perditio>*10); 
-<entity:emberroot:creeper>                      .setAspects(<aspect:exitium>*20       ,<aspect:ignis>*10      ,<aspect:alkimia>*5        ,<aspect:perditio>*10); 
+                                                .setAspects(Aspect.exitium*20       ,<aspect:ignis>*10      ,<aspect:alkimia>*5        ,<aspect:perditio>*10); 
+<entity:emberroot:creeper>                      .setAspects(Aspect.exitium*20       ,<aspect:ignis>*10      ,<aspect:alkimia>*5        ,<aspect:perditio>*10); 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "emberroot:deers"}})
                                                 .setAspects(<aspect:bestia>*15        ,<aspect:victus>*15     ,<aspect:terra>*5); 
 <entity:emberroot:deers>                        .setAspects(<aspect:bestia>*15        ,<aspect:victus>*15     ,<aspect:terra>*5); 
@@ -201,8 +201,8 @@ ____ _  _ ___  ____ ____ ____ ____ ____ ___ ___  ____ ____
                                                 .setAspects(<aspect:vitreus>*20       ,<aspect:machina>*10    ,<aspect:motus>*10); 
 <entity:emberroot:rainbow_golem>                .setAspects(<aspect:vitreus>*20       ,<aspect:machina>*10    ,<aspect:motus>*10); 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "emberroot:rainbowslime"}})
-                                                .setAspects(<aspect:aqua>*10          ,<aspect:alkimia>*10    ,<aspect:caeles>*5); 
-<entity:emberroot:rainbowslime>                 .setAspects(<aspect:aqua>*10          ,<aspect:alkimia>*10    ,<aspect:caeles>*5); 
+                                                .setAspects(<aspect:aqua>*10          ,<aspect:alkimia>*10    ,Aspect.caeles*5); 
+<entity:emberroot:rainbowslime>                 .setAspects(<aspect:aqua>*10          ,<aspect:alkimia>*10    ,Aspect.caeles*5); 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "emberroot:rootsonesprite"}})
                                                 .setAspects(<aspect:spiritus>*10      ,<aspect:mana>*10       ,<aspect:lux>*5); 
 <entity:emberroot:rootsonesprite>               .setAspects(<aspect:spiritus>*10      ,<aspect:mana>*10       ,<aspect:lux>*5); 
@@ -210,8 +210,8 @@ ____ _  _ ___  ____ ____ ____ ____ ____ ___ ___  ____ ____
                                                 .setAspects(<aspect:spiritus>*50      ,<aspect:praecantatio>*20,<aspect:lux>*15); 
 <entity:emberroot:rootsonespritegreater>        .setAspects(<aspect:spiritus>*50      ,<aspect:praecantatio>*20,<aspect:lux>*15); 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "emberroot:rootsonespriteling"}})
-                                                .setAspects(<aspect:spiritus>*10      ,<aspect:visum>*10      ,<aspect:lux>*5); 
-<entity:emberroot:rootsonespriteling>           .setAspects(<aspect:spiritus>*10      ,<aspect:visum>*10      ,<aspect:lux>*5); 
+                                                .setAspects(<aspect:spiritus>*10      ,Aspect.visum*10      ,<aspect:lux>*5); 
+<entity:emberroot:rootsonespriteling>           .setAspects(<aspect:spiritus>*10      ,Aspect.visum*10      ,<aspect:lux>*5); 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "emberroot:skeleton_frozen"}})
                                                 .setAspects(<aspect:mortuus>*10       ,<aspect:gelum>*10      ,<aspect:aversio>*20); 
 <entity:emberroot:skeleton_frozen>              .setAspects(<aspect:mortuus>*10       ,<aspect:gelum>*10      ,<aspect:aversio>*20); 
@@ -225,8 +225,8 @@ ____ _  _ ___  ____ ____ ____ ____ ____ ___ ___  ____ ____
                                                 .setAspects(<aspect:bestia>*15        ,<aspect:victus>*15     ,<aspect:herba>*5); 
 <entity:emberroot:timberwolf>                   .setAspects(<aspect:bestia>*15        ,<aspect:victus>*15     ,<aspect:herba>*5); 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "emberroot:withercat"}})
-                                                .setAspects(<aspect:bestia>*20        ,<aspect:tenebrae>*10   ,<aspect:infernum>*10); 
-<entity:emberroot:withercat>                    .setAspects(<aspect:bestia>*20        ,<aspect:tenebrae>*10   ,<aspect:infernum>*10);
+                                                .setAspects(<aspect:bestia>*20        ,<aspect:tenebrae>*10   ,Aspect.infernum*10); 
+<entity:emberroot:withercat>                    .setAspects(<aspect:bestia>*20        ,<aspect:tenebrae>*10   ,Aspect.infernum*10);
 
 /*
 ____ _  _ ___  ____ ____ ___  ____ ____ _  _ 
@@ -236,11 +236,11 @@ ____ _  _ ___  ____ ____ ___  ____ ____ _  _
 */
 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "endreborn:chronologist"}})
-                                                .setAspects(<aspect:alienis>*30       ,<aspect:desiderium>*20 ,<aspect:visum>*10); 
-<entity:endreborn:chronologist>                 .setAspects(<aspect:alienis>*30       ,<aspect:desiderium>*20 ,<aspect:visum>*10); 
+                                                .setAspects(<aspect:alienis>*30       ,<aspect:desiderium>*20 ,Aspect.visum*10); 
+<entity:endreborn:chronologist>                 .setAspects(<aspect:alienis>*30       ,<aspect:desiderium>*20 ,Aspect.visum*10); 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "endreborn:endguard"}})
-                                                .setAspects(<aspect:alienis>*30       ,<aspect:volatus>*10    ,<aspect:ventus>*10); 
-<entity:endreborn:endguard>                     .setAspects(<aspect:alienis>*30       ,<aspect:volatus>*10    ,<aspect:ventus>*10); 
+                                                .setAspects(<aspect:alienis>*30       ,<aspect:volatus>*10    ,Aspect.ventus*10); 
+<entity:endreborn:endguard>                     .setAspects(<aspect:alienis>*30       ,<aspect:volatus>*10    ,Aspect.ventus*10); 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "endreborn:watcher"}})
                                                 .setAspects(<aspect:alienis>*30       ,<aspect:tenebrae>*20   ,<aspect:sensus>*10); 
 <entity:endreborn:watcher>                      .setAspects(<aspect:alienis>*30       ,<aspect:tenebrae>*20   ,<aspect:sensus>*10); 
@@ -279,8 +279,8 @@ _ ____ ____    ____ _  _ ___     ____ _ ____ ____
                                                 .setAspects(<aspect:draco>*100        ,<aspect:aqua>*300      ,<aspect:mythus>*300);
 <entity:iceandfire:seaserpent>                  .setAspects(<aspect:draco>*100        ,<aspect:aqua>*300      ,<aspect:mythus>*300);
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "iceandfire:siren"}})
-                                                .setAspects(<aspect:sonus>*50         ,<aspect:imperium>*30   ,<aspect:aqua>*50         ,<aspect:mythus>*30);
-<entity:iceandfire:siren>                       .setAspects(<aspect:sonus>*50         ,<aspect:imperium>*30   ,<aspect:aqua>*50         ,<aspect:mythus>*30);
+                                                .setAspects(Aspect.sonus*50         ,Aspect.imperium*30   ,<aspect:aqua>*50         ,<aspect:mythus>*30);
+<entity:iceandfire:siren>                       .setAspects(Aspect.sonus*50         ,Aspect.imperium*30   ,<aspect:aqua>*50         ,<aspect:mythus>*30);
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "iceandfire:hippocampus"}})
                                                 .setAspects(<aspect:motus>*20         ,<aspect:mythus>*20     ,<aspect:aqua>*50);
 <entity:iceandfire:hippocampus>                 .setAspects(<aspect:motus>*20         ,<aspect:mythus>*20     ,<aspect:aqua>*50);
@@ -288,8 +288,8 @@ _ ____ ____    ____ _  _ ___     ____ _ ____ ____
                                                 .setAspects(<aspect:mythus>*200       ,<aspect:praecantatio>*100  ,<aspect:exanimis>*200    ,<aspect:humanus>*400);
 <entity:iceandfire:gorgon>                      .setAspects(<aspect:mythus>*200       ,<aspect:praecantatio>*100  ,<aspect:exanimis>*200    ,<aspect:humanus>*400);
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "iceandfire:cyclops"}})
-                                                .setAspects(<aspect:mythus>*100       ,<aspect:visum>*100     ,<aspect:potentia>*200);
-<entity:iceandfire:cyclops>                     .setAspects(<aspect:mythus>*400       ,<aspect:visum>*100     ,<aspect:potentia>*200);
+                                                .setAspects(<aspect:mythus>*100       ,Aspect.visum*100     ,<aspect:potentia>*200);
+<entity:iceandfire:cyclops>                     .setAspects(<aspect:mythus>*400       ,Aspect.visum*100     ,<aspect:potentia>*200);
 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "iceandfire:if_troll"}})
                                                 .setAspects(<aspect:mythus>*50        ,<aspect:tenebrae>*50   ,<aspect:terra>*100);
@@ -298,8 +298,8 @@ _ ____ ____    ____ _  _ ___     ____ _ ____ ____
                                                 .setAspects(<aspect:mythus>*100       ,<aspect:praecantatio>*100  ,<aspect:alkimia>*100    ,<aspect:victus>*200); 
 <entity:iceandfire:if_hydra>                    .setAspects(<aspect:mythus>*100       ,<aspect:praecantatio>*100  ,<aspect:alkimia>*100    ,<aspect:victus>*200); 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "iceandfire:stymphalianbird"}})
-                                                .setAspects(<aspect:mythus>*20        ,<aspect:aer>*10        ,<aspect:volatus>*20     ,<aspect:ventus>*20); 
-<entity:iceandfire:stymphalianbird>             .setAspects(<aspect:mythus>*20        ,<aspect:aer>*10        ,<aspect:volatus>*20     ,<aspect:ventus>*20); 
+                                                .setAspects(<aspect:mythus>*20        ,<aspect:aer>*10        ,<aspect:volatus>*20     ,Aspect.ventus*20); 
+<entity:iceandfire:stymphalianbird>             .setAspects(<aspect:mythus>*20        ,<aspect:aer>*10        ,<aspect:volatus>*20     ,Aspect.ventus*20); 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "iceandfire:amphithere"}})
                                                 .setAspects(<aspect:mythus>*25        ,<aspect:aer>*15        ,<aspect:volatus>*15     ,<aspect:desiderium>*20); 
 <entity:iceandfire:amphithere>                  .setAspects(<aspect:mythus>*25        ,<aspect:aer>*15        ,<aspect:volatus>*15     ,<aspect:desiderium>*20); 
@@ -310,8 +310,8 @@ _ ____ ____    ____ _  _ ___     ____ _ ____ ____
                                                 .setAspects(<aspect:mythus>*10        ,<aspect:mortuus>*20    ,<aspect:motus>*20        ,<aspect:perditio>*30); 
 <entity:iceandfire:if_cockatrice>               .setAspects(<aspect:mythus>*10        ,<aspect:mortuus>*20    ,<aspect:motus>*20        ,<aspect:perditio>*30); 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "iceandfire:hippogryph"}})
-                                                .setAspects(<aspect:mythus>*50        ,<aspect:ventus>*50     ,<aspect:victus>*50);
-<entity:iceandfire:hippogryph>                  .setAspects(<aspect:mythus>*50        ,<aspect:ventus>*50     ,<aspect:victus>*50);
+                                                .setAspects(<aspect:mythus>*50        ,Aspect.ventus*50     ,<aspect:victus>*50);
+<entity:iceandfire:hippogryph>                  .setAspects(<aspect:mythus>*50        ,Aspect.ventus*50     ,<aspect:victus>*50);
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "iceandfire:if_pixie"}})
                                                 .setAspects(<aspect:mythus>*20        ,<aspect:praecantatio>*50,<aspect:humanus>*20      ,<aspect:desiderium>*50); 
 <entity:iceandfire:if_pixie>                    .setAspects(<aspect:mythus>*20        ,<aspect:praecantatio>*50,<aspect:humanus>*20      ,<aspect:desiderium>*50); 
@@ -401,11 +401,11 @@ ___ _  _ ____ _  _ _  _ ____ ____ ____ ____ ___
                                                 .setAspects(<aspect:alienis>*30       ,<aspect:mortuus>*20    ,<aspect:vacuos>*10); 
 <entity:thaumcraft:eldritchguardian>            .setAspects(<aspect:alienis>*30       ,<aspect:mortuus>*20    ,<aspect:vacuos>*10); 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "thaumcraft:firebat"}})
-                                                .setAspects(<aspect:bestia>*20        ,<aspect:ignis>*20      ,<aspect:infernum>*10     ,<aspect:volatus>*10); 
-<entity:thaumcraft:firebat>                     .setAspects(<aspect:bestia>*20        ,<aspect:ignis>*20      ,<aspect:infernum>*10     ,<aspect:volatus>*10); 
+                                                .setAspects(<aspect:bestia>*20        ,<aspect:ignis>*20      ,Aspect.infernum*10     ,<aspect:volatus>*10); 
+<entity:thaumcraft:firebat>                     .setAspects(<aspect:bestia>*20        ,<aspect:ignis>*20      ,Aspect.infernum*10     ,<aspect:volatus>*10); 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "thaumcraft:inhabitedzombie"}})
-                                                .setAspects(<aspect:exanimis>*10      ,<aspect:mortuus>*10    ,<aspect:humanus>*20,     <aspect:imperium>*30); 
-<entity:thaumcraft:inhabitedzombie>             .setAspects(<aspect:exanimis>*10      ,<aspect:mortuus>*10    ,<aspect:humanus>*20,     <aspect:imperium>*30); 
+                                                .setAspects(<aspect:exanimis>*10      ,<aspect:mortuus>*10    ,<aspect:humanus>*20,     Aspect.imperium*30); 
+<entity:thaumcraft:inhabitedzombie>             .setAspects(<aspect:exanimis>*10      ,<aspect:mortuus>*10    ,<aspect:humanus>*20,     Aspect.imperium*30); 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "thaumcraft:mindspider"}})
                                                 .setAspects(<aspect:cognitio>*10      ,<aspect:bestia>*5      ,<aspect:alienis>*5); 
 <entity:thaumcraft:mindspider>                  .setAspects(<aspect:cognitio>*10      ,<aspect:bestia>*5      ,<aspect:alienis>*5); 
@@ -456,8 +456,8 @@ ___ _  _ ____ ____ _  _ ____ _       ____ ____ _  _ _  _ ___  ____ ___ _ ____ _ 
                                                 .setAspects(<aspect:terra>*20         ,<aspect:metallum>*20); 
 <entity:thermalfoundation:basalz>               .setAspects(<aspect:terra>*20         ,<aspect:metallum>*20); 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "thermalfoundation:blitz"}})
-                                                .setAspects(<aspect:aer>*20           ,<aspect:ventus>*20); 
-<entity:thermalfoundation:blitz>                .setAspects(<aspect:aer>*20           ,<aspect:ventus>*20); 
+                                                .setAspects(<aspect:aer>*20           ,Aspect.ventus*20); 
+<entity:thermalfoundation:blitz>                .setAspects(<aspect:aer>*20           ,Aspect.ventus*20); 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "thermalfoundation:blizz"}})
                                                 .setAspects(<aspect:aqua>*20          ,<aspect:gelum>*20); 
 <entity:thermalfoundation:blizz>                .setAspects(<aspect:aqua>*20          ,<aspect:gelum>*20); 
@@ -484,8 +484,8 @@ ___ _ _ _ _ _    _ ____ _  _ ___ ____ ____ ____ ____ ____ ___
                                                 .setAspects(<aspect:bestia>*15        ,<aspect:terra>*15      ,<aspect:fabrico>*10); 
 <entity:twilightforest:bighorn_sheep>           .setAspects(<aspect:bestia>*15        ,<aspect:terra>*15      ,<aspect:fabrico>*10); 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "twilightforest:bunny"}})
-                                                .setAspects(<aspect:bestia>*10        ,<aspect:terra>*10      ,<aspect:visum>*5); 
-<entity:twilightforest:bunny>                   .setAspects(<aspect:bestia>*10        ,<aspect:terra>*10      ,<aspect:visum>*5);
+                                                .setAspects(<aspect:bestia>*10        ,<aspect:terra>*10      ,Aspect.visum*5); 
+<entity:twilightforest:bunny>                   .setAspects(<aspect:bestia>*10        ,<aspect:terra>*10      ,Aspect.visum*5);
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "twilightforest:deer"}})
                                                 .setAspects(<aspect:bestia>*15        ,<aspect:terra>*15      ,<aspect:victus>*10); 
 <entity:twilightforest:deer>                    .setAspects(<aspect:bestia>*15        ,<aspect:terra>*15      ,<aspect:victus>*10); 
@@ -508,11 +508,11 @@ ___ _ _ _ _ _    _ ____ _  _ ___ ____ ____ ____ ____ ____ ___
                                                 .setAspects(<aspect:bestia>*10        ,<aspect:aer>*10        ,<aspect:auram>*5); 
 <entity:twilightforest:raven>                   .setAspects(<aspect:bestia>*10        ,<aspect:aer>*10        ,<aspect:auram>*5); 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "twilightforest:redcap"}})
-                                                .setAspects(<aspect:humanus>*10       ,<aspect:instrumentum>*10,<aspect:exitium>*5); 
-<entity:twilightforest:redcap>                  .setAspects(<aspect:humanus>*10       ,<aspect:instrumentum>*10,<aspect:exitium>*5); 
+                                                .setAspects(<aspect:humanus>*10       ,<aspect:instrumentum>*10,Aspect.exitium*5); 
+<entity:twilightforest:redcap>                  .setAspects(<aspect:humanus>*10       ,<aspect:instrumentum>*10,Aspect.exitium*5); 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "twilightforest:redcap_sapper"}})
-                                                .setAspects(<aspect:humanus>*10       ,<aspect:instrumentum>*10,<aspect:exitium>*5); 
-<entity:twilightforest:redcap_sapper>           .setAspects(<aspect:humanus>*10       ,<aspect:instrumentum>*10,<aspect:exitium>*5); 
+                                                .setAspects(<aspect:humanus>*10       ,<aspect:instrumentum>*10,Aspect.exitium*5); 
+<entity:twilightforest:redcap_sapper>           .setAspects(<aspect:humanus>*10       ,<aspect:instrumentum>*10,Aspect.exitium*5); 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "twilightforest:skeleton_druid"}})
                                                 .setAspects(<aspect:mortuus>*10       ,<aspect:herba>*10       ,<aspect:praecantatio>*20); 
 <entity:twilightforest:skeleton_druid>          .setAspects(<aspect:mortuus>*10       ,<aspect:herba>*10       ,<aspect:praecantatio>*20); 
@@ -523,8 +523,8 @@ ___ _ _ _ _ _    _ ____ _  _ ___ ____ ____ ____ ____ ____ ___
                                                 .setAspects(<aspect:bestia>*15        ,<aspect:terra>*15       ,<aspect:victus>*10); 
 <entity:twilightforest:wild_boar>               .setAspects(<aspect:bestia>*15        ,<aspect:terra>*15       ,<aspect:victus>*10); 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "twilightforest:tiny_bird"}})
-                                                .setAspects(<aspect:bestia>*10        ,<aspect:volatus>*10     ,<aspect:sonus>*10); 
-<entity:twilightforest:tiny_bird>               .setAspects(<aspect:bestia>*10        ,<aspect:volatus>*10     ,<aspect:sonus>*10); 
+                                                .setAspects(<aspect:bestia>*10        ,<aspect:volatus>*10     ,Aspect.sonus*10); 
+<entity:twilightforest:tiny_bird>               .setAspects(<aspect:bestia>*10        ,<aspect:volatus>*10     ,Aspect.sonus*10); 
 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "twilightforest:death_tome"}})
                                                 .setAspects(<aspect:cognitio>*20      ,<aspect:praemunio>*10   ,<aspect:mortuus>*10); 
@@ -546,8 +546,8 @@ ___ _ _ _ _ _    _ ____ _  _ ___ ____ ____ ____ ____ ____ ___
                                                 .setAspects(<aspect:vitium>*20        ,<aspect:victus>*10      ,<aspect:sanguis>*5); 
 <entity:twilightforest:mosquito_swarm>          .setAspects(<aspect:vitium>*20        ,<aspect:victus>*10      ,<aspect:sanguis>*5); 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "twilightforest:pinch_beetle"}})
-                                                .setAspects(<aspect:bestia>*20        ,<aspect:aer>*10         ,<aspect:sonus>*5); 
-<entity:twilightforest:pinch_beetle>            .setAspects(<aspect:bestia>*20        ,<aspect:aer>*10         ,<aspect:sonus>*5); 
+                                                .setAspects(<aspect:bestia>*20        ,<aspect:aer>*10         ,Aspect.sonus*5); 
+<entity:twilightforest:pinch_beetle>            .setAspects(<aspect:bestia>*20        ,<aspect:aer>*10         ,Aspect.sonus*5); 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "twilightforest:slime_beetle"}})
                                                 .setAspects(<aspect:bestia>*20        ,<aspect:alkimia>*10     ,<aspect:victus>*5); 
 <entity:twilightforest:slime_beetle>            .setAspects(<aspect:bestia>*20        ,<aspect:alkimia>*10     ,<aspect:victus>*5); 
@@ -566,8 +566,8 @@ ___ _ _ _ _ _    _ ____ _  _ ___ ____ ____ ____ ____ ____ ___
                                                 .setAspects(<aspect:gelum>*20         ,<aspect:motus>*5); 
 <entity:twilightforest:ice_crystal>             .setAspects(<aspect:gelum>*20         ,<aspect:motus>*5);
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "twilightforest:penguin"}})
-                                                .setAspects(<aspect:bestia>*20        ,<aspect:gelum>*5         ,<aspect:ventus>*5); 
-<entity:twilightforest:penguin>                 .setAspects(<aspect:bestia>*20        ,<aspect:gelum>*5         ,<aspect:ventus>*5);
+                                                .setAspects(<aspect:bestia>*20        ,<aspect:gelum>*5         ,Aspect.ventus*5); 
+<entity:twilightforest:penguin>                 .setAspects(<aspect:bestia>*20        ,<aspect:gelum>*5         ,Aspect.ventus*5);
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "twilightforest:snow_guardian"}})
                                                 .setAspects(<aspect:spiritus>*20      ,<aspect:gelum>*5         ,<aspect:praemunio>*10); 
 <entity:twilightforest:snow_guardian>           .setAspects(<aspect:spiritus>*20      ,<aspect:gelum>*5         ,<aspect:praemunio>*10);
@@ -589,17 +589,17 @@ ___ _ _ _ _ _    _ ____ _  _ ___ ____ ____ ____ ____ ____ ___
 <entity:twilightforest:helmet_crab>             .setAspects(<aspect:bestia>*10        ,<aspect:praemunio>*10); 
 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "twilightforest:fire_beetle"}})
-                                                .setAspects(<aspect:bestia>*20        ,<aspect:ignis>*10        ,<aspect:exitium>*5); 
-<entity:twilightforest:fire_beetle>             .setAspects(<aspect:bestia>*20        ,<aspect:ignis>*10        ,<aspect:exitium>*5); 
+                                                .setAspects(<aspect:bestia>*20        ,<aspect:ignis>*10        ,Aspect.exitium*5); 
+<entity:twilightforest:fire_beetle>             .setAspects(<aspect:bestia>*20        ,<aspect:ignis>*10        ,Aspect.exitium*5); 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "twilightforest:mini_ghast"}})
-                                                .setAspects(<aspect:spiritus>*25      ,<aspect:fluctus>*10      ,<aspect:sanguis>*5); 
-<entity:twilightforest:mini_ghast>              .setAspects(<aspect:spiritus>*25      ,<aspect:fluctus>*10      ,<aspect:sanguis>*5);
+                                                .setAspects(<aspect:spiritus>*25      ,Aspect.fluctus*10      ,<aspect:sanguis>*5); 
+<entity:twilightforest:mini_ghast>              .setAspects(<aspect:spiritus>*25      ,Aspect.fluctus*10      ,<aspect:sanguis>*5);
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "twilightforest:tower_broodling"}})
                                                 .setAspects(<aspect:bestia>*10        ,<aspect:herba>*10        ,<aspect:victus>*5); 
 <entity:twilightforest:tower_broodling>         .setAspects(<aspect:bestia>*10        ,<aspect:herba>*10        ,<aspect:victus>*5); 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "twilightforest:tower_ghast"}})
-                                                .setAspects(<aspect:spiritus>*50      ,<aspect:fluctus>*20      ,<aspect:sanguis>*10); 
-<entity:twilightforest:tower_ghast>             .setAspects(<aspect:spiritus>*50      ,<aspect:fluctus>*20      ,<aspect:sanguis>*10);
+                                                .setAspects(<aspect:spiritus>*50      ,Aspect.fluctus*20      ,<aspect:sanguis>*10); 
+<entity:twilightforest:tower_ghast>             .setAspects(<aspect:spiritus>*50      ,Aspect.fluctus*20      ,<aspect:sanguis>*10);
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "twilightforest:tower_golem"}})
                                                 .setAspects(<aspect:metallum>*50      ,<aspect:victus>*20); 
 <entity:twilightforest:tower_golem>             .setAspects(<aspect:metallum>*50      ,<aspect:victus>*20); 
@@ -621,8 +621,8 @@ ___ _ _ _ _ _    _ ____ _  _ ___ ____ ____ ____ ____ ____ ___
                                                 .setAspects(<aspect:instrumentum>*25  ,<aspect:machina>*20      ,<aspect:fabrico>*20); 
 <entity:twilightforest:adherent>                .setAspects(<aspect:instrumentum>*25  ,<aspect:machina>*20      ,<aspect:fabrico>*20); 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "twilightforest:harbinger_cube"}})
-                                                .setAspects(<aspect:sensus>*25        ,<aspect:machina>*20      ,<aspect:visum>*20); 
-<entity:twilightforest:harbinger_cube>          .setAspects(<aspect:sensus>*25        ,<aspect:machina>*20      ,<aspect:visum>*20); 
+                                                .setAspects(<aspect:sensus>*25        ,<aspect:machina>*20      ,Aspect.visum*20); 
+<entity:twilightforest:harbinger_cube>          .setAspects(<aspect:sensus>*25        ,<aspect:machina>*20      ,Aspect.visum*20); 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "twilightforest:roving_cube"}})
                                                 .setAspects(<aspect:tenebrae>*25      ,<aspect:machina>*20      ,<aspect:motus>*20); 
 <entity:twilightforest:roving_cube>             .setAspects(<aspect:tenebrae>*25      ,<aspect:machina>*20      ,<aspect:motus>*20); 
@@ -638,8 +638,8 @@ ____ ____ ___ ____
                                                 .setAspects(<aspect:perditio>*20      ,<aspect:rattus>*50       ,<aspect:aversio>*30); 
 <entity:rats:feral_ratlantean>                  .setAspects(<aspect:perditio>*20      ,<aspect:rattus>*50       ,<aspect:aversio>*30); 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "rats:illager_piper"}})
-                                                .setAspects(<aspect:humanus>*20       ,<aspect:rattus>*10       ,<aspect:imperium>*10); 
-<entity:rats:illager_piper>                     .setAspects(<aspect:humanus>*20       ,<aspect:rattus>*10       ,<aspect:imperium>*10); 
+                                                .setAspects(<aspect:humanus>*20       ,<aspect:rattus>*10       ,Aspect.imperium*10); 
+<entity:rats:illager_piper>                     .setAspects(<aspect:humanus>*20       ,<aspect:rattus>*10       ,Aspect.imperium*10); 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "rats:pirat"}})
                                                 .setAspects(<aspect:bestia>*10        ,<aspect:rattus>*10       ,<aspect:aversio>*10); 
 <entity:rats:pirat>                             .setAspects(<aspect:bestia>*10        ,<aspect:rattus>*10       ,<aspect:aversio>*10); 
@@ -679,8 +679,8 @@ _  _ ____ _  _ _ _    _    ____
                                                 .setAspects(<aspect:mortuus>*10       ,<aspect:perditio>*10     ,<aspect:aversio>*20        ,<aspect:gelum>*10); 
 <entity:minecraft:stray>                        .setAspects(<aspect:mortuus>*10       ,<aspect:perditio>*10     ,<aspect:aversio>*20        ,<aspect:gelum>*10); 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "minecraft:creeper"}})
-                                                .setAspects(<aspect:exitium>*20       ,<aspect:ignis>*10        ,<aspect:alkimia>*5        ,<aspect:perditio>*10); 
-<entity:minecraft:creeper>                      .setAspects(<aspect:exitium>*20       ,<aspect:ignis>*10        ,<aspect:alkimia>*5        ,<aspect:perditio>*10); 
+                                                .setAspects(Aspect.exitium*20       ,<aspect:ignis>*10        ,<aspect:alkimia>*5        ,<aspect:perditio>*10); 
+<entity:minecraft:creeper>                      .setAspects(Aspect.exitium*20       ,<aspect:ignis>*10        ,<aspect:alkimia>*5        ,<aspect:perditio>*10); 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "minecraft:spider"}})
                                                 .setAspects(<aspect:bestia>*20        ,<aspect:vinculum>*10     ,<aspect:sensus>*10); 
 <entity:minecraft:spider>                       .setAspects(<aspect:bestia>*20        ,<aspect:vinculum>*10     ,<aspect:sensus>*10); 
@@ -713,17 +713,17 @@ _  _ ____ _  _ _ _    _    ____
                                                 .setAspects(<aspect:exanimis>*10      ,<aspect:mortuus>*10      ,<aspect:bestia>*20); 
 <entity:minecraft:zombie_pigman>                .setAspects(<aspect:exanimis>*10      ,<aspect:mortuus>*10      ,<aspect:bestia>*20); 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "minecraft:magma_cube"}})
-                                                .setAspects(<aspect:aqua>*10          ,<aspect:victus>*10       ,<aspect:infernum>*5); 
-<entity:minecraft:magma_cube>                   .setAspects(<aspect:aqua>*10          ,<aspect:victus>*10       ,<aspect:infernum>*5); 
+                                                .setAspects(<aspect:aqua>*10          ,<aspect:victus>*10       ,Aspect.infernum*5); 
+<entity:minecraft:magma_cube>                   .setAspects(<aspect:aqua>*10          ,<aspect:victus>*10       ,Aspect.infernum*5); 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "minecraft:wither_skeleton"}})
                                                 .setAspects(<aspect:mortuus>*10       ,<aspect:perditio>*20     ,<aspect:aversio>*20        ,<aspect:spiritus>*20); 
 <entity:minecraft:wither_skeleton>              .setAspects(<aspect:mortuus>*10       ,<aspect:perditio>*20     ,<aspect:aversio>*20        ,<aspect:spiritus>*20); 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "minecraft:blaze"}})
-                                                .setAspects(<aspect:ignis>*20         ,<aspect:infernum>*20); 
-<entity:minecraft:blaze>                        .setAspects(<aspect:ignis>*20         ,<aspect:infernum>*20); 
+                                                .setAspects(<aspect:ignis>*20         ,Aspect.infernum*20); 
+<entity:minecraft:blaze>                        .setAspects(<aspect:ignis>*20         ,Aspect.infernum*20); 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "minecraft:ghast"}})
-                                                .setAspects(<aspect:spiritus>*50      ,<aspect:volatus>*10      ,<aspect:fluctus>*20); 
-<entity:minecraft:ghast>                        .setAspects(<aspect:spiritus>*50      ,<aspect:volatus>*10      ,<aspect:fluctus>*20); 
+                                                .setAspects(<aspect:spiritus>*50      ,<aspect:volatus>*10      ,Aspect.fluctus*20); 
+<entity:minecraft:ghast>                        .setAspects(<aspect:spiritus>*50      ,<aspect:volatus>*10      ,Aspect.fluctus*20); 
 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "minecraft:enderman"}})
                                                 .setAspects(<aspect:alienis>*40       ,<aspect:tenebrae>*20); 
@@ -732,8 +732,8 @@ _  _ ____ _  _ _ _    _    ____
                                                 .setAspects(<aspect:alienis>*20       ,<aspect:vacuos>*10       ,<aspect:vinculum>*10); 
 <entity:minecraft:endermite>                    .setAspects(<aspect:alienis>*20       ,<aspect:vacuos>*10       ,<aspect:vinculum>*10); 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "minecraft:shulker"}})
-                                                .setAspects(<aspect:alienis>*40       ,<aspect:volatus>*20      ,<aspect:sonus>*10); 
-<entity:minecraft:shulker>                      .setAspects(<aspect:alienis>*40       ,<aspect:volatus>*10      ,<aspect:sonus>*10); 
+                                                .setAspects(<aspect:alienis>*40       ,<aspect:volatus>*20      ,Aspect.sonus*10); 
+<entity:minecraft:shulker>                      .setAspects(<aspect:alienis>*40       ,<aspect:volatus>*10      ,Aspect.sonus*10); 
 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "minecraft:cow"}})
                                                 .setAspects(<aspect:bestia>*10        ,<aspect:terra>*10        ,<aspect:praemunio>*5); 
@@ -745,11 +745,11 @@ _  _ ____ _  _ _ _    _    ____
                                                 .setAspects(<aspect:bestia>*10        ,<aspect:terra>*10        ,<aspect:victus>*5); 
 <entity:minecraft:pig>                          .setAspects(<aspect:bestia>*10        ,<aspect:terra>*10        ,<aspect:victus>*5); 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "minecraft:chicken"}})
-                                                .setAspects(<aspect:bestia>*10        ,<aspect:volatus>*10      ,<aspect:ventus>*5); 
-<entity:minecraft:chicken>                      .setAspects(<aspect:bestia>*10        ,<aspect:volatus>*10      ,<aspect:ventus>*5); 
+                                                .setAspects(<aspect:bestia>*10        ,<aspect:volatus>*10      ,Aspect.ventus*5); 
+<entity:minecraft:chicken>                      .setAspects(<aspect:bestia>*10        ,<aspect:volatus>*10      ,Aspect.ventus*5); 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "minecraft:rabbit"}})
-                                                .setAspects(<aspect:bestia>*10        ,<aspect:terra>*10        ,<aspect:visum>*5); 
-<entity:minecraft:rabbit>                       .setAspects(<aspect:bestia>*10        ,<aspect:terra>*10        ,<aspect:visum>*5); 
+                                                .setAspects(<aspect:bestia>*10        ,<aspect:terra>*10        ,Aspect.visum*5); 
+<entity:minecraft:rabbit>                       .setAspects(<aspect:bestia>*10        ,<aspect:terra>*10        ,Aspect.visum*5); 
 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "minecraft:wolf"}})
                                                 .setAspects(<aspect:bestia>*20        ,<aspect:terra>*10        ,<aspect:aversio>*5); 
@@ -758,8 +758,8 @@ _  _ ____ _  _ _ _    _    ____
                                                 .setAspects(<aspect:bestia>*20        ,<aspect:terra>*10        ,<aspect:desiderium>*5); 
 <entity:minecraft:ocelot>                       .setAspects(<aspect:bestia>*20        ,<aspect:terra>*10        ,<aspect:desiderium>*5); 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "minecraft:parrot"}})
-                                                .setAspects(<aspect:bestia>*20        ,<aspect:volatus>*10      ,<aspect:sonus>*5); 
-<entity:minecraft:parrot>                       .setAspects(<aspect:bestia>*20        ,<aspect:volatus>*10      ,<aspect:sonus>*5); 
+                                                .setAspects(<aspect:bestia>*20        ,<aspect:volatus>*10      ,Aspect.sonus*5); 
+<entity:minecraft:parrot>                       .setAspects(<aspect:bestia>*20        ,<aspect:volatus>*10      ,Aspect.sonus*5); 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "minecraft:horse"}})
                                                 .setAspects(<aspect:bestia>*40        ,<aspect:terra>*10        ,<aspect:motus>*5); 
 <entity:minecraft:horse>                        .setAspects(<aspect:bestia>*40        ,<aspect:terra>*10        ,<aspect:motus>*5); 
@@ -767,8 +767,8 @@ _  _ ____ _  _ _ _    _    ____
                                                 .setAspects(<aspect:bestia>*30        ,<aspect:terra>*10        ,<aspect:vinculum>*5); 
 <entity:minecraft:donkey>                       .setAspects(<aspect:bestia>*30        ,<aspect:terra>*10        ,<aspect:vinculum>*5); 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "minecraft:mule"}})
-                                                .setAspects(<aspect:bestia>*30        ,<aspect:terra>*10        ,<aspect:imperium>*5); 
-<entity:minecraft:mule>                         .setAspects(<aspect:bestia>*30        ,<aspect:terra>*10        ,<aspect:imperium>*5); 
+                                                .setAspects(<aspect:bestia>*30        ,<aspect:terra>*10        ,Aspect.imperium*5); 
+<entity:minecraft:mule>                         .setAspects(<aspect:bestia>*30        ,<aspect:terra>*10        ,Aspect.imperium*5); 
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "minecraft:llama"}})
                                                 .setAspects(<aspect:bestia>*30        ,<aspect:terra>*10        ,<aspect:permutatio>*5); 
 <entity:minecraft:llama>                        .setAspects(<aspect:bestia>*30        ,<aspect:terra>*10        ,<aspect:permutatio>*5); 
@@ -839,7 +839,7 @@ val bossesEggs = [
 <minecraft:spawn_egg>.withTag({EntityTag: {id: "twilightforest:minoshroom"}}),
  ] as IItemStack[];
 for egg in bossesEggs{
-  egg.setAspects(<aspect:caeles>*314);
+  egg.setAspects(Aspect.caeles*314);
 }
 
 val susEggs = [

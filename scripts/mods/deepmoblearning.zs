@@ -146,7 +146,7 @@ mods.thaumcraft.Infusion.registerRecipe(
   'INFUSION', // Research
   <deepmoblearning:data_model_dragon>.withTag({ tier: 1 }), // Output
   10, // Instability
-  [<aspect:draco> * 100, <aspect:caeles> * 100, <aspect:victus> * 100],
+  [<aspect:draco> * 100, Aspect.caeles * 100, <aspect:victus> * 100],
   <deepmoblearning:data_model_dragon>, // Central Item
   Grid(['pretty',
     'E ▬ E',
@@ -163,7 +163,7 @@ mods.thaumcraft.Infusion.registerRecipe(
   'INFUSION', // Research
   <deepmoblearning:data_model_wither>.withTag({ tier: 1 }), // Output
   10, // Instability
-  [<aspect:alienis> * 100, <aspect:caeles> * 100, <aspect:victus> * 100],
+  [<aspect:alienis> * 100, Aspect.caeles * 100, <aspect:victus> * 100],
   <deepmoblearning:data_model_wither>, // Central Item
   Grid(['pretty',
     'E ▬ E',
