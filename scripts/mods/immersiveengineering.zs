@@ -233,6 +233,12 @@ mods.immersiveengineering.Crusher.addRecipe(<thermalfoundation:material:893> * 3
 mods.immersiveengineering.Crusher.addRecipe(<thermalfoundation:material:894> * 3, <ore:oreClathrateGlowstone>, 6000, <thermalfoundation:material:771>, 0.30);
 mods.immersiveengineering.Crusher.addRecipe(<thermalfoundation:material:895> * 3, <ore:oreClathrateEnder>, 6000);
 
+// Compressed recipes
+mods.immersiveengineering.Crusher.addRecipe(<minecraft:gravel> * 9, <ore:compressedStone1x>, 5000);
+mods.immersiveengineering.Crusher.addRecipe(<minecraft:gravel> * 9, <ore:compressed1xCobblestone>, 5000);
+mods.immersiveengineering.Crusher.addRecipe(<minecraft:sand> * 9, <ore:compressed1xGravel>, 5000);
+mods.immersiveengineering.Crusher.addRecipe(<exnihilocreatio:block_dust> * 9, <ore:compressed1xSand>, 5000);
+
 // Unbreakable Graphite Electrodes
 val electrodeTag = { Unbreakable: 1, display: { Lore: ['Reinforced with Titanium Iridium Alloy'], Name: 'Unbreakable Graphite Electrode' } } as crafttweaker.data.IData;
 val electrodeItem = <immersiveengineering:graphite_electrode>.withTag(electrodeTag);
