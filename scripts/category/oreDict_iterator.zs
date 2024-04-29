@@ -106,6 +106,19 @@ for ore_entry in oreDict {
     mods.immersiveengineering.MetalPress.addRecipe(ore_entry.firstItem, oreDict['plate' ~ ore_name], <immersiveengineering:mold:6>, 16000, 9);
     continue;
   }
+
+  // Dirty ore additional IC2 compat
+  ore_name = getOreName(name, 'dustDirty');
+  if (!isNull(ore_name)) {
+    if (ore_name == 'Aluminum') continue;
+
+    val dust = oreDict.get('dust' ~ ore_name);
+    if (isNull(dust) || dust.empty) continue;
+
+    mods.ic2.OreWasher.addRecipe([dust.firstItem], ore_entry);
+
+    continue;
+  }
 }
 
 // for ore_name, outputs in {
