@@ -78,7 +78,7 @@ for ore_entry in oreDict {
   }
 
   // Crushed Ore Smeltery compat
-  ore_name = getOreName(name, 'crushed');
+  ore_name = getOreName(name, 'crushedPurified');
   if (!isNull(ore_name)) {
     if (ore_name == 'Aluminum') continue;
     val exception = ore_liquid_exceptions[ore_name];
@@ -86,6 +86,11 @@ for ore_entry in oreDict {
     if (isNull(liquid)) continue;
 
     mods.tconstruct.Melting.addRecipe(liquid * 144, ore_entry);
+
+    val unpurified = oreDict.get('crushed' ~ ore_name);
+    if (isNull(unpurified) || unpurified.empty) continue;
+    
+    mods.tconstruct.Melting.addRecipe(liquid * 144, unpurified);
     continue;
   }
 
