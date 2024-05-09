@@ -25,6 +25,7 @@ zenClass MobBuild {
   var entity  as IEntityDefinition;
   var volume  as string[][];
   var map     as IItemStack[string];
+  var entityHeight as float;
   var spawnFnc as function(IWorld,IBlockPos)void;
 
   // Computed fields
@@ -107,7 +108,7 @@ zenClass MobBuild {
       });
 
       val r = rotate(face, offset.x, offset.z);
-      val truePos = Position3f.create(r[0] + pos.x, offset.y + pos.y - 1.5f, r[1] + pos.z);
+      val truePos = Position3f.create(r[0] + pos.x, offset.y + pos.y - entityHeight / 2, r[1] + pos.z);
       utils.executeCommandSilent(server, '/summon ' ~ entity.id ~ ' ' ~ truePos.x ~ ' ' ~ truePos.y ~ ' ' ~ truePos.z ~ ' {Rotation:[' ~ (face * 90 - 180) ~ 'f,0f]}');
 
       spawnFnc(world, pos);
@@ -137,12 +138,13 @@ zenClass MobBuild {
 
 static builds as MobBuild[IEntityDefinition] = {} as MobBuild[IEntityDefinition];
 
-function add(entity as IEntityDefinition, volume as string[][], map as IItemStack[string], spawnFnc as function(IWorld,IBlockPos)void = null) as void {
+function add(entity as IEntityDefinition, volume as string[][], map as IItemStack[string], entityHeight as float = 1.0f, spawnFnc as function(IWorld,IBlockPos)void = null) as void {
   val m =  MobBuild();
   m.entity = entity;
   m.volume = volume;
   m.map = map;
   m.spawnFnc = spawnFnc;
+  m.entityHeight = entityHeight;
   builds[entity] = m;
 
   if (utils.DEBUG) {
@@ -165,7 +167,7 @@ function add(entity as IEntityDefinition, volume as string[][], map as IItemStac
     s ~= '\n  ]\n]';
 
     val fileName = entity.id.replaceAll(':', '_');
-    utils.log('Added Build Mob recipe for file config/compactmachines3/recipes/' ~ fileName ~ '.json'
+    utils.log('Add Build Mob recipe for file config/compactmachines3/recipes/' ~ fileName ~ '.json'
     ~ '\n{'
     ~ '\n  "name": "compactmachines3:' ~ fileName ~ '",'
     ~ '\n'
