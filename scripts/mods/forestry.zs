@@ -20,6 +20,9 @@ recipes.removeByRecipeName('forestry:greenhouse_plain');
 recipes.removeByRecipeName('forestry:greenhouse_window_roof');
 recipes.removeByRecipeName('forestry:greenhouse_window');
 
+// Fix grapes have two different outputs - Fruit Juice and Grape Juice
+mods.forestry.Squeezer.removeRecipe(<liquid:juice>, [<rustic:grapes>]);
+
 // Fixing fruit juice amount from tomatos
 for tomato in <ore:cropTomato>.items {
   mods.forestry.Squeezer.removeRecipe(<liquid:juice>, [tomato]);
