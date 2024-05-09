@@ -373,7 +373,12 @@ Some screenshots of new worldgen:
 
 - **I updated the modpack version, and now it's reporting about mod duplicates.** <img alt="Forge Mod Loader mod duplicates screen" src="https://i.imgur.com/Sc18dli.png" align=right width=200>
 
-  The best way to update the modpack is to create a new instance and move your world/configs into the new one. You may also want to move the following files: `options.txt` for hotkeys and Minecraft configs, `hei_bookmarks.ini` for item bookmarks, `config\xaero*` for Xaero maps configs, and `saves/` folders for worlds.
+  The best way to update the modpack is to **create a new instance** and move your world/configs into the new one. You may also want to move the following files:
+  - `options.txt` for hotkeys and Minecraft configs.
+  - `hei_bookmarks.ini` for item bookmarks.
+  - `XaeroWaypoints/` and `XaeroWorldMap/` for map and waypoints.
+  - `config/xaero*` for Xaero maps configs.
+  - `saves/` folders for worlds.
 
 - **It's still reporting about duplicates.**
 
