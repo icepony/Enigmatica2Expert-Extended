@@ -24,6 +24,7 @@ structures/inactive
 !.github/
 !.imgbotconfig
 !CHANGELOG-latest.md
+!asm/
 
 # Developing-only configs
 !.eslint.config.js
