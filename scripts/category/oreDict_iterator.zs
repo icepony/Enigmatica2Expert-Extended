@@ -112,10 +112,10 @@ for ore_entry in oreDict {
   if (!isNull(ore_name)) {
     if (ore_name == 'Aluminum') continue;
 
-    val dust = oreDict.get('dust' ~ ore_name);
-    if (isNull(dust) || dust.empty) continue;
+    val output = oreDict.get('crushedPurified' ~ ore_name);
+    if (isNull(output) || output.empty) continue;
 
-    mods.ic2.OreWasher.addRecipe([dust.firstItem], ore_entry);
+    mods.ic2.OreWasher.addRecipe([output.firstItem], ore_entry);
 
     continue;
   }
