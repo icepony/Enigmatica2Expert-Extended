@@ -32,10 +32,11 @@ mods.botania.Orechid.removeOre('oreEmerald');
 mods.botania.Orechid.removeOre('orePlatinum');
 mods.botania.Orechid.removeOre('oreMithril');
 mods.botania.Orechid.removeOre('oreSapphire');
+mods.botania.Orechid.removeOre('oreRedstone');
 
 // Buff Apatite
 mods.botania.Orechid.removeOre('oreApatite');
-mods.botania.Orechid.addOre('oreApatite', 15000);
+mods.botania.Orechid.addOre('oreApatite', 7000);
 
 // Add Orechid Ingem ores
 mods.botania.OrechidIgnem.addOre('oreNetherChargedCertusQuartz', 800);
