@@ -1,0 +1,27 @@
+{
+	title: "{q.animals.hirschgeist.name}",
+	x: 5.1d,
+	y: -4.5d,
+	text: [
+		"{q.animals.hirschgeist.desc}"
+	],
+	dependencies: [
+		"dcb947b4"
+	],
+	tasks: [{
+		uid: "8a4276e6",
+		type: "checkmark",
+		icon: {
+			id: "draconicevolution:mob_soul",
+			tag: {
+				EntityName: "betteranimalsplus:hirschgeist"
+			}
+		},
+		disable_toast: true
+	}],
+	rewards: [{
+		uid: "7d860d22",
+		type: "xp_levels",
+		xp_levels: 2
+	}]
+}
