@@ -887,7 +887,7 @@ remakeBlock   ('mysticalagriculture:ingottin'             , <blockstate:thermalf
 remakeBlock   ('mysticalagriculture:ingotsilver'          , <blockstate:thermalfoundation:ore:type=silver>       , [<mysticalagriculture:silver_essence>]);
 remakeBlock   ('mysticalagriculture:ingotaluminum'        , <blockstate:thermalfoundation:ore:type=aluminum>     , [<mysticalagriculture:aluminum_essence>]);
 remakeBlock   ('mysticalagriculture:ingotnickel'          , <blockstate:thermalfoundation:ore:type=nickel>       , [<mysticalagriculture:nickel_essence>]);
-remakeBlock   ('mysticalagriculture:ingotplatinum'        , <blockstate:thermalfoundation:ore:type=platinum>     , [<mysticalagriculture:platinum_essence>], 'base_essence');
+remakeManapool('mysticalagriculture:ingotplatinum'        , <thermalfoundation:material:198>, [<mysticalagriculture:platinum_essence>]);
 remakeBlock   ('mysticalagriculture:ingotiridium'         , <blockstate:thermalfoundation:ore:type=iridium>      , [<mysticalagriculture:iridium_essence>]);
 remakeBlock   ('mysticalagriculture:ingoturanium'         , <blockstate:immersiveengineering:ore:type=uranium>   , [<mysticalagriculture:uranium_essence>]);
 remakeBlock   (null      															    , <blockstate:nuclearcraft:ore:type=boron>             , [<mysticalagriculture:boron_essence>]);
@@ -951,9 +951,9 @@ remakeCrucible('mysticalagriculture:ghast_tear'         , <minecraft:ghast_tear>
 // remakeSimple("mysticalagriculture:gravel"               , <minecraft:gravel> * 16                   , [<mysticalagriculture:dirt_essence> * 2, <mysticalagriculture:stone_essence> * 2     ]);
 // remakeSimple("mysticalagriculture:gunpowder"            , <minecraft:gunpowder> * 6                 , [<mysticalagriculture:creeper_essence> * 3                                           ]);
 remakeManapool('mysticalagriculture:ingotelectrumflux'    , <redstonearsenal:material:64>        , [<mysticalagriculture:fluxed_electrum_essence>]);
-remakeBlock('mysticalagriculture:ingotfiery'           , <blockstate:twilightforest:block_storage:variant=fiery>, [<mysticalagriculture:fiery_ingot_essence>], 'base_essence');
+remakeManapool('mysticalagriculture:ingotfiery'           , <twilightforest:fiery_ingot>, [<mysticalagriculture:fiery_ingot_essence>]);
 remakeBlock('mysticalagriculture:ingotlead'            , <blockstate:thermalfoundation:ore:type=lead>, [<mysticalagriculture:lead_essence>]);
-remakeBlock('mysticalagriculture:ingotsteeleaf'        , <blockstate:twilightforest:block_storage:variant=steelleaf>, [<mysticalagriculture:steeleaf_essence>], 'base_essence');
+remakeManapool('mysticalagriculture:ingotsteeleaf'        , <twilightforest:steeleaf_ingot>, [<mysticalagriculture:steeleaf_essence>]);
 remakeManapool('mysticalagriculture:ingotvoid'            , <thaumcraft:nugget:7>                  , [<mysticalagriculture:void_metal_essence>]);
 // remakeSimple("mysticalagriculture:leather"              , <minecraft:leather> * 8                   , [<mysticalagriculture:cow_essence> * 4                                               ]);
 // remakeSimple("mysticalagriculture:limestone2"           , <chisel:limestone2:7> * 24                , [<mysticalagriculture:limestone_essence> * 8                                         ]);
