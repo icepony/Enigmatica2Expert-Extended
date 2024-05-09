@@ -1,0 +1,27 @@
+@@ -23,6 +23,7 @@
+  *  net.minecraftforge.event.entity.living.LivingDeathEvent
+  *  net.minecraftforge.event.entity.player.AdvancementEvent
+  *  net.minecraftforge.fml.common.Mod$EventBusSubscriber
++ *  net.minecraftforge.fml.common.eventhandler.EventPriority
+  *  net.minecraftforge.fml.common.eventhandler.SubscribeEvent
+  *  net.minecraftforge.fml.common.gameevent.PlayerEvent$PlayerLoggedInEvent
+  *  net.minecraftforge.fml.common.gameevent.PlayerEvent$PlayerLoggedOutEvent
+@@ -52,14 +53,18 @@ import net.minecraftforge.event.ServerChatEvent;
+ import net.minecraftforge.event.entity.living.LivingDeathEvent;
+ import net.minecraftforge.event.entity.player.AdvancementEvent;
+ import net.minecraftforge.fml.common.Mod;
++import net.minecraftforge.fml.common.eventhandler.EventPriority;
+ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+ import net.minecraftforge.fml.common.gameevent.PlayerEvent;
+ import net.minecraftforge.fml.relauncher.Side;
+ 
+ @Mod.EventBusSubscriber(modid="mc2discord", value={Side.SERVER})
+ public class Events {
+-    @SubscribeEvent
++    @SubscribeEvent(priority=EventPriority.LOWEST)
+     public static void onMinecraftChatMessageEvent(ServerChatEvent event) {
++        if (event.isCanceled()) {
++            return;
++        }
+         MinecraftEvents.onMinecraftChatMessageEvent((String)event.getMessage(), (Player)new Player(event.getPlayer().func_146103_bH().getName(), event.getPlayer().func_145748_c_().func_150260_c(), (UUID)Optional.ofNullable(event.getPlayer().func_146103_bH().getId()).orElse(null)));
+     }
