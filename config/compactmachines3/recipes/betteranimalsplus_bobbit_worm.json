@@ -1,0 +1,19 @@
+{
+  "name": "compactmachines3:betteranimalsplus_bobbit_worm",
+
+  "target-item": "minecraft:spawn_egg",
+  "target-nbt": "{EntityTag:{id:\"betteranimalsplus:bobbit_worm\"}}",
+
+  "catalyst": "minecraft:spawn_egg",
+  "catalyst-nbt": "{EntityTag:{id:\"betteranimalsplus:bobbit_worm\"}}",
+
+  "input-types": {
+    "c": { "id": "minecraft:stone_slab", "meta": 1 },
+    "x": { "id": "contenttweaker:conglomerate_of_life", "ignore-meta": true }
+  },
+  "shape": [
+    [
+      ["x", "c", "c"]
+    ]
+  ]
+}
