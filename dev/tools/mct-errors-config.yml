@@ -153,6 +153,9 @@ ignore:
   - 'ERROR. \[jei|HadEnoughItems\]: Failed to register mod plugin'
   - 'ERROR. \[jei|HadEnoughItems\]: Recipe has no output. Extra Utilities 2 extrautils2:shortcut_hopper'
 
+  # Player error, not modpack one
+  - Failed to load bookmarked ItemStack from json string, the item no longer exists
+
   # Happens when IC2 machine recipes changed
   - 'WARN. \[ic2\.Recipe\]: Late recipe loading failed\.'
 
@@ -258,6 +261,9 @@ ignore:
   - '\[main/WARN\] \[Bansoukou\]: .+ was found in the mods folder. Copying to modify the copied cache.'
   - '\[main/WARN\] \[Bansoukou\]: Patching .+'
   - '\[main/WARN\] \[Bansoukou\]: Removing .+'
+
+  # In E2EE mc2discord is server-sided only mod and missed on client
+  - FileNotFoundException. mc2discord-.+.jar does not exist in mods folder
 
   - 'ERROR. \[(jei|HadEnoughItems)\]: Failed to register mod categories: class lykrast.jetif.JETIFPlugin'
   - WARN. .jetif.. Couldn't load config field for Flux Networks, report this issue on JETIF's GitHub
@@ -431,7 +437,7 @@ ignore:
 
   # Other warnings and errors
   - WARN. .(LaunchWrapper|Foundation).. .(Bouncepad|Foundation). Uppatched ASM\d+ to ASM9 on class. .+, please port the mod to Cleanroom!
-  - can't handle Java 21 class, please update the mod!
+  - can't handle Java 2\d+ class, please \w+ the mod
   - WARN. .FML.. A mod is using javax classes. .+, please find it out using recaf or similar and report to its mod author.
   - ERROR. .FML.. UUID .+ is being processed with the approach from Java 8 for compatibility's sake. This UUID is malformed!
   - ERROR. .Aqua Acrobatics.. Please consider installing MixinBooter to ensure compatibility with more mods

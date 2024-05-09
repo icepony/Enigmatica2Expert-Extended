@@ -27,8 +27,8 @@
     "dev:tellme": "esno config/tellme/!rename_update.js",
     "dev:tips": "esno dev/automation/tips.js",
     "dev:xml": "esno dev/automation/XML.js",
-    "java-8-to-21": "powershell -Command \"dev/automation/jar_disable.ps1 !configanytime-* !mixinbooter-* OptiFine_1.12.2_HD_U_G5.jar; dev/automation/jar_disable.ps1 revert vintagium-* *Fugue-*; del config/sledgehammer.conf\"",
-    "java-21-to-8": "powershell -Command \"dev/automation/jar_disable.ps1 revert !configanytime-* !mixinbooter-* OptiFine_1.12.2_HD_U_G5.jar; dev/automation/jar_disable.ps1 vintagium-* *Fugue-*\"",
+    "java-8-to-21": "powershell -Command \"dev/automation/jar_disable.ps1 !configanytime-* !mixinbooter-* OptiFine_1.12.2_HD_U_G5.jar; dev/automation/jar_disable.ps1 revert scalar-* vintagium-* *Fugue-*; del config/sledgehammer.conf\"",
+    "java-21-to-8": "powershell -Command \"dev/automation/jar_disable.ps1 revert !configanytime-* !mixinbooter-* OptiFine_1.12.2_HD_U_G5.jar; dev/automation/jar_disable.ps1 scalar-* vintagium-* *Fugue-*\"",
     "mc-tools:reducer": "esno mc-tools/packages/reducer/src/cli.ts levels dev/tools/reduce_mods.json"
   },
   "dependencies": {

@@ -2,14 +2,10 @@
 
 🚧✅❌⚠️ List of priorities:
 
-- [ ] ✏️ Induction Smelter page for Draconium Ore has a ghost page (1/2, but page 2 is empty)
-- [ ] ✏️ Fix Pulverizer have recipes with removed items
-- [ ] ✏️ Make Botania Rods cheaper
-- [ ] ✏️ Potentia Inverter and Cold Light Projector cheaper
-- [ ] ✏️ Add Any Compressed Items => Crushed versions in Alchemy Table
-- [ ] 📖 High Oven fix description
-- [ ] ✏️ Black hole generator can work on cobble
-- [ ] ✏️ Make safe aspects for: `caeles|exitium|fluctus|imperium|infernum|sonus|ventus|visum`
+- [ ] ✏️ Make Blood magic Meteor mandatory for skyblock (Oxidised sand or moon turf)
+- [ ] 📖 Add HEI tip for Escritoire and serum
+- [ ] ✏️ Add new mechanic for /dev/null for leveling up its recharging speed
+- [ ] 🟢 Add **Cathedral**
 
 ---
 
@@ -23,6 +19,7 @@ Planned non-urgent changes, or just good ideas:
 - Vanilla Chests
 
 ### Quests and Docs expansion
+- [ ] 📖 Add Skyblock quest about Terraformer
 - [ ] 📖 Add Blast Furnace heat source
 - [ ] 📖 Write Neutron Shields localization
 - [ ] 📖 Add note about pregen spoiling Lootr chests https://github.com/LootrMinecraft/Lootr/issues/195
@@ -63,6 +60,7 @@ Planned non-urgent changes, or just good ideas:
 - [ ] ✏️ Fish rework: All automated fishing options way harder to make sense of manual fishing. All fish usages lower
 
 ### "Endgame" expansion
+- [ ] ✏️ Add QMD alt source of Oxidised Ferric Sand (to make alternative for Asteroid mining)
 - [ ] ✏️ Add "Machine Frame Singularity"
 - [ ] ✏️ Tweak Botania Extended Crafting Tables recipes to non-tech
 - [ ] ✏️ Integrate `Orbital Laser Drill` better. It can mine ores on planet orbits for skyblock.
@@ -108,6 +106,8 @@ Planned non-urgent changes, or just good ideas:
 
 ### Other
 
+- [ ] ✏️ Black hole generator can work on cobble
+- [ ] ⚒️ Add Trait trat replace ores with Stone when harvested
 - [ ] 🏡 Fix one of the Recurrent Complex houses have lava that fire up whole building
 - [ ] ✏️ Empty Rod cant be seen on table
 - [ ] ⚒️ Make TE cache drop itself with content on break

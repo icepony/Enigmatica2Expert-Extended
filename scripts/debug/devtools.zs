@@ -133,6 +133,10 @@ events.onPlayerLeftClickBlock(function (e as crafttweaker.event.PlayerLeftClickB
 
   e.player.sendMessage('§eLeft Clicked§r');
   // dumpLightSources(e.player);
+  // e.player.give(<thaumicaugmentation:morphic_tool>.withCapNBT({Parent:{
+  //   'functional':{id:"openblocks:dev_null",Count:1,Damage:0 as short,tag:{ench:[{}],enchantmentColor:4408131,Unbreakable:1 as byte,infinite:{id:"chisel:cobblestone",Count:1,Damage:1 as short},inventory:{size:1,Items:[{Slot:0 as byte,id:"chisel:cobblestone",Count:64,Damage:1 as short}]}}},
+  //   display:{id:"minecraft:golden_hoe",Count:1,Damage:0 as short}
+  // }}));
   // dumpOreBlocks();
   e.player.sendMessage('§8Done!§r');
 });
