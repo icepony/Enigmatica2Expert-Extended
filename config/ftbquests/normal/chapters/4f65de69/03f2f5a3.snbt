@@ -1,6 +1,6 @@
 {
 	x: 8.125d,
-	y: 6.1d,
+	y: 6.04d,
 	text: [
 		"{q.getting_started.loot_crate.desc}"
 	],
