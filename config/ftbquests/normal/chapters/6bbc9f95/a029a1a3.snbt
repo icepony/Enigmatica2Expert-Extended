@@ -24,6 +24,7 @@
 	{
 		uid: "30e41576",
 		type: "command",
+		auto: "disabled",
 		command: "/thaumcraft research @p UNLOCKELDRITCH"
 	}]
 }
