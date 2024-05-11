@@ -391,3 +391,41 @@ scripts.process.squeeze(
   <fluid:potion>.withTag({ Potion: 'cofhcore:poison4' }) * 150,
   'only: Squeezer IndustrialSqueezer'
 );
+
+// ######################################################################
+//
+// Dragon armor recycling
+//
+// ######################################################################
+// * Since its disabled in MIA configs
+
+// Iron
+mods.tconstruct.Melting.addRecipe(<fluid:iron> * (22 * 144), <iceandfire:dragonarmor_iron>);
+mods.tconstruct.Melting.addRecipe(<fluid:iron> * (22 * 144), <iceandfire:dragonarmor_iron:1>);
+mods.tconstruct.Melting.addRecipe(<fluid:iron> * (36 * 144), <iceandfire:dragonarmor_iron:2>);
+mods.tconstruct.Melting.addRecipe(<fluid:iron> * (13 * 144), <iceandfire:dragonarmor_iron:3>);
+// Gold
+mods.tconstruct.Melting.addRecipe(<fluid:gold> * (22 * 144), <iceandfire:dragonarmor_gold>);
+mods.tconstruct.Melting.addRecipe(<fluid:gold> * (22 * 144), <iceandfire:dragonarmor_gold:1>);
+mods.tconstruct.Melting.addRecipe(<fluid:gold> * (36 * 144), <iceandfire:dragonarmor_gold:2>);
+mods.tconstruct.Melting.addRecipe(<fluid:gold> * (13 * 144), <iceandfire:dragonarmor_gold:3>);
+// Diamond
+mods.thermalexpansion.Pulverizer.addRecipe(<minecraft:diamond> * 22, <iceandfire:dragonarmor_diamond>, 30000);
+mods.thermalexpansion.Pulverizer.addRecipe(<minecraft:diamond> * 22, <iceandfire:dragonarmor_diamond:1>, 30000);
+mods.thermalexpansion.Pulverizer.addRecipe(<minecraft:diamond> * 36, <iceandfire:dragonarmor_diamond:2>, 30000);
+mods.thermalexpansion.Pulverizer.addRecipe(<minecraft:diamond> * 13, <iceandfire:dragonarmor_diamond:3>, 30000);
+// Silver
+mods.tconstruct.Melting.addRecipe(<fluid:silver> * (22 * 144), <iceandfire:dragonarmor_silver>);
+mods.tconstruct.Melting.addRecipe(<fluid:silver> * (22 * 144), <iceandfire:dragonarmor_silver:1>);
+mods.tconstruct.Melting.addRecipe(<fluid:silver> * (36 * 144), <iceandfire:dragonarmor_silver:2>);
+mods.tconstruct.Melting.addRecipe(<fluid:silver> * (13 * 144), <iceandfire:dragonarmor_silver:3>);
+// Fire Dragonsteel
+mods.tconstruct.Melting.addRecipe(<fluid:dragonsteel_fire> * (22 * 144), <iceandfire:dragonarmor_dragonsteel_fire>);
+mods.tconstruct.Melting.addRecipe(<fluid:dragonsteel_fire> * (22 * 144), <iceandfire:dragonarmor_dragonsteel_fire:1>);
+mods.tconstruct.Melting.addRecipe(<fluid:dragonsteel_fire> * (36 * 144), <iceandfire:dragonarmor_dragonsteel_fire:2>);
+mods.tconstruct.Melting.addRecipe(<fluid:dragonsteel_fire> * (13 * 144), <iceandfire:dragonarmor_dragonsteel_fire:3>);
+// Ice Dragonsteel
+mods.tconstruct.Melting.addRecipe(<fluid:dragonsteel_ice> * (22 * 144), <iceandfire:dragonarmor_dragonsteel_ice>);
+mods.tconstruct.Melting.addRecipe(<fluid:dragonsteel_ice> * (22 * 144), <iceandfire:dragonarmor_dragonsteel_ice:1>);
+mods.tconstruct.Melting.addRecipe(<fluid:dragonsteel_ice> * (36 * 144), <iceandfire:dragonarmor_dragonsteel_ice:2>);
+mods.tconstruct.Melting.addRecipe(<fluid:dragonsteel_ice> * (13 * 144), <iceandfire:dragonarmor_dragonsteel_ice:3>);
