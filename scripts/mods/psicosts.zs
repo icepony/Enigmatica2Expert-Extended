@@ -13,6 +13,17 @@ craft.remake(<psicosts:flux_resonator>, ['pretty',
   'O': <enderio:item_basic_capacitor:2>, // Octadic Capacitor
 });
 
+// [Psionic Lensing Pedestal] from [Rune of Fire][+3]
+craft.remake(<psicosts:mana_resonator>, ['pretty',
+  '□ □ □',
+  '▲ F ▲',
+  'l l l'], {
+  '□': <ore:plateObsidian>, // ic2.plate.obsidian
+  '▲': <ore:dustPsi>,       // Psidust
+  'F': <ore:runeFireB>,     // Rune of Fire
+  'l': <ore:livingrock>,    // Livingrock
+});
+
 val ingrs = {
   'P': <psicosts:material_glassy>,  // Psi Glass
   '1': <psicosts:psi_cell:0>.marked('marked'), // PSI Cell
