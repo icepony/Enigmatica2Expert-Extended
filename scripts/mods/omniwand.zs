@@ -61,6 +61,7 @@ val predefined = <omniwand:wand>.withTag({
     storagedrawers3     : {id: "storagedrawers:shroud_key"                      , Count: 1, tag: { "omniwand:definedMod": "storagedrawers3"      }},
     teslacorelib        : {id: "teslacorelib:wrench"                            , Count: 1, tag: { "omniwand:definedMod": "teslacorelib"         }},
     thermalfoundation   : {id: "thermalfoundation:wrench"                       , Count: 1, tag: { "omniwand:definedMod": "thermalfoundation"    }},
+    thaumcraft          : {id: "thaumcraft:resonator"                           , Count: 1, tag: { "omniwand:definedMod": "thaumcraft"           }},
   },
   "omniwand:is_transforming": 1 as byte,
 });
