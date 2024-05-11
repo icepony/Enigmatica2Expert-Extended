@@ -9,6 +9,8 @@ import crafttweaker.item.IItemStack;
 
 // Removed items
 Purge(<iceandfire:silver_sword>);
+Purge(<iceandfire:armor_silver_metal_helmet>);
+Purge(<iceandfire:armor_silver_metal_chestplate>);
 Purge(<iceandfire:armor_silver_metal_leggings>);
 Purge(<iceandfire:armor_silver_metal_boots>);
 
