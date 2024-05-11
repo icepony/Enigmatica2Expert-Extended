@@ -119,7 +119,7 @@ key_jecalculation.key.gui_math:0
 key_key.advancements:38
 key_key.ae2fc.open_wireless_fluid_pattern_terminal.desc:0
 key_key.anchor:35
-key_key.aquaacrobatics.toggle_crawling:46
+key_key.aquaacrobatics.toggle_crawling:46:SHIFT
 key_key.attack:-100
 key_key.back:31
 key_key.carpet_backward:31
@@ -292,6 +292,7 @@ key_key.vaultopic.view:33:CONTROL
 key_key.xtones.scroll:42
 key_key.xu2.searchforitems:0
 key_keybind.baublesinventory:0
+key_keybind.hammercorerenderstack:77
 key_keys.servertabinfo.show:29
 key_keys.servertabinfo.show2:157
 key_keywizard.keybind.openKeyboardWizard:65:CONTROL
@@ -306,6 +307,7 @@ key_Move Vehicle Up:44
 key_neat.keybind.toggle:0
 key_nei.options.keys.gui.botania_corporea_request:0
 key_nimble.keybind.frontView:63:CONTROL
+key_of.key.zoom:-97
 key_Open Rocket GUI:46
 key_openblocks.keybind.vario_switch:0
 key_openblocks.keybind.vario_vol_down:0
@@ -372,7 +374,7 @@ key_schematica.key.pickBlock:71
 key_schematica.key.printerToggle:0
 key_schematica.key.renderToggle:0
 key_schematica.key.save:55
-key_Show Biome Borders:0
+key_Show Biome Borders:48:ALT
 key_Side Inventory Key:77
 key_smoothfont.key.guiOpen:199
 key_Toggle Jetpack:45
