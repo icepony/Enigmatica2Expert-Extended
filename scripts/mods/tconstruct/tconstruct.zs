@@ -231,6 +231,11 @@ mods.cyclicmagic.Melter.removeShapedRecipe('amber', 100);
 mods.cyclicmagic.Melter.removeShapedRecipe('amber', 1000);
 mods.cyclicmagic.Melter.removeShapedRecipe('crystal', 1000);
 
+// Melt blue slimes
+scripts.process.melt(<tconstruct:edible:1>, <fluid:blueslime> * 250);
+scripts.process.melt(<tconstruct:slime_congealed:1>, <fluid:blueslime> * (250 * 4));
+scripts.process.melt(<tconstruct:slime:1>, <fluid:blueslime> * (250 * 9));
+
 // Liquid blue slimy items
 scripts.process.squeeze([<tconstruct:slime_dirt:1>], <liquid:blueslime> * 2000, null, <biomesoplenty:mudball>);
 scripts.process.squeeze([<tconstruct:slime_leaves>], <liquid:blueslime> * 500, null, null);
