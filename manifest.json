@@ -320,7 +320,7 @@
     {"projectID":361276,"fileID":4756301,"___name":"Lootr (Forge & NeoForge)"                ,"downloadUrl":"https://edge.forgecdn.net/files/4756/301/lootr-1.12.2-0.6.2.jar","required":true},
     {"projectID":361427,"fileID":4040960,"___name":"Harder Branch Mining"                    ,"downloadUrl":"https://edge.forgecdn.net/files/4040/960/HarderBranchMining-1.12.2-2.0.0.16.jar","required":true},
     {"projectID":361579,"fileID":3245793,"___name":"spark"                                   ,"downloadUrl":"https://edge.forgecdn.net/files/3245/793/spark-forge1122.jar","required":true},
-    {"projectID":362056,"fileID":5204308,"___name":"QMD"                                     ,"downloadUrl":"https://edge.forgecdn.net/files/5204/308/QMD-1.3.1-1.12.2.jar","required":true},
+    {"projectID":362056,"fileID":5316848,"___name":"QMD"                                     ,"downloadUrl":"https://edge.forgecdn.net/files/5316/848/QMD-1.3.2-1.12.2.jar","required":true},
     {"projectID":363856,"fileID":2886150,"___name":"Super Sound Muffler: Revived"            ,"downloadUrl":"https://edge.forgecdn.net/files/2886/150/supersoundmuffler-revived_1.12.2_1.0.2.10.jar","required":true},
     {"projectID":365686,"fileID":3042436,"___name":"Plus Tweaks"                             ,"downloadUrl":"https://edge.forgecdn.net/files/3042/436/plustweaks-1.4.9.jar","required":true},
     {"projectID":366140,"fileID":2898681,"___name":"Dynamic View[Forge]"                     ,"downloadUrl":"https://edge.forgecdn.net/files/2898/681/dynviewdist-1.12-1.3.jar","required":true},
@@ -379,7 +379,7 @@
     {"projectID":570458,"fileID":5147702,"___name":"AE2 Unofficial Extended Life"            ,"downloadUrl":"https://edge.forgecdn.net/files/5147/702/ae2-uel-v0.56.4.jar","required":true},
     {"projectID":594562,"fileID":3735912,"___name":"Villager Market - NBT Fix"               ,"downloadUrl":"https://edge.forgecdn.net/files/3735/912/villager-market-nbt-fix-1.12.2-1.0.4.jar","required":true},
     {"projectID":616190,"fileID":4630499,"___name":"JEI Utilities"                           ,"downloadUrl":"https://edge.forgecdn.net/files/4630/499/JEI-Utilities-1.12.2-0.2.12.jar","required":true},
-    {"projectID":623955,"fileID":5278333,"___name":"AE2 Fluid Crafting Rework"               ,"downloadUrl":"https://edge.forgecdn.net/files/5278/333/Fluid%20Craft%20for%20AE2-2.5.11-r.jar","required":true},
+    {"projectID":623955,"fileID":5315135,"___name":"AE2 Fluid Crafting Rework"               ,"downloadUrl":"https://edge.forgecdn.net/files/5315/135/Fluid%20Craft%20for%20AE2-2.5.13-r.jar","required":true},
     {"projectID":624243,"fileID":5153413,"___name":"ModularUI"                               ,"downloadUrl":"https://edge.forgecdn.net/files/5153/413/modularui-2.4.3.jar","required":true},
     {"projectID":629017,"fileID":5272391,"___name":"Roughly Enough IDs"                      ,"downloadUrl":"https://edge.forgecdn.net/files/5272/391/RoughlyEnoughIDs-2.1.1.jar","required":true},
     {"projectID":632327,"fileID":5162169,"___name":"Inventory Bogo Sorter"                   ,"downloadUrl":"https://edge.forgecdn.net/files/5162/169/bogosorter-1.4.8.jar","required":true},
@@ -409,13 +409,14 @@
     {"projectID":871198,"fileID":5222248,"___name":"VintageFix"                              ,"downloadUrl":"https://edge.forgecdn.net/files/5222/248/vintagefix-0.4.2.jar","required":true},
     {"projectID":873867,"fileID":4883852,"___name":"Red Core"                                ,"downloadUrl":"https://edge.forgecdn.net/files/4883/852/!Red-Core-MC-1.7-1.12-0.5.1.jar","required":true},
     {"projectID":876339,"fileID":4815198,"___name":"Enhanced P2P"                            ,"downloadUrl":"https://edge.forgecdn.net/files/4815/198/betterp2p-1.12.2-1.2.3-extended_life.jar","required":true},
-    {"projectID":884359,"fileID":4955559,"___name":"Neeve's AE2: Extended Life Additions"    ,"downloadUrl":"https://edge.forgecdn.net/files/4955/559/nae2-1.6.1.jar","required":true},
+    {"projectID":884359,"fileID":5317480,"___name":"Neeve's AE2: Extended Life Additions"    ,"downloadUrl":"https://edge.forgecdn.net/files/5317/480/nae2-1.6.2.jar","required":true},
     {"projectID":895539,"fileID":5121879,"___name":"VisualOres"                              ,"downloadUrl":"https://edge.forgecdn.net/files/5121/879/visualores-0.2.5.jar","required":true},
     {"projectID":896591,"fileID":5187152,"___name":"SerializationIsBad"                      ,"downloadUrl":"https://edge.forgecdn.net/files/5187/152/serializationisbad-1.5.2.jar","required":true},
     {"projectID":910715,"fileID":5218222,"___name":"Alfheim Lighting Engine"                 ,"downloadUrl":"https://edge.forgecdn.net/files/5218/222/Alfheim-1.3.jar","required":true},
     {"projectID":923677,"fileID":4805869,"___name":"Omniwand"                                ,"downloadUrl":"https://edge.forgecdn.net/files/4805/869/omniwand-1.12.2-1.0.1.jar","required":true},
     {"projectID":934603,"fileID":4849268,"___name":"Finite Gas"                              ,"downloadUrl":"https://edge.forgecdn.net/files/4849/268/Finite%20Gas-1.0.jar","required":true},
     {"projectID":940521,"fileID":5164308,"___name":"Just Enough Magiculture"                 ,"downloadUrl":"https://edge.forgecdn.net/files/5164/308/justenoughmagiculture-1.12.2-1.1.3.jar","required":true},
-    {"projectID":960604,"fileID":5053524,"___name":"Advanced Alchemical Furnace"             ,"downloadUrl":"https://edge.forgecdn.net/files/5053/524/AdvancedAlchemyFurnace-0.2.2.jar","required":true}
+    {"projectID":960604,"fileID":5053524,"___name":"Advanced Alchemical Furnace"             ,"downloadUrl":"https://edge.forgecdn.net/files/5053/524/AdvancedAlchemyFurnace-0.2.2.jar","required":true},
+    {"projectID":1005815,"fileID":5329096,"___name":"Fugue"                                   ,"downloadUrl":"https://edge.forgecdn.net/files/5329/96/%2bFugue-1.12.2-0.14.7.jar","required":true}
   ]
 }
