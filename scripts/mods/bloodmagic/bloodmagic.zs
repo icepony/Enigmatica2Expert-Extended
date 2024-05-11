@@ -286,3 +286,39 @@ craft.shapeless(<bloodmagic:decorative_brick:3> * 4, '****', {
 
 // [Sigil of the whirlwind]
 mods.bloodmagic.AlchemyArray.addRecipe(<bloodmagic:sigil_whirlwind>, <minecraft:shield>, <bloodmagic:slate>);
+
+// ///////////////////////////////////////////////////////////////////
+// Add cutting of any compressed block
+// ///////////////////////////////////////////////////////////////////
+
+val compressions = [
+  [
+    [<minecraft:stone>, <additionalcompression:stone_compressed>, <additionalcompression:stone_compressed:1>, <additionalcompression:stone_compressed:2>, <additionalcompression:stone_compressed:3>, <additionalcompression:stone_compressed:4>, <additionalcompression:stone_compressed:5>, <additionalcompression:stone_compressed:6>, <additionalcompression:stone_compressed:7>, <additionalcompression:stone_compressed:8>, <additionalcompression:stone_compressed:9>],
+    [<minecraft:cobblestone>, <extrautils2:compressedcobblestone>, <extrautils2:compressedcobblestone:1>, <extrautils2:compressedcobblestone:2>, <extrautils2:compressedcobblestone:3>, <extrautils2:compressedcobblestone:4>, <extrautils2:compressedcobblestone:5>, <extrautils2:compressedcobblestone:6>, <extrautils2:compressedcobblestone:7>, <additionalcompression:cobblestone_compressed:8>, <additionalcompression:cobblestone_compressed:9>],
+    [<minecraft:gravel>, <extrautils2:compressedgravel>, <extrautils2:compressedgravel:1>, <additionalcompression:gravel_compressed:2>, <additionalcompression:gravel_compressed:3>, <additionalcompression:gravel_compressed:4>, <additionalcompression:gravel_compressed:5>, <additionalcompression:gravel_compressed:6>, <additionalcompression:gravel_compressed:7>, <additionalcompression:gravel_compressed:8>, <additionalcompression:gravel_compressed:9>],
+    [<minecraft:sand>, <extrautils2:compressedsand>, <extrautils2:compressedsand:1>, <additionalcompression:blocksand_compressed:2>, <additionalcompression:blocksand_compressed:3>, <additionalcompression:blocksand_compressed:4>, <additionalcompression:blocksand_compressed:5>, <additionalcompression:blocksand_compressed:6>, <additionalcompression:blocksand_compressed:7>, <additionalcompression:blocksand_compressed:8>, <additionalcompression:blocksand_compressed:9>],
+    [<exnihilocreatio:block_dust>, <excompressum:compressed_block>, <additionalcompression:dust_compressed:1>, <additionalcompression:dust_compressed:2>, <additionalcompression:dust_compressed:3>, <additionalcompression:dust_compressed:4>, <additionalcompression:dust_compressed:5>, <additionalcompression:dust_compressed:6>, <additionalcompression:dust_compressed:7>, <additionalcompression:dust_compressed:8>, <additionalcompression:dust_compressed:9>],
+  ],
+  [
+    [<minecraft:netherrack>, <extrautils2:compressednetherrack>, <extrautils2:compressednetherrack:1>, <extrautils2:compressednetherrack:2>, <extrautils2:compressednetherrack:3>, <extrautils2:compressednetherrack:4>, <extrautils2:compressednetherrack:5>, <additionalcompression:netherrack_compressed:6>, <additionalcompression:netherrack_compressed:7>, <additionalcompression:netherrack_compressed:8>, <additionalcompression:netherrack_compressed:9>],
+    [<exnihilocreatio:block_netherrack_crushed>, <excompressum:compressed_block:6>, <additionalcompression:gravelnether_compressed:1>, <additionalcompression:gravelnether_compressed:2>, <additionalcompression:gravelnether_compressed:3>, <additionalcompression:gravelnether_compressed:4>, <additionalcompression:gravelnether_compressed:5>, <additionalcompression:gravelnether_compressed:6>, <additionalcompression:gravelnether_compressed:7>, <additionalcompression:gravelnether_compressed:8>, <additionalcompression:gravelnether_compressed:9>],
+  ],
+  [
+    [<minecraft:end_stone>, <excompressum:compressed_block:10>, <additionalcompression:endstone_compressed:1>, <additionalcompression:endstone_compressed:2>, <additionalcompression:endstone_compressed:3>, <additionalcompression:endstone_compressed:4>, <additionalcompression:endstone_compressed:5>, <additionalcompression:endstone_compressed:6>, <additionalcompression:endstone_compressed:7>, <additionalcompression:endstone_compressed:8>, <additionalcompression:endstone_compressed:9>],
+    [<exnihilocreatio:block_endstone_crushed>, <excompressum:compressed_block:7>, <additionalcompression:gravelend_compressed:1>, <additionalcompression:gravelend_compressed:2>, <additionalcompression:gravelend_compressed:3>, <additionalcompression:gravelend_compressed:4>, <additionalcompression:gravelend_compressed:5>, <additionalcompression:gravelend_compressed:6>, <additionalcompression:gravelend_compressed:7>, <additionalcompression:gravelend_compressed:8>, <additionalcompression:gravelend_compressed:9>],
+  ]
+] as IItemStack[][][];
+
+for group in compressions {
+  var longest = 0;
+  for type in group {
+    longest = max(longest, type.length);
+  }
+
+  for i in 1 .. group.length {
+    for j in 0 .. longest {
+      if (group[i - 1].length < j || group[i].length < j || isNull(group[i - 1][j]) || isNull(group[i][j])) continue;
+      mods.bloodmagic.AlchemyTable.addRecipe(group[i][j], [group[i - 1][j], <bloodmagic:cutting_fluid>], i * 1000, j * 20 + 20, min(4, j / 4));
+    }
+  }
+}
