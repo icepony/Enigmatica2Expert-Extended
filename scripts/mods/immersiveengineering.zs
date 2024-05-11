@@ -644,3 +644,14 @@ mods.immersiveengineering.Refinery.addRecipe(<fluid:biodiesel> * 88, <fluid:bioc
 
 // Add missed Insolator recipe
 scripts.process.grow(<immersiveengineering:seed>, <immersiveengineering:material:4>, null, <immersiveengineering:seed>, 1);
+
+// IC2 Creosote alt
+// [Insulated MV Wire Coil]*4 from [ic2.creosote Bucket][+2]
+craft.make(<immersiveengineering:wirecoil:7> * 4, ['pretty',
+  'H M H',
+  'M ~ M',
+  'H M H'], {
+  'H': <ore:fabricHemp>,                  // Tough Fabric
+  'M': <immersiveengineering:wirecoil:1>, // MV Wire Coil
+  '~': LiquidIngr("ic2creosote"), // ic2.creosote Bucket
+});
