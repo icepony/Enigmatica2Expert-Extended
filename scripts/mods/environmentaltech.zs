@@ -2,6 +2,15 @@
 
 import crafttweaker.item.IIngredient;
 
+// Fixing ET blocks have NBT on pickup
+// Clear any NBT tags from picked up ET items
+events.onPlayerPickupItem(function (e as crafttweaker.event.PlayerPickupItemEvent) {
+  if(e.player.world.remote) return;
+  if(e.item.item.definition.owner != 'environmentaltech') return;
+  if(isNull(e.item.item.tag) || isNull(e.item.item.tag.valk_td)) return;
+  e.item.item.mutable().withTag(null);
+});
+
 // commit #a0a88bb
 // Personal Nano Beacon tier 5 + 6 harder recipes, to limit access to Resistance 5 (100% damage reduction)
 recipes.remove(<environmentaltech:nano_cont_personal_6>);
