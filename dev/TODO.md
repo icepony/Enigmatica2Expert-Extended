@@ -30,7 +30,8 @@ Planned non-urgent changes, or just good ideas:
 
 ### "Battle" expansion
 - [ ] ✏️ Buff EU saber - give it more damage? But better split entities in two.
-- [ ] ✏️ Golem should grow bigger on kills
+- [ ] ✏️ Golem should grow bigger on level up
+- [ ] ✏️ Blights should be bigger
 
 ### "Flora & Fauna" expansion
 - [ ] ✏️ Rework size changings
