@@ -6,7 +6,7 @@ import crafttweaker.item.IIngredient;
 // Clear any NBT tags from picked up ET items
 events.onPlayerPickupItem(function (e as crafttweaker.event.PlayerPickupItemEvent) {
   if(e.player.world.remote) return;
-  if(e.item.item.definition.owner != 'environmentaltech') return;
+  if(isNull(e.item) || isNull(e.item.item) || e.item.item.definition.owner != 'environmentaltech') return;
   if(isNull(e.item.item.tag) || isNull(e.item.item.tag.valk_td)) return;
   e.item.item.mutable().withTag(null);
 });
