@@ -69,6 +69,9 @@ const fineConflicts = [
     r1.name.startsWith('storagedrawers:trim_')
     && r2.name.startsWith('crafttweaker:trim'),
   (r1, r2) =>
+    r1.name.startsWith('cathedral:roof_block_')
+    && r2.name.startsWith('cathedral:roof_block_'),
+  (r1, r2) =>
     r1.name.startsWith('storagedrawers:basicdrawers_')
     && r2.name.match(/^crafttweaker:.*drawer.*/),
 ]

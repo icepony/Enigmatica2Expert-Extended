@@ -9,6 +9,8 @@ import crafttweaker.data.IData;
 import crafttweaker.item.IItemStack;
 import crafttweaker.player.IPlayer;
 import crafttweaker.world.IWorld;
+import crafttweaker.entity.IEntity;
+import crafttweaker.world.IBlockPos;
 
 utils.DEBUG = true;
 
@@ -128,7 +130,7 @@ events.onPlayerLeftClickBlock(function (e as crafttweaker.event.PlayerLeftClickB
   if (
     isNull(e.player.currentItem)
     || !(<minecraft:stick> has e.player.currentItem)
-    || e.block.definition.id != 'minecraft:bedrock'
+    // || e.block.definition.id != 'minecraft:bedrock'
   ) return;
 
   e.player.sendMessage('§eLeft Clicked§r');

@@ -62,10 +62,10 @@ function renameFoldersToActualMods() {
 
     const levArr = _(allMods)
       .map(m => ({ lev: levenshtein.get(m, modName), mod: m }))
-      .sortBy('0')
+      .sortBy('lev')
       .value()
 
-    if (levArr[1].lev - levArr[0].lev < 5) {
+    if (levArr[1].lev - levArr[0].lev < 3) {
       console.error(`\nBansoukou mod search function cant find mod ${modName}`)
       return
     }

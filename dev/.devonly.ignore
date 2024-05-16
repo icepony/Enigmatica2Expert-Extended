@@ -12,6 +12,7 @@ config/advancementscreenshot.cfg
 config/sampler.ini
 
 # Files and Folders to keep
+!asm
 !bansoukou
 !config
 !local

@@ -1,10 +1,23 @@
 [main/WARN] [Foundation]: The jar file D:\Program Files\PrismLauncher\libraries\lzma\lzma\0.0.1\lzma-0.0.1.jar has a security seal for path LZMA, but that path is defined and not secure
 [main/WARN] [Foundation]: The jar file D:\Program Files\PrismLauncher\libraries\lzma\lzma\0.0.1\lzma-0.0.1.jar has a security seal for path LZMA, but that path is defined and not secure
-[Client thread/ERROR] [Fugue]: java.lang.NullPointerException: Cannot read the array length because "buf" is null
-[Client thread/WARN] [mixin]: @Final field field_73236_b:Lit/unimi/dsi/fastutil/longs/Long2ObjectMap; in mixins.vintagefix.json:chunk_access.ChunkProviderClientMixin from mod unknown-owner should be final
+[main/ERROR] [Fugue]: java.lang.NullPointerException: Cannot read the array length because "<parameter1>" is null
+[main/WARN] [Foundation]: Can't get unsafe from JVM Driver, trying VarHandle
+[Client thread/ERROR] [Fugue]: java.lang.NullPointerException: Cannot read the array length because "<parameter1>" is null
+[Client thread/WARN] [oshi.util.FileUtil]: Configuration conflict: there is more than one oshi.properties file on the classpath: [jar:file:/D:/Program%20Files/PrismLauncher/libraries/com/github/oshi/oshi-core/6.5.0/oshi-core-6.5.0.jar!/oshi.properties, jar:file:/D:/Program%20Files/PrismLauncher/libraries/com/github/oshi/oshi-core/6.5.0/oshi-core-6.5.0.jar!/oshi.properties]
 [Client thread/WARN] [FML]: Mod scalar has been disabled through configuration
-[Client thread/WARN] [Foundation]: Exception encountered attempting classloading of co.neeve.nae2.common.parts.implementations.PartBeamFormer$1: java.lang.NoClassDefFoundError: gregtech/client/utils/BloomEffectUtil$IBloomRenderFast
-[Client thread/WARN] [Foundation]: Exception encountered attempting classloading of com.minerarcana.floralchemy.block.flower.SubTilePetroPetunia: net.minecraftforge.fml.common.asm.ASMTransformerWrapper$TransformerException: Exception in class transformer quaternary.botaniatweaks.asm.BotaniaTweakerTransformer@xxxxxxxx from coremod Botania Tweaks Core
+[Client thread/WARN] [net.minecraft.network.datasync.EntityDataManager]: defineId called for: class net.minecraft.entity.item.EntityMinecartFurnace from class com.lothrazar.cyclicmagic.item.minecart.EntityGoldFurnaceMinecart
+[Client thread/WARN] [net.minecraft.network.datasync.EntityDataManager]: defineId called for: class net.minecraft.entity.monster.EntitySlime from class teamroots.emberroot.entity.slime.EntityRainbowSlime
+[Client thread/WARN] [net.minecraft.network.datasync.EntityDataManager]: defineId called for: class malte0811.industrialwires.entities.EntityBrokenPart from class malte0811.industrialwires.IndustrialWires
+[Client thread/WARN] [VintageFix]: Mod 'appliedenergistics2' is attempting to iterate the model registry, but is not whitelisted in VintageFix. This may cause glitches if it wraps its own models.
+[Client thread/WARN] [VintageFix]: Mod 'opencomputers' is attempting to iterate the model registry, but is not whitelisted in VintageFix. This may cause glitches if it wraps its own models.
+[Client thread/WARN] [VintageFix]: Mod 'industrialforegoing' is attempting to iterate the model registry, but is not whitelisted in VintageFix. This may cause glitches if it wraps its own models.
+[Client thread/WARN] [VintageFix]: Mod 'nae2' is attempting to iterate the model registry, but is not whitelisted in VintageFix. This may cause glitches if it wraps its own models.
+[Client thread/WARN] [VintageFix]: Mod 'ctm' is attempting to iterate the model registry, but is not whitelisted in VintageFix. This may cause glitches if it wraps its own models.
+[Client thread/WARN] [net.minecraft.network.datasync.EntityDataManager]: defineId called for: class com.github.alexthe666.iceandfire.entity.EntityDreadThrall from class com.github.alexthe666.iceandfire.entity.EntityDreadKnight
+[Client thread/WARN] [net.minecraft.network.datasync.EntityDataManager]: defineId called for: class com.github.alexthe666.rats.server.entity.EntityFeralRatlantean from class com.github.alexthe666.rats.server.entity.EntityNeoRatlantean
+[CraftPresence/ERROR] [craftpresence]: Unable to connect to Discord...
+[Client thread/WARN] [Chisel]: Mod cathedral is using deprecated IMC variation:add! This IMC type may be removed soon, please notify the author of this mod.
 [Client thread/ERROR] [Had Enough Items]: A Recipe Handler has already been registered for this recipe class: com.github.alexthe666.iceandfire.recipe.DragonForgeRecipe
 [Client thread/ERROR] [Had Enough Items]: A Recipe Handler has already been registered for this recipe class: com.github.alexthe666.rats.server.recipes.SharedRecipe
-[Client thread/ERROR] [Had Enough Items]: A Recipe Handler has already been registered for this recipe class: com.github.alexthe666.rats.server.recipes.SharedRecipe
+[Client thread/ERROR] [Had Enough Items]: A Recipe Handler has already been registered for this recipe class: com.github.alexthe666.rats.server.recipes.SharedRecipe
+[Client thread/WARN] [Had Enough Items]: Sending runtime to plugin: com.buuz135.thaumicjei.ThaumcraftJEIPlugin took 140 ms

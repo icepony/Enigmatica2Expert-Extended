@@ -2,10 +2,11 @@
 
 🚧✅❌⚠️ List of priorities:
 
-- [ ] ✏️ Make Blood magic Meteor mandatory for skyblock (Oxidised sand or moon turf)
-- [ ] 📖 Add HEI tip for Escritoire and serum
-- [ ] ✏️ Add new mechanic for /dev/null for leveling up its recharging speed
-- [ ] 🟢 Add **Cathedral**
+- [ ] 🌍 Teleport player to Alien Forest with Blood Magic TP ritual
+- [ ] 📀 Fix sharks still TP player somewhere
+- [ ] ✏️ Remove `Creative Harvest` from game since causing some shaders crash
+- [ ] ⚡ Remove XU2 jei removed categories https://spark.lucko.me/MRBZYLxzrN?hl=325666
+- [ ] ⚡ Remove progress bar tick on HEI recipe adding https://spark.lucko.me/MRBZYLxzrN?hl=325666,340125
 
 ---
 
@@ -27,6 +28,7 @@ Planned non-urgent changes, or just good ideas:
 - [ ] 📖 Add not that /dev/null is infinite for Robot
 - [ ] 📖 Distilled water add JEI entries
 - [ ] 🐉 Bestiary book have missed item icons
+- [ ] 📖 Suggest IC2 reactors schemas
 
 ### "Battle" expansion
 - [ ] ✏️ Buff EU saber - give it more damage? But better split entities in two.
@@ -34,6 +36,7 @@ Planned non-urgent changes, or just good ideas:
 - [ ] ✏️ Blights should be bigger
 
 ### "Flora & Fauna" expansion
+- [ ] ✏️ Make necessary to tame and breed animals: `Amphitere, Cocatrice, Hippocampus, Hyppogryph, Boars, `
 - [ ] ✏️ Rework size changings
 - [ ] ✏️ Woodweave singularity add required amount
 - [ ] ✏️ Rework Entity melting in Smeltery, migrate from Barrel Milking, add JEI category
@@ -59,30 +62,33 @@ Planned non-urgent changes, or just good ideas:
 - [ ] 🔄 Add `Cow Hacker` feature. Buff cow with 2-3 special potions based on their UUID to turn it into drop generator.
 - [ ] ✏️ Dragon Ice better craft isages
 - [ ] ✏️ Fish rework: All automated fishing options way harder to make sense of manual fishing. All fish usages lower
+- [ ] ✏️ Add `Meat Singularity`
+- [ ] 🔨 Ironwood Add material. Drop Armor from mobs on hit
 
-### "Endgame" expansion
+### "Nuclear☢️" expansion
 - [ ] ✏️ Add QMD alt source of Oxidised Ferric Sand (to make alternative for Asteroid mining)
-- [ ] ✏️ Add "Machine Frame Singularity"
-- [ ] ✏️ Tweak Botania Extended Crafting Tables recipes to non-tech
-- [ ] ✏️ Integrate `Orbital Laser Drill` better. It can mine ores on planet orbits for skyblock.
-- [ ] ✏️ `Critical Matter Cluster` add usages and mechanics (obtained with shift+right click of World Breaker)
-- [ ] 📖 Add new `Conflux VI` level based on 100% trophy completion
-- [ ] 🌍 Alien Forest add JER data
 - [ ] 📖 add Note that QMD multiblocks need `Liquid Helium` Cooler
 - [ ] ✏️ Draconic Metals made in QMD multiblocks
 - [ ] ✏️ `.numericalId` may be used to LibVulpes ghost blocks to preview structures. It can be preview for possible QMD coolers
 - [ ] 🪐 NC have its own "Wasteland" dim - make Use Of it
-- [ ] ✏️ RFTools `Dimension building` make cheaper by balancing possible dimlets
 - [ ] ✏️ QMD atmosphere collector for other dims
-- [ ] ✏️ Better Integrate `QMD`
-- [ ] ✏️ Better Integrate `Trinity`
 - [ ] ✏️ Add usage of `Perfect Fuel` in NCO (with `flux goo` as sub-product)
+
+### "Endgame" expansion
+- [ ] ✏️ Add "Machine Frame Singularity"
+- [ ] ✏️ Tweak Botania Extended Crafting Tables recipes to non-tech
+- [ ] ✏️ Integrate `Orbital Laser Drill` better. It can mine ores on planet orbits for skyblock
+- [ ] ✏️ `Critical Matter Cluster` add usages and mechanics (obtained with shift+right click of World Breaker)
+- [ ] 📖 Add new `Conflux VI` level based on 100% trophy completion
+- [ ] 🌍 Alien Forest add JER data
+- [ ] ✏️ RFTools `Dimension building` make cheaper by balancing possible dimlets
 - [ ] ✏️ Some QMD / NCO craft MUST use <opencomputers:print>
 - [ ] 🌍 AdvRock geodes should contain modded ores (use <geodeOres> XML tag)
 - [ ] ✏️ Nerf IO spike metals (carapace with `Bedrock cobblestone` + `Bedrock Ore` inside instead of pure blocks)
 - [ ] ✏️ Creative Impetus add recipe
 - [ ] ✏️ Draconic Evolution infusion can use trillions RF
 - [ ] ✏️ Add [](https://is.gd/OcNNZN "Uncrafting Grinder") as Endgame item, right before creative upgrade
+- [ ] ✏️ Add new crafting mechanic - melting blocks in world that cant be harvested, such as `Rock Crystal Ore, Swolen/Fibrous Taint, Vis Crystal, Grass Path, Porous stone, Antimatter, TF Tree Cores, TF Thorns, Trollstein, Foam`
 
 ### "Multiplayer" expansion
 
@@ -107,6 +113,8 @@ Planned non-urgent changes, or just good ideas:
 
 ### Other
 
+- [ ] 🎉 Add new mechanic for /dev/null for leveling up its recharging speed
+- [ ] 📀 Raw Inversion Pillar - fix duping itself. Culd be used as craft mechanics since can spread will-infused stone.
 - [ ] ✏️ Black hole generator can work on cobble
 - [ ] ⚒️ Add Trait trat replace ores with Stone when harvested
 - [ ] 🏡 Fix one of the Recurrent Complex houses have lava that fire up whole building
@@ -136,7 +144,6 @@ Planned non-urgent changes, or just good ideas:
 - [ ] ✏️ `Burnt in fluid` fix accept any meta
 - [ ] 📖 Describe Skyblock quests
 - [ ] 📀 Rustic's barrel make as x4 chests but without GUI or change somehow else to make more fun.
-- [ ] 🌍 Teleport player to Alien Forest with Blood Magic TP ritual
 - [ ] ✏️ Lootr still turn Dispensers into Lootr Chests https://github.com/noobanidus/Lootr/issues/189
 - [ ] ✏️ Nature chests still turn into Lootr
 - [ ] 💅 twlight forest advancement not showing up in advancement tab v1.2.1. Need conformation
@@ -207,7 +214,6 @@ Planned non-urgent changes, or just good ideas:
 - [ ] ✏️ Remove wrong nuggets from Infernal Furnace
 - [ ] ✏️ Fix Omega Potion Elixir ingredient have weird scrolling
 - [ ] 🔄 Add neural interface searching: with neural interface and special program find special blocks
-- [ ] ✏️ ![](https://git.io/JCt00 "Creative Harvest") add more crafts
 - [ ] ✏️ **4x** Coal Singularity (or other) => Creative Bin (or other ways to craft creative bins with one unchangable item)
 - [ ] 🌍 118_KELT-2ab: Add Kelps growing
 - [ ] 🌍 Add new AdvRocke atmospheres
@@ -216,7 +222,6 @@ Planned non-urgent changes, or just good ideas:
 - [ ] 🔄 Fix Custom Animals drops non-cooked meat
 - [ ] 🔨 ![](https://git.io/JnzzI "Glitch Infused Ingot") add material. Ability: drom matter from mobs
 - [ ] 🔨 Add armor trait that speed up gain for `Time In Bottle`
-- [ ] 🔨 Ironwood Add material. Drop Armor from mobs on hit
 - [ ] ⛏️ Mining levels rework. There is too much mining levels.
   > * [ ] Higher Mining level Ore should spawn lower
   > * [ ] Remove Excess Mining levels:
