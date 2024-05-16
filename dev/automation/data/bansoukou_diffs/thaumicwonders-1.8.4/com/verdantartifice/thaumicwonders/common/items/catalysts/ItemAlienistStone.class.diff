@@ -1,8 +1,9 @@
-@@ -2,25 +2,28 @@
+@@ -2,29 +2,30 @@
   * Decompiled with CFR 0.152.
   * 
   * Could not load the following classes:
 - *  com.verdantartifice.thaumicwonders.ThaumicWonders
+- *  com.verdantartifice.thaumicwonders.common.items.ItemsTW
   *  com.verdantartifice.thaumicwonders.common.items.base.ItemTW
   *  com.verdantartifice.thaumicwonders.common.items.catalysts.ICatalystStone
 - *  com.verdantartifice.thaumicwonders.common.misc.OreHelper
@@ -10,6 +11,7 @@
 + *  net.minecraft.enchantment.EnchantmentDurability
 + *  net.minecraft.enchantment.EnchantmentHelper
 + *  net.minecraft.enchantment.EnchantmentMending
+  *  net.minecraft.item.EnumRarity
   *  net.minecraft.item.ItemStack
 + *  net.minecraftforge.oredict.OreDictionary
   *  thaumcraft.api.aspects.Aspect
@@ -19,6 +21,7 @@
  package com.verdantartifice.thaumicwonders.common.items.catalysts;
  
 -import com.verdantartifice.thaumicwonders.ThaumicWonders;
+-import com.verdantartifice.thaumicwonders.common.items.ItemsTW;
  import com.verdantartifice.thaumicwonders.common.items.base.ItemTW;
  import com.verdantartifice.thaumicwonders.common.items.catalysts.ICatalystStone;
 -import com.verdantartifice.thaumicwonders.common.misc.OreHelper;
@@ -27,16 +30,17 @@
 +import net.minecraft.enchantment.EnchantmentDurability;
 +import net.minecraft.enchantment.EnchantmentHelper;
 +import net.minecraft.enchantment.EnchantmentMending;
+ import net.minecraft.item.EnumRarity;
  import net.minecraft.item.ItemStack;
 +import net.minecraftforge.oredict.OreDictionary;
  import thaumcraft.api.aspects.Aspect;
 -import thaumcraft.api.items.ItemsTC;
 -import thaumcraft.common.config.ModConfig;
  
- public class ItemAlchemistStone
+ public class ItemAlienistStone
  extends ItemTW
-@@ -29,37 +32,27 @@ implements ICatalystStone {
-         super("alchemist_stone");
+@@ -33,40 +34,27 @@ implements ICatalystStone {
+         super("alienist_stone");
          this.func_77656_e(63);
          this.func_77625_d(1);
 -        this.setNoRepair();
@@ -54,44 +58,39 @@
  
      public ItemStack getRefiningResult(ItemStack input) {
 -        if (OreHelper.isOreNamed((ItemStack)input, (String)"oreIron")) {
--            return new ItemStack(ItemsTC.clusters, 1, 0);
+-            return new ItemStack(ItemsTW.ELDRITCH_CLUSTER, 1, 0);
 -        }
 -        if (OreHelper.isOreNamed((ItemStack)input, (String)"oreGold")) {
--            return new ItemStack(ItemsTC.clusters, 1, 1);
+-            return new ItemStack(ItemsTW.ELDRITCH_CLUSTER, 1, 1);
 -        }
 -        if (ModConfig.foundCopperOre && OreHelper.isOreNamed((ItemStack)input, (String)"oreCopper")) {
--            return new ItemStack(ItemsTC.clusters, 1, 2);
+-            return new ItemStack(ItemsTW.ELDRITCH_CLUSTER, 1, 2);
 -        }
 -        if (ModConfig.foundTinOre && OreHelper.isOreNamed((ItemStack)input, (String)"oreTin")) {
--            return new ItemStack(ItemsTC.clusters, 1, 3);
+-            return new ItemStack(ItemsTW.ELDRITCH_CLUSTER, 1, 3);
 -        }
 -        if (ModConfig.foundSilverOre && OreHelper.isOreNamed((ItemStack)input, (String)"oreSilver")) {
--            return new ItemStack(ItemsTC.clusters, 1, 4);
+-            return new ItemStack(ItemsTW.ELDRITCH_CLUSTER, 1, 4);
 -        }
 -        if (ModConfig.foundLeadOre && OreHelper.isOreNamed((ItemStack)input, (String)"oreLead")) {
--            return new ItemStack(ItemsTC.clusters, 1, 5);
+-            return new ItemStack(ItemsTW.ELDRITCH_CLUSTER, 1, 5);
 -        }
 -        if (OreHelper.isOreNamed((ItemStack)input, (String)"oreCinnabar")) {
--            return new ItemStack(ItemsTC.clusters, 1, 6);
+-            return new ItemStack(ItemsTW.ELDRITCH_CLUSTER, 1, 6);
+-        }
+-        if (input.func_77973_b() == ItemsTC.voidSeed) {
+-            return new ItemStack(ItemsTW.ELDRITCH_CLUSTER, 1, 8);
 +        if (input == null || input.func_190926_b()) {
 +            return null;
          }
 -        if (input != null && !input.func_190926_b()) {
--            ThaumicWonders.LOGGER.info("ALCHEMIST_STONE: Rejecting item {} with ore names {}", (Object)input.toString(), (Object)String.join((CharSequence)", ", OreHelper.getOreNames((ItemStack)input).toArray(new String[0])));
+-            ThaumicWonders.LOGGER.info("ALIENIST_STONE: Rejecting item {} with ore names {}", (Object)input.toString(), (Object)String.join((CharSequence)", ", OreHelper.getOreNames((ItemStack)input).toArray(new String[0])));
 +        for (int oreID : OreDictionary.getOreIDs((ItemStack)input)) {
 +            String clusterName;
 +            ItemStack item;
 +            String newName = OreDictionary.getOreName((int)oreID);
-+            if (!newName.startsWith("ore") || (item = (ItemStack)OreDictionary.getOres((String)(clusterName = "cluster" + newName.substring(3))).stream().findFirst().orElse(null)) == null) continue;
++            if (!newName.startsWith("cluster") || (item = (ItemStack)OreDictionary.getOres((String)(clusterName = "crystalShard" + newName.substring(7))).stream().findFirst().orElse(null)) == null) continue;
 +            return item;
          }
          return null;
      }
-@@ -73,6 +66,6 @@ implements ICatalystStone {
-     }
- 
-     public int func_77619_b() {
--        return 10;
-+        return 1;
-     }
- }

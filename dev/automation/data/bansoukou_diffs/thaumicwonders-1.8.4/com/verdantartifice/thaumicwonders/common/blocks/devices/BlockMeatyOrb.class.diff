@@ -1,7 +1,8 @@
-@@ -4,6 +4,10 @@
+@@ -4,7 +4,10 @@
   * Could not load the following classes:
   *  com.verdantartifice.thaumicwonders.ThaumicWonders
   *  com.verdantartifice.thaumicwonders.common.blocks.base.BlockDeviceTW
+- *  com.verdantartifice.thaumicwonders.common.tiles.devices.TileMeatyOrb
 + *  com.verdantartifice.thaumicwonders.common.network.PacketHandler
 + *  com.verdantartifice.thaumicwonders.common.network.packets.PacketMeatyOrbAction
 + *  javax.annotation.Nullable
@@ -9,7 +10,7 @@
   *  net.minecraft.block.SoundType
   *  net.minecraft.block.material.Material
   *  net.minecraft.block.properties.IProperty
-@@ -11,13 +15,16 @@
+@@ -12,13 +15,16 @@
   *  net.minecraft.client.resources.I18n
   *  net.minecraft.entity.EntityLivingBase
   *  net.minecraft.entity.player.EntityPlayer
@@ -26,7 +27,7 @@
   *  thaumcraft.common.blocks.IBlockFacingHorizontal
   *  thaumcraft.common.lib.SoundsTC
   */
-@@ -25,7 +32,11 @@ package com.verdantartifice.thaumicwonders.common.blocks.devices;
+@@ -26,7 +32,11 @@ package com.verdantartifice.thaumicwonders.common.blocks.devices;
  
  import com.verdantartifice.thaumicwonders.ThaumicWonders;
  import com.verdantartifice.thaumicwonders.common.blocks.base.BlockDeviceTW;
@@ -38,7 +39,7 @@
  import net.minecraft.block.SoundType;
  import net.minecraft.block.material.Material;
  import net.minecraft.block.properties.IProperty;
-@@ -33,13 +44,16 @@ import net.minecraft.block.state.IBlockState;
+@@ -34,13 +44,16 @@ import net.minecraft.block.state.IBlockState;
  import net.minecraft.client.resources.I18n;
  import net.minecraft.entity.EntityLivingBase;
  import net.minecraft.entity.player.EntityPlayer;
@@ -55,7 +56,7 @@
  import thaumcraft.common.blocks.IBlockFacingHorizontal;
  import thaumcraft.common.lib.SoundsTC;
  
-@@ -71,6 +85,21 @@ implements IBlockFacingHorizontal {
+@@ -72,6 +85,21 @@ implements IBlockFacingHorizontal {
          return bs;
      }
  
