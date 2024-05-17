@@ -467,16 +467,16 @@ function morphDust(fruit as IItemStack, liquid as ILiquidStack, extra as IItemSt
   fruit.setAspects(aspects);
 }
 
-morphDust(<ic2:dust:20>, <liquid:gold>              * 500 , <minecraft:glowstone_dust>     , [<aspect:metallum> * 40, <aspect:desiderium> * 50]); // Tiny Pile of Gold Dust
-morphDust(<ic2:dust:16>, <liquid:ic2pahoehoe_lava>  * 1000 , <enderio:item_material:22>     , [<aspect:metallum> * 40, <aspect:desiderium> * 50]); // Sulfur Dust
-morphDust(<ic2:dust:28>, <liquid:tin>               * 500 , <thermalfoundation:material:99>, [<aspect:metallum> * 120]); // Tiny Pile of Tin Dust
-morphDust(<ic2:dust:19>, <liquid:copper>            * 500 , <thermalfoundation:material:99>, [<aspect:metallum> * 120]); // Tiny Pile of Copper Dust
-morphDust(<ic2:dust:21>, <liquid:iron>              * 500 , <thermalfoundation:material:98>, [<aspect:metallum> * 40, <aspect:instrumentum> * 95]); // Tiny Pile of Iron Dust
-morphDust(<ic2:dust:23>, <liquid:lead>              * 500 , <thermalfoundation:material:67>, [<aspect:metallum> * 40, <aspect:fabrico> * 90]); // Tiny Pile of Lead Dust
-morphDust(<ic2:dust:26>, <liquid:silver>            * 500 , <thermalfoundation:material:97>, [<aspect:metallum> * 40, <aspect:machina> * 55]); // Tiny Pile of Silver Dust
-morphDust(<ic2:dust:2> , <liquid:petrotheum>        * 500 , <actuallyadditions:item_misc:5>, [<aspect:metallum> * 40, <aspect:exanimis> * 30]); // Coal Dust
-morphDust(<ic2:dust:31>, <liquid:spectre>           * 500 , <biomesoplenty:crystal_shard>  , [<aspect:metallum> * 40, <aspect:praemunio> * 60]); // Ender Pearl Dust
-morphDust(<ic2:dust:36>, <liquid:cryotheum_nak>     * 500 , <enderio:item_material:14>     , [<aspect:metallum> * 40, <aspect:spiritus> * 50]); // Tiny Pile of Diamond Dust
+morphDust(<ic2:dust:20>, <liquid:gold> * 500 , <minecraft:glowstone_dust> , [<aspect:metallum> * 40, <aspect:desiderium> * 50]); // Tiny Pile of Gold Dust
+morphDust(<ic2:dust:16>, <liquid:ic2pahoehoe_lava> * 1000 , <enderio:item_material:22> , [<aspect:metallum> * 40, <aspect:desiderium> * 50]); // Sulfur Dust
+morphDust(<ic2:dust:28>, <liquid:tin> * 500 , <thermalfoundation:material:99>, [<aspect:metallum> * 120]); // Tiny Pile of Tin Dust
+morphDust(<ic2:dust:19>, <liquid:copper> * 500 , <thermalfoundation:material:99>, [<aspect:metallum> * 120]); // Tiny Pile of Copper Dust
+morphDust(<ic2:dust:21>, <liquid:iron> * 500 , <thermalfoundation:material:98>, [<aspect:metallum> * 40, <aspect:instrumentum> * 95]); // Tiny Pile of Iron Dust
+morphDust(<ic2:dust:23>, <liquid:lead> * 500 , <thermalfoundation:material:67>, [<aspect:metallum> * 40, <aspect:fabrico> * 90]); // Tiny Pile of Lead Dust
+morphDust(<ic2:dust:26>, <liquid:silver> * 500 , <thermalfoundation:material:97>, [<aspect:metallum> * 40, <aspect:machina> * 55]); // Tiny Pile of Silver Dust
+morphDust(<ic2:dust:2> , <liquid:petrotheum> * 500 , <actuallyadditions:item_misc:5>, [<aspect:metallum> * 40, <aspect:exanimis> * 30]); // Coal Dust
+morphDust(<ic2:dust:31>, <liquid:spectre> * 500 , <biomesoplenty:crystal_shard> , [<aspect:metallum> * 40, <aspect:praemunio> * 60]); // Ender Pearl Dust
+morphDust(<ic2:dust:36>, <liquid:cryotheum_nak> * 500 , <enderio:item_material:14> , [<aspect:metallum> * 40, <aspect:spiritus> * 50]); // Tiny Pile of Diamond Dust
 
 // Special case for dusts that recipes not stick with oredict
 // Coal
