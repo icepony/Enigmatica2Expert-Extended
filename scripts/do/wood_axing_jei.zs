@@ -11,6 +11,7 @@ function addForAxes(input as IIngredient, output as IItemStack) as void {
 }
 
 addForAxes(<ore:logWood>, <ore:plankWood>.firstItem);
+addForAxes(<ore:blockMagicalWood>, <extrautils2:decorativesolidwood>);
 
 for oreName, output in scripts.do.wood_axing.oreStick {
   addForAxes(oreDict.get(oreName), output);

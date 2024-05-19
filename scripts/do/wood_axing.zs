@@ -18,17 +18,17 @@ static axes as int[IIngredient] = {
   <twilightforest:steeleaf_axe:*>     : 6,
   <twilightforest:minotaur_axe_gold:*>: 7,
   <twilightforest:minotaur_axe:*>     : 8,
-} as int[IIngredient];
+} as int[IIngredient]$orderly;
 
 static axeTraits as int[string] = {
   axing : 4,
   axing2: 6,
-} as int[string];
+} as int[string]$orderly;
 
 static oreStick as IItemStack[string] = {
   plankWood       : <minecraft:stick>,
   plankTreatedWood: <immersiveengineering:material>,
-} as IItemStack[string];
+} as IItemStack[string]$orderly;
 
 function setDrops(e as BlockHarvestDropsEvent, value as int) as void {
   val log = e.drops[0].stack.anyAmount();
