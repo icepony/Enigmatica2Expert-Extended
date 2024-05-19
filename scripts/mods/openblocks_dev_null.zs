@@ -39,7 +39,7 @@ events.onPlayerInteractBlock(function (e as crafttweaker.event.PlayerInteractBlo
   });
 });
 
-function addInfinityDevNull(item as IItemStack, ingredient as IIngredient) as void {
+function addInfinityDevNull(item as IItemStack) as void {
   recipes.addShapeless(
     'dev_null ' ~ item.definition.id.replaceAll(':', '_') ~ '_' ~ item.damage,
     <openblocks:dev_null>.withTag({
@@ -57,20 +57,20 @@ function addInfinityDevNull(item as IItemStack, ingredient as IIngredient) as vo
           Slot: 0 as byte, id: item.definition.id, Count: 64, Damage: item.damage as short,
         },
         ] } }),
-      ingredient,
+      <randomthings:ingredient:5>,
     ]
   );
 }
 
-addInfinityDevNull(<minecraft:cobblestone>, <biomesoplenty:coral:*>);
-addInfinityDevNull(<cyclicmagic:block_fragile_weak>, <biomesoplenty:coral:*>);
+addInfinityDevNull(<minecraft:cobblestone>);
+addInfinityDevNull(<cyclicmagic:block_fragile_weak>);
 
 for i in 0 .. 16 {
-  addInfinityDevNull(<chisel:cobblestone>.definition.makeStack(i), <biomesoplenty:coral:*>);
+  addInfinityDevNull(<chisel:cobblestone>.definition.makeStack(i));
 }
 for i in 0 .. 10 {
-  addInfinityDevNull(<chisel:cobblestone1>.definition.makeStack(i), <biomesoplenty:coral:*>);
-  addInfinityDevNull(<chisel:cobblestone2>.definition.makeStack(i), <biomesoplenty:coral:*>);
+  addInfinityDevNull(<chisel:cobblestone1>.definition.makeStack(i));
+  addInfinityDevNull(<chisel:cobblestone2>.definition.makeStack(i));
 }
 
 /*

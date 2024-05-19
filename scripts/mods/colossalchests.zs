@@ -18,7 +18,7 @@ recipes.removeByRecipeName('colossalchests:upgrade_tool');
 craft.make(<colossalchests:upgrade_tool>, ['pretty',
   '  P  ',
   '╱ C ╱'], {
-  'P': <biomesoplenty:coral:*>, // Pink Coral
+  'P': <randomthings:ingredient:5>,
   '╱': <ore:stickAluminium>, // Aluminium Rod
   'C': <minecraft:web>, // Cobweb
 });

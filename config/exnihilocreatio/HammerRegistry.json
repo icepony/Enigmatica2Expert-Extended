@@ -151,5 +151,14 @@
       "chance": 1.0,
       "fortuneChance": 0.0
     }
+  ],
+  "biomesoplenty:coral": [
+    {
+      "item": "randomthings:ingredient:5",
+      "amount": 1,
+      "miningLevel": 0,
+      "chance": 1.0,
+      "fortuneChance": 0.0
+    }
   ]
 }

@@ -92,7 +92,7 @@ val essenceByTier = [
 
 val seedIngrByTier = [
   <ic2:crop_res:5>,                  // Weed
-  <biomesoplenty:coral:*>,           // Glowing Coral
+  <randomthings:ingredient:5>,
   <ore:gemXorcite>,                  // Xorcite Shard
   <bloodmagic:component:28>,         // Simple Lengthening Catalyst
   <ore:carminite>,                   // Carminite

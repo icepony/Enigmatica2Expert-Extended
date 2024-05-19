@@ -2,6 +2,9 @@
 
 import crafttweaker.item.IIngredient;
 
+// Defined by hammering
+recipes.remove(<randomthings:ingredient:5>);
+
 // Add hints with Spectre trees mechanics
 scripts.jei.crafting_hints.addInsOutCatl(
   [<randomthings:ingredient:2>, <ore:treeSapling>],

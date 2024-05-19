@@ -42,6 +42,8 @@
       ,{"name": "additionalcompression:meatfish_compressed"    , "metadata": "0", "rewards": [{"name": "harvestcraft:groundfishitem"   ,"count": 18  ,"metadata": "0","chance": 1.0,"luck": 0.0}]}
       ,{"name": "additionalcompression:meatfish_compressed"    , "metadata": "1", "rewards": [{"name": "harvestcraft:groundfishitem"   ,"count": 162 ,"metadata": "0","chance": 1.0,"luck": 0.0}]}
       ,{"name": "additionalcompression:meatfish_compressed"    , "metadata": "2", "rewards": [{"name": "harvestcraft:groundfishitem"   ,"count": 1458,"metadata": "0","chance": 1.0,"luck": 0.0}]}
+
+      ,{"name": "contenttweaker:compressed_coral", "metadata": "0", "rewards": [{"name": "randomthings:ingredient", "count": 9, "metadata": "5", "chance": 1.0, "luck": 0.0}]}
     ],
     "example": {
       "__comment": "This example would allow Obsidian to be hammered into nine diamonds using a Compressed Hammer.",

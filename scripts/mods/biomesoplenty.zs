@@ -153,7 +153,7 @@ craft.remake(<biomesoplenty:biome_finder>, ['pretty',
   'G C G',
   'd G d'], {
   'd': <ore:dyePurple>, // Purple Dye
-  'G': <biomesoplenty:coral:*>, // Glowing Coral
+  'G': <randomthings:ingredient:5>,
   'C': <minecraft:web>, // Cobweb
 });
 
