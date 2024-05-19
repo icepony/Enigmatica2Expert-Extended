@@ -240,7 +240,7 @@ ${filtered.join('\n')}`
 
 } */
 
-// Total Furnace recipes registered: 916
+// Total Furnace recipes registered: 918
 // Blacklisted by JEI or manually: 77
 // Filtered by oredict: 150
 infinFurnace(utils.get('actuallyadditions:block_misc', 3), utils.get('actuallyadditions:item_misc', 5));
@@ -307,6 +307,7 @@ blacklist('botania:biomestonea', 12);
 blacklist('botania:biomestonea', 13);
 blacklist('botania:biomestonea', 14);
 blacklist('botania:biomestonea', 15);
+infinFurnace(utils.get('cathedral:claytile'), utils.get('cathedral:firedtile'));
 infinFurnace(utils.get('claybucket:unfiredclaybucket', W), utils.get('claybucket:claybucket'));
 infinFurnace(utils.get('contenttweaker:ore_phosphor'), utils.get('contenttweaker:nugget_phosphor'));
 infinFurnace(utils.get('cookingforblockheads:recipe_book'), utils.get('cookingforblockheads:recipe_book', 1));
@@ -994,6 +995,7 @@ infinFurnace(utils.get('quark:biome_cobblestone', 2), utils.get('minecraft:stone
 blacklist('quark:crab_leg', W);
 infinFurnace(utils.get('quark:frog_leg', W), utils.get('quark:cooked_frog_leg'));
 infinFurnace(utils.get('quark:trowel'), utils.get('minecraft:iron_nugget'));
+infinFurnace(utils.get('randomthings:biomestone'), utils.get('randomthings:biomestone', 1));
 blacklist('rats:marbled_cheese_brick', W);
 infinFurnace(utils.get('rats:marbled_cheese_raw', W), utils.get('rats:marbled_cheese'));
 infinFurnace(utils.get('rats:rat_nugget_ore', 1, 1, {OreItem: {id: "thaumcraft:ore_amber", Count: 1, Damage: 0 as short}, IngotItem: {id: "thaumcraft:amber", Count: 1, Damage: 0 as short}}), utils.get('thaumcraft:amber'));
