@@ -3,6 +3,7 @@
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 import crafttweaker.liquid.ILiquidStack;
+import crafttweaker.item.WeightedItemStack;
 import mods.ic2.ScrapBox;
 
 import scripts.jei.mod.ic2.addCrop;
@@ -449,34 +450,46 @@ addCrop('ender_blossom' , [<ic2:dust:31>,<minecraft:ender_pearl>,<minecraft:ende
 addCrop('bobs_yer_uncle_ranks_berries', [<ic2:crop_res:8>, <minecraft:emerald>]           , 11, 'Shiny Vine Emerald Berylium Crystal');
 addCrop('diareed'       , [<ic2:dust:36>,<minecraft:diamond>]                             , 12, 'Fire Shiny Reed Coal Diamond Crystal');
 
-function morphDust(fruit as IItemStack, liquid as ILiquidStack, extra as IItemStack, aspects as thaumcraft.aspect.CTAspectStack[]) as void {
+function morphDust(fruit as IItemStack, liquid as ILiquidStack, orePiece as IItemStack, extra as IItemStack, aspects as thaumcraft.aspect.CTAspectStack[]) as void {
   // Remove Oredict entries from dust, because they would be used totally another way
   for ore in fruit.ores {
     ore.remove(fruit);
   }
 
-  // Squeezing fruits
-  scripts.process.squeeze([fruit], liquid, 'only: CrushingTub ForestrySqueezer IndustrialSqueezer', extra);
+  if(!isNull(liquid)) {
+    // Squeezing fruits
+    scripts.process.squeeze([fruit], liquid, 'only: CrushingTub ForestrySqueezer IndustrialSqueezer', extra);
 
-  // Bigger fluid output + capsule
-  val amount = (liquid.amount * 2) / 1000;
-  val capsule = FluidCell(liquid.name);
-  mods.rats.recipes.addChefRatRecipe(fruit, amount > 1 ? capsule * amount : capsule);
+    // Bigger fluid output + capsule
+    val amount = (liquid.amount * 2) / 1000;
+    val capsule = FluidCell(liquid.name);
+    mods.rats.recipes.addChefRatRecipe(fruit, amount > 1 ? capsule * amount : capsule);
+  }
+
+  if(!isNull(orePiece)) {
+    val output = [orePiece % 100, extra % 20] as WeightedItemStack[];
+    mods.forestry.Centrifuge.addRecipe(output, fruit, 10);
+    mods.thermalexpansion.Centrifuge.addRecipe(output, fruit, <fluid:juice> * 200, 400);
+    scripts.process.squeeze([fruit], <fluid:juice> * 200, 'only: CrushingTub', extra);
+  }
 
   // Thaumcraft aspects
   fruit.setAspects(aspects);
 }
 
-morphDust(<ic2:dust:20>, <liquid:gold> * 500 , <minecraft:glowstone_dust> , [<aspect:metallum> * 40, <aspect:desiderium> * 50]); // Tiny Pile of Gold Dust
-morphDust(<ic2:dust:16>, <liquid:ic2pahoehoe_lava> * 1000 , <enderio:item_material:22> , [<aspect:metallum> * 40, <aspect:desiderium> * 50]); // Sulfur Dust
-morphDust(<ic2:dust:28>, <liquid:tin> * 500 , <thermalfoundation:material:99>, [<aspect:metallum> * 120]); // Tiny Pile of Tin Dust
-morphDust(<ic2:dust:19>, <liquid:copper> * 500 , <thermalfoundation:material:99>, [<aspect:metallum> * 120]); // Tiny Pile of Copper Dust
-morphDust(<ic2:dust:21>, <liquid:iron> * 500 , <thermalfoundation:material:98>, [<aspect:metallum> * 40, <aspect:instrumentum> * 95]); // Tiny Pile of Iron Dust
-morphDust(<ic2:dust:23>, <liquid:lead> * 500 , <thermalfoundation:material:67>, [<aspect:metallum> * 40, <aspect:fabrico> * 90]); // Tiny Pile of Lead Dust
-morphDust(<ic2:dust:26>, <liquid:silver> * 500 , <thermalfoundation:material:97>, [<aspect:metallum> * 40, <aspect:machina> * 55]); // Tiny Pile of Silver Dust
-morphDust(<ic2:dust:2> , <liquid:petrotheum> * 500 , <actuallyadditions:item_misc:5>, [<aspect:metallum> * 40, <aspect:exanimis> * 30]); // Coal Dust
-morphDust(<ic2:dust:31>, <liquid:spectre> * 500 , <biomesoplenty:crystal_shard> , [<aspect:metallum> * 40, <aspect:praemunio> * 60]); // Ender Pearl Dust
-morphDust(<ic2:dust:36>, <liquid:cryotheum_nak> * 500 , <enderio:item_material:14> , [<aspect:metallum> * 40, <aspect:spiritus> * 50]); // Tiny Pile of Diamond Dust
+// Metals
+morphDust(<ic2:dust:20>, null, <exnihilocreatio:item_ore_gold>, <minecraft:glowstone_dust>, [<aspect:desiderium> * 50]); // Tiny Pile of Gold Dust
+morphDust(<ic2:dust:28>, null, <exnihilocreatio:item_ore_tin>, <thermalfoundation:material:99>, [<aspect:metallum> * 120]); // Tiny Pile of Tin Dust
+morphDust(<ic2:dust:19>, null, <exnihilocreatio:item_ore_copper>, <thermalfoundation:material:99>, [<aspect:metallum> * 120]); // Tiny Pile of Copper Dust
+morphDust(<ic2:dust:21>, null, <exnihilocreatio:item_ore_iron>, <thermalfoundation:material:98>, [<aspect:instrumentum> * 95]); // Tiny Pile of Iron Dust
+morphDust(<ic2:dust:23>, null, <exnihilocreatio:item_ore_lead>, <thermalfoundation:material:67>, [<aspect:fabrico> * 90]); // Tiny Pile of Lead Dust
+morphDust(<ic2:dust:26>, null, <exnihilocreatio:item_ore_silver>, <thermalfoundation:material:97>, [<aspect:machina> * 55]); // Tiny Pile of Silver Dust
+
+// Other
+morphDust(<ic2:dust:16>, <liquid:ic2pahoehoe_lava> * 1000, null, <enderio:item_material:22>, [<aspect:desiderium> * 50]); // Sulfur Dust
+morphDust(<ic2:dust:2>, <liquid:petrotheum> * 500, null, <actuallyadditions:item_misc:5>, [<aspect:exanimis> * 30]); // Coal Dust
+morphDust(<ic2:dust:31>, <liquid:spectre> * 500, null, <biomesoplenty:crystal_shard>, [<aspect:praemunio> * 60]); // Ender Pearl Dust
+morphDust(<ic2:dust:36>, <liquid:cryotheum_nak> * 500, null, <enderio:item_material:14>, [<aspect:spiritus> * 50]); // Tiny Pile of Diamond Dust
 
 // Special case for dusts that recipes not stick with oredict
 // Coal
@@ -513,10 +526,10 @@ scripts.process.squeeze([<ic2:crop_res:4>], <fluid:ic2biogas> * 200, 'only: Indu
 scripts.process.squeeze([<ic2:terra_wart>], <fluid:cryotheum> * 400, 'only: CrushingTub IndustrialSqueezer');
 
 // [Oil Bucket] from [Oil Berry]
-scripts.process.squeeze([<ic2:crop_res:7>], <fluid:oil> * 500, 'only: CrushingTub IndustrialSqueezer');
+scripts.process.squeeze([<ic2:crop_res:7>], <fluid:oil> * 100, 'only: CrushingTub IndustrialSqueezer');
 
 // [Molten Mirion Bucket] from [Bobs-Yer-Uncle-Ranks Berry]
-scripts.process.squeeze([<ic2:crop_res:8>], <fluid:mirion> * 48, 'only: CrushingTub IndustrialSqueezer');
+scripts.process.squeeze([<ic2:crop_res:8>], <fluid:mirion> * 2, 'only: CrushingTub IndustrialSqueezer');
 
 // [HDPE Pellet] from [Milk Wart]
 scripts.process.compress(<ic2:crop_res:6>, <mekanism:polyethene>);
