@@ -1,0 +1,47 @@
+{
+  "name": "compactmachines3:twilightforest_castle_guardian",
+
+  "target-item": "minecraft:spawn_egg",
+  "target-nbt": "{EntityTag:{id:\"twilightforest:castle_guardian\"}}",
+
+  "catalyst": "minecraft:spawn_egg",
+  "catalyst-nbt": "{EntityTag:{id:\"twilightforest:castle_guardian\"}}",
+
+  "input-types": {
+    "r": { "id": "thaumcraft:stone_porous", "ignore-meta": true },
+    "T": { "id": "advancedrocketry:metal0", "meta": 1 },
+    "x": { "id": "contenttweaker:conglomerate_of_life", "ignore-meta": true },
+    "I": { "id": "bloodmagic:demon_pillar_2", "ignore-meta": true },
+    "o": { "id": "twilightforest:castle_brick", "ignore-meta": true }
+  },
+  "shape": [
+    [
+      ["_", "_", "_", "_", "_"],
+      ["_", "_", "o", "_", "_"],
+      ["_", "o", "x", "o", "_"],
+      ["_", "_", "o", "_", "_"],
+      ["_", "_", "_", "_", "_"]
+    ],
+    [
+      ["_", "_", "_", "_", "_"],
+      ["_", "_", "_", "_", "_"],
+      ["_", "_", "I", "_", "_"],
+      ["_", "_", "_", "_", "_"],
+      ["_", "_", "_", "_", "_"]
+    ],
+    [
+      ["_", "_", "_", "_", "_"],
+      ["_", "T", "r", "T", "_"],
+      ["_", "r", "I", "r", "_"],
+      ["_", "T", "r", "T", "_"],
+      ["_", "_", "_", "_", "_"]
+    ],
+    [
+      ["_", "o", "_", "o", "_"],
+      ["o", "T", "r", "T", "o"],
+      ["_", "r", "I", "r", "_"],
+      ["o", "T", "r", "T", "o"],
+      ["_", "o", "_", "o", "_"]
+    ]
+  ]
+}

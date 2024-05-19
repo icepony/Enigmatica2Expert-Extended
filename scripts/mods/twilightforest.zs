@@ -88,6 +88,51 @@ scripts.do.build_mob.add(<entity:twilightforest:quest_ram>, [
     pl.sendPlaySoundPacket('minecraft:entity.sheep.ambient', 'ambient', p, 1, 1);
   }
 }).shiftDown(3);
+
+scripts.do.build_mob.add(<entity:twilightforest:castle_guardian>, [
+  [
+    '     ',
+    '  o  ',
+    ' oxo ',
+    '  o  ',
+    '     ',
+  ], [
+    '     ',
+    '     ',
+    '  I  ',
+    '     ',
+    '     ',
+  ], [
+    '     ',
+    ' TrT ',
+    ' rIr ',
+    ' TrT ',
+    '     ',
+  ], [
+    ' o o ',
+    'oTrTo',
+    ' rIr ',
+    'oTrTo',
+    ' o o ',
+  ],
+], {
+  o: <twilightforest:castle_brick>,
+  T: <advancedrocketry:metal0:1>,
+  r: <thaumcraft:stone_porous>,
+  I: <bloodmagic:demon_pillar_2>,
+  x: <contenttweaker:conglomerate_of_life>,
+}, function(world as crafttweaker.world.IWorld, p as crafttweaker.util.Position3f) as void {
+  for entity in world.getEntitiesWithinAABB(crafttweaker.util.IAxisAlignedBB.create(p).grow(1, 3, 1)) {
+    if (entity.definition.id != 'twilightforest:castle_guardian') continue;
+    val living as crafttweaker.entity.IEntityLivingBase = entity;
+    living.addPotionEffect(<potion:mia:growth_potion>.makePotionEffect(50, 10));
+    living.addPotionEffect(<potion:potioncore:diamond_skin>.makePotionEffect(30000, 10));
+    living.addPotionEffect(<potion:potioncore:iron_skin>.makePotionEffect(30000, 10));
+    living.addPotionEffect(<potion:potioncore:magic_shield>.makePotionEffect(30000, 10));
+    living.addPotionEffect(<potion:rustic:wither_ward>.makePotionEffect(30000, 10));
+    living.addPotionEffect(<potion:minecraft:regeneration>.makePotionEffect(30000, 10));
+  }
+}).mirrored();
 /////////////////////////////////////////
 
 for tuple in [

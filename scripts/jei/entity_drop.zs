@@ -273,7 +273,7 @@ return list.map(({ groups: { id, display, items } }) => {
   add(<entity:twilightforest:blockchain_goblin>       , [<twilightforest:armor_shard> * 104]); // Block and Chain Goblin
   add(<entity:twilightforest:boggard>                 , [<twilightforest:maze_map_focus> * 27]); // Boggard [NYI]
   add(<entity:twilightforest:bunny>                   , [<minecraft:rabbit_foot> * 6, <minecraft:rabbit_hide> * 58, <minecraft:rabbit> * 47]); // Dwarf Rabbit
-# add(<entity:twilightforest:castle_guardian>         , []); // Castle Guardian [NYI]
+  add(<entity:twilightforest:castle_guardian>         , [<mekanism:saltblock> * 10000]); // Castle Guardian [NYI]
   add(<entity:twilightforest:death_tome>              , [<minecraft:book> * 90, <minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 16}]}) * 1, <minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 19}]}) * 1, <minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 32}]}) * 1, <minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 2 as short, id: 2}]}) * 1, <minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 2 as short, id: 32}, {lvl: 1 as short, id: 57}]}) * 1, <minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 3 as short, id: 34}]}) * 1, <minecraft:paper> * 352, <minecraft:writable_book> * 8, <twilightforest:magic_map_focus> * 2]); // Death Tome
   add(<entity:twilightforest:deer>                    , [<harvestcraft:venisonrawitem> * 194, <minecraft:leather> * 106, <betteranimalsplus:antler> * 50]); // Wild Deer
   add(<entity:twilightforest:fire_beetle>             , [<minecraft:gunpowder> * 99, <thermalfoundation:material:771> * 18]); // Fire Beetle

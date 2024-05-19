@@ -4,6 +4,7 @@
 modifier.excompressum:smashingii.desc=Hammering compressed blocks
 tile.spectreCoil_number.info=Generates 32 RF/t and outputs it into the block it's attached to. They can be found in dungeon chests.
 entity.twilightforest.harbinger_cube.name=Harbinger Cube
+entity.twilightforest.castle_guardian.name=Castle Guardian
 # --------------------------------------
 # Custom mechanics
 # --------------------------------------
