@@ -7,17 +7,17 @@
     "meta": 7
   },
   "components": [
-    { "weight": 50, "oreName": "oreIron"}
-    ,{"weight": 100,"oreName": "oreGold"}
-    ,{"weight": 10, "oreName": "oreLapis"}
-    ,{"weight": 50, "oreName": "oreRedstone"}
-    ,{"weight": 400,"oreName": "oreDiamond"}
-    ,{"weight": 400,"oreName": "oreIridium"}
+     {"weight":  40,"oreName": "oreDraconium"}
+    ,{"weight":  50,"oreName": "oreAstralStarmetal"}
+    ,{"weight":  70,"oreName": "oreRutile"}
     ,{"weight": 100,"oreName": "oreMithril"}
+    ,{"weight": 140,"oreName": "orePlatinum"}
+    ,{"weight": 200,"oreName": "oreIridium"}
+    ,{"weight": 300,"oreName": "mica"}
   ],
   "explosionStrength": 10.0,
   "radius": 5,
-  "maxWeight": 1290,
+  "maxWeight": 900,
   "version": 4,
   "cost": 1000000
 }

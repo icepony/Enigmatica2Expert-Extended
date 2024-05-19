@@ -20,18 +20,17 @@ glob.sync('config/bloodmagic/meteors/*.json')
   `${f.catalystStack.registryName.domain}:${f.catalystStack.registryName.path}`,
   f.catalystStack.meta,
   f.cost,
-  ...f.components.map(c=>c.oreName.substring(3))
+  ...f.components.map(c=>c.oreName)
   ]
   .map(s=>`'${s}'`).join(', ')
 ).map(s=>`  [${s}],`).sort(naturalSort).join('\n')
 ) */
-  ['jaopca:block_blockdilithium', '0', '2000000', 'EndDilithium', 'ClathrateRedstone', 'ClathrateEnder', 'ClathrateGlowstone'],
-  ['minecraft:emerald_block', '0', '1400000', 'Lapis', 'Diamond', 'Coal', 'Ruby', 'Peridot', 'Topaz', 'Tanzanite', 'Malachite', 'Sapphire', 'Amber', 'Apatite', 'CertusQuartz', 'Cinnabar', 'Prosperity', 'QuartzBlack'],
-  ['minecraft:iron_block', '0', '600000', 'Iron', 'Copper', 'Tin', 'Silver', 'Lead', 'Gold', 'Lapis', 'Redstone', 'Aluminum'],
-  ['nuclearcraft:ingot_block', '3', '1100000', 'Thorium', 'Boron', 'Lithium', 'Magnesium'],
-  ['tconstruct:metal', '1', '1700000', 'Quartz', 'NetherAluminum', 'NetherCopper', 'NetherLead', 'NetherNickel', 'NetherRedstone', 'NetherLapis', 'NetherIron', 'NetherGold', 'NetherDiamond', 'NetherCoal', 'NetherPlatinum', 'NetherSilver', 'NetherTin', 'NetherCertusQuartz', 'NetherChargedCertusQuartz', 'NetherOsmium', 'NetherUranium', 'Cobalt', 'Ardite'],
-  ['thermalfoundation:storage', '6', '600000', 'Iron', 'Copper', 'Tin', 'Gold', 'AstralStarmetal', 'Draconium', 'Nickel', 'Osmium', 'Platinum', 'Rutile', 'Uranium'],
-  ['thermalfoundation:storage', '7', '1000000', 'Iron', 'Gold', 'Lapis', 'Redstone', 'Diamond', 'Iridium', 'Mithril'],
+  ['jaopca:block_blockdilithium', '0', '2000000', 'oreEndDilithium', 'oreClathrateRedstone', 'oreClathrateEnder', 'oreClathrateGlowstone'],
+  ['minecraft:emerald_block', '0', '1400000', 'oreLapis', 'oreDiamond', 'oreCoal', 'oreRuby', 'orePeridot', 'oreTopaz', 'oreTanzanite', 'oreMalachite', 'oreSapphire', 'oreAmber', 'oreApatite', 'oreCertusQuartz', 'oreCinnabar', 'oreProsperity', 'oreQuartzBlack'],
+  ['minecraft:iron_block', '0', '600000', 'oreIron', 'oreCopper', 'oreTin', 'oreSilver', 'oreLead', 'oreGold', 'oreLapis', 'oreRedstone', 'oreAluminum'],
+  ['nuclearcraft:ingot_block', '3', '1100000', 'oreThorium', 'oreBoron', 'oreLithium', 'oreMagnesium'],
+  ['tconstruct:metal', '1', '1700000', 'oreQuartz', 'oreNetherAluminum', 'oreNetherCopper', 'oreNetherLead', 'oreNetherNickel', 'oreNetherRedstone', 'oreNetherLapis', 'oreNetherIron', 'oreNetherGold', 'oreNetherDiamond', 'oreNetherCoal', 'oreNetherPlatinum', 'oreNetherSilver', 'oreNetherTin', 'oreNetherCertusQuartz', 'oreNetherChargedCertusQuartz', 'oreNetherOsmium', 'oreNetherUranium', 'oreCobalt', 'oreArdite'],
+  ['thermalfoundation:storage', '7', '1000000', 'oreDraconium', 'oreAstralStarmetal', 'oreRutile', 'oreMithril', 'orePlatinum', 'oreIridium', 'mica'],
 /**/
 ];
 
@@ -49,7 +48,7 @@ for i, meteor in meteors {
   val meteorAss = AssemblyRecipe.create(function (container) {
     for i, ore in meteor {
       if (i < 3) continue;
-      container.addItemOutput('i' ~ (i - 3), oreDict.get('ore' ~ ore).firstItem);
+      container.addItemOutput('i' ~ (i - 3), oreDict.get(ore).firstItem);
     }
   });
   meteorAss.requireItem('f0', itemUtils.getItem(meteor[0], meteor[1]));
