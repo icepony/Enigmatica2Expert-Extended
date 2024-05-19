@@ -54,6 +54,7 @@ for item in [
   <botania:tornadorod>,
   <botania:waterrod>,
   <computercraft:printout>,
+  <contenttweaker:compressed_coral>,
   <contenttweaker:conglomerate_of_life>,
   <contenttweaker:conglomerate_of_sun>,
   <cyclicmagic:inventory_food>,

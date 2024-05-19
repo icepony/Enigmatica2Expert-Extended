@@ -140,6 +140,15 @@ b.blockSoundType = <soundtype:stone>;
 b.lightValue = 14.0 / 15.0 + 0.00001;
 b.register();
 
+b = VanillaFactory.createBlock('compressed_coral', <blockmaterial:rock>);
+b.toolClass = 'pickaxe';
+b.toolLevel = 3;
+b.blockHardness = 3 * 1.6;
+b.blockResistance = 3 * 1.4;
+b.blockSoundType = <soundtype:stone>;
+b.lightValue = (4.0 / 15.0 + 0.00001) as int;
+b.register();
+
 // -------------------------------
 // Molten Cheese
 // -------------------------------

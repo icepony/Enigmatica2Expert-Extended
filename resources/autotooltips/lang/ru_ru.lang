@@ -65,6 +65,7 @@ tooltips.lang.exnihilocreatio:hammer_diamond=§4Не работает. Испо�
 tooltips.lang.bibliocraft:fancysign=§eВызывает заметный лаг ФПС
 tooltips.lang.contenttweaker:conglomerate_of_life=§2Помогает кошкам кашлять меховые шары
 tooltips.lang.contenttweaker:conglomerate_of_sun=§2Ускоряет рост животных
+tooltips.lang.contenttweaker:compressed_coral=§2● Превращается в биомный булыжник, если сверху нет блока воды.<br>§2● Случайным образом спавнит кораллы по бокам (если их можно там разместить).
 tooltips.lang.advancedrocketry:liquidtank=§cТеряет почти всю жидкость при снятии!
 tooltips.lang.botania:dirtrod=§aСтавит землю.§8 Расходует ману.
 tooltips.lang.botania:terraformrod=§aВыравнивает и уровняет землю.§8 Расходует ману.

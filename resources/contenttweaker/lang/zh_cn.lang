@@ -175,6 +175,7 @@ tile.contenttweaker.compressed_string.name=压缩线
 tile.contenttweaker.compressed_string_double.name=双重压缩线
 tile.contenttweaker.compressed_basalt.name=压缩玄武岩
 tile.contenttweaker.compressed_basalt_double.name=双重压缩玄武岩
+tile.contenttweaker.compressed_coral.name=压缩珊瑚
 tile.contenttweaker.conglomerate_of_life.name=生命团块
 tile.contenttweaker.conglomerate_of_coal.name=煤炭团块
 tile.contenttweaker.conglomerate_of_sun.name=耀阳团块

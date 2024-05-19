@@ -35,11 +35,15 @@ craft.remake(<exnihilocreatio:item_mesh:1>, ['pretty',
   s: <ore:string>, // String
 });
 
-// Compressed Basalt
+// Compressed
 val B = <ore:stoneBasalt>;
 recipes.addShapeless(<contenttweaker:compressed_basalt>, [B, B, B, B, B, B, B, B, B]);
 recipes.addShapeless(utils.tryCatch("chisel:basalt2", 7, <quark:basalt>) * 9, [<contenttweaker:compressed_basalt>]);
 utils.compact(<contenttweaker:compressed_basalt>, <contenttweaker:compressed_basalt_double>);
+
+val C = <biomesoplenty:coral:*>;
+recipes.addShapeless(<contenttweaker:compressed_coral>, [C, C, C, C, C, C, C, C, C]);
+recipes.addShapeless(<biomesoplenty:coral> * 9, [<contenttweaker:compressed_coral>]);
 
 // Molten Cheese
 scripts.process.melt(<rats:block_of_cheese>, <liquid:cheese> * 1000);

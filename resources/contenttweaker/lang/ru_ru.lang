@@ -175,6 +175,7 @@ tile.contenttweaker.compressed_string.name=Сжатая Нить
 tile.contenttweaker.compressed_string_double.name=Вдвойне Сжатая Нить
 tile.contenttweaker.compressed_basalt.name=Сжатый Базальт
 tile.contenttweaker.compressed_basalt_double.name=Вдвойне Сжатый Базальт
+tile.contenttweaker.compressed_coral.name=Сжатый Корал
 tile.contenttweaker.conglomerate_of_life.name=Конгломерат Жизни
 tile.contenttweaker.conglomerate_of_coal.name=Конгломерат Угля
 tile.contenttweaker.conglomerate_of_sun.name=Конгломерат Солнца
