@@ -25,8 +25,9 @@ zenClass MobBuild {
   var entity  as IEntityDefinition;
   var volume  as string[][];
   var map     as IItemStack[string];
-  var entityHeight as float;
-  var spawnFnc as function(IWorld,IBlockPos)void;
+  var entityHeight as float = 1.0f;
+  var spawnFnc as function(IWorld,Position3f)void;
+  var isMirrored as bool = false;
 
   // Computed fields
   var core  as IItemStack;
@@ -36,6 +37,22 @@ zenClass MobBuild {
   var center as Position3f;
 
   zenConstructor() { }
+
+  // ----------------------------------------------------------
+  // Public functions
+  // ----------------------------------------------------------
+  // Make model mirrored to all sides
+  function mirrored() as MobBuild {
+    isMirrored = true;
+    return this;
+  }
+
+  // When entity spawning, move it down this distance
+  function shiftDown(shift as float) as MobBuild {
+    entityHeight = shift;
+    return this;
+  }
+  // ----------------------------------------------------------
 
   function getCore() as IItemStack {
     if (!isNull(core)) return core;
@@ -57,7 +74,7 @@ zenClass MobBuild {
           if (c != 'x') continue;
           core = block;
           coreX = x;
-          coreY = y;
+          coreY = volume.length - 1 - y;
           coreZ = z;
           break;
         }
@@ -79,10 +96,11 @@ zenClass MobBuild {
           val r = rotate(face, x - coreX, z - coreZ);
           val p = IBlockPos.create(
             pos.x + r[0],
-            pos.y + volume.length - 1 - y - coreY,
+            pos.y + volume.length - 1 - coreY - y,
             pos.z + r[1]
           );
-          if (func(map[c], p)) continue;
+          val isBlockMatch = func(map[c], p);
+          if (isBlockMatch) continue;
           return false;
         }
       }
@@ -92,10 +110,16 @@ zenClass MobBuild {
 
   function make(world as IWorld, pos as IBlockPos) as bool {
     val offset = getCenter();
-    for face in 0 .. 4 {
+    for face in 0 .. (isMirrored ? 1 : 4) {
       // Check if we have all blocks on place
       if (!iterVolume(pos, face, function (need as IItemStack, p as IBlockPos) as bool {
         val state = world.getBlockState(p);
+        if (isNull(state)) return false;
+        val id = state.block.definition.id;
+
+        // Exception for block that for some reason causing crash
+        if (id == 'buildinggadgets:effectblock') return false;
+
         val haveItem = state.block.getItem(world, p, state);
         return need has haveItem;
       })) continue;
@@ -111,7 +135,7 @@ zenClass MobBuild {
       val truePos = Position3f.create(r[0] + pos.x, offset.y + pos.y - entityHeight / 2, r[1] + pos.z);
       utils.executeCommandSilent(server, '/summon ' ~ entity.id ~ ' ' ~ truePos.x ~ ' ' ~ truePos.y ~ ' ' ~ truePos.z ~ ' {Rotation:[' ~ (face * 90 - 180) ~ 'f,0f]}');
 
-      spawnFnc(world, pos);
+      spawnFnc(world, truePos);
 
       return true;
     }
@@ -121,7 +145,7 @@ zenClass MobBuild {
   function getCenter() as Position3f {
     if (isNull(center)) center = Position3f.create(
       0.5f * volume[0].length - coreX,
-      0.5f * volume.length - coreY,
+      0.5f * volume.length - 1 - coreY,
       0.5f * volume[0][0].length() - coreZ
     );
 
@@ -138,13 +162,12 @@ zenClass MobBuild {
 
 static builds as MobBuild[IEntityDefinition] = {} as MobBuild[IEntityDefinition];
 
-function add(entity as IEntityDefinition, volume as string[][], map as IItemStack[string], entityHeight as float = 1.0f, spawnFnc as function(IWorld,IBlockPos)void = null) as void {
+function add(entity as IEntityDefinition, volume as string[][], map as IItemStack[string], spawnFnc as function(IWorld,Position3f)void = null) as MobBuild {
   val m =  MobBuild();
   m.entity = entity;
   m.volume = volume;
   m.map = map;
   m.spawnFnc = spawnFnc;
-  m.entityHeight = entityHeight;
   builds[entity] = m;
 
   if (utils.DEBUG) {
@@ -181,6 +204,8 @@ function add(entity as IEntityDefinition, volume as string[][], map as IItemStac
     ~ '\n}\n'
     );
   }
+
+  return m;
 }
 
 function build(world as IWorld, pos as IBlockPos, state as IBlockState) as void {

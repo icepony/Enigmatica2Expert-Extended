@@ -82,12 +82,12 @@ scripts.do.build_mob.add(<entity:twilightforest:quest_ram>, [
   c: <twilightforest:cicada>,
   w: <contenttweaker:compressed_string>,
   x: <contenttweaker:conglomerate_of_life>,
-}, 3, function(world as crafttweaker.world.IWorld, p as crafttweaker.world.IBlockPos) as void {
+}, function(world as crafttweaker.world.IWorld, p as crafttweaker.util.Position3f) as void {
   for pl in world.getAllPlayers() {
     if (abs(pl.x - p.x) > 20 || abs(pl.y - p.y) > 20 || abs(pl.z - p.z) > 20) continue;
     pl.sendPlaySoundPacket('minecraft:entity.sheep.ambient', 'ambient', p, 1, 1);
   }
-});
+}).shiftDown(3);
 /////////////////////////////////////////
 
 for tuple in [
