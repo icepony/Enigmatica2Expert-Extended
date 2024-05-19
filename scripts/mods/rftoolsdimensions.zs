@@ -34,6 +34,12 @@
 ]);
 
 scripts.jei.crafting_hints.addInsOutCatl([<rftoolsdim:dimlet_parcel>], <ore:dimlet>.firstItem);
+scripts.jei.crafting_hints.addInsOutsCatl(
+  [<rftoolsdim:known_dimlet:6>.withTag({dkey: "Invertigo"})],
+  [<rftoolsdim:fake_gravel> * 999,  <rftoolsdim:fake_sand> * 999],
+  <rftoolsdim:dimension_builder>
+);
+
 
 // *======= Recipes =======*
 
