@@ -1,10 +1,10 @@
 {
   "catalystStack": {
     "registryName": {
-      "domain": "nuclearcraft",
-      "path": "ingot_block"
+      "domain": "immersiveengineering",
+      "path": "storage"
     },
-    "meta": 3
+    "meta": 5
   },
   "components": [
     { "weight": 30,"oreName": "oreThorium"}
@@ -16,5 +16,5 @@
   "radius": 4,
   "maxWeight": 100,
   "version": 4,
-  "cost": 1100000
+  "cost": 550000
 }

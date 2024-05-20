@@ -7,14 +7,15 @@
     "meta": 0
   },
   "components": [
-    { "weight":150,"oreName": "oreEndDilithium"}
-    ,{"weight": 60,"oreName" : "oreClathrateRedstone"}
-    ,{"weight": 60,"oreName" : "oreClathrateEnder"}
-    ,{"weight": 60,"oreName" : "oreClathrateGlowstone"}
+     {"weight":300,"oreName": "sandOxidisedFerric"}
+    ,{"weight":150,"oreName": "oreEndDilithium"}
+    ,{"weight": 60,"oreName": "oreClathrateRedstone"}
+    ,{"weight": 60,"oreName": "oreClathrateEnder"}
+    ,{"weight": 60,"oreName": "oreClathrateGlowstone"}
   ],
   "explosionStrength": 12.0,
-  "radius": 3,
-  "maxWeight": 330,
+  "radius": 4,
+  "maxWeight": 630,
   "version": 4,
-  "cost": 2000000
+  "cost": 1000000
 }

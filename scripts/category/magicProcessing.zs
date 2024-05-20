@@ -117,8 +117,8 @@ function magicProcessing(nativeClusterOreEntry as IOreDictEntry, ore_name as str
   furnace.addRecipe(dirtyGem * 10, currItem);
 
   // mods.bloodmagic.AlchemyTable.addRecipe(IItemStack output, IItemStack[] inputs, int syphon, int ticks, int minTier);
-  mods.bloodmagic.AlchemyTable.addRecipe(currItem, [
-    prevItem, <bloodmagic:component:8>, <bloodmagic:cutting_fluid>, prevItem,
+  mods.bloodmagic.AlchemyTable.addRecipe(currItem * 2, [
+    prevItem, prevItem, <bloodmagic:component:8>, prevItem, prevItem, <bloodmagic:cutting_fluid:1>,
   ], 20000, 400, 4);
 
   // ██╗  ██╗

@@ -1,6 +1,7 @@
 #modloaded bloodmagic
 
 import crafttweaker.item.IItemStack;
+import crafttweaker.item.IIngredient;
 
 // Blood Orb Oredicts
 <ore:orbTier1>.add(<bloodmagic:blood_orb>.withTag({ orb: 'bloodmagic:weak' }));
@@ -231,6 +232,7 @@ val alcTableOres = [
   <biomesoplenty:gem_ore:6>,
   <biomesoplenty:gem_ore>,
   <draconicevolution:draconium_ore>,
+  <endreborn:block_wolframium_ore>,
   <forestry:resources>,
   <immersiveengineering:ore:5>,
   <libvulpes:ore0:8>,
@@ -259,6 +261,7 @@ val alcTableOres = [
   <thermalfoundation:ore:7>,
   <thermalfoundation:ore:8>,
   <thermalfoundation:ore>,
+  <trinity:trinitite>,
 ] as IItemStack[];
 
 for item in alcTableOres {
@@ -287,9 +290,49 @@ craft.shapeless(<bloodmagic:decorative_brick:3> * 4, '****', {
 // [Sigil of the whirlwind]
 mods.bloodmagic.AlchemyArray.addRecipe(<bloodmagic:sigil_whirlwind>, <minecraft:shield>, <bloodmagic:slate>);
 
+// Remove Plant Oil from the game since there modded oils will be used
+Purge(<bloodmagic:component:22>);
+mods.bloodmagic.AlchemyTable.removeRecipe([<minecraft:wheat>, <minecraft:wheat>, <minecraft:dye:15>]);
+mods.bloodmagic.AlchemyTable.removeRecipe([<minecraft:potato>, <minecraft:potato>, <minecraft:dye:15>]);
+mods.bloodmagic.AlchemyTable.removeRecipe([<minecraft:beetroot>, <minecraft:beetroot>, <minecraft:beetroot>, <minecraft:dye:15>]);
+mods.bloodmagic.AlchemyTable.removeRecipe([<minecraft:carrot>, <minecraft:carrot>, <minecraft:carrot>, <minecraft:dye:15>]);
+
+// Remake other ingredients that used Plant Oil
+mods.bloodmagic.AlchemyTable.removeRecipe([<bloodmagic:component:22>, <minecraft:gold_nugget>, <minecraft:wheat>, <minecraft:sugar>, <minecraft:brown_mushroom>, <minecraft:red_mushroom>]);
+mods.bloodmagic.AlchemyTable.addRecipe(<bloodmagic:component:26> * 4, [
+  <thaumcraft:bath_salts>,
+  <botania:manaresource:23>,
+  <psi:material>,
+  <thaumcraft:bath_salts>,
+  <botania:manaresource:23>,
+  <psi:material>,
+  ], 1000, 80, 2);
+mods.bloodmagic.AlchemyTable.addRecipe(<bloodmagic:component:26> * 16, [
+  <thaumcraft:bath_salts>,
+  <botania:manaresource:23>,
+  <psi:material>,
+  <thaumcraft:bath_salts>,
+  <botania:manaresource:23>,
+  <rustic:fluid_bottle>.withTag({Fluid: {FluidName: "oliveoil", Amount: 1000}})
+  ], 1000, 80, 2);
+
+mods.bloodmagic.AlchemyTable.removeRecipe([<thermalfoundation:material:768>, <minecraft:gunpowder>, <minecraft:redstone>, <minecraft:sugar>, <bloodmagic:component:22>, <minecraft:potion>.withTag({Potion: "minecraft:water"})]);
+mods.bloodmagic.AlchemyTable.addRecipe(<bloodmagic:cutting_fluid>, [
+  <randomthings:ingredient:13>,
+  <contenttweaker:nugget_phosphor>,
+  <mechanics:fuel_dust_tiny>,
+  ], 1000, 80, 1);
+
 // ///////////////////////////////////////////////////////////////////
 // Add cutting of any compressed block
 // ///////////////////////////////////////////////////////////////////
+
+mods.bloodmagic.AlchemyTable.removeRecipe([<minecraft:gunpowder>, <minecraft:gunpowder>, <thermalfoundation:material:768>]);
+mods.bloodmagic.AlchemyTable.addRecipe(<bloodmagic:cutting_fluid:1>, [
+  <minecraft:gunpowder>,
+  <minecraft:gunpowder>,
+  <appliedenergistics2:material:45>,
+  ], 500, 60, 1);
 
 val compressions = [
   [
@@ -318,7 +361,107 @@ for group in compressions {
   for i in 1 .. group.length {
     for j in 0 .. longest {
       if (group[i - 1].length < j || group[i].length < j || isNull(group[i - 1][j]) || isNull(group[i][j])) continue;
-      mods.bloodmagic.AlchemyTable.addRecipe(group[i][j], [group[i - 1][j], <bloodmagic:cutting_fluid>], i * 1000, j * 20 + 20, min(4, j / 4));
+      mods.bloodmagic.AlchemyTable.addRecipe(group[i][j], [group[i - 1][j], <bloodmagic:cutting_fluid:1>], i * 200, j * 10 + 10, min(4, j / 4));
     }
   }
+}
+
+// ///////////////////////////////////////////////////////////////////
+// Magic alloying alternative
+// ///////////////////////////////////////////////////////////////////
+
+function magicAlloy(output as IItemStack, input as IIngredient[]) as void {
+  mods.bloodmagic.AlchemyTable.addRecipe(output, input + <bloodmagic:component:25>, 2000, 10, 3);
+}
+
+/* Inject_js(
+_.uniqBy([
+  ...loadJson('exports/recipes/nuclearcraft_alloy_furnace.json').recipes,
+  ...loadJson('exports/recipes/AlloySmelter.json').recipes,
+]
+  .map((r) => {
+    function stacksToOreSet(stacks) {
+      return stacks.map(({ name }) => {
+        const [mod, id, meta] = name.split(':')
+        return [...getItemOredictSet(`${mod}:${id}`, meta || '0')]
+      })
+    }
+
+    function getDustForm(oreList) {
+      for (const ore of oreList) {
+        if (/^dust([A-Z].*)/.test(ore)) return getByOredict_first(ore)
+        const realOre = ore === 'ingotPsioMetal' ? 'ingotSilver' : ore
+        const oreBase = realOre.match(/^block([A-Z].*)/)?.[1]
+          || realOre.match(/^ingot([A-Z].*)/)?.[1]
+          || realOre.match(/^item([A-Z].*)/)?.[1]
+        if (!oreBase) continue
+
+        const dust = getByOreBase(oreBase).dust
+        if (dust) return dust
+      }
+    }
+
+    function itemsToOres(items) {
+      return items.map(({ stacks }) => [
+        ...stacksToOreSet(stacks.filter(s => s.type !== 'oredict')),
+        ...stacks.filter(s => s.type === 'oredict').map(s => s.name),
+      ].flat())
+    }
+
+    const outputOres = [...new Set(itemsToOres(r.output.items).flat())]
+    const outputDust = getDustForm(outputOres)
+    if (!outputDust) return undefined
+
+    // INPUTS
+    const filteredInputs = r.input.items.filter(i => i.stacks.every(s => /item|oredict/.test(s.type)))
+
+    const inputOres = itemsToOres(filteredInputs).filter(i => i.length)
+    if (inputOres.length < 2) return undefined
+
+    const dustInputOres = inputOres.map(getDustForm)
+    if (inputOres.length !== dustInputOres.filter(Boolean).length) return undefined
+
+    const inputSerialized = [
+      ...dustInputOres.map((s, i) => s.commandString + ' * ' + filteredInputs[i].amount * 9),
+    ].sort(naturalSort).concat('', '').slice(0, 3)
+
+    return [
+      `magicAlloy(`,
+      outputDust.commandString,
+      ` * `,
+      r.output.items[0].amount * 9,
+      `, [`,
+      inputSerialized.join(', '),
+      `]);`,
+    ]
+  }).filter(Boolean).sort((a, b) => naturalSort(String(a), String(b))), r => String(r))
+)*/
+magicAlloy(<advancedrocketry:productdust:1> * 18, [<libvulpes:productdust:7> * 9, <thermalfoundation:material:71> * 9,                                           ]);
+magicAlloy(<advancedrocketry:productdust>   * 27, [<libvulpes:productdust:7> * 27, <thermalfoundation:material:68> * 63,                                         ]);
+magicAlloy(<qmd:chemical_dust:7>            * 9 , [<qmd:dust:7> * 9, <thermalfoundation:material:771> * 9,                                                       ]);
+magicAlloy(<thermalfoundation:material:96>  * 9 , [<nuclearcraft:dust:8> * 36, <thermalfoundation:material> * 9,                                                 ]);
+magicAlloy(<thermalfoundation:material:96>  * 9 , [<thermalfoundation:material:768> * 18, <thermalfoundation:material:768> * 18, <thermalfoundation:material> * 9]);
+magicAlloy(<thermalfoundation:material:96>  * 9 , [<thermalfoundation:material:768> * 36, <thermalfoundation:material> * 9,                                      ]);
+magicAlloy(<thermalfoundation:material:97>  * 18, [<thermalfoundation:material:1> * 9, <thermalfoundation:material:66> * 9,                                      ]);
+magicAlloy(<thermalfoundation:material:98>  * 27, [<thermalfoundation:material:69> * 9, <thermalfoundation:material> * 18,                                       ]);
+magicAlloy(<thermalfoundation:material:99>  * 36, [<thermalfoundation:material:64> * 27, <thermalfoundation:material:65> * 9,                                    ]);
+magicAlloy(<thermalfoundation:material:100> * 18, [<thermalfoundation:material:64> * 9, <thermalfoundation:material:69> * 9,                                     ]);
+magicAlloy(<thermalfoundation:material:101> * 36, [<minecraft:redstone> * 90, <thermalfoundation:material:64> * 9, <thermalfoundation:material:66> * 27          ]);
+magicAlloy(<thermalfoundation:material:102> * 36, [<minecraft:glowstone_dust> * 36, <thermalfoundation:material:65> * 27, <thermalfoundation:material:66> * 9    ]);
+/**/
+// ///////////////////////////////////////////////////////////////////
+// Sheets magic-only alt
+for oreBase in [
+  'TitaniumAluminide',
+  'TitaniumIridium',
+  'Iron',
+  'Copper',
+  'Steel',
+  'Titanium',
+  'Aluminium',
+] as string[] {
+  mods.bloodmagic.AlchemyTable.addRecipe(oreDict.get('sheet' ~ oreBase).firstItem * 4, [
+    <bloodmagic:cutting_fluid>,
+    oreDict.get('block' ~ oreBase),
+    ], 1000, 80, 3);
 }
