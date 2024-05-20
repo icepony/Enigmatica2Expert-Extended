@@ -524,6 +524,27 @@ mods.rt.RandomThingsTweaker.addImbuingRecipe(
   <enderio:item_material:49>
 );
 
+// Magic-only alt recipes
+for ingr, amount in {
+  <industrialforegoing:pink_slime>: 2,
+  <betteranimalsplus:goose_egg>: 1,
+  <betteranimalsplus:turkey_egg>: 1,
+  <betteranimalsplus:pheasant_egg>: 1,
+} as int[IIngredient] {
+  mods.bloodmagic.AlchemyTable.addRecipe(<enderio:item_material:48> * amount, [
+    <enderio:item_material:46> * 6,
+    <ore:ingotUranium238>,
+    ingr,
+    ], 300, 40, 2);
+  mods.bloodmagic.AlchemyTable.addRecipe(<enderio:item_material:50> * amount, [
+    <thermalfoundation:material:768> * 3, ingr], 300, 40, 2);
+}
+mods.bloodmagic.AlchemyTable.addRecipe(<enderio:item_material:49>, [
+  <enderio:item_material:47> * 4,
+  <forestry:mulch>,
+  <actuallyadditions:item_misc:21>,
+], 300, 40, 2);
+
 // [Pulsating Crystal] from [Biome Essence][+1]
 mods.nuclearcraft.AlloyFurnace.removeRecipeWithOutput(<enderio:item_material:14>);
 mods.tconstruct.Casting.removeTableRecipe(<enderio:item_material:14>);

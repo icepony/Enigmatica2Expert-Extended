@@ -603,8 +603,14 @@ recipes.addShapeless('salt block', <mekanism:saltblock>, [<ore:itemSalt>,<ore:it
 
 // More infuser recipes
 recipes.remove(<nuclearcraft:glowing_mushroom>);
+for id in [
+  'betteranimalsplus:goose_egg',
+  'betteranimalsplus:turkey_egg',
+  'betteranimalsplus:pheasant_egg',
+] as string[] {
+  mods.mekanism.infuser.addRecipe('CARBON', 50, utils.tryCatch(id, <minecraft:egg> * 16), <enderio:item_material:50>);
+}
 mods.mekanism.infuser.addRecipe('CARBON',  50, <industrialforegoing:pink_slime>, <enderio:item_material:50>);
-mods.mekanism.infuser.addRecipe('CARBON',  50, utils.tryCatch('betteranimalsplus:goose_egg', <minecraft:egg> * 16), <enderio:item_material:50>);
 mods.mekanism.infuser.addRecipe('FUNGI' ,  20, <ore:dustGlowstone>, <nuclearcraft:glowing_mushroom>);
 mods.mekanism.infuser.addRecipe('BIO'   , 100, <ore:eternalLifeEssence> * 4, <botania:overgrowthseed>);
 

@@ -638,6 +638,62 @@
   <recipe name="Alloy: Vivid Alloy">
     <disabled/>
   </recipe>
+  <!-- Dyes remake -->
+  <recipe name="Alloy: Green Dye">
+    <alloying energy="2000" exp="0.5">
+      <input name="itemPlantgreen" amount="6"/>
+      <input name="ingotUranium238"/>
+      <input name="industrialforegoing:pink_slime"/>
+      <output name="ORGANIC_GREEN_DYE" amount="2"/>
+    </alloying>
+  </recipe>
+  <recipe name="Alloy: Green Dye, Variant">
+    <alloying energy="1500" exp="0.25">
+      <input name="itemPlantgreen" amount="6"/>
+      <input name="ingotUranium238"/>
+      <input name="betteranimalsplus:goose_egg"/>
+      <output name="ORGANIC_GREEN_DYE"/>
+    </alloying>
+  </recipe>
+  <recipe name="Alloy: Green Dye, Variant 1">
+    <alloying energy="1500" exp="0.25">
+      <input name="itemPlantgreen" amount="6"/>
+      <input name="ingotUranium238"/>
+      <input name="betteranimalsplus:turkey_egg"/>
+      <output name="ORGANIC_GREEN_DYE"/>
+    </alloying>
+  </recipe>
+  <recipe name="Alloy: Green Dye, Variant 2">
+    <alloying energy="1500" exp="0.25">
+      <input name="itemPlantgreen" amount="6"/>
+      <input name="ingotUranium238"/>
+      <input name="betteranimalsplus:pheasant_egg"/>
+      <output name="ORGANIC_GREEN_DYE"/>
+    </alloying>
+  </recipe>
+  <recipe name="Alloy: Green Dye, Oredict">
+    <disabled/>
+  </recipe>
+  <recipe name="Alloy: Green Dye, Oredict Variant">
+    <disabled/>
+  </recipe>
+  <recipe name="Alloy: Brown Dye">
+    <alloying energy="2000" exp="0.5">
+      <input name="itemPlantbrown" amount="6"/>
+      <input name="forestry:mulch"/>
+      <input name="actuallyadditions:item_misc:21"/>
+      <output name="ORGANIC_BROWN_DYE"/>
+    </alloying>
+  </recipe>
+  <recipe name="Alloy: Brown Dye, Variant">
+    <disabled/>
+  </recipe>
+  <recipe name="Alloy: Brown Dye, Oredict">
+    <disabled/>
+  </recipe>
+  <recipe name="Alloy: Brown Dye, Oredict Variant">
+    <disabled/>
+  </recipe>
   <!-- Recipe below generated automatically. Do not make changes or they gonna be rewritten. -->
   <recipe name="Alumite Ingot">
     <alloying energy="10000">
