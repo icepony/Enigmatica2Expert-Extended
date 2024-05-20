@@ -1,0 +1,22 @@
+{
+  "Profession": "minecraft:priest",
+  "Career": "cleric",
+  "Offers": {
+    "Recipes": [
+      {
+        "action": "add",
+        "buy": { "id": "minecraft:emerald", "Count": 1 },
+        "buyB": { "id": "biomesoplenty:planks_0", "Damage": 5, "Count": 1 },
+        "sell": { "id": "extrautils2:decorativesolidwood", "Count": 1 },
+        "CareerLevel": 4
+      },
+      {
+        "action": "add",
+        "buy": { "id": "minecraft:emerald", "Count": 6 },
+        "buyB": { "id": "biomesoplenty:log_1", "Damage": 5, "Count": 1 },
+        "sell": { "id": "extrautils2:decorativesolidwood", "Damage": 1, "Count": 1 },
+        "CareerLevel": 4
+      }
+    ]
+  }
+}
