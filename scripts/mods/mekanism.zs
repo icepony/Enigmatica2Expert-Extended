@@ -725,3 +725,7 @@ craft.remake(<mekanism:machineblock3:6>, ['pretty',
   'S': <mekanism:basicblock:8>, // Steel Casing
   '♥': <ore:xuRedstoneCoil>,    // Wireless RF Heating Coil
 });
+
+// Fast enriching alt for late game
+mods.bloodmagic.AlchemyTable.addRecipe(<mekanism:enrichedalloy> * 32, [<twilightforest:carminite>, <enderio:item_alloy_ingot:9> * 32], 1000, 10, 1);
+mods.bloodmagic.AlchemyTable.addRecipe(<mekanism:enrichedalloy> * 32, [<twilightforest:carminite>, <minecraft:iron_ingot> * 32], 1000, 10, 1);
