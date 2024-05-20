@@ -541,6 +541,15 @@ scripts.mods.forestry.ThermionicFabricator.addCast(<randomthings:biomeglass> * 8
   '▬': <ore:ingotPlatinum>,        // Platinum Ingot
 }).shaped(), <fluid:glass> * 4000);
 
+// Defined by decaying of corals
+for i in 0 .. 5 {
+  val stone = <randomthings:biomestone>.definition.makeStack(i);
+  recipes.remove(stone);
+  if (i==0) continue;
+  mods.chisel.Carving.addVariation('biome_stone', stone);
+}
+furnace.addRecipe(<randomthings:biomestone:1>, <randomthings:biomestone>, 0.5);
+
 // Cheaper to use as ingredient
 craft.remake(<darkutils:monolith>, ['pretty',
   'S ▲ S',
