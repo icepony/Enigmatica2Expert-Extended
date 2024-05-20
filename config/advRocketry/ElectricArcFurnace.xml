@@ -40,20 +40,20 @@
 	</Recipe>
 	<Recipe timeRequired="16" power="100000">
 		<input>
-			<oreDict>ingotAluminum 7</oreDict>
-			<oreDict>ingotTitanium 3</oreDict>
+			<oreDict>blockAluminum 7</oreDict>
+			<oreDict>blockTitanium 3</oreDict>
 		</input>
 		<output>
-			<itemStack>advancedrocketry:productingot 6</itemStack>
+			<itemStack>advancedrocketry:metal0 6</itemStack>
 		</output>
 	</Recipe>
 	<Recipe timeRequired="16" power="100000">
 		<input>
-			<oreDict>ingotTitanium</oreDict>
-			<oreDict>ingotIridium</oreDict>
+			<oreDict>blockTitanium</oreDict>
+			<oreDict>blockIridium</oreDict>
 		</input>
 		<output>
-			<itemStack>advancedrocketry:productingot 4 1</itemStack>
+			<itemStack>advancedrocketry:metal0 4 1</itemStack>
 		</output>
 	</Recipe>
 	<Recipe timeRequired="4" power="100000">
