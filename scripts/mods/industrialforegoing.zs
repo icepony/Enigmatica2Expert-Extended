@@ -397,3 +397,6 @@ for i, dye in scripts.vars.oreDye {
     'd': dye,
   });
 }
+
+// Fast plastic alt
+scripts.process.alloy([<industrialforegoing:dryrubber>], <industrialforegoing:plastic> * 9, 'only: AdvRockArc');
