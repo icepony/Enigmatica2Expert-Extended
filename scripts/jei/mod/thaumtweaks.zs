@@ -63,7 +63,7 @@ MINER: [[
     <thaumcraft:turret:2>,
     <twilightforest:ore_magnet>,
   ], [
-    <astralsorcery:blockcustomore>,
+    <mysticalagriculture:rock_crystal_essence>,
     <thaumicwonders:transmuter_stone>,
     <twilightforest:twilight_sapling:7>,
     <cyclicmagic:storage_bag>,

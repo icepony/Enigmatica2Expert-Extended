@@ -860,7 +860,7 @@ remakeFluid ('mysticalagriculture:obsidian'             , <fluid:obsidian>      
 // remakeFluid ("mysticalagriculture:stone"                , <fluid:stone>                             , [<mysticalagriculture:stone_essence>]);
 remakeBlock   ('mysticalagriculture:gemquartzblack'       , <blockstate:actuallyadditions:block_misc:type=ore_black_quartz>          , [<mysticalagriculture:black_quartz_essence> * 7]);
 remakeBlock   ('mysticalagriculture:crystalcertusquartz'  , <blockstate:appliedenergistics2:quartz_ore>          , [<mysticalagriculture:certus_quartz_essence>]);
-remakeAltair  ('mysticalagriculture:blockcustomore'       , <astralsorcery:blockcustomore>            , [<mysticalagriculture:rock_crystal_essence>]);
+remakeBlock   ('mysticalagriculture:blockcustomore'       , <blockstate:astralsorcery:blockcustomore:oretype=rock_crystal>, [<mysticalagriculture:rock_crystal_essence>]);
 // remakeBlock   ("mysticalagriculture:itemcraftingcomponent", <blockstate:astralsorcery:blockcustomsandore>        , [<mysticalagriculture:aquamarine_essence>]);
 remakeBlock   ('mysticalagriculture:gem'                  , <blockstate:biomesoplenty:gem_ore:variant=amethyst>  , [<mysticalagriculture:ender_amethyst_essence>]);
 remakeBlock   ('mysticalagriculture:gemruby'              , <blockstate:biomesoplenty:gem_ore:variant=ruby>      , [<mysticalagriculture:ruby_essence>]);

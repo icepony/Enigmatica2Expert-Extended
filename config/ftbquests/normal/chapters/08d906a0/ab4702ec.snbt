@@ -7,16 +7,17 @@
 	],
 	optional: true,
 	tasks: [{
-		uid: "1926ce88",
+		uid: "38250d30",
 		type: "item",
 		items: [{
-			item: "astralsorcery:blockcustomore"
-		}]
+			item: "astralsorcery:itemrockcrystalsimple"
+		}],
+		ignore_nbt: 1b
 	}],
 	rewards: [{
 		uid: "7055591c",
 		type: "item",
 		item: "mysticalagriculture:rock_crystal_essence",
-		count: 16
+		count: 3
 	}]
 }

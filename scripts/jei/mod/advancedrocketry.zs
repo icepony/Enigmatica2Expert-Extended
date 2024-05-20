@@ -61,7 +61,7 @@ addAsteroid('Resonant End Stone'   , [64, 75, 0.7, 5, 1, 0.5] , [{ <thermalfound
 addAsteroid('Dilithium'            , [64, 75, 0.7, 5, 1, 0.5] , [{ <netherendingores:ore_end_modded_1:14>: 100 }, { <advancedrocketry:hotturf>: 25 }]);
 addAsteroid('Titanium'             , [64, 75, 0.7, 5, 1, 0.5] , [{ <libvulpes:ore0:8>: 100 }, { <advancedrocketry:hotturf>: 25 }]);
 addAsteroid('Starmetal'            , [64, 75, 0.7, 5, 1, 0.5] , [{ <astralsorcery:blockcustomore:1>: 100 }, { <advancedrocketry:hotturf>: 25 }]);
-addAsteroid('Rock Crystal'         , [64, 75, 0.7, 5, 1, 0.5] , [{ <astralsorcery:blockcustomore>: 100 }, { <advancedrocketry:hotturf>: 25 }]);
+addAsteroid('Rock Crystal'         , [64, 75, 0.7, 5, 1, 0.5] , [{ <mysticalagriculture:rock_crystal_essence>: 100 }, { <advancedrocketry:hotturf>: 25 }]);
 addAsteroid('Steel'                , [64, 75, 0.3, 7, 1, 0.2] , [{ <thermalfoundation:storage_alloy>: 100 }, { <advancedrocketry:hotturf>: 25 }]);
 addAsteroid('Moon Turf'            , [64, 50, 0.9, 8, 1, 0.1] , [{ <advancedrocketry:moonturf>: 50 }, { <advancedrocketry:moonturf_dark>: 50 }]);
 /**/

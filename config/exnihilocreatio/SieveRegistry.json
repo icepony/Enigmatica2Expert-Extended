@@ -137,16 +137,16 @@
 
   "exnihilocreatio:block_skystone_crushed": [
     { "meshLevel": 2, "drop": {"name": "mysticalagriculture:starmetal_essence", "meta": 0} , "chance": 0.20 },
-    { "meshLevel": 2, "drop": {"name": "mysticalagriculture:rock_crystal_essence"  , "meta": 0} , "chance": 0.5  },
+    { "meshLevel": 2, "drop": {"name": "mysticalagriculture:rock_crystal_essence"  , "meta": 0} , "chance": 0.1  },
     { "meshLevel": 2, "drop": {"name": "mysticalagriculture:black_quartz_essence"  , "meta": 0} , "chance": 0.5  },
 
     { "meshLevel": 3, "drop": {"name": "mysticalagriculture:starmetal_essence", "meta": 0} , "chance": 0.30 } ,
-    { "meshLevel": 3, "drop": {"name": "mysticalagriculture:rock_crystal_essence"  , "meta": 0} , "chance": 0.7  },
+    { "meshLevel": 3, "drop": {"name": "mysticalagriculture:rock_crystal_essence"  , "meta": 0} , "chance": 0.15  },
     { "meshLevel": 3, "drop": {"name": "mysticalagriculture:black_quartz_essence"  , "meta": 0} , "chance": 0.7  },
     { "meshLevel": 3, "drop": {"name": "fluxnetworks:flux"                         , "meta": 0} , "chance": 0.7  },
 
     { "meshLevel": 4, "drop": {"name": "mysticalagriculture:starmetal_essence"     , "meta": 0} , "chance": 0.40} ,
-    { "meshLevel": 4, "drop": {"name": "mysticalagriculture:rock_crystal_essence"  , "meta": 0} , "chance": 0.9},
+    { "meshLevel": 4, "drop": {"name": "mysticalagriculture:rock_crystal_essence"  , "meta": 0} , "chance": 0.20},
     { "meshLevel": 4, "drop": {"name": "mysticalagriculture:black_quartz_essence"  , "meta": 0} , "chance": 0.9},
     { "meshLevel": 4, "drop": {"name": "fluxnetworks:flux"                         , "meta": 0} , "chance": 0.9},
     { "meshLevel": 4, "drop": {"name": "mysticalagriculture:ruby_essence"          , "meta": 0} , "chance": 0.4} ,
@@ -427,7 +427,7 @@
   ],
 
   "enderio:block_infinity:0": [
-    {"meshLevel": 2, "drop": {"name": "mysticalagriculture:rock_crystal_essence", "meta": 0} , "chance": 0.5},
+    {"meshLevel": 2, "drop": {"name": "mysticalagriculture:rock_crystal_essence", "meta": 0} , "chance": 0.1},
     {"meshLevel": 2, "drop": {"name": "mysticalagriculture:osmium_essence"      , "meta": 0} , "chance": 0.6},
     {"meshLevel": 2, "drop": {"name": "exnihilocreatio:item_ore_nickel"         , "meta": 0} , "chance": 0.9},
     {"meshLevel": 2, "drop": {"name": "jaopca:item_pieceboron"                  , "meta": 0} , "chance": 1.0},

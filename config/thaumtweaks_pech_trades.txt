@@ -21,7 +21,7 @@ MINER:
 	thaumcraft:turret:2 // Arcane Bore
 	twilightforest:ore_magnet // Ore Magnet
 	4:
-	astralsorcery:blockcustomore // Rock Crystal Ore
+	mysticalagriculture:rock_crystal_essence // Rock Crystal Essence
 	thaumicwonders:transmuter_stone // Transmuter's Stone
 	twilightforest:twilight_sapling:7 // Miner's Tree Sapling
 	cyclicmagic:storage_bag // Storage Bag
