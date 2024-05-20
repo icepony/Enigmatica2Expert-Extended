@@ -443,7 +443,7 @@ mods.immersiveengineering.MetalPress.addRecipe(<rats:string_cheese>, <ore:foodCh
 
 <entity:rats:pirat_boat>.addPlayerOnlyDrop(<actuallyadditions:block_misc:4>, 1, 3);
 <entity:rats:plague_cloud>.addDrop(<quark:soul_bead>, 1, 3);
-<entity:rats:marbled_cheese_golem>.addPlayerOnlyDrop(<ic2:crafting:3>, 1, 5);
+<entity:rats:marbled_cheese_golem>.addPlayerOnlyDrop(<ic2:crafting:3>, 12, 24);
 
 // Containment food
 // [Contaminated Food] alter non-rat recipe
