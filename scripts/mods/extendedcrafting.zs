@@ -194,7 +194,7 @@ craft.remake(<extendedcrafting:material:14>, ['pretty',
   'F': <fluxnetworks:flux>,    // Flux
   '╱': <forestry:oak_stick>,   // Impregnated Stick
   '#': <ore:plankTreatedWood>, // Treated Wood Planks
-  '¤': <ore:gearIronInfinity>, // Infinity Bimetal Gear
+  '¤': <enderio:item_material:20>,
 });
 
 // [Basic Catalyst] from [Advanced Alloy][+1]
@@ -215,7 +215,7 @@ craft.remake(<extendedcrafting:material:15>, ['pretty',
   'A': <ore:alloyAdvanced>, // Enriched Alloy
   'M': <extrautils2:decorativesolidwood>,  // Magical Planks
   'R': <industrialforegoing:plastic>,      // Plastic
-  'G': <biomesoplenty:coral:*>,            // Glowing Coral
+  'G': <integrateddynamics:crystalized_menril_chunk>,
 });
 
 // [Advanced Catalyst] from [Void Crystal][+2]
@@ -223,31 +223,31 @@ craft.remake(<extendedcrafting:material:9>, ['pretty',
   '∩ A ∩',
   'A * A',
   '∩ A ∩'], {
-  '∩': <integrateddynamics:crystalized_menril_chunk>, // Crystalized Menril Chunk
+  '∩': <actuallyadditions:item_crystal:3>,
   'A': <extendedcrafting:material:15>, // Advanced Component
-  '*': <ore:crystalVoid>,              // Void Crystal
+  '*': <randomthings:ingredient:5>,
 });
 
-// [Elite Component] from [Emerald Gear][+4]
+// [Elite Component] from [Plutonium-242][+3]
 craft.remake(<extendedcrafting:material:16>, ['pretty',
-  'L ◘ L',
-  '▬ ¤ ▬',
+  'L ▲ L',
+  '  ▬  ',
   'L P L'], {
   'L': <botania:livingwood:1>,            // Livingwood Planks
-  '◘': <ic2:fluid_cell>.withTag({ Fluid: { FluidName: 'syngas', Amount: 1000 } }), // Universal Fluid Cell
-  '▬': <ore:ingotPlutonium242All>,        // Plutonium-242
-  '¤': <ore:gearEmerald>,                 // Emerald Gear
+  '▲': <ore:dustPsi>,                     // Psidust
+  '▬': <ore:ingotPlutonium242All>, // Plutonium-242
   'P': <appliedenergistics2:material:20>, // Printed Silicon
 });
 
-// [Elite Catalyst] from [Material Absorber][+2]
+// [Elite Catalyst] from [Emerald Gear][+3]
 craft.remake(<extendedcrafting:material:10>, ['pretty',
-  '▲ E ▲',
-  'E M E',
-  '▲ E ▲'], {
-  '▲': <ore:dustPsi>,                  // Psidust
+  'E ◘ E',
+  '  ¤  ',
+  'E l E'], {
   'E': <extendedcrafting:material:16>, // Elite Component
-  'M': <rftoolsdim:fake_gravel>, // Material Absorber
+  '◘': <ic2:fluid_cell>.withTag({Fluid: {FluidName: "syngas", Amount: 1000}}), // Universal Fluid Cell
+  '¤': <ore:gearEmerald>,              // Emerald Gear
+  'l': <rftoolsdim:fake_gravel>,       // levarG
 });
 
 # [Ultimate Component] from [Titanium Iridium Alloy Sheet][+5]
