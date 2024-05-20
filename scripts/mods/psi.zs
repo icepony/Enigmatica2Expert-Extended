@@ -74,3 +74,11 @@ craft.remake(<psi:cad_assembly:5>, ['pretty',
   '■': <psi:psi_decorative:7>,               // Ebony Psimetal Block
   '◊': <ore:gemBenitoite>,                   // Benitoite
 });
+
+// Efficient alt for dust
+mods.thermalexpansion.Pulverizer.removeRecipe(<psi:material:2>);
+mods.actuallyadditions.Crusher.removeRecipe(<psi:material>);
+scripts.process.crush(
+  <psi:material:2>, <psi:material> * 16,
+  'only: SagMill AEGrinder Pulverizer',
+  [<psi:material> * 8], [0.5]);
