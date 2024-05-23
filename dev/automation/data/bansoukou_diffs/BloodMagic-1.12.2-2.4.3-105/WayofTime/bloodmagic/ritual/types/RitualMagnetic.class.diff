@@ -1,0 +1,65 @@
+@@ -14,7 +14,6 @@
+  *  net.minecraft.block.Block
+  *  net.minecraft.block.state.IBlockState
+  *  net.minecraft.entity.player.EntityPlayer
+- *  net.minecraft.init.Blocks
+  *  net.minecraft.item.ItemStack
+  *  net.minecraft.util.math.BlockPos
+  *  net.minecraft.util.math.RayTraceResult
+@@ -28,6 +27,7 @@
+  */
+ package WayofTime.bloodmagic.ritual.types;
+ 
++import WayofTime.bloodmagic.ConfigHandler;
+ import WayofTime.bloodmagic.ritual.AreaDescriptor;
+ import WayofTime.bloodmagic.ritual.EnumRuneType;
+ import WayofTime.bloodmagic.ritual.IMasterRitualStone;
+@@ -36,11 +36,12 @@ import WayofTime.bloodmagic.ritual.RitualComponent;
+ import WayofTime.bloodmagic.ritual.RitualRegister;
+ import WayofTime.bloodmagic.util.Utils;
+ import com.mojang.authlib.GameProfile;
++import java.util.HashMap;
++import java.util.Map;
+ import java.util.function.Consumer;
+ import net.minecraft.block.Block;
+ import net.minecraft.block.state.IBlockState;
+ import net.minecraft.entity.player.EntityPlayer;
+-import net.minecraft.init.Blocks;
+ import net.minecraft.item.ItemStack;
+ import net.minecraft.util.math.BlockPos;
+ import net.minecraft.util.math.RayTraceResult;
+@@ -58,6 +59,7 @@ extends Ritual {
+     public static final String PLACEMENT_RANGE = "placementRange";
+     public BlockPos lastPos;
+     private FakePlayer fakePlayer;
++    private Map<Block, Integer> radiusMap = null;
+ 
+     public RitualMagnetic() {
+         super("ritualMagnetic", 0, 5000, "ritual.bloodmagic.magneticRitual");
+@@ -123,16 +125,17 @@ extends Ritual {
+     }
+ 
+     public int getRadius(Block block) {
+-        if (block == Blocks.field_150339_S) {
+-            return 7;
+-        }
+-        if (block == Blocks.field_150340_R) {
+-            return 15;
+-        }
+-        if (block == Blocks.field_150484_ah) {
+-            return 31;
++        if (this.radiusMap == null) {
++            this.radiusMap = new HashMap<Block, Integer>();
++            for (String modifier : ConfigHandler.values.ritualMagneticModifiers) {
++                String[] parts = modifier.split(";");
++                int radius = Integer.parseInt(parts[0]);
++                Block confblock = Block.func_149684_b((String)parts[1]);
++                if (confblock == null) continue;
++                this.radiusMap.put(confblock, radius);
++            }
+         }
+-        return 3;
++        return this.radiusMap.getOrDefault(block, 3);
+     }
+ 
+     public int getRefreshTime() {

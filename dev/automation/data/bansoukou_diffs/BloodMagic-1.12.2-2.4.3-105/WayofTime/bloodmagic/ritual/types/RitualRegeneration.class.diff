@@ -1,0 +1,17 @@
+@@ -24,6 +24,7 @@
+  */
+ package WayofTime.bloodmagic.ritual.types;
+ 
++import WayofTime.bloodmagic.ConfigHandler;
+ import WayofTime.bloodmagic.demonAura.WorldDemonWillHandler;
+ import WayofTime.bloodmagic.ritual.AreaDescriptor;
+ import WayofTime.bloodmagic.ritual.EnumRuneType;
+@@ -122,7 +123,7 @@ extends Ritual {
+                     totalCost += this.getRefreshCost() / 10;
+                     currentEssence -= this.getRefreshCost() / 10;
+                 }
+-                entity.func_70690_d(new PotionEffect(MobEffects.field_76428_l, 50, 0, false, false));
++                entity.func_70690_d(new PotionEffect(MobEffects.field_76428_l, 50, ConfigHandler.values.ritualRegenerationAmplifier, false, false));
+                 if (++totalEffects >= maxEffects) break;
+             }
+             if (!applyAbsorption || !(entity instanceof EntityPlayer) || !applyAbsorption) continue;

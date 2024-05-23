@@ -1,0 +1,30 @@
+@@ -19,6 +19,7 @@
+  */
+ package WayofTime.bloodmagic.ritual.types;
+ 
++import WayofTime.bloodmagic.ConfigHandler;
+ import WayofTime.bloodmagic.ritual.AreaDescriptor;
+ import WayofTime.bloodmagic.ritual.EnumRuneType;
+ import WayofTime.bloodmagic.ritual.IMasterRitualStone;
+@@ -43,9 +44,10 @@ extends Ritual {
+ 
+     public RitualZephyr() {
+         super("ritualZephyr", 0, 1000, "ritual.bloodmagic.zephyrRitual");
+-        this.addBlockRange(ZEPHYR_RANGE, (AreaDescriptor)new AreaDescriptor.Rectangle(new BlockPos(-5, -5, -5), 11));
++        int v = -(ConfigHandler.values.ritualZephyrRadius / 2);
++        this.addBlockRange(ZEPHYR_RANGE, (AreaDescriptor)new AreaDescriptor.Rectangle(new BlockPos(v, v, v), ConfigHandler.values.ritualZephyrRadius + 1));
+         this.addBlockRange(CHEST_RANGE, (AreaDescriptor)new AreaDescriptor.Rectangle(new BlockPos(0, 1, 0), 1));
+-        this.setMaximumVolumeAndDistanceOfRange(ZEPHYR_RANGE, 0, 10, 10);
++        this.setMaximumVolumeAndDistanceOfRange(ZEPHYR_RANGE, 0, ConfigHandler.values.ritualZephyrRadius, ConfigHandler.values.ritualZephyrRadius);
+         this.setMaximumVolumeAndDistanceOfRange(CHEST_RANGE, 1, 3, 3);
+     }
+ 
+@@ -83,7 +85,7 @@ extends Ritual {
+     }
+ 
+     public int getRefreshTime() {
+-        return 1;
++        return ConfigHandler.values.ritualZephyrDelay;
+     }
+ 
+     public int getRefreshCost() {

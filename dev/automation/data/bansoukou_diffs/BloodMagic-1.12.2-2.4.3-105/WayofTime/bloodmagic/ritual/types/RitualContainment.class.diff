@@ -1,0 +1,17 @@
+@@ -16,6 +16,7 @@
+  */
+ package WayofTime.bloodmagic.ritual.types;
+ 
++import WayofTime.bloodmagic.ConfigHandler;
+ import WayofTime.bloodmagic.ritual.AreaDescriptor;
+ import WayofTime.bloodmagic.ritual.EnumRuneType;
+ import WayofTime.bloodmagic.ritual.IMasterRitualStone;
+@@ -36,7 +37,7 @@ extends Ritual {
+     public RitualContainment() {
+         super("ritualContainment", 0, 2000, "ritual.bloodmagic.containmentRitual");
+         this.addBlockRange(CONTAINMENT_RANGE, (AreaDescriptor)new AreaDescriptor.Rectangle(new BlockPos(-3, 0, -3), 7));
+-        this.setMaximumVolumeAndDistanceOfRange(CONTAINMENT_RANGE, 0, 10, 10);
++        this.setMaximumVolumeAndDistanceOfRange(CONTAINMENT_RANGE, 0, ConfigHandler.values.ritualContaintmentHorizontal, ConfigHandler.values.ritualContaintmentVertical);
+     }
+ 
+     public void performRitual(IMasterRitualStone masterRitualStone) {

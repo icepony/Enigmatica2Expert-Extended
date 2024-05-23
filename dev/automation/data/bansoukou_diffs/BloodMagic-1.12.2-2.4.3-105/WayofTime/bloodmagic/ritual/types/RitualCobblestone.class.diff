@@ -1,0 +1,91 @@
+@@ -12,13 +12,17 @@
+  *  WayofTime.bloodmagic.ritual.RitualRegister
+  *  WayofTime.bloodmagic.tile.TileAlchemyArray
+  *  net.minecraft.block.Block
++ *  net.minecraft.block.state.IBlockState
+  *  net.minecraft.init.Blocks
+  *  net.minecraft.tileentity.TileEntity
++ *  net.minecraft.util.ResourceLocation
+  *  net.minecraft.util.math.BlockPos
+  *  net.minecraft.world.World
++ *  net.minecraftforge.fml.common.registry.ForgeRegistries
+  */
+ package WayofTime.bloodmagic.ritual.types;
+ 
++import WayofTime.bloodmagic.ConfigHandler;
+ import WayofTime.bloodmagic.core.RegistrarBloodMagicItems;
+ import WayofTime.bloodmagic.ritual.AreaDescriptor;
+ import WayofTime.bloodmagic.ritual.EnumRuneType;
+@@ -29,10 +33,13 @@ import WayofTime.bloodmagic.ritual.RitualRegister;
+ import WayofTime.bloodmagic.tile.TileAlchemyArray;
+ import java.util.function.Consumer;
+ import net.minecraft.block.Block;
++import net.minecraft.block.state.IBlockState;
+ import net.minecraft.init.Blocks;
+ import net.minecraft.tileentity.TileEntity;
++import net.minecraft.util.ResourceLocation;
+ import net.minecraft.util.math.BlockPos;
+ import net.minecraft.world.World;
++import net.minecraftforge.fml.common.registry.ForgeRegistries;
+ 
+ @RitualRegister(value="cobblestone")
+ public class RitualCobblestone
+@@ -45,11 +52,13 @@ extends Ritual {
+     }
+ 
+     public void performRitual(IMasterRitualStone masterRitualStone) {
++        String[] parts;
++        int meta;
+         TileAlchemyArray alchemyArray;
+         World world = masterRitualStone.getWorldObj();
+         int currentEssence = masterRitualStone.getOwnerNetwork().getCurrentEssence();
+         TileEntity tileEntity = world.func_175625_s(masterRitualStone.getBlockPos().func_177984_a());
+-        Block block = Blocks.field_150347_e;
++        IBlockState blockState = Blocks.field_150347_e.func_176223_P();
+         if (currentEssence < this.getRefreshCost()) {
+             masterRitualStone.getOwnerNetwork().causeNausea();
+             return;
+@@ -57,29 +66,29 @@ extends Ritual {
+         int maxEffects = currentEssence / this.getRefreshCost();
+         int totalEffects = 0;
+         AreaDescriptor cobblestoneRange = masterRitualStone.getBlockRange(COBBLESTONE_RANGE);
+-        if (tileEntity != null && tileEntity instanceof TileAlchemyArray && !(alchemyArray = (TileAlchemyArray)tileEntity).func_70301_a(0).func_190926_b() && alchemyArray.func_70301_a(0).func_77973_b() == RegistrarBloodMagicItems.COMPONENT) {
+-            switch (alchemyArray.func_70301_a(0).func_77952_i()) {
+-                case 0: {
+-                    block = Blocks.field_150343_Z;
+-                    alchemyArray.func_70298_a(0, 1);
+-                    world.func_175698_g(alchemyArray.func_174877_v());
+-                    break;
++        if (tileEntity != null && tileEntity instanceof TileAlchemyArray && !(alchemyArray = (TileAlchemyArray)tileEntity).func_70301_a(0).func_190926_b() && alchemyArray.func_70301_a(0).func_77973_b() == RegistrarBloodMagicItems.COMPONENT && (meta = alchemyArray.func_70301_a(0).func_77952_i()) >= 0 && meta < ConfigHandler.values.ritualCobblestoneModifiers.length && (parts = ConfigHandler.values.ritualCobblestoneModifiers[meta].split("@")).length >= 1) {
++            Block block = (Block)ForgeRegistries.BLOCKS.getValue(new ResourceLocation(parts[0]));
++            int blockMeta = 0;
++            if (parts.length == 2) {
++                try {
++                    blockMeta = Integer.parseInt(parts[1]);
+                 }
+-                case 1: {
+-                    block = Blocks.field_150424_aL;
+-                    alchemyArray.func_70298_a(0, 1);
+-                    world.func_175698_g(alchemyArray.func_174877_v());
+-                    break;
++                catch (NumberFormatException e) {
++                    blockMeta = 0;
+                 }
+             }
++            blockState = block.func_176203_a(blockMeta);
++            if (ConfigHandler.values.ritualCobblestoneConsumeArray) {
++                alchemyArray.func_70298_a(0, 1);
++                world.func_175698_g(alchemyArray.func_174877_v());
++            }
+         }
+         for (BlockPos blockPos : cobblestoneRange.getContainedPositions(masterRitualStone.getBlockPos())) {
+             if (world.func_175623_d(blockPos)) {
+-                world.func_175656_a(blockPos, block.func_176223_P());
++                world.func_175656_a(blockPos, blockState);
+                 ++totalEffects;
+             }
+             if (totalEffects < maxEffects) continue;
+-            break;
+         }
+         masterRitualStone.getOwnerNetwork().syphon(masterRitualStone.ticket(this.getRefreshCost() * totalEffects));
+     }

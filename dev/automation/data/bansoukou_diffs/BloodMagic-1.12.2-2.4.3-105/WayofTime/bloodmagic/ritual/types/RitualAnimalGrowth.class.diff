@@ -1,0 +1,54 @@
+@@ -27,6 +27,7 @@
+  */
+ package WayofTime.bloodmagic.ritual.types;
+ 
++import WayofTime.bloodmagic.ConfigHandler;
+ import WayofTime.bloodmagic.core.RegistrarBloodMagic;
+ import WayofTime.bloodmagic.demonAura.WorldDemonWillHandler;
+ import WayofTime.bloodmagic.ritual.AreaDescriptor;
+@@ -67,7 +68,7 @@ extends Ritual {
+         super("ritualAnimalGrowth", 0, 10000, "ritual.bloodmagic.animalGrowthRitual");
+         this.addBlockRange(GROWTH_RANGE, (AreaDescriptor)new AreaDescriptor.Rectangle(new BlockPos(-2, 1, -2), 5, 2, 5));
+         this.addBlockRange(CHEST_RANGE, (AreaDescriptor)new AreaDescriptor.Rectangle(new BlockPos(0, 1, 0), 1));
+-        this.setMaximumVolumeAndDistanceOfRange(GROWTH_RANGE, 0, 7, 7);
++        this.setMaximumVolumeAndDistanceOfRange(GROWTH_RANGE, 0, ConfigHandler.values.ritualAnimaGrowthHorizontal, ConfigHandler.values.ritualAnimaGrowthVertical);
+         this.setMaximumVolumeAndDistanceOfRange(CHEST_RANGE, 1, 3, 3);
+     }
+ 
+@@ -107,7 +108,7 @@ extends Ritual {
+         boolean performedEffect = false;
+         for (EntityAnimal animal : animalList) {
+             if (animal.func_70874_b() < 0) {
+-                animal.func_110195_a(5);
++                animal.func_110195_a(ConfigHandler.values.ritualAnimaGrowthAdd);
+                 ++totalGrowths;
+                 performedEffect = true;
+             } else if (animal.func_70874_b() > 0) {
+@@ -141,7 +142,9 @@ extends Ritual {
+                                 ItemStack foodStack = itemHandler.getStackInSlot(slot);
+                                 if (foodStack == null || !animal.func_70877_b(foodStack) || itemHandler.extractItem(slot, 1, true) == null) continue;
+                                 animal.func_146082_f(null);
+-                                itemHandler.extractItem(slot, 1, false);
++                                if (ConfigHandler.values.ritualAnimaGrowthConsumeFood) {
++                                    itemHandler.extractItem(slot, 1, false);
++                                }
+                                 steadfastDrain += 0.1;
+                                 steadfastWill -= 0.1;
+                                 performedEffect = true;
+@@ -154,7 +157,6 @@ extends Ritual {
+                 }
+             }
+             if (totalGrowths < maxGrowths) continue;
+-            break;
+         }
+         if (performedEffect && consumeRawWill) {
+             WorldDemonWillHandler.drainWill((World)world, (BlockPos)pos, (EnumDemonWillType)EnumDemonWillType.DEFAULT, (double)0.05, (boolean)true);
+@@ -197,7 +199,7 @@ extends Ritual {
+     }
+ 
+     public int getBreedingDecreaseForWill(double vengefulWill) {
+-        return (int)(10.0 + vengefulWill / 5.0);
++        return (int)(ConfigHandler.values.ritualAnimaGrowthBreedingDescrease + vengefulWill / ConfigHandler.values.ritualAnimaGrowthBreedingDescrease * 2.0);
+     }
+ 
+     public int getRefreshTimeForRawWill(double rawWill) {

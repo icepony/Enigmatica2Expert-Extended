@@ -1,0 +1,136 @@
+@@ -18,7 +18,6 @@
+  *  net.minecraft.block.state.IBlockState
+  *  net.minecraft.entity.EntityLivingBase
+  *  net.minecraft.entity.player.EntityPlayer
+- *  net.minecraft.init.Blocks
+  *  net.minecraft.init.MobEffects
+  *  net.minecraft.potion.PotionEffect
+  *  net.minecraft.tileentity.TileEntity
+@@ -28,6 +27,7 @@
+  *  net.minecraft.util.text.ITextComponent
+  *  net.minecraft.util.text.TextComponentTranslation
+  *  net.minecraft.world.World
++ *  net.minecraftforge.fluids.Fluid
+  *  net.minecraftforge.fluids.FluidRegistry
+  *  net.minecraftforge.fluids.FluidStack
+  *  net.minecraftforge.fluids.capability.CapabilityFluidHandler
+@@ -35,6 +35,7 @@
+  */
+ package WayofTime.bloodmagic.ritual.types;
+ 
++import WayofTime.bloodmagic.ConfigHandler;
+ import WayofTime.bloodmagic.core.RegistrarBloodMagic;
+ import WayofTime.bloodmagic.demonAura.WorldDemonWillHandler;
+ import WayofTime.bloodmagic.ritual.AreaDescriptor;
+@@ -52,7 +53,6 @@ import java.util.function.Consumer;
+ import net.minecraft.block.state.IBlockState;
+ import net.minecraft.entity.EntityLivingBase;
+ import net.minecraft.entity.player.EntityPlayer;
+-import net.minecraft.init.Blocks;
+ import net.minecraft.init.MobEffects;
+ import net.minecraft.potion.PotionEffect;
+ import net.minecraft.tileentity.TileEntity;
+@@ -62,6 +62,7 @@ import net.minecraft.util.math.BlockPos;
+ import net.minecraft.util.text.ITextComponent;
+ import net.minecraft.util.text.TextComponentTranslation;
+ import net.minecraft.world.World;
++import net.minecraftforge.fluids.Fluid;
+ import net.minecraftforge.fluids.FluidRegistry;
+ import net.minecraftforge.fluids.FluidStack;
+ import net.minecraftforge.fluids.capability.CapabilityFluidHandler;
+@@ -80,6 +81,7 @@ extends Ritual {
+     public static final double corrosiveWillDrain = 0.2;
+     public static final int corrosiveRefreshTime = 20;
+     public int timer = 0;
++    public static Fluid fluid = null;
+ 
+     public RitualLava() {
+         super("ritualLava", 0, 10000, "ritual.bloodmagic.lavaRitual");
+@@ -115,12 +117,15 @@ extends Ritual {
+         if (!lavaRange.isWithinRange(this.getMaxVerticalRadiusForRange(LAVA_RANGE, willConfig, holder), this.getMaxHorizontalRadiusForRange(LAVA_RANGE, willConfig, holder)) || maxLavaVolume != 0 && lavaRange.getVolume() > maxLavaVolume) {
+             return;
+         }
++        if (fluid == null) {
++            fluid = FluidRegistry.getFluid((String)ConfigHandler.values.ritualLavaFluid);
++        }
+         for (BlockPos newPos : lavaRange.getContainedPositions(pos)) {
+             IBlockState state = world.func_180495_p(newPos);
+             if (!world.func_175623_d(newPos) && !Utils.isFlowingLiquid((IBlockState)state)) continue;
+             int lpCost = this.getLPCostForRawWill(rawWill);
+             if (currentEssence < lpCost) break;
+-            world.func_175656_a(newPos, Blocks.field_150356_k.func_176223_P());
++            world.func_175656_a(newPos, fluid.getBlock().func_176223_P());
+             currentEssence -= lpCost;
+             lpDrain += lpCost;
+             if (!(rawWill > 0.0)) continue;
+@@ -135,7 +140,7 @@ extends Ritual {
+             int lpCost = this.getLPCostForRawWill(rawWill);
+             if (rawWill >= drain && currentEssence >= lpCost && tile != null && tile.hasCapability(CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY, null)) {
+                 IFluidHandler handler = (IFluidHandler)tile.getCapability(CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY, null);
+-                double filled = handler.fill(new FluidStack(FluidRegistry.LAVA, 1000), true);
++                double filled = handler.fill(new FluidStack(fluid, 1000), true);
+                 double ratio = filled / 1000.0;
+                 rawWill -= drain * ratio;
+                 rawDrained += drain * ratio;
+@@ -168,7 +173,7 @@ extends Ritual {
+             int duration = this.getFireResistForWill(steadfastWill);
+             AxisAlignedBB resistArea = resistRange.getAABB(pos);
+             entities = world.func_72872_a(EntityPlayer.class, resistArea);
+-            for (EntityPlayer entity : entities) {
++            for (EntityLivingBase entity : entities) {
+                 if (steadfastWill < 0.5) break;
+                 if (entity.func_70644_a(MobEffects.field_76426_n) && entity.func_70660_b(MobEffects.field_76426_n).func_76459_b() >= 2) continue;
+                 entity.func_70690_d(new PotionEffect(MobEffects.field_76426_n, 100, 0));
+@@ -185,7 +190,7 @@ extends Ritual {
+             float damage = this.getCorrosiveDamageForWill(corrosiveWill);
+             AxisAlignedBB damageArea = resistRange.getAABB(pos);
+             entities = world.func_72872_a(EntityLivingBase.class, damageArea);
+-            for (EntityPlayer entity : entities) {
++            for (EntityLivingBase entity : entities) {
+                 if (corrosiveWill < 0.2) break;
+                 if (entity.field_70128_L || entity.field_70737_aN > 0 || !Utils.isImmuneToFireDamage((EntityLivingBase)entity) || !entity.func_70097_a((DamageSource)DamageSourceBloodMagic.INSTANCE, damage)) continue;
+                 corrosiveDrained += 0.2;
+@@ -222,25 +227,34 @@ extends Ritual {
+     }
+ 
+     public int getMaxVolumeForRange(String range, List<EnumDemonWillType> activeTypes, DemonWillHolder holder) {
+-        double destructiveWill;
+-        if (LAVA_RANGE.equals(range) && activeTypes.contains(EnumDemonWillType.DESTRUCTIVE) && (destructiveWill = holder.getWill(EnumDemonWillType.DESTRUCTIVE)) > 0.0) {
+-            return 9 + (int)Math.pow(destructiveWill / 10.0, 1.5);
++        if (LAVA_RANGE.equals(range) && activeTypes.contains(EnumDemonWillType.DESTRUCTIVE)) {
++            double d;
++            double destructiveWill = holder.getWill(EnumDemonWillType.DESTRUCTIVE);
++            if (d > 0.0) {
++                return 9 + (int)Math.pow(destructiveWill / 10.0, 1.5);
++            }
+         }
+         return (Integer)this.volumeRangeMap.get(range);
+     }
+ 
+     public int getMaxVerticalRadiusForRange(String range, List<EnumDemonWillType> activeTypes, DemonWillHolder holder) {
+-        double destructiveWill;
+-        if (LAVA_RANGE.equals(range) && activeTypes.contains(EnumDemonWillType.DESTRUCTIVE) && (destructiveWill = holder.getWill(EnumDemonWillType.DESTRUCTIVE)) > 0.0) {
+-            return (int)(3.0 + destructiveWill / 10.0);
++        if (LAVA_RANGE.equals(range) && activeTypes.contains(EnumDemonWillType.DESTRUCTIVE)) {
++            double d;
++            double destructiveWill = holder.getWill(EnumDemonWillType.DESTRUCTIVE);
++            if (d > 0.0) {
++                return (int)(3.0 + destructiveWill / 10.0);
++            }
+         }
+         return (Integer)this.verticalRangeMap.get(range);
+     }
+ 
+     public int getMaxHorizontalRadiusForRange(String range, List<EnumDemonWillType> activeTypes, DemonWillHolder holder) {
+-        double destructiveWill;
+-        if (LAVA_RANGE.equals(range) && activeTypes.contains(EnumDemonWillType.DESTRUCTIVE) && (destructiveWill = holder.getWill(EnumDemonWillType.DESTRUCTIVE)) > 0.0) {
+-            return (int)(3.0 + destructiveWill / 10.0);
++        if (LAVA_RANGE.equals(range) && activeTypes.contains(EnumDemonWillType.DESTRUCTIVE)) {
++            double d;
++            double destructiveWill = holder.getWill(EnumDemonWillType.DESTRUCTIVE);
++            if (d > 0.0) {
++                return (int)(3.0 + destructiveWill / 10.0);
++            }
+         }
+         return (Integer)this.horizontalRangeMap.get(range);
+     }

@@ -1,0 +1,9 @@
+@@ -144,7 +144,7 @@ extends Ritual {
+     }
+ 
+     public double getRadiusModifier(double rawWill) {
+-        return Math.pow(1.0 + rawWill / 100.0, 0.0);
++        return Math.pow(1.0 + rawWill / 100.0, 0.3333333333333333);
+     }
+ 
+     public double getFillerChance(double corrosiveWill) {

@@ -1,0 +1,18 @@
+@@ -14,6 +14,7 @@
+  */
+ package WayofTime.bloodmagic.ritual.types.imperfect;
+ 
++import WayofTime.bloodmagic.ConfigHandler;
+ import WayofTime.bloodmagic.ritual.RitualRegister;
+ import WayofTime.bloodmagic.ritual.imperfect.IImperfectRitualStone;
+ import WayofTime.bloodmagic.ritual.imperfect.ImperfectRitual;
+@@ -37,6 +38,9 @@ extends ImperfectRitual {
+         zombie.func_70690_d(new PotionEffect(MobEffects.field_76426_n, 2000));
+         zombie.func_70690_d(new PotionEffect(MobEffects.field_76420_g, 20000, 7));
+         zombie.func_70690_d(new PotionEffect(MobEffects.field_76429_m, 20000, 3));
++        if (ConfigHandler.values.imperfectZombieBlight) {
++            zombie.getEntityData().func_74757_a("ScalingHealth.IsBlight", true);
++        }
+         if (!imperfectRitualStone.getRitualWorld().field_72995_K) {
+             imperfectRitualStone.getRitualWorld().func_72838_d((Entity)zombie);
+         }

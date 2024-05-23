@@ -1,0 +1,22 @@
+@@ -24,6 +24,7 @@
+  */
+ package WayofTime.bloodmagic.ritual.types;
+ 
++import WayofTime.bloodmagic.ConfigHandler;
+ import WayofTime.bloodmagic.ritual.AreaDescriptor;
+ import WayofTime.bloodmagic.ritual.EnumRuneType;
+ import WayofTime.bloodmagic.ritual.IMasterRitualStone;
+@@ -90,8 +91,12 @@ extends Ritual {
+         }
+     }
+ 
++    public int getRefreshTime() {
++        return ConfigHandler.values.ritualPlacerDelay;
++    }
++
+     public int getRefreshCost() {
+-        return 50;
++        return ConfigHandler.values.ritualPlacerCost;
+     }
+ 
+     public void gatherComponents(Consumer<RitualComponent> components) {
