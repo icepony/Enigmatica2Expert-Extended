@@ -64,6 +64,6 @@ Icon | Summary | Old / New
 > | 
   {{~{padStart now.cf2Addon.name 42 pre='[**'}~}}
 **]({{padEnd now.cf2Addon.links.websiteUrl 74 post=')'~}}
- | <nobr>{{replace was.latestFile.fileName '.jar' ''}}</nobr><br><nobr>{{replace now.latestFile.fileName '.jar' ''}}</nobr>
+ | <nobr>{{replace was.installedFile.fileName '.jar' ''}}</nobr><br><nobr>{{replace now.installedFile.fileName '.jar' ''}}</nobr>
 {{/each}}
 {{/if}}
