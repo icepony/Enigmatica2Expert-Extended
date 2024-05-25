@@ -963,10 +963,7 @@ addBrewAlt(<fluid:hootch> * 2000, [<minecraft:blaze_powder>, <minecraft:redstone
 addBrewAlt(<fluid:fire_water> * 2000, [<iceandfire:dread_shard>, <iceandfire:hydra_fang>, <iceandfire:shiny_scales>], 'syngas', <contenttweaker:blasted_coal>);
 
 // Simple machines recycle
-recipes.addShapeless(<enderio:item_material>, [<enderio:block_simple_furnace>.anyDamage()]);
-recipes.addShapeless(<enderio:item_material>, [<enderio:block_simple_alloy_smelter>.anyDamage()]);
-recipes.addShapeless(<enderio:item_material>, [<enderio:block_simple_stirling_generator>.anyDamage()]);
-recipes.addShapeless(<enderio:item_material>, [<enderio:block_simple_sag_mill>.anyDamage()]);
+recipes.addShapeless(<enderio:item_material>, [<enderio:block_simple_furnace:*> | <enderio:block_simple_alloy_smelter:*> | <enderio:block_simple_stirling_generator:*> | <enderio:block_simple_sag_mill:*>]);
 
 // Chemical Reactor alt recipes
 val chemReactor = mods.advancedrocketry.RecipeTweaker.forMachine('ChemicalReactor');
