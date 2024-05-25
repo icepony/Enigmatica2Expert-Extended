@@ -1,11 +1,11 @@
 {
-	x: 7.0d,
-	y: 0.5d,
+	x: 12.5d,
+	y: 1.9d,
 	text: [
 		"{q.blood_magic.ritual_diviner_dusk_.desc}"
 	],
 	dependencies: [
-		"6a44d25c"
+		"4c883699"
 	],
 	tasks: [{
 		uid: "d7973993",

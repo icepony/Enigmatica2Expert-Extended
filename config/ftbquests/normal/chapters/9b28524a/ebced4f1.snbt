@@ -1,6 +1,6 @@
 {
 	title: "{q.blood_magic.rune_of_displacement.name}",
-	x: 8.5d,
+	x: 10.2d,
 	y: 7.166666666666667d,
 	text: [
 		"{q.blood_magic.rune_of_displacement.desc}"

@@ -1,11 +1,11 @@
 {
-	x: 6.0d,
-	y: 0.5d,
+	x: 15.8d,
+	y: 1.9d,
 	text: [
 		"{q.blood_magic.awakened_activatio.desc}"
 	],
 	dependencies: [
-		"f45af488"
+		"3331d611"
 	],
 	tasks: [{
 		uid: "8f58f691",

@@ -1,8 +1,8 @@
 {
 	title: "{q.blood_magic.blood_altar_tier_5.name}",
 	icon: "minecraft:beacon",
-	x: 10.833333333333334d,
-	y: 3.1666666666666665d,
+	x: 15.8d,
+	y: 3.2d,
 	text: [
 		"{q.blood_magic.blood_altar_tier_5.desc}"
 	],

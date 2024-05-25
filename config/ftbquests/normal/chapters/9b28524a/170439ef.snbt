@@ -1,7 +1,7 @@
 {
 	title: "{q.blood_magic.blood_altar_tier_3.name}",
 	icon: "minecraft:glowstone",
-	x: 7.5d,
+	x: 9.2d,
 	y: 3.1666666666666665d,
 	text: [
 		"{q.blood_magic.blood_altar_tier_3.desc}"

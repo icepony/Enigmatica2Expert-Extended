@@ -4,6 +4,7 @@
 import mods.requious.AssemblyRecipe;
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
+import mods.randomtweaker.jei.IJeiUtils;
 
 // -----------------------------------------------------------------------
 // -----------------------------------------------------------------------
@@ -62,3 +63,59 @@ function addMeteor(catalyst as IItemStack, cost as int, oreList as IIngredient[]
   ass.requireFluid('f1', <fluid:lifeessence> * cost);
   <assembly:meteor>.addJEIRecipe(ass);
 }
+
+// -----------------------------------------------------------------------
+
+val p = mods.jei.JEI.createJei('le_vulcanos_frigius', 'Le Vulcanos Frigius');
+p.setBackground(IJeiUtils.createBackground(4*18, 1*18));
+p.addRecipeCatalyst(<bloodmagic:ritual_diviner>.withTag({current_ritual: "cobblestone"}));
+p.addRecipeCatalyst(<bloodmagic:arcane_ashes>);
+p.setIcon(<bloodmagic:ritual_diviner>.withTag({current_ritual: "cobblestone"}));
+p.addSlot(IJeiUtils.createItemSlot('input', 0, 0, true, false));
+p.addSlot(IJeiUtils.createItemSlot('input', 18, 0, true, false));
+p.addElement(IJeiUtils.createArrowElement(24, 1, 0));
+p.addSlot(IJeiUtils.createItemSlot('output', 3*18, 0, false, false));
+p.setModid('bloodmagic');
+p.register();
+
+function addModifier(i as int, result as IItemStack) as void {
+  mods.jei.JEI.createJeiRecipe('le_vulcanos_frigius')
+    .addInput(<bloodmagic:component>.definition.makeStack(i))
+    .addOutput(result)
+    .build();
+}
+
+/* Inject_js(
+config('config/bloodmagic/bloodmagic.cfg')
+  .values.ritualCobblestoneModifiers
+  .map((s, i) => [i, s.replace('@', ':')])
+  .filter(([,s]) => s !== 'minecraft:cobblestone')
+  .map(([i, s]) => `addModifier(${i}, <${s}>);`)
+) */
+addModifier(0, <minecraft:prismarine>);
+addModifier(1, <minecraft:obsidian>);
+addModifier(2, <engineersdecor:gas_concrete>);
+addModifier(3, <environmentalmaterials:hardened_stone>);
+addModifier(4, <exnihilocreatio:block_endstone_crushed>);
+addModifier(5, <tconstruct:slime_grass:1>);
+addModifier(6, <contenttweaker:compressed_coral>);
+addModifier(7, <extrautils2:decorativesolid:4>);
+addModifier(8, <ic2:resource>);
+addModifier(9, <exnihilocreatio:block_skystone_crushed>);
+addModifier(11, <exnihilocreatio:block_netherrack_crushed>);
+addModifier(12, <endreborn:block_lormyte_crystal>);
+addModifier(13, <tconstruct:brownstone:1>);
+addModifier(14, <tconstruct:soil>);
+addModifier(15, <tconstruct:soil:3>);
+addModifier(16, <quark:biome_cobblestone:2>);
+addModifier(17, <endreborn:block_entropy_end_stone>);
+addModifier(18, <quark:elder_prismarine>);
+addModifier(25, <tconstruct:soil:5>);
+addModifier(26, <tconstruct:soil:2>);
+addModifier(27, <immersivepetroleum:stone_decoration>);
+addModifier(28, <quark:biome_cobblestone:1>);
+addModifier(29, <quark:biome_cobblestone>);
+addModifier(30, <immersiveengineering:stone_decoration:5>);
+addModifier(31, <tconstruct:slime_grass:8>);
+addModifier(32, <quark:slate>);
+/**/

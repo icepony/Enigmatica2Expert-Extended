@@ -13,8 +13,8 @@
 			}
 		}
 	},
-	x: 8.333333333333332d,
-	y: 1.1666666666666665d,
+	x: 10.9d,
+	y: 1.9d,
 	text: [
 		"{q.blood_magic.bound_blade.desc}"
 	],

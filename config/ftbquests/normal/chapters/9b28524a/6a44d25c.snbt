@@ -1,6 +1,6 @@
 {
-	x: 7.0d,
-	y: 1.8333333333333333d,
+	x: 9.2d,
+	y: 1.9d,
 	text: [
 		"{q.blood_magic.ritual_diviner.desc}"
 	],

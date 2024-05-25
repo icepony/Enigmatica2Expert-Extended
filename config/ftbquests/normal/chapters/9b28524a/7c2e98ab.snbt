@@ -1,0 +1,44 @@
+{
+	icon: "bloodmagic:ritual_controller 1 1",
+	x: 5.2d,
+	y: 1.9d,
+	text: [
+		"{q.blood_magic.imperfect_ritual_s.desc}"
+	],
+	dependencies: [
+		"f1f052a5"
+	],
+	tasks: [{
+		uid: "0213d059",
+		type: "item",
+		items: [{
+			item: "bloodmagic:ritual_controller 1 1"
+		}]
+	},
+	{
+		uid: "e1ff810f",
+		type: "item",
+		items: [{
+			item: "minecraft:lapis_block"
+		},
+		{
+			item: "minecraft:coal_block"
+		},
+		{
+			item: "minecraft:water_bucket"
+		},
+		{
+			item: "minecraft:bedrock"
+		}]
+	}],
+	rewards: [{
+		uid: "a53f4a94",
+		type: "item",
+		item: {
+			id: "ftbquests:lootcrate",
+			tag: {
+				type: "uncommon"
+			}
+		}
+	}]
+}

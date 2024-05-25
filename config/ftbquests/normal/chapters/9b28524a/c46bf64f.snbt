@@ -1,7 +1,7 @@
 {
 	title: "{q.blood_magic.archmage_blood_orb.name}",
-	x: 11.833333333333334d,
-	y: 4.5d,
+	x: 16.800000000000004d,
+	y: 4.45d,
 	text: [
 		"{q.blood_magic.archmage_blood_orb.desc}"
 	],

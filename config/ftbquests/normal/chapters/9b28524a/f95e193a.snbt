@@ -1,0 +1,97 @@
+{
+	title: "{q.blood_magic.ritual_serenade_of.name}",
+	icon: {
+		id: "littletiles:multitiles",
+		tag: {
+			grid: 1,
+			size: [I;
+				3,
+				1,
+				3
+			],
+			min: [I;
+				0,
+				0,
+				0
+			],
+			tiles: [{
+				tile: {
+					block: "bloodmagic:ritual_stone:2"
+				},
+				boxes: [
+					[I;
+						0,
+						0,
+						1,
+						1,
+						1,
+						2
+					],
+					[I;
+						1,
+						0,
+						0,
+						2,
+						1,
+						1
+					],
+					[I;
+						1,
+						0,
+						2,
+						2,
+						1,
+						3
+					],
+					[I;
+						2,
+						0,
+						1,
+						3,
+						1,
+						2
+					]
+				]
+			},
+			{
+				bBox: [I;
+					1,
+					0,
+					1,
+					2,
+					1,
+					2
+				],
+				tile: {
+					block: "bloodmagic:ritual_stone"
+				}
+			}],
+			count: 5
+		}
+	},
+	x: 8.0d,
+	y: -0.5d,
+	text: [
+		"{q.blood_magic.ritual_serenade_of.desc}"
+	],
+	dependencies: [
+		"5eb2c3ea",
+		"6a44d25c",
+		"f45af488"
+	],
+	tasks: [{
+		uid: "cfbc221f",
+		type: "fluid",
+		fluid: "pyrotheum"
+	}],
+	rewards: [{
+		uid: "c46ef733",
+		type: "item",
+		item: {
+			id: "ftbquests:lootcrate",
+			tag: {
+				type: "uncommon"
+			}
+		}
+	}]
+}

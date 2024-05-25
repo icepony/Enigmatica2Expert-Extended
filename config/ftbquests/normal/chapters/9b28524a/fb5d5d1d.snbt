@@ -1,5 +1,5 @@
 {
-	x: 5.0d,
+	x: 5.2d,
 	y: 0.5d,
 	text: [
 		"{q.blood_magic.ritual_tinkerer.desc}"

@@ -1,0 +1,205 @@
+{
+	title: "{q.blood_magic.ritual_of_the_crus.name}",
+	icon: {
+		id: "littletiles:multitiles",
+		tag: {
+			grid: 1,
+			size: [I;
+				5,
+				2,
+				5
+			],
+			min: [I;
+				0,
+				0,
+				0
+			],
+			tiles: [{
+				tile: {
+					block: "bloodmagic:ritual_stone:5"
+				},
+				boxes: [
+					[I;
+						0,
+						0,
+						0,
+						1,
+						1,
+						1
+					],
+					[I;
+						0,
+						0,
+						4,
+						1,
+						1,
+						5
+					],
+					[I;
+						4,
+						0,
+						0,
+						5,
+						1,
+						1
+					],
+					[I;
+						4,
+						0,
+						4,
+						5,
+						1,
+						5
+					]
+				]
+			},
+			{
+				tile: {
+					block: "bloodmagic:ritual_stone:2"
+				},
+				boxes: [
+					[I;
+						0,
+						0,
+						2,
+						1,
+						1,
+						3
+					],
+					[I;
+						2,
+						0,
+						0,
+						3,
+						1,
+						1
+					],
+					[I;
+						2,
+						0,
+						4,
+						3,
+						1,
+						5
+					],
+					[I;
+						4,
+						0,
+						2,
+						5,
+						1,
+						3
+					]
+				]
+			},
+			{
+				tile: {
+					block: "bloodmagic:ritual_stone:4"
+				},
+				boxes: [
+					[I;
+						0,
+						1,
+						2,
+						1,
+						2,
+						3
+					],
+					[I;
+						2,
+						1,
+						0,
+						3,
+						2,
+						1
+					],
+					[I;
+						2,
+						1,
+						4,
+						3,
+						2,
+						5
+					],
+					[I;
+						4,
+						1,
+						2,
+						5,
+						2,
+						3
+					]
+				]
+			},
+			{
+				tile: {
+					block: "bloodmagic:ritual_stone:3"
+				},
+				boxes: [
+					[I;
+						1,
+						0,
+						2,
+						2,
+						1,
+						3
+					],
+					[I;
+						2,
+						0,
+						1,
+						3,
+						1,
+						2
+					],
+					[I;
+						2,
+						0,
+						3,
+						3,
+						1,
+						4
+					],
+					[I;
+						3,
+						0,
+						2,
+						4,
+						1,
+						3
+					]
+				]
+			},
+			{
+				bBox: [I;
+					2,
+					0,
+					2,
+					3,
+					1,
+					3
+				],
+				tile: {
+					block: "bloodmagic:ritual_stone"
+				}
+			}],
+			count: 17
+		}
+	},
+	x: 12.5d,
+	y: 0.4d,
+	text: [
+		"{q.blood_magic.ritual_of_the_crus.desc}"
+	],
+	dependencies: [
+		"4c30fafb"
+	],
+	tasks: [{
+		uid: "21e878ed",
+		type: "item",
+		items: [{
+			item: "minecraft:dye 1 4"
+		}],
+		count: 64L
+	}]
+}

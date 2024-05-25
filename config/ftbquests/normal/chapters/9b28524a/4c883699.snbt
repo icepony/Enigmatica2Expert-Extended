@@ -1,8 +1,8 @@
 {
 	title: "{q.blood_magic.blood_altar_tier_4.name}",
 	icon: "bloodmagic:decorative_brick",
-	x: 9.166666666666666d,
-	y: 3.1666666666666665d,
+	x: 12.5d,
+	y: 3.2d,
 	text: [
 		"{q.blood_magic.blood_altar_tier_4.desc}"
 	],
