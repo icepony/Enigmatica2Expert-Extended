@@ -45,7 +45,7 @@ static scheme as string[][] = [[
 ], [
   '▬ ▬ ▬ ▬ ▬ ▬ ▬',
   '▬ ▬ ▬ ▒ ▬ ▬ ▬',
-  '▬ ◙ ◙ ◘ ◙ ◙ □',
+  '▬ ◙ ◙ ◘ ◙ ◙ ▬',
   '▬ ▬ ▬ ▒ ▬ ▬ ▬',
   '▬ ▬ ▬ ▬ ▬ ▬ ▬',
 ]] as string[][];
@@ -59,36 +59,103 @@ static map as IItemStack[string] = {
   '▒': <thaumadditions:mithminite_block>,
 } as IItemStack[string];
 
+function say(text as string) as void {
+  server.commandManager.executeCommandSilent(server, '/say §8'~text);
+}
+
 events.onPlayerInteractBlock(function (e as crafttweaker.event.PlayerInteractBlockEvent) {
-  server.commandManager.executeCommandSilent(server, '/say §8Enter onPlayerInteractBlock');
   if (isNull(e.world) || e.world.remote || isNull(e.player)/*  || e.player.isFake() */) return;
   if (isNull(e.item) || e.item.definition.id != 'bloodmagic:activation_crystal') return;
-  server.commandManager.executeCommandSilent(server, '/say §8  Crystal found');
+  say('Crystal found. Dimension: '~e.world.dimension);
+
+  // Only works for Overworld and Skyblock dims
+  if (e.world.dimension != 0 && e.world.dimension != 3) return;
 
   // Check clicked block to be ritual stone
-  val state = e.world.getBlockState(e.position);
-  if (isNull(state)) return;
-  val block = state.block;
-  if(block.definition.id != 'bloodmagic:ritual_controller') return;
-  server.commandManager.executeCommandSilent(server, '/say §8  Ritual block found');
+  val masterState = e.world.getBlockState(e.position);
+  say('block found '~masterState.block.definition.id);
+  if (isNull(masterState) || masterState.block.definition.id != 'bloodmagic:ritual_controller') return;
 
   // Check if portal valid (simplified)
-  if(!detectPortal(e.world, e.position)) return;
-  server.commandManager.executeCommandSilent(server, '/say §8  Portal valid');
+  val portalOrient = detectPortal(e.world, e.position);
+  if(portalOrient == 0) return;
+  say('Portal valid');
+
+  val catenationTimeout = e.world.time + 100;
+  e.world.catenation()
+  .sleepUntil(function(world, context) {
+    return world.getBlock(e.position.up()).definition.id == 'bloodmagic:dimensional_portal';
+  })
+  .stopWhen(function(world, context) {
+      return world.time > catenationTimeout;
+  })
+  .then(function (world, ctx) {
+    prepareNewPortal(world, e.position, masterState);
+  }).start();
+});
+
+function prepareNewPortal(originalWorld as IWorld, originalPos as IBlockPos, masterState as IBlockState) as void {
+  say('prepareNewPortal()');
+
+  val nbt = originalWorld.getBlock(originalPos).data;
+  if (
+    isNull(nbt)
+    || isNull(nbt.ownerLeast)
+    || isNull(nbt.ownerMost)
+    || isNull(nbt.currentRitual)
+    || nbt.currentRitual != 'portal'
+  ) return;
+
+  // Check if actual portal was created
+  val portalBlock = originalWorld.getBlock(originalPos.up());
+  say('master stone have tags. PortalID: '~portalBlock.definition.id);
+  if (isNull(portalBlock) || portalBlock.definition.id != 'bloodmagic:dimensional_portal') return;
+
+  print('~~~ portal tag:\n' ~ portalBlock.data.toNBTString());
 
   // Get point on other planet
   val stella = IWorld.getFromID(114);
   if (isNull(stella)) return;
-  server.commandManager.executeCommandSilent(server, '/say §8  Planet found');
+  say('Planet found');
 
-  val median = getMedianHeight(stella, scheme[0].length, scheme[0][0].length());
-  server.commandManager.executeCommandSilent(server, '/say §8  Median: '~median);
-});
+  var pos = IBlockPos.create(0, 0, 0);
+  val width = 7;
+  val deph = 5;
 
-// Check if clicked portal ritual stone is valid (simplified)
-function detectPortal(w as IWorld, pos as IBlockPos) as bool {
-  return isPortalBlock(w, pos.north()) && isPortalBlock(w, pos.south())
-      || isPortalBlock(w, pos.east()) && isPortalBlock(w, pos.west());
+  // Get median height we will build portal on
+  val median = getMedianHeight(stella, width, deph, pos);
+  say('Median: '~median);
+
+  pos = IBlockPos.create(pos.x, median, pos.z);
+  
+  // Fill with blocks
+  server.commandManager.executeCommandSilent(server,
+    '/fill '~(pos.x - width / 2)~' '~(median)~' '~(pos.z - deph / 2)~' '
+    ~''~(pos.x + width / 2)~' '~(median+10)~' '~(pos.z + deph / 2)~' air'
+  );
+  server.commandManager.executeCommandSilent(server,
+    '/fill '~(pos.x - width / 2)~' 2 '~(pos.z - deph / 2)~' '
+    ~''~(pos.x + width / 2)~' '~(median)~' '~(pos.z + deph / 2)~' thaumcraft:stone_arcane'
+  );
+
+  originalWorld.catenation().sleep(1).then(function (world, ctx) {
+    buildNewPortal(stella, pos, masterState, world, originalPos);
+  }).start();
+}
+
+function buildNewPortal(world as IWorld, pos as IBlockPos, masterState as IBlockState, originalWorld as IWorld, originalPos as IBlockPos) as void {
+  val nbt = originalWorld.getBlock(originalPos).data;
+  say('buildNewPortal(). nbt: '~nbt.toNBTString());
+  world.setBlockState(masterState, nbt, pos);
+  
+  say('all done!');
+}
+
+// Check if clicked portal ritual stone is valid, return orientation (1 - NS, 2 - EW)
+function detectPortal(w as IWorld, pos as IBlockPos) as int {
+  if (isPortalBlock(w, pos.north()) && isPortalBlock(w, pos.south())) return 1;
+  if (isPortalBlock(w, pos.east()) && isPortalBlock(w, pos.west())) return 2;
+  return 0;
 }
 
 // Check if block on this pos is valid portal block
@@ -96,16 +163,14 @@ function isPortalBlock(w as IWorld, pos as IBlockPos) as bool {
   return w.getBlockState(pos).block.definition.id == 'thaumadditions:mithminite_block';
 }
 
-function getMedianHeight(w as IWorld, width as int, deph as int) as int {
-  // w.setBlockState(<blockstate:minecraft:air>, IBlockPos.create(0, 255, 0));
-  // w.spawnEntity(<minecraft:dirt>.createEntityItem(w, 0, 255, 0));
+function getMedianHeight(w as IWorld, width as int, deph as int, pos as IBlockPos) as int {
   val arr = intArrayOf(width * deph);
   var k = 0;
-  for z in 0 .. deph {
-    for x in 0 .. width {
+  for z in (pos.z - deph / 2) .. (pos.z + deph / 2 + 1) {
+    for x in (pos.x - width / 2) .. (pos.x + width / 2 + 1) {
       for y in 0 .. 255 {
         if (w.isAirBlock(IBlockPos.create(x, 255 - y, z))) continue;
-        arr[k] = y;
+        arr[k] = 255 - y;
         break;
       }
       k += 1;
