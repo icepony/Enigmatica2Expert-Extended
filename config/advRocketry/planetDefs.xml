@@ -182,6 +182,34 @@
 	<star blackHole="true" name="Magnis Vulpes" temp="87" x="6" y="-142" numPlanets="0" numGasGiants="0">
 		<star temp="200" separation="10.0"/>
 		<star temp="100" separation="6.0"/>
+		<planet name="Kepler 0118" DIMID="122" customIcon="lava">
+			<biomeIds>biomesoplenty:volcanic_island</biomeIds>
+			<atmosphereDensity>0</atmosphereDensity>
+			<fillerBlock>quark:basalt</fillerBlock>
+			<fogColor>0,0,0.2</fogColor>
+			<generateCaves>true</generateCaves>
+			<generateCraters>true</generateCraters>
+			<generateGeodes>true</generateGeodes>
+			<generateVolcanos>true</generateVolcanos>
+			<gravitationalMultiplier>60</gravitationalMultiplier>
+			<hasRings>true</hasRings>
+			<oceanBlock>tconstruct:molten_obsidian</oceanBlock>
+			<orbitalDistance>10</orbitalDistance>
+			<rotationalPeriod>18000</rotationalPeriod>
+			<skyColor>0,0.1,0.4</skyColor>
+		</planet>
+		<planet name="Kepler 0119" DIMID="123" customIcon="marslike">
+			<biomeIds>advancedrocketry:hotdryrock</biomeIds>
+			<skyColor>0,1,0</skyColor>
+			<fogColor>0,0,1</fogColor>
+			<generageCraters>true</generageCraters>
+			<atmosphereDensity>0</atmosphereDensity>
+			<gravitationalMultiplier>60</gravitationalMultiplier>
+			<orbitalDistance>20</orbitalDistance>
+			<rotationalPeriod>100000</rotationalPeriod>
+			<generateCaves>true</generateCaves>
+			<fillerBlock>minecraft:stone:5</fillerBlock>
+		</planet>
 		<planet name="KELT-1b" DIMID="117" customIcon="gasgiantred">
 			<skyColor>0,1,0.5</skyColor>
 			<fogColor>0,0,1</fogColor>
@@ -215,34 +243,6 @@
 			<orbitalDistance>110</orbitalDistance>
 			<rotationalPeriod>180000</rotationalPeriod>
 			<generateCaves>true</generateCaves>
-		</planet>
-		<planet name="Kepler 0118" DIMID="122" customIcon="lava">
-			<biomeIds>biomesoplenty:volcanic_island</biomeIds>
-			<atmosphereDensity>0</atmosphereDensity>
-			<fillerBlock>quark:basalt</fillerBlock>
-			<fogColor>0,0,1</fogColor>
-			<generateCaves>true</generateCaves>
-			<generateCraters>true</generateCraters>
-			<generateGeodes>true</generateGeodes>
-			<generateVolcanos>true</generateVolcanos>
-			<gravitationalMultiplier>60</gravitationalMultiplier>
-			<hasRings>true</hasRings>
-			<oceanBlock>tconstruct:molten_obsidian</oceanBlock>
-			<orbitalDistance>130</orbitalDistance>
-			<rotationalPeriod>18000</rotationalPeriod>
-			<skyColor>0,1,0</skyColor>
-		</planet>
-		<planet name="Kepler 0119" DIMID="123" customIcon="marslike">
-			<biomeIds>advancedrocketry:hotdryrock</biomeIds>
-			<skyColor>0,1,0</skyColor>
-			<fogColor>0,0,1</fogColor>
-			<generageCraters>true</generageCraters>
-			<atmosphereDensity>0</atmosphereDensity>
-			<gravitationalMultiplier>60</gravitationalMultiplier>
-			<orbitalDistance>140</orbitalDistance>
-			<rotationalPeriod>100000</rotationalPeriod>
-			<generateCaves>true</generateCaves>
-			<fillerBlock>minecraft:stone:5</fillerBlock>
 		</planet>
 		<planet name="Asteroid Belt" DIMID="124">
 			<genType>2</genType>
