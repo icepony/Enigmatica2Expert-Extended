@@ -201,5 +201,15 @@
 			item: "minecraft:dye 1 4"
 		}],
 		count: 64L
+	}],
+	rewards: [{
+		uid: "bd3c1990",
+		type: "item",
+		item: {
+			id: "ftbquests:lootcrate",
+			tag: {
+				type: "uncommon"
+			}
+		}
 	}]
 }
