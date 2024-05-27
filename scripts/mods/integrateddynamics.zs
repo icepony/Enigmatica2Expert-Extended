@@ -165,3 +165,11 @@ craft.remake(<integrateddynamics:logic_director> * 4, ['pretty',
 // Alt recipes for non-ID machines
 scripts.process.fill(<ore:blockGlass>, <fluid:menrilresin> * 1000, <integratedterminals:menril_glass>, 'except: Casting DryingBasin MechanicalDryingBasin', true);
 scripts.process.fill(<ore:blockGlass>, <fluid:liquidchorus> * 1000, <integratedterminals:chorus_glass>, 'except: Casting DryingBasin MechanicalDryingBasin', true);
+
+// Fix torch have black-purple texture on cycling ingredients
+// [Menril Stone Torch] from [Menril Berries][+1]
+recipes.removeByRecipeName("integrateddynamics:menril_torch_stone");
+craft.shapeless(<integrateddynamics:menril_torch_stone> * 4, '/A', {
+  '/': <ore:stickStone>,
+  'A': <integrateddynamics:menril_berries>,
+});
