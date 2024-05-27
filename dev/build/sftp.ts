@@ -44,8 +44,8 @@ export async function manageSFTP(
     .replace(
       /(additionalFiles:\s*)\n {4}\S.*$\n {4}\S.*$/m,
 `$1
-    - url: https://mediafilez.forgecdn.net/files/4886/383/mc2discord-forge-1.12.2-3.3.1.jar
-      destination: mods/mc2discord-forge-1.12.2-3.3.1.jar`
+    - url: https://mediafilez.forgecdn.net/files/5370/660/mc2discord-forge-1.12.2-3.3.2.jar
+      destination: mods/mc2discord-forge-1.12.2-3.3.2.jar`
     )
     .replace(
       /(localFiles:\s*)\n +\S.*$\n +\S.*$/m,
