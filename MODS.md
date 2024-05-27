@@ -210,7 +210,7 @@ Icon | Summary
 
 Mods that present only in `Extended` version:
 
-218 mods in this section.
+217 mods in this section.
 
 Icon | Summary
 ----:|:-------
@@ -398,7 +398,6 @@ Icon | Summary
 <img src="https://media.forgecdn.net/avatars/thumbnails/559/283/30/30/637908604129051982.png"            > |             [**Crafting Tweaks Unofficial**](https://www.curseforge.com/minecraft/mc-mods/crafting-tweaks-unofficial)   <sup><sub>CraftingTweaks_1.12.2-9.0.1.jar                  </sub></sup><br>A Continuation of Crafting Tweaks for 1.12.2
 <img src="https://media.forgecdn.net/avatars/thumbnails/559/893/30/30/637910144009224910.png"            > |             [**Ender Storage continuation**](https://www.curseforge.com/minecraft/mc-mods/ender-storage-1-12-continuation)<sup><sub>EnderStorage-1.12.2-2.5.0.jar                    </sub></sup><br>Linked chests and fluid/gas/mana tanks
 <img src="https://media.forgecdn.net/avatars/thumbnails/573/97/30/30/637934782154930654.png"             > |                                [**Pointer**](https://www.curseforge.com/minecraft/mc-mods/pointer)                      <sup><sub>pointer-2.1.jar                                  </sub></sup><br>Access a block from anywhere in the same dimension
-<img src="https://media.forgecdn.net/avatars/thumbnails/573/873/30/30/637936076465669614.png"            > |                                 [**IC2-No**](https://www.curseforge.com/minecraft/mc-mods/ic2-no)                       <sup><sub>IC2-No-1.1.jar                                   </sub></sup><br>A Mod that fix ref and ic2 support
 <img src="https://media.forgecdn.net/avatars/thumbnails/799/137/30/30/638161375230095246.png"            > |                          [**File Director**](https://www.curseforge.com/minecraft/mc-mods/filedirector)                 <sup><sub>!mod-director-launchwrapper-1.8.3.jar            </sub></sup><br>Modpack creator tool for installing and updating modpack configurations with remote support
 <img src="https://media.forgecdn.net/avatars/thumbnails/582/719/30/30/637948923198368494.png"            > |                      [**Tweaked Petroleum**](https://www.curseforge.com/minecraft/mc-mods/tweaked-petroleum)            <sup><sub>tweakedpetroleum-2.0.0.jar                       </sub></sup><br>Adding more configuration options to Immersive Petroleum
 <img src="https://media.forgecdn.net/avatars/thumbnails/598/912/30/30/637977536887443552.png"            > |           [**Tweaked Petroleum: Gas Addon**](https://www.curseforge.com/minecraft/mc-mods/tweaked-petroleum-gas-addon)  <sup><sub>tweakedpetroleumgas-2.0.0.jar                    </sub></sup><br>Adding Mekanism gas support to IP
