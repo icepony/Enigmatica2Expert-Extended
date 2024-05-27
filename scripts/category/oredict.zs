@@ -616,6 +616,7 @@ add(<ore:aliencrystalGreen>, <advancedrocketry:crystal:2>);
 add(<ore:aliencrystalRed>, <advancedrocketry:crystal:3>);
 add(<ore:aliencrystalYellow>, <advancedrocketry:crystal:4>);
 add(<ore:aliencrystalOrange>, <advancedrocketry:crystal:5>);
+add(<ore:sandOxidisedFerric>, <advancedrocketry:hotturf>);
 
 // Sequoia
 addItems(<ore:logSequoia>, [
