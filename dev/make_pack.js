@@ -105,39 +105,36 @@ const argv = yargs(process.argv.slice(2))
   if (await pressEnterOrEsc(`Generate Changelog? ENTER / ESC.`)) {
     const latestPath = 'CHANGELOG-latest.md'
 
-    const responses = []
-
     // Update version in files
     execSyncInherit(`npx json -I -f config/CustomMainMenu/mainmenu.json -e "this.labels.version_num.text='${nextVersion}'"`)
-    responses.push(git.add('config/CustomMainMenu/mainmenu.json'))
+    await git.add('config/CustomMainMenu/mainmenu.json')
 
     writeFileSync('dev/version.txt', nextVersion)
-    responses.push(git.add('dev/version.txt'))
+    await git.add('dev/version.txt')
 
     replace_in_file.sync({
       files: 'manifest.json',
       from : /(^ {2}"version"[\s\n]*:[\s\n]*")[^"]+("[\s\n]*,)/m,
       to   : `$1${nextVersion}$2`,
     })
-    responses.push(git.add('manifest.json'))
+    await git.add('manifest.json')
 
     replace_in_file.sync({
       files: serverSetupConfig,
       from : /^( {2}modpackUrl\s*:\s*)(.+)$/m,
       to   : `$1https://github.com/Krutoy242/Enigmatica2Expert-Extended/releases/download/${nextVersion}/${zipBaseName}.zip`,
     })
-    responses.push(git.add(serverSetupConfig))
+    await git.add(serverSetupConfig)
 
     // Generate changelog
     execSyncInherit(`npx conventional-changelog-cli --config dev/tools/changelog/config.cjs -o ${latestPath}`)
 
     // Iconize
     execSyncInherit(`ts-node E:/dev/mc-icons/src/cli.ts "${latestPath}" --silent --no-short --modpack=e2ee --treshold=2`)
-    responses.push(git.add(latestPath))
+    await git.add(latestPath)
 
     await open(latestPath, { wait: true })
 
-    await Promise.all(responses)
     await git.commit('chore: 🧱 CHANGELOG update, version bump')
   }
 
