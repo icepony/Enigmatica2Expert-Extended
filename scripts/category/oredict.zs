@@ -272,6 +272,7 @@ add(<ore:blockCoalCoke>, <thermalfoundation:storage_resource:1>);
 // Certus Quartz
 addItems(<ore:crystalCertus>, [<appliedenergistics2:material>, <appliedenergistics2:material:1>, <appliedenergistics2:material:10>]);
 addItems(<ore:blockCertusQuartz>, [<appliedenergistics2:quartz_block>, <appliedenergistics2:quartz_pillar>, <appliedenergistics2:chiseled_quartz_block>]);
+remove(<ore:oreCertusQuartz>, <appliedenergistics2:charged_quartz_ore>);
 
 // Iridium
 add(<ore:ingotIridium>, <ic2:misc_resource:1>);
