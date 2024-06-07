@@ -1,10 +1,10 @@
 #modloaded requious
+#reloadable
 
 import crafttweaker.item.IItemStack;
-import crafttweaker.world.IBlockPos;
+import crafttweaker.util.Math;
 import crafttweaker.world.IFacing;
 import crafttweaker.world.IVector3d.create as V;
-import crafttweaker.world.IWorld;
 import mods.requious.AssemblyRecipe;
 import mods.requious.Color;
 import mods.requious.ComponentFace;
@@ -12,12 +12,20 @@ import mods.requious.GaugeDirection;
 import mods.requious.MachineContainer;
 import mods.requious.MachineVisual;
 import mods.requious.SlotVisual;
+import mods.zenutils.NetworkHandler;
+import mods.zenutils.StaticString.format;
+import crafttweaker.player.IPlayer;
 
-import scripts.category.uu.getCost;
+import scripts.category.uu;
 
-static TICK_STEP as int = 1;
+// Replicator RF/t usage
 static ENERGY_USAGE as int = 20000;
-static replTexture as string = 'enigmatica:textures/gui/replicator.png';
+
+// fraction of UU-Matter cost that will be added to difficulty
+static INCREASE_FACTOR as double = 0.000001;
+
+// Minimum difficulty increasing when performing replication
+static MIN_DIFF_INCREASE as double = 0.001;
 
 // [Replicator] from [Energium Ingot][+3]
 recipes.addShapeless('old to new replicator', <requious:replicator>, [<ic2:te:63>]);
@@ -30,6 +38,16 @@ craft.make(<requious:replicator>, ['pretty',
   'M': <ic2:te:75>,   // MFSU
 });
 
+// Replication statistics
+static statReplications as mods.zenutils.PlayerStat = mods.zenutils.PlayerStat.getBasicStat('stat.replications');
+scripts.lib.offline.op.getRegistry.set('stat_replications', function(player as IPlayer, value as string) as string {return player.readStat(statReplications) as string;});
+scripts.lib.offline.op.setRegistry.set('stat_replications', function(player as IPlayer, value as string) as string {player.addStat(statReplications, value as int); return null;});
+
+// Define offline difficulty get/set
+// Required for scripts.lib.offline.get() and set() calls
+scripts.lib.offline.op.getRegistry.set('difficulty', function(player as IPlayer, value as string) as string {return player.difficulty as string;});
+scripts.lib.offline.op.setRegistry.set('difficulty', function(player as IPlayer, value as string) as string {player.difficulty = value as double; return null;});
+
 /*
  █████╗ ███████╗███████╗███████╗███╗   ███╗██████╗ ██╗  ██╗   ██╗
 ██╔══██╗██╔════╝██╔════╝██╔════╝████╗ ████║██╔══██╗██║  ╚██╗ ██╔╝
@@ -38,6 +56,8 @@ craft.make(<requious:replicator>, ['pretty',
 ██║  ██║███████║███████║███████╗██║ ╚═╝ ██║██████╔╝███████╗██║
 ╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝╚═╝     ╚═╝╚═════╝ ╚══════╝╚═╝
  */
+val replTexture = 'enigmatica:textures/gui/replicator.png';
+
 val
   x = <assembly:replicator>;
 
@@ -46,26 +66,24 @@ x.setDecorationSlot(1,0, SlotVisual.create(7,5).addPart(replTexture,1,0));
 static displX as int = 4;
 static displY as int = 2;
 x.setItemSlot(displX, displY, ComponentFace.none(), 1)
-  .setBackground(SlotVisual.create(1,1).addPart(replTexture, 4, 2))
+  .setBackground(SlotVisual.create(1,1).addPart(replTexture, displX, displY))
   .setAccess(false,false)
   .setHandAccess(false,false)
-  .noDrop()
-  .setGroup('display');
+  .noDrop();
 
 static catlX as int = 4;
 static catlY as int = 0;
 x.setItemSlot(catlX,catlY, ComponentFace.all(), 64)
   .setAccess(true,false)
-  .setHandAccess(true,true)
-  // .setFilter(<*>.only(function (item) { return getCost(item) > 0; })) // Filters not working
-  .setGroup('input');
+  .setHandAccess(true,true);
+// .setFilter(<*>.only(function (item) { return getCost(item) > 0; })) // Filters not working
 
 static diskX as int = 3;
 static diskY as int = 2;
 x.setItemSlot(diskX, diskY, ComponentFace.all(), 1)
   .setAccess(true,true)
   .setHandAccess(true,true)
-  .setGroup('disk');
+  .setBackground(SlotVisual.create(1,1).addPart(replTexture, diskX, diskY));
 
 static upgrX as int = 7;
 static upgrY as int = 2;
@@ -73,7 +91,7 @@ x.setItemSlot(upgrX,upgrY, ComponentFace.none(), 64)
   .setAccess(false,false)
   .setHandAccess(true,true)
   // .setFilter(<ic2:upgrade>)
-  .setBackground(SlotVisual.create(1,1).addPart(replTexture, 7, 2));
+  .setBackground(SlotVisual.create(1,1).addPart(replTexture, upgrX, upgrY));
 
 static outX as int = 4;
 static outY as int = 4;
@@ -107,26 +125,27 @@ x.setEnergySlot(powX, powY, ComponentFace.all(), 2000000000)
 
 x.setTextSlot(1,1).setVisual(SlotVisual.create(3,1)).setRenderText('§7%s  \n§8%s  ', ['goal','buffer']).alignRight();
 x.setTextSlot(5,3).setVisual(SlotVisual.create(3,1)).setRenderText(' %s',['error']);
+x.setTextSlot(1,3).setVisual(SlotVisual.create(3,1)).setRenderText('§8✪Cost: \n§7x§8%s ', ['penalty']).alignRight();
 
 x.addVisual(MachineVisual.displayFluid(
-      /* active */ 1.0,
+  /* active */ 1.0,
   /* fluidStack */ <fluid:ic2uu_matter>,
-    /* capacity */ 1,
-      /* facing */ IFacing.up(),
-       /* start */ V(2.1 / 16.0, 2.0 / 16.0,  2.1 / 16.0),
-         /* end */ V(13.8 / 16.0, 5.9 / 16.0, 13.8 / 16.0),
-      /* global */ false
+  /* capacity */ 1,
+  /* facing */ IFacing.up(),
+  /* start */ V(2.1 / 16.0, 2.0 / 16.0,  2.1 / 16.0),
+  /* end */ V(13.8 / 16.0, 5.9 / 16.0, 13.8 / 16.0),
+  /* global */ false
 ));
 
 x.addVisual(MachineVisual.smoke(
-      /* active */ 'active'.asVariable(),
-       /* begin */ V(0.5, 0.40, 0.5),
-         /* end */ V(0.5, 0.45, 0.5),
-    /* velocity */ V(0, 0, 0),
-       /* color */ Color.normal([105, 0, 105]),
-    /* lifetime */ 20,
+  /* active */ 'active'.asVariable(),
+  /* begin */ V(0.5, 0.40, 0.5),
+  /* end */ V(0.5, 0.45, 0.5),
+  /* velocity */ V(0, 0, 0),
+  /* color */ Color.normal([105, 0, 105]),
+  /* lifetime */ 20,
   /* fullBright */ true,
-      /* global */ false
+  /* global */ false
 ));
 
 /*
@@ -146,6 +165,10 @@ function pushErr(m as MachineContainer, reason as string) as void {
   m.setString('error', reason);
 }
 
+function updatePenaltyText(m as MachineContainer, dfclty as double) as void {
+  m.setString('penalty', format('%,.3f', 0.0001 * uu.difficultCost(10000, dfclty)).replace('.', '§7.').replaceAll(',', '§7,§8'));
+}
+
 function defineVars(m as MachineContainer) as void {
   // Skip init if already initialized
   if (!isNull(m.getString('error'))) return;
@@ -154,6 +177,27 @@ function defineVars(m as MachineContainer) as void {
   m.setInteger('goal', 0); // how much UU need. -1 if just trying to push output
   m.setInteger('buffer', 0); // stored UU in internal
   m.setInteger('tick', 0);
+  m.setString('penalty', 0);
+}
+
+// Increase player owner difficulty, no matter online he or not
+function increaseDifficulty(m as MachineContainer, bufferConsumed as int, dfclty as double) as void {
+  // Determine cost
+  val increase = Math.max(MIN_DIFF_INCREASE, INCREASE_FACTOR * bufferConsumed);
+  val ownerUUID = m.getString('ownerUUID');
+  val newDifficulty = dfclty + increase;
+  scripts.lib.offline.op.set(ownerUUID, 'difficulty', newDifficulty);
+
+  // ⭐ FX effect
+  if (m.getInteger('tick') % 20 == 0)
+    NetworkHandler.sendToAllAround('acquire_star_and_flare',
+      m.pos.x, m.pos.y, m.pos.z, 30, m.world.getDimension(), function (b) {
+        b.writeData({
+          x    : m.world.random.nextDouble(0, 1.0) + m.pos.x,
+          y    : 1.0 + m.pos.y,
+          z    : m.world.random.nextDouble(0, 1.0) + m.pos.z,
+          value: increase });
+      });
 }
 
 // ========================================================
@@ -205,34 +249,34 @@ function consumeEnergy(m as MachineContainer, amount as int) as void {
 }
 
 // Machine completed it task and could start new one
-function succes(m as MachineContainer, powr as int) as void {
+function succes(m as MachineContainer, powr as int, output as IItemStack, dfclty as double) as void {
+  m.setItem(outX, outY, output);
+  increaseDifficulty(m, uu.getCost(output), dfclty);
   consumeEnergy(m, powr);
   m.setInteger('goal', 0);
   pushErr(m, null);
 }
 
-function consumeMatter(m as MachineContainer, amount as int) as bool {
+function consumeMatter(m as MachineContainer, consumeAmount as int) as bool {
   val fluid = m.getFluid(mattX, mattY);
   if (isNull(fluid) || fluid.amount <= 0) return false;
-  m.setFluid(mattX, mattY, fluid.amount > amount
-    ? fluid * (fluid.amount - amount)
+  m.setFluid(mattX, mattY, fluid.amount > consumeAmount
+    ? fluid * (fluid.amount - consumeAmount)
     : null
   );
+  scripts.lib.offline.op.set(m.getString('ownerUUID'), 'stat_replications', consumeAmount);
   return true;
 }
 
 // Try to add target item to output
 // If succes, set goal to 0
 // If failed, goal would be set to -1
-function pushOutput(m as MachineContainer, powr as int) as void {
+function pushOutput(m as MachineContainer, powr as int, dfclty as double) as void {
   val out = m.getItem(outX, outY);
   val item = m.getItem(displX, displY);
 
   // Slot is empty
-  if (isNull(out)) {
-    m.setItem(outX, outY, item);
-    return succes(m, powr);
-  }
+  if (isNull(out)) return succes(m, powr, item, dfclty);
 
   // Slot partially occupied with same item
   if (isNull(item)) return logger.logError('Replicator malfunction: must output item that lost.');
@@ -240,31 +284,28 @@ function pushOutput(m as MachineContainer, powr as int) as void {
     item.definition.id == out.definition.id
     && item.damage == out.damage
     && out.amount < out.maxStackSize
-  ) {
-    m.setItem(outX, outY, out * (out.amount + item.amount));
-    return succes(m, powr);
-  }
+  ) return succes(m, powr, out * (out.amount + item.amount), dfclty);
 
   // Unable to output
   m.setInteger('goal', -1);
   pushErr(m, '§fNo output\n§f space');
 }
 
-function spentBuffer(m as MachineContainer, powr as int, buffer as int, goal as int) as bool {
+function spentBuffer(m as MachineContainer, powr as int, buffer as int, goal as int, dfclty as double) as bool {
   if (buffer < goal) return false;
   m.setInteger('buffer', buffer - goal);
-  pushOutput(m, powr);
+  pushOutput(m, powr, dfclty);
   return true;
 }
 
 // Consume fluid and add it to buffer
 // Goal always bigger than 0 here
-function work(m as MachineContainer, tick as int, upgrAmount as int, powr as int) as void {
+function work(m as MachineContainer, tick as int, upgrAmount as int, powr as int, dfclty as double) as void {
   var buffer = m.getInteger('buffer');
   val goal = m.getInteger('goal');
 
   // Buffer still left from previous run, just output item
-  if (spentBuffer(m, powr, buffer, goal)) return;
+  if (spentBuffer(m, powr, buffer, goal, dfclty)) return;
 
   // Consume to increase buffer
   val toConsume = calcConsumption(upgrAmount, tick);
@@ -273,7 +314,7 @@ function work(m as MachineContainer, tick as int, upgrAmount as int, powr as int
   buffer += 100 * toConsume;
 
   // Instantly drop result if cost below 1mb
-  if (spentBuffer(m, powr, buffer, goal)) return;
+  if (spentBuffer(m, powr, buffer, goal, dfclty)) return;
 
   // Just add to buffer, skip
   m.setInteger('buffer', buffer);
@@ -294,6 +335,16 @@ function tick(m as MachineContainer) as void {
   val tick = m.getInteger('tick');
   m.setInteger('tick', tick + 1);
 
+  // 🧍 Check if player
+  val ownerUUID = m.getString('ownerUUID');
+  if (isNull(ownerUUID)) return pushErr(m, '§0Need\n§0 player ☻');
+
+  // 🎯 Update penalty text each tick
+  val dfclty = scripts.lib.offline.op.get(ownerUUID, 'difficulty', 0, 1000) as double;
+  if (dfclty < 0 || !isNull(scripts.lib.fake.userUUIDs[ownerUUID]))
+    return pushErr(m, '§0No fakes\n§0 allowed ☹');
+  updatePenaltyText(m, dfclty);
+
   // ⚡ Check energy
   val upgrAmount = getUpgrAmount(m);
   val energy = m.getEnergy(powX, powY);
@@ -302,10 +353,10 @@ function tick(m as MachineContainer) as void {
 
   // 📦 Output is stuck
   val goal = m.getInteger('goal');
-  if (goal < 0) return pushOutput(m, powr);
+  if (goal < 0) return pushOutput(m, powr, dfclty);
 
   // ⚙️ Check if we already working
-  if (goal > 0) return work(m, tick, upgrAmount, powr);
+  if (goal > 0) return work(m, tick, upgrAmount, powr, dfclty);
 
   // ❔ Find what item we should replicate
   val disk = m.getItem(diskX, diskY);
@@ -323,16 +374,16 @@ function tick(m as MachineContainer) as void {
   // 🥼 Check if we can consume catalyst
   val catl = m.getItem(catlX, catlY);
   if (isNull(catl)) return pushErr(m, '§6Need\n§6 catalyst');
-  val catlCost = getCost(catl);
+  val catlCost = uu.getCost(catl);
   if (catlCost <= 0) return pushErr(m, '§7Unusable\n§7 catalyst');
 
-  val itemCost = getCost(item);
-  if (itemCost >= catlCost) return pushErr(m, '§5Catalyst\n§5 too simple');
+  // 💲 Calculate cost and penalty based on difficulty
+  if (uu.getCost(item, dfclty) >= catlCost) return pushErr(m, '§5Catalyst\n§5 too simple');
 
   // ✔️ Consume catalyst and start operation
   m.setItem(catlX, catlY, catl.amount > 1 ? catl * (catl.amount - 1) : null);
   m.setInteger('goal', catlCost);
-  work(m, tick, upgrAmount, powr);
+  work(m, tick, upgrAmount, powr, dfclty);
 }
 
 x.addRecipe(AssemblyRecipe.create(function (c) {})

@@ -1,6 +1,7 @@
 {
-	x: 11.4d,
-	y: 4.8d,
+	title: "{q.industrialcraft.crystal_memory.name}",
+	x: 12.1d,
+	y: 5.0d,
 	text: [
 		"{q.industrialcraft.crystal_memory.desc}"
 	],
@@ -8,14 +9,16 @@
 		"658445bd"
 	],
 	tasks: [{
-		uid: "c04e6137",
-		type: "item",
-		items: [{
+		uid: "7d4454b8",
+		type: "custom",
+		title: "Hit anything with written Crystal Memory",
+		icon: {
 			id: "ic2:crystal_memory",
 			tag: {}
-		}],
-		ignore_damage: true,
-		ignore_nbt: 1b
+		},
+		tags: [
+			"crystal_memory_hit"
+		]
 	}],
 	rewards: [{
 		uid: "982885d8",

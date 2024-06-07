@@ -384,6 +384,7 @@ e2ee.written_book.Creeper=苦力怕
 e2ee.written_book.Zombie=僵尸
 
 # Misc 杂项
+stat.replications=消耗的UU物质桶
 e2ee.acquire.header=§6╔═§e✪§6═
 e2ee.acquire.footer=§6╚═§e✪§6═
 e2ee.acquire.single=§f你获得了 §l%s§f!
@@ -402,6 +403,9 @@ e2ee.acquire.more=§7§n点击这里查看详细信息§7.
 e2ee.acquire.info=§7获得物品会增加难度。\n§6║ §7总计获得值: §6§l%s§7.\n§6║ %s
 e2ee.acquire.info.other=§7增加难度的物品和组:\n§6║ %s
 e2ee.acquire.info.complete=§7没有可以增加难度的物品。
+e2ee.acquire.cannot=§7你不能复制 %s§7，因为\n§6║ §7你的难度值 §f太高§7.
+e2ee.acquire.to_replicate=§7要复制 %s§7 并保持难度为 %s§7,\n§6║ §7你需要成本超过 %s§7 的物品。
+e2ee.acquire.list=§7%s§7 物品的UU成本较高的列表:
 e2ee.warn.wrong_installation=§6✖ §4您的模组包安装不正确！§6 ✖\n§c缺少模组：§nSmeltery IO§c、§nNetherending Ores§c等。\n§c这通常发生在通过启动器手动下载这些模组时。\n§c在§4Prism Launcher§c中，安装模组包时，只需点击弹出窗口中的☛[§n打开缺失§c]。\n§8E2E-E包含4个模组，其创建者声明这些模组不能通过第三方启动器下载。
 e2ee.warn.wrong_world_type=§6✖ §4看起来您错误地生成了世界！§6 ✖\n§c若要玩Skyblock，在主菜单中导航至\n§6Mods§c ▶ §6Just Enough Dimensions§c 配置 ▶ §6Generic§c ▶ 并将 §6initialSpawnDimensionId§c 设置为 §63§c。之后，创建一个新世界。
 e2ee.do.charge=§f充电: §6%s§r

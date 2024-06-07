@@ -1,5 +1,6 @@
 #modloaded ftbquests
 #reloadable
+#priority -2000
 
 import crafttweaker.player.IPlayer;
 
@@ -65,6 +66,11 @@ events.onCustomTask(function (e as mods.zenutils.ftbq.CustomTaskEvent) {
   if (e.task.hasTag('skyblock')) {
     e.checker = function (player, currentProgress) {
       return player.hasGameStage('skyblock') ? 1 : 0;
+    };
+  }
+  if (e.task.hasTag('crystal_memory_hit')) {
+    e.checker = function (player, currentProgress) {
+      return isNull(scripts.do.acquire.info.playersCompleted[player.uuid]) ? 0 : 1;
     };
   }
 });

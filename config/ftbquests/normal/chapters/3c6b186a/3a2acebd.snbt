@@ -6,8 +6,8 @@
 			charge: 1.0E7d
 		}
 	},
-	x: 10.5d,
-	y: 8.833333333333334d,
+	x: 11.3d,
+	y: 7.9d,
 	text: [
 		"{q.industrialcraft.quantum_armor.desc}"
 	],

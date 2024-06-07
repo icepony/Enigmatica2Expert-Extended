@@ -1,11 +1,11 @@
 {
-	x: 10.5d,
-	y: 7.5d,
+	x: 11.3d,
+	y: 6.9d,
 	text: [
 		"{q.industrialcraft.iridium_ore.desc}"
 	],
 	dependencies: [
-		"68b9a584"
+		"b9f23f2f"
 	],
 	tasks: [{
 		uid: "599c6789",

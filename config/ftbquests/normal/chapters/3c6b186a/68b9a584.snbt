@@ -1,11 +1,13 @@
 {
+	title: "{q.industrialcraft._replicator_.name}",
 	x: 10.5d,
-	y: 6.1d,
+	y: 5.0d,
 	text: [
-		"{q.industrialcraft.replicator.desc}"
+		"{q.industrialcraft._replicator_.desc}"
 	],
 	dependencies: [
-		"60b8a626"
+		"6861a52d",
+		"0d64a022"
 	],
 	tasks: [{
 		uid: "5352029e",
@@ -20,7 +22,7 @@
 		item: {
 			id: "ftbquests:lootcrate",
 			tag: {
-				type: "rare"
+				type: "uncommon"
 			}
 		}
 	}]

@@ -1,7 +1,38 @@
 #modloaded ic2
 #priority 1
+#reloadable
 
 import crafttweaker.item.IItemStack;
+import crafttweaker.item.ITooltipFunction;
+import mods.zenutils.StaticString.format;
+import crafttweaker.player.IPlayer;
+import crafttweaker.util.Math;
+
+// How strong Difficulty effects on resulted cost
+static DIFFUCULTY_FACTOR as double = 0.1;
+
+// Minimum item cost multiplier when changed by difficulty
+static MIN_COST as double = 0.01;
+
+function getCost(item as IItemStack, difficulty as double = 10.0 /* must be "1.0 / DIFFUCULTY_FACTOR" */) as int {
+  val def = values[item.definition.id];
+  if (isNull(def)) return 0;
+  val cost = def[item.damage];
+  if (isNull(cost)) return 0;
+  if (difficulty == 10.0) return cost as int;
+  return difficultCost(cost, difficulty);
+}
+
+function difficultCost(cost as int, difficulty as double) as int {
+  return max(1, (Math.max(MIN_COST, DIFFUCULTY_FACTOR * difficulty) * cost) as int);
+}
+
+function formatUUCost(cost as int) as string {
+  return format('§d%,.2f §dmB UU', 0.01 * cost)
+    .replace('.00', '')
+    .replace('.', '§5.')
+    .replaceAll(',', '§5,§d');
+}
 
 /* Patchouli_js('Items/UU', paged({
     title: 'Sorted Replicables',
@@ -747,7 +778,6 @@ static values as int[int][string] = {
     77: 240,
     78: 650,
     79: 3043,
-    86: 1755251140,
   },
   'minecraft:bookshelf'      : { 0: 243 },
   'minecraft:cauldron'       : { 0: 245 },
@@ -810,7 +840,6 @@ static values as int[int][string] = {
   'forestry:crafting_material'            : { 1: 359 },
   'botania:pool'                          : { 0: 1138, 2: 360 },
   'immersiveengineering:mold'             : { 0: 645, 1: 645, 2: 367, 4: 645 },
-  'thermalfoundation:fluid_redstone'      : { 0: 371 },
   'forestry:oak_stick'                    : { 0: 375 },
   'rats:top_hat'                          : { 0: 390 },
   'opencomputers:diskdrive'               : { 0: 396 },
@@ -1191,13 +1220,9 @@ static values as int[int][string] = {
   'environmentaltech:void_ore_miner_cont_4': { 0: 513614 },
   'environmentaltech:solar_cell_kyronite'  : { 0: 516964 },
   'extendedcrafting:singularity'           : {
-    0 : 1758260,
     1 : 908259,
-    2 : 14808260,
-    3 : 2208260,
     4 : 36408260,
     5 : 5407553,
-    6 : 15407553,
     7 : 100408259,
     16: 758259,
     17: 608259,
@@ -1206,7 +1231,6 @@ static values as int[int][string] = {
     22: 7408259,
     23: 708259,
     24: 958612,
-    25: 15408259,
     26: 8008610,
     27: 6408610,
     28: 5741944,
@@ -1261,8 +1285,6 @@ static values as int[int][string] = {
     105: 16420835,
     106: 6822478,
     107: 16417204,
-    108: 4520835,
-    109: 44420835,
   },
   'environmentaltech:void_res_miner_cont_6': { 0: 2976459 },
   'environmentaltech:solar_cell_aethium'   : { 0: 3035404 },
@@ -1291,7 +1313,6 @@ static values as int[int][string] = {
   'environmentaltech:solar_cont_6'         : { 0: 352590316 },
   'rftoolsdim:dimension_builder'           : { 0: 392487111 },
   'extendedcrafting:singularity_ultimate'  : { 0: 718760355 },
-  'rftools:powercell_creative'             : { 0: 1721882284 },
 } as int[int][string];
 
 /*
@@ -1306,23 +1327,3 @@ return W.reduce((o, a, i) => {
 }, {});
 })()
 */
-
-function getCost(item as IItemStack) as int {
-  if (
-    isNull(values[item.definition.id])
-    || isNull(values[item.definition.id][item.damage])
-  ) return 0;
-  return values[item.definition.id][item.damage] as int;
-}
-
-for itemID, metaData in values {
-  for meta, cost in metaData {
-    val item = itemUtils.getItem(itemID, meta);
-    if (isNull(item)) continue;
-    item.only(function (item) { return !item.hasTag; })
-      .addTooltip(
-        format.lightPurple(((cost as float) / 100) as string)
-        ~ format.darkPurple(' mB UU')
-      );
-  }
-}
