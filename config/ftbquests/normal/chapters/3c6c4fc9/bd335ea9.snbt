@@ -12,6 +12,7 @@
 	tasks: [{
 		uid: "477abeeb",
 		type: "item",
+		disable_toast: true,
 		items: [{
 			item: "nuclearcraft:dust 1 14"
 		}]
@@ -19,6 +20,7 @@
 	{
 		uid: "e269cfad",
 		type: "item",
+		disable_toast: true,
 		items: [{
 			item: "nuclearcraft:ingot 1 14"
 		}]
@@ -26,6 +28,7 @@
 	{
 		uid: "ff8b1f02",
 		type: "item",
+		disable_toast: true,
 		items: [{
 			item: "nuclearcraft:ingot 1 11"
 		}]
@@ -33,6 +36,7 @@
 	{
 		uid: "e23163e8",
 		type: "item",
+		disable_toast: true,
 		items: [{
 			item: "nuclearcraft:dust 1 11"
 		}]
