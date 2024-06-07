@@ -85,8 +85,10 @@ install:
       - 295736 # MemoryTester
       - 297038 # CraftPresence
       - 297363 # Biome Border Viewer
+      - 299080 # Proportional Destruction Particles
       - 303122 # Just Enough Throwing In Fluids (JETIF)
       - 306549 # Tips
+      - 308240 # Cherished Worlds
       - 310560 # Grid
       - 311927 # Nimble (Forge)
       - 313816 # Armor Toughness Bar
@@ -102,9 +104,13 @@ install:
       - 454215 # Just Enough Drags
       - 461660 # Mouse Tweaks Unofficial
       - 502649 # Mini Effects
+      - 513769 # Item Borders [Forge]
+      - 521590 # Item Highlighter
       - 616190 # JEI Utilities
       - 624967 # RenderLib
       - 782070 # Startup Timer
+      - 848933 # Hit Indication
+      - 874067 # Valkyrie
       - 940521 # Just Enough Magiculture
 
     # The base path where the server should be installed to, ~ for current path
