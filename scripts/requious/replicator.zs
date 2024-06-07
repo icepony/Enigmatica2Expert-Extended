@@ -14,7 +14,6 @@ import mods.requious.MachineVisual;
 import mods.requious.SlotVisual;
 
 import scripts.category.uu.getCost;
-import scripts.lib.D.D.D_zs;
 
 static TICK_STEP as int = 1;
 static ENERGY_USAGE as int = 20000;
@@ -58,24 +57,29 @@ static catlY as int = 0;
 x.setItemSlot(catlX,catlY, ComponentFace.all(), 64)
   .setAccess(true,false)
   .setHandAccess(true,true)
-  .setFilter(<*>.only(function (item) { return getCost(item) > 0; }))
+  // .setFilter(<*>.only(function (item) { return getCost(item) > 0; })) // Filters not working
   .setGroup('input');
+
+static diskX as int = 3;
+static diskY as int = 2;
+x.setItemSlot(diskX, diskY, ComponentFace.all(), 1)
+  .setAccess(true,true)
+  .setHandAccess(true,true)
+  .setGroup('disk');
 
 static upgrX as int = 7;
 static upgrY as int = 2;
 x.setItemSlot(upgrX,upgrY, ComponentFace.none(), 64)
   .setAccess(false,false)
   .setHandAccess(true,true)
-  .setFilter(<ic2:upgrade>)
-  .setBackground(SlotVisual.create(1,1).addPart(replTexture, 7, 2))
-  .setGroup('upgrade');
+  // .setFilter(<ic2:upgrade>)
+  .setBackground(SlotVisual.create(1,1).addPart(replTexture, 7, 2));
 
 static outX as int = 4;
 static outY as int = 4;
 x.setItemSlot(outX,outY, ComponentFace.all(), 64)
   .setAccess(false,true)
-  .setHandAccess(false,true)
-  .setGroup('output');
+  .setHandAccess(false,true);
 
 static mattX as int = 0;
 static mattY as int = 0;
@@ -83,8 +87,7 @@ x.setFluidSlot(mattX, mattY, ComponentFace.all(), 16000)
   .setAccess(true /* input */, true /* output */)
   .setFilter(function (liquid/*  as ILiquidStack */) { return liquid.name == 'ic2uu_matter'; })
   .setBackground(SlotVisual.create(1,5).addPart(replTexture, /* x */  0,/* y */ 0))
-  .setForeground(SlotVisual.create(1,5).addPart(replTexture, /* x */ 10,/* y */ 0))
-  .setGroup('input');
+  .setForeground(SlotVisual.create(1,5).addPart(replTexture, /* x */ 10,/* y */ 0));
 
 static powX as int = 8;
 static powY as int = 0;
@@ -100,8 +103,7 @@ x.setEnergySlot(powX, powY, ComponentFace.all(), 2000000000)
     1, // width
     5, // height
     [255,255,255] // rgb
-  ))
-  .setGroup('input');
+  ));
 
 x.setTextSlot(1,1).setVisual(SlotVisual.create(3,1)).setRenderText('§7%s  \n§8%s  ', ['goal','buffer']).alignRight();
 x.setTextSlot(5,3).setVisual(SlotVisual.create(3,1)).setRenderText(' %s',['error']);
@@ -146,9 +148,8 @@ function pushErr(m as MachineContainer, reason as string) as void {
 
 function defineVars(m as MachineContainer) as void {
   // Skip init if already initialized
-  if (m.getInteger('face_index') != 0) return;
+  if (!isNull(m.getString('error'))) return;
 
-  m.setInteger('face_index', -1); // Index of face where pattern storage is
   m.setString('error', ''); // Error line
   m.setInteger('goal', 0); // how much UU need. -1 if just trying to push output
   m.setInteger('buffer', 0); // stored UU in internal
@@ -185,67 +186,16 @@ function getUpgrAmount(m as MachineContainer) as double {
     : upgr.amount as double;
 }
 
-static facings as IFacing[] = [
-  IFacing.north(),
-  IFacing.east(),
-  IFacing.south(),
-  IFacing.west(),
-  IFacing.down(),
-  IFacing.up(),
-] as IFacing[];
+function getReplicateItem(m as MachineContainer, disk as IItemStack) as IItemStack {
+  if (
+    isNull(disk)
+    || isNull(disk.tag)
+    || isNull(disk.tag.Pattern)
+    || isNull(disk.tag.Pattern.id)
+    || isNull(disk.tag.Pattern.Damage)
+  ) return null;
 
-function getBlockWithStorage(world as IWorld, pos as IBlockPos) as D_zs {
-  val block = world.getBlock(pos);
-  if (isNull(block)) return null; // No block at all
-  val d = D(block.data);
-  val nbtPaths = [
-    'InvSlots.SaveSlot.Contents[0]',
-    'InvSlots.disk.Contents[0]',
-    'Items[0]',
-  ] as string[];
-  for path in nbtPaths {
-    if (d.getString(path ~ '.id', '') != 'ic2:crystal_memory') continue;
-    return d.move(path);
-  }
-  return null;
-}
-
-function findPatternStorage(m as MachineContainer) as D_zs {
-  // Check previously stored face side
-  val face = m.getInteger('face_index');
-  if (face > 0) {
-    val b = getBlockWithStorage(m.world, m.pos.getOffset(facings[face - 1], 1));
-    if (!isNull(b)) return b;
-  }
-
-  for i, f in facings {
-    val b = getBlockWithStorage(m.world, m.pos.getOffset(f, 1));
-    if (isNull(b)) continue;
-    m.setInteger('face_index', i + 1);
-    return b;
-  }
-  m.setInteger('face_index', -1);
-  return null;
-}
-
-function getReplicateItem(m as MachineContainer, d as D_zs) as IItemStack {
-  d.move('tag.Pattern');
-  if (!d.check(['id','Damage'])) {
-    pushErr(m, '§3Write data\n§3 to memory');
-    return null;
-  }
-
-  val item = itemUtils.getItem(
-    d.getString('id', ''),
-    d.getString('Damage', '')
-  );
-
-  if (isNull(item)) {
-    pushErr(m, '§8Unreplicable\n§8 item');
-    return null;
-  }
-
-  return item;
+  return <item:${disk.tag.Pattern.id}:${disk.tag.Pattern.Damage}>;
 }
 
 function consumeEnergy(m as MachineContainer, amount as int) as void {
@@ -358,13 +308,16 @@ function tick(m as MachineContainer) as void {
   if (goal > 0) return work(m, tick, upgrAmount, powr);
 
   // ❔ Find what item we should replicate
-  val ps = findPatternStorage(m);
-  if (isNull(ps)) {
+  val disk = m.getItem(diskX, diskY);
+  if (isNull(disk) || disk.definition.id != 'ic2:crystal_memory') {
     m.setItem(displX, displY, null);
-    return pushErr(m, '§bPlace adjst.\n§b Storage');
+    return pushErr(m, '§bInsrt Crstl\n§b Memory');
   }
-  val item = getReplicateItem(m, ps);
-  if (isNull(item)) return m.setItem(displX, displY, null);
+  val item = getReplicateItem(m, disk);
+  if (isNull(item)) {
+    m.setItem(displX, displY, null);
+    return pushErr(m, '§3Write data\n§3 to memory');
+  }
   m.setItem(displX, displY, item); // Set item is display slot
 
   // 🥼 Check if we can consume catalyst
