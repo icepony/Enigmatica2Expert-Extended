@@ -2,6 +2,7 @@
 [main/WARN] [Foundation]: The jar file D:\Program Files\PrismLauncher\libraries\lzma\lzma\0.0.1\lzma-0.0.1.jar has a security seal for path LZMA, but that path is defined and not secure
 [main/ERROR] [Fugue]: java.lang.NullPointerException: Cannot read the array length because "<parameter1>" is null
 [main/WARN] [Foundation]: Can't get unsafe from JVM Driver, trying VarHandle
+[main/ERROR] [mixin]: Critical problem: mixins.valkyrieOptifineIncompatible.json:GuiMainMenuMixin from mod unknown-owner target net.minecraft.client.gui.GuiMainMenu was loaded too early.
 [Client thread/ERROR] [Fugue]: java.lang.NullPointerException: Cannot read the array length because "<parameter1>" is null
 [Client thread/WARN] [oshi.util.FileUtil]: Configuration conflict: there is more than one oshi.properties file on the classpath: [jar:file:/D:/Program%20Files/PrismLauncher/libraries/com/github/oshi/oshi-core/6.5.0/oshi-core-6.5.0.jar!/oshi.properties, jar:file:/D:/Program%20Files/PrismLauncher/libraries/com/github/oshi/oshi-core/6.5.0/oshi-core-6.5.0.jar!/oshi.properties]
 [Client thread/WARN] [FML]: Mod scalar has been disabled through configuration
@@ -15,9 +16,84 @@
 [Client thread/WARN] [VintageFix]: Mod 'ctm' is attempting to iterate the model registry, but is not whitelisted in VintageFix. This may cause glitches if it wraps its own models.
 [Client thread/WARN] [net.minecraft.network.datasync.EntityDataManager]: defineId called for: class com.github.alexthe666.iceandfire.entity.EntityDreadThrall from class com.github.alexthe666.iceandfire.entity.EntityDreadKnight
 [Client thread/WARN] [net.minecraft.network.datasync.EntityDataManager]: defineId called for: class com.github.alexthe666.rats.server.entity.EntityFeralRatlantean from class com.github.alexthe666.rats.server.entity.EntityNeoRatlantean
-[CraftPresence/ERROR] [craftpresence]: Unable to connect to Discord...
+[Client thread/WARN] [mixin]: Mixin apply for mod visualores-0.2.5.jar failed mixins.visualores.xaerominimap_core.json:MinimapRendererMixin from mod visualores-0.2.5.jar -> xaero.common.minimap.render.MinimapRenderer: org.spongepowered.asm.mixin.injection.throwables.InvalidInjectionException Invalid descriptor on mixins.visualores.xaerominimap_core.json:MinimapRendererMixin from mod visualores-0.2.5.jar->@Inject::visualores$injectConstruct(Lxaero/common/IXaeroMinimap;Lnet/minecraft/client/Minecraft;Lxaero/common/minimap/waypoints/render/WaypointsGuiRenderer;Lxaero/common/minimap/MinimapInterface;Lxaero/common/minimap/waypoints/render/CompassRenderer;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V! Expected (Lxaero/common/IXaeroMinimap;Lnet/minecraft/client/Minecraft;Lxaero/common/minimap/waypoints/render/WaypointsGuiRenderer;Lxaero/hud/minimap/Minimap;Lxaero/common/minimap/waypoints/render/CompassRenderer;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V but found (Lxaero/common/IXaeroMinimap;Lnet/minecraft/client/Minecraft;Lxaero/common/minimap/waypoints/render/WaypointsGuiRenderer;Lxaero/common/minimap/MinimapInterface;Lxaero/common/minimap/waypoints/render/CompassRenderer;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V [ -> Inject -> mixins.visualores.xaerominimap_core.json:MinimapRendererMixin from mod visualores-0.2.5.jar->@Inject::visualores$injectConstruct(Lxaero/common/IXaeroMinimap;Lnet/minecraft/client/Minecraft;Lxaero/common/minimap/waypoints/render/WaypointsGuiRenderer;Lxaero/common/minimap/MinimapInterface;Lxaero/common/minimap/waypoints/render/CompassRenderer;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V]
+org.spongepowered.asm.mixin.injection.throwables.InvalidInjectionException: Invalid descriptor on mixins.visualores.xaerominimap_core.json:MinimapRendererMixin from mod visualores-0.2.5.jar->@Inject::visualores$injectConstruct(Lxaero/common/IXaeroMinimap;Lnet/minecraft/client/Minecraft;Lxaero/common/minimap/waypoints/render/WaypointsGuiRenderer;Lxaero/common/minimap/MinimapInterface;Lxaero/common/minimap/waypoints/render/CompassRenderer;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V! Expected (Lxaero/common/IXaeroMinimap;Lnet/minecraft/client/Minecraft;Lxaero/common/minimap/waypoints/render/WaypointsGuiRenderer;Lxaero/hud/minimap/Minimap;Lxaero/common/minimap/waypoints/render/CompassRenderer;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V but found (Lxaero/common/IXaeroMinimap;Lnet/minecraft/client/Minecraft;Lxaero/common/minimap/waypoints/render/WaypointsGuiRenderer;Lxaero/common/minimap/MinimapInterface;Lxaero/common/minimap/waypoints/render/CompassRenderer;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V [ -> Inject -> mixins.visualores.xaerominimap_core.json:MinimapRendererMixin from mod visualores-0.2.5.jar->@Inject::visualores$injectConstruct(Lxaero/common/IXaeroMinimap;Lnet/minecraft/client/Minecraft;Lxaero/common/minimap/waypoints/render/WaypointsGuiRenderer;Lxaero/common/minimap/MinimapInterface;Lxaero/common/minimap/waypoints/render/CompassRenderer;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V]
+	at org.spongepowered.asm.mixin.injection.callback.CallbackInjector.inject(CallbackInjector.java:563) ~[sponge-mixin-0.19.5+mixin.0.8.5.jar:0.19.5+mixin.0.8.5]
+	at org.spongepowered.asm.mixin.injection.callback.CallbackInjector.inject(CallbackInjector.java:493) ~[sponge-mixin-0.19.5+mixin.0.8.5.jar:0.19.5+mixin.0.8.5]
+	at org.spongepowered.asm.mixin.injection.code.Injector.inject(Injector.java:277) ~[sponge-mixin-0.19.5+mixin.0.8.5.jar:0.19.5+mixin.0.8.5]
+  [...]
 [Client thread/WARN] [Chisel]: Mod cathedral is using deprecated IMC variation:add! This IMC type may be removed soon, please notify the author of this mod.
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_THAUMADDS
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_ESSENCE_SALT
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_CRYSTAL_CRUSHER
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_AURA_DISPERSER
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_ESSENTIA_PISTOL
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_SEAL
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_SEAL_SYMBOLS
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_SEAL_GLOBE
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_KNOWLEDGE_TOME
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_CHESTER
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_VIS_SCRIBING_TOOLS
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_CRYSTAL_WATER
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_ENCHANTED_GOLDEN_APPLE
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_CRYSTAL_BLOCK
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_GROWTH_CHAMBER
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_FRAGNANT_PENDANT
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_VIS_SEEDS
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_CRYSTAL_BAG
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_TRAVELLER_BELT
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_STRIDING_BELT
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_METEOR_BELT
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_BRASS_JAR
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_THAUMIUM_JAR
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_ELDRITCH_JAR
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_MITHRILLIUM
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_MOB_SUMMONING
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_ASPECT_COMBINER
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_MITHRILLIUM_JAR
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_MITHRILLIUM_SMELTER
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_SHADOW_ENCHANTER
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_SHADOW_BEAM_STAFF
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_THE_BEHEADER
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_ADAMINITE
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_AURA_CHARGER
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_ADAMINITE_JAR
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_ADAMINITE_SMELTER
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_ADAMINITE_SWORD
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_ADAMINITE_FABRIC
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_MITHMINITE
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_MITHMINITE_JAR
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_MITHMINITE_SMELTER
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_MITHMINITE_SCYTHE
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_MITHMINITE_FABRIC
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_MITHMINITE_HOOD
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_MITHMINITE_ROBE
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_MITHMINITE_BELT
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_MITHMINITE_BOOTS
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_CAKE
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_TOTEMS
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_PURIFLOWER
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_CRYSTAL_BORE
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_FLUX_CONCENTRATOR
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_DISENCHANT_FABRIC
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_CRYSTAL_LAMP
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_ELDRITCH
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_VOID_THAUMOMETER
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_WORMHOLE_MIRROR
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_VOID_CROP
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_VOID_ANVIL
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_VOID_ELEMENTAL_PICKAXE
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_VOID_ELEMENTAL_AXE
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_VOID_ELEMENTAL_SHOVEL
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_VOID_ELEMENTAL_HOE
+[Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry !TARBlueWolf
 [Client thread/ERROR] [Had Enough Items]: A Recipe Handler has already been registered for this recipe class: com.github.alexthe666.iceandfire.recipe.DragonForgeRecipe
 [Client thread/ERROR] [Had Enough Items]: A Recipe Handler has already been registered for this recipe class: com.github.alexthe666.rats.server.recipes.SharedRecipe
 [Client thread/ERROR] [Had Enough Items]: A Recipe Handler has already been registered for this recipe class: com.github.alexthe666.rats.server.recipes.SharedRecipe
-[Client thread/WARN] [Had Enough Items]: Sending runtime to plugin: com.buuz135.thaumicjei.ThaumcraftJEIPlugin took 140 ms
+[Client thread/ERROR] [Had Enough Items]: Found a broken recipe: mezz.jei.plugins.jei.info.IngredientInfoRecipe@xxxxxxxx
+Outputs:
+net.minecraft.item.ItemStack: [[1xitem.thaumadditions:salt_essence@0 thaumadditions:salt_essence]]
+Inputs:
+net.minecraft.item.ItemStack: [[1xitem.thaumadditions:salt_essence@0 thaumadditions:salt_essence]]
+  [...]
+[CraftPresence/ERROR] [craftpresence]: Unable to connect to Discord...

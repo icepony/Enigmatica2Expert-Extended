@@ -324,13 +324,6 @@ for id in livingBaseEntities {
   recipes.addShapeless(soul, [soul]);
 }
 
-/*
-for entityDef in game.entities {
-  val soul = Soul(entityDef.id);
-  recipes.addShapeless(soul, [soul]);
-}
-*/
-
 events.onPlayerLeftClickBlock(function (e as crafttweaker.event.PlayerLeftClickBlockEvent) {
   if (e.player.world.isRemote()) return;
   if (

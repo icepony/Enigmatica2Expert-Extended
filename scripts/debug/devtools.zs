@@ -1,7 +1,6 @@
 #modloaded ctintegration draconicevolution
 #reloadable
-
-#priority 3999
+#priority -6000
 
 import crafttweaker.block.IBlock;
 import crafttweaker.block.IBlockState;
@@ -11,8 +10,6 @@ import crafttweaker.player.IPlayer;
 import crafttweaker.world.IWorld;
 import crafttweaker.entity.IEntity;
 import crafttweaker.world.IBlockPos;
-
-utils.DEBUG = true;
 
 function giveChest(player as IPlayer, items as IItemStack[]) as void {
   var tag = {

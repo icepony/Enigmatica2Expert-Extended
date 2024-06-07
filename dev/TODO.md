@@ -2,11 +2,18 @@
 
 🚧✅❌⚠️ List of priorities:
 
-- [ ] 🌍 Teleport player to Alien Forest with Blood Magic TP ritual
 - [ ] 📀 Fix sharks still TP player somewhere
 - [ ] ✏️ Remove `Creative Harvest` from game since causing some shaders crash
-- [ ] ⚡ Remove XU2 jei removed categories https://spark.lucko.me/MRBZYLxzrN?hl=325666
-- [ ] ⚡ Remove progress bar tick on HEI recipe adding https://spark.lucko.me/MRBZYLxzrN?hl=325666,340125
+- [ ] 🩸 Meteor: make fall vertically to not accumulate them outside loaded chunks
+- [ ] 🩸 Meteor: Implement https://github.com/friendlyhj/ZenUtils/issues/54#issuecomment-2152275918
+- [ ] ⭐ Make self-forbidding mechanism for Difficulty https://github.com/friendlyhj/ZenUtils/issues/53#issuecomment-2154922579
+- [ ] ⭐ Difficulty: descrease over time?
+- [ ] ✏️ Liquid Concrete: remove block variant recipe, add usages, non-tech craft
+- [ ] 📀 `Liquid Concrete`: fix not solidified to full block, slower solidify
+- [ ] 📜 Improve CF page: center it, fasten GIF, update mods
+- [ ] 📜 Rustic's brews give better buffs decument
+- [ ] 📜 Document new moderator blocks
+- [ ] 📜 Add goal amount for Woodweave singularity
 
 ---
 
@@ -16,13 +23,17 @@
 
 Planned non-urgent changes, or just good ideas:
 
+### "Performance ⚡"
+- [ ] ⚡ Remove XU2 jei removed categories https://spark.lucko.me/MRBZYLxzrN?hl=325666
+- [ ] ⚡ Remove progress bar tick on HEI recipe adding https://spark.lucko.me/MRBZYLxzrN?hl=325666,340125 https://spark.lucko.me/Urce0z9hZ7?hl=365397,358076
+- [ ] ⚡ Wand of the forest change recipe to Recipe Function
+
 ### Difficulty increase
 - Vanilla Chests
 
 ### Quests and Docs expansion
 - [ ] 📖 Add Skyblock quest about Terraformer
 - [ ] 📖 Add Blast Furnace heat source
-- [ ] 📖 Write Neutron Shields localization
 - [ ] 📖 Add note about pregen spoiling Lootr chests https://github.com/LootrMinecraft/Lootr/issues/195
 - [ ] 📖 Add little tiles fancy chest with lot of space
 - [ ] 📖 Add not that /dev/null is infinite for Robot
@@ -75,6 +86,8 @@ Planned non-urgent changes, or just good ideas:
 - [ ] ✏️ Add usage of `Perfect Fuel` in NCO (with `flux goo` as sub-product)
 
 ### "Endgame" expansion
+- [ ] ✏️ Add `Garbage Singularity`
+- [ ] 🌍 Teleport player to Alien Forest with Blood Magic TP ritual
 - [ ] ✏️ Add "Machine Frame Singularity"
 - [ ] ✏️ Tweak Botania Extended Crafting Tables recipes to non-tech
 - [ ] ✏️ Integrate `Orbital Laser Drill` better. It can mine ores on planet orbits for skyblock
@@ -88,13 +101,14 @@ Planned non-urgent changes, or just good ideas:
 - [ ] ✏️ Creative Impetus add recipe
 - [ ] ✏️ Draconic Evolution infusion can use trillions RF
 - [ ] ✏️ Add [](https://is.gd/OcNNZN "Uncrafting Grinder") as Endgame item, right before creative upgrade
-- [ ] ✏️ Add new crafting mechanic - melting blocks in world that cant be harvested, such as `Rock Crystal Ore, Swolen/Fibrous Taint, Vis Crystal, Grass Path, Porous stone, Antimatter, TF Tree Cores, TF Thorns, Trollstein, Foam`
+- [ ] ✏️ Add new crafting mechanic - melting blocks in world that cant be harvested, such as `Rock Crystal Ore, Swolen/Fibrous Taint, Vis Crystal, Grass Path, Porous stone, Antimatter, TF Tree Cores, TF Thorns, Trollstein, Foam, Block Mushrooms`
 
 ### "Multiplayer" expansion
 
 - [ ] 💬 Add messages "Player killex xxx mobs! WOW" with respective loot box reward. Ideas: Mined blocks, Jumps
 
 ### Mods
+- [ ] 🔴 Remove `XTones` and `Environmental Materials`
 - [ ] 🟢 Return Village Names when fixed https://legacy.curseforge.com/minecraft/mc-mods/village-names/issues/18
 - [ ] 🟡 Update `Precision Mining` when fixed https://codeberg.org/PORTB/PrecisionMiningRewrite/issues/4
 - [ ] 🟡 Update REID when fixed https://github.com/TerraFirmaCraft-The-Final-Frontier/RoughlyEnoughIDs/issues/37
@@ -113,6 +127,8 @@ Planned non-urgent changes, or just good ideas:
 
 ### Other
 
+- [ ] 📀 Fix crops drop 1000 of berries on high stats
+- [ ] 🔴 Remove `Random Patches` since UT and Valkyrie now do most of its features
 - [ ] 🎉 Add new mechanic for /dev/null for leveling up its recharging speed
 - [ ] 📀 Raw Inversion Pillar - fix duping itself. Culd be used as craft mechanics since can spread will-infused stone.
 - [ ] ✏️ Black hole generator can work on cobble
@@ -155,7 +171,6 @@ Planned non-urgent changes, or just good ideas:
 - [ ] 📖 Fix completion of quest chapters
 - [ ] ✏️ Chemical thrower turns stone into ore if spreading on exact block (calculated based on world seed). Can be determined with Computer
 - [ ] ✏️ `Conglomerate of Life` spawns Foxes and Pigmen near portal
-- [ ] 🔨 rework Difficulty Trait, add efficiency growth
 - [ ] ✏️ Rebalance Sage and Druids trades
 - [ ] ✏️ Add compressed `Charged Creeper chunk`
 - [ ] ✏️ Make `Seared Stone` + `Essence` alternative in adv. machinesl
