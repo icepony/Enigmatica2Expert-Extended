@@ -88,7 +88,7 @@ scripts.do.build_mob.add(<entity:twilightforest:quest_ram>, [
     if (abs(pl.x - p.x) > 20 || abs(pl.y - p.y) > 20 || abs(pl.z - p.z) > 20) continue;
     pl.sendPlaySoundPacket('minecraft:entity.sheep.ambient', 'ambient', p, 1, 1);
   }
-}).shiftDown(3);
+}).shift(0, -1.5, 0);
 
 scripts.do.build_mob.add(<entity:twilightforest:castle_guardian>, [
   [

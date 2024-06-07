@@ -25,7 +25,9 @@ zenClass MobBuild {
   var entity  as IEntityDefinition;
   var volume  as string[][];
   var map     as IItemStack[string];
-  var entityHeight as float = 1.0f;
+  var shiftX  as float = 0.0f;
+  var shiftY  as float =-0.5f;
+  var shiftZ  as float = 0.0f;
   var spawnFnc as function(IWorld,Position3f)void;
   var isMirrored as bool = false;
 
@@ -47,9 +49,11 @@ zenClass MobBuild {
     return this;
   }
 
-  // When entity spawning, move it down this distance
-  function shiftDown(shift as float) as MobBuild {
-    entityHeight = shift;
+  // When entity spawning, move it this distance
+  function shift(x as float, y as float, z as float) as MobBuild {
+    shiftX = x;
+    shiftY = y;
+    shiftZ = z;
     return this;
   }
   // ----------------------------------------------------------
@@ -132,8 +136,8 @@ zenClass MobBuild {
       });
 
       val r = rotate(face, offset.x, offset.z);
-      val truePos = Position3f.create(r[0] + pos.x, offset.y + pos.y - entityHeight / 2, r[1] + pos.z);
-      utils.executeCommandSilent(server, '/summon ' ~ entity.id ~ ' ' ~ truePos.x ~ ' ' ~ truePos.y ~ ' ' ~ truePos.z ~ ' {Rotation:[' ~ (face * 90 - 180) ~ 'f,0f]}');
+      val truePos = Position3f.create(r[0] + pos.x + shiftX, offset.y + pos.y + shiftY, r[1] + pos.z + shiftZ);
+      utils.executeCommandSilent(server, '/summon ' ~ entity.id ~ ' ' ~ truePos.x ~ ' ' ~ truePos.y ~ ' ' ~ (truePos.z - 0.1) ~ ' {Rotation:[' ~ (face * 90 - 180) ~ 'f,0f]}');
 
       spawnFnc(world, truePos);
 
