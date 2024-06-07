@@ -2,8 +2,8 @@
   "packName": "Enigmatica 2: Expert - Extended",
   "icon":
   {
-    "path": "resources/enigmatica/textures/e2ee-logo-256.png",
-    "width": 128,
-    "height": 128
+    "path": "resourcepacks/icons/icon_256.png",
+    "width": 256,
+    "height": 256
   }
 }

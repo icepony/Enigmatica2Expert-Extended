@@ -8,7 +8,6 @@
 !resources/
 !schematics/
 schematics/*.*
-!resourcepacks/bq_lootchests/
 !dev/
 !server/
 !README.md
@@ -25,6 +24,10 @@ structures/inactive
 !.imgbotconfig
 !CHANGELOG-latest.md
 !asm/
+
+!resourcepacks
+resourcepacks/*
+!resourcepacks/icons
 
 # Developing-only configs
 !.eslint.config.js
