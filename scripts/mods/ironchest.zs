@@ -29,11 +29,6 @@ recipes.addShaped('Diamond Chest',
     [<ore:gemDiamondRat>, <ironchest:iron_chest:1>, <ore:gemDiamondRat>],
     [<ore:blockGlass>, <ore:gearDiamond>, <ore:blockGlass>]]);
 
-// Remove unused chests recipes
-recipes.removeByRecipeName('ironchest:shulker/purple/iron/copper_iron_shulker_box');
-recipes.removeByRecipeName('ironchest:shulker/purple/gold/silver_gold_shulker_box');
-recipes.removeByRecipeName('ironchest:shulker/purple/diamond/silver_diamond_shulker_box');
-
 for output, ingrs in {
   <ironchest:wood_iron_chest_upgrade>       : [<ore:plateIron>],
   <ironchest:iron_gold_chest_upgrade>       : [<ore:plateGold>],
@@ -60,45 +55,37 @@ for output, ingrs in {
 
 // *======= Remove & Hide =======*
 
-val chestsToHide = [
-  <ironchest:iron_chest:3>,
-  <ironchest:iron_chest:4>,
-  <ironchest:iron_shulker_box_white:3>,
-  <ironchest:iron_shulker_box_white:4>,
-  <ironchest:iron_shulker_box_orange:3>,
-  <ironchest:iron_shulker_box_orange:4>,
-  <ironchest:iron_shulker_box_magenta:3>,
-  <ironchest:iron_shulker_box_magenta:4>,
-  <ironchest:iron_shulker_box_light_blue:3>,
-  <ironchest:iron_shulker_box_light_blue:4>,
-  <ironchest:iron_shulker_box_yellow:3>,
-  <ironchest:iron_shulker_box_yellow:4>,
-  <ironchest:iron_shulker_box_lime:3>,
-  <ironchest:iron_shulker_box_lime:4>,
-  <ironchest:iron_shulker_box_pink:3>,
-  <ironchest:iron_shulker_box_pink:4>,
-  <ironchest:iron_shulker_box_gray:3>,
-  <ironchest:iron_shulker_box_gray:4>,
-  <ironchest:iron_shulker_box_silver:3>,
-  <ironchest:iron_shulker_box_silver:4>,
-  <ironchest:iron_shulker_box_cyan:3>,
-  <ironchest:iron_shulker_box_cyan:4>,
-  <ironchest:iron_shulker_box_purple:3>,
-  <ironchest:iron_shulker_box_purple:4>,
-  <ironchest:iron_shulker_box_blue:3>,
-  <ironchest:iron_shulker_box_blue:4>,
-  <ironchest:iron_shulker_box_brown:3>,
-  <ironchest:iron_shulker_box_brown:4>,
-  <ironchest:iron_shulker_box_green:3>,
-  <ironchest:iron_shulker_box_green:4>,
-  <ironchest:iron_shulker_box_red:3>,
-  <ironchest:iron_shulker_box_red:4>,
-  <ironchest:iron_shulker_box_black:3>,
-  <ironchest:iron_shulker_box_black:4>,
-] as IItemStack[];
+for i, meta in [3, 4] as int[] {
+  Purge(<item:ironchest:iron_chest:${meta}>);
+  for color in [
+    'white',
+    'orange',
+    'magenta',
+    'light_blue',
+    'yellow',
+    'lime',
+    'pink',
+    'gray',
+    'silver',
+    'cyan',
+    'purple',
+    'blue',
+    'brown',
+    'green',
+    'red',
+    'black',
+  ] as string[] {
+    Purge(<item:ironchest:iron_shulker_box_${color}:${meta}>);
 
-for item in chestsToHide {
-  Purge(item);
+    // Remove unused silver/copper chests recipes
+    if (i==0) {
+      recipes.removeByRecipeName(`ironchest:shulker/${color}/iron/copper_iron_shulker_box`);
+      recipes.removeByRecipeName(`ironchest:shulker/${color}/gold/silver_gold_shulker_box`);
+      recipes.removeByRecipeName(`ironchest:shulker/${color}/diamond/silver_diamond_shulker_box`);
+      recipes.removeByRecipeName(`ironchest:shulker/${color}/iron/copper_iron_shulker_box`);
+      recipes.removeByRecipeName(`ironchest:shulker/${color}/diamond/silver_diamond_shulker_box`);
+    }
+  }
 }
 
 // Alt for animals
