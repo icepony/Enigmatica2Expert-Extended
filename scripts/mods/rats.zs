@@ -25,6 +25,13 @@ events.onAllowDespawn(function (e as crafttweaker.event.EntityLivingSpawnEvent) 
 });
 
 // ######################################################################
+// HEI hints
+scripts.jei.crafting_hints.addInsOutsCatl([Soul('minecraft:villager'), <rats:plague_doctorate>], [Soul('rats:plague_doctor')]);
+scripts.jei.crafting_hints.addInsOutsCatl([Soul('rats:plague_doctor')], [Soul('rats:black_death')], <cyclicmagic:ender_lightning>);
+scripts.jei.crafting_hints.addInsOutsCatl([], [Soul('rats:plague_cloud'), Soul('rats:plague_beast')], Soul('rats:black_death'));
+scripts.jei.crafting_hints.addInsOutsCatl([Soul('rats:feral_ratlantean'), <rats:vial_of_sentience>], [Soul('rats:neo_ratlantean')]);
+
+// ######################################################################
 //
 // Craft Changes
 //

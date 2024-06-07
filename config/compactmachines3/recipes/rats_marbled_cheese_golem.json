@@ -1,0 +1,24 @@
+{
+  "name": "compactmachines3:rats_marbled_cheese_golem",
+
+  "target-item": "minecraft:spawn_egg",
+  "target-nbt": "{EntityTag:{id:\"rats:marbled_cheese_golem\"}}",
+
+  "catalyst": "minecraft:spawn_egg",
+  "catalyst-nbt": "{EntityTag:{id:\"rats:marbled_cheese_golem\"}}",
+
+  "input-types": {
+    "c": { "id": "rats:marbled_cheese_raw", "meta": 0 },
+    "x": { "id": "rats:marbled_cheese_golem_core", "meta": 0 },
+    "h": { "id": "rats:marbled_cheese_rat_head", "meta": 0 }
+  },
+  "shape": [
+    [
+      ["_", "h", "_"]
+    ], [
+      ["c", "x", "c"]
+    ], [
+      ["_", "c", "_"]
+    ]
+  ]
+}
