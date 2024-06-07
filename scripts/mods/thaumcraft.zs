@@ -1232,3 +1232,52 @@ loottweaker.LootTweaker.getTable('thaumicaugmentation:block/loot_uncommon').getP
 
 // Pech wand peaceful alt
 mods.bloodmagic.BloodAltar.addRecipe(<thaumcraft:pech_wand>, <redstonerepository:tool.wrench_gelid>, 4, 80000, 200, 200);
+
+// Other mobs hints
+scripts.jei.crafting_hints.addInsOutsCatl([], [
+  <entity:thaumcraft:cultistcleric>.asStack(),
+  <entity:thaumcraft:cultistknight>.asStack(),
+  <entity:thaumcraft:cultistleader>.asStack(),
+], <entity:thaumcraft:cultistportalgreater>.asIngr());
+scripts.jei.crafting_hints.addInsOutsCatl([], [
+  <thaumcraft:banner_crimson_cult> * 4,
+  <thaumcraft:loot_crate_common> * 9,
+], <entity:thaumcraft:cultistportalgreater>.asIngr());
+
+// Greater Crimson Portal custom spawning
+scripts.do.build_mob.add(<entity:thaumcraft:cultistportalgreater>, [
+  [
+    '             ',
+    '             ',
+    '             ',
+    '             ',
+    '             ',
+    '             ',
+    '      x      ',
+    '             ',
+    '             ',
+    '             ',
+    '             ',
+    '             ',
+    '             ',
+  ], [
+    '      f      ',
+    '             ',
+    '             ',
+    '             ',
+    '             ',
+    '     aaa     ',
+    'f    aoa    f',
+    '     aaa     ',
+    '             ',
+    '             ',
+    '             ',
+    '             ',
+    '      f      ',
+  ],
+], {
+  f: <thaumcraft:banner_red>,
+  o: <thaumadditions:mithminite_block>,
+  a: <thaumicaugmentation:starfield_glass>,
+  x: <contenttweaker:conglomerate_of_life>,
+}).shift(0, 0, -0.5).mirrored();
