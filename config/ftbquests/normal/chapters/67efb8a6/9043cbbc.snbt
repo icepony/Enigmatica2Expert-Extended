@@ -61,13 +61,17 @@
 	}],
 	rewards: [{
 		uid: "e4e15c8b",
-		type: "item",
-		item: {
+		type: "custom",
+		title: "{e2ee.quest.legendary}",
+		icon: {
 			id: "ftbquests:lootcrate",
 			tag: {
 				type: "legendary"
 			}
-		}
+		},
+		tags: [
+			"loot"
+		]
 	},
 	{
 		uid: "d82fcf0c",

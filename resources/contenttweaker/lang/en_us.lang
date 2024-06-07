@@ -385,6 +385,17 @@ e2ee.written_book.Zombie=Zombie
 
 # Misc
 stat.replications=Spent UU Matter buckets
+e2ee.quest.common=§fCommon§r Loot Crate §e✪
+e2ee.quest.uncommon=§bUncommon§r Loot Crate §e✪
+e2ee.quest.rare=§6Rare§r Loot Crate §e✪
+e2ee.quest.legendary=§5Legendary§r Loot Crate §e✪
+e2ee.quest.mythic=§dMythic§r Loot Crate §e✪
+e2ee.quest.decor=§7Decor§r Loot Crate §e✪
+e2ee.quest.food=§eFood§r Loot Crate §e✪
+e2ee.quest.generators=§0Generators§r Loot Crate §e✪
+e2ee.quest.materials=§4Materials§r Loot Crate §e✪
+e2ee.quest.storage=§8Storage§r Loot Crate §e✪
+e2ee.quest.loot.additional=§8You get an §ladditional loot crate§8 since your Difficulty §e✪§8 is \u003C 1
 e2ee.acquire.header=§6╔═§e✪§6═
 e2ee.acquire.footer=§6╚═§e✪§6═
 e2ee.acquire.single=§fYou acquired a §l%s§f!
@@ -425,8 +436,7 @@ e2ee.creature_uncapturable=§7This creature can't be captured.
 e2ee.skyblock.need_item=§bTo access the §3Skyblock§b dimension, hold %s§b in your hand and ascend to a height of §3%s§b blocks.
 e2ee.skyblock.stay_forever=§bTo exit the §3Skyblock§b world, leap into the void.\n§bTo make the §3Skyblock§b world your permanent home, use the command §n/island create§r§b.
 e2ee.skyblock.now_skyblocker=§bYou are now bound to the §3Skyblock§b world!\n§8If this was done accidentally, you can reverse the skyblock binding by executing the command §n/gamestage remove @p skyblock§r§8.
-tooltips.lang.morb_resist=§rEffective against monsters at §4<%s%%§r hearts, or with fewer than §c%s§r hearts total.
-# >
+tooltips.lang.morb_resist=§rEffective against monsters at §4\u003C%s%%§r hearts, or with fewer than §c%s§r hearts total.
 
 # Bugged langs that losed their names
 entity.Villager.shady_merchant=Shady Merchant

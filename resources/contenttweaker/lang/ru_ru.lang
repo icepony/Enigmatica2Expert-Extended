@@ -386,6 +386,17 @@ e2ee.written_book.Zombie=Зомби
 
 # Misc
 stat.replications=Потраченные ведра UU Материи
+e2ee.quest.common=§fОбычный§r Лутбокс §e✪
+e2ee.quest.uncommon=§bНеобычный§r Лутбокс §e✪
+e2ee.quest.rare=§6Редкий§r Лутбокс §e✪
+e2ee.quest.legendary=§5Легендарный§r Лутбокс §e✪
+e2ee.quest.mythic=§dМифический§r Лутбокс §e✪
+e2ee.quest.decor=§7Декор§r Лутбокс §e✪
+e2ee.quest.food=§eЕда§r Лутбокс §e✪
+e2ee.quest.generators=§0Генераторы§r Лутбокс §e✪
+e2ee.quest.materials=§4Материалы§r Лутбокс §e✪
+e2ee.quest.storage=§8Хранилище§r Лутбокс §e✪
+e2ee.quest.loot.additional=§8Вы получили §lдополнительный лутбокс§8, так как ваша сложность §e✪§8 меньше 1
 e2ee.acquire.header=§6╔═§e✪§6═
 e2ee.acquire.footer=§6╚═§e✪§6═
 e2ee.acquire.single=§fВы получили §l%s§f!

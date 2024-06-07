@@ -186,12 +186,16 @@
 	}],
 	rewards: [{
 		uid: "ac6cf66a",
-		type: "item",
-		item: {
+		type: "custom",
+		title: "{e2ee.quest.uncommon}",
+		icon: {
 			id: "ftbquests:lootcrate",
 			tag: {
 				type: "uncommon"
 			}
-		}
+		},
+		tags: [
+			"loot"
+		]
 	}]
 }

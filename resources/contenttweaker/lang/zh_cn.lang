@@ -385,6 +385,17 @@ e2ee.written_book.Zombie=僵尸
 
 # Misc 杂项
 stat.replications=消耗的UU物质桶
+e2ee.quest.common=§f普通§r 战利品箱 §e✪
+e2ee.quest.uncommon=§b不常见§r 战利品箱 §e✪
+e2ee.quest.rare=§6稀有§r 战利品箱 §e✪
+e2ee.quest.legendary=§5传奇§r 战利品箱 §e✪
+e2ee.quest.mythic=§d神话§r 战利品箱 §e✪
+e2ee.quest.decor=§7装饰§r 战利品箱 §e✪
+e2ee.quest.food=§e食物§r 战利品箱 §e✪
+e2ee.quest.generators=§0发电机§r 战利品箱 §e✪
+e2ee.quest.materials=§4材料§r 战利品箱 §e✪
+e2ee.quest.storage=§8储物§r 战利品箱 §e✪
+e2ee.quest.loot.additional=§8你获得了一个 §l额外的战利品箱§8，因你的难度§e✪§8小于 1
 e2ee.acquire.header=§6╔═§e✪§6═
 e2ee.acquire.footer=§6╚═§e✪§6═
 e2ee.acquire.single=§f你获得了 §l%s§f!

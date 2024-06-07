@@ -1,7 +1,6 @@
 {
 	icon: {
 		id: "ftbquests:lootcrate",
-		Count: 2,
 		tag: {
 			type: "uncommon"
 		}

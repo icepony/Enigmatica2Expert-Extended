@@ -204,12 +204,16 @@
 	}],
 	rewards: [{
 		uid: "bd3c1990",
-		type: "item",
-		item: {
+		type: "custom",
+		title: "{e2ee.quest.uncommon}",
+		icon: {
 			id: "ftbquests:lootcrate",
 			tag: {
 				type: "uncommon"
 			}
-		}
+		},
+		tags: [
+			"loot"
+		]
 	}]
 }
