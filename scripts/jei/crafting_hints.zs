@@ -38,12 +38,16 @@ function addInsOutsCatl(input as IIngredient[], outputs as IItemStack[], catalys
       input.length > 8 ? input[8] : null,
       input.length > 4 ? input[4] : null,
       input.length > 6 ? input[6] : null,
-    ]: outputs,
+    ]: [
+      outputs.length > 2 ? outputs[2] : null,
+      outputs.length > 0 ? outputs[0] : null,
+      outputs.length > 1 ? outputs[1] : null,
+    ],
   });
 }
 
 function addInsOutCatl(input as IIngredient[], output as IItemStack, catalyst as IIngredient = null) as void {
-  return addInsOutsCatl(input, [null, output], catalyst);
+  return addInsOutsCatl(input, [output], catalyst);
 }
 
 function add1to1(input as IIngredient, output as IItemStack, catalyst as IIngredient = null) as void {
