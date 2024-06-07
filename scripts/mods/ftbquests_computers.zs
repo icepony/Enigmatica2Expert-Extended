@@ -9,7 +9,7 @@ events.onCustomTask(function (e as mods.zenutils.ftbq.CustomTaskEvent) {
   for tag in ['robotuse', 'robotswing'] as string[] {
     if (e.task.hasTag(tag)) {
       e.checkTimer = 20;
-      if (isNull(playersTasks[tag])) playersTasks[tag] = {} as bool[string];
+      if (isNull(playersTasks[tag])) playersTasks[tag] = {};
       e.checker = function (player, currentProgress) {
         if (
           isNull(playersTasks[tag])

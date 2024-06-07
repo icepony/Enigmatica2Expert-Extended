@@ -178,8 +178,8 @@ zenClass Spread {
     log('Creating new WILDCARDED recipe for ' ~ blocksFrom.length ~ ' new block states inputs and ' ~ blocksTo.length ~ ' outputs.');
     for blockFrom in blocksFrom {
       if (isNull(blockFrom)) continue;
-      if (isNull(wildcardedNumIds[dimFrom])) wildcardedNumIds[dimFrom] = {} as bool[int][int];
-      if (isNull(wildcardedNumIds[dimFrom][dimTo])) wildcardedNumIds[dimFrom][dimTo] = {} as bool[int];
+      if (isNull(wildcardedNumIds[dimFrom])) wildcardedNumIds[dimFrom] = {};
+      if (isNull(wildcardedNumIds[dimFrom][dimTo])) wildcardedNumIds[dimFrom][dimTo] = {};
       wildcardedNumIds[dimFrom][dimTo][blockFrom.block.definition.numericalId] = true;
 
       set(dimFrom, dimTo, blockFrom.block.definition.defaultState, blocksTo, fallback);
@@ -240,12 +240,12 @@ zenClass Spread {
     }
 
     // Update stateRecipes maps
-    if (isNull(stateRecipes[dimFrom])) stateRecipes[dimFrom] = {} as IBlockState[][IBlockState][int];
-    if (isNull(stateRecipes[dimFrom][dimTo])) stateRecipes[dimFrom][dimTo] = {} as IBlockState[][IBlockState];
+    if (isNull(stateRecipes[dimFrom])) stateRecipes[dimFrom] = {};
+    if (isNull(stateRecipes[dimFrom][dimTo])) stateRecipes[dimFrom][dimTo] = {};
 
     // Update fast lookup maps
-    if (isNull(transformableBlockNumIds[dimFrom])) transformableBlockNumIds[dimFrom] = {} as bool[int][int];
-    if (isNull(transformableBlockNumIds[dimFrom][dimTo])) transformableBlockNumIds[dimFrom][dimTo] = {} as bool[int];
+    if (isNull(transformableBlockNumIds[dimFrom])) transformableBlockNumIds[dimFrom] = {};
+    if (isNull(transformableBlockNumIds[dimFrom][dimTo])) transformableBlockNumIds[dimFrom][dimTo] = {};
     transformableBlockNumIds[dimFrom][dimTo][blockFrom.block.definition.numericalId] = true;
 
     stateRecipes[dimFrom][dimTo][blockFrom] = blocksToActual;
@@ -261,8 +261,8 @@ zenClass Spread {
     // Update untransformable blocks
     for blockTo in blocksToActual {
       if (isNull(blockTo)) continue;
-      if (isNull(blacklistedBlockNumIds[dimFrom])) blacklistedBlockNumIds[dimFrom] = {} as bool[int][int];
-      if (isNull(blacklistedBlockNumIds[dimFrom][dimTo])) blacklistedBlockNumIds[dimFrom][dimTo] = {} as bool[int];
+      if (isNull(blacklistedBlockNumIds[dimFrom])) blacklistedBlockNumIds[dimFrom] = {};
+      if (isNull(blacklistedBlockNumIds[dimFrom][dimTo])) blacklistedBlockNumIds[dimFrom][dimTo] = {};
       blacklistedBlockNumIds[dimFrom][dimTo][blockTo.block.definition.numericalId] = true;
     }
     return this;
