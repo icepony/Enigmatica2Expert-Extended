@@ -136,11 +136,11 @@ return list.map(({ groups: { id, display, items } }) => {
   add(<entity:iceandfire:dread_lich>                  , [<iceandfire:dread_key> * 10, <iceandfire:dread_shard> * 98, <iceandfire:lich_staff> * 10, <minecraft:bone> * 89]); // Dread Lich
   add(<entity:iceandfire:dread_scuttler>              , [<minecraft:rotten_flesh> * 48, <minecraft:spider_eye> * 52]); // Dread Scuttler
   add(<entity:iceandfire:dread_thrall>                , [<iceandfire:dread_shard> * 109, <iceandfire:dread_sword> * 5, <minecraft:bone> * 100, <minecraft:chainmail_leggings> * 4]); // Dread Thrall
-  add(<entity:iceandfire:firedragon>                  , [<thermalfoundation:material:771> * 16]); // Fire Dragon
+  add(<entity:iceandfire:firedragon>                  , [<thermalfoundation:material:771> * 16, <iceandfire:dragon_skull> * 100]); // Fire Dragon
   add(<entity:iceandfire:gorgon>                      , [<iceandfire:gorgon_head> * 100]); // Gorgon
   add(<entity:iceandfire:hippocampus>                 , [<iceandfire:hippocampus_fin> * 3, <iceandfire:shiny_scales> * 239]); // Hippocampus
   add(<entity:iceandfire:hippogryph>                  , [<iceandfire:hippogryph_skull> * 2, <iceandfire:hippogryph_talon> * 4, <minecraft:feather> * 233, <minecraft:leather> * 244]); // Hippogryph
-# add(<entity:iceandfire:icedragon>                   , []); // Ice Dragon
+  add(<entity:iceandfire:icedragon>                   , [<iceandfire:dragon_skull:1> * 100]); // Ice Dragon
   add(<entity:iceandfire:if_cockatrice>               , [<iceandfire:cockatrice_eye> * 4, <iceandfire:cockatrice_skull> * 2, <iceandfire:witherbone> * 99, <minecraft:chicken> * 204, <minecraft:feather> * 151]); // Cockatrice
 # add(<entity:iceandfire:if_hydra>                    , []); // Hydra
   add(<entity:iceandfire:if_pixie>                    , [<iceandfire:pixie_dust> * 103, <iceandfire:pixie_wings> * 4]); // Pixie
