@@ -15,7 +15,8 @@ import crafttweaker.item.IItemStack;
 import crafttweaker.oredict.IOreDictEntry;
 import crafttweaker.recipes.IRecipeFunction;
 import crafttweaker.world.IWorld;
-import mods.zenutils.StaticString.reverse;
+import mods.zenutils.StaticString;
+import crafttweaker.util.Math;
 
 zenClass Utils {
   var DEBUG as bool = false;
@@ -438,9 +439,5 @@ zenClass Utils {
     );
   }
 
-  function formatNum(n as int, sep as string = ',') as string {
-    val spl = reverse(n).split('(?<=\\G...)');
-    return reverse(serialize.join(spl, reverse(sep)));
-  }
 }
 global utils as Utils = Utils();

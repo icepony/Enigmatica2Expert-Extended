@@ -352,7 +352,7 @@ craft.shapeless(<avaritia:compressed_crafting_table>, 'wwwwwwwww', {
 static burnSingularity as IItemStack = <avaritia:singularity:12>; // Result Singularity
 static fillingSingularity as IItemStack = <avaritia:singularity:9>; // Filling Singularity
 static needCharge as double = pow(10.0, 9.0);
-val needChargeStr = utils.formatNum(needCharge as int, '§8,§6');
+val needChargeStr = mods.zenutils.StaticString.format('%,d', needCharge as int).replaceAll(',', '§8,§6');
 furnace.setFuel(burnSingularity, needCharge);
 
 scripts.lib.tooltip.desc.jei(fillingSingularity,

@@ -24,7 +24,7 @@ function addRecipe(
   F.addAdvancedTooltip(function (item) {
     return mods.zenutils.I18n.format(
       game.localize('e2ee.do.diverse.power'),
-      utils.formatNum(getFireproofPower(item))
+      mods.zenutils.StaticString.format('%,f', getFireproofPower(item)).replaceAll('\\.0+$', '')
     );
   });
 
