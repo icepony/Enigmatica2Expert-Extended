@@ -223,6 +223,24 @@ craft.remake(<forestry:ambrosia>, [
 // [Impregnated Stick]*16 from [Proven Frame]
 scripts.process.sawWood(<forestry:frame_proven>, <forestry:oak_stick> * 3);
 
+// Unbreakable recipe
+// [Proven Frame] from [Proven Frame][+7]
+mods.thaumcraft.Infusion.registerRecipe(
+  "frame_proven", # Name
+  "INFUSION", # Research
+  <forestry:frame_proven>.withTag({ench: [{}], enchantmentColor: 16579587, Unbreakable: 1 as byte}), # Output
+  3, # Instability
+  [<aspect:aer> * 40, <aspect:desiderium> * 40, <aspect:sonus> * 40],
+  <forestry:frame_proven>, # Central Item
+  Grid(['pretty',
+  '  ▲  ',
+  '‚   ‚',
+  '  ▬  '], {
+  '▲': <ore:dustMana>,          // Mana Dust
+  '‚': <ore:nuggetMithrillium>, // Mithrillium Nugget
+  '▬': <ore:ingotGlitch>,       // Glitch Infused Ingot
+}).spiral(1));
+
 <forestry:wax_cast>.maxDamage = 32;
 
 // [Advanced Analyzer] from [Analyzer][+2]
