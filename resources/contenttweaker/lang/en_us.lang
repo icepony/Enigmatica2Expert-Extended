@@ -259,6 +259,8 @@ e2ee.tconstruct.material.first_stand.name=First Stand
 e2ee.tconstruct.material.first_stand.description=Consume experience before taking damage.
 e2ee.tconstruct.material.robust.name=Robust
 e2ee.tconstruct.material.robust.description=Increase health
+e2ee.tconstruct.material.challenger.name=Challenger
+e2ee.tconstruct.material.challenger.description=§oChallenger\n§rHigher difficulty increases mining speed, damage, and defense/toughness.
 
 warp.sword.warning=§o§5 You are too sane to use that power!
 

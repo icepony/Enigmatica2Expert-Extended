@@ -259,6 +259,8 @@ e2ee.tconstruct.material.first_stand.name=首当其冲
 e2ee.tconstruct.material.first_stand.description=消耗经验来完全抵挡受到的伤害
 e2ee.tconstruct.material.robust.name=稳健
 e2ee.tconstruct.material.robust.description=提高健康水平
+e2ee.tconstruct.material.challenger.name=挑战者
+e2ee.tconstruct.material.challenger.description=§o挑战者\n§r难度越高，挖掘速度、伤害和防御/韧性越高。
 
 warp.sword.warning=§o§5你太理智了，不会使用这种力量！
 

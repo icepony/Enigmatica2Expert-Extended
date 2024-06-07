@@ -259,6 +259,8 @@ e2ee.tconstruct.material.first_stand.name=Первый стенд
 e2ee.tconstruct.material.first_stand.description=Используйте опыт перед получением урона.
 e2ee.tconstruct.material.robust.name=Прочный
 e2ee.tconstruct.material.robust.description=Укрепление здоровья
+e2ee.tconstruct.material.challenger.name=Испытатель
+e2ee.tconstruct.material.challenger.description=§oИспытатель\n§rЧем выше сложность, тем выше скорость добычи, урон и защита/стойкость.
 
 warp.sword.warning=§o§5 Вы слишком разумны, чтобы использовать эту силу!
 
