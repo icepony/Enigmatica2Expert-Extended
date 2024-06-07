@@ -57,7 +57,7 @@ interact(<fluid:cryotheum>, <fluid:water>, null, <minecraft:ice>);
 interact(<fluid:cryotheum>, <fluid:water>, null, <minecraft:snow>);
 interact(<fluid:cryotheum>, <fluid:lava>, null, <minecraft:obsidian>);
 interact(<fluid:cryotheum>, <fluid:lava>, null, <minecraft:stone>);
-interact(<fluid:cryotheum>, null, Soul('minecraft:creeper') | Soul('minecraft:zombie'), Soul('minecraft:snowman'));
+interact(<fluid:cryotheum>, null, <entity:minecraft:creeper>.asIngr() | <entity:minecraft:zombie>.asIngr(), <entity:minecraft:snowman>.asStack());
 
 interact(<fluid:petrotheum>, null, <minecraft:stone:*>, <minecraft:gravel>);
 interact(<fluid:petrotheum>, null, <minecraft:cobblestone:*>, <minecraft:gravel>);

@@ -4,6 +4,7 @@ import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 import crafttweaker.item.WeightedItemStack;
 import loottweaker.vanilla.loot.Functions;
+import crafttweaker.entity.IEntityDefinition;
 
 scripts.lib.loot.tweak('twilightforest:entities/helmet_crab', 'fish', 'minecraft:fish', null, [<harvestcraft:crabrawitem>], [1, 3]);
 scripts.lib.loot.tweak('twilightforest:entities/deer', 'meat', 'twilightforest:raw_venison', null, [<harvestcraft:venisonrawitem>], [1, 3]);
@@ -136,18 +137,18 @@ scripts.do.build_mob.add(<entity:twilightforest:castle_guardian>, [
 /////////////////////////////////////////
 
 for tuple in [
-  ['minecraft:sheep', 'twilightforest:bighorn_sheep'],
-  ['minecraft:pig', 'twilightforest:wild_boar'],
-  ['minecraft:wolf', 'twilightforest:hostile_wolf'],
-  ['minecraft:chicken', 'twilightforest:penguin'],
-  ['minecraft:witch', 'twilightforest:skeleton_druid'],
-  ['minecraft:bat', 'twilightforest:raven'],
-  ['minecraft:blaze', 'twilightforest:wraith'],
-  ['minecraft:cave_spider', 'twilightforest:swarm_spider'],
-  ['minecraft:zombie_pigman', 'twilightforest:minotaur'],
-  ['minecraft:spider', 'twilightforest:hedge_spider'],
-] as string[][] {
-  scripts.jei.crafting_hints.addInsOutCatl([Soul(tuple[0])], Soul(tuple[1]), <twilightforest:transformation_powder>);
+  [<entity:minecraft:sheep>, <entity:twilightforest:bighorn_sheep>],
+  [<entity:minecraft:pig>, <entity:twilightforest:wild_boar>],
+  [<entity:minecraft:wolf>, <entity:twilightforest:hostile_wolf>],
+  [<entity:minecraft:chicken>, <entity:twilightforest:penguin>],
+  [<entity:minecraft:witch>, <entity:twilightforest:skeleton_druid>],
+  [<entity:minecraft:bat>, <entity:twilightforest:raven>],
+  [<entity:minecraft:blaze>, <entity:twilightforest:wraith>],
+  [<entity:minecraft:cave_spider>, <entity:twilightforest:swarm_spider>],
+  [<entity:minecraft:zombie_pigman>, <entity:twilightforest:minotaur>],
+  [<entity:minecraft:spider>, <entity:twilightforest:hedge_spider>],
+] as IEntityDefinition[][] {
+  scripts.jei.crafting_hints.addInsOutCatl([tuple[0].asIngr()], tuple[1].asStack(), <twilightforest:transformation_powder>);
 }
 
 // Peacock fan

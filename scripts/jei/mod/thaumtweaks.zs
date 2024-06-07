@@ -9,7 +9,7 @@ import mods.requious.AssemblyRecipe;
 // -----------------------------------------------------------------------
 // -----------------------------------------------------------------------
 val x = <assembly:pech_trades>;
-x.addJEICatalyst(Soul('thaumcraft:pech'));
+x.addJEICatalyst(<entity:thaumcraft:pech>.asStack());
 x.setJEIItemSlot(3, 0, 'input0');
 
 // Diamonds

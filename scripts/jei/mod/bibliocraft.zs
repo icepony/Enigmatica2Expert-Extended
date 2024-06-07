@@ -18,7 +18,7 @@ for name, book in scripts.mods.bibliocraft_books.bookWrittenBy {
     <minecraft:name_tag:*>,
     <minecraft:paper>,
     <bibliocraft:typewriter:*>,
-    Soul(scripts.mods.bibliocraft_books.bookWriters[name]),
+    <entity:${scripts.mods.bibliocraft_books.bookWriters[name]}>.asIngr(),
     <bibliocraft:desk:*>,
     <bibliocraft:seat:*>,
   ]: [book] });

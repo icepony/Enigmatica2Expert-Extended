@@ -78,8 +78,8 @@ function special(output as IItemStack, input2d as IIngredient[][], condition as 
 // -----------------------------------------------------------------------
 // -----------------------------------------------------------------------
 
-add1to1(<thaumcraft:cluster:1>, <minecraft:gold_ingot> * 8, Soul('randomthings:goldenchicken'));
-add1to1(Soul('minecraft:zombie') | Soul('minecraft:villager'), <bloodmagic:blood_shard>, <bloodmagic:bound_sword>.withTag({ Unbreakable: 1 as byte, activated: 1 as byte }));
+add1to1(<thaumcraft:cluster:1>, <minecraft:gold_ingot> * 8, <entity:randomthings:goldenchicken>.asIngr());
+add1to1(<entity:minecraft:zombie>.asIngr() | <entity:minecraft:villager>.asIngr(), <bloodmagic:blood_shard>, <bloodmagic:bound_sword>.withTag({ Unbreakable: 1 as byte, activated: 1 as byte }));
 
 x.addJEIRecipe(AssemblyRecipe.create(function (c) {
   c.addFluidOutput('fluid_out', <liquid:canolaoil> * 80);
@@ -162,4 +162,4 @@ addInsOutCatl([<ic2:fluid_cell>.withTag({ Fluid: { FluidName: 'water', Amount: 1
 scripts.jei.requious.add(<assembly:crafting_hints>, { [
   <exnihilocreatio:block_barrel0> | <exnihilocreatio:block_barrel1>, null, null, null, null,
   Bucket('milk'), <minecraft:brown_mushroom> | <minecraft:red_mushroom>,
-]: [Soul('minecraft:slime'), <minecraft:slime>] });
+]: [<entity:minecraft:slime>.asStack(), <minecraft:slime>] });

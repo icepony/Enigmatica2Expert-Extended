@@ -12,7 +12,7 @@ function add(deadEntity as string, killerEntity as string, item as IItemStack) a
   by_drop[killerEntity] = item;
   dropList[deadEntity] = by_drop;
 
-  scripts.jei.entity_kill_entity.add(Soul(killerEntity), Soul(deadEntity), item);
+  scripts.jei.entity_kill_entity.add(<entity:${killerEntity}>.asIngr(), <entity:${deadEntity}>.asIngr(), item);
 }
 
 events.onEntityLivingDeathDrops(function (e as crafttweaker.event.EntityLivingDeathDropsEvent) {

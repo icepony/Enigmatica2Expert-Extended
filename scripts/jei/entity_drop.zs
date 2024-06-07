@@ -12,7 +12,7 @@ import mods.requious.SlotVisual;
 // -----------------------------------------------------------------------
 var x = <assembly:entity_drop>;
 x.addJEICatalyst(<minecraft:wooden_sword>);
-scripts.jei.requious.addInsOuts(x, [[0,0],[0,1]], [
+scripts.jei.requious.addInsOuts(x, [[0,0]], [
   [2,0],[3,0],[4,0],[5,0],[6,0],[7,0],[8,0],
   [2,1],[3,1],[4,1],[5,1],[6,1],[7,1],[8,1],
 ]);
@@ -32,9 +32,7 @@ function add(entity as IEntityDefinition, dropList as IItemStack[], percent as b
   } else {
     fixedList = dropList;
   }
-  scripts.jei.requious.add(<assembly:entity_drop>, {[
-    Soul(entity.id), <minecraft:spawn_egg>.withTag({EntityTag: {id: entity.id}})
-  ] as IIngredient[] : fixedList});
+  scripts.jei.requious.add(<assembly:entity_drop>, {[entity.asIngr()] as IIngredient[] : fixedList});
 }
 
 /*Inject_js{

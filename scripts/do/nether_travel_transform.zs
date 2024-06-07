@@ -13,7 +13,7 @@ val netherPortalEntityConversion = {
 
 // Add JEI entries
 for entityItem, entityDef in netherPortalEntityConversion {
-  scripts.jei.crafting_hints.addInsOutCatl([<forestry:butterfly_ge:*>], Soul(entityDef.id), <minecraft:obsidian>);
+  scripts.jei.crafting_hints.addInsOutCatl([<forestry:butterfly_ge:*>], entityDef.asStack(), <minecraft:obsidian>);
 }
 
 // Copy entity IDs to this list

@@ -24,7 +24,7 @@ scripts.jei.crafting_hints.addInsOutCatl(
     <betteranimalsplus:antler>,
     <betteranimalsplus:venisonraw>,
   ],
-  Soul('betteranimalsplus:hirschgeist'),
+  <entity:betteranimalsplus:hirschgeist>.asStack(),
   <betteranimalsplus:handoffate>
 );
 // --------------------------------

@@ -1731,13 +1731,13 @@ scripts.jei.crafting_hints.add1to1(<ore:listAllgrain>, <contenttweaker:grain_pil
 scripts.jei.crafting_hints.add1to1(<ore:listAllveggie>, <contenttweaker:vegetable_pill>, <thaumadditions:mithminite_scythe>.withLore(['§2fabrico§r']));
 scripts.jei.crafting_hints.add1to1(<ore:foodCheese>, <contenttweaker:dairy_pill>, <thaumadditions:mithminite_scythe>.withLore(['§2fabrico§r']));
 
-scripts.jei.crafting_hints.add1to1(Soul('thaumcraft:golem'), null, <thaumadditions:mithminite_scythe>.withLore(['§7machina§r']));
+scripts.jei.crafting_hints.add1to1(<entity:thaumcraft:golem>.asIngr(), null, <thaumadditions:mithminite_scythe>.withLore(['§7machina§r']));
 
-scripts.jei.crafting_hints.add1to1(Soul('minecraft:zombie_villager'), Soul('minecraft:villager'), <thaumadditions:mithminite_scythe>.withLore(['§fhumanus§r']));
+scripts.jei.crafting_hints.add1to1(<entity:minecraft:zombie_villager>.asIngr(), <entity:minecraft:villager>.asStack(), <thaumadditions:mithminite_scythe>.withLore(['§fhumanus§r']));
 
 scripts.jei.crafting_hints.addInsOutCatl([<minecraft:arrow>, <minecraft:fire_charge>], null, <thaumadditions:mithminite_scythe>.withLore(['§2permutatio§r']));
 
-scripts.jei.crafting_hints.add1to1(Soul('minecraft:cow') | Soul('minecraft:chicken') | Soul('minecraft:sheep') | Soul('minecraft:pig'), null, <thaumadditions:mithminite_scythe>.withLore(['§cvictus§r']));
+scripts.jei.crafting_hints.add1to1(<entity:minecraft:cow>.asIngr() | <entity:minecraft:chicken>.asIngr() | <entity:minecraft:sheep>.asIngr() | <entity:minecraft:pig>.asIngr(), null, <thaumadditions:mithminite_scythe>.withLore(['§cvictus§r']));
 
 
 // [Adaminite armor set]

@@ -1,61 +1,62 @@
 #modloaded requious
 #reloadable
 
-static entityMap as int[string] = {
-  wolf               : 0,
-  chicken            : 1,
-  // cow                : 2, // Cow cant be crafted if Cooking For Blockheads installed. Event just dont happens
-  creeper            : 3,
-  skeleton           : 4,
-  zombie_pigman      : 5,
-  bat                : 6,
-  zombie             : 7,
-  witch              : 8,
-  villager           : 9,
-  ocelot             : 10,
-  sheep              : 11,
-  blaze              : 12,
-  silverfish         : 13,
-  spider             : 14,
-  cave_spider        : 15,
-  slime              : 16,
-  ghast              : 17,
-  enderman           : 18,
-  magma_cube         : 19,
-  squid              : 20,
-  mooshroom          : 21,
-  villager_golem     : 22,
-  snowman            : 23,
-  pig                : 24,
-  endermite          : 25,
-  guardian           : 26,
-  rabbit             : 27,
-  polar_bear         : 28,
-  shulker            : 29,
-  horse              : 30,
-  skeleton_horse     : 31,
-  zombie_horse       : 32,
-  donkey             : 33,
-  mule               : 34,
-  llama              : 35,
-  elder_guardian     : 36,
-  wither_skeleton    : 37,
-  stray              : 38,
-  husk               : 39,
-  zombie_villager    : 40,
-  evocation_illager  : 41,
-  vex                : 42,
-  vindication_illager: 43,
-} as int[string];
+import crafttweaker.entity.IEntityDefinition;
+
+static entityMap as int[IEntityDefinition] = {
+  <entity:minecraft:wolf>               : 0,
+  <entity:minecraft:chicken>            : 1,
+  // cow                                : 2, // Cow cant be crafted if Cooking For Blockheads installed. Event just dont happens
+  <entity:minecraft:creeper>            : 3,
+  <entity:minecraft:skeleton>           : 4,
+  <entity:minecraft:zombie_pigman>      : 5,
+  <entity:minecraft:bat>                : 6,
+  <entity:minecraft:zombie>             : 7,
+  <entity:minecraft:witch>              : 8,
+  <entity:minecraft:villager>           : 9,
+  <entity:minecraft:ocelot>             : 10,
+  <entity:minecraft:sheep>              : 11,
+  <entity:minecraft:blaze>              : 12,
+  <entity:minecraft:silverfish>         : 13,
+  <entity:minecraft:spider>             : 14,
+  <entity:minecraft:cave_spider>        : 15,
+  <entity:minecraft:slime>              : 16,
+  <entity:minecraft:ghast>              : 17,
+  <entity:minecraft:enderman>           : 18,
+  <entity:minecraft:magma_cube>         : 19,
+  <entity:minecraft:squid>              : 20,
+  <entity:minecraft:mooshroom>          : 21,
+  <entity:minecraft:villager_golem>     : 22,
+  <entity:minecraft:snowman>            : 23,
+  <entity:minecraft:pig>                : 24,
+  <entity:minecraft:endermite>          : 25,
+  <entity:minecraft:guardian>           : 26,
+  <entity:minecraft:rabbit>             : 27,
+  <entity:minecraft:polar_bear>         : 28,
+  <entity:minecraft:shulker>            : 29,
+  <entity:minecraft:horse>              : 30,
+  <entity:minecraft:skeleton_horse>     : 31,
+  <entity:minecraft:zombie_horse>       : 32,
+  <entity:minecraft:donkey>             : 33,
+  <entity:minecraft:mule>               : 34,
+  <entity:minecraft:llama>              : 35,
+  <entity:minecraft:elder_guardian>     : 36,
+  <entity:minecraft:wither_skeleton>    : 37,
+  <entity:minecraft:stray>              : 38,
+  <entity:minecraft:husk>               : 39,
+  <entity:minecraft:zombie_villager>    : 40,
+  <entity:minecraft:evocation_illager>  : 41,
+  <entity:minecraft:vex>                : 42,
+  <entity:minecraft:vindication_illager>: 43,
+} as int[IEntityDefinition]$orderly;
 
 // This function should be called once
 // warding `/ct reload`
 function postInit() as void {
-  for entity_id, num in entityMap {
-    val id = 'minecraft:' ~ entity_id;
+  for entityDef, num in entityMap {
     scripts.jei.crafting_hints.addInsOutCatl(
-      [Soul(id), null, null, <minecraft:anvil>, <advancedrocketry:basalt>],
-      <openblocks:trophy:2>.withTag({ entity_id: id })
+      [entityDef.asIngr(), null, null, <minecraft:anvil>, <advancedrocketry:basalt>],
+      <openblocks:trophy:2>.withTag({ entity_id: entityDef.id })
     );
   }
 }
@@ -77,7 +78,7 @@ events.onEntityLivingDamage(function (e as crafttweaker.event.EntityLivingDamage
   val blockState = mob.world.getBlockState(blockUnderPos);
   if (isNull(blockState) || blockState != <blockstate:advancedrocketry:basalt>) return;
 
-  val trophyIndex = entityMap[mob.definition.id.substring(10)];
+  val trophyIndex = entityMap[mob.definition];
   if (isNull(trophyIndex)) return;
 
   mob.world.removeEntity(mob);
