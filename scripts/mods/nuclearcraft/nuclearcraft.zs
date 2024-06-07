@@ -4,6 +4,15 @@ import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 import crafttweaker.liquid.ILiquidStack;
 
+// Define new moderators
+// (IIngredient block, int fluxFactor, double efficiency)
+mods.nuclearcraft.FissionModerator.add(<twilightforest:aurora_block>, 26, 1.05);
+mods.nuclearcraft.FissionModerator.add(<randomthings:biomeglass>, 40, 1.0);
+mods.nuclearcraft.FissionModerator.add(<advancedrocketry:basalt>, 44, 0.95);
+mods.nuclearcraft.FissionModerator.add(<draconicevolution:infused_obsidian>, 46, 1.1);
+mods.nuclearcraft.FissionModerator.add(<draconicevolution:draconium_block:1>, 52, 1.05);
+mods.nuclearcraft.FissionModerator.add(<draconicevolution:draconic_block>, 80, 1.20);
+
 // Unused category
 mods.jei.JEI.hideCategory('nuclearcraft_pebble_fission');
 
