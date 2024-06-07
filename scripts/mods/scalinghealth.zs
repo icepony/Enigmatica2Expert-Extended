@@ -2,6 +2,9 @@
 
 import crafttweaker.item.IIngredient;
 
+Purge(<scalinghealth:difficultychanger>);
+Purge(<scalinghealth:difficultychanger:1>);
+
 // Heart dust
 val HD = <scalinghealth:heartdust>;
 val HS = <scalinghealth:crystalshard>;

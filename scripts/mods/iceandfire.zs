@@ -255,16 +255,6 @@ mods.iceandfire.recipes.addIceDragonForgeRecipe(
   Bucket('lifeessence'),
   <scalinghealth:heartcontainer>);
 
-// Cursed and Enchanced hearts recipes
-mods.iceandfire.recipes.addFireDragonForgeRecipe(
-  <plustic:osgloglasingot>,
-  <scalinghealth:heartcontainer>,
-  <scalinghealth:difficultychanger:1>);
-mods.iceandfire.recipes.addIceDragonForgeRecipe(
-  <plustic:osgloglasingot>,
-  <scalinghealth:heartcontainer>,
-  <scalinghealth:difficultychanger>);
-
 // Alt for non-dragon players
 scripts.processUtils.avdRockXmlRecipeEx('Crystallizer', [<cyclicmagic:heart_toxic>], [<fluid:lifeessence> * 1000], [<scalinghealth:heartcontainer>], null, { power: 100000, timeRequired: 20 });
 

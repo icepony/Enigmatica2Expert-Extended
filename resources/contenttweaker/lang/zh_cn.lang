@@ -382,6 +382,24 @@ e2ee.written_book.Creeper=苦力怕
 e2ee.written_book.Zombie=僵尸
 
 # Misc 杂项
+e2ee.acquire.header=§6╔═§e✪§6═
+e2ee.acquire.footer=§6╚═§e✪§6═
+e2ee.acquire.single=§f你获得了 §l%s§f!
+e2ee.acquire.group=§f你获得了其中一个\n§6║ %s
+e2ee.acquire.prefix=\n§6║ 
+e2ee.acquire.on.pickup=§8(捡起 §7⏏§8 它)
+e2ee.acquire.on.open=§8(打开 §7⚃§8 它的GUI)
+e2ee.acquire.on.look=§8(看着 §7☄§8 它)
+e2ee.acquire.on.craft=§8(合成 §7✎§8 它)
+e2ee.acquire.on.place=§8(放置 §7❒§8 它)
+e2ee.acquire.on.use=§8(使用 §7⚙§8 它)
+e2ee.acquire.on.hold=§8(拿着 §7✍§8 它)
+e2ee.acquire.difficulty=§7难度增加 §6§l+%s§7. 总计: §l%s§7.
+e2ee.acquire.max_already=§7难度已达 §l1000§7 (最大值).
+e2ee.acquire.more=§7§n点击这里查看详细信息§7.
+e2ee.acquire.info=§7获得物品会增加难度。\n§6║ §7总计获得值: §6§l%s§7.\n§6║ %s
+e2ee.acquire.info.other=§7增加难度的物品和组:\n§6║ %s
+e2ee.acquire.info.complete=§7没有可以增加难度的物品。
 e2ee.warn.wrong_installation=§6✖ §4您的模组包安装不正确！§6 ✖\n§c缺少模组：§nSmeltery IO§c、§nNetherending Ores§c等。\n§c这通常发生在通过启动器手动下载这些模组时。\n§c在§4Prism Launcher§c中，安装模组包时，只需点击弹出窗口中的☛[§n打开缺失§c]。\n§8E2E-E包含4个模组，其创建者声明这些模组不能通过第三方启动器下载。
 e2ee.warn.wrong_world_type=§6✖ §4看起来您错误地生成了世界！§6 ✖\n§c若要玩Skyblock，在主菜单中导航至\n§6Mods§c ▶ §6Just Enough Dimensions§c 配置 ▶ §6Generic§c ▶ 并将 §6initialSpawnDimensionId§c 设置为 §63§c。之后，创建一个新世界。
 e2ee.do.charge=§f充电: §6%s§r

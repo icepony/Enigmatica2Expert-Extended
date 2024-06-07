@@ -4,7 +4,7 @@
 	x: 0.625d,
 	y: 6.0d,
 	text: [
-		"{q.getting_started.difficulty.desc}"
+		"{q.getting_started._difficulty_.desc}"
 	],
 	dependencies: [
 		"649bcf3e"
