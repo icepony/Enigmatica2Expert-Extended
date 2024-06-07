@@ -5,6 +5,8 @@ import crafttweaker.item.IItemStack;
 
 // ----- Orechid progression -----#
 
+Purge(<botania:elementiumsword>);
+
 // Remove unused ORE
 mods.botania.Orechid.removeOre('oreTungsten');
 

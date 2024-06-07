@@ -11,7 +11,6 @@ animus:kama_wood
 botania:elementiumpick
 botania:elementiumshears
 botania:elementiumshovel
-botania:elementiumsword
 botania:glasspick
 botania:manasteelaxe
 botania:manasteelpick
