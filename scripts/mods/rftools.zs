@@ -341,6 +341,6 @@ mods.mekanism.infuser.addRecipe('DIAMOND', 160, <rftoolscontrol:cpu_core_500>, <
 // Non-dimensional source of "levarG"
 val MA = <rftoolsdim:material_absorber>.withTag({meta: 0, absorbing: 0, block: "minecraft:stone"});
 val FG = <rftoolsdim:fake_gravel>;
-scripts.processWork.workEx('SagMill', null, [MA], null, [FG * 64], null, [FG * 32, FG * 16, FG * 8], [0.5, 0.5, 0.5], { bonusType: 'MULTIPLY_OUTPUT' });
-scripts.process.crush(MA, FG * 64, 'only: eu2Crusher', [FG * 32], [0.5]);
-mods.astralsorcery.Grindstone.addRecipe(MA, FG * 64, 0.25);
+scripts.process.crush(MA, FG * 64, 'only: Macerator');
+mods.ic2.ThermalCentrifuge.addRecipe([FG * 64, FG * 32], MA);
+mods.astralsorcery.Grindstone.addRecipe(MA, FG * 64, 0.5);
