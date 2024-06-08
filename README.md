@@ -336,7 +336,7 @@ Some screenshots of new worldgen:
 
 - **I chose to download Optifine, but the Java process started, and the window won't appear.**
 
-  It seems like your firewall or proxy settings are not allowing you to download Optifine. Remove the file `config\mod-director\optifine.url.json`.
+  It seems like your firewall or proxy settings are not allowing you to download Optifine. Remove the file `config/mod-director/optifine.url.json`.
 
 - **I updated Java, but it still shows me the "Outdated Java" warning.** <img alt="Outdated Java Version message" src="https://i.imgur.com/1hBsDJU.png" align=right width=200>
 
