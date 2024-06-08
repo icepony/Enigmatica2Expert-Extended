@@ -134,25 +134,25 @@ Generate mods screenshot with command:
 <table>
 <tr><td>
 
-### 🧰 No OP items. No exploits. Less cheese  
+### 🔄 Non-linear Progression
 
-  - No item should disable bunch of other items.  
-  - Work towards crafting the powerful items, or use less powerful alternatives.  
-  *![](https://git.io/JOv9z "Angel Ring") The Angel Ring is harder to give way to all other flight options.*  
-  *![](https://git.io/JOv92 "Terrasteel") Сan no longer be easily cheesed through the mob stripping farm..*
+  - Progress at your own pace and choose your preferred path.
+  - Skip tedious branches with alternate recipes.
+  - Finish the modpack without exploring every dimension.  
+  *E.g., ![](https://github.com/Krutoy242/mc-icons/raw/master/i/twilightforest/trophy__8.png "Questing Ram Trophy") **skip exploring Twilight Forest** if you prefer.*
 
 </td><td>
 
-<img src="https://i.imgur.com/afnpdXm.png" alt="Wall with many ingame items" width=251>
+<img src="https://i.imgur.com/wdIftzX.jpeg" alt="Non-linear Progression" width=251>
 
 </td></tr><tr><td>
 
-### 💡 Better balance  
+### ⚖️ Balanced Gameplay
 
-  - Generators production carefully tweaked.  
-  - TCon materials reworked, OP traits remapped.  
-  - Mobs spawn with random TCon's weapons.  
-  *![](https://git.io/JGncx "Osgloglas") Is no longer the only correct option.*
+  - Carefully tweaked generators and reworked TCon materials.
+  - No overpowered items, exploits, or cheesy mechanics.
+  - Use less powerful alternatives and work towards crafting powerful items.  
+  *E.g., ![](https://git.io/JOv9z "Angel Ring") **Angel Ring** requires more effort, giving other flight options a chance.*
 
 </td><td>
 
@@ -160,44 +160,12 @@ Generate mods screenshot with command:
 
 </td></tr><tr><td>
 
-### 🏔️ More adventuring  
+### 🛠️ New Original Mechanics
 
-  - Better caves, additional structures, more loot, reworked planets.  
-  - **Exploration is optional** - you can finish the modpack without even going into *Twilight Forest*.  
-  *![](https://git.io/Jze1z "Rocket Assembling Machine") Added a variety of new resources and unique terrain on planets and other dimensions.*
-
-</td><td>
-
-<img src="https://i.imgur.com/PkSSSqn.png" alt="New OTG generator screenshot" width=251>
-
-</td></tr><tr><td>
-
-### 📖 Clear guide  
-
-  - Quests and recipes reveal unpopular "hidden" mechanics  
-  *![](https://git.io/JtJMc "Book") More Quest chapters describing "forgotten" items*
-
-</td><td>
-
-<img src="https://i.imgur.com/8q7o1Ik.png" alt="Utilities Quest lines" width=251>
-
-</td></tr><tr><td>
-
-### 🎿 Less Strict  
-
-  - Tedious recipes and whole branches of mods **can be skipped** with alternate recipes.  
-  *Whole modpack can be beaten in **Peaceful** mode*
-
-</td><td>
-
-[<img src="https://i.imgur.com/rw3nyn7.png" alt="Modpack beaten in peaceful mode" width=251>](https://www.reddit.com/r/feedthebeast/comments/10p6uva/the_whole_modpack_beaten_in_only_peaceful_mode/)
-
-</td></tr><tr><td>
-
-### 🧱 New mechanics
-
-  - Added new unique crafting mechanics, adding diversity to crafting ways  
-  *![](https://github.com/Krutoy242/mc-icons/raw/master/i/mysticalagriculture/terrasteel_essence__0.png "Terrasteel Essence") and other essences now have their unique mechanics to turn into ore.*
+  - Unique crafting mechanics adding diversity to gameplay.
+  - Custom ore processing lines and refined infusion enchantments.
+  - Essences with unique mechanics for transforming into ores.  
+  *E.g., ![](https://github.com/Krutoy242/mc-icons/raw/master/i/exnihilocreatio/item_ore_iron__0.png "Iron Ore Piece") Ore Piece can be burnt in Seared Stone to turn into Ore.*
 
 </td><td>
 
@@ -205,10 +173,51 @@ Generate mods screenshot with command:
 
 </td></tr><tr><td>
 
-### 🌌 Skyblock
+### 🔮 Thaumcraft Integration
 
-  - Skyblock is built-in modpack. You only need to change starting dimension  
-  *Skyblock is **expert-expert** version and can be very tedious*
+  - Improved Thaumcraft quests with better rewards.
+  - Custom ore processing steps including magic for better yields.
+  - Buffed "Refining" infusion enchantment for more efficient ore processing.  
+  *E.g., ![](https://github.com/Krutoy242/mc-icons/raw/master/i/thaumadditions/mithminite_scythe__0.png "Mithminite Scythe") reworked, added +51 new abilities.*
+
+</td><td>
+
+<img src="https://i.imgur.com/dSr9WIS.jpeg" alt="Thaumcraft Integration" width=251>
+
+</td></tr><tr><td>
+
+### 📚 More HEI Categories and Better Guide
+
+  - Enhanced guide with clear quests and recipes.
+  - Reveal unpopular and hidden mechanics.
+  - More quest chapters describing lesser-known items.  
+  *E.g., **HEI** follows the rule: "If you can craft it, you'll find it in HEI.".*
+
+</td><td>
+
+<img src="https://i.imgur.com/W1kJI5w.gif" alt="Utilities Quest lines" width=251>
+
+</td></tr><tr><td>
+
+### 🏞️ Extended World Generation
+
+  - Better caves, additional structures, and more loot.
+  - Reworked planets with unique terrain and resources.
+  - Exploration is optional but highly rewarding.  
+  *E.g., **New OTG generator** and unique resources on planets.*
+
+</td><td>
+
+<img src="https://i.imgur.com/PkSSSqn.png" alt="Extended World Generation" width=251>
+
+</td></tr><tr><td>
+
+### 🎮 Additional Game Modes
+
+  - Built-in Skyblock mode with expert-expert difficulty.
+  - Playable in Peaceful mode with alternate recipes.
+  - Unique crafting and resource gathering mechanics.  
+  *E.g., **Skyblock** requires innovative resource generation techniques.*
 
 </td><td>
 
