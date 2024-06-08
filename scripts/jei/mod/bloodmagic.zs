@@ -95,7 +95,7 @@ config('config/bloodmagic/bloodmagic.cfg')
 addModifier(0, <minecraft:prismarine>);
 addModifier(1, <minecraft:obsidian>);
 addModifier(2, <engineersdecor:gas_concrete>);
-addModifier(3, <environmentalmaterials:hardened_stone>);
+addModifier(3, <chisel:concrete_white>);
 addModifier(4, <exnihilocreatio:block_endstone_crushed>);
 addModifier(5, <tconstruct:slime_grass:1>);
 addModifier(6, <contenttweaker:compressed_coral>);

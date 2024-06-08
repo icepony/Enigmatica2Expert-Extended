@@ -380,8 +380,9 @@ for group in compressions {
 // Magic alloying alternative
 // ///////////////////////////////////////////////////////////////////
 
-function magicAlloy(output as IItemStack, input as IIngredient[]) as void {
-  mods.bloodmagic.AlchemyTable.addRecipe(output, input + <bloodmagic:component:25>, 2000, 10, 3);
+function magicAlloy(output as IItemStack, map as string, ingrs as IIngredient[string]) as void {
+  ingrs['F'] = <bloodmagic:component:25>;
+  mods.bloodmagic.AlchemyTable.addRecipe(output, Grid([map+'F'], ingrs).shapeless(), 2000, 10, 3);
 }
 
 /* Inject_js(
@@ -418,6 +419,7 @@ _.uniqBy([
       ].flat())
     }
 
+    // OUTPUTS
     const outputOres = [...new Set(itemsToOres(r.output.items).flat())]
     const outputDust = getDustForm(outputOres)
     if (!outputDust) return undefined
@@ -431,34 +433,50 @@ _.uniqBy([
     const dustInputOres = inputOres.map(getDustForm)
     if (inputOres.length !== dustInputOres.filter(Boolean).length) return undefined
 
-    const inputSerialized = [
-      ...dustInputOres.map((s, i) => s.commandString + ' * ' + filteredInputs[i].amount * 9),
-    ].sort(naturalSort).concat('', '').slice(0, 3)
+    // const inputSerialized = [
+    //   ...dustInputOres.map((s, i) => `${s.commandString}${filteredInputs[i].amount == 1 ? '' : ` * ${filteredInputs[i].amount}`}`),
+    // ].sort(naturalSort).concat('', '').slice(0, 3)
+    let mapChars = ''
+    const inputSerialized = []
+    dustInputOres.forEach((s, i) => {
+      const char = 'ABCDEF'[i]
+      mapChars += char.repeat(filteredInputs[i].amount)
+      inputSerialized.push(`${char}: ${s.commandString}`)
+    })
 
     return [
       `magicAlloy(`,
       outputDust.commandString,
-      ` * `,
-      r.output.items[0].amount * 9,
-      `, [`,
-      inputSerialized.join(', '),
-      `]);`,
+      ...(r.output.items[0].amount == 1
+        ? ['', '']
+        : [` * `, r.output.items[0].amount]),
+      `, '`,
+      mapChars,
+      `',`,
+      `{${inputSerialized.join(', ')}});`,
     ]
-  }).filter(Boolean).sort((a, b) => naturalSort(String(a), String(b))), r => String(r))
+  })
+  .filter(Boolean)
+  .sort((a, b) => naturalSort(String(a), String(b))), r => String(r))
+  .map(arr => [arr[5].length > 5 ? '//' : '', ...arr])
 )*/
-magicAlloy(<advancedrocketry:productdust:1> * 18, [<libvulpes:productdust:7> * 9, <thermalfoundation:material:71> * 9,                                           ]);
-magicAlloy(<advancedrocketry:productdust>   * 27, [<libvulpes:productdust:7> * 27, <thermalfoundation:material:68> * 63,                                         ]);
-magicAlloy(<qmd:chemical_dust:7>            * 9 , [<qmd:dust:7> * 9, <thermalfoundation:material:771> * 9,                                                       ]);
-magicAlloy(<thermalfoundation:material:96>  * 9 , [<nuclearcraft:dust:8> * 36, <thermalfoundation:material> * 9,                                                 ]);
-magicAlloy(<thermalfoundation:material:96>  * 9 , [<thermalfoundation:material:768> * 18, <thermalfoundation:material:768> * 18, <thermalfoundation:material> * 9]);
-magicAlloy(<thermalfoundation:material:96>  * 9 , [<thermalfoundation:material:768> * 36, <thermalfoundation:material> * 9,                                      ]);
-magicAlloy(<thermalfoundation:material:97>  * 18, [<thermalfoundation:material:1> * 9, <thermalfoundation:material:66> * 9,                                      ]);
-magicAlloy(<thermalfoundation:material:98>  * 27, [<thermalfoundation:material:69> * 9, <thermalfoundation:material> * 18,                                       ]);
-magicAlloy(<thermalfoundation:material:99>  * 36, [<thermalfoundation:material:64> * 27, <thermalfoundation:material:65> * 9,                                    ]);
-magicAlloy(<thermalfoundation:material:100> * 18, [<thermalfoundation:material:64> * 9, <thermalfoundation:material:69> * 9,                                     ]);
-magicAlloy(<thermalfoundation:material:101> * 36, [<minecraft:redstone> * 90, <thermalfoundation:material:64> * 9, <thermalfoundation:material:66> * 27          ]);
-magicAlloy(<thermalfoundation:material:102> * 36, [<minecraft:glowstone_dust> * 36, <thermalfoundation:material:65> * 27, <thermalfoundation:material:66> * 9    ]);
+  magicAlloy(<advancedrocketry:productdust:1> * 2, 'AB            ',{A: <libvulpes:productdust:7>, B: <thermalfoundation:material:71>});
+//magicAlloy(<advancedrocketry:productdust>   * 3, 'AAAAAAABBB    ',{A: <thermalfoundation:material:68>, B: <libvulpes:productdust:7>});
+  magicAlloy(<qmd:chemical_dust:7>               , 'AB            ',{A: <qmd:dust:7>, B: <thermalfoundation:material:771>});
+  magicAlloy(<thermalfoundation:material:96>     , 'ABBBB         ',{A: <thermalfoundation:material>, B: <nuclearcraft:dust:8>});
+  magicAlloy(<thermalfoundation:material:96>     , 'ABBBB         ',{A: <thermalfoundation:material>, B: <thermalfoundation:material:768>});
+  magicAlloy(<thermalfoundation:material:96>     , 'ABBCC         ',{A: <thermalfoundation:material>, B: <thermalfoundation:material:768>, C: <thermalfoundation:material:768>});
+  magicAlloy(<thermalfoundation:material:97>  * 2, 'AB            ',{A: <thermalfoundation:material:1>, B: <thermalfoundation:material:66>});
+  magicAlloy(<thermalfoundation:material:98>  * 3, 'AAB           ',{A: <thermalfoundation:material>, B: <thermalfoundation:material:69>});
+  magicAlloy(<thermalfoundation:material:98>  * 3, 'ABB           ',{A: <thermalfoundation:material:69>, B: <thermalfoundation:material>});
+  magicAlloy(<thermalfoundation:material:99>  * 4, 'AAAB          ',{A: <thermalfoundation:material:64>, B: <thermalfoundation:material:65>});
+  magicAlloy(<thermalfoundation:material:100> * 2, 'AB            ',{A: <thermalfoundation:material:64>, B: <thermalfoundation:material:69>});
+//magicAlloy(<thermalfoundation:material:101> * 4, 'ABBBCCCCCCCCCC',{A: <thermalfoundation:material:64>, B: <thermalfoundation:material:66>, C: <minecraft:redstone>});
+//magicAlloy(<thermalfoundation:material:102> * 4, 'AAABCCCC      ',{A: <thermalfoundation:material:65>, B: <thermalfoundation:material:66>, C: <minecraft:glowstone_dust>});
 /**/
+
+// Specially manually setted alloys
+magicAlloy(<advancedrocketry:productdust>   * 3, 'AAABB    ',{A: <thermalfoundation:material:68>, B: <libvulpes:productdust:7>});
 // ///////////////////////////////////////////////////////////////////
 // Sheets magic-only alt
 for oreBase in [
