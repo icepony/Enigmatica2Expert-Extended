@@ -44,7 +44,7 @@
 	{
 		uid: "e91e93cf",
 		type: "command",
-		title: "Grand access to the Nether",
+		title: "Grant access to the Nether",
 		team_reward: true,
 		auto: "no_toast",
 		command: "/gamestage add @p healthy"
