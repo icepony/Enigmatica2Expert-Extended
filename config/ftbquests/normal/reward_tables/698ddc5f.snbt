@@ -389,16 +389,16 @@
 			tag: {
 				Unbreakable: 1b,
 				infinite: {
-					id: "environmentalmaterials:alabaster",
+					id: "engineersdecor:gas_concrete",
 					Count: 1,
-					Damage: 8s
+					Damage: 0s
 				},
 				inventory: {
 					size: 1,
 					Items: [{
-						id: "environmentalmaterials:alabaster",
+						id: "engineersdecor:gas_concrete",
 						Count: 64,
-						Damage: 8s,
+						Damage: 0s,
 						Slot: 0b
 					}]
 				},

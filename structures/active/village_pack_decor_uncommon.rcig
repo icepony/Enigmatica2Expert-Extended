@@ -57,7 +57,7 @@
       "min": 48,
       "max": 64,
       "item": {
-        "id": "xtones:base",
+        "id": "engineersdecor:gas_concrete",
         "damage": 0,
         "count": 1
       }

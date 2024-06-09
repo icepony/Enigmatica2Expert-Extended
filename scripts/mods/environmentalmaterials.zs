@@ -1,5 +1,10 @@
 #modloaded environmentalmaterials
 
+// Make all blocks uncraftable since mod is going to be removed
+for item in loadedMods['environmentalmaterials'].items {
+  Purge(item);
+}
+/*
 mods.chisel.Carving.addVariation('basalt', <environmentalmaterials:basalt>);
 mods.chisel.Carving.addVariation('basalt', <environmentalmaterials:basalt_paver>);
 mods.chisel.Carving.addVariation('basalt', <environmentalmaterials:basalt_bricks>);
@@ -42,3 +47,4 @@ craft.make(<environmentalmaterials:alabaster> * 20, ['pretty',
   '░': <ore:cobblestone>, // Cobblestone
   'd': <ore:dyeWhite>,
 });
+ */
