@@ -337,7 +337,7 @@ function tick(m as MachineContainer) as void {
 
   // 🧍 Check if player
   val ownerUUID = m.getString('ownerUUID');
-  if (isNull(ownerUUID)) return pushErr(m, '§0Need\n§0 player ☻');
+  if (isNull(ownerUUID) || ownerUUID == '') return pushErr(m, '§0Need\n§0 player ☻');
 
   // 🎯 Update penalty text each tick
   val dfclty = scripts.lib.offline.op.get(ownerUUID, 'difficulty', 0, 1000) as double;

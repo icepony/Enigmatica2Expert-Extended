@@ -78,7 +78,7 @@ zenClass Op {
 
   // Get value of specified player assuming he is offline
   function get(uuid as string, key as string, default as string = null, onFake as string = null) as string {
-    if (isNull(uuid)) return default; // no player provided
+    if (isNull(uuid) || uuid == '') return default; // no player provided
     val owner = server.getPlayerByUUID(uuid);
 
     if (!isNull(owner)) {
