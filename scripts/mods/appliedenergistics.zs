@@ -406,7 +406,8 @@ function regrind(input as IItemStack, output as IItemStack, isOre as bool = fals
 ).flat()
 ) */
 regrind(<actuallyadditions:block_misc:3>        , <actuallyadditions:item_dust:7>, true, <jaopca:item_dusttinycoal>);
-regrind(<appliedenergistics2:charged_quartz_ore>, <appliedenergistics2:material:2>, true, <jaopca:item_dusttinyquartz>);
+regrind(<appliedenergistics2:charged_quartz_ore>, <jaopca:item_dustchargedcertusquartz>, true, <jaopca:item_dusttinydiamond>);
+regrind(<appliedenergistics2:quartz_ore>        , <appliedenergistics2:material:2>, true, <jaopca:item_dusttinyquartz>);
 regrind(<astralsorcery:blockcustomore:1>        , <astralsorcery:itemcraftingcomponent:2>, true, <contenttweaker:dust_tiny_silver>);
 regrind(<astralsorcery:blockcustomsandore>      , <jaopca:item_dustaquamarine>, true, <jaopca:item_dusttinyaluminium>);
 regrind(<biomesoplenty:gem_ore:1>               , <jaopca:item_dustruby>, true, <jaopca:item_dusttinyaluminium>);
