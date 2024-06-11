@@ -12,7 +12,7 @@
 # We can cut only partial of log if we dont want to list all the errors
 boundries:
   from:
-  to: '[Server thread/' # Server thread started when player joining world
+  to: '[Server thread' # Server thread started when player joining world
 
 # RegEx to match log.
 # Default confir matches all Warnings and Errors in debug.log
@@ -71,7 +71,7 @@ ignore:
 
   # Errors of loading models, have no effects in game
   - 'ERROR. \[FML\]: Exception loading (model|blockstate) for( the)? variant'
-  - 'ERROR. \[FML\]: MultiModel minecraft:builtin/missing is empty'
+  - 'ERROR. \[FML\]: MultiModel minecraft:builtin.missing is empty'
   - 'ERROR. \[FML\]: Could not load override model'
   - 'WARN. \[FML\]: OBJModel.Parser: found a face .+ with more than 4 vertices'
 
@@ -104,10 +104,10 @@ ignore:
   # Doesnt change anything in game
   - 'ERROR. \[(tconstruct-(API|modifier)|conarm)\]: (Could not|Cannot) load (material model|multimodel|modifier-model)'
   - '\[placebo\]: Exception loading patreon data!'
-  - '\[AstralSorcery Patreon Effect Loader/WARN\] \[Astral Sorcery\]: Skipped .* patreon effects during loading due to malformed data!'
+  - '\[AstralSorcery Patreon Effect Loader.WARN\] \[Astral Sorcery\]: Skipped .* patreon effects during loading due to malformed data!'
 
   # Mixins for absent mods. Happen when mod doesn't care to check if mod present first
-  - '\[Client thread/WARN\] \[mixin\]: Error loading class: '
+  - '\[Client thread.WARN\] \[mixin\]: Error loading class: '
 
   # PetroPetunia cant be tweaked with decay https://github.com/quat1024/BotaniaTweaks/issues/63
   - Mod floralchemy is loaded. but flower petropetunia is not present??
@@ -125,9 +125,9 @@ ignore:
   - '\[immersiveengineering\]: Recipe has invalid inputs and will be ignored'
 
   # Actually Additions warning, no harm
-  - '/WARN. \[FML\]: \*{5,}'
-  - '/WARN. \[FML\]: \* Registry Item: The object .+ has been registered twice for the same name'
-  - '/WARN. \[FML\]: \*  at \w+\.'
+  - 'WARN. \[FML\]: \*{5,}'
+  - 'WARN. \[FML\]: \* Registry Item: The object .+ has been registered twice for the same name'
+  - 'WARN. \[FML\]: \*  at \w+\.'
 
   # Additional properties for mixins
   - 'ERROR. \[mixin\]: Mixin config .+ does not specify "minVersion" property'
@@ -180,7 +180,7 @@ ignore:
   - 'WARN. .justenoughdimensions.. \*{5}   '
 
   # Better Biome Blend safe warning that Optifine not installed
-  - WARN. .mixin.. Error loading class. net/optifine/CustomColors \(java\.lang\.ClassNotFoundException. The specified class 'net\.optifine\.CustomColors' was not found\)
+  - WARN. .mixin.. Error loading class. net.optifine.CustomColors \(java\.lang\.ClassNotFoundException. The specified class 'net\.optifine\.CustomColors' was not found\)
   - WARN. .mixin.. @Mixin target net\.optifine\.CustomColors was not found mixins\.betterbiomeblend\.json:MixinCustomColors from mod unknown-owner
 
   # Safe WARNings, just for information
@@ -209,7 +209,7 @@ ignore:
   - 'WARN. \[FML\]: Mod advancedrocketrycore has been disabled through configuration'
   - 'WARN. \[net\.minecraft\.client\.audio\.SoundManager\]: Missing sound for event: thaumcraft:runicshieldcharge'
   - 'WARN. \[ocsensors\]: Could not find field .+ in class '
-  - 'ERROR. \[base\]: java\.io\.FileNotFoundException: biomesoplenty:textures/items/gem\.png'
+  - 'ERROR. \[base\]: java\.io\.FileNotFoundException: biomesoplenty:textures.items.gem\.png'
   - 'WARN. \[FML\]: Unable to find recipe for minecraft:rabbit_stew'
   - 'WARN. \[FML\]: Unable to find recipe for minecraft:baked_potato'
   - 'WARN. \[(HadEnoughItems|jei)\]: Recipe registry plugin is slow, took \d{1,3}(\.\d+)? ms\.'
@@ -232,19 +232,19 @@ ignore:
   - '\[net.blay09.mods.kleeslabs.KleeSlabs\]: Slab .* could not be found.'
 
   # Reported: https://github.com/Janrupf/mod-director/issues/22'
-  - '\[main/WARN\] \[(ModDirector/ForgeLateLoader\[Launchwrapper\]|Foundation)\]: Failed to find deobf tweaker'
+  - '\[main.WARN\] \[(ModDirector/ForgeLateLoader\[Launchwrapper\]|Foundation)\]: Failed to find deobf tweaker'
 
   # Known, "It's just logging, you can ignore it." https://github.com/LoliKingdom/LoliASM/issues/51'
   - WARN. .LoliASM.. Clearing (LoliVertexDataPool|LoliStringPool 1)
 
   # LoliASM dev say i need to ignore that
-  - .main/WARN. .LoliASM.. Replacing CA Certs with an updated one...
+  - .main.WARN. .LoliASM.. Replacing CA Certs with an updated one...
 
   # Wooden Crucible error (they disabled anyway)'
   - '\[excompressum\]: Duplicate entry for .* in WoodenCrucible. overwriting...'
 
   # Unknown errors but probably no harm'
-  - '\[main/WARN\] \[FML\]: Patcher expecting empty class data file for .+, but received non-empty'
+  - '\[main.WARN\] \[FML\]: Patcher expecting empty class data file for .+, but received non-empty'
   - '\[excompressum\]: Could not load remote skins for auto sieve:'
   - 'ERROR. \[Mekanism\]: Invalid BasicBlock. type: 1, meta: \d+'
 
@@ -257,10 +257,10 @@ ignore:
   - Wildcard meta detected for \S+ in void beacon registration; this can result in invalid result blocks
 
   # Bansoukou normal work'
-  - '\[main/WARN\] \[Bansoukou\]: Marking .+'
-  - '\[main/WARN\] \[Bansoukou\]: .+ was found in the mods folder. Copying to modify the copied cache.'
-  - '\[main/WARN\] \[Bansoukou\]: Patching .+'
-  - '\[main/WARN\] \[Bansoukou\]: Removing .+'
+  - '\[main.WARN\] \[Bansoukou\]: Marking .+'
+  - '\[main.WARN\] \[Bansoukou\]: .+ was found in the mods folder. Copying to modify the copied cache.'
+  - '\[main.WARN\] \[Bansoukou\]: Patching .+'
+  - '\[main.WARN\] \[Bansoukou\]: Removing .+'
 
   # In E2EE mc2discord is server-sided only mod and missed on client
   - FileNotFoundException. mc2discord-.+.jar does not exist in mods folder
@@ -300,10 +300,10 @@ ignore:
   - WARN. .mixin.. @Mixin target net/minecraft/client/renderer/BlockModelRenderer.AmbientOcclusionFace is public in mixins.bugfixes.misc.smoothlighting.json:UTSmoothLightingMixin and should be specified in value
 
   # Universal Tweaks corrupted jar. Reported: https://github.com/ACGaming/UniversalTweaks/issues/406
-  - .Client thread/ERROR. .FML.. Unable to read a class file correctly
+  - .Client thread.ERROR. .FML.. Unable to read a class file correctly
 
   # Even if you disable this configs, its still erroring
-  - .main/ERROR. .Aqua Acrobatics Transformer.. Disabling soul sand and magma mixins as requested in config
+  - .main.ERROR. .Aqua Acrobatics Transformer.. Disabling soul sand and magma mixins as requested in config
   - UniversalTweaks-.+.jar - probably a corrupt zip
   - Zip file UniversalTweaks-.+.jar failed to read properly, it will be ignored
   - WARN. .mixin.. @Final .+UTCompactMessageMixin from mod UniversalTweaks.+ should be final
@@ -323,12 +323,12 @@ ignore:
 
   # VintageFix provide lot of errors. Most of them are harmless. VintageFix dev not very enthusiastic to explain what they do.
   # https://github.com/embeddedt/VintageFix/issues/41
-  - .Client thread/WARN. .mixin.. .Mixin target .+ was not found .+ from mod vintagefix_.+
+  - .Client thread.WARN. .mixin.. .Mixin target .+ was not found .+ from mod vintagefix_.+
   - .VintageFix.. Cannot list resources from pack .+ (.+)
-  - .Client thread/ERROR. .org.embeddedt.vintagefix.dynamicresources.model.DynamicModelProvider.. Failed to load model .+
+  - .Client thread.ERROR. .org.embeddedt.vintagefix.dynamicresources.model.DynamicModelProvider.. Failed to load model .+
   - .VintageFix.. Path .+ is not a valid model location
-  - .Client thread/ERROR. .VintageFix.. Early load error for .+
-  - .Client thread/ERROR. .net.minecraft.client.renderer.texture.TextureMap.. Unable to parse metadata from .+
+  - .Client thread.ERROR. .VintageFix.. Early load error for .+
+  - .Client thread.ERROR. .net.minecraft.client.renderer.texture.TextureMap.. Unable to parse metadata from .+
   - ERROR. .base.. org.embeddedt.vintagefix.util.FastFileNotFoundException. .+
   - ERROR. .org.embeddedt.vintagefix.dynamicresources.model.DynamicBakedModelProvider.. Error occured while loading model .+
   - ERROR. .VintageFix.. Suppressing further model loading errors for namespace '.+'
@@ -412,13 +412,13 @@ ignore:
   - WARN. .net.optifine.shaders.SMCLog.. .Shaders. net.optifine.expr.ParseException. Model variable not found.
 
   # Contributors loading errors
-  - .Thread-\d+/ERROR. .draconicevolution.. Download Timed Out. https.//raw.githubusercontent.com/brandon3055/Project-Intelligence-Docs/master/ModDocs/manifest.json
-  - .Client thread/ERROR. .draconicevolution.. Failed to download mod manifest.
-  - .Client thread/WARN. .biomesoplenty.. There was an issue retrieving trail info from remote!
-  - .Thread-\d+/ERROR. .randomtweaks.. Failed to download conbtributor list
-  - .Thread-\d+/WARN. .Cyclops Core.. Could not get version important users. java.net.SocketException
-  - .Actually Additions Special Fetcher/ERROR. .Actually Additions.. Fetching Special People Stuff failed! .You can ignore this error technically..
-  - .CraftPresence/ERROR. .craftpresence.. Failed to check for updates, enable verbose mode to see errors...
+  - .Thread-\d+.ERROR. .draconicevolution.. Download Timed Out. https.//raw.githubusercontent.com/brandon3055/Project-Intelligence-Docs/master/ModDocs/manifest.json
+  - .Client thread.ERROR. .draconicevolution.. Failed to download mod manifest.
+  - .Client thread.WARN. .biomesoplenty.. There was an issue retrieving trail info from remote!
+  - .Thread-\d+.ERROR. .randomtweaks.. Failed to download conbtributor list
+  - .Thread-\d+.WARN. .Cyclops Core.. Could not get version important users. java.net.SocketException
+  - .Actually Additions Special Fetcher.ERROR. .Actually Additions.. Fetching Special People Stuff failed! .You can ignore this error technically..
+  - .CraftPresence.ERROR. .craftpresence.. Failed to check for updates, enable verbose mode to see errors...
   - ERROR. .Foundation.. Thread.#\d+,Thread-\d+,\d+,main.[\s\S\n]+lumien.custommainmenu.handler.LoadStringURL.run
 
   # ##################
@@ -450,7 +450,7 @@ ignore:
 
   # Errors even Cleanroom devs doesnt know what means
   - WARN\] \[mixin\]. Mixin apply for mod UniversalTweaks.+ from mod UniversalTweaks.+::utOverrideOpposingSideCheck with priority 1000 cannot inject into .+RenderGlobal
-  - WARN. .mixin.. Injection warning. LVT in twilightforest/block/BlockTFMagicLogSpecial::doTreeOfTransformationEffect
+  - WARN. .mixin.. Injection warning. LVT in twilightforest.block.BlockTFMagicLogSpecial::doTreeOfTransformationEffect
 
   # class malfunction, should be harmful but not sure
   - WARN. .FML.. Couldn't remap class net.minecraft.entity.ai.attributes.AbstractAttributeMap

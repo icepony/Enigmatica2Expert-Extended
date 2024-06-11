@@ -8,12 +8,15 @@
 - [ ] 🩸 Meteor: Implement https://github.com/friendlyhj/ZenUtils/issues/54#issuecomment-2152275918
 - [ ] ⭐ Make self-forbidding mechanism for Difficulty https://github.com/friendlyhj/ZenUtils/issues/53#issuecomment-2154922579
 - [ ] ⭐ Difficulty: descrease over time?
+- [ ] ⭐ Difficulty: doesnt register player difficulty on server (need otherevent than onPlayerLoggedIn)
+- [ ] ⭐ Difficulty: Creative players cant Acquire items
 - [ ] ✏️ Liquid Concrete: remove block variant recipe, add usages, non-tech craft
 - [ ] 📀 `Liquid Concrete`: fix not solidified to full block, slower solidify
 - [ ] 📜 Improve CF page: center it, fasten GIF, update mods
 - [ ] 📜 Rustic's brews give better buffs decument
 - [ ] 📜 Document new moderator blocks
 - [ ] 📜 Add goal amount for Woodweave singularity
+- [ ] 📜 Right-clicking disk over Replicator shows costs for owner of replicator rather than clicked player
 
 ---
 
@@ -108,6 +111,7 @@ Planned non-urgent changes, or just good ideas:
 - [ ] 💬 Add messages "Player killex xxx mobs! WOW" with respective loot box reward. Ideas: Mined blocks, Jumps
 
 ### Mods
+- [ ] 🟠 Do not update `Xaero` Minimap and World - incompatible with `visualores`
 - [ ] 🔴 Remove `XTones` and `Environmental Materials`
 - [ ] 🟢 Return Village Names when fixed https://legacy.curseforge.com/minecraft/mc-mods/village-names/issues/18
 - [ ] 🟡 Update `Precision Mining` when fixed https://codeberg.org/PORTB/PrecisionMiningRewrite/issues/4
