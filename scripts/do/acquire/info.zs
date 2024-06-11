@@ -9,6 +9,7 @@ import scripts.do.hand_over_your_items.tellrawItemObj;
 import mods.zenutils.StringList;
 import scripts.do.acquire.data.sendAcquireMessage;
 import mods.zenutils.StaticString.format;
+import mods.zenutils.StaticString.repeat;
 
 static MAX_SUGGESTED_ITEMS as int = 20;
 static playersCompleted as bool[string] = {} as bool[string];
@@ -33,7 +34,7 @@ function show(player as IPlayer, item as IItemStack) as bool {
   for itemID, metaData in scripts.category.uu.values {
     for meta, cost in metaData {
       if (cost < requiredCost) continue;
-      strList.add(`${'0'.repeat(24 - toString(cost).length())}${cost};${itemID};${meta}`);
+      strList.add(`${repeat('0', 24 - toString(cost).length())}${cost};${itemID};${meta}`);
     }
   }
   val strArr = strList.toArray();
