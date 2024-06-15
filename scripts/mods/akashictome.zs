@@ -37,7 +37,6 @@ val superTome = <akashictome:tome>.withTag({ 'akashictome:data': {
   engineersdecor   : { id: 'patchouli:guide_book'                    , Count: 1 as byte, tag: { 'akashictome:definedMod': 'engineersdecor', 'patchouli:book': 'engineersdecor:engineersdecor_manual' }, Damage: 0 as short },
   nuclearcraft     : { id: 'patchouli:guide_book'                    , Count: 1 as byte, tag: { 'akashictome:definedMod': 'nuclearcraft', 'patchouli:book': 'nuclearcraft:guide' }                    , Damage: 0 as short },
   qmd              : { id: 'patchouli:guide_book'                    , Count: 1 as byte, tag: { 'akashictome:definedMod': 'qmd', 'patchouli:book': 'qmd:guide' }                                      , Damage: 0 as short },
-  integratedtunnels: { id: 'integrateddynamics:on_the_dynamics_of_integration', Count: 1 as byte, tag: { 'akashictome:definedMod': 'integratedtunnels' }                                              , Damage: 0 as short },
 } });
 
 recipes.addShaped('SuperTome', superTome, [
