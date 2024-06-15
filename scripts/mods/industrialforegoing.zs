@@ -26,9 +26,11 @@ fluidDict(['if.protein', 'protein']);
 fluidDict(['ic2creosote', 'creosote']);
 fluidDict(['liquiddeuterium', 'deuterium']);
 fluidDict(['distwater', 'ic2distilled_water']);
-fluidDict(['ic2steam', 'steam']);
 fluidDict(['tritium','liquidtritium']);
 fluidDict(['liquidfusionfuel','deuterium-tritium_mixture']);
+
+FluidDictionary.add('ic2steam', 'steam', 0.1);
+FluidDictionary.add('steam', 'ic2steam', 10);
 
 // Protein Reactor, additional entires
 for item in <ore:listAllmeatraw>.items {
