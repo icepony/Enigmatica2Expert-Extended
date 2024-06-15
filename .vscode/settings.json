@@ -55,7 +55,6 @@
 
   // Files hidden in VSCode for simplified modpack developing
   "files.exclude": {
-    ".mixin.out/": true,
     "*.jar": true,
     "assets/": true,
     "astralsorcery/": true,

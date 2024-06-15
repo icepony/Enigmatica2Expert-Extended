@@ -1,9 +1,9 @@
 [main/WARN] [Foundation]: The jar file D:\Program Files\PrismLauncher\libraries\lzma\lzma\0.0.1\lzma-0.0.1.jar has a security seal for path LZMA, but that path is defined and not secure
 [main/WARN] [Foundation]: The jar file D:\Program Files\PrismLauncher\libraries\lzma\lzma\0.0.1\lzma-0.0.1.jar has a security seal for path LZMA, but that path is defined and not secure
 [main/ERROR] [Fugue]: java.lang.NullPointerException: Cannot read the array length because "<parameter1>" is null
-[main/WARN] [Foundation]: Can't get unsafe from JVM Driver, trying VarHandle
 [Client thread/ERROR] [Fugue]: java.lang.NullPointerException: Cannot read the array length because "<parameter1>" is null
 [Client thread/WARN] [oshi.util.FileUtil]: Configuration conflict: there is more than one oshi.properties file on the classpath: [jar:file:/D:/Program%20Files/PrismLauncher/libraries/com/github/oshi/oshi-core/6.5.0/oshi-core-6.5.0.jar!/oshi.properties, jar:file:/D:/Program%20Files/PrismLauncher/libraries/com/github/oshi/oshi-core/6.5.0/oshi-core-6.5.0.jar!/oshi.properties]
+[Client thread/ERROR] [Fugue]: java.lang.RuntimeException: zone.rong.loliasm.common.crashes.ModIdentifier: frozen class (cannot edit)
 [Client thread/WARN] [FML]: Mod scalar has been disabled through configuration
 [Client thread/WARN] [net.minecraft.network.datasync.EntityDataManager]: defineId called for: class net.minecraft.entity.item.EntityMinecartFurnace from class com.lothrazar.cyclicmagic.item.minecart.EntityGoldFurnaceMinecart
 [Client thread/WARN] [net.minecraft.network.datasync.EntityDataManager]: defineId called for: class net.minecraft.entity.monster.EntitySlime from class teamroots.emberroot.entity.slime.EntityRainbowSlime
@@ -88,5 +88,4 @@ Outputs:
 net.minecraft.item.ItemStack: [[1xitem.thaumadditions:salt_essence@0 thaumadditions:salt_essence]]
 Inputs:
 net.minecraft.item.ItemStack: [[1xitem.thaumadditions:salt_essence@0 thaumadditions:salt_essence]]
-  [...]
-[CraftPresence/ERROR] [craftpresence]: Unable to connect to Discord...
+  [...]

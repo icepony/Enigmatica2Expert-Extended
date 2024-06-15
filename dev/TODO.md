@@ -8,15 +8,17 @@
 - [ ] 🩸 Meteor: Implement https://github.com/friendlyhj/ZenUtils/issues/54#issuecomment-2152275918
 - [ ] ⭐ Make self-forbidding mechanism for Difficulty https://github.com/friendlyhj/ZenUtils/issues/53#issuecomment-2154922579
 - [ ] ⭐ Difficulty: descrease over time?
-- [ ] ⭐ Difficulty: doesnt register player difficulty on server (need otherevent than onPlayerLoggedIn)
-- [ ] ⭐ Difficulty: Creative players cant Acquire items
+- [x] ⭐ Difficulty: doesnt register player difficulty on server (need otherevent than onPlayerLoggedIn)
 - [ ] ✏️ Liquid Concrete: remove block variant recipe, add usages, non-tech craft
 - [ ] 📀 `Liquid Concrete`: fix not solidified to full block, slower solidify
 - [ ] 📜 Improve CF page: center it, fasten GIF, update mods
-- [ ] 📜 Rustic's brews give better buffs decument
-- [ ] 📜 Document new moderator blocks
-- [ ] 📜 Add goal amount for Woodweave singularity
-- [ ] 📜 Right-clicking disk over Replicator shows costs for owner of replicator rather than clicked player
+- [ ] 📜 Rustic's brews give better buffs document
+- [ ] 📜 Right-clicking disk over Replicator shows costs for owner of replicator rather than clicked player (document this)
+- [ ] ✏️ Use `mods.jei.JEI.addItemNBTSubtype` to subtime `Genetic Templates` and `syringe` (when updated RandomTweaker)
+- [ ] 📀 Add animated GIF for java warning https://github.com/Darkhax-Minecraft/OldJavaWarning/blob/1.12.2/src/main/java/net/darkhax/oldjava/OldJavaWarning.java
+- [ ] ✏️ Rethink EnderTank recipe since glass cant be poured with iron after cast
+- [ ] 📖 Skyblock chapter disable chapter comletion message on each quest
+- [ ] ✏️ Fix RAM not spawning
 
 ---
 
@@ -27,9 +29,10 @@
 Planned non-urgent changes, or just good ideas:
 
 ### "Performance ⚡"
-- [ ] ⚡ Remove XU2 jei removed categories https://spark.lucko.me/MRBZYLxzrN?hl=325666
-- [ ] ⚡ Remove progress bar tick on HEI recipe adding https://spark.lucko.me/MRBZYLxzrN?hl=325666,340125 https://spark.lucko.me/Urce0z9hZ7?hl=365397,358076
+- [x] ⚡ remove `src.main.java.blusunrize.lib.manual.ManualPages.recalculateCraftingRecipes()` since its causing 3 seconds game load https://spark.lucko.me/HlEM0qGvQZ?hl=470255 https://github.com/BluSunrize/ImmersiveEngineering/blob/master/src/main/java/blusunrize/lib/manual/ManualInstance.java#L166 https://spark.lucko.me/Ud4foz6SzN?hl=296716,296717
+- [ ] ⚡ `OTG` should probably be optional mod when game starting since it laggy
 - [ ] ⚡ Wand of the forest change recipe to Recipe Function
+- [ ] ⚡ Remove automatic IE armor recycling to speed up game load
 
 ### Difficulty increase
 - Vanilla Chests
@@ -108,7 +111,7 @@ Planned non-urgent changes, or just good ideas:
 
 ### "Multiplayer" expansion
 
-- [ ] 💬 Add messages "Player killex xxx mobs! WOW" with respective loot box reward. Ideas: Mined blocks, Jumps
+- [ ] 💬 Add messages "Player killex xxx mobs! WOW" with respective loot box reward. Ideas: Mined blocks, Jumps, Death
 
 ### Mods
 - [ ] 🟠 Do not update `Xaero` Minimap and World - incompatible with `visualores`
@@ -131,6 +134,7 @@ Planned non-urgent changes, or just good ideas:
 
 ### Other
 
+- [ ] ⚡ (ARR) Remove XU2 jei removed categories https://spark.lucko.me/MRBZYLxzrN?hl=325666
 - [ ] 📀 Fix crops drop 1000 of berries on high stats
 - [ ] 🔴 Remove `Random Patches` since UT and Valkyrie now do most of its features
 - [ ] 🎉 Add new mechanic for /dev/null for leveling up its recharging speed
@@ -210,7 +214,6 @@ Planned non-urgent changes, or just good ideas:
 - [ ] 🐛 Items textures not animated too when **Animated Terrain** disabled
 - [ ] 📖 Obtaining any **sharpening kit** finishes quest for this **mining level**
 - [ ] ✏️ Petrotheum `Conflux I` craft, probably Quicksand => Tube => Petrotheum
-- [ ] ⚡ Remove automatic IE armor recycling to speed up game load
 - [ ] ✏️ Add craft mechanic - Mud Ball hit something (called "humilate")
 - [ ] ✏️ Add mobs in Mek's gear
 - [ ] ✏️ Remove Cyclic's machines completely because they are laggy

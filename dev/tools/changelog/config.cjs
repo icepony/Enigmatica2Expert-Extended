@@ -55,7 +55,7 @@ const writerOpts = {
 
     if (typeof commit.scope === 'string') {
       commit.scope = config.scopes[commit.scope.toLocaleLowerCase()]
-        ?? capitalize(commit.scope)
+      ?? capitalize(commit.scope)
     }
 
     if (typeof commit.hash === 'string')

@@ -31,6 +31,9 @@ function relative(relPath = './') {
 }
 
 export async function init(h = defaultHelper) {
+  const argv = process.argv.slice(2)
+  if (argv[0]) await extractFromJar(h, argv[0])
+
   await h.begin('Fixing Bansoukou files')
   renameFoldersToActualMods()
   await showDiffs(h)
@@ -48,6 +51,42 @@ function getBansFolders() {
     cwd      : 'bansoukou',
     ignore   : fast_glob.sync('*', { dot: true, cwd: 'bansoukou' }),
   })
+}
+
+/**
+ *
+ * @param {*} h
+ * @param {string} classFullPath
+ */
+async function extractFromJar(h = defaultHelper, classFullPath) {
+  await h.begin(`Extracting ${classFullPath}`)
+
+  const [jarFilePath, classPath] = classFullPath.split(/.jar\//)
+  const jarPath = `${jarFilePath}.jar`
+  const realJarPath = existsSync(jarPath) ? jarPath : jarPath.replace('.jar', '-patched.jar')
+  if (!existsSync(realJarPath)) return await h.error(`.jar file does not exist: ${realJarPath}`)
+  const modName = jarFilePath.split(/\\|\//).pop()
+  const className = classPath.split(/\\|\//).pop()
+  const bansFolder = `bansoukou/${modName}`
+  try {
+    mkdirSync(bansFolder, { recursive: true })
+  }
+  catch (error) {
+    return h.error(`Cannot create folder: ${bansFolder}`)
+  }
+
+  const zip = new AdmZip(realJarPath)
+  const extractPath = `${classPath}.class`
+  const insertPath = `${bansFolder}/${className}.class`
+
+  try {
+    h.begin(`from ${extractPath} to ${bansFolder}`)
+    zip.extractEntryTo(extractPath, bansFolder, true, true)
+  }
+  catch (error) {
+    return h.error(`Cannot extract file from: ${extractPath} to: ${insertPath}.\n${error}`)
+  }
+  await h.done()
 }
 
 function renameFoldersToActualMods() {
