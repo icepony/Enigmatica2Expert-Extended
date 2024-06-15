@@ -1,18 +1,29 @@
-#modloaded !netherendingores !mctsmelteryio
+#priority 1
 #reloadable
 
 import crafttweaker.player.IPlayer;
 
-static messageSended as bool[string] = {};
+zenClass Op {
+  zenConstructor(){}
+  
+  val messageSended as bool[string] = {};
+  val registered = false;
 
-events.onPlayerLoggedIn(function (e as crafttweaker.event.PlayerLoggedInEvent) {
-  if (e.player.world.remote) return;
+  function register() as void {
+    if (registered) return;
+    registered = true;
 
-  if(!isNull(messageSended[e.player.uuid])) return;
+    events.onPlayerLoggedIn(function (e as crafttweaker.event.PlayerLoggedInEvent) {
+      if (e.player.world.remote) return;
+      if(!isNull(this.messageSended[e.player.uuid])) return;
 
-  e.player.world.catenation().sleep(20 * 20).then(function (world, ctx) {
-    if(!isNull(messageSended[e.player.uuid])) return;
-    e.player.sendRichTextMessage(crafttweaker.text.ITextComponent.fromTranslation('e2ee.warn.wrong_installation'));
-    messageSended[e.player.uuid] = true;
-  }).start();
-});
+      e.player.world.catenation().sleep(20 * 20).then(function (world, ctx) {
+        if(!isNull(this.messageSended[e.player.uuid])) return;
+        e.player.sendRichTextMessage(crafttweaker.text.ITextComponent.fromTranslation('e2ee.warn.wrong_installation'));
+        this.messageSended[e.player.uuid] = true;
+      }).start();
+    });
+  }
+}
+
+static op as Op = Op();
