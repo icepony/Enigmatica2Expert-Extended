@@ -128,7 +128,7 @@ for liquid, ratio in FermenterFluid {
 mods.forestry.Squeezer.addRecipe(<liquid:juice> * 15, [<minecraft:melon>], 8);
 
 // Remove and hide charcoal block
-Purge(<forestry:charcoal>).ores();
+Purge(<forestry:charcoal>).ores([<ore:blockCharcoal>]);
 
 // Remove pulp recipe
 mods.forestry.Carpenter.removeRecipe(<forestry:wood_pulp>);

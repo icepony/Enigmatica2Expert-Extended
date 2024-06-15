@@ -71,11 +71,11 @@ for i, inputArr in crushingInMachines {
 Purge(<excompressum:uncompressed_coal>);
 
 // Duplicate compressed blocks
-Purge(<excompressum:compressed_block:2>).ores();
-Purge(<excompressum:compressed_block:3>).ores();
-Purge(<excompressum:compressed_block:4>).ores();
-Purge(<excompressum:compressed_block:1>).ores();
-Purge(<excompressum:compressed_block:9>).ores();
+Purge(<excompressum:compressed_block:2>).ores([<ore:compressed1xGravel>]);
+Purge(<excompressum:compressed_block:3>).ores([<ore:compressed1xSand>]);
+Purge(<excompressum:compressed_block:4>).ores([<ore:compressed1xDirt>]);
+Purge(<excompressum:compressed_block:1>).ores([<ore:compressed1xCobblestone>]);
+Purge(<excompressum:compressed_block:9>).ores([<ore:compressed1xNetherrack>]);
 
 // Crucibles
 Purge(<excompressum:wooden_crucible>);
@@ -88,14 +88,14 @@ Purge(<exnihilocreatio:block_crucible>);
 Purge(<exnihilocreatio:block_crucible_wood>);
 
 // Ex Nihilo Dusts
-Purge(<exnihilocreatio:item_ore_gold:2>).ores();
-Purge(<exnihilocreatio:item_ore_iron:2>).ores();
-Purge(<exnihilocreatio:item_ore_copper:2>).ores();
-Purge(<exnihilocreatio:item_ore_tin:2>).ores();
-Purge(<exnihilocreatio:item_ore_aluminium:2>).ores();
-Purge(<exnihilocreatio:item_ore_lead:2>).ores();
-Purge(<exnihilocreatio:item_ore_silver:2>).ores();
-Purge(<exnihilocreatio:item_ore_nickel:2>).ores();
+Purge(<exnihilocreatio:item_ore_gold:2>).ores([<ore:dustGold>]);
+Purge(<exnihilocreatio:item_ore_iron:2>).ores([<ore:dustIron>]);
+Purge(<exnihilocreatio:item_ore_copper:2>).ores([<ore:dustCopper>]);
+Purge(<exnihilocreatio:item_ore_tin:2>).ores([<ore:dustTin>]);
+Purge(<exnihilocreatio:item_ore_aluminium:2>).ores([<ore:dustAluminum>, <ore:dustAluminium>]);
+Purge(<exnihilocreatio:item_ore_lead:2>).ores([<ore:dustLead>]);
+Purge(<exnihilocreatio:item_ore_silver:2>).ores([<ore:dustSilver>]);
+Purge(<exnihilocreatio:item_ore_nickel:2>).ores([<ore:dustNickel>]);
 
 // Remove excess mesh
 Purge(<excompressum:iron_mesh>);

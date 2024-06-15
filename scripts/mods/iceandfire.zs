@@ -75,11 +75,11 @@ recipes.addShaped('Ash To Coal Coke',
     [<iceandfire:ash>, <iceandfire:ash>, <iceandfire:ash>],
     [<iceandfire:ash>, <iceandfire:ash>, <iceandfire:ash>]]);
 
-Purge(<iceandfire:sapphire_ore>).ores().furn();
-Purge(<iceandfire:sapphire_block>).ores().furn();
-Purge(<iceandfire:sapphire_gem>).ores().furn();
-Purge(<iceandfire:silver_ore>).ores().furn();
-Purge(<iceandfire:silver_block>).ores().furn();
+Purge(<iceandfire:sapphire_ore>).ores([<ore:oreSapphire>]).furn();
+Purge(<iceandfire:sapphire_block>).ores([<ore:blockSapphire>]).furn();
+Purge(<iceandfire:sapphire_gem>).ores([<ore:gemSapphire>]).furn();
+Purge(<iceandfire:silver_ore>).furn();
+Purge(<iceandfire:silver_block>).ores([<ore:blockSilver>]).furn();
 Purge(<iceandfire:silver_nugget>).furn();
 
 // Dragons Breath from Dragon Forges

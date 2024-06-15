@@ -3,6 +3,7 @@
 
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
+import crafttweaker.oredict.IOreDictEntry;
 
 import mods.immersiveengineering.MetalPress;
 
@@ -50,27 +51,28 @@ for oreName, plate in platesData {
     MetalPress.addRecipe(plate, ingot, <immersiveengineering:mold>, 125, 1);
 }
 
-val platesToRemove = [
-  <ic2:plate>,
-  <ic2:plate:1>,
-  <ic2:plate:2>,
-  <ic2:plate:3>,
-  <ic2:plate:5>,
-  <ic2:plate:7>,
-  <ic2:plate:8>,
+Purge(<ic2:plate>).ores([<ore:plateBronze>]);
+Purge(<ic2:plate:1>).ores([<ore:plateCopper>]);
+Purge(<ic2:plate:2>).ores([<ore:plateGold>]);
+Purge(<ic2:plate:3>).ores([<ore:plateIron>]);
+Purge(<ic2:plate:5>).ores([<ore:plateLead>]);
+Purge(<ic2:plate:7>).ores([<ore:plateSteel>]);
+Purge(<ic2:plate:8>).ores([<ore:plateTin>]);
 
-  <thaumcraft:plate:1>,
-] as IItemStack[];
-
-for item in platesToRemove {
-  Purge(item).ores();
-}
-
-for i in 30 .. 41 {
-  if (i == 35) continue;
-  val plate = itemUtils.getItem('immersiveengineering:metal', i);
+for plate, ores in {
+  <immersiveengineering:metal:30>: [<ore:plateCopper>],
+  <immersiveengineering:metal:31>: [<ore:plateAluminum>, <ore:plateAluminium>],
+  <immersiveengineering:metal:32>: [<ore:plateLead>],
+  <immersiveengineering:metal:33>: [<ore:plateSilver>],
+  <immersiveengineering:metal:34>: [<ore:plateNickel>],
+  <immersiveengineering:metal:36>: [<ore:plateConstantan>],
+  <immersiveengineering:metal:37>: [<ore:plateElectrum>],
+  <immersiveengineering:metal:38>: [<ore:plateSteel>],
+  <immersiveengineering:metal:39>: [<ore:plateIron>],
+  <immersiveengineering:metal:40>: [<ore:plateGold>],
+} as IOreDictEntry[][IItemStack] {
   mods.immersiveengineering.MetalPress.removeRecipe(plate);
-  Purge(plate).ores();
+  Purge(plate).ores(ores);
 }
 
 recipes.addShapeless('steel_casing_with_tool', <ic2:casing:5> * 2, [<ore:plateSteel>, anyHammer]);

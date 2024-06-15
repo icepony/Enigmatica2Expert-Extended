@@ -58,7 +58,7 @@ function tweak(
   // Remove old item from JEI and crafts
   // usually need when unify meat
   if (!isNull(itemToRemove)) {
-    Purge(utils.smelt(itemToRemove)).ores().furn();
-    Purge(itemToRemove).ores();
+    Purge(utils.smelt(itemToRemove)).furn();
+    Purge(itemToRemove);
   }
 }

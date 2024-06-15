@@ -4,6 +4,7 @@
 
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
+import crafttweaker.oredict.IOreDictEntry;
 
 zenClass CPurge {
   val ingr as IIngredient;
@@ -41,7 +42,19 @@ zenClass CPurge {
   function ores() as CPurge {
     if (isNull(ingr)) return this;
     for item in ingr.items {
+      if (utils.DEBUG) logger.logWarning('Low performance getter: '~item.commandString~'.ores');
       for ore in item.ores {
+        ore.remove(item);
+        utils.log('Purged ore: ' ~ ore.name ~ ' from: ' ~ item.commandString);
+      }
+    }
+    return this;
+  }
+
+  function ores(list as IOreDictEntry[]) as CPurge {
+    if (isNull(ingr)) return this;
+    for item in ingr.items {
+      for ore in list {
         ore.remove(item);
       }
     }

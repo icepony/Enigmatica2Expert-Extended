@@ -73,30 +73,30 @@ recipes.addShapedMirrored('Control Circuit Board',
     [<ore:circuitElite>, <immersiveengineering:metal_decoration0>, <ore:circuitElite>]]);
 
 // *======= Remove & Hide =======*
-Purge(<libvulpes:productdust:1>).ores().furn();
-Purge(<libvulpes:productdust:2>).ores().furn();
-Purge(<libvulpes:productdust:3>).ores().furn();
-Purge(<libvulpes:productdust:4>).ores().furn();
-Purge(<libvulpes:productdust:5>).ores().furn();
-Purge(<libvulpes:productdust:6>).ores().furn();
-Purge(<libvulpes:productdust:9>).ores().furn();
-Purge(<libvulpes:productdust:10>).ores().furn();
-Purge(<libvulpes:productingot:4>).ores().furn();
-Purge(<libvulpes:productingot:5>).ores().furn();
-Purge(<libvulpes:productingot:6>).ores().furn();
-Purge(<libvulpes:productingot:9>).ores().furn();
-Purge(<libvulpes:productingot:10>).ores().furn();
-Purge(<libvulpes:productnugget:4>).ores().furn();
-Purge(<libvulpes:productnugget:5>).ores().furn();
-Purge(<libvulpes:productnugget:6>).ores().furn();
-Purge(<libvulpes:productnugget:9>).ores().furn();
-Purge(<libvulpes:productnugget:10>).ores().furn();
-Purge(<libvulpes:ore0:4>).ores().furn();
-Purge(<libvulpes:ore0:5>).ores().furn();
-Purge(<libvulpes:ore0:9>).ores().furn();
-Purge(<libvulpes:ore0:10>).ores().furn();
-Purge(<libvulpes:productrod:1>).ores().furn();
-Purge(<libvulpes:productrod:6>).ores().furn();
+Purge(<libvulpes:productdust:1>).ores([<ore:dustIron>]).furn();
+Purge(<libvulpes:productdust:2>).ores([<ore:dustGold>]).furn();
+Purge(<libvulpes:productdust:3>).ores([<ore:dustSilicon>]).furn();
+Purge(<libvulpes:productdust:4>).ores([<ore:dustCopper>]).furn();
+Purge(<libvulpes:productdust:5>).ores([<ore:dustTin>]).furn();
+Purge(<libvulpes:productdust:6>).ores([<ore:dustSteel>]).furn();
+Purge(<libvulpes:productdust:9>).ores([<ore:dustAluminum>, <ore:dustAluminium>]).furn();
+Purge(<libvulpes:productdust:10>).ores([<ore:dustIridium>]).furn();
+Purge(<libvulpes:productingot:4>).ores([<ore:ingotCopper>]).furn();
+Purge(<libvulpes:productingot:5>).ores([<ore:ingotTin>]).furn();
+Purge(<libvulpes:productingot:6>).ores([<ore:ingotSteel>]).furn();
+Purge(<libvulpes:productingot:9>).ores([<ore:ingotAluminum>, <ore:ingotAluminium>]).furn();
+Purge(<libvulpes:productingot:10>).ores([<ore:ingotIridium>]).furn();
+Purge(<libvulpes:productnugget:4>).ores([<ore:nuggetCopper>]).furn();
+Purge(<libvulpes:productnugget:5>).ores([<ore:nuggetTin>]).furn();
+Purge(<libvulpes:productnugget:6>).ores([<ore:nuggetSteel>]).furn();
+Purge(<libvulpes:productnugget:9>).ores([<ore:nuggetAluminum>, <ore:nuggetAluminium>]).furn();
+Purge(<libvulpes:productnugget:10>).ores([<ore:nuggetIridium>]).furn();
+Purge(<libvulpes:ore0:4>).furn();
+Purge(<libvulpes:ore0:5>).furn();
+Purge(<libvulpes:ore0:9>).ores([<ore:oreAluminium>]).furn();
+Purge(<libvulpes:ore0:10>).ores([<ore:oreIridium>]).furn();
+Purge(<libvulpes:productrod:1>).ores([<ore:stickIron>]).furn();
+Purge(<libvulpes:productrod:6>).ores([<ore:stickSteel>]).furn();
 
 val recipesToRemove = [
 

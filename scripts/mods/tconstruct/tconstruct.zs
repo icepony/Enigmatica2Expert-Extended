@@ -56,8 +56,8 @@ for slime, dirts in slimeDirts {
 }
 
 // Remove redundant slimes
-Purge(<tconstruct:edible:5>).ores();
-Purge(<tconstruct:slime_congealed:5>).ores();
+Purge(<tconstruct:edible:5>).ores([<ore:slimeball>]);
+Purge(<tconstruct:slime_congealed:5>).ores([<ore:blockSlimeCongealed>]);
 
 // Removing Bronze / Steel dupes
 mods.tconstruct.Melting.removeRecipe(<liquid:bronze>, <ic2:pipe>);

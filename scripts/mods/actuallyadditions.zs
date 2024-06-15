@@ -170,12 +170,12 @@ recipes.addShaped('Atomic Reconstructor',
     [<ore:plateSteel>, <forestry:thermionic_tubes:4>, <ore:plateSteel>]]);
 
 // Removing Recipes
-Purge(<actuallyadditions:item_dust>).ores().furn();
-Purge(<actuallyadditions:item_dust:1>).ores().furn();
-Purge(<actuallyadditions:item_dust:2>).ores().furn();
-Purge(<actuallyadditions:item_dust:4>).ores().furn();
-Purge(<actuallyadditions:item_dust:6>).ores().furn();
-Purge(<actuallyadditions:block_misc:5>).ores().furn();
+Purge(<actuallyadditions:item_dust>).ores([<ore:dustIron>]).furn();
+Purge(<actuallyadditions:item_dust:1>).ores([<ore:dustGold>]).furn();
+Purge(<actuallyadditions:item_dust:2>).ores([<ore:dustDiamond>]).furn();
+Purge(<actuallyadditions:item_dust:4>).ores([<ore:dustLapis>]).furn();
+Purge(<actuallyadditions:item_dust:6>).ores([<ore:dustCoal>]).furn();
+Purge(<actuallyadditions:block_misc:5>).ores([<ore:blockCharcoal>]).furn();
 
 
 // *======= Empowerer =======*

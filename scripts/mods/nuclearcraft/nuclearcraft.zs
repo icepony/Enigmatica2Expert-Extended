@@ -325,7 +325,7 @@ mods.tconstruct.Casting.removeTableRecipe(<nuclearcraft:alloy:9>);
 mods.nuclearcraft.AlloyFurnace.removeRecipeWithOutput(<nuclearcraft:alloy:9> * 4);
 mods.nuclearcraft.IngotFormer.removeRecipeWithOutput(<nuclearcraft:alloy:9>);
 mods.nuclearcraft.SaltMixer.removeRecipeWithInput(<fluid:lead_platinum> * 144, <fluid:ender> * 250);
-Purge(<nuclearcraft:alloy:9>).ores();
+Purge(<nuclearcraft:alloy:9>).ores([<ore:ingotLeadPlatinum>]);
 
 // More melting compat
 for ingr, fluid in {
@@ -503,21 +503,21 @@ scripts.process.electrolyze(<fluid:nitric_oxide> * 100, [<fluid:nitrogen> * 500,
 // ------------------------------------------------------------
 
 // Common resources
-Purge(<nuclearcraft:alloy>).ores();
-Purge(<nuclearcraft:alloy:5>).ores();
-Purge(<nuclearcraft:dust>).ores();
-Purge(<nuclearcraft:dust:1>).ores();
-Purge(<nuclearcraft:dust:2>).ores();
-Purge(<nuclearcraft:dust:4>).ores();
-Purge(<nuclearcraft:gem_dust>).ores();
+Purge(<nuclearcraft:alloy>).ores([<ore:ingotBronze>]);
+Purge(<nuclearcraft:alloy:5>).ores([<ore:ingotSteel>]);
+Purge(<nuclearcraft:dust>).ores([<ore:dustCopper>]);
+Purge(<nuclearcraft:dust:1>).ores([<ore:dustTin>]);
+Purge(<nuclearcraft:dust:2>).ores([<ore:dustLead>]);
+Purge(<nuclearcraft:dust:4>).ores([<ore:dustUranium>]);
+Purge(<nuclearcraft:gem_dust>).ores([<ore:dustDiamond>]);
 Purge(<nuclearcraft:gem_dust:2>);
-Purge(<nuclearcraft:gem_dust:3>).ores();
-Purge(<nuclearcraft:gem_dust:6>).ores();
+Purge(<nuclearcraft:gem_dust:3>).ores([<ore:dustObsidian>]);
+Purge(<nuclearcraft:gem_dust:6>).ores([<ore:dustSulfur>, <ore:dustSulphur>]);
 Purge(<nuclearcraft:gem:6>);
-Purge(<nuclearcraft:ingot>).ores();
-Purge(<nuclearcraft:ingot:1>).ores();
-Purge(<nuclearcraft:ingot:2>).ores();
-Purge(<nuclearcraft:ingot:4>).ores();
+Purge(<nuclearcraft:ingot>).ores([<ore:ingotCopper>]);
+Purge(<nuclearcraft:ingot:1>).ores([<ore:ingotTin>]);
+Purge(<nuclearcraft:ingot:2>).ores([<ore:ingotLead>]);
+Purge(<nuclearcraft:ingot:4>).ores([<ore:ingotUranium>]);
 Purge(<nuclearcraft:ore>);
 Purge(<nuclearcraft:ore:1>);
 Purge(<nuclearcraft:ore:2>);
@@ -567,8 +567,8 @@ for alloy in [
 }
 
 // Pebble ingredients
-Purge(<nuclearcraft:part:15>).ores();
-Purge(<nuclearcraft:alloy:13>).ores();
+Purge(<nuclearcraft:part:15>).ores([<ore:ingotPyrolyticCarbon>]);
+Purge(<nuclearcraft:alloy:13>).ores([<ore:ingotSiliconCarbide>]);
 
 // [mod][data_type][name][count]
 val nuclearData = {
@@ -618,12 +618,12 @@ for mod, types in nuclearData {
         furnace.addRecipe(isotope, isotope_zirc);
 
       // Pebbles
-      Purge(fuel).ores().furn();
+      Purge(fuel).furn();
 
       // Pebbles in fuel reprocessor
       if (key != 'americium' || i != 2) {
         mods.nuclearcraft.FuelReprocessor.removeRecipeWithInput(depleted_fuel * 9);
-        Purge(depleted_fuel).ores().furn();
+        Purge(depleted_fuel).furn();
 
         // Everything except Pebbles
         scripts.category.oredict.addItems(<ore:fuelReactor>, [
@@ -631,7 +631,6 @@ for mod, types in nuclearData {
         ]);
 
         // Add other fuels to Oredict
-        scripts.category.oredict.addItems(<ore:depletedFuelReactor>, [depleted_fuel]);
         for j in 1 .. 4 {
           scripts.category.oredict.add(
             <ore:depletedFuelReactor>,
@@ -641,7 +640,7 @@ for mod, types in nuclearData {
       }
       if (!(key == 'americium' && i == 2)) {
         mods.nuclearcraft.AlloyFurnace.removeRecipeWithOutput(pellet_carbide);
-        Purge(pellet_carbide).ores().furn();
+        Purge(pellet_carbide).furn();
       }
 
       if (key != 'mixed' && key != 'thorium'
@@ -657,11 +656,144 @@ for mod, types in nuclearData {
         ) {
           mods.nuclearcraft.DecayHastener.removeRecipeWithOutput(isotope_carbide);
         }
-        Purge(isotope_carbide).ores().furn();
+        Purge(isotope_carbide).furn();
       }
     }
   }
 }
+
+// Sorry for this wall of text.
+// I didnt found any other simple way to remove all this ores
+<ore:ingotMIX291TRISO>.remove(<qmd:fuel_copernicium>);
+<ore:ingotDepletedMIX291TRISO>.remove(<qmd:depleted_fuel_copernicium>);
+<ore:ingotMIX291Carbide>.remove(<qmd:pellet_copernicium:1>);
+<ore:ingotCopernicium291All>.remove(<qmd:copernicium:1>);
+<ore:ingotCopernicium291Carbide>.remove(<qmd:copernicium:1>);
+<ore:ingotLEN236TRISO>.remove(<nuclearcraft:fuel_neptunium>);
+<ore:ingotDepletedLEN236TRISO>.remove(<nuclearcraft:depleted_fuel_neptunium>);
+<ore:ingotLEN236Carbide>.remove(<nuclearcraft:pellet_neptunium:1>);
+<ore:ingotNeptunium236All>.remove(<nuclearcraft:neptunium:1>);
+<ore:ingotNeptunium236Carbide>.remove(<nuclearcraft:neptunium:1>);
+<ore:ingotHEN236TRISO>.remove(<nuclearcraft:fuel_neptunium:4>);
+<ore:ingotDepletedHEN236TRISO>.remove(<nuclearcraft:depleted_fuel_neptunium:4>);
+<ore:ingotHEN236Carbide>.remove(<nuclearcraft:pellet_neptunium:3>);
+<ore:ingotNeptunium237All>.remove(<nuclearcraft:neptunium:6>);
+<ore:ingotNeptunium237Carbide>.remove(<nuclearcraft:neptunium:6>);
+<ore:ingotLECm243TRISO>.remove(<nuclearcraft:fuel_curium>);
+<ore:ingotDepletedLECm243TRISO>.remove(<nuclearcraft:depleted_fuel_curium>);
+<ore:ingotLECm243Carbide>.remove(<nuclearcraft:pellet_curium:1>);
+<ore:ingotCurium243All>.remove(<nuclearcraft:curium:1>);
+<ore:ingotCurium243Carbide>.remove(<nuclearcraft:curium:1>);
+<ore:ingotHECm243TRISO>.remove(<nuclearcraft:fuel_curium:4>);
+<ore:ingotDepletedHECm243TRISO>.remove(<nuclearcraft:depleted_fuel_curium:4>);
+<ore:ingotHECm243Carbide>.remove(<nuclearcraft:pellet_curium:3>);
+<ore:ingotCurium245All>.remove(<nuclearcraft:curium:6>);
+<ore:ingotCurium245Carbide>.remove(<nuclearcraft:curium:6>);
+<ore:ingotLECm245TRISO>.remove(<nuclearcraft:fuel_curium:8>);
+<ore:ingotDepletedLECm245TRISO>.remove(<nuclearcraft:depleted_fuel_curium:8>);
+<ore:ingotLECm245Carbide>.remove(<nuclearcraft:pellet_curium:5>);
+<ore:ingotCurium246All>.remove(<nuclearcraft:curium:11>);
+<ore:ingotCurium246Carbide>.remove(<nuclearcraft:curium:11>);
+<ore:ingotHECm245TRISO>.remove(<nuclearcraft:fuel_curium:12>);
+<ore:ingotDepletedHECm245TRISO>.remove(<nuclearcraft:depleted_fuel_curium:12>);
+<ore:ingotHECm245Carbide>.remove(<nuclearcraft:pellet_curium:7>);
+<ore:ingotCurium247All>.remove(<nuclearcraft:curium:16>);
+<ore:ingotCurium247Carbide>.remove(<nuclearcraft:curium:16>);
+<ore:ingotLECm247TRISO>.remove(<nuclearcraft:fuel_curium:16>);
+<ore:ingotDepletedLECm247TRISO>.remove(<nuclearcraft:depleted_fuel_curium:16>);
+<ore:ingotLECm247Carbide>.remove(<nuclearcraft:pellet_curium:9>);
+<ore:ingotHECm247TRISO>.remove(<nuclearcraft:fuel_curium:20>);
+<ore:ingotDepletedHECm247TRISO>.remove(<nuclearcraft:depleted_fuel_curium:20>);
+<ore:ingotHECm247Carbide>.remove(<nuclearcraft:pellet_curium:11>);
+<ore:ingotLEB248TRISO>.remove(<nuclearcraft:fuel_berkelium>);
+<ore:ingotDepletedLEB248TRISO>.remove(<nuclearcraft:depleted_fuel_berkelium>);
+<ore:ingotLEB248Carbide>.remove(<nuclearcraft:pellet_berkelium:1>);
+<ore:ingotBerkelium247All>.remove(<nuclearcraft:berkelium:1>);
+<ore:ingotBerkelium247Carbide>.remove(<nuclearcraft:berkelium:1>);
+<ore:ingotHEB248TRISO>.remove(<nuclearcraft:fuel_berkelium:4>);
+<ore:ingotDepletedHEB248TRISO>.remove(<nuclearcraft:depleted_fuel_berkelium:4>);
+<ore:ingotHEB248Carbide>.remove(<nuclearcraft:pellet_berkelium:3>);
+<ore:ingotBerkelium248All>.remove(<nuclearcraft:berkelium:6>);
+<ore:ingotBerkelium248Carbide>.remove(<nuclearcraft:berkelium:6>);
+<ore:ingotTBUTRISO>.remove(<nuclearcraft:fuel_thorium>);
+<ore:ingotDepletedTBUTRISO>.remove(<nuclearcraft:depleted_fuel_thorium>);
+<ore:ingotTBUCarbide>.remove(<nuclearcraft:pellet_thorium:1>);
+<ore:ingotMIX239TRISO>.remove(<nuclearcraft:fuel_mixed>);
+<ore:ingotDepletedMIX239TRISO>.remove(<nuclearcraft:depleted_fuel_mixed>);
+<ore:ingotMIX239Carbide>.remove(<nuclearcraft:pellet_mixed:1>);
+<ore:ingotMIX241TRISO>.remove(<nuclearcraft:fuel_mixed:4>);
+<ore:ingotDepletedMIX241TRISO>.remove(<nuclearcraft:depleted_fuel_mixed:4>);
+<ore:ingotMIX241Carbide>.remove(<nuclearcraft:pellet_mixed:3>);
+<ore:ingotLEU233TRISO>.remove(<nuclearcraft:fuel_uranium>);
+<ore:ingotDepletedLEU233TRISO>.remove(<nuclearcraft:depleted_fuel_uranium>);
+<ore:ingotLEU233Carbide>.remove(<nuclearcraft:pellet_uranium:1>);
+<ore:ingotUranium233All>.remove(<nuclearcraft:uranium:1>);
+<ore:ingotUranium233Carbide>.remove(<nuclearcraft:uranium:1>);
+<ore:ingotHEU233TRISO>.remove(<nuclearcraft:fuel_uranium:4>);
+<ore:ingotDepletedHEU233TRISO>.remove(<nuclearcraft:depleted_fuel_uranium:4>);
+<ore:ingotHEU233Carbide>.remove(<nuclearcraft:pellet_uranium:3>);
+<ore:ingotUranium235All>.remove(<nuclearcraft:uranium:6>);
+<ore:ingotUranium235Carbide>.remove(<nuclearcraft:uranium:6>);
+<ore:ingotLEU235TRISO>.remove(<nuclearcraft:fuel_uranium:8>);
+<ore:ingotDepletedLEU235TRISO>.remove(<nuclearcraft:depleted_fuel_uranium:8>);
+<ore:ingotLEU235Carbide>.remove(<nuclearcraft:pellet_uranium:5>);
+<ore:ingotUranium238All>.remove(<nuclearcraft:uranium:11>);
+<ore:ingotUranium238Carbide>.remove(<nuclearcraft:uranium:11>);
+<ore:ingotHEU235TRISO>.remove(<nuclearcraft:fuel_uranium:12>);
+<ore:ingotDepletedHEU235TRISO>.remove(<nuclearcraft:depleted_fuel_uranium:12>);
+<ore:ingotHEU235Carbide>.remove(<nuclearcraft:pellet_uranium:7>);
+<ore:ingotLEA242TRISO>.remove(<nuclearcraft:fuel_americium>);
+<ore:ingotDepletedLEA242TRISO>.remove(<nuclearcraft:depleted_fuel_americium>);
+<ore:ingotLEA242Carbide>.remove(<nuclearcraft:pellet_americium:1>);
+<ore:ingotAmericium241All>.remove(<nuclearcraft:americium:1>);
+<ore:ingotAmericium241Carbide>.remove(<nuclearcraft:americium:1>);
+<ore:ingotHEA242TRISO>.remove(<nuclearcraft:fuel_americium:4>);
+<ore:ingotDepletedHEA242TRISO>.remove(<nuclearcraft:depleted_fuel_americium:4>);
+<ore:ingotHEA242Carbide>.remove(<nuclearcraft:pellet_americium:3>);
+<ore:ingotAmericium242All>.remove(<nuclearcraft:americium:6>);
+<ore:ingotAmericium242Carbide>.remove(<nuclearcraft:americium:6>);
+<ore:ingotAmericium243All>.remove(<nuclearcraft:americium:11>);
+<ore:ingotAmericium243Carbide>.remove(<nuclearcraft:americium:11>);
+<ore:ingotLEP239TRISO>.remove(<nuclearcraft:fuel_plutonium>);
+<ore:ingotDepletedLEP239TRISO>.remove(<nuclearcraft:depleted_fuel_plutonium>);
+<ore:ingotLEP239Carbide>.remove(<nuclearcraft:pellet_plutonium:1>);
+<ore:ingotPlutonium238All>.remove(<nuclearcraft:plutonium:1>);
+<ore:ingotPlutonium238Carbide>.remove(<nuclearcraft:plutonium:1>);
+<ore:ingotHEP239TRISO>.remove(<nuclearcraft:fuel_plutonium:4>);
+<ore:ingotDepletedHEP239TRISO>.remove(<nuclearcraft:depleted_fuel_plutonium:4>);
+<ore:ingotHEP239Carbide>.remove(<nuclearcraft:pellet_plutonium:3>);
+<ore:ingotPlutonium239All>.remove(<nuclearcraft:plutonium:6>);
+<ore:ingotPlutonium239Carbide>.remove(<nuclearcraft:plutonium:6>);
+<ore:ingotLEP241TRISO>.remove(<nuclearcraft:fuel_plutonium:8>);
+<ore:ingotDepletedLEP241TRISO>.remove(<nuclearcraft:depleted_fuel_plutonium:8>);
+<ore:ingotLEP241Carbide>.remove(<nuclearcraft:pellet_plutonium:5>);
+<ore:ingotPlutonium241All>.remove(<nuclearcraft:plutonium:11>);
+<ore:ingotPlutonium241Carbide>.remove(<nuclearcraft:plutonium:11>);
+<ore:ingotHEP241TRISO>.remove(<nuclearcraft:fuel_plutonium:12>);
+<ore:ingotDepletedHEP241TRISO>.remove(<nuclearcraft:depleted_fuel_plutonium:12>);
+<ore:ingotHEP241Carbide>.remove(<nuclearcraft:pellet_plutonium:7>);
+<ore:ingotPlutonium242All>.remove(<nuclearcraft:plutonium:16>);
+<ore:ingotPlutonium242Carbide>.remove(<nuclearcraft:plutonium:16>);
+<ore:ingotLECf249TRISO>.remove(<nuclearcraft:fuel_californium>);
+<ore:ingotDepletedLECf249TRISO>.remove(<nuclearcraft:depleted_fuel_californium>);
+<ore:ingotLECf249Carbide>.remove(<nuclearcraft:pellet_californium:1>);
+<ore:ingotCalifornium249All>.remove(<nuclearcraft:californium:1>);
+<ore:ingotCalifornium249Carbide>.remove(<nuclearcraft:californium:1>);
+<ore:ingotHECf249TRISO>.remove(<nuclearcraft:fuel_californium:4>);
+<ore:ingotDepletedHECf249TRISO>.remove(<nuclearcraft:depleted_fuel_californium:4>);
+<ore:ingotHECf249Carbide>.remove(<nuclearcraft:pellet_californium:3>);
+<ore:ingotCalifornium250All>.remove(<nuclearcraft:californium:6>);
+<ore:ingotCalifornium250Carbide>.remove(<nuclearcraft:californium:6>);
+<ore:ingotLECf251TRISO>.remove(<nuclearcraft:fuel_californium:8>);
+<ore:ingotDepletedLECf251TRISO>.remove(<nuclearcraft:depleted_fuel_californium:8>);
+<ore:ingotLECf251Carbide>.remove(<nuclearcraft:pellet_californium:5>);
+<ore:ingotCalifornium251All>.remove(<nuclearcraft:californium:11>);
+<ore:ingotCalifornium251Carbide>.remove(<nuclearcraft:californium:11>);
+<ore:ingotHECf251TRISO>.remove(<nuclearcraft:fuel_californium:12>);
+<ore:ingotDepletedHECf251TRISO>.remove(<nuclearcraft:depleted_fuel_californium:12>);
+<ore:ingotHECf251Carbide>.remove(<nuclearcraft:pellet_californium:7>);
+<ore:ingotCalifornium252All>.remove(<nuclearcraft:californium:16>);
+<ore:ingotCalifornium252Carbide>.remove(<nuclearcraft:californium:16>);
 
 // Concrete watering
 for i in 0 .. 16 {

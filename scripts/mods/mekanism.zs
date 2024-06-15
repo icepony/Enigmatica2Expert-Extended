@@ -536,7 +536,7 @@ craft.remake(<mekanismgenerators:generator:8>, ['pretty',
 });
 
 // Conflicts
-Purge(<mekanism:nugget:5>).ores();
+Purge(<mekanism:nugget:5>).ores([<ore:nuggetCopper>]);
 
 // Cardboard Box spawner entity
 <mekanism:cardboardbox:1>.addAdvancedTooltip(function (item) {

@@ -10,7 +10,7 @@ import mods.alfinivia.ImmersiveEngineering.addRailgunBullet;
 recipes.remove(<immersiveengineering:material:1>);
 recipes.remove(<immersiveengineering:material:2>);
 recipes.remove(<immersiveengineering:material:3>);
-Purge(<immersiveengineering:material:24>).ores();
+Purge(<immersiveengineering:material:24>).ores([<ore:dustSaltpeter>, <ore:dustNiter>]);
 
 // Fix IC2 block
 val UI = <ore:ingotUranium>;
@@ -39,7 +39,7 @@ mods.immersivepetroleum.Distillation.addRecipe(
 recipes.remove(<thermalfoundation:storage_resource:1>);
 recipes.addShaped('immersiveengineering_stone_decoration_3_custom', <immersiveengineering:stone_decoration:3>, [[<ore:fuelCoke>, <ore:fuelCoke>, <ore:fuelCoke>], [<ore:fuelCoke>, <ore:fuelCoke>, <ore:fuelCoke>], [<ore:fuelCoke>, <ore:fuelCoke>, <ore:fuelCoke>]]);
 
-Purge(<thermalfoundation:material:802>).ores();
+Purge(<thermalfoundation:material:802>).ores([<ore:fuelCoke>]);
 mods.thermalexpansion.RedstoneFurnace.removePyrolysisRecipe(<minecraft:coal>);
 mods.thermalexpansion.RedstoneFurnace.addPyrolysisRecipe(<immersiveengineering:material:6>,
   <minecraft:coal>, 3000, 250);

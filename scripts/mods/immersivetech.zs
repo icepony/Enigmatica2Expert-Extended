@@ -7,7 +7,7 @@ mods.enderio.Vat.removeRecipe(<liquid:cloud_seed>);
 mods.immersivetechnology.CoolingTower.addRecipe(<liquid:cloud_seed> * 500, <liquid:hot_spring_water> * 10, <liquid:ice> * 200, <liquid:ice> * 200, <liquid:ic2hot_water> * 1000, 20);
 
 // Rplace wrong salt
-Purge(<immersivetech:material>).ores();
+Purge(<immersivetech:material>).ores([<ore:dustSalt>, <ore:itemSalt>, <ore:foodSalt>]);
 mods.immersivetechnology.Distiller.removeRecipe(<liquid:water>);
 mods.immersivetechnology.Distiller.addRecipe(<liquid:distwater> * 500, <liquid:water> * 1000, <mekanism:salt>, 2000, 20, 1.0f);
 
