@@ -100,6 +100,7 @@ install:
       - 408853 # Particle Culling
       - 409087 # Entity Culling
       - 417557 # BilingualName
+      - 438451 # Precision Mining
       - 446253 # Better Biome Blend
       - 454215 # Just Enough Drags
       - 461660 # Mouse Tweaks Unofficial
