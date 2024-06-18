@@ -11,7 +11,7 @@ static currentPlayer as IPlayer[string] = {
   _: null,
 } as IPlayer[string];
 
-events.onPlayerLoggedIn(function (e as crafttweaker.event.PlayerLoggedInEvent) {
+events.register(function (e as crafttweaker.event.PlayerTickEvent) {
   currentPlayer['_'] = e.player;
 });
 
