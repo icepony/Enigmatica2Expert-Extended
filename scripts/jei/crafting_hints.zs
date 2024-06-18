@@ -129,7 +129,7 @@ if (!isNull(xp_bottler)) {
 
 // Fireflys and Cicadas
 scripts.jei.requious.add(<assembly:crafting_hints>, { [null, null, null, null, null, <twilightforest:twilight_sapling:1>]: [null, <twilightforest:firefly>] });
-scripts.jei.requious.add(<assembly:crafting_hints>, { [null, null, null, null, null, <twilightforest:twilight_sapling:4>]: [null, <twilightforest:firefly>, <twilightforest:cicada>] });
+addInsOutsCatl([<twilightforest:twilight_sapling:4>], [<twilightforest:cicada> * 8, <minecraft:mob_spawner>, <lootr:lootr_chest>]);
 
 // Taint to Flux Goo
 x.addJEIRecipe(AssemblyRecipe.create(function (c) {
