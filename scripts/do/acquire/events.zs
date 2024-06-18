@@ -18,8 +18,9 @@ function pushRegistry(evtName as string, stack as IItemStack) as void {
 }
 
 function checkAcquire(evtName as string, player as IPlayer, stack as IItemStack) as void {
+  if (player.creative || player.spectator) return;
   val stackAnyAmount = stack.anyAmount();
-  if (isNull(registry[evtName]) || isNull(registry[evtName][stackAnyAmount])) return;
+  if (evtName != 'open' && (isNull(registry[evtName]) || isNull(registry[evtName][stackAnyAmount]))) return;
   onAcquire(evtName, player, stackAnyAmount);
 }
 
@@ -66,7 +67,7 @@ events.register(function (e as crafttweaker.event.PlayerOpenContainerEvent) {
 
   val stack = stringRegistry[class];
   if(isNull(stack)) return;
-  onAcquire('open', e.player, stack.anyAmount());
+  checkAcquire('open', e.player, stack);
 });
 
 events.register(function (e as crafttweaker.event.PlayerPickupItemEvent) {
