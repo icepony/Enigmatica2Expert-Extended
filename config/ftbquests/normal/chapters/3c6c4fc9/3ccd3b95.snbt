@@ -20,14 +20,31 @@
 		uid: "ddad318e",
 		type: "item",
 		items: [{
+			item: "nuclearcraft:ingot_block 1 8"
+		},
+		{
 			item: "nuclearcraft:ingot_block 1 9"
-		}]
-	},
-	{
-		uid: "5e3c98ad",
-		type: "item",
-		items: [{
+		},
+		{
+			item: "twilightforest:aurora_block"
+		},
+		{
 			item: "nuclearcraft:heavy_water_moderator"
+		},
+		{
+			item: "randomthings:biomeglass"
+		},
+		{
+			item: "advancedrocketry:basalt"
+		},
+		{
+			item: "draconicevolution:infused_obsidian"
+		},
+		{
+			item: "draconicevolution:draconium_block 1 1"
+		},
+		{
+			item: "draconicevolution:draconic_block"
 		}]
 	}],
 	rewards: [{
