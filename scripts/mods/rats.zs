@@ -30,6 +30,7 @@ scripts.jei.crafting_hints.addInsOutsCatl([<entity:minecraft:villager>.asIngr(),
 scripts.jei.crafting_hints.addInsOutsCatl([<entity:rats:plague_doctor>.asIngr()], [<entity:rats:black_death>.asStack()], <cyclicmagic:ender_lightning>);
 scripts.jei.crafting_hints.addInsOutsCatl([], [<entity:rats:plague_cloud>.asStack(), <entity:rats:plague_beast>.asStack()], <entity:rats:black_death>.asIngr());
 scripts.jei.crafting_hints.addInsOutsCatl([<entity:rats:feral_ratlantean>.asIngr(), <rats:vial_of_sentience>], [<entity:rats:neo_ratlantean>.asStack()]);
+scripts.jei.crafting_hints.addInsOutsCatl([<rats:chunky_cheese_token>], [<rats:marbled_cheese_raw> * 2, <rats:ratlantis_portal> * 2]);
 
 // ######################################################################
 //
