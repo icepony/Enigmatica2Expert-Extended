@@ -12,7 +12,18 @@
 		uid: "e7420b70",
 		type: "item",
 		items: [{
-			item: "minecraft:log"
+			id: "itemfilters:filter",
+			tag: {
+				display: {
+					Name: "Any logWood"
+				}
+			},
+			ForgeCaps: {
+				Parent: {
+					id: "ore",
+					data: "logWood"
+				}
+			}
 		}]
 	}],
 	rewards: [{

@@ -13,8 +13,9 @@
 		}]
 	}],
 	rewards: [{
-		uid: "aebe71ed",
-		type: "xp_levels",
-		xp_levels: 10
+		uid: "0898590a",
+		type: "item",
+		item: "minecraft:emerald",
+		count: 8
 	}]
 }

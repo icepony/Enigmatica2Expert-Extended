@@ -15,7 +15,7 @@
 	rewards: [{
 		uid: "bef87977",
 		type: "item",
-		item: "minecraft:lapis_ore",
-		count: 8
+		item: "minecraft:dye 1 4",
+		count: 32
 	}]
 }

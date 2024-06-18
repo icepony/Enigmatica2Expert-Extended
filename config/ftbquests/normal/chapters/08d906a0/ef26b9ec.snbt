@@ -10,7 +10,18 @@
 		uid: "0e31c667",
 		type: "item",
 		items: [{
-			item: "minecraft:leaves"
+			id: "itemfilters:filter",
+			tag: {
+				display: {
+					Name: "Any treeLeaves"
+				}
+			},
+			ForgeCaps: {
+				Parent: {
+					id: "ore",
+					data: "treeLeaves"
+				}
+			}
 		}],
 		count: 36L
 	},

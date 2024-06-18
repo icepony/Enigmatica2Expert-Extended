@@ -14,8 +14,9 @@
 		}]
 	}],
 	rewards: [{
-		uid: "ea3e6819",
-		type: "xp_levels",
-		xp_levels: 8
+		uid: "c7288dc9",
+		type: "item",
+		item: "minecraft:gold_ingot",
+		count: 8
 	}]
 }

@@ -13,9 +13,9 @@
 		}]
 	}],
 	rewards: [{
-		uid: "22b5b331",
+		uid: "e798cf12",
 		type: "item",
-		item: "minecraft:quartz_ore",
-		count: 8
+		item: "minecraft:quartz",
+		count: 16
 	}]
 }

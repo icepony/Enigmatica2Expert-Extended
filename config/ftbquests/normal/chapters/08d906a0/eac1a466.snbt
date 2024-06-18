@@ -18,6 +18,17 @@
 		uid: "d372e674",
 		type: "item",
 		item: "exnihilocreatio:block_waterwheel",
-		count: 4
+		count: 6
+	},
+	{
+		uid: "7580663e",
+		type: "item",
+		item: "exnihilocreatio:block_auto_sifter"
+	},
+	{
+		uid: "dafb508c",
+		type: "item",
+		item: "exnihilocreatio:block_axle_stone",
+		count: 2
 	}]
 }

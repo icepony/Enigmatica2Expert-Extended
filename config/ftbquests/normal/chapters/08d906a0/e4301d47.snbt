@@ -13,8 +13,9 @@
 		}]
 	}],
 	rewards: [{
-		uid: "7a33f1c1",
+		uid: "2927aecb",
 		type: "item",
-		item: "testdummy:dummy"
+		item: "excompressum:bait 1 7",
+		count: 4
 	}]
 }

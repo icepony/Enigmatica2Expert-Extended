@@ -26,7 +26,6 @@
 	rewards: [{
 		uid: "ddd489f4",
 		type: "item",
-		item: "oeintegration:excavatemodifier",
-		count: 2
+		item: "oeintegration:excavatemodifier"
 	}]
 }

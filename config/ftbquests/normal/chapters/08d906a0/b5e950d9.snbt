@@ -1,5 +1,5 @@
 {
-	icon: "minecraft:log",
+	icon: "minecraft:planks",
 	x: 3.0d,
 	y: 0.0d,
 	dependencies: [
@@ -10,7 +10,18 @@
 		uid: "1d818605",
 		type: "item",
 		items: [{
-			item: "minecraft:planks"
+			id: "itemfilters:filter",
+			tag: {
+				display: {
+					Name: "Any plankWood"
+				}
+			},
+			ForgeCaps: {
+				Parent: {
+					id: "ore",
+					data: "plankWood"
+				}
+			}
 		}],
 		count: 32L
 	}],

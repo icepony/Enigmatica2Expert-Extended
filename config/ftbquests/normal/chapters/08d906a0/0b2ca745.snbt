@@ -13,9 +13,9 @@
 		}]
 	}],
 	rewards: [{
-		uid: "fe42a331",
+		uid: "49e09d66",
 		type: "item",
-		item: "minecraft:redstone_ore",
-		count: 8
+		item: "minecraft:redstone",
+		count: 16
 	}]
 }

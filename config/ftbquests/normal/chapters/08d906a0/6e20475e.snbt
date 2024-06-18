@@ -13,8 +13,14 @@
 		}]
 	}],
 	rewards: [{
-		uid: "05df0fa9",
+		uid: "f9c0185d",
 		type: "item",
-		item: "tconstruct:seared_tank"
+		item: {
+			id: "tconstruct:seared_tank",
+			tag: {
+				FluidName: "lava",
+				Amount: 4000
+			}
+		}
 	}]
 }

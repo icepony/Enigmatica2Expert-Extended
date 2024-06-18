@@ -15,9 +15,9 @@
 		count: 8L
 	}],
 	rewards: [{
-		uid: "d2287433",
+		uid: "f1004afd",
 		type: "item",
-		item: "minecraft:fire_charge",
-		count: 2
+		item: "openblocks:scaffolding",
+		count: 16
 	}]
 }

@@ -14,8 +14,9 @@
 		}]
 	}],
 	rewards: [{
-		uid: "06aee255",
+		uid: "3cac80a4",
 		type: "item",
-		item: "cookingforblockheads:milk_jar"
+		item: "flopper:flopper",
+		count: 2
 	}]
 }

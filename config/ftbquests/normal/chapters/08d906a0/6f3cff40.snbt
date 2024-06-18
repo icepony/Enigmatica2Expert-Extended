@@ -6,9 +6,26 @@
 	],
 	optional: true,
 	tasks: [{
-		uid: "0ee02352",
-		type: "fluid",
-		fluid: "witchwater"
+		uid: "5d9067bd",
+		type: "item",
+		items: [{
+			id: "forge:bucketfilled",
+			tag: {
+				FluidName: "witchwater",
+				Amount: 1000
+			}
+		},
+		{
+			id: "ic2:fluid_cell",
+			tag: {
+				Fluid: {
+					FluidName: "witchwater",
+					Amount: 1000
+				}
+			}
+		}],
+		ignore_damage: true,
+		ignore_nbt: 2b
 	}],
 	rewards: [{
 		uid: "09a4958d",

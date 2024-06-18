@@ -14,9 +14,9 @@
 		}]
 	}],
 	rewards: [{
-		uid: "70b107e7",
+		uid: "53a1b7b4",
 		type: "item",
-		item: "minecraft:grass",
-		count: 8
+		item: "exnihilocreatio:item_material 1 4",
+		count: 16
 	}]
 }

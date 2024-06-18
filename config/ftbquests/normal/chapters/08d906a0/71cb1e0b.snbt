@@ -10,7 +10,18 @@
 		uid: "c617b60d",
 		type: "item",
 		items: [{
-			item: "exnihilocreatio:item_pebble"
+			id: "itemfilters:filter",
+			tag: {
+				display: {
+					Name: "Any pebble"
+				}
+			},
+			ForgeCaps: {
+				Parent: {
+					id: "ore",
+					data: "pebble"
+				}
+			}
 		}],
 		count: 4L
 	}],

@@ -16,9 +16,13 @@
 		uid: "5eb284a4",
 		type: "item",
 		item: {
-			id: "minecraft:potion",
+			id: "rustic:elixir",
 			tag: {
-				Potion: "quark:long_haste"
+				ElixirEffects: [{
+					Effect: "minecraft:haste",
+					Duration: 9600,
+					Amplifier: 3
+				}]
 			}
 		}
 	}]

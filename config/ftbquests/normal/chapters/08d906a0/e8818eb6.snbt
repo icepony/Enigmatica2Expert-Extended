@@ -37,14 +37,8 @@
 		count: 24L
 	}],
 	rewards: [{
-		uid: "a5e75efd",
+		uid: "c9194a14",
 		type: "item",
-		item: {
-			id: "mekanism:machineblock2",
-			Damage: 11s,
-			tag: {
-				tier: 0
-			}
-		}
+		item: "immersivetech:metal_barrel 1 2"
 	}]
 }

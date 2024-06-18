@@ -6,9 +6,26 @@
 	],
 	optional: true,
 	tasks: [{
-		uid: "1e32076d",
-		type: "fluid",
-		fluid: "stone"
+		uid: "91c80761",
+		type: "item",
+		items: [{
+			id: "forge:bucketfilled",
+			tag: {
+				FluidName: "stone",
+				Amount: 1000
+			}
+		},
+		{
+			id: "ic2:fluid_cell",
+			tag: {
+				Fluid: {
+					FluidName: "stone",
+					Amount: 1000
+				}
+			}
+		}],
+		ignore_damage: true,
+		ignore_nbt: 2b
 	}],
 	rewards: [{
 		uid: "57f22c63",
@@ -20,6 +37,7 @@
 				FluidName: "stone",
 				Amount: 4000
 			}
-		}
+		},
+		count: 3
 	}]
 }

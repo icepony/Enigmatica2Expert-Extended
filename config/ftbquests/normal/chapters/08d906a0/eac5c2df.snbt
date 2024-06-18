@@ -13,9 +13,9 @@
 		}]
 	}],
 	rewards: [{
-		uid: "69bc241f",
+		uid: "2ec47fc9",
 		type: "item",
-		item: "forestry:resources",
-		count: 8
+		item: "forestry:apatite",
+		count: 32
 	}]
 }

@@ -16,5 +16,10 @@
 		uid: "6cfd1ad4",
 		type: "item",
 		item: "harvestcraft:queenbeeitem"
+	},
+	{
+		uid: "7b5427b5",
+		type: "item",
+		item: "harvestcraft:apiary"
 	}]
 }

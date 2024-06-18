@@ -13,8 +13,9 @@
 		}]
 	}],
 	rewards: [{
-		uid: "36698b2c",
+		uid: "cf7a2ef5",
 		type: "item",
-		item: "minecraft:flint_and_steel"
+		item: "minecraft:obsidian",
+		count: 4
 	}]
 }

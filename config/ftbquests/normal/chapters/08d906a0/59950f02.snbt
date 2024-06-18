@@ -12,7 +12,7 @@
 		items: [{
 			item: "ic2:crafting 1 20"
 		}],
-		count: 32L
+		count: 8L
 	}],
 	rewards: [{
 		uid: "6c964484",
