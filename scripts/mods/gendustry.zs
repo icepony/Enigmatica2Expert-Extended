@@ -2,6 +2,9 @@
 
 import crafttweaker.item.IItemStack;
 
+// Add ability hide all other gene tempelates except empty one
+// mods.jei.JEI.addItemNBTSubtype(<gendustry:gene_template>);
+
 // *======= Recipes =======*
 
 // Genetics Processor
