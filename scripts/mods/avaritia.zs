@@ -412,8 +412,10 @@ addExampleRecipe([
 val barkSingularity = <avaritia:singularity:4>;
 val woodweaveSingularity = <avaritia:singularity:1>;
 
-scripts.lib.tooltip.desc.jei(barkSingularity, 'singularity.bark');
-scripts.lib.tooltip.desc.jei(woodweaveSingularity, 'singularity.woodweave');
+val needPower = pow(10.0, 9.0);
+val needPowerStr = mods.zenutils.StaticString.format('%,d', needPower as int).replaceAll(',', '§8,§6');
+scripts.lib.tooltip.desc.jei(barkSingularity, 'singularity.bark', needPowerStr);
+scripts.lib.tooltip.desc.jei(woodweaveSingularity, 'singularity.woodweave', needPowerStr);
 
 scripts.do.diverse.addRecipe(
   'Woodweave Singularity',
@@ -421,7 +423,7 @@ scripts.do.diverse.addRecipe(
   barkSingularity,
   woodweaveSingularity,
   <ore:plankFireproof>,
-  pow(10.0, 9.0) // Need power
+  needPower // Need power
 );
 
 // -------------------------------------------------------------------

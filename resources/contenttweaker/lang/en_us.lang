@@ -358,8 +358,8 @@ item.contenttweaker.any_burnable.name=§6Any burnable
 # Wood singularity
 item.singularity.quartz.name=§eBark Singilarity
 item.singularity.gold.name=§cWoodweave Singularity
-tooltips.lang.singularity.bark=§7Intermediate ingredient.§r\nCombine with §6any fireproof planks§r to increase power.\nThe §6variety§r of plank types increases the power exponentially. Power is calculated by the formula §2M×2ⁿ⁻¹§r, where §2M§r is the median number of planks, §2ⁿ§r is the number of plank types.\n§2§nRight-Click§2 on something to see list of planks.
-tooltips.lang.singularity.woodweave=Combine with §6any fireproof planks§r to increase power.\nThe §6variety§r of plank types increases the power exponentially. Power is calculated by the formula §2M×2ⁿ⁻¹§r, where §2M§r is the median number of planks, §2ⁿ§r is the number of plank types.
+tooltips.lang.singularity.bark=§7Intermediate ingredient.§r\nCombine with §6any fireproof planks§r to increase power.\nThe §6variety§r of plank types increases the power exponentially. Power is calculated by the formula §2M×2ⁿ⁻¹§r, where §2M§r is the median number of planks, §2ⁿ§r is the number of plank types.\n§2§nRight-Click§2 on something to see list of planks.\nRequires §6%s§r power.
+tooltips.lang.singularity.woodweave=Combine with §6any fireproof planks§r to increase power.\nThe §6variety§r of plank types increases the power exponentially. Power is calculated by the formula §2M×2ⁿ⁻¹§r, where §2M§r is the median number of planks, §2ⁿ§r is the number of plank types.\nRequires §6%s§r power.
 item.contenttweaker.any_fireproof.name=§6Any Fireproof Plank
 ##################################
 
