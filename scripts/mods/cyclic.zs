@@ -826,3 +826,22 @@ craft.remake(<cyclicmagic:placer_block>, ['pretty',
   '⌂': <ic2:casing:4>, // Lead Item Casing
   '▲': <ore:dustBedrock>, // Grains of Infinity
 });
+
+// Scafold recycling
+// [Stick]*3 from [Replaceable Scaffolding]
+craft.make(<minecraft:stick> * 3, ['pretty',
+  'R R R',
+  'R   R',
+  'R R R'], {
+  'R': <cyclicmagic:block_fragile_weak>, // Replaceable Scaffolding
+});
+
+// Cheaper for easier build material
+// [Responsive Scaffolding]*16 from [Tiny Pile of Redstone Dust][+1]
+craft.remake(<cyclicmagic:block_fragile_auto> * 16, ['pretty',
+  '#   #',
+  '# ♥ #',
+  '#   #'], {
+  '#': <ore:stickWood>,        // Stick
+  '♥': <ore:dustTinyRedstone>, // Tiny Pile of Redstone Dust
+});
