@@ -250,6 +250,7 @@ thaumadditions:vis_pod
 thaumadditions:vis_seeds/aer
 thaumadditions:vis_seeds/alienis
 thaumadditions:vis_seeds/alkimia
+thaumadditions:vis_seeds/amogus
 thaumadditions:vis_seeds/aqua
 thaumadditions:vis_seeds/auram
 thaumadditions:vis_seeds/aversio
@@ -271,15 +272,19 @@ thaumadditions:vis_seeds/infernum
 thaumadditions:vis_seeds/instrumentum
 thaumadditions:vis_seeds/lux
 thaumadditions:vis_seeds/machina
+thaumadditions:vis_seeds/mana
 thaumadditions:vis_seeds/metallum
 thaumadditions:vis_seeds/mortuus
 thaumadditions:vis_seeds/motus
+thaumadditions:vis_seeds/mythus
 thaumadditions:vis_seeds/ordo
 thaumadditions:vis_seeds/perditio
 thaumadditions:vis_seeds/permutatio
 thaumadditions:vis_seeds/potentia
 thaumadditions:vis_seeds/praecantatio
 thaumadditions:vis_seeds/praemunio
+thaumadditions:vis_seeds/rattus
+thaumadditions:vis_seeds/sanguis
 thaumadditions:vis_seeds/sensus
 thaumadditions:vis_seeds/sonus
 thaumadditions:vis_seeds/spiritus
