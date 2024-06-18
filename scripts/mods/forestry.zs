@@ -332,6 +332,9 @@ for i, input in farmBlocks {
   });
 }
 
+// Recycling
+scripts.process.melt(<forestry:smoker>, <fluid:tin> * (144 * 5));
+
 // [Carton] from [Compressed Sawdust]
 scripts.process.crush(<thermalfoundation:material:801> /* Compressed Sawdust */, <forestry:carton>, 'only: CrushingBlock');
 
