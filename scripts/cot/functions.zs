@@ -52,7 +52,7 @@ val lifeRecipes = {
 } as int[IItemStack][string];
 
 <cotBlock:conglomerate_of_life>.onBlockPlace = function (world, p, blockState) {
-  if (!world.remote) scripts.do.build_mob.build(world, p, blockState);
+  if (!world.remote) scripts.do.build.entity.build(world, p, blockState);
   createParticles(world, p);
 };
 <cotBlock:conglomerate_of_life>.onBlockBreak = function (world, p, blockState) { createParticles(world, p); };
@@ -76,7 +76,7 @@ val lifeRecipes = {
 };
 
 <cotBlock:conglomerate_of_sun>.onBlockPlace = function (world, p, blockState) {
-  if (!world.remote) scripts.do.build_mob.build(world, p, blockState);
+  if (!world.remote) scripts.do.build.entity.build(world, p, blockState);
   createParticles(world, p, 10, 'endRod');
 };
 <cotBlock:conglomerate_of_sun>.onBlockBreak = function (world, p, blockState) { createParticles(world, p, 10, 'endRod'); };

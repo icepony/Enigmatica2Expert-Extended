@@ -97,13 +97,3 @@ scripts.process.crush(<betteranimalsplus:antler>, <minecraft:bone> * 20, 'only: 
 
 <ore:foodCheese>.remove(<betteranimalsplus:cheese>);
 <ore:listAllmeatraw>.add(<betteranimalsplus:turkey_leg_raw>);
-
-// Add alt mob recipes
-scripts.do.build_mob.add(<entity:betteranimalsplus:horseshoecrab>, [['xt']], {
-  x: <contenttweaker:conglomerate_of_life>,
-  t: <extrautils2:spike_stone>,
-});
-scripts.do.build_mob.add(<entity:betteranimalsplus:bobbit_worm>, [['xcc']], {
-  x: <contenttweaker:conglomerate_of_life>,
-  c: <minecraft:stone_slab:1>,
-});
