@@ -19,8 +19,10 @@ furnace.addRecipe(<thermalfoundation:material:130> * 2, <thaumcraft:cluster:4>);
 furnace.addRecipe(<thermalfoundation:material:131> * 2, <thaumcraft:cluster:5>);
 
 // Fix Infernal Furnace unchangeable nuggets output
-val NG = <thaumcraft:nugget:4>;
-recipes.addShapeless(<thermalfoundation:material:131>, [NG, NG, NG, NG, NG, NG, NG, NG, NG]);
+craft.shapeless(<thermalfoundation:material:128>, 'aaaaaaaaa', { a: <thaumcraft:nugget:1> });
+craft.shapeless(<thermalfoundation:material:129>, 'aaaaaaaaa', { a: <thaumcraft:nugget:2> });
+craft.shapeless(<thermalfoundation:material:130>, 'aaaaaaaaa', { a: <thaumcraft:nugget:3> });
+craft.shapeless(<thermalfoundation:material:131>, 'aaaaaaaaa', { a: <thaumcraft:nugget:4> });
 
 // Primordial Pearl alt (for some people who dont want to close rifts)
 mods.astralsorcery.Altar.addConstellationAltarRecipe(
