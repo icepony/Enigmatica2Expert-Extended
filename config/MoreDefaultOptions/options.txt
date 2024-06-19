@@ -323,6 +323,7 @@ key_ping.key.goto:0
 key_ping.key.look:0
 key_ping.key.mine:76
 key_Profile GUI:210
+key_prsm.key.toggle:43
 key_psimisc.keybind:51
 key_quark.emote.cheer:0
 key_quark.emote.clap:0
