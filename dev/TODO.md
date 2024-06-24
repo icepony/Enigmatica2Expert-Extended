@@ -8,7 +8,6 @@
 - [ ] 🩸 Meteor: Implement https://github.com/friendlyhj/ZenUtils/issues/54#issuecomment-2152275918
 - [ ] ⭐ Make self-forbidding mechanism for Difficulty https://github.com/friendlyhj/ZenUtils/issues/53#issuecomment-2154922579
 - [ ] ⭐ Difficulty: descrease over time?
-- [x] ⭐ Difficulty: doesnt register player difficulty on server (need otherevent than onPlayerLoggedIn)
 - [ ] ✏️ Liquid Concrete: remove block variant recipe, add usages, non-tech craft
 - [ ] 📀 `Liquid Concrete`: fix not solidified to full block, slower solidify
 - [ ] 📜 Improve CF page: center it, fasten GIF, update mods
@@ -18,7 +17,10 @@
 - [ ] 📀 Add animated GIF for java warning https://github.com/Darkhax-Minecraft/OldJavaWarning/blob/1.12.2/src/main/java/net/darkhax/oldjava/OldJavaWarning.java
 - [ ] ✏️ Rethink EnderTank recipe since glass cant be poured with iron after cast
 - [ ] 📖 Skyblock chapter disable chapter comletion message on each quest
-- [ ] ✏️ Fix RAM not spawning
+- [ ] ✏️ Fix RAM not spawning in skyblock (its always summoned in dim 0)
+- [ ] ✏️ Buff Archeologyst
+- [ ] ✏️ Fix Iron plates craft (remove 3=>3 recipe)
+- [ ] ✏️ Add `Grains Of Infinity` "nothing" recipe
 
 ---
 
@@ -107,7 +109,7 @@ Planned non-urgent changes, or just good ideas:
 - [ ] ✏️ Creative Impetus add recipe
 - [ ] ✏️ Draconic Evolution infusion can use trillions RF
 - [ ] ✏️ Add [](https://is.gd/OcNNZN "Uncrafting Grinder") as Endgame item, right before creative upgrade
-- [ ] ✏️ Add new crafting mechanic - melting blocks in world that cant be harvested, such as `Rock Crystal Ore, Swolen/Fibrous Taint, Vis Crystal, Grass Path, Porous stone, Antimatter, TF Tree Cores, TF Thorns, Trollstein, Foam, Block Mushrooms`
+- [ ] ✏️ Add new crafting mechanic - melting blocks in world that cant be harvested, such as `Rock Crystal Ore, Swolen/Fibrous Taint, Vis Crystal, Grass Path, Porous stone, Antimatter, TF Tree Cores, TF Thorns, Trollstein, Foam, Block Mushrooms, Rat Hole`
 
 ### "Multiplayer" expansion
 

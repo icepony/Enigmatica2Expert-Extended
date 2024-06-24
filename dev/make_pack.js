@@ -287,7 +287,7 @@ const argv = yargs(process.argv.slice(2))
       execSyncInherit(
         'gh release create'
         + ` ${nextVersion}`
-        + ` --title="${(`${nextVersion} ${inputTitle}`).trim()}"`
+        + ` --title="${(`${nextVersion} ${inputTitle.replace(/"/g, '\'')}`).trim()}"`
         + ' --repo=Krutoy242/Enigmatica2Expert-Extended'
         + ' --notes-file=CHANGELOG-latest.md'
         + ` "${zipPath_EN}"`

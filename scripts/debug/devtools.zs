@@ -131,6 +131,19 @@ events.onPlayerLeftClickBlock(function (e as crafttweaker.event.PlayerLeftClickB
   ) return;
 
   e.player.sendMessage('§eLeft Clicked§r');
+  // val chunkProvider = e.player.world.native.chunkProvider;
+  // if (chunkProvider instanceof native.net.minecraft.world.gen.ChunkProviderServer) {
+  //   val provider = chunkProvider as native.net.minecraft.world.gen.ChunkProviderServer;
+  //   e.player.sendMessage('§3Loaded: '~provider.loadedChunks.length~'§r');
+  //   for chunk in provider.loadedChunks {
+  //     var teCount = 0;
+  //     for pos, te in chunk.tileEntities {
+  //       teCount += 1;
+  //     }
+  //     if(teCount > 0)
+  //       e.player.sendMessage(`§7[${chunk.x}:${chunk.z}] TEs: ${teCount}`);
+  //   }
+  // }
   // dumpLightSources(e.player);
   // e.player.give(<thaumicaugmentation:morphic_tool>.withCapNBT({Parent:{
   //   'functional':{id:"openblocks:dev_null",Count:1,Damage:0 as short,tag:{ench:[{}],enchantmentColor:4408131,Unbreakable:1 as byte,infinite:{id:"chisel:cobblestone",Count:1,Damage:1 as short},inventory:{size:1,Items:[{Slot:0 as byte,id:"chisel:cobblestone",Count:64,Damage:1 as short}]}}},
