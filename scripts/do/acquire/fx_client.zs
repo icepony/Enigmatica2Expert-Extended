@@ -45,7 +45,7 @@ NetworkHandler.registerServer2ClientMessage('acquire', function(player, byteBuf)
     showStarAndFlare(x, data.y, z, sqrtValue);
   }
 
-  playAcquireSound(player.world, data, Math.max(0.1, sqrtValue / 6), 0.8 / (sqrtValue / 10 + 1));
+  playAcquireSound(player.world, data, sqrtValue / 64 + 0.1, 0.8 / (sqrtValue / 10 + 1));
 });
 
 NetworkHandler.registerServer2ClientMessage('acquire_star_and_flare', function(player, byteBuf) {
@@ -54,5 +54,5 @@ NetworkHandler.registerServer2ClientMessage('acquire_star_and_flare', function(p
   val sqrtValue = Math.sqrt(value);
   
   showStarAndFlare(data.x, data.y, data.z, sqrtValue);
-  playAcquireSound(player.world, data, sqrtValue / 64.0 + 0.1, 0.5);
+  playAcquireSound(player.world, data, sqrtValue / 64 + 0.1, 0.5);
 });
