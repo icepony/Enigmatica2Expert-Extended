@@ -6,6 +6,7 @@
 - [ ] ✏️ Remove `Creative Harvest` from game since causing some shaders crash
 - [ ] 🩸 Meteor: make fall vertically to not accumulate them outside loaded chunks
 - [ ] 🩸 Meteor: Implement https://github.com/friendlyhj/ZenUtils/issues/54#issuecomment-2152275918
+- [ ] ⭐ Review difficulty/cost increasing - Ultimate Catalyst should be bossible to replicate more than 1 time
 - [ ] ⭐ Make self-forbidding mechanism for Difficulty https://github.com/friendlyhj/ZenUtils/issues/53#issuecomment-2154922579
 - [ ] ⭐ Difficulty: descrease over time?
 - [ ] ✏️ Liquid Concrete: remove block variant recipe, add usages, non-tech craft
@@ -13,14 +14,18 @@
 - [ ] 📜 Improve CF page: center it, fasten GIF, update mods
 - [ ] 📜 Rustic's brews give better buffs document
 - [ ] 📜 Right-clicking disk over Replicator shows costs for owner of replicator rather than clicked player (document this)
-- [ ] ✏️ Use `mods.jei.JEI.addItemNBTSubtype` to subtime `Genetic Templates` and `syringe` (when updated RandomTweaker)
 - [ ] 📀 Add animated GIF for java warning https://github.com/Darkhax-Minecraft/OldJavaWarning/blob/1.12.2/src/main/java/net/darkhax/oldjava/OldJavaWarning.java
 - [ ] ✏️ Rethink EnderTank recipe since glass cant be poured with iron after cast
-- [ ] 📖 Skyblock chapter disable chapter comletion message on each quest
-- [ ] ✏️ Fix RAM not spawning in skyblock (its always summoned in dim 0)
+- [ ] 📖 Skyblock chapter disable chapter comletion message on each quest (how if everything optional?)
+- [ ] ✏️ Fix Ram not spawning in skyblock (its always summoned in dim 0)
 - [ ] ✏️ Buff Archeologyst
-- [ ] ✏️ Fix Iron plates craft (remove 3=>3 recipe)
 - [ ] ✏️ Add `Grains Of Infinity` "nothing" recipe
+- [ ] ✏️ Red Mechanic villager is broken. I can't get it to level up properly, he will go into regeneration but will not unlock any new trades.
+- [ ] disable XNet `connector upgrade kit` (causing voiding of main hand + dupes)
+- [ ] 📖 Add Skyblock first Creosote guidance (frequent asked question)
+- [ ] ✏️ Add `Mass Spectrometer` to ore benefication chain
+- [ ] 📖 Fix `GP Generation I` not require 9 panels
+- [ ] 📖 `High Voltage` quest fix not require nbt
 
 ---
 
@@ -136,6 +141,7 @@ Planned non-urgent changes, or just good ideas:
 
 ### Other
 
+- [ ] ✏️ Use `mods.jei.JEI.addItemNBTSubtype` to subtime `Genetic Templates` and `syringe` (when updated RandomTweaker after fix crash https://github.com/Project-RT/RandomTweaker/issues/82)
 - [ ] ⚡ (ARR) Remove XU2 jei removed categories https://spark.lucko.me/MRBZYLxzrN?hl=325666
 - [ ] 📀 Fix crops drop 1000 of berries on high stats
 - [ ] 🔴 Remove `Random Patches` since UT and Valkyrie now do most of its features
