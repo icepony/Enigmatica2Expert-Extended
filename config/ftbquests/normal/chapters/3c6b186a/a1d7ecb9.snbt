@@ -31,14 +31,13 @@
 		type: "item",
 		items: [{
 			id: "ic2:cable",
-			Count: 6,
 			Damage: 3s,
 			tag: {
 				type: 3b,
 				insulation: 3b
 			}
 		}],
-		ignore_nbt: 1b
+		ignore_nbt: 2b
 	}],
 	rewards: [{
 		uid: "a859e19a",
