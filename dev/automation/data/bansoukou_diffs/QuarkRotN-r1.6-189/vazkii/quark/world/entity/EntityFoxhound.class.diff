@@ -37,4 +37,3 @@
 +            ((TileEntityFurnace)tile).func_174885_b(2, Math.min(199, cookTime + 27));
          }
      }
- 
