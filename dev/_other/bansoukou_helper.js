@@ -5,12 +5,12 @@
  */
 
 import fse from 'fs-extra'
-import glob from 'glob'
+import { globSync } from 'glob'
 
 const { renameSync, existsSync  } = fse
 
 // Disable old files
-glob.sync('mods/*-patched.jar').forEach((f) => {
+globSync('mods/*-patched.jar').forEach((f) => {
   const unpatched = f.replace('-patched.jar', '')
   const from = `${unpatched}.jar`
   if (existsSync(from)) {
@@ -20,7 +20,7 @@ glob.sync('mods/*-patched.jar').forEach((f) => {
 })
 
 // Restore accidentally disabled
-// glob.sync('mods/*.jar.disabled').forEach((f) => {
+// globSync('mods/*.jar.disabled').forEach((f) => {
 //   const unpatched = f.replace('.jar.disabled', '')
 //   const from = `${unpatched}-patched.jar`
 //   if (!existsSync(from)) {

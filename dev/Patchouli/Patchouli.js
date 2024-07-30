@@ -20,7 +20,7 @@ import { mkdir, readdirSync, renameSync, rmSync } from 'fs'
 import { relative as _relative, resolve } from 'path'
 import { URL, fileURLToPath } from 'url'
 
-import glob from 'glob'
+import { globSync } from 'glob'
 import numeral from 'numeral'
 import over from 'over'
 import { snakeCase } from 'snake-case'
@@ -237,7 +237,7 @@ export async function init(h = defaultHelper) {
   })
 
   // Generate list of all documentation entries
-  const zsFileList = glob.sync('scripts/**/*.zs')
+  const zsFileList = globSync('scripts/**/*.zs')
   await h.begin(`Scan ${zsFileList.length} .ZS files`)
 
   const patchuoliBlocksList = zsFileList

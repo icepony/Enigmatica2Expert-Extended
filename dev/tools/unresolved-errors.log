@@ -1,15 +1,44 @@
 [main/WARN] [Foundation]: The jar file D:\Program Files\PrismLauncher\libraries\lzma\lzma\0.0.1\lzma-0.0.1.jar has a security seal for path LZMA, but that path is defined and not secure
 [main/WARN] [Foundation]: The jar file D:\Program Files\PrismLauncher\libraries\lzma\lzma\0.0.1\lzma-0.0.1.jar has a security seal for path LZMA, but that path is defined and not secure
-[main/ERROR] [Fugue]: Exception java.lang.NullPointerException: Cannot read the array length because "<parameter1>" is null on ITweakerTransformer
-[main/WARN] [RLTweakerASM]: WARNING: unknown config request: general.patches.patchItemLinking
-[main/WARN] [RLTweakerASM]: WARNING: unknown config request: general.patches.patchFasterBlockCollision
-[main/WARN] [RLTweakerASM]: WARNING: unknown config request: general.patches.patchCleanupStructureWorldgenFiles
-[main/WARN] [RLTweakerASM]: WARNING: unknown config request: general.patches.patchSRPAI
-[main/WARN] [RLTweakerASM]: WARNING: unknown config request: general.patches.patchPotionEntityTrackerUpdate
-[main/WARN] [RLTweakerASM]: WARNING: unknown config request: general.patches.patchSSRandomUpdateHandler
-[Client thread/ERROR] [Fugue]: Exception java.lang.NullPointerException: Cannot read the array length because "<parameter1>" is null on ClassHierarchyManagerTransformer
+[main/ERROR] [Foundation]: Error registering transformer class $wrapper.zmaster587.advancedRocketry.asm.ClassTransformer
+java.lang.reflect.InvocationTargetException: null
+	at jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(Unknown Source) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Unknown Source) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Unknown Source) ~[?:?]
+  [...]
+[main/ERROR] [mixin]: Failed reading REFMAP JSON from : java.lang.NullPointerException Cannot invoke "org.spongepowered.asm.mixin.refmap.ReferenceMapper.setResourceName(String)" because "mapper" is null
+[main/WARN] [mixin]: Reference map '' for mixins.vintagefix.init.json could not be read. If this is a development environment you can ignore this message
+[Client thread/ERROR] [VintageFix]: Error accessing resource pack on classpath (with URI jar:file:/E:/mc/packs/E2EE-Java22/libraries/cleanroom-0.2.2-alpha%20build.13.run.651-universal.jar)
+java.nio.file.NoSuchFileException: E:\mc\packs\E2EE-Java22\libraries\cleanroom-0.2.2-alpha build.13.run.651-universal.jar
+	at jdk.nio.zipfs.ZipFileSystem.<init>(Unknown Source) ~[jdk.zipfs:?]
+	at jdk.nio.zipfs.ZipFileSystemProvider.getZipFileSystem(Unknown Source) ~[jdk.zipfs:?]
+	at jdk.nio.zipfs.ZipFileSystemProvider.newFileSystem(Unknown Source) ~[jdk.zipfs:?]
+  [...]
+[Client thread/ERROR] [VintageFix]: Error accessing resource pack on classpath (with URI jar:file:/D:/Program%20Files/PrismLauncher/libraries/com/cleanroommc/sponge-mixin/0.19.7%20mixin.0.8.5/sponge-mixin-0.19.7%20mixin.0.8.5.jar)
+java.nio.file.NoSuchFileException: D:\Program Files\PrismLauncher\libraries\com\cleanroommc\sponge-mixin\0.19.7 mixin.0.8.5\sponge-mixin-0.19.7 mixin.0.8.5.jar
+	at jdk.nio.zipfs.ZipFileSystem.<init>(Unknown Source) ~[jdk.zipfs:?]
+	at jdk.nio.zipfs.ZipFileSystemProvider.getZipFileSystem(Unknown Source) ~[jdk.zipfs:?]
+	at jdk.nio.zipfs.ZipFileSystemProvider.newFileSystem(Unknown Source) ~[jdk.zipfs:?]
+  [...]
+[Client thread/ERROR] [VintageFix]: Error accessing resource pack on classpath (with URI jar:file:/E:/mc/packs/E2EE-Java22/.minecraft/mods/%20Fugue-1.12.2-0.15.9.jar)
+java.nio.file.NoSuchFileException: E:\mc\packs\E2EE-Java22\.minecraft\mods\ Fugue-1.12.2-0.15.9.jar
+	at jdk.nio.zipfs.ZipFileSystem.<init>(Unknown Source) ~[jdk.zipfs:?]
+	at jdk.nio.zipfs.ZipFileSystemProvider.getZipFileSystem(Unknown Source) ~[jdk.zipfs:?]
+	at jdk.nio.zipfs.ZipFileSystemProvider.newFileSystem(Unknown Source) ~[jdk.zipfs:?]
+  [...]
+[Client thread/ERROR] [VintageFix]: Error accessing resource pack on classpath (with URI jar:file:/E:/mc/packs/E2EE-Java22/.minecraft/mods/[___MixinCompat-1.1-1.12.2___].jar)
+java.lang.IllegalArgumentException: Illegal character in path at index 46: file:/E:/mc/packs/E2EE-Java22/.minecraft/mods/[___MixinCompat-1.1-1.12.2___].jar
+	at jdk.nio.zipfs.ZipFileSystemProvider.uriToPath(Unknown Source) ~[jdk.zipfs:?]
+	at jdk.nio.zipfs.ZipFileSystemProvider.getFileSystem(Unknown Source) ~[jdk.zipfs:?]
+	at java.nio.file.FileSystems.getFileSystem(Unknown Source) ~[?:?]
+  [...]
+[Client thread/ERROR] [VintageFix]: Error accessing resource pack on classpath (with URI jar:file:/E:/mc/packs/E2EE-Java22/.minecraft/mods/OpenComputers-MC1.12.2-1.8.5%20179e1c3-patched.jar)
+java.nio.file.NoSuchFileException: E:\mc\packs\E2EE-Java22\.minecraft\mods\OpenComputers-MC1.12.2-1.8.5 179e1c3-patched.jar
+	at jdk.nio.zipfs.ZipFileSystem.<init>(Unknown Source) ~[jdk.zipfs:?]
+	at jdk.nio.zipfs.ZipFileSystemProvider.getZipFileSystem(Unknown Source) ~[jdk.zipfs:?]
+	at jdk.nio.zipfs.ZipFileSystemProvider.newFileSystem(Unknown Source) ~[jdk.zipfs:?]
+  [...]
 [Client thread/WARN] [oshi.util.FileUtil]: Configuration conflict: there is more than one oshi.properties file on the classpath: [jar:file:/D:/Program%20Files/PrismLauncher/libraries/com/github/oshi/oshi-core/6.5.0/oshi-core-6.5.0.jar!/oshi.properties, jar:file:/D:/Program%20Files/PrismLauncher/libraries/com/github/oshi/oshi-core/6.5.0/oshi-core-6.5.0.jar!/oshi.properties]
-[Client thread/ERROR] [Fugue]: Exception java.lang.RuntimeException: zone.rong.loliasm.common.crashes.ModIdentifier: frozen class (cannot edit) on ITweakerTransformer
 [Client thread/WARN] [FML]: Mod scalar has been disabled through configuration
 [Client thread/WARN] [mixin]: Reference map 'mixins.thaumicenergistics.refmap.json' for mixins.thaumicenergistics.late.json could not be read. If this is a development environment you can ignore this message
 [Client thread/WARN] [net.minecraft.network.datasync.EntityDataManager]: defineId called for: class net.minecraft.entity.item.EntityMinecartFurnace from class com.lothrazar.cyclicmagic.item.minecart.EntityGoldFurnaceMinecart
@@ -102,9 +131,15 @@ net.minecraft.item.ItemStack: [[1xitem.thaumadditions:salt_essence@0 thaumadditi
 Inputs:
 net.minecraft.item.ItemStack: [[1xitem.thaumadditions:salt_essence@0 thaumadditions:salt_essence]]
   [...]
+[Client thread/ERROR] [Had Enough Items]: Failed to get tooltip: 1xtile.stone@0 minecraft:stone
+java.lang.NullPointerException: Cannot invoke "net.minecraft.entity.player.EntityPlayer.hashCode()" because "player" is null
+	at net.silentchaos512.scalinghealth.utils.SHPlayerDataHandler.getKey(SHPlayerDataHandler.java:103) ~[SHPlayerDataHandler.class:?]
+	at net.silentchaos512.scalinghealth.utils.SHPlayerDataHandler.get(SHPlayerDataHandler.java:69) ~[SHPlayerDataHandler.class:?]
+	at xyz.tcreopargh.ctintegration.scalinghealth.DifficultyManager.getDifficulty(DifficultyManager.java:63) ~[DifficultyManager.class:1.8.0]
+  [...]
 [Client thread/ERROR] [Had Enough Items]: Error while Testing for mod name formatting
 java.lang.NullPointerException: Cannot invoke "net.minecraft.entity.player.EntityPlayer.hashCode()" because "player" is null
 	at net.silentchaos512.scalinghealth.utils.SHPlayerDataHandler.getKey(SHPlayerDataHandler.java:103) ~[SHPlayerDataHandler.class:?]
 	at net.silentchaos512.scalinghealth.utils.SHPlayerDataHandler.get(SHPlayerDataHandler.java:69) ~[SHPlayerDataHandler.class:?]
 	at xyz.tcreopargh.ctintegration.scalinghealth.DifficultyManager.getDifficulty(DifficultyManager.java:63) ~[DifficultyManager.class:1.8.0]
-  [...]
+  [...]

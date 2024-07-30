@@ -2,12 +2,11 @@
 Making batch changing inside JSON files of COFH-World
 */
 
-import replace_in_file from 'replace-in-file'
+import { replaceInFileSync } from 'replace-in-file'
 
 console.log('Files changed:')
 console.log(
-  replace_in_file
-    .sync({
+  replaceInFileSync({
       files: 'config/cofh/world/*.json',
       from: /("dimension".*?\n?.*?"restriction".*?\n?.*?"blacklist".*?\n?.*?"value"[^\]]+?)(\[[^\]]+?\])/gm,
       to: (...args) => {

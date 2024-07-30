@@ -3,7 +3,7 @@ import process from 'node:process'
 
 import fse from 'fs-extra'
 import git_describe from 'git-describe'
-import replace_in_file from 'replace-in-file'
+import { replaceInFileSync } from 'replace-in-file'
 import Client from 'ssh2-sftp-client'
 
 import {
@@ -93,7 +93,7 @@ export async function manageSFTP(
     updateBox('Change and copy server overrides')
     const title = `+ Server Started! +`
     const spaces = (' ').repeat(Math.max(1, (title.length - currentVersion.length) / 2) | 0)
-    const replaceResult = replace_in_file.sync({
+    const replaceResult = replaceInFileSync({
       files       : join(conf.dir, 'overrides/config/mc2discord.toml'),
       from        : /(start\s*=\s*")[^"]+"/,
       to          : `$1\`\`\`diff\\n${title}\\n${spaces}${currentVersion}\\n\`\`\`"`,

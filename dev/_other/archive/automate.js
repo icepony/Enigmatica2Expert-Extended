@@ -10,7 +10,7 @@
 
 import chalk from 'chalk'
 import cli_progress from 'cli-progress'
-import glob from 'glob'
+import { globSync } from 'glob'
 import mc_benchmark from 'mc-benchmark'
 import yargs from 'yargs'
 
@@ -38,7 +38,7 @@ const write = s => process.stdout.write(s)
 
 const automationList = [
   'config/tellme/!rename&update.js',
-  ...glob.sync('dev/automation/*.js'),
+  ...globSync('dev/automation/*.js'),
   'dev/Patchouli/Patchouli.js',
 
   h =>

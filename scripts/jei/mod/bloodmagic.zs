@@ -23,7 +23,7 @@ for _y in 0 .. 3 {
 }
 
 /* Inject_js(
-glob.sync('config/bloodmagic/meteors/*.json')
+globSync('config/bloodmagic/meteors/*.json')
 .map(loadJson)
 .map((f) => {
   const weightName = f.components

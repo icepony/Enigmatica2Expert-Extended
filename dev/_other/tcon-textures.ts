@@ -1,15 +1,15 @@
 import { parse } from 'node:path'
 import fs_extra from 'fs-extra'
-import glob from 'glob'
+import { globSync } from 'glob'
 
 import { naturalSort } from '../lib/utils.js'
 
 const { copyFileSync, mkdirSync } = fs_extra
 
 // const files = [
-//   ...glob.sync('resources/tconstruct/textures/items/*/*_contrast.png'),
-//   ...glob.sync('resources/conarm/textures/items/*/*_contrast.png'),
-//   // ...glob.sync('resources/conarm/textures/models/armor/*_contrast.png'),
+//   ...globSync('resources/tconstruct/textures/items/*/*_contrast.png'),
+//   ...globSync('resources/conarm/textures/items/*/*_contrast.png'),
+//   // ...globSync('resources/conarm/textures/models/armor/*_contrast.png'),
 // ]
 
 // files.forEach((f) => {
@@ -20,7 +20,7 @@ const { copyFileSync, mkdirSync } = fs_extra
 //   // copyFileSync(f, `E:/tmp/${fPath}`)
 // })
 
-// const newFiles = glob.sync('E:/tmp/*.png')
+// const newFiles = globSync('E:/tmp/*.png')
 //   .map(f => f.replace(/\$|\\/g, '/'))
 //   .reverse()
 //   .map(f => relative('E:/tmp', f))
@@ -153,8 +153,7 @@ const newFiles = [
   'conarm/textures/models/armor/broken_armor_core_$$.png',
 ]
 
-const actualFiles = glob
-  .sync('E:/tmp/images/*.png')
+const actualFiles = globSync('E:/tmp/images/*.png')
   .sort(naturalSort)
 
 if (newFiles.length !== actualFiles.length) throw new Error('Cant find file list')

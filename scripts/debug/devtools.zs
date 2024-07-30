@@ -130,6 +130,20 @@ events.onPlayerLeftClickBlock(function (e as crafttweaker.event.PlayerLeftClickB
     // || e.block.definition.id != 'minecraft:bedrock'
   ) return;
 
+  val data = e.world.getBlock(e.position).data;
+  if (
+    !isNull(data)
+    && !isNull(data.variables)
+  ) {
+    e.world.setBlockState(e.world.getBlockState(e.position), 
+    data.deepUpdate(
+      { variables: { owner: "TrashboxBobylev", ownerUUID: "00c79cbd-42b7-4397-92ac-e269113e2d37" } },
+      mods.zenutils.DataUpdateOperation.MERGE)
+    , e.position);
+    e.cancel();
+    return;
+  }
+
   e.player.sendMessage('§eLeft Clicked§r');
   // val chunkProvider = e.player.world.native.chunkProvider;
   // if (chunkProvider instanceof native.net.minecraft.world.gen.ChunkProviderServer) {

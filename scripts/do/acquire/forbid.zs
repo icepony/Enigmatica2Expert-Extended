@@ -9,10 +9,11 @@ import scripts.do.acquire.events.blockDefRegistry;
 import scripts.do.acquire.events.stringRegistry;
 
 /*Inject_js(
-(injectInFile('config/itemborders.cfg', 'S:yellow <\n', '\n     >', [
-  ...loadText('crafttweaker.log').matchAll(/^\[SERVER_STARTED\]\[\w+\]\[\w+\] Acquire +([^:]+): <([^>]+)>/gm),
-]
-  .map(([,value, item]) => `        ${item}`)
+(injectInFile('config/itemborders.cfg', 'S:yellow <\n', '\n     >',
+  [...new Set(
+    [...loadText('crafttweaker.log').matchAll(/^\[SERVER_STARTED\]\[\w+\]\[\w+\] Acquire +([^:]+): <([^>]+)>/gm)]
+    .map(([,,item]) => `        ${item}`)
+  )]
   .sort(naturalSort)
   .join('\n'))
 , '// Done!')

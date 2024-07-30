@@ -150,10 +150,9 @@ export const config = createHashedFunction((filename) => {
   catch (error) {
     console.log('Parsing config error. File: ', filename)
     console.error(error)
-    writeFileSync(
-      relative(`_error_${subFileName(filename)}.js`),
-      `return{${cfg}}`
-    )
+    const errorFileName = relative(`_error_${subFileName(filename)}.js`)
+    writeFileSync(errorFileName, `return{${cfg}}`)
+    console.log('See ', errorFileName)
   }
 
   return result
@@ -225,7 +224,7 @@ function injectInSingleFile(filename, keyStart, keyFinish, text) {
     numMatches     : 0,
     numReplacements: 0,
   }
-  const newText = oldText.replace(new RegExp(
+  const newText = oldText.replace(/\r\n/gm, '\n').replace(new RegExp(
     `${escapeRegex(keyStart)}[\\s\\S\n\r]*?${escapeRegex(keyFinish)}`,
     'm'
   ), () => {

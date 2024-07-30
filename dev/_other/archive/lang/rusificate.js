@@ -6,7 +6,7 @@
  */
 // @ts-check
 
-import replace_in_file from 'replace-in-file'
+import { replaceInFileSync } from 'replace-in-file'
 
 import { defaultHelper } from '../lib/utils.js'
 
@@ -14,7 +14,7 @@ export function init(h = defaultHelper) {
   h.begin('Rusificate Files')
 
   // Set Russian Language in default options
-  const replacedInOptions = replace_in_file.sync({
+  const replacedInOptions = replaceInFileSync({
     files: 'config/defaultoptions/options.txt',
     from: /^lang:\w+$/gm,
     to: 'lang:ru_ru',
@@ -50,7 +50,7 @@ export function init(h = defaultHelper) {
     Spectre: 'Спектр',
     'RFTools Dimension': 'Измерение РФИнструментов',
   }
-  const replacedDims = replace_in_file.sync({
+  const replacedDims = replaceInFileSync({
     files: 'config/jeresources/world-gen.json',
     from: /^\s+"dim": "(?<name>.*)(?<id> \(-?\d+\))"$/gm,
     to: (/** @type {*[]} */ ...args) => {

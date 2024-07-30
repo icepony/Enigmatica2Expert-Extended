@@ -2,30 +2,18 @@
 
 🚧✅❌⚠️ List of priorities:
 
+- [ ] ✏️ Add Archeologyst trades to HEI
 - [ ] 📀 Fix sharks still TP player somewhere
-- [ ] ✏️ Remove `Creative Harvest` from game since causing some shaders crash
 - [ ] 🩸 Meteor: make fall vertically to not accumulate them outside loaded chunks
 - [ ] 🩸 Meteor: Implement https://github.com/friendlyhj/ZenUtils/issues/54#issuecomment-2152275918
 - [ ] ⭐ Review difficulty/cost increasing - Ultimate Catalyst should be bossible to replicate more than 1 time
 - [ ] ⭐ Make self-forbidding mechanism for Difficulty https://github.com/friendlyhj/ZenUtils/issues/53#issuecomment-2154922579
 - [ ] ⭐ Difficulty: descrease over time?
-- [ ] ✏️ Liquid Concrete: remove block variant recipe, add usages, non-tech craft
-- [ ] 📀 `Liquid Concrete`: fix not solidified to full block, slower solidify
-- [ ] 📜 Improve CF page: center it, fasten GIF, update mods
-- [ ] 📜 Rustic's brews give better buffs document
-- [ ] 📜 Right-clicking disk over Replicator shows costs for owner of replicator rather than clicked player (document this)
+- [ ] 📜 Improve CF page: fasten GIF, update mods
 - [ ] 📀 Add animated GIF for java warning https://github.com/Darkhax-Minecraft/OldJavaWarning/blob/1.12.2/src/main/java/net/darkhax/oldjava/OldJavaWarning.java
 - [ ] ✏️ Rethink EnderTank recipe since glass cant be poured with iron after cast
 - [ ] 📖 Skyblock chapter disable chapter comletion message on each quest (how if everything optional?)
-- [ ] ✏️ Fix Ram not spawning in skyblock (its always summoned in dim 0)
-- [ ] ✏️ Buff Archeologyst
-- [ ] ✏️ Add `Grains Of Infinity` "nothing" recipe
-- [ ] ✏️ Red Mechanic villager is broken. I can't get it to level up properly, he will go into regeneration but will not unlock any new trades.
-- [ ] disable XNet `connector upgrade kit` (causing voiding of main hand + dupes)
-- [ ] 📖 Add Skyblock first Creosote guidance (frequent asked question)
-- [ ] ✏️ Add `Mass Spectrometer` to ore benefication chain
-- [ ] 📖 Fix `GP Generation I` not require 9 panels
-- [ ] 📖 `High Voltage` quest fix not require nbt
+- [ ] ✨ Idea: reaching 1000 difficulty opening supreme power, instantly advance player to endgame powers
 
 ---
 
@@ -121,6 +109,8 @@ Planned non-urgent changes, or just good ideas:
 - [ ] 💬 Add messages "Player killex xxx mobs! WOW" with respective loot box reward. Ideas: Mined blocks, Jumps, Death
 
 ### Mods
+- [ ] 🔴 Remove `Random Patches` since UT and Valkyrie now do most of its features
+- [ ] 🟠 Do not update `ae2-uel-v0.56.6` since its breaking plus + button craftings
 - [ ] 🟠 Do not update `Xaero` Minimap and World - incompatible with `visualores`
 - [ ] 🔴 Remove `XTones` and `Environmental Materials`
 - [ ] 🟢 Return Village Names when fixed https://legacy.curseforge.com/minecraft/mc-mods/village-names/issues/18
@@ -141,10 +131,13 @@ Planned non-urgent changes, or just good ideas:
 
 ### Other
 
+- [ ] ✏️ `Red Mechanic` move trades to other villager `config/vtt/trade_tables/red_mechanic.json`
+- [ ] ❓ Fixeroo doesnt combine XP Shower clumps https://github.com/CaliforniaDemise/Fixeroo/issues/3
+- [ ] ✏️ Fix Generic Entity spawn spawning with wrong looking direction
+- [ ] Install https://www.curseforge.com/minecraft/mc-mods/rather-enough-immersive-multiblocks
 - [ ] ✏️ Use `mods.jei.JEI.addItemNBTSubtype` to subtime `Genetic Templates` and `syringe` (when updated RandomTweaker after fix crash https://github.com/Project-RT/RandomTweaker/issues/82)
 - [ ] ⚡ (ARR) Remove XU2 jei removed categories https://spark.lucko.me/MRBZYLxzrN?hl=325666
 - [ ] 📀 Fix crops drop 1000 of berries on high stats
-- [ ] 🔴 Remove `Random Patches` since UT and Valkyrie now do most of its features
 - [ ] 🎉 Add new mechanic for /dev/null for leveling up its recharging speed
 - [ ] 📀 Raw Inversion Pillar - fix duping itself. Culd be used as craft mechanics since can spread will-infused stone.
 - [ ] ✏️ Black hole generator can work on cobble

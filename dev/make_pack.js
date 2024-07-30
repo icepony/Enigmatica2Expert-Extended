@@ -21,7 +21,7 @@ import fs_extra from 'fs-extra'
 import git_describe from 'git-describe'
 import ignore from 'ignore'
 import open from 'open'
-import replace_in_file from 'replace-in-file'
+import { replaceInFileSync } from 'replace-in-file'
 import { rimrafSync } from 'rimraf'
 import simpleGit from 'simple-git'
 import yargs from 'yargs'
@@ -112,14 +112,14 @@ const argv = yargs(process.argv.slice(2))
     writeFileSync('dev/version.txt', nextVersion)
     await git.add('dev/version.txt')
 
-    replace_in_file.sync({
+    replaceInFileSync({
       files: 'manifest.json',
-      from : /(^ {2}"version"[\s\n]*:[\s\n]*")[^"]+("[\s\n]*,)/m,
+      from : /(^ {2}"version"\s*:\s*")[^"]+("\s*,)/m,
       to   : `$1${nextVersion}$2`,
     })
     await git.add('manifest.json')
 
-    replace_in_file.sync({
+    replaceInFileSync({
       files: serverSetupConfig,
       from : /^( {2}modpackUrl\s*:\s*)(.+)$/m,
       to   : `$1https://github.com/Krutoy242/Enigmatica2Expert-Extended/releases/download/${nextVersion}/${zipBaseName}.zip`,

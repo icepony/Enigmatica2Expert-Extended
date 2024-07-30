@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable unused-imports/no-unused-vars */
 /**
  * @file Inject_JS
@@ -15,7 +16,7 @@
 
 import process from 'node:process'
 
-import glob from 'glob'
+import { globSync } from 'glob'
 import humanizeString from 'humanize-string'
 import _ from 'lodash'
 import { getBorderCharacters, table } from 'table'
@@ -121,10 +122,10 @@ export async function init(h = defaultHelper) {
   const occurences = []
 
   await h.begin('Searching Inject_js blocks in .zs files')
-  glob.sync('scripts/**/*.zs').forEach((filePath) => {
+  globSync('scripts/**/*.zs').forEach((filePath) => {
     const zsfileContent = loadText(filePath)
     for (const match of zsfileContent.matchAll(
-      /\/\*\s*Inject_js((\(|\{)[\s\S\n\r]*?(\)|\})\s*)\*\//gm
+      /\/\*\s*Inject_js((\(|\{)[\s\S]*?(\)|\})\s*)\*\//g
     )) {
       const lineNumber = zsfileContent
         .substring(0, match.index)
@@ -151,7 +152,7 @@ export async function init(h = defaultHelper) {
 
   for (const cmd of occurences) {
     let injectValue = ''
-    if (/^\(\s*\)$/gim.test(cmd.capture)) {
+    if (/^\(\s*\)$/m.test(cmd.capture)) {
       injectValue = '# Empty Injection'
     }
     else {
