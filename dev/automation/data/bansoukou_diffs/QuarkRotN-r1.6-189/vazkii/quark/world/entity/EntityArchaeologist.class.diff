@@ -1,0 +1,59 @@
+@@ -27,7 +27,6 @@
+  *  net.minecraft.village.MerchantRecipe
+  *  net.minecraft.village.MerchantRecipeList
+  *  net.minecraft.world.World
+- *  vazkii.quark.world.feature.Archaeologist
+  */
+ package vazkii.quark.world.entity;
+ 
+@@ -84,27 +83,17 @@ implements IMerchant {
+             this.buyingList = new MerchantRecipeList();
+         }
+         Random r = this.field_70170_p.field_73012_v;
+-        this.buyingList.add((Object)new MerchantRecipe(new ItemStack(Items.field_151166_bC, 2 + this.field_70146_Z.nextInt(3)), new ItemStack(Items.field_151103_aS, 3 + this.field_70146_Z.nextInt(3))));
+-        if (r.nextBoolean()) {
+-            this.buyingList.add((Object)new MerchantRecipe(new ItemStack(Items.field_151103_aS, 10 + this.field_70146_Z.nextInt(5)), new ItemStack(Items.field_151166_bC, 1)));
+-        } else {
+-            this.buyingList.add((Object)new MerchantRecipe(new ItemStack(Items.field_151016_H, 7 + this.field_70146_Z.nextInt(10)), new ItemStack(Items.field_151166_bC, 1)));
+-        }
+-        if (r.nextBoolean()) {
+-            this.buyingList.add((Object)new MerchantRecipe(new ItemStack(Items.field_151044_h, 16 + this.field_70146_Z.nextInt(10)), new ItemStack(Items.field_151166_bC, 1)));
+-        }
+-        if (r.nextBoolean()) {
+-            this.buyingList.add((Object)new MerchantRecipe(new ItemStack(Items.field_151166_bC, 12 + this.field_70146_Z.nextInt(10)), new ItemStack(Items.field_151045_i, 1)));
+-        }
+-        if (r.nextBoolean()) {
+-            if (r.nextBoolean()) {
+-                this.buyingList.add((Object)new MerchantRecipe(new ItemStack(Items.field_151166_bC, 8 + this.field_70146_Z.nextInt(5)), new ItemStack(Items.field_151035_b, 1)));
+-            } else {
+-                this.buyingList.add((Object)new MerchantRecipe(new ItemStack(Items.field_151166_bC, 6 + this.field_70146_Z.nextInt(4)), new ItemStack(Items.field_151037_a, 1)));
+-            }
+-        }
+-        if (Archaeologist.enableHat && Archaeologist.sellHat) {
+-            this.buyingList.add((Object)new MerchantRecipe(new ItemStack(Items.field_151166_bC, 6 + this.field_70146_Z.nextInt(4)), ItemStack.field_190927_a, new ItemStack(Archaeologist.archaeologist_hat, 1), 0, 1));
++        for (Object[] trade : Archaeologist.getTrades()) {
++            ItemStack buyItem = (ItemStack)trade[0];
++            int buyMin = (Integer)trade[1];
++            int buyMax = (Integer)trade[2];
++            ItemStack sellItem = (ItemStack)trade[3];
++            int sellMin = (Integer)trade[4];
++            int sellMax = (Integer)trade[5];
++            int buyCount = buyMin + r.nextInt(buyMax - buyMin + 1);
++            int sellCount = sellMax + r.nextInt(sellMax - sellMin + 1);
++            if (buyCount <= 0 || sellCount <= 0) continue;
++            this.buyingList.add((Object)new MerchantRecipe(new ItemStack(buyItem.func_77973_b(), buyCount, buyItem.func_77952_i()), new ItemStack(sellItem.func_77973_b(), sellCount, sellItem.func_77952_i())));
+         }
+     }
+ 
+@@ -129,9 +118,9 @@ implements IMerchant {
+     }
+ 
+     public boolean func_184645_a(EntityPlayer player, EnumHand hand) {
+-        boolean flag;
+         ItemStack itemstack = player.func_184586_b(hand);
+-        boolean bl = flag = itemstack.func_77973_b() == Items.field_151057_cb;
++        boolean flag = itemstack.func_77973_b() == Items.field_151057_cb;
++        boolean bl = flag;
+         if (flag) {
+             itemstack.func_111282_a(player, (EntityLivingBase)this, hand);
+             return true;

@@ -1,0 +1,117 @@
+@@ -10,6 +10,7 @@
+  *  net.minecraft.client.gui.GuiScreen
+  *  net.minecraft.entity.IMerchant
+  *  net.minecraft.entity.player.EntityPlayer
++ *  net.minecraft.init.Items
+  *  net.minecraft.inventory.EntityEquipmentSlot
+  *  net.minecraft.item.Item
+  *  net.minecraft.item.ItemBlock
+@@ -28,6 +29,7 @@
+  *  net.minecraftforge.fml.common.eventhandler.SubscribeEvent
+  *  net.minecraftforge.fml.common.registry.EntityEntry
+  *  net.minecraftforge.fml.common.registry.EntityRegistry
++ *  net.minecraftforge.fml.common.registry.ForgeRegistries
+  *  net.minecraftforge.fml.common.registry.GameRegistry
+  *  net.minecraftforge.fml.relauncher.Side
+  *  net.minecraftforge.fml.relauncher.SideOnly
+@@ -43,6 +45,7 @@
+  */
+ package vazkii.quark.world.feature;
+ 
++import java.util.ArrayList;
+ import java.util.List;
+ import net.minecraft.block.Block;
+ import net.minecraft.block.state.IBlockState;
+@@ -52,6 +55,7 @@ import net.minecraft.client.gui.GuiMerchant;
+ import net.minecraft.client.gui.GuiScreen;
+ import net.minecraft.entity.IMerchant;
+ import net.minecraft.entity.player.EntityPlayer;
++import net.minecraft.init.Items;
+ import net.minecraft.inventory.EntityEquipmentSlot;
+ import net.minecraft.item.Item;
+ import net.minecraft.item.ItemBlock;
+@@ -69,6 +73,7 @@ import net.minecraftforge.fml.common.eventhandler.EventPriority;
+ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+ import net.minecraftforge.fml.common.registry.EntityEntry;
+ import net.minecraftforge.fml.common.registry.EntityRegistry;
++import net.minecraftforge.fml.common.registry.ForgeRegistries;
+ import net.minecraftforge.fml.common.registry.GameRegistry;
+ import net.minecraftforge.fml.relauncher.Side;
+ import net.minecraftforge.fml.relauncher.SideOnly;
+@@ -97,6 +102,8 @@ extends Feature {
+     public static boolean dropHat;
+     public static boolean hatIncreasesOreYield;
+     public static float increaseChance;
++    public static String[] buyingListConfig;
++    public static List<Object[]> tradeList;
+ 
+     public void setupConfig() {
+         chance = this.loadLegacyPropChance("Percentage Chance Per Chunk", "Chance Per Chunk", "The chance that the generator will attempt to place an Archaeologist in a chunk", 0.1);
+@@ -108,6 +115,67 @@ extends Feature {
+         dropHat = this.loadPropBool("Drop Hat", "Set to false to make the archaeologist not drop the hat", true);
+         hatIncreasesOreYield = this.loadPropBool("Hat Increases Ore Yield", "Set to false to make the hat not increase ore yield", true);
+         increaseChance = (float)this.loadPropDouble("Yield Increase Chance", "The chance for the hat to increase ore yield, 0 is 0%, 1 is 100%", 0.25);
++        buyingListConfig = this.loadPropStringList("Buying List", "Define the buying list items in format '[min-max ]mod:name[:meta] => [min-max ]mod:name[:meta]'. 'minecraft:', ':meta' or 'min-max ' could be omitted. Example: '2-5 minecraft:emerald => 0-1 minecraft:book, 10-15 minecraft:book => minecraft:emerald'", new String[]{"2-5 emerald => 3-6 book", "10-15 book => 0-1 emerald", "7-17 coal => 0-1 emerald", "16-26 iron_ingot => 0-1 emerald", "12-22 gold_ingot => 0-1 emerald", "8-13 emerald => 0-1 diamond", "6-10 emerald => 0-1 redstone"});
++        tradeList = null;
++    }
++
++    public static Iterable<Object[]> getTrades() {
++        if (tradeList == null) {
++            tradeList = new ArrayList<Object[]>();
++            for (String entry : buyingListConfig) {
++                String[] parts = entry.trim().split("=>");
++                if (parts.length != 2) {
++                    throw new IllegalArgumentException("Trade not defined with '=>' separator: " + entry);
++                }
++                Object[] buyItemData = Archaeologist.parseItemData(parts[0].trim());
++                Object[] sellItemData = Archaeologist.parseItemData(parts[1].trim());
++                if (buyItemData == null || sellItemData == null) continue;
++                tradeList.add(new Object[]{buyItemData[0], buyItemData[1], buyItemData[2], sellItemData[0], sellItemData[1], sellItemData[2]});
++            }
++            if (enableHat && sellHat) {
++                tradeList.add(new Object[]{new ItemStack(Items.field_151166_bC), 4, 6, new ItemStack(archaeologist_hat), 1, 1});
++            }
++        }
++        return tradeList;
++    }
++
++    private static Object[] parseItemData(String itemString) {
++        Item item;
++        String[] itemInfo;
++        String[] parts = itemString.trim().split(" ");
++        int minCount = 1;
++        int maxCount = 1;
++        if (parts.length >= 2) {
++            String[] countRange = parts[0].split("-");
++            if (countRange.length == 2) {
++                try {
++                    minCount = Integer.parseInt(countRange[0]);
++                    maxCount = Integer.parseInt(countRange[1]);
++                }
++                catch (NumberFormatException e) {
++                    throw new IllegalArgumentException("Invalid count range format: " + parts[0], e);
++                }
++            } else {
++                throw new IllegalArgumentException("Invalid count range format: " + parts[0]);
++            }
++        }
++        String modId = (itemInfo = parts[parts.length - 1].split(":")).length > 1 ? itemInfo[0] : "minecraft";
++        String itemName = itemInfo[itemInfo.length - 1];
++        int meta = 0;
++        if (itemInfo.length == 3) {
++            itemName = itemInfo[1];
++            try {
++                meta = Integer.parseInt(itemInfo[2]);
++            }
++            catch (NumberFormatException e) {
++                throw new IllegalArgumentException("Invalid meta value: " + itemInfo[2], e);
++            }
++        }
++        if ((item = (Item)ForgeRegistries.ITEMS.getValue(new ResourceLocation(modId, itemName))) == null) {
++            Quark.LOG.warn("Item not found: " + modId + ":" + itemName);
++            return null;
++        }
++        return new Object[]{new ItemStack(item), minCount, maxCount};
+     }
+ 
+     public void preInit(FMLPreInitializationEvent event) {
