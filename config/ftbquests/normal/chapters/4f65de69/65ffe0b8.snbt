@@ -21,6 +21,12 @@
 		type: "item",
 		items: [{
 			item: "tconstruct:seared_tank"
+		},
+		{
+			item: "tconstruct:seared_tank 1 1"
+		},
+		{
+			item: "tconstruct:seared_tank 1 2"
 		}]
 	},
 	{
@@ -31,6 +37,9 @@
 		},
 		{
 			item: "searedladder:seared_ladder"
+		},
+		{
+			item: "tconstruct:seared_glass"
 		}]
 	},
 	{
