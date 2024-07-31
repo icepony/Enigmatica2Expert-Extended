@@ -355,11 +355,10 @@ craft.make(<extrautils2:drum>, [
 // [Iron Drum] from [Quartzburnt][+3]
 recipes.removeByRecipeName('extrautils2:drum_256');
 craft.make(<extrautils2:drum:1>, ['pretty',
-  'п Q п',
+  '  п  ',
   'S S S',
-  '□ Q □'], {
+  '  Q  '], {
   'Q': <extrautils2:decorativesolid:7>, // Quartzburnt
-  '□': <ore:plateIron>,                 // Iron Plate
   'S': <extrautils2:drum>,              // Stone Drum
   'п': <ore:plateDenseIron>,            // Dense Iron Plate
 });
@@ -367,11 +366,10 @@ craft.make(<extrautils2:drum:1>, ['pretty',
 // [Reinforced Large Drum] from [Klein Bottle][+3]
 recipes.removeByRecipeName('extrautils2:drum_4096');
 craft.make(<extrautils2:drum:2>, ['pretty',
-  'R K R',
+  '  □  ',
   'I I I',
-  '□ K □'], {
+  '  K  '], {
   '□': <ore:plateLumium>,         // Lumium Plate
-  'R': <tconstruct:materials:14>, // Reinforcement
   'I': <extrautils2:drum:1>,      // Iron Drum
   'K': <extrautils2:klein>,       // Klein Bottle
 });
@@ -379,12 +377,11 @@ craft.make(<extrautils2:drum:2>, ['pretty',
 // [Demonically Gargantuan Drum] from [High Pressure Steam Bucket][+3]
 recipes.removeByRecipeName('extrautils2:drum_65536');
 craft.make(<extrautils2:drum:3>, ['pretty',
-  'K ~ K',
+  '  ~  ',
   'R R R',
-  '⌃ ~ ⌃'], {
+  '  ⌃  '], {
   'R': <extrautils2:drum:2>,            // Reinforced Large Drum
   '⌃': <extrautils2:decorativesolid:6>, // Blue Quartz
-  'K': <extrautils2:klein>,             // Klein Bottle
   '~': LiquidIngr('high_pressure_steam'), // High Pressure Steam Bucket
 });
 
