@@ -109,9 +109,6 @@
 			tag: {}
 		},
 		{
-			item: "nuclearcraft:portable_ender_chest"
-		},
-		{
 			item: "cyclicmagic:inventory_food"
 		},
 		{

@@ -4,6 +4,9 @@ import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 import crafttweaker.liquid.ILiquidStack;
 
+// Use Cyclic's Ender Pouch instead
+Purge(<nuclearcraft:portable_ender_chest>);
+
 // Define new moderators
 // (IIngredient block, int fluxFactor, double efficiency)
 mods.nuclearcraft.FissionModerator.add(<twilightforest:aurora_block>, 26, 1.05);
