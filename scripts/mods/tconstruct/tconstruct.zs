@@ -382,6 +382,15 @@ craft.remake(<tconstruct:firewood:1>, ['pretty',
 // Nerf stone torch light level
 <tconstruct:stone_torch>.asBlock().definition.lightLevel = 0.75f;
 
+// Remake to fix weird stone rod HEI scrolling
+// [Stone Torch]*4 from [Stone Rod][+1]
+craft.remake(<tconstruct:stone_torch> * 4, [
+  '©',
+  '/'], {
+  '©': <minecraft:coal:*>,                // Coal
+  '/': <exnihilocreatio:item_material:6>, // Stone Rod
+});
+
 // [Silky Cloth] from [Pulverized Gold][+1]
 craft.reshapeless(<tconstruct:materials:15>, 'S▲', {
   '▲': <ore:dustGold>, // Pulverized Gold
