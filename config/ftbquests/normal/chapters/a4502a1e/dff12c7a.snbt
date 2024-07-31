@@ -13,13 +13,16 @@
 	tasks: [{
 		uid: "80b0ab63",
 		type: "item",
+		disable_toast: true,
 		items: [{
-			item: "extrautils2:passivegenerator 9"
-		}]
+			item: "extrautils2:passivegenerator"
+		}],
+		count: 9L
 	},
 	{
 		uid: "88580a73",
 		type: "item",
+		disable_toast: true,
 		items: [{
 			item: "extrautils2:passivegenerator 1 7"
 		}]
