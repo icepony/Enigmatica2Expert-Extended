@@ -279,3 +279,6 @@ val gearsToRemove = [
 for items in gearsToRemove {
   recipes.remove(items);
 }
+
+// Connector Upgrade Kit causing dupes and dissapearing of main hand when used from offhand
+Purge(<xnet:connector_upgrade>);

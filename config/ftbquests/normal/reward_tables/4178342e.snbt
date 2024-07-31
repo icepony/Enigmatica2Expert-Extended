@@ -290,11 +290,6 @@
 		count: 2
 	},
 	{
-		icon: "xnet:connector_upgrade 16",
-		item: "xnet:connector_upgrade",
-		count: 16
-	},
-	{
 		item: {
 			id: "ftbquests:lootcrate",
 			tag: {

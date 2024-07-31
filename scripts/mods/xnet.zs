@@ -74,10 +74,6 @@ recipes.addShapeless('XNet Advanced Connector', <xnet:advanced_connector>, [<xne
 // Colouring blue
 recipes.addShapeless('XNet Blue Advanced Connector', <xnet:advanced_connector>, [<xnet:advanced_connector:*>, <ore:dyeBlue>]);
 
-// Connector Upgrade Kit
-recipes.remove(<xnet:connector_upgrade>);
-recipes.addShapeless('XNet Connector Upgrade Kit', <xnet:connector_upgrade>, [<ore:paper>, <ore:blockRedstone>, <ore:dustDiamond>, <ore:enderpearl>]);
-
 // Controller
 recipes.remove(<xnet:controller>);
 recipes.addShaped('XNet Controller',
