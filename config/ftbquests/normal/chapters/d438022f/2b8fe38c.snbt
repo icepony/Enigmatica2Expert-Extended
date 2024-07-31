@@ -1,0 +1,33 @@
+{
+	x: -20.0d,
+	y: 22.9d,
+	text: [
+		"{q.utils.brews_effects.desc}"
+	],
+	dependencies: [
+		"3ecc3fbe"
+	],
+	tasks: [{
+		uid: "dfe86ba9",
+		type: "checkmark",
+		title: "Brews effects",
+		icon: {
+			id: "rustic:fluid_bottle",
+			tag: {
+				Fluid: {
+					FluidName: "cider",
+					Amount: 1000,
+					Tag: {
+						Quality: 0.75f
+					}
+				}
+			}
+		},
+		disable_toast: true
+	}],
+	rewards: [{
+		uid: "5281bb33",
+		type: "xp_levels",
+		xp_levels: 3
+	}]
+}

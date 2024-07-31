@@ -362,6 +362,7 @@ q.utils.item_collector.desc=Ranged hopper. Advanced version has filter options.
 q.utils.rain_shield.desc=Forbid rain 3 chunks around.
 q.utils.hang_glider.desc=Allows the player to glide through the air, when holding it.
 q.utils.apple_seeds.desc=Apple trees best early game apple source.
+q.utils.brews_effects.desc=The effects of Cider and Mead are enhanced: §6Cider§r grants §eReach§r, and §6Mead§r grants §eClimb§r.
 q.utils.white_typewriter.desc=The typewriter will create randomized procedurally generated books.\n\nUnique versions stories are written when used with different mobs.\nVillagers write the most coherent stories, other mobs write less and less coherently. Other mobs include: Pigs, Chickens, Cows/Mooshrooms, Sheep, Wolves, Ocelots, Creepers, Zombies, and Endermen.
 q.utils.typesetting_table.desc=The Typesetting Table is used to save and copy vanilla Signed Books, Enchanted Books, Recipe Books, Big Books, and the Atlas.
 q.utils.time_in_a_bottle.desc=The Time in a Bottle allows you to accelerate the rate at which blocks tick, allowing you to speed up certain machines. Quite a lot of players call this the §3“Best item in the pack”

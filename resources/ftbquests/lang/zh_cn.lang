@@ -362,6 +362,7 @@ q.utils.item_collector.desc=像范围更大的漏斗。高级版可以设置过�
 q.utils.rain_shield.desc=取消半径3区块内的下雨的视听效果。
 q.utils.hang_glider.desc=手持时可以在空中滑翔。
 q.utils.apple_seeds.desc=苹果树最好的早期游戏苹果源。
+q.utils.brews_effects.desc=苹果酒和蜂蜜酒的效果增强：§6苹果酒§r给予§e延伸§r效果，§6蜂蜜酒§r给予§e攀爬§r效果。
 q.utils.white_typewriter.desc=打字机能制作程序随机生成的成书。\n\n使用不同的生物可以写出独特的故事。\n村民能够写出最连贯的故事，而其他生物的都会更加狗屁不通。其他生物包括：猪，鸡，牛（或哞菇），羊，狼，豹猫，苦力怕，僵尸以及末影人。
 q.utils.typesetting_table.desc=写字桌用于保存并复制原版成书、附魔书、合成书等物品。
 q.utils.time_in_a_bottle.desc=时间之瓶能够加快方块的工作刻，也就是加速。大家称它是整合包里§3“最好的东西”
