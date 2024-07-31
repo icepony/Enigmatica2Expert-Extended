@@ -439,5 +439,22 @@ zenClass Utils {
     );
   }
 
+  // Spawn entity with its default equipment
+  // Taken from https://github.com/CoFH/ThermalExpansion-1.12-Legacy/blob/92b52710c19f3923f81ece2f580b044d8d8111fc/src/main/java/cofh/thermalexpansion/entity/projectile/EntityMorb.java#L220
+  function spawnGenericCreature(worldIn as IWorld, entityID as string, x as double, y as double, z as double, yaw as float) as void {
+    val entityResource = native.net.minecraft.util.ResourceLocation(entityID);
+    val worldNative = worldIn.native;
+    val entity = native.net.minecraft.entity.EntityList.createEntityByIDFromName(entityResource, worldNative);
+
+    val entityliving = entity as native.net.minecraft.entity.EntityLiving;
+    entity.setLocationAndAngles(x, y, z, 0.0f, 0.0f);
+    entityliving.rotationYawHead = yaw;
+    entityliving.renderYawOffset = yaw;
+    entityliving.onInitialSpawn(worldIn.native.getDifficultyForLocation(
+      crafttweaker.world.IBlockPos.create(entityliving.x, entityliving.y, entityliving.z).native
+    ), null);
+    worldIn.native.spawnEntity(entity);
+    entityliving.playLivingSound();
+  }
 }
 global utils as Utils = Utils();

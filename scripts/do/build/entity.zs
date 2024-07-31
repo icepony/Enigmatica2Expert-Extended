@@ -137,7 +137,7 @@ zenClass MobBuild {
 
       val r = rotate(face, offset.x, offset.z);
       val truePos = Position3f.create(r[0] + pos.x + shiftX, offset.y + pos.y + shiftY, r[1] + pos.z + shiftZ);
-      utils.executeCommandSilent(server, '/summon ' ~ entity.id ~ ' ' ~ truePos.x ~ ' ' ~ truePos.y ~ ' ' ~ (truePos.z - 0.1) ~ ' {Rotation:[' ~ (face * 90 - 180) ~ 'f,0f]}');
+      utils.spawnGenericCreature(world, entity.id, truePos.x, truePos.y, truePos.z - 0.1, face);
 
       spawnFnc(world, truePos);
 
