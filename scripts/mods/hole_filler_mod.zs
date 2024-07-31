@@ -17,3 +17,4 @@ java.lang.NullPointerException: Rendering Block Entity
     at meldexun.renderlib.renderer.tileentity.TileEntityRenderer.renderTileEntities(TileEntityRenderer.java:67)
 */
 Purge(<hole_filler_mod:throwable_hole_filler_smart>);
+Purge(<hole_filler_mod:throwable_hole_filler_light>);
