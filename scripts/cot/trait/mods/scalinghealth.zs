@@ -70,11 +70,17 @@ function showFX(entity as IEntity, x as double,y as double,z as double, value as
 }
 
 function getToolBonus(trait as Trait, tool as IItemStack, entity as IEntity) as double {
-  return getAnyBonus(trait.getData(tool).level, entity);
+  if (isNull(trait)) return 1.0;
+  val data = trait.getData(tool);
+  if (isNull(data)) return 1.0;
+  return getAnyBonus(data.level, entity);
 }
 
 function getArmorBonus(trait as ArmorTrait, tool as IItemStack, entity as IEntity) as double {
-  return getAnyBonus(trait.getData(tool).level, entity);
+  if (isNull(trait)) return 1.0;
+  val data = trait.getData(tool);
+  if (isNull(data)) return 1.0;
+  return getAnyBonus(data.level, entity);
 }
 
 function getAnyBonus(level as double, entity as IEntity) as double {
