@@ -80,18 +80,6 @@
 	},
 	{
 		item: {
-			id: "openblocks:tank",
-			tag: {
-				tank: {
-					FluidName: "ender",
-					Amount: 24000
-				}
-			}
-		},
-		count: 8
-	},
-	{
-		item: {
 			id: "extrautils2:drum",
 			Damage: 3s,
 			tag: {
@@ -286,6 +274,343 @@
 			id: "deepmoblearning:data_model_dragon",
 			tag: {
 				tier: 4
+			}
+		}
+	},
+	{
+		item: {
+			id: "danknull:dank_null_5",
+			tag: {
+				DankNullCap: {
+					danknull-inventory: [{
+						id: "minecraft:concrete",
+						Count: 2147483647,
+						Damage: 0s,
+						Slot: 0
+					},
+					{
+						id: "minecraft:concrete",
+						Count: 2147483647,
+						Damage: 1s,
+						Slot: 1
+					},
+					{
+						id: "minecraft:concrete",
+						Count: 2147483647,
+						Damage: 2s,
+						Slot: 2
+					},
+					{
+						id: "minecraft:concrete",
+						Count: 2147483647,
+						Damage: 3s,
+						Slot: 3
+					},
+					{
+						id: "minecraft:concrete",
+						Count: 2147483647,
+						Damage: 4s,
+						Slot: 4
+					},
+					{
+						id: "minecraft:concrete",
+						Count: 2147483647,
+						Damage: 5s,
+						Slot: 5
+					},
+					{
+						id: "minecraft:concrete",
+						Count: 2147483647,
+						Damage: 6s,
+						Slot: 6
+					},
+					{
+						id: "minecraft:concrete",
+						Count: 2147483647,
+						Damage: 7s,
+						Slot: 7
+					},
+					{
+						id: "minecraft:concrete",
+						Count: 2147483647,
+						Damage: 8s,
+						Slot: 8
+					},
+					{
+						id: "minecraft:concrete",
+						Count: 2147483647,
+						Damage: 9s,
+						Slot: 9
+					},
+					{
+						id: "minecraft:concrete",
+						Count: 2147483647,
+						Damage: 10s,
+						Slot: 10
+					},
+					{
+						id: "minecraft:concrete",
+						Count: 2147483647,
+						Damage: 11s,
+						Slot: 11
+					},
+					{
+						id: "minecraft:concrete",
+						Count: 2147483647,
+						Damage: 12s,
+						Slot: 12
+					},
+					{
+						id: "minecraft:concrete",
+						Count: 2147483647,
+						Damage: 13s,
+						Slot: 13
+					},
+					{
+						id: "minecraft:concrete",
+						Count: 2147483647,
+						Damage: 14s,
+						Slot: 14
+					},
+					{
+						id: "minecraft:concrete",
+						Count: 2147483647,
+						Damage: 15s,
+						Slot: 15
+					},
+					{
+						id: "cathedral:cathedral_railing_various",
+						Count: 2147483647,
+						Damage: 0s,
+						Slot: 16
+					},
+					{
+						id: "cathedral:cathedral_pillar_various",
+						Count: 2147483647,
+						Damage: 0s,
+						Slot: 17
+					},
+					{
+						id: "cookingforblockheads:kitchen_floor",
+						Count: 2147483647,
+						Damage: 0s,
+						Slot: 18
+					},
+					{
+						id: "chisel:basalt1",
+						Count: 2147483647,
+						Damage: 7s,
+						Slot: 19
+					},
+					{
+						id: "chisel:bricks2",
+						Count: 2147483647,
+						Damage: 0s,
+						Slot: 20
+					},
+					{
+						id: "chisel:cobblestone",
+						Count: 2147483647,
+						Damage: 1s,
+						Slot: 21
+					},
+					{
+						id: "chisel:glass",
+						Count: 2147483647,
+						Damage: 0s,
+						Slot: 22
+					},
+					{
+						id: "chisel:glass",
+						Count: 2147483647,
+						Damage: 1s,
+						Slot: 23
+					},
+					{
+						id: "chisel:glass",
+						Count: 2147483647,
+						Damage: 2s,
+						Slot: 24
+					},
+					{
+						id: "chisel:glass",
+						Count: 2147483647,
+						Damage: 3s,
+						Slot: 25
+					},
+					{
+						id: "chisel:glass1",
+						Count: 2147483647,
+						Damage: 0s,
+						Slot: 26
+					},
+					{
+						id: "chisel:factory",
+						Count: 2147483647,
+						Damage: 0s,
+						Slot: 27
+					},
+					{
+						id: "chisel:factory",
+						Count: 2147483647,
+						Damage: 1s,
+						Slot: 28
+					},
+					{
+						id: "chisel:factory",
+						Count: 2147483647,
+						Damage: 2s,
+						Slot: 29
+					},
+					{
+						id: "chisel:factory",
+						Count: 2147483647,
+						Damage: 3s,
+						Slot: 30
+					},
+					{
+						id: "chisel:factory",
+						Count: 2147483647,
+						Damage: 4s,
+						Slot: 31
+					},
+					{
+						id: "chisel:factory",
+						Count: 2147483647,
+						Damage: 5s,
+						Slot: 32
+					},
+					{
+						id: "chisel:factory",
+						Count: 2147483647,
+						Damage: 6s,
+						Slot: 33
+					},
+					{
+						id: "chisel:factory",
+						Count: 2147483647,
+						Damage: 7s,
+						Slot: 34
+					},
+					{
+						id: "chisel:factory",
+						Count: 2147483647,
+						Damage: 8s,
+						Slot: 35
+					},
+					{
+						id: "chisel:factory",
+						Count: 2147483647,
+						Damage: 9s,
+						Slot: 36
+					},
+					{
+						id: "chisel:factory",
+						Count: 2147483647,
+						Damage: 10s,
+						Slot: 37
+					},
+					{
+						id: "chisel:factory",
+						Count: 2147483647,
+						Damage: 11s,
+						Slot: 38
+					},
+					{
+						id: "chisel:factory",
+						Count: 2147483647,
+						Damage: 12s,
+						Slot: 39
+					},
+					{
+						id: "chisel:factory",
+						Count: 2147483647,
+						Damage: 13s,
+						Slot: 40
+					},
+					{
+						id: "chisel:factory",
+						Count: 2147483647,
+						Damage: 14s,
+						Slot: 41
+					},
+					{
+						id: "chisel:factory",
+						Count: 2147483647,
+						Damage: 15s,
+						Slot: 42
+					},
+					{
+						id: "chisel:factory1",
+						Count: 2147483647,
+						Damage: 0s,
+						Slot: 43
+					},
+					{
+						id: "chisel:factory1",
+						Count: 2147483647,
+						Damage: 1s,
+						Slot: 44
+					},
+					{
+						id: "chisel:factory1",
+						Count: 2147483647,
+						Damage: 2s,
+						Slot: 45
+					},
+					{
+						id: "chisel:factory1",
+						Count: 2147483647,
+						Damage: 3s,
+						Slot: 46
+					},
+					{
+						id: "chisel:factory1",
+						Count: 2147483647,
+						Damage: 4s,
+						Slot: 47
+					},
+					{
+						id: "chisel:laboratory",
+						Count: 2147483647,
+						Damage: 0s,
+						Slot: 48
+					},
+					{
+						id: "chisel:laboratory",
+						Count: 2147483647,
+						Damage: 7s,
+						Slot: 49
+					},
+					{
+						id: "chisel:laboratory",
+						Count: 2147483647,
+						Damage: 10s,
+						Slot: 50
+					},
+					{
+						id: "chisel:laboratory",
+						Count: 2147483647,
+						Damage: 11s,
+						Slot: 51
+					},
+					{
+						id: "chisel:laboratory",
+						Count: 2147483647,
+						Damage: 12s,
+						Slot: 52
+					},
+					{
+						id: "chisel:laboratory",
+						Count: 2147483647,
+						Damage: 15s,
+						Slot: 53
+					}],
+					selectedIndex: 0
+				},
+				display: {
+					Name: "Infinity Decoratives"
+				}
 			}
 		}
 	}],
