@@ -4,6 +4,7 @@
 	y: 0.0d,
 	dependencies: [
 		"0627d66e",
+		"07e0ed8d",
 		"cbc64098"
 	],
 	optional: true,
@@ -35,6 +36,25 @@
 			item: "ic2:refractory_bricks"
 		}],
 		count: 24L
+	},
+	{
+		uid: "21ff2be0",
+		type: "item",
+		items: [{
+			id: "itemfilters:filter",
+			tag: {
+				display: {
+					Name: "Any logWood"
+				}
+			},
+			ForgeCaps: {
+				Parent: {
+					id: "ore",
+					data: "logWood"
+				}
+			}
+		}],
+		count: 4L
 	}],
 	rewards: [{
 		uid: "c9194a14",
