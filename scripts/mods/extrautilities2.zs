@@ -6,10 +6,6 @@ import crafttweaker.item.IItemStack;
 
 static machineBlock as IIngredient = <extrautils2:machine>.only(function(item){return !item.hasTag;});
 
-function getCreativeHarvest(item as IItemStack) as IItemStack {
-  return <extrautils2:creativeharvest>.withTag({ creative_block: { meta: item.damage, block: item.definition.id }, display_stack: { id: item.definition.id, Count: 1 as byte, Damage: item.damage as short } });
-}
-
 // Recycle spikes
 scripts.process.melt(<extrautils2:spike_gold>, <fluid:gold> * (144 * 4));
 
@@ -175,6 +171,9 @@ scripts.process.mash(<minecraft:ender_pearl> , <extrautils2:endershard> * 16, nu
 // mods.extrautils2.Resonator.add(IItemStack output, IItemStack input, int energy, @Optional boolean addOwnerTag);
 mods.extrautils2.Resonator.add(<extrautils2:decorativesolid:6>, <botania:quartztypemana>, 600 * 100);
 
+// Cheap Blue Quartz replica
+mods.extrautils2.Resonator.add(<extrautils2:decorativesolid:6> * 64, <extrautils2:poweroverload>, 1400 * 100);
+
 // Make quartzburnt harder (was 8 GP)
 mods.extrautils2.Resonator.remove(<extrautils2:decorativesolid:7>);
 mods.extrautils2.Resonator.add(<extrautils2:decorativesolid:7>, <minecraft:quartz_block>, 80 * 100);
@@ -252,7 +251,7 @@ craft.make(<extrautils2:angelring>, ['pretty',
   '▬ R ▬',
   '▬ ▬ ▬'], {
   '▬': <ore:ingotGold198>,          // Gold-198
-  'C': getCreativeHarvest(<extrautils2:decorativesolid:6>), // Creative Harvest
+  'C': <extrautils2:poweroverload>,
   'R': <extrautils2:chickenring:1>, // Ring of the Flying Squid
 });
 
@@ -389,24 +388,8 @@ craft.make(<extrautils2:drum:3>, ['pretty',
   '~': LiquidIngr('high_pressure_steam'), // High Pressure Steam Bucket
 });
 
-// Infinity item sources
-val BQ = <extrautils2:decorativesolid:6>; // Blue Quartz
-mods.extrautils2.Resonator.add(getCreativeHarvest(BQ), BQ, 1300 * 100);
-
-for item in [
-  <minecraft:dirt>,
-  <minecraft:concrete:7>,
-] as IItemStack[] {
-  mods.extendedcrafting.TableCrafting.addShaped(0,
-    getCreativeHarvest(item),
-    Grid(['pretty',
-      'd d d',
-      'd * d',
-      'd d d'], {
-      'd': item,
-      '*': <actuallyadditions:block_crystal_empowered:4>, // Empowered Emeradic Crystal Block
-    }).shaped());
-}
+// High-GP usage ingredient
+mods.extrautils2.Resonator.add(<extrautils2:poweroverload>, <extrautils2:decorativesolid:6>, 1300 * 100);
 
 // Make Ferrous Trees better integrated
 furnace.remove(<minecraft:iron_nugget>, <extrautils2:ironwood_planks:*>);
