@@ -652,7 +652,7 @@ function workEx(machineNameAnyCase as string, exceptionsAnyCase as string,
       // mods.thermalexpansion.Crucible.addRecipe(ILiquidStack output, IItemStack input, int energy);
       val energy = getOptionEnergy(options, 5600);
       for ii in inputIngr0.itemArray {
-        mods.thermalexpansion.Crucible.addRecipe(outputLiquid0, ii, energy);
+        mods.thermalexpansion.Crucible.addRecipe(outputLiquid0 * min(10000, outputLiquid0.amount), ii, energy);
       }
       return machineName;
     }
