@@ -503,7 +503,7 @@ q.industrialcraft.induction_furnace.desc=电炉的升级版。如果你希望它
 q.industrialcraft.advanced_miner.desc=早期的自动采矿工具。
 q.industrialcraft.scanner.desc=将物品放入扫描仪进行扫描。§c§l这会销毁物品。§r\n然后，按“保存”按钮将物品数据写入§6水晶存储器§r。\n\n要完成这个任务，需提供带有§n记录物品数据§r的水晶存储器。
 q.industrialcraft.crystal_memory.name=水晶存储器
-q.industrialcraft.crystal_memory.desc=水晶存储器显示保存物品的§d基础成本§r。\n可以复制的物品在工具提示中显示其§d基础成本§r，如“§d100毫升UU§r”。\n\n实际复制成本取决于你的§6难度§e✪§r级别。\n\n手持记录有物品的水晶存储器并§n点击任意方块§r。\n\n§8你会看到多达20个可以用作催化剂的物品。这是完成任务所需的。
+q.industrialcraft.crystal_memory.desc=水晶存储器显示保存物品的§d基础成本§r。\n可以复制的物品在工具提示中显示其§d基础成本§r，如“§d100毫升UU§r”。\n\n实际复制成本取决于你的§6难度§e✪§r级别。\n\n手持记录有物品的水晶存储器并§n点击复制器§r。\n\n§8你会看到多达20个可以用作催化剂的物品，基于所有者的复制成本。这是完成任务所需的。
 q.industrialcraft._replicator_.name=§f                                     复制机                                     §f
 q.industrialcraft._replicator_.desc=这台机器复制物品。要使其工作，你需要：\n\n§4⚡ §8[§4能源§8]§r\n需要20,000 RF/t才能运行。\n\n§3❂ §8[§3水晶存储器§8]§r\n存储器必须包含有效的已扫描物品数据。\n\n§6⭑ §8[§6催化剂§8]§r\n催化剂是具有更高UU成本的物品，将被消耗。\n§6催化剂§r的§d基础成本§r必须高于物品的§5当前成本§r。\n§7关于UU成本数学的更多信息请参阅下一个任务。§r\n\n§d⬬ §8[§dUU物质§8]§r\n消耗§6催化剂§r的UU物质成本。\n每10桶UU物质会增加1点难度§e✪§r。\n\n可以选择在指定槽位安装☖超频升级。每个增加30%速度，但RF消耗增加60%。\n\n§8复制机界面：\n§8- §n两个数字§8：所需/收集的UU物质分数。这里1毫升物质=100。这些是工作过程的可视化表示。\n§8- §n✪成本§8：基于机器所有者的当前倍数。
 q.industrialcraft.thermal_centrifuge.desc=这台机器用于处理耗尽的燃料棒和其他材料。

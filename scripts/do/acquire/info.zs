@@ -15,6 +15,8 @@ import scripts.do.hand_over_your_items.tellrawItemObj;
 static MAX_SUGGESTED_ITEMS as int = 20;
 static playersCompleted as bool[string] = {} as bool[string];
 
+scripts.lib.tooltip.desc.tooltip(<ic2:crystal_memory>, 'acquire.hit');
+
 function show(player as IPlayer, item as IItemStack, block as IBlock) as bool {
   if (
     isNull(player.world)
@@ -24,18 +26,27 @@ function show(player as IPlayer, item as IItemStack, block as IBlock) as bool {
     || !item.hasTag
     || isNull(item.tag.Pattern)
     || isNull(item.tag.Pattern.id)
+    || isNull(block)
+    || isNull(block.definition)
+    || block.definition.id != 'requious:replicator'
   ) return false;
 
   var encodedItem = IItemStack.fromData(item.tag.Pattern);
   if(isNull(encodedItem)) return false;
 
-  val dfclty = isNull(block)
-    || isNull(block.data)
+  val ownerUUID as string = isNull(block.data)
     || isNull(block.data.variables)
     || isNull(block.data.variables.ownerUUID)
-    || block.data.variables.ownerUUID.asString() == ''
+    ? null
+    : block.data.variables.ownerUUID.asString();
+
+  val sameOwner = isNull(ownerUUID)
+    || ownerUUID == ''
+    || ownerUUID == player.uuid;
+
+  val dfclty = sameOwner
     ? player.difficulty
-    : scripts.lib.offline.op.get(block.data.variables.ownerUUID.asString(), 'difficulty', 0, 1000);
+    : scripts.lib.offline.op.get(ownerUUID, 'difficulty', 0, 1000);
 
   // collect all items that cost more than required one
   val requiredCost = scripts.category.uu.getCost(encodedItem, dfclty);
@@ -62,6 +73,13 @@ function show(player as IPlayer, item as IItemStack, block as IBlock) as bool {
 
   val prefix = [{ translate: 'e2ee.acquire.prefix' }] as IData;
   sendAcquireMessage(player, [
+    !sameOwner ? [ { translate: 'e2ee.acquire.owned', with: [
+      isNull(block.data)
+      || isNull(block.data.variables)
+      || isNull(block.data.variables.owner)
+      ? { translate: 'e2ee.acquire.owned.someone' }
+      : block.data.variables.owner
+    ] }, prefix ] : '',
     itemsDisplayCount <= 0
       ? { translate: 'e2ee.acquire.cannot', with: [
           tellrawItemObj(encodedItem, 'white')
