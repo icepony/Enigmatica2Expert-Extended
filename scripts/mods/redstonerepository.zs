@@ -1,6 +1,8 @@
 #modloaded redstonerepository
 
 recipes.remove(<redstonerepository:material:3>);
+Purge(<redstonerepository:util.feeder>);
+Purge(<redstonerepository:util.capacitor_gelid>);
 
 // Remake gem and Gelid Enderium harder
 mods.thermalexpansion.Transposer.removeFillRecipe(<minecraft:emerald>, <liquid:cryotheum> * 1000);
