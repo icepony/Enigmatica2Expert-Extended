@@ -330,27 +330,14 @@ function workEx(machineNameAnyCase as string, exceptionsAnyCase as string,
     }
 
     if (machineName == 'massspectrometer') {
-      // Mass Spectrometer dirty gem no liquid
-      if (combinedOutput.length == 4) {
-        if (inputLiquidIsSingle) {
-          mods.qmd.mass_spectrometer.addRecipe(
-            inputIngr0, null,
-            combinedOutput[0] * (combinedOutput[0].amount * 2),
-            combinedOutput[1] * (combinedOutput[1].amount * 2),
-            combinedOutput[2] * (combinedOutput[2].amount * 2),
-            combinedOutput[3] * (combinedOutput[3].amount * 2),
-            null, null, null, null, 2.0
-          );
-          mods.qmd.mass_spectrometer.addRecipe(
-            inputIngr0, inputLiquids[0],
-            combinedOutput[0] * (combinedOutput[0].amount * 1),
-            combinedOutput[1] * (combinedOutput[1].amount * 6),
-            combinedOutput[2] * (combinedOutput[2].amount * 6),
-            combinedOutput[3] * (combinedOutput[3].amount * 6),
-            null, null, null, null, 2.0
-          );
-        }
-      }
+      mods.qmd.mass_spectrometer.addRecipe(
+        inputIngr0, !isNull(inputLiquids) && inputLiquids.length > 0 ? inputLiquids[0] : null,
+        combinedOutput[0],
+        combinedOutput.length > 1 ? combinedOutput[1] : null,
+        combinedOutput.length > 2 ? combinedOutput[2] : null,
+        combinedOutput.length > 3 ? combinedOutput[3] : null,
+        null, null, null, null, 1.0
+      );
       return machineName;
     }
   }

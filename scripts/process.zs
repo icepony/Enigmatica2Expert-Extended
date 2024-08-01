@@ -274,7 +274,22 @@ function beneficiate(
       cx = utils.getSomething(JA.thirdExtraName,  ['dust', 'gem'], 1); if (!isNull(cx)) extraList += cx;
     }
     crush(input, dustOrGem, exceptions ~ 'macerator thermalCentrifuge crushingBlock', extraList, extraChances, { bonusType: 'MULTIPLY_OUTPUT' });
-    workEx('massspectrometer', null, [input], [<fluid:terrestrial> * 16], [dustOrGem], null, extraList, null, opts);// Mass Spectrometer Dirty Gem processing
+    if (extraList.length >= 3) {
+      workEx('massspectrometer', null, [input], null, [
+        dustOrGem * min(64, dustOrGem.amount * 2),
+      ], null, [
+        extraList[0] * min(64, extraList[0].amount * 2),
+        extraList[1] * min(64, extraList[1].amount * 2),
+        extraList[2] * min(64, extraList[2].amount * 2),
+      ], null, opts);
+      workEx('massspectrometer', null, [input], [<fluid:terrestrial> * 16], [
+        dustOrGem,
+      ], null, [
+        extraList[0] * min(64, extraList[0].amount * 6),
+        extraList[1] * min(64, extraList[1].amount * 6),
+        extraList[2] * min(64, extraList[2].amount * 6),
+      ], null, opts);
+    }
   }
 
   // Crush IC2
