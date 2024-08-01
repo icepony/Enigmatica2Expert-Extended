@@ -10,6 +10,9 @@ Purge(<mctsmelteryio:upgrade:3>);
 <mctsmelteryio:upgrade:4>.maxStackSize = 16;
 <mctsmelteryio:upgrade:6>.maxStackSize = 64;
 
+// This change doesnt work
+// <mctsmelteryio:machine>.asBlock().definition.setHarvestLevel('pickaxe', 0);
+
 // Ice balls
 scripts.process.mash(<biomesoplenty:hard_ice>, utils.tryCatch('mctsmelteryio:iceball', <iceandfire:dragon_ice>) * 8, 'No Exceptions');
 
