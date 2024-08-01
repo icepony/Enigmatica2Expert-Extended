@@ -15,6 +15,7 @@ val throwerRecipes = {
     { <blockstate:minecraft:dirt:variant=dirt>: <minecraft:dirt> }         : { <blockstate:biomesoplenty:dirt:coarse=false,variant=silty>: <biomesoplenty:dirt:10> },
     { <blockstate:minecraft:dirt:variant=coarse_dirt>: <minecraft:dirt:1> }: { <blockstate:biomesoplenty:dirt:coarse=true,variant=silty>: <biomesoplenty:dirt:2> },
     { <blockstate:minecraft:farmland>: <minecraft:farmland> }              : { <blockstate:biomesoplenty:farmland_1>: <biomesoplenty:farmland_1> },
+    { <blockstate:extrautils2:decorativebedrock:type=bedrock_cobblestone>: <extrautils2:decorativebedrock:2> } : { <blockstate:minecraft:bedrock>: <minecraft:bedrock> },
   },
   // Somehow, recipes with other liquids not working
   // <liquid:hot_mercury> : {

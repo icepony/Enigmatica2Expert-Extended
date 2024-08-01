@@ -353,3 +353,7 @@ scripts.process.crush(<minecraft:fire_charge>, <thermalfoundation:material:768>,
 );
 
 // ------------------------------------
+
+// Bedrock source for "Nothing" playthrough
+mods.actuallyadditions.AtomicReconstructor.addRecipe(<extrautils2:decorativebedrock:2>, <ic2:foam>, 50000);
+mods.actuallyadditions.AtomicReconstructor.addRecipe(<ic2:foam>, <extrautils2:decorativebedrock:2>, 5000);
