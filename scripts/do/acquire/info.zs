@@ -53,7 +53,7 @@ function show(player as IPlayer, item as IItemStack, block as IBlock) as bool {
   var strList = StringList.empty();
   for itemID, metaData in scripts.category.uu.values {
     for meta, cost in metaData {
-      if (cost < requiredCost) continue;
+      if (cost <= requiredCost) continue;
       strList.add(`${repeat('0', 24 - toString(cost).length())}${cost};${itemID};${meta}`);
     }
   }
