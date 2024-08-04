@@ -74,7 +74,7 @@ recipes.addShaped('Nullifier',
     [<ore:ingotTin>, <ore:ingotTin>, <ore:ingotTin>]]);
 
 // Igneous Extruder
-recipes.remove(<thermalexpansion:machine:15>);
+recipes.removeByRecipeName("thermalexpansion:machine_15");
 recipes.addShaped('Igneous Extruder',
   <thermalexpansion:machine:15>,
   [[null, <ore:blockGlass>, null],
@@ -137,7 +137,7 @@ craft.remake(<thermalfoundation:material:1028> * 2, ['pretty',
 });
 
 // Centrifugal Seperator
-recipes.remove(<thermalexpansion:machine:10>);
+recipes.removeByRecipeName("thermalexpansion:machine_10");
 recipes.addShaped('Centrifugal Seperator',
   <thermalexpansion:machine:10>,
   [[null, <forestry:centrifuge>, null],
@@ -145,7 +145,7 @@ recipes.addShaped('Centrifugal Seperator',
     [<ore:gearCopper>, <thermalfoundation:material:513>, <ore:gearCopper>]]);
 
 // Sawmill
-recipes.remove(<thermalexpansion:machine:2>);
+recipes.removeByRecipeName("thermalexpansion:machine_2");
 recipes.addShaped('Sawmill',
   <thermalexpansion:machine:2>,
   [[null, <mekanism:machineblock2:5>, null],
@@ -669,8 +669,8 @@ mods.thermalexpansion.Enchanter.addRecipe(
 );
 
 // [Pulverizer (Basic)] from [Machine Frame][+5]
-recipes.removeShaped(<thermalexpansion:machine:1>);
-craft.remake(<thermalexpansion:machine:1>, ['pretty',
+recipes.removeByRecipeName("thermalexpansion:machine_1");
+craft.make(<thermalexpansion:machine:1>, ['pretty',
   's C s',
   '□ ◙ □',
   '¤ ♥ ¤'], {
@@ -683,8 +683,8 @@ craft.remake(<thermalexpansion:machine:1>, ['pretty',
 });
 
 // [Phytogenic Insolator (Basic)] from [Machine Frame][+5]
-recipes.removeShaped(<thermalexpansion:machine:4>);
-craft.remake(<thermalexpansion:machine:4>, ['pretty',
+recipes.removeByRecipeName("thermalexpansion:machine_4");
+craft.make(<thermalexpansion:machine:4>, ['pretty',
   'B A B',
   '□ ◙ □',
   '¤ ♥ ¤'], {
@@ -697,8 +697,8 @@ craft.remake(<thermalexpansion:machine:4>, ['pretty',
 });
 
 // [Induction Smelter (Basic)] from [Machine Frame][+5]
-recipes.removeShaped(<thermalexpansion:machine:3>);
-craft.remake(<thermalexpansion:machine:3>, ['pretty',
+recipes.removeByRecipeName("thermalexpansion:machine_3");
+craft.make(<thermalexpansion:machine:3>, ['pretty',
   'R I R',
   '□ ◙ □',
   '¤ ♥ ¤'], {
@@ -711,8 +711,8 @@ craft.remake(<thermalexpansion:machine:3>, ['pretty',
 });
 
 // [Fluid Transposer (Basic)] from [Machine Frame][+5]
-recipes.removeShaped(<thermalexpansion:machine:8>);
-craft.remake(<thermalexpansion:machine:8>, ['pretty',
+recipes.removeByRecipeName("thermalexpansion:machine_8");
+craft.make(<thermalexpansion:machine:8>, ['pretty',
   'B C B',
   '⌃ ◙ ⌃',
   '¤ ♥ ¤'], {
@@ -725,8 +725,8 @@ craft.remake(<thermalexpansion:machine:8>, ['pretty',
 });
 
 // [Magma Crucible (Basic)] from [Machine Frame][+5]
-recipes.removeShaped(<thermalexpansion:machine:6>);
-craft.remake(<thermalexpansion:machine:6>, ['pretty',
+recipes.removeByRecipeName("thermalexpansion:machine_6");
+craft.make(<thermalexpansion:machine:6>, ['pretty',
   '▬ S ▬',
   '□ ◙ □',
   '¤ ♥ ¤'], {
