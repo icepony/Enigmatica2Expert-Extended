@@ -691,7 +691,7 @@ craft.remake(<mekanism:basicblock2:5>, ['pretty',
   'c □ c',
   '□ ⌂ □',
   'c □ c'], {
-  'c': <ore:concrete>,          // Concrete
+  'c': <enderio:item_material:72>,
   '□': <ore:plateCopper>,       // Copper Plate
   '⌂': <mekanism:basicblock:8>, // Steel Casing
 });

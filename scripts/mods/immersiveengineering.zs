@@ -75,33 +75,29 @@ recipes.addShapedMirrored('Steel Scaffolding',
     [<ore:scaffoldingSteel>, <ore:scaffoldingSteel>, <ore:stickSteel>]]);
 
 // Concrete Conversion recipes
-recipes.addShapeless('Concrete Sheet', <immersiveengineering:stone_device:3> * 8, [<immersiveengineering:stone_decoration:5>,<tconstruct:throwball:1>]);
-recipes.addShapedMirrored('Concrete Panel', <immersiveengineering:stone_device:4>, [[<immersiveengineering:stone_device:3>, null, null],[<immersiveengineering:stone_device:3>, null, null], [null, null, null]]);
+recipes.addShapedMirrored('Concrete Panel', <immersiveengineering:stone_device:4>, [[<ore:plateConcrete>, null, null],[<ore:plateConcrete>, null, null], [null, null, null]]);
 recipes.addShapedMirrored('Concrete Slab', <immersiveengineering:stone_decoration_slab:5>, [[<immersiveengineering:stone_device:4>, null, null],[<immersiveengineering:stone_device:4>, null, null], [null, null, null]]);
 
-// [Concrete]*12 from [Water Bucket][+3]
+recipes.removeByRecipeName('immersiveengineering:stone_decoration/concrete_slab');
 recipes.removeByRecipeName('immersiveengineering:stone_decoration/concrete');
 recipes.removeByRecipeName('immersiveengineering:stone_decoration/concrete2');
-craft.make(<immersiveengineering:stone_decoration:5> * 12, ['pretty',
-  'S c S',
-  'g A g',
-  'S c S'], {
-  'S': <ore:itemSlag>, // Slag
-  'c': <ore:clay>, // Clay
-  'g': <ore:gravel>, // Gravel
-  'A': LiquidIngr('water'), // Water Bucket
-});
 
-// [Concrete]*8 from [Water Bucket][+3]
-craft.make(<immersiveengineering:stone_decoration:5> * 8, ['pretty',
-  's c s',
-  'g A g',
-  's c s'], {
-  's': <ore:sand>, // Sand
-  'c': <ore:clay>,  // Clay
-  'g': <ore:gravel>, // Gravel
-  'A': LiquidIngr('water'), // Water Bucket
-});
+// Fluid hint
+scripts.jei.crafting_hints.addInsOutsCatl([], [
+  <immersiveengineering:stone_device:3>,
+  <immersiveengineering:stone_device:4>,
+  <immersiveengineering:stone_decoration_slab:5>,
+], <forge:bucketfilled>.withTag({FluidName: "concrete", Amount: 1000}));
+scripts.jei.crafting_hints.addInsOutsCatl([], [
+  <immersiveengineering:stone_device:5>,
+  <immersiveengineering:stone_decoration:5>,
+], <forge:bucketfilled>.withTag({FluidName: "concrete", Amount: 1000}));
+
+// Concrete cutting
+scripts.process.saw(<immersiveengineering:stone_decoration:5>, <immersiveengineering:stone_decoration_slab:5> * 2, 'only: BlockCutter AdvRockCutter', null, 0, { hardness: 9 });
+scripts.process.saw(<immersiveengineering:stone_decoration_slab:5>, <immersiveengineering:stone_device:4> * 2, 'only: BlockCutter AdvRockCutter', null, 0, { hardness: 9 });
+scripts.process.saw(<immersiveengineering:stone_device:4>, <immersiveengineering:stone_device:3> * 2, 'only: BlockCutter AdvRockCutter', null, 0, { hardness: 9 });
+scripts.process.saw(<immersiveengineering:stone_device:5>, <immersiveengineering:stone_device:4> * 3, 'only: BlockCutter AdvRockCutter', null, 0, { hardness: 9 });
 
 // Coke Dust Compatibility
 mods.actuallyadditions.Crusher.addRecipe(<immersiveengineering:material:17>, <thermalfoundation:material:802>);

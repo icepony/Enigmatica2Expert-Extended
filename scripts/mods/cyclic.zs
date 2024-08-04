@@ -221,13 +221,6 @@ for i, l in packagerList {
 
 Hydrator.addRecipe(<thermalexpansion:florb>.withTag({ Fluid: 'water' }), [<thermalexpansion:florb>], 1000);
 
-// Concrete
-val concreteArr = [<minecraft:clay_ball>, <minecraft:gravel>] as IItemStack[];
-Hydrator.addRecipe(<immersiveengineering:stone_decoration:5> * 4, concreteArr + (<minecraft:sand> * 2), 500);
-for it in <ore:itemSlag>.items {
-  Hydrator.addRecipe(<immersiveengineering:stone_decoration:5> * 6, concreteArr + (it * 2), 500);
-}
-
 // Asphalt Concrete
 for bit in <ore:bitumen>.items {
   val aspConcreteArr = [bit, <minecraft:gravel>] as IItemStack[];

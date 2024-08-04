@@ -27,7 +27,7 @@ events.onEntityLivingUseItem(function(e as crafttweaker.event.EntityLivingUseIte
 
 val cellIngrs = {
   '⌃': <appliedenergistics2:quartz_glass>, // Quartz Glass
-  '♥': <ore:dustRedstone>, // Redstone
+  '♥': <ore:plateConcrete>,
   '□': <ore:plateIron>, // Iron Plate
   'I': <ironchest:iron_chest>, // Iron Chest
   '1': <thaumicenergistics:essentia_component_1k>, // 1k ME Essentia Storage Component

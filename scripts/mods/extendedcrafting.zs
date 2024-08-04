@@ -162,7 +162,7 @@ mods.mekanism.infuser.addRecipe('ENDER', 20, <ore:ingotPlatinum>, <extendedcraft
 // See the Draconic Evolution configs for DE compat
 // *======= Empowerer Extended Crafting Combination recipes =======*
 mods.extendedcrafting.CombinationCrafting.addRecipe(<mekanism:controlcircuit:3>, 2000000, 1000000, <mekanism:controlcircuit:2>, [<mekanism:atomicalloy>, <mekanism:atomicalloy>, <mekanism:atomicalloy>, <mekanism:atomicalloy>]);
-mods.extendedcrafting.CombinationCrafting.addRecipe(<thermalexpansion:frame:129>, 10000000, 1000000, <thermalexpansion:frame:128>, [<immersiveengineering:material:2>, <thermalfoundation:material:354>, <thermalfoundation:material:290>, <mekanism:basicblock:8>]);
+mods.extendedcrafting.CombinationCrafting.addRecipe(<thermalexpansion:frame:129>, 10000000, 1000000, <thermalexpansion:frame:128>, [<immersiveengineering:material:2>, <immersiveengineering:stone_device:3>, <thermalfoundation:material:290>, <mekanism:basicblock:8>]);
 mods.extendedcrafting.CombinationCrafting.addRecipe(<actuallyadditions:block_crystal_empowered>, 1000000, 1000000, <actuallyadditions:block_crystal>, [<nuclearcraft:gem>, <thermalfoundation:material:513>, <tconstruct:ingots:1>, <quark:biome_cobblestone>]);
 mods.extendedcrafting.CombinationCrafting.addRecipe(<actuallyadditions:block_crystal_empowered:1>, 1000000, 1000000, <actuallyadditions:block_crystal:1>, [<tconstruct:ingots>, <ic2:plate:13>, <biomesoplenty:gem:6>, <tconstruct:slime_congealed:1>]);
 mods.extendedcrafting.CombinationCrafting.addRecipe(<actuallyadditions:block_crystal_empowered:2>, 2000000, 1000000, <actuallyadditions:block_crystal:2>, [<nuclearcraft:dust:10>, <botania:manaresource:2>, <tconstruct:ingots:2>, <biomesoplenty:gem:5>]);
@@ -510,12 +510,12 @@ addShaped(0, <ic2:resource:13> * 2, Grid(['pretty',
 
 // [Machine Chassis]*2 from [Black Iron Ingot][+2]
 addShaped(0, <nuclearcraft:part:10> * 2, Grid(['pretty',
-  '▬ - ▬',
-  '- _ -',
-  '▬ - ▬'], {
-  '▬': <ore:ingotSteel>,     // Steel Ingot
-  '-': <ore:ingotLead>,      // Lead Ingot
-  '_': <ore:ingotBlackIron>, // Black Iron Ingot
+  'C ⌂ C',
+  '⌂ ▬ ⌂',
+  'C ⌂ C'], {
+  'C': <ore:plateConcrete>, // Concrete Sheet
+  '⌂': <ic2:casing:5>, // Steel Item Casing
+  '▬': <ore:ingotBlackIron>,
 }).shaped());
 
 // [Servomechanism]*2 from [Copper Ingot][+3]

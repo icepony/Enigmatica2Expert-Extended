@@ -36,6 +36,16 @@ utils.compact(<nuclearcraft:ingot:15>, <nuclearcraft:ingot_block:15>);
 // Recipes and integrations
 // ------------------------------------------------------------------
 
+// [Machine Chassis] from [Tough Alloy Ingot][+2]
+craft.remake(<nuclearcraft:part:10>, ['pretty',
+  'C ⌂ C',
+  '⌂ ▬ ⌂',
+  'C ⌂ C'], {
+  'C': <ore:plateConcrete>, // Concrete Sheet
+  '⌂': <ic2:casing:5>, // Steel Item Casing
+  '▬': <ore:ingotTough>, // Tough Alloy Ingot
+});
+
 // [Basic Plating]*4 from [Graphite Block][+2]
 craft.remake(<nuclearcraft:part> * 4, ['pretty',
   '□ ⌂ □',

@@ -212,7 +212,7 @@ mods.thermalexpansion.Transposer.addFillRecipe(<thermalfoundation:material:166>,
 mods.thermalexpansion.InductionSmelter.addRecipe(<nuclearcraft:alloy:8> * 4, <thermalfoundation:material:130>, <thermalfoundation:material:129> * 3, 20000);
 
 // Hardened Cell Frame
-mods.actuallyadditions.Empowerer.addRecipe(<thermalexpansion:frame:129>, <thermalexpansion:frame:128>, <immersiveengineering:material:2>, <thermalfoundation:material:354>, <thermalfoundation:material:290>, <mekanism:basicblock:8>, 2500000, 200, [0.25, 0.25, 0.29]);
+mods.actuallyadditions.Empowerer.addRecipe(<thermalexpansion:frame:129>, <thermalexpansion:frame:128>, <immersiveengineering:material:2>, <immersiveengineering:stone_device:3>, <thermalfoundation:material:290>, <mekanism:basicblock:8>, 2500000, 200, [0.25, 0.25, 0.29]);
 
 // Dynamo harder recipes
 function remakeDynamo(item as IItemStack, oreName as string) {
@@ -310,11 +310,23 @@ recipes.addShapeless('Carminite cheap recipe', <twilightforest:carminite> * 2, [
 
 //####################################
 
+// [Hardened Upgrade Kit] from [Bronze Gear][+3]
+craft.remake(<thermalfoundation:upgrade>, ['pretty',
+  'C ▬ C',
+  '▬ ¤ ▬',
+  '♥ ▬ ♥'], {
+  'C': <ore:plateConcrete>, // Concrete Sheet
+  '▬': <ore:ingotInvar>, // Invar Ingot
+  '¤': <ore:gearBronze>, // Bronze Gear
+  '♥': <ore:dustRedstone>, // Redstone
+});
+
 // [Reinforced_Upgrade_Kit] from [Iridium_Gear][+2]
 craft.remake(<thermalfoundation:upgrade:1>, ['pretty',
-  '  ▬  ',
+  'C ▬ C',
   '▬ I ▬',
   '□ ▬ □'], {
+  'C': <ore:plateConcrete>, // Concrete Sheet
   '□': <ore:blockGlassHardened>, // Hardened Copper Glass
   'I': <ore:gearIridium>, // Iridium Gear
   '▬': <ore:ingotLumium>, // Lumium Ingot
@@ -322,9 +334,10 @@ craft.remake(<thermalfoundation:upgrade:1>, ['pretty',
 
 // [Signalum_Upgrade_Kit] from [Lumium_Gear][+2]
 craft.remake(<thermalfoundation:upgrade:2>, ['pretty',
-  '  ▬  ',
+  'C ▬ C',
   '▬ L ▬',
   'E ▬ E'], {
+  'C': <ore:plateConcrete>, // Concrete Sheet
   'E': <ore:plateElite>, // Elite Plating
   '▬': <ore:ingotSignalum>, // Signalum Ingot
   'L': <ore:gearLumium>, // Lumium Gear
@@ -332,9 +345,10 @@ craft.remake(<thermalfoundation:upgrade:2>, ['pretty',
 
 // [Resonant_Upgrade_Kit] from [Signalum_Gear][+2]
 craft.remake(<thermalfoundation:upgrade:3>, ['pretty',
-  '  ▬  ',
+  'C ▬ C',
   '▬ S ▬',
   '☼ ▬ ☼'], {
+  'C': <ore:plateConcrete>, // Concrete Sheet
   'S': <ore:gearSignalum>, // Signalum Gear
   '▬': <ore:ingotEnderium>, // Enderium Ingot
   '☼': <ore:crystalEnder>, // Resonant Clathrate

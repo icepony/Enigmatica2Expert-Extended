@@ -8,6 +8,39 @@ scripts.lib.dropt.addDrop(<advancedrocketry:geode>, <thermalfoundation:geode>);
 // Rename basalt as it not oredicted and have different uses
 <advancedrocketry:basalt>.displayName = game.localize('e2ee.tile.basalt_sediment');
 
+// -----------------------------------------------------------------
+// Purge concrete to use IE one instead
+// -----------------------------------------------------------------
+Purge(<advancedrocketry:concrete>).ores([<ore:concrete>]);
+
+// [Rocket Assembling Machine] from [Machine Structure][+4]
+craft.remake(<advancedrocketry:rocketbuilder>, ['pretty',
+  '╱ U ╱',
+  'C M C',
+  '¤ C ¤'], {
+  '╱': <ore:stickTitanium>,          // Titanium Rod
+  'U': <advancedrocketry:misc>,      // User Interface
+  'C': <advancedrocketry:ic:3>,      // Control Circuit Board
+  'M': <libvulpes:structuremachine>, // Machine Structure
+  '¤': <ore:gearTitanium>,           // Titanium Gear
+});
+
+// [Launch Pad]*9 from [Diorite][+1]
+craft.remake(<advancedrocketry:launchpad> * 9, ['pretty',
+  '■ ■ ■',
+  '■ D ■',
+  '■ ■ ■'], {
+  '■': <chisel:factory:6>, // Factory Block
+  'D': <ore:stoneDiorite>, // Diorite
+});
+
+// [Docking Pad] from [Tracking Circuit][+1]
+craft.reshapeless(<advancedrocketry:landingpad>, 'LT', {
+  'L': <advancedrocketry:launchpad>, // Launch Pad
+  'T': <advancedrocketry:ic:1>,      // Tracking Circuit
+});
+// -----------------------------------------------------------------
+
 // Hint that Basalt Sediments can be obtained with rocket
 scripts.jei.crafting_hints.addInsOutCatl(
   [<minecraft:cobblestone> | <minecraft:gravel>],
