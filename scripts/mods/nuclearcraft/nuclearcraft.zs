@@ -46,6 +46,16 @@ craft.remake(<nuclearcraft:part:10>, ['pretty',
   '▬': <ore:ingotTough>, // Tough Alloy Ingot
 });
 
+// [Steel Chassis] from [Bronze Item Casing][+2]
+craft.remake(<nuclearcraft:part:12>, ['pretty',
+  '⌂ ▬ ⌂',
+  '▬ B ▬',
+  '⌂ ▬ ⌂'], {
+  '⌂': <ic2:casing:5>,   // Steel Item Casing
+  '▬': <ore:ingotTough>, // Tough Alloy Ingot
+  'B': <ic2:casing>,     // Bronze Item Casing
+});
+
 // [Basic Plating]*4 from [Graphite Block][+2]
 craft.remake(<nuclearcraft:part> * 4, ['pretty',
   '□ ⌂ □',
