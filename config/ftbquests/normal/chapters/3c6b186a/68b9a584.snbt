@@ -23,7 +23,7 @@
 		icon: {
 			id: "ftbquests:lootcrate",
 			tag: {
-				type: "uncommon"
+				type: "rare"
 			}
 		},
 		tags: [
