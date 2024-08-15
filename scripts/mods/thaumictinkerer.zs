@@ -40,6 +40,12 @@ mods.tconstruct.Casting.addTableRecipe(<thaumictinkerer:kamiresource:1>, <thaumc
 mods.botania.ManaInfusion.addConjuration(<thaumictinkerer:kamiresource>, <enderio:item_material:62>, 1000);
 <thaumictinkerer:kamiresource>.addTooltip('§3Drops from endermans in the end');
 
+// Casting
+mods.tconstruct.Casting.addBasinRecipe(<thaumictinkerer:ichor_block>, null, <liquid:molten_ichorium>, 1296);
+mods.tconstruct.Casting.addTableRecipe(<thaumictinkerer:kamiresource:3>, <tconstruct:cast_custom:0>, <liquid:molten_ichorium>, 144);
+mods.tconstruct.Casting.addTableRecipe(<thaumictinkerer:kamiresource:5>, <tconstruct:cast_custom:1>, <liquid:molten_ichorium>, 16);
+mods.nuclearcraft.IngotFormer.addRecipe(<liquid:molten_ichorium> * 144, <thaumictinkerer:kamiresource:3>, 1.0, 1.0);
+
 // [Ichor]
 mods.thaumcraft.ArcaneWorkbench.registerShapedRecipe('ichor',
   'TT_ICHOR@0',
