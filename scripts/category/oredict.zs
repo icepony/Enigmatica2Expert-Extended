@@ -300,10 +300,6 @@ addItems(<ore:blockBricks>, [
 
 addItems(<ore:slabBasalt>, [
   <quark:stone_basalt_slab>,
-  <environmentalmaterials:basalt_slab>,
-  <environmentalmaterials:basalt_paver_slab>,
-  <environmentalmaterials:basalt_brick_slab>,
-  <environmentalmaterials:basalt_tile_slab>,
 ]);
 
 addItems(<ore:grassTall>, [
