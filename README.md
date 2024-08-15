@@ -319,7 +319,7 @@ Some screenshots of new worldgen:
 
 ## Recommended mods
 
-- [**Entity Culling**](https://www.curseforge.com/minecraft/mc-mods/entity-culling) - increase performance, but can cause crashes on some machines
+- [**Entity Culling**](https://www.curseforge.com/minecraft/mc-mods/entity-culling)+[**RenderLib**](https://www.curseforge.com/minecraft/mc-mods/renderlib) - increase performance, but can cause crashes on some machines
 - [**Dynamic Surroundings**](https://www.curseforge.com/minecraft/mc-mods/dynamic-surroundings) - better sounds and environmental, but increaing load time and lower FPS a bit
 - [**Fluidlogged API**](https://modrinth.com/mod/fluidlogged-api) - adds basic fluidlogging, widely configured for `E2E-E`. Its not included by default since causing slight TPS consumption [[1]](https://github.com/jbredwards/Fluidlogged-API/issues/184)[[2]](https://github.com/jbredwards/Fluidlogged-API/issues/182).
 
