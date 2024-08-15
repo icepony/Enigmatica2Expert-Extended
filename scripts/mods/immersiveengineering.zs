@@ -513,6 +513,10 @@ craft.remake(<immersiveengineering:tool>, ['pretty',
 // Liquid Concrete alts
 scripts.process.solution([<tconstruct:soil>], [<liquid:water> * 250], [<liquid:concrete> * 250], null, 'except: Vat Highoven Mixer');
 
+// Cheaper recipe since Concrete is just building material
+mods.immersiveengineering.Mixer.removeRecipe(<fluid:concrete>);
+mods.immersiveengineering.Mixer.addRecipe(<fluid:concrete> * 1000, <fluid:water> * 1000, [<tconstruct:soil>], 1024);
+
 // [Conveyor Belt*32] from [Redstone][+2]
 craft.remake(<immersiveengineering:conveyor>.withTag({ conveyorType: 'immersiveengineering:conveyor' }) * 32, ['pretty',
   'l l l',
