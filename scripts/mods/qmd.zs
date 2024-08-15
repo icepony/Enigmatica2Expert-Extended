@@ -5,7 +5,7 @@ import crafttweaker.item.IItemStack;
 import mods.nuclearcraft.ChanceItemIngredient;
 
 // [BSCCO Wire]*6 from [Silver Plate][+1]
-mods.immersiveengineering.Blueprint.addRecipe('components', <qmd:part:4> * 2, Grid(['▲□□'], {
+mods.immersiveengineering.Blueprint.addRecipe('components', <qmd:part:4> * 6, Grid(['▲□□'], {
   '▲': <qmd:chemical_dust:1>, // BSCCO Dust
   '□': <ore:plateSilver>, // Silver Plate
 }).shapeless());
@@ -17,7 +17,7 @@ mods.immersiveengineering.Blueprint.addRecipe('components', <qmd:part:6> * 6, Gr
 }).shapeless());
 
 // [BSCCO Dust]*3 from [Copper Oxide][+3]
-craft.shapeless(<qmd:chemical_dust:1> * 3, '∆♠∆▲♠▲♣♠♣', {
+craft.shapeless(<qmd:chemical_dust:1> * 32, '∆♠∆▲♠▲♣♠♣', {
   '∆': <ore:dustBismuth>,     // Bismuth Dust
   '▲': <ore:dustStrontium>,   // Strontium Dust
   '♣': <ore:dustCalcium>,     // Calcium Dust
