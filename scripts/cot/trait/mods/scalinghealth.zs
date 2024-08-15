@@ -47,14 +47,14 @@ b.localizedDescription = game.localize('e2ee.tconstruct.material.challenger.desc
 b.maxLevel = 4;
 b.getModifications = function(trait, player, mods, armor, damageSource, damage, index) {
   if (damage <= 0.0) return mods;
-  val bonus = getArmorBonus(trait, armor, player);
+  val bonus = getAnyBonus(1, player);
   mods.armorMod *= bonus;
   mods.toughnessMod *= bonus;
   return mods;
 };
 b.onDamaged = function (trait, armor, player, source, damage, newDamage, evt) {
   if (player.world.remote || newDamage <= 0) return newDamage;
-  val bonus = getArmorBonus(trait, armor, player);
+  val bonus = getAnyBonus(1, player);
   showFX(player, player.x, player.y, player.z, bonus);
   return newDamage;
 };
@@ -70,13 +70,6 @@ function showFX(entity as IEntity, x as double,y as double,z as double, value as
 }
 
 function getToolBonus(trait as Trait, tool as IItemStack, entity as IEntity) as double {
-  if (isNull(trait)) return 1.0;
-  val data = trait.getData(tool);
-  if (isNull(data)) return 1.0;
-  return getAnyBonus(data.level, entity);
-}
-
-function getArmorBonus(trait as ArmorTrait, tool as IItemStack, entity as IEntity) as double {
   if (isNull(trait)) return 1.0;
   val data = trait.getData(tool);
   if (isNull(data)) return 1.0;
