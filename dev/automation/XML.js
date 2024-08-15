@@ -12,11 +12,11 @@ import { writeFileSync } from 'node:fs'
 import { relative } from 'node:path'
 
 import detectIndent from 'detect-indent'
+import fast_glob from 'fast-glob'
 import _ from 'lodash'
 import { js2xml, xml2js } from 'xml-js'
 import yargs from 'yargs'
 
-import fast_glob from 'fast-glob'
 import {
   getOreBases_byKinds,
 } from '../lib/tellme.js'
@@ -107,7 +107,7 @@ function getChanges(h = defaultHelper) {
   const changesText = {}
 
   for (const { groups } of loadText('crafttweaker.log').matchAll(
-    /^\[INITIALIZATION\]\[CLIENT\]\[INFO\] Put this recipe in file \[(\.\/)?(?<filename>[^\]]*?)\] manually.\n\r?(?<recipe>(\s*<!--(.*)-->\n\r?)?([\s\S\n\r]*?<\/[rR]ecipe>))/gm
+    /^\[INITIALIZATION\]\[CLIENT\]\[INFO\] Put this recipe in file \[(\.\/)?(?<filename>[^\]]*)\] manually.\n\r?(?<recipe>(\s*<!--(.*)-->\n\r?)?([\s\S]*?<\/[rR]ecipe>))/gm
   ))
     (changesText[groups.filename] ??= []).push(groups.recipe)
 
@@ -212,7 +212,7 @@ function getCustomRecipes() {
       ]
         .map(kinds =>
           getOreBases_byKinds(kinds.slice(1))
-            .filter(b => b !== 'Aluminum')
+            .filter(b => b !== 'Aluminum' && b !== 'Concrete')
             .map(oreBase => [oreBase, kinds[1], kinds[2], kinds[0]])
         )
         .flat()

@@ -14,6 +14,10 @@
 - [ ] ✏️ Rethink EnderTank recipe since glass cant be poured with iron after cast
 - [ ] 📖 Skyblock chapter disable chapter comletion message on each quest (how if everything optional?)
 - [ ] ✨ Idea: reaching 1000 difficulty opening supreme power, instantly advance player to endgame powers
+- [ ] Process NC schematics https://discord.com/channels/911676461050642432/911676461050642434/1270356435380994099
+- [ ] 📀 Concrete make hardening slower for servers
+- [ ] ✏️ Concrete combine excavator types
+- [ ] 🛡️ Challenger armor - tweak effects
 
 ---
 

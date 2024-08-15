@@ -131,12 +131,6 @@ net.minecraft.item.ItemStack: [[1xitem.thaumadditions:salt_essence@0 thaumadditi
 Inputs:
 net.minecraft.item.ItemStack: [[1xitem.thaumadditions:salt_essence@0 thaumadditions:salt_essence]]
   [...]
-[Client thread/ERROR] [Had Enough Items]: Failed to get tooltip: 1xtile.stone@0 minecraft:stone
-java.lang.NullPointerException: Cannot invoke "net.minecraft.entity.player.EntityPlayer.hashCode()" because "player" is null
-	at net.silentchaos512.scalinghealth.utils.SHPlayerDataHandler.getKey(SHPlayerDataHandler.java:103) ~[SHPlayerDataHandler.class:?]
-	at net.silentchaos512.scalinghealth.utils.SHPlayerDataHandler.get(SHPlayerDataHandler.java:69) ~[SHPlayerDataHandler.class:?]
-	at xyz.tcreopargh.ctintegration.scalinghealth.DifficultyManager.getDifficulty(DifficultyManager.java:63) ~[DifficultyManager.class:1.8.0]
-  [...]
 [Client thread/ERROR] [Had Enough Items]: Error while Testing for mod name formatting
 java.lang.NullPointerException: Cannot invoke "net.minecraft.entity.player.EntityPlayer.hashCode()" because "player" is null
 	at net.silentchaos512.scalinghealth.utils.SHPlayerDataHandler.getKey(SHPlayerDataHandler.java:103) ~[SHPlayerDataHandler.class:?]

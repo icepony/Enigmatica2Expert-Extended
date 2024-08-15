@@ -30,7 +30,12 @@ const config = parse(readFileSync(resolve(__dirname, 'config.yml'), 'utf8'))
 
 /** @type {import('../../../node_modules/@types/conventional-changelog-core/index.d.ts').WriterOptions} */
 const writerOpts = {
-  transform(commit, context) {
+  transform(_commit, context) {
+    const commit = {}
+    for (const propName of Object.keys(_commit)) {
+      commit[propName] = _commit[propName]
+    }
+
     let discard = true
     const issues = []
 
@@ -41,12 +46,10 @@ const writerOpts = {
     })
 
     // Rename types
-    // @ts-expect-error obj
     const newType = config.renames[commit.type]
       ?? (commit.revert ? 'Reverts' : undefined)
 
     // This is discardable commit type
-    // @ts-expect-error obj
     if (!newType && discard && config.discardable[commit.type]) return false
 
     commit.type = newType
@@ -65,7 +68,7 @@ const writerOpts = {
     if (typeof commit.body === 'string') {
       const images = []
       commit.body = commit.body.replace(
-        /(^|\s+)(!\[[^\]]*\]\()?(?<link>(http)?s?:?(\/\/[^"'\s]*?\.(?:png|jpg|jpeg|gif|png|svg)))\)?($|\s+)/gm,
+        /(^|\s+)(!\[[^\]]*\]\()?(?<link>(http)?s?:?(\/\/[^"'\s]*?\.(?:png|jpg|jpeg|gif|svg)))\)?($|\s+)/gm,
         (m, ...args) => {
           const g = args.pop()
           images.push(g.link)
@@ -89,7 +92,7 @@ const writerOpts = {
       if (url) {
         url = `${url}/issues/`
         // Issue URLs.
-        commit.subject = commit.subject.replace(/#([0-9]+)/g, (_, issue) => {
+        commit.subject = commit.subject.replace(/#(\d+)/g, (_, issue) => {
           issues.push(issue)
           return `[#${issue}](${url}${issue})`
         })
@@ -120,7 +123,9 @@ const writerOpts = {
     if (commit.authorName
       && commit.authorEmail
       && commit.authorEmail !== config.defaultAuthor
-    ) /** @type {any} */ (commit).isContribution = true
+    ) {
+      /** @type {any} */ (commit).isContribution = true
+    }
 
     return commit
   },
