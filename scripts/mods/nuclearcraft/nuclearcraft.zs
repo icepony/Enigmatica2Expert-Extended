@@ -889,20 +889,17 @@ for fluid in [
 // ------------------------------------------------------------
 mods.nuclearcraft.HeatExchanger.removeAllRecipes();
 
-val waterRequired = {
-  water             : { high_pressure_steam: 100 },
-  condensate_water  : { preheated_water: 10 },
-  preheated_water   : { high_pressure_steam: 50 },
-  ic2hot_water      : { high_pressure_steam: 30 },
-  hot_spring_water  : { high_pressure_steam: 20 },
-  ic2distilled_water: { high_pressure_steam: 25 },
-  distwater         : { high_pressure_steam: 25 },
-} as int[string][string];
-
-for coolant, cooling in coolants {
-  val cold = game.getLiquid(coolant + '_nak');
-  val hot = game.getLiquid(coolant + '_nak_hot');
-  for fluid, tuple in waterRequired {
+function coolDown(hot as ILiquidStack, cold as ILiquidStack, cooling as int) as void {
+  if (isNull(hot) || isNull(cold)) return;
+  for fluid, tuple in {
+    water             : { high_pressure_steam: 100 },
+    condensate_water  : { preheated_water: 10 },
+    preheated_water   : { high_pressure_steam: 50 },
+    ic2hot_water      : { high_pressure_steam: 30 },
+    hot_spring_water  : { high_pressure_steam: 20 },
+    ic2distilled_water: { high_pressure_steam: 25 },
+    distwater         : { high_pressure_steam: 25 },
+  } as int[string][string] {
     for output, amount in tuple {
       mods.immersivetechnology.HeatExchanger.addRecipe(
         cold * amount, game.getLiquid(output) * (400 * cooling),
@@ -911,6 +908,13 @@ for coolant, cooling in coolants {
       );
     }
   }
+}
+
+// Special case for non-mixed fluid
+coolDown(<fluid:nak_hot>, <fluid:nak>, 55);
+
+for coolant, cooling in coolants {
+  coolDown(game.getLiquid(coolant + '_nak_hot'), game.getLiquid(coolant + '_nak'), cooling);
 }
 
 // ------------------------------------------------------------
