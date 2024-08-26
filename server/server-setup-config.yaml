@@ -113,6 +113,9 @@ install:
       - 848933 # Hit Indication
       - 874067 # Valkyrie
       - 940521 # Just Enough Magiculture
+      - 1056812 # UniLib
+      - 1073925 # Rather Enough Immersive Multiblocks
+      - 1081085 # MiniEffects-Legacy Extended Life
 
     # The base path where the server should be installed to, ~ for current path
   baseInstallPath: ~
