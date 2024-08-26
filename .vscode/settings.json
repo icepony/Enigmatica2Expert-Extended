@@ -86,28 +86,6 @@
     "WailaErrorOutput.txt": true
   },
 
-  "workbench.colorCustomizations": {
-    "activityBar.activeBackground": "#003a52",
-    "activityBar.activeBorder": "#bf0087",
-    "activityBar.background": "#003a52",
-    "activityBar.foreground": "#e7e7e7",
-    "activityBar.inactiveForeground": "#e7e7e799",
-    "activityBarBadge.background": "#bf0087",
-    "activityBarBadge.foreground": "#e7e7e7",
-    "sash.hoverBorder": "#003a52",
-    "statusBar.background": "#00161f",
-    "statusBar.foreground": "#e7e7e7",
-    "statusBarItem.hoverBackground": "#003a52",
-    "statusBarItem.remoteBackground": "#00161f",
-    "statusBarItem.remoteForeground": "#e7e7e7",
-    "titleBar.activeBackground": "#00161f",
-    "titleBar.activeForeground": "#e7e7e7",
-    "titleBar.inactiveBackground": "#00161f99",
-    "titleBar.inactiveForeground": "#e7e7e799",
-    "commandCenter.border": "#e7e7e799"
-  },
-  "peacock.color": "00161f",
-
   // Automatically sort JSON files of mc-tools
   "emeraldwalk.runonsave": {
     "commands": [
