@@ -289,7 +289,15 @@ addItems(<ore:stoneMarble>, [<quark:world_stone_bricks:4>, <quark:marble:1>]);
 add(<ore:stoneGranite>, <quark:world_stone_bricks>);
 add(<ore:stoneDiorite>, <quark:world_stone_bricks:1>);
 add(<ore:stoneAndesite>, <quark:world_stone_bricks:2>);
-add(<ore:stoneBasalt>, <quark:world_stone_bricks:3>);
+addItems(<ore:stoneBasalt>, [
+  <quark:world_stone_bricks:3>,
+  <cathedral:basalt_block_carved>,
+  <cathedral:basalt_block_carved:1>,
+  <cathedral:basalt_block_carved:2>,
+  <cathedral:basalt_block_carved:3>,
+  <cathedral:basalt_block_carved:4>,
+  <cathedral:basalt_block_carved:5>,
+]);
 
 addItems(<ore:blockBricks>, [
   <minecraft:brick_block>,
@@ -300,6 +308,13 @@ addItems(<ore:blockBricks>, [
 
 addItems(<ore:slabBasalt>, [
   <quark:stone_basalt_slab>,
+  <cathedral:basalt_slab_carved>,
+  <cathedral:basalt_slab_carved:1>,
+  <cathedral:basalt_slab_carved:2>,
+  <cathedral:basalt_slab_carved:3>,
+  <cathedral:basalt_slab_carved:4>,
+  <cathedral:basalt_slab_carved:5>,
+  <cathedral:basalt_slab_carved:6>,
 ]);
 
 addItems(<ore:grassTall>, [
