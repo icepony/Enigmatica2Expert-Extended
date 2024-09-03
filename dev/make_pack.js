@@ -74,7 +74,7 @@ const argv = yargs(process.argv.slice(2))
     )
   ) {
     doTask('🪓 Doing automation ...\n\n', () =>
-      execSyncInherit('esno mc-tools/packages/run/src/cli.ts "dev:(.*)"'))
+      execSyncInherit('tsx mc-tools/packages/run/src/cli.ts "dev:(.*)"'))
   }
 
   /*
