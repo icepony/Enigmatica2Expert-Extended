@@ -14,12 +14,12 @@ static DIFFUCULTY_FACTOR as double = 0.1;
 // Minimum item cost multiplier when changed by difficulty
 static MIN_COST as double = 0.01;
 
-function getCost(item as IItemStack, difficulty as double = 10.0 /* must be "1.0 / DIFFUCULTY_FACTOR" */) as int {
+function getCost(item as IItemStack, difficulty as double) as int {
   val def = values[item.definition.id];
   if (isNull(def)) return 0;
   val cost = def[item.damage];
   if (isNull(cost)) return 0;
-  if (difficulty == 10.0) return cost as int;
+  if (difficulty < 0 || difficulty == 1.0 / DIFFUCULTY_FACTOR) return cost as int;
   return difficultCost(cost, difficulty);
 }
 

@@ -8,7 +8,7 @@ import crafttweaker.player.IPlayer;
 import mods.zenutils.StaticString.format;
 
 val uuTooltip as ITooltipFunction = function (item) {
-  val cost = scripts.category.uu.getCost(item);
+  val cost = scripts.category.uu.getCost(item, -1);
   val text = scripts.category.uu.formatUUCost(cost);
   val actualCost = scripts.category.uu.difficultCost(cost, client.player.difficulty);
   if (actualCost == cost) return text; // default cost
