@@ -11,7 +11,7 @@ import scripts.do.acquire.events.stringRegistry;
 /*Inject_js(
 (injectInFile('config/itemborders.cfg', 'S:yellow <\n', '\n     >',
   [...new Set(
-    [...loadText('crafttweaker.log').matchAll(/^\[SERVER_STARTED\]\[\w+\]\[\w+\] Acquire +([^:]+): <([^>]+)>/gm)]
+    [...loadText('crafttweaker.log').matchAll(/^\[\w+\]\[\w+\]\[\w+\] Acquire +([^:]+): <([^>]+)>/gm)]
     .map(([,,item]) => `        ${item}`)
   )]
   .sort(naturalSort)

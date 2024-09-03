@@ -5,14 +5,9 @@
     "enableHotbarSwap": true,
     "sortSound": "minecraft:ui.button.click",
     "buttonColor": "#ffffffff",
-    "_comment": "By setting the chance below to 0 you agree to have no humor and that you are boring.",
-    "baseBogoChance": 1.0E-5
+    "_comment": "By setting the chance below to 0 you agree to have no humor and that you are boring."
   },
   "ItemSortRules": [
-    {
-      "name": "count",
-      "inverted": false
-    },
     {
       "name": "block_type",
       "inverted": false
@@ -26,11 +21,11 @@
       "inverted": true
     },
     {
-      "name": "ore_prefix",
+      "name": "mod",
       "inverted": false
     },
     {
-      "name": "material",
+      "name": "meta",
       "inverted": false
     },
     {
@@ -39,14 +34,6 @@
     },
     {
       "name": "nbt_rules",
-      "inverted": false
-    },
-    {
-      "name": "mod",
-      "inverted": false
-    },
-    {
-      "name": "meta",
       "inverted": false
     },
     {

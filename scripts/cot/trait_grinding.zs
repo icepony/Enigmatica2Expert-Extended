@@ -93,9 +93,8 @@ return result.map((line) => {
   return ['  ', ...line]
 })
 } */
-  <item:appliedenergistics2:charged_quartz_ore>: <item:appliedenergistics2:material:2>        * 12,
-  <item:appliedenergistics2:quartz_ore>        : <item:appliedenergistics2:material:2>        * 12,
   <item:appliedenergistics2:charged_quartz_ore>: <item:jaopca:item_dustchargedcertusquartz>   * 8 ,
+  <item:appliedenergistics2:quartz_ore>        : <item:appliedenergistics2:material:2>        * 12,
   <item:actuallyadditions:block_misc:3>        : <item:actuallyadditions:item_dust:7>         * 8 ,
   <item:astralsorcery:blockcustomore:1>        : <item:astralsorcery:itemcraftingcomponent:2> * 4 ,
   <item:astralsorcery:blockcustomsandore>      : <item:jaopca:item_dustaquamarine>            * 16,
