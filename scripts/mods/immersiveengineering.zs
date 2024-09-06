@@ -6,11 +6,15 @@ import crafttweaker.liquid.ILiquidStack;
 import crafttweaker.potions.IPotionEffect;
 import mods.alfinivia.ImmersiveEngineering.addChemthrowerEffect;
 import mods.alfinivia.ImmersiveEngineering.addRailgunBullet;
+import scripts.jei.crafting_hints;
 
 recipes.remove(<immersiveengineering:material:1>);
 recipes.remove(<immersiveengineering:material:2>);
 recipes.remove(<immersiveengineering:material:3>);
 Purge(<immersiveengineering:material:24>).ores([<ore:dustSaltpeter>, <ore:dustNiter>]);
+
+// Recipe hint for mineral sampling
+crafting_hints.add1to1(<immersiveengineering:metal_device1:7>, <immersiveengineering:coresample>);
 
 // Fix IC2 block
 val UI = <ore:ingotUranium>;
@@ -486,16 +490,6 @@ craft.remake(<immersivepetroleum:stone_decoration> * 8, [
   B: <ore:bitumen>,
   C: <ore:gravel>,
   D: LiquidIngr('water'),
-});
-
-// [Portable_Drill] from [Bedrock_Miner][+2]
-craft.remake(<portabledrill:portable_drill>, ['pretty',
-  '╱ B ╱',
-  '  |  ',
-  '  |  '], {
-  '╱': <ore:stickSteel>,                 // Steel Rod
-  'B': <bedrockores:bedrock_miner>,      // Bedrock Miner
-  '|': <immersiveengineering:coresample>, // Core Sample
 });
 
 // Forge hammer from IC2 harder to craft, so everyone used IE hammer
