@@ -21,12 +21,6 @@ import scripts.category.uu;
 // Replicator RF/t usage
 static ENERGY_USAGE as int = 20000;
 
-// Fraction of UU-Matter cost (in mb) that will be added to difficulty
-static INCREASE_FACTOR as double = 0.0001;
-
-// Minimum difficulty increasing when performing replication
-static MIN_DIFF_INCREASE as double = 0.001;
-
 // [Replicator] from [Energium Ingot][+3]
 recipes.addShapeless('old to new replicator', <requious:replicator>, [<ic2:te:63>]);
 craft.make(<requious:replicator>, ['pretty',
@@ -183,7 +177,7 @@ function defineVars(m as MachineContainer) as void {
 // Increase player owner difficulty, no matter online he or not
 function increaseDifficulty(m as MachineContainer, bufferConsumed as int, dfclty as double) as void {
   // Determine cost
-  val increase = Math.max(MIN_DIFF_INCREASE, INCREASE_FACTOR / 100.0 * bufferConsumed);
+  val increase = scripts.category.uu.diffIncrease(0.01 * bufferConsumed);
   val ownerUUID = m.getString('ownerUUID');
   val newDifficulty = dfclty + increase;
   scripts.lib.offline.op.set(ownerUUID, 'difficulty', newDifficulty);

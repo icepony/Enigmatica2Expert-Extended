@@ -419,6 +419,7 @@ e2ee.acquire.owned.someone=其他人
 e2ee.acquire.cannot=§7你不能复制 %s§7，因为\n§6║ §7你的难度值 §f太高§7.
 e2ee.acquire.to_replicate=§7要复制 %s§7 并保持难度为 %s§7,\n§6║ §7你需要成本超过 %s§7 的物品。
 e2ee.acquire.list=§7%s§7 物品的UU成本较高的列表:
+e2ee.acquire.increase=§764个物品复制将增加§6+%s§e✪§7难度。
 tooltips.lang.acquire.hit=§e⚒ 用这个点击§f复制机§e以查看§6催化剂§e物品！
 e2ee.warn.wrong_installation=§6✖ §4您的模组包安装不正确！§6 ✖\n§c缺少模组：§nSmeltery IO§c、§nNetherending Ores§c等。\n§c这通常发生在通过启动器手动下载这些模组时。\n§c在§4Prism Launcher§c中，安装模组包时，只需点击弹出窗口中的☛[§n打开缺失§c]。\n§8E2E-E包含4个模组，其创建者声明这些模组不能通过第三方启动器下载。
 e2ee.warn.wrong_world_type=§6✖ §4看起来您错误地生成了世界！§6 ✖\n§c若要玩Skyblock，在主菜单中导航至\n§6Mods§c ▶ §6Just Enough Dimensions§c 配置 ▶ §6Generic§c ▶ 并将 §6initialSpawnDimensionId§c 设置为 §63§c。之后，创建一个新世界。
