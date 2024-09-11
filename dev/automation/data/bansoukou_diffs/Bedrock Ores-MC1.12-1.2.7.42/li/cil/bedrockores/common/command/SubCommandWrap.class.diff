@@ -1,9 +1,0 @@
-@@ -40,7 +40,7 @@ extends AbstractSubCommand {
-     public void func_184881_a(MinecraftServer server, ICommandSender sender, String[] args) throws CommandException {
-         int amount = args.length > 0 ? SubCommandWrap.func_180528_a((String)args[0], (int)1) : 100;
-         World world = sender.func_130014_f_();
--        BlockPos pos = SubCommandWrap.getLookedAtBlockPos((ICommandSender)sender);
-+        BlockPos pos = args.length > 3 ? new BlockPos(SubCommandWrap.func_180528_a((String)args[1], (int)-2000000000), SubCommandWrap.func_180528_a((String)args[2], (int)-2000000000), SubCommandWrap.func_180528_a((String)args[3], (int)-2000000000)) : SubCommandWrap.getLookedAtBlockPos((ICommandSender)sender);
-         if (pos == null) {
-             throw new WrongUsageException(this.func_71518_a(sender), new Object[0]);
-         }
