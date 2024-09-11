@@ -796,3 +796,6 @@ craft.remake(<actuallyadditions:item_filling_wand>, ['pretty',
   'E': <actuallyadditions:block_energizer>, // Energizer
   'B': <actuallyadditions:item_misc:7>, // Basic Coil
 });
+
+// Alternative filling
+mods.tconstruct.Casting.addTableRecipe(<actuallyadditions:item_water_bowl>, <minecraft:bowl>, <liquid:water>, 1000, true, 1);
