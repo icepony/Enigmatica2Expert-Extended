@@ -409,6 +409,7 @@ e2ee.acquire.on.craft=§8(создав §7✎§8 его)
 e2ee.acquire.on.place=§8(разместив §7❒§8 его)
 e2ee.acquire.on.use=§8(использовав §7⚙§8 его)
 e2ee.acquire.on.hold=§8(держа §7✍§8 его)
+e2ee.acquire.on.replicate=§8(реплицируя §7⌛§8 его)
 e2ee.acquire.difficulty=§7Сложность увеличена на §6§l+%s§7. Всего: §l%s§7.
 e2ee.acquire.max_already=§7Сложность §l1000§7 (максимум).
 e2ee.acquire.more=§7§nНажмите здесь для подробностей§7.

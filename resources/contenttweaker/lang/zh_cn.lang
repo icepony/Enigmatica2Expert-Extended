@@ -408,6 +408,7 @@ e2ee.acquire.on.craft=§8(合成 §7✎§8 它)
 e2ee.acquire.on.place=§8(放置 §7❒§8 它)
 e2ee.acquire.on.use=§8(使用 §7⚙§8 它)
 e2ee.acquire.on.hold=§8(拿着 §7✍§8 它)
+e2ee.acquire.on.replicate=§8(通过复制§7⌛§8 来实现)
 e2ee.acquire.difficulty=§7难度增加 §6§l+%s§7. 总计: §l%s§7.
 e2ee.acquire.max_already=§7难度已达 §l1000§7 (最大值).
 e2ee.acquire.more=§7§n点击这里查看详细信息§7.

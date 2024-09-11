@@ -1,4 +1,5 @@
 #modloaded requious
+#priority -1400
 #reloadable
 
 import crafttweaker.item.IItemStack;
@@ -364,6 +365,9 @@ function tick(m as MachineContainer) as void {
     return pushErr(m, '§3Write data\n§3 to memory');
   }
   m.setItem(displX, displY, item); // Set item is display slot
+
+  // Acquire item when player trying to replicate it
+  scripts.do.acquire.events.checkAcquire('replicate', server.getPlayerByUUID(ownerUUID), item);
 
   // 🥼 Check if we can consume catalyst
   val catl = m.getItem(catlX, catlY);

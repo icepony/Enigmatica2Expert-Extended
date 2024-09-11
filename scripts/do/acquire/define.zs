@@ -88,7 +88,7 @@ Forbidder()
 .stack(<gendustry:imprinter>).onOpen('net.bdew.gendustry.machines.imprinter.ContainerImprinter').value(40).events('pickup craft')
 .stack(<gendustry:replicator>).onOpen('net.bdew.gendustry.machines.replicator.ContainerReplicator').value(60).events('pickup craft')
 
-.stack(<appliedenergistics2:controller>).value(100).events('pickup craft place look')
+.stack(<appliedenergistics2:controller>).value(100).events('pickup craft place look replicate')
 
 .stacks('fluxnetworks', [
   <fluxnetworks:fluxpoint>,

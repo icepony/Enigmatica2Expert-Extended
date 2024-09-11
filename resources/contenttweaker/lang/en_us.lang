@@ -408,6 +408,7 @@ e2ee.acquire.on.craft=§8(by crafting §7✎§8 it)
 e2ee.acquire.on.place=§8(by placing §7❒§8 it)
 e2ee.acquire.on.use=§8(by using §7⚙§8 it)
 e2ee.acquire.on.hold=§8(by holding §7✍§8 it)
+e2ee.acquire.on.replicate=§8(by replicating §7⌛§8 it)
 e2ee.acquire.difficulty=§7Difficulty increased by §6§l+%s§7. Total: §l%s§7.
 e2ee.acquire.max_already=§7Difficulty is §l1000§7 (already max).
 e2ee.acquire.more=§7§nClick here for more info§7.

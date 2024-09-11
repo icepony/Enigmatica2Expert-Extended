@@ -54,7 +54,7 @@ zenClass Forbidder {
 
     // Check for existing events
     for event in evts {
-     if (!(['pickup', 'open', 'look', 'craft', 'place', 'use', 'hold'] as string[] has event))
+     if (!(['pickup', 'open', 'look', 'craft', 'place', 'use', 'hold', 'replicate'] as string[] has event))
       logger.logWarning('Acquire error: trying to add absent acquiring event: "'~event~'"');
     }
 
