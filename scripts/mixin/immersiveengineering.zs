@@ -17,7 +17,7 @@ zenClass MixinTileEntitySilo {
     #    constant: {intValue: 41472}
     #}
     function buffStorage(value as int) as int {
-        return 0xffff00;
+        return 2000000000;
     }
 }
 
