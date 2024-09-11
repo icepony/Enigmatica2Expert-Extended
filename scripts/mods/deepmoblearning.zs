@@ -33,7 +33,7 @@ craft.remake(<deepmoblearning:machine_casing> * 2, ["pretty",
   "□ ■ □"], {
   "□": <deepmoblearning:soot_covered_plate>, # Soot-covered Plate
   "п": <tconstruct:large_plate>.withTag({Material: "manyullyn"}), # Manyullyn Large Plate
-  "3": <opencomputers:print>,                # 3D Print
+  "3": <enderio:item_basic_capacitor:1>,
   "■": <ore:blockBlackIron>,                 # Block of Black Iron
 });
 
