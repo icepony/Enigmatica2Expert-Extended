@@ -262,6 +262,16 @@ val itemFromPrint = {
       { texture: 'draconicevolution:blocks/animated/dislocator_receptacle_inactive', bounds: [0, 0, 0, 16, 16, 16] as byte[] },
     ],
   },
+
+  <enderio:item_basic_capacitor:1>: {
+    stateOff: [
+      { texture: 'chisel:blocks/iron/terrain-iron-simple-side', bounds: [7, 15, 6, 9, 16, 10] as byte[] },
+      { texture: 'chisel:blocks/iron/terrain-iron-largeingot-side', bounds: [7, 0, 9, 9, 6, 11] as byte[] },
+      { texture: 'chisel:blocks/iron/terrain-iron-largeingot-side', bounds: [7, 0, 5, 9, 6, 7] as byte[] },
+      { texture: 'chisel:blocks/iron/terrain-iron-simple-side', bounds: [6, 6, 5, 10, 15, 11] as byte[] },
+      { texture: 'thermalfoundation:blocks/fluid/cryotheum_still', bounds: [5, 10, 7, 11, 12, 9] as byte[] },
+    ],
+  },
 } as IData[IItemStack];
 
 for output, tag in itemFromPrint {
