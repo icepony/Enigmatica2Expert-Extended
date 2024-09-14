@@ -138,12 +138,36 @@ x.addJEIRecipe(AssemblyRecipe.create(function (c) {
   .requireItem('input5', <thaumcraft:bottle_taint>)
 );
 
-// IC2 basalt
+//////////////////////////////////////////////////////////////////////
+// IC2
+//////////////////////////////////////////////////////////////////////
 x.addJEIRecipe(AssemblyRecipe.create(function (c) {
   c.addItemOutput('output1', <ic2:resource>);
 })
   .requireFluid('fluid_in', <fluid:ic2pahoehoe_lava> * 1000)
 );
+
+x.addJEIRecipe(AssemblyRecipe.create(function (c) {
+  c.addFluidOutput('fluid_out', <fluid:ic2steam> * 1000);})
+  .requireFluid('fluid_in', <fluid:water> * 10)
+  .requireItem('input0', <ic2:te:34>));
+
+x.addJEIRecipe(AssemblyRecipe.create(function (c) {
+  c.addFluidOutput('fluid_out', <fluid:ic2superheated_steam> * 1000);})
+  .requireFluid('fluid_in', <fluid:water> * 10)
+  .requireItem('input0', <ic2:te:34>));
+
+x.addJEIRecipe(AssemblyRecipe.create(function (c) {
+  c.addItemOutput('output1', <ic2:foam> * 10);})
+  .requireFluid('fluid_in', <fluid:ic2construction_foam> * 1000)
+  .requireItem('input0', <ic2:foam_sprayer>));
+
+x.addJEIRecipe(AssemblyRecipe.create(function (c) {
+  c.addItemOutput('output1', <ic2:foam:1> * 10);})
+  .requireFluid('fluid_in', <fluid:ic2construction_foam> * 1000)
+  .requireItem('input5', <ic2:scaffold:2> * 10)
+  .requireItem('input0', <ic2:foam_sprayer>));
+//////////////////////////////////////////////////////////////////////
 
 add1to1(null, <avaritia:resource:2>, <avaritia:neutron_collector>);
 
