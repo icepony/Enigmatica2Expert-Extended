@@ -14,7 +14,7 @@ static fluidToBlock as string[string] = {
 // Item and respective block
 //                      chance blockOutput fluidId inputId
 static burntRecipes as double[IBlockState][string][string]
-               = {} as double[IBlockState][string][string];
+               = {} as double[IBlockState][string][string]$orderly;
 
 function add(inputId as string, blockOutput as IBlockState, fluidId as string = 'stone', chance as double = 1.0) as void {
   if (blockOutput.block.definition.id == 'minecraft:air') {
