@@ -1,4 +1,5 @@
 #loader mixin
+#sideonly client
 
 #mixin Mixin
 #{targets: net.darkhax.oldjava.OldJavaWarning}
