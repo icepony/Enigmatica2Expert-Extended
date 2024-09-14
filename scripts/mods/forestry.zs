@@ -20,10 +20,6 @@ recipes.removeByRecipeName('forestry:greenhouse_plain');
 recipes.removeByRecipeName('forestry:greenhouse_window_roof');
 recipes.removeByRecipeName('forestry:greenhouse_window');
 
-// Add hint about manual serum source
-scripts.jei.crafting_hints.addInsOutCatl([<forestry:butterfly_ge:*>], <forestry:serum_ge>, <forestry:escritoire>);
-scripts.jei.crafting_hints.addInsOutCatl([<forestry:caterpillar_ge:*>], <forestry:serum_ge>, <forestry:escritoire>);
-
 // Fix grapes have two different outputs - Fruit Juice and Grape Juice
 mods.forestry.Squeezer.removeRecipe(<liquid:juice>, [<rustic:grapes>]);
 

@@ -4,6 +4,12 @@
 import crafttweaker.item.IItemStack;
 import mods.requious.AssemblyRecipe;
 
+// Hint about Caterpillars, Butterflies and Serums
+scripts.jei.crafting_hints.addInsOutCatl([<forestry:butterfly_ge:*>], <forestry:caterpillar_ge>);
+scripts.jei.crafting_hints.addInsOutCatl([<forestry:butterfly_ge:*>], <forestry:serum_ge>, <forestry:escritoire>);
+scripts.jei.crafting_hints.addInsOutCatl([<forestry:caterpillar_ge:*>], <forestry:serum_ge>, <forestry:escritoire>);
+scripts.jei.crafting_hints.addInsOutCatl([<forestry:cocoon_ge:*>], <forestry:serum_ge>, <forestry:escritoire>);
+
 // -----------------------------------------------------------------------
 // -----------------------------------------------------------------------
 val x = <assembly:forestry_farm>;
