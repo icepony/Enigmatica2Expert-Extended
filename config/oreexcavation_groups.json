@@ -4,7 +4,9 @@
       "treeLeaves"
     ],
     [
-      "logWood"
+      "logWood",
+      "integrateddynamics:menril_log",
+      "integrateddynamics:menril_log_filled"
     ],
     [
       "immersiveengineering:stone_decoration_slab:5",
