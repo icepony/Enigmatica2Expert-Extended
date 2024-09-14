@@ -116,6 +116,7 @@ install:
       - 1056812 # UniLib
       - 1073925 # Rather Enough Immersive Multiblocks
       - 1081085 # MiniEffects-Legacy Extended Life
+      - 1085598 # JEI Area Fixer
 
     # The base path where the server should be installed to, ~ for current path
   baseInstallPath: ~
