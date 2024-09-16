@@ -22,6 +22,15 @@
 - [ ] Add when fixed https://github.com/Invadermonky/MagicultureIntegrations/issues/4
 - [ ] transormation powder turn fox into foxhound
 - [ ] Integrate https://www.curseforge.com/minecraft/mc-mods/customfishing
+- [ ] Integrate `Fluid Interaction Tweaker`
+- [ ] 📖 Reward proper tank in Skyblock Quests before treated wood
+- [ ] 🚧 TconScript: account trait "value" in resulted power
+- [ ] 📖 Add `Ctrl+F5` hotkey info
+- [ ] 📖 Add note about disabling placement logic
+- [ ] 📖 Find how to work with Modrinth and install https://modrinth.com/mod/hit-indication
+- [ ] 🕰️ Make Timewood Clock function unstackable
+- [ ] 🟢 Add and integrate https://legacy.curseforge.com/minecraft/mc-mods/villager-contracts
+- [ ] 📖 fix stellar set reward random
 
 ---
 
@@ -80,7 +89,7 @@ Planned non-urgent changes, or just good ideas:
 - [ ] ✏️ Milk Questing Ram to color essence
 - [ ] 🔄 Add `Cow Hacker` feature. Buff cow with 2-3 special potions based on their UUID to turn it into drop generator.
 - [ ] ✏️ Dragon Ice better craft isages
-- [ ] ✏️ Fish rework: All automated fishing options way harder to make sense of manual fishing. All fish usages lower
+- [ ] ✏️ Fish rework: All automated fishing options way harder to make sense of manual fishing. All fish usages lower. Add `Fish Singularity`.
 - [ ] ✏️ Add `Meat Singularity`
 - [ ] 🔨 Ironwood Add material. Drop Armor from mobs on hit
 
