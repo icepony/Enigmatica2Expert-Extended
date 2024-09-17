@@ -11,7 +11,7 @@ import scripts.do.acquire.events.stringRegistry;
 /*Inject_js(
 (injectInFile('config/itemborders.cfg', 'S:yellow <\n', '\n     >',
   [...new Set(
-    [...loadText('crafttweaker.log').matchAll(/^\[SERVER_STARTED\]\[\w+\]\[\w+\] Acquire +([^:]+): <([^>]+)>/gm)]
+    [...loadText('crafttweaker.log').matchAll(/^\[\w+\]\[\w+\]\[\w+\] Acquire +([^:]+): <([^>]+)>/gm)]
     .map(([,,item]) => `        ${item}`)
   )]
   .sort(naturalSort)
@@ -54,7 +54,7 @@ zenClass Forbidder {
 
     // Check for existing events
     for event in evts {
-     if (!(['pickup', 'open', 'look', 'craft', 'place', 'use', 'hold'] as string[] has event))
+     if (!(['pickup', 'open', 'look', 'craft', 'place', 'use', 'hold', 'replicate'] as string[] has event))
       logger.logWarning('Acquire error: trying to add absent acquiring event: "'~event~'"');
     }
 

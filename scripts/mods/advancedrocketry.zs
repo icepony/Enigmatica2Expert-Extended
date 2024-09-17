@@ -304,7 +304,7 @@ craft.make(<advancedrocketry:suitworkstation>, ['pretty',
   '3 w 3',
   '■ ■ ■'], {
   '■': <ore:blockTitanium>, // Titanium Block
-  '3': <opencomputers:print>, // 3D Print
+  '3': <enderio:item_basic_capacitor:1>,
   'w': <ore:workbench>, // Crafting Table
   '*': <ore:crystalEmeraldic>, // Emeradic Crystal
 });

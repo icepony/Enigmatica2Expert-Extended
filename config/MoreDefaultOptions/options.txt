@@ -4,14 +4,12 @@ mouseSensitivity:0.5
 fov:0.0
 gamma:1.0
 saturation:0.0
-renderDistance:12
 guiScale:3
 particles:0
 bobView:false
 anaglyph3d:false
 maxFps:260
 fboEnable:true
-difficulty:2
 fancyGraphics:true
 ao:2
 renderClouds:true
@@ -62,8 +60,8 @@ key_Boost Key:0
 key_Change Caster Focus:34
 key_ChatFlow:88
 key_cos.key.opencosarmorinventory:0
-key_Difficulty Meter - Show Always:49:SHIFT
 key_Difficulty Meter - Show:49
+key_Difficulty Meter - Show Always:49:SHIFT
 key_enderio.keybind.dsu:19:CONTROL
 key_enderio.keybind.fovminus:0
 key_enderio.keybind.fovminusfast:0
@@ -105,8 +103,8 @@ key_gui.xaero_toggle_entity_radar:0
 key_gui.xaero_toggle_grid:0
 key_gui.xaero_toggle_light_overlay:0
 key_gui.xaero_toggle_manual_cave_mode:0
-key_gui.xaero_toggle_map_waypoints:0
 key_gui.xaero_toggle_map:50:ALT
+key_gui.xaero_toggle_map_waypoints:0
 key_gui.xaero_toggle_slime:0
 key_gui.xaero_toggle_tracked_players:0
 key_gui.xaero_toggle_waypoints:0
@@ -147,10 +145,10 @@ key_key.craftingtweaks.decompressAll:0
 key_key.craftingtweaks.decompressOne:0
 key_key.craftingtweaks.decompressStack:0
 key_key.craftingtweaks.force_clear:0
-key_key.craftingtweaks.refill_last_stack:15
 key_key.craftingtweaks.refill_last:15
-key_key.craftingtweaks.rotate_counter_clockwise:0
+key_key.craftingtweaks.refill_last_stack:15
 key_key.craftingtweaks.rotate:0
+key_key.craftingtweaks.rotate_counter_clockwise:0
 key_key.craftingtweaks.spread:0
 key_key.craftingtweaks.toggleButtons:0
 key_key.craftpresence.config_keycode.name:0
@@ -181,6 +179,7 @@ key_key.fuzzy:0
 key_key.gridfixy:79
 key_key.gridhere:35
 key_key.gridspawns:0
+key_key.groovyscript.reload:19:CONTROL
 key_key.hotbar.1:2
 key_key.hotbar.2:3
 key_key.hotbar.3:4
@@ -270,8 +269,8 @@ key_key.settings_menu:34
 key_key.showhide:0
 key_key.smoothCamera:0
 key_key.sneak:42
-key_key.sort_config:37:CONTROL
 key_key.sort:-98
+key_key.sort_config:37:CONTROL
 key_key.spectatorOutlines:0
 key_key.sprint:29
 key_key.swapHands:33

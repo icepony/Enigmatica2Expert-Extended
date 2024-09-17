@@ -9,17 +9,43 @@ import crafttweaker.player.IPlayer;
 import crafttweaker.util.Math;
 
 // How strong Difficulty effects on resulted cost
-static DIFFUCULTY_FACTOR as double = 0.1;
+static DIFFUCULTY_FACTOR as double = 0.01;
 
 // Minimum item cost multiplier when changed by difficulty
 static MIN_COST as double = 0.01;
 
-function getCost(item as IItemStack, difficulty as double = 10.0 /* must be "1.0 / DIFFUCULTY_FACTOR" */) as int {
+// Fraction of UU-Matter cost (in mb) that will be added to difficulty
+function diffIncrease(uuMbConsumed as double) as double {
+  return pow(uuMbConsumed, 0.6) / 10000;
+}
+
+/*
+Map of difficulty increase with current formula.
+Left is amount of mb consumed, right is amount of difficulty added.
+
+new Array(13).fill(0).map((_,i)=>10**(i+1)*0.001).map(v=>`${String(v).replace(/(\...).+/,'$1').padStart(11)} => ${Math.pow(v, 0.6) / 10000}`).join('\n')
+       0.01 => 0.000006309573444801933
+        0.1 => 0.0000251188643150958
+          1 => 0.0001
+         10 => 0.00039810717055349724
+        100 => 0.0015848931924611132
+       1000 => 0.006309573444801931
+      10000 => 0.025118864315095798
+     100000 => 0.09999999999999998
+    1000000 => 0.39810717055349715
+   10000000 => 1.584893192461113
+  100000000 => 6.30957344480193
+ 1000000000 => 25.118864315095788
+10000000000 => 99.99999999999996
+
+*/
+
+function getCost(item as IItemStack, difficulty as double) as int {
   val def = values[item.definition.id];
   if (isNull(def)) return 0;
   val cost = def[item.damage];
   if (isNull(cost)) return 0;
-  if (difficulty == 10.0) return cost as int;
+  if (difficulty < 0 || difficulty == 1.0 / DIFFUCULTY_FACTOR) return cost as int;
   return difficultCost(cost, difficulty);
 }
 
@@ -1221,9 +1247,7 @@ static values as int[int][string] = {
   'environmentaltech:solar_cell_kyronite'  : { 0: 516964 },
   'extendedcrafting:singularity'           : {
     1 : 908259,
-    4 : 36408260,
     5 : 5407553,
-    7 : 100408259,
     16: 758259,
     17: 608259,
     18: 808259,
@@ -1237,7 +1261,6 @@ static values as int[int][string] = {
     29: 15934162,
     32: 3908259,
     34: 52537781,
-    35: 156719115,
     48: 2810286,
     49: 11475900,
     50: 15816097,

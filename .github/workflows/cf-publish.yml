@@ -52,13 +52,13 @@ jobs:
         id: latest_html
         uses: andstor/file-reader-action@v1
         with:
-          path: "latest_release.html"
+          path: latest_release.html
 
       - name: 💽 Download .zip files from latest release
         uses: robinraju/release-downloader@v1.4
         with:
           latest: true
-          fileName: "*.zip"
+          fileName: '*.zip'
 
       - name: 🅱 Determine release type
         id: release_type
@@ -71,27 +71,27 @@ jobs:
             echo "release_type=release" >> $GITHUB_ENV
           fi
 
-      - name: "💻 Upload Client"
+      - name: 💻 Upload Client
         uses: itsmeow/curseforge-upload@v3
         id: client
         with:
-          release_type: ${{ env.release_type }}  # Updated to use determined release type
-          display_name: "E2E-Extended-${{ steps.release.outputs.tag_name }}"
-          file_path: "E2E-Extended-${{ steps.release.outputs.tag_name }}.zip"
-          game_endpoint: "minecraft"
-          game_versions: "Minecraft 1.12:1.12.2"
-          project_id: "561105"
-          token: "${{ secrets.CURSEFORGE_API_TOKEN }}"
+          release_type: ${{ env.release_type }}
+          display_name: 'E2E-Extended-${{ steps.release.outputs.tag_name }}'
+          file_path: 'E2E-Extended-${{ steps.release.outputs.tag_name }}.zip'
+          game_endpoint: minecraft
+          game_versions: 'Minecraft 1.12:1.12.2'
+          project_id: '561105'
+          token: '${{ secrets.CURSEFORGE_API_TOKEN }}'
           changelog_type: html
-          changelog: "${{ steps.latest_html.outputs.contents }}"
+          changelog: '${{ steps.latest_html.outputs.contents }}'
 
-      - name: "🖥️ Upload Server"
+      - name: 🖥️ Upload Server
         uses: itsmeow/curseforge-upload@v3
         with:
-          release_type: ${{ env.release_type }}  # Updated to use determined release type
-          display_name: "E2E-Extended-${{ steps.release.outputs.tag_name }}-server"
-          file_path: "E2E-Extended-${{ steps.release.outputs.tag_name }}-server.zip"
-          game_endpoint: "minecraft"
-          project_id: "561105"
+          release_type: ${{ env.release_type }}
+          display_name: 'E2E-Extended-${{ steps.release.outputs.tag_name }}-server'
+          file_path: 'E2E-Extended-${{ steps.release.outputs.tag_name }}-server.zip'
+          game_endpoint: minecraft
+          project_id: '561105'
           parent_file_id: ${{ steps.client.outputs.id }}
-          token: "${{ secrets.CURSEFORGE_API_TOKEN }}"
+          token: '${{ secrets.CURSEFORGE_API_TOKEN }}'

@@ -173,11 +173,10 @@ else {
 
   // [ME Controller] from [Industrial Machine Chassis][+4]
   craft.remake(controller, ['pretty',
-    'C I C',
+    'C A C',
     'Ϟ M Ϟ',
     'C A C'], {
     'C': <contenttweaker:compressed_crushed_skystone>, // Compressed Crushed Skystone
-    'I': <enderio:block_inventory_panel>, // Inventory Panel
     'Ϟ': <appliedenergistics2:energy_acceptor>, // Energy Acceptor
     'M': <ore:itemMachineChassi>, // Industrial Machine Chassis
     'A': <appliedenergistics2:material:28>, // Advanced Card

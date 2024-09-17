@@ -21,17 +21,12 @@ function show(player as IPlayer, item as IItemStack, block as IBlock) as bool {
   if (
     isNull(player.world)
     || player.world.remote
-    || isNull(item)
-    || item.definition.id != 'ic2:crystal_memory'
-    || !item.hasTag
-    || isNull(item.tag.Pattern)
-    || isNull(item.tag.Pattern.id)
     || isNull(block)
     || isNull(block.definition)
     || block.definition.id != 'requious:replicator'
   ) return false;
 
-  var encodedItem = IItemStack.fromData(item.tag.Pattern);
+  val encodedItem = scripts.lib.mod.ic2.getCrystalMemoryContent(item);
   if(isNull(encodedItem)) return false;
 
   val ownerUUID as string = isNull(block.data)

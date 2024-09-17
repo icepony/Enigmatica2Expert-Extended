@@ -23,6 +23,9 @@
 		type: "item",
 		items: [{
 			item: "twilightforest:maze_wafer"
+		},
+		{
+			item: "twilightforest:experiment_115"
 		}],
 		count: 8L,
 		consume_items: true
@@ -37,6 +40,7 @@
 				type: "common"
 			}
 		},
+		count: 2,
 		random_bonus: 1
 	}]
 }

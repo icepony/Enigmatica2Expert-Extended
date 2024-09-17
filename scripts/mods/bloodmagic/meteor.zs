@@ -77,10 +77,10 @@ events.onBlockNeighborNotify(function (e as crafttweaker.event.BlockNeighborNoti
   // Skip if random pos out of loaded chunks. Also prevent to spawn meteor on chunks boundaries
   if (
     !e.world.isBlockLoaded(rndPos)
-    || !e.world.isBlockLoaded(rndPos.east(64))
-    || !e.world.isBlockLoaded(rndPos.west(64))
-    || !e.world.isBlockLoaded(rndPos.north(64))
-    || !e.world.isBlockLoaded(rndPos.south(64))
+    || !e.world.isBlockLoaded(rndPos.east(16))
+    || !e.world.isBlockLoaded(rndPos.west(16))
+    || !e.world.isBlockLoaded(rndPos.north(16))
+    || !e.world.isBlockLoaded(rndPos.south(16))
   ) return;
 
   val data = e.world.getCustomChunkData(rndPos);
@@ -110,9 +110,9 @@ function spawnMeteor(world as IWorld, pos as IBlockPos, stack as IItemStack) as 
     fillerChance           : 0.0,
     projectileMaxTicksInAir: 150,
     Motion                 : [
-      world.random.nextDouble(-2, 2),
-      world.random.nextDouble(-1, -2),
-      world.random.nextDouble(1, 4),
+      world.random.nextDouble(-0.2, 0.2),
+      world.random.nextDouble(-0.5, -1.5),
+      world.random.nextDouble(0.25, 1),
     ],
   } as IData;
   meteor.updateNBT(newData);

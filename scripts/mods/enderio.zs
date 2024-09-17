@@ -394,7 +394,7 @@ craft.remake(<enderio:block_stirling_generator>, ["pretty",
   "E": <mekanism:electrolyticcore>,        # Electrolytic Core
   "M": <ore:itemMachineChassi>,            # Industrial Machine Chassis
   "☼": <ore:gearDark>,                     # Dark Bimetal Gear
-  "3": <opencomputers:print>,              # 3D Print
+  "3": <enderio:item_basic_capacitor:1>,
 });
 
 # [SAG Mill] from [Industrial Machine Chassis][+4]
@@ -406,7 +406,7 @@ craft.remake(<enderio:block_sag_mill>, ["pretty",
   "□": <tconstruct:large_plate>.withTag({Material: "flint"}), # Flint Large Plate
   "M": <ore:itemMachineChassi>, # Industrial Machine Chassis
   "☼": <ore:gearDark>,          # Dark Bimetal Gear
-  "3": <opencomputers:print>,   # 3D Print
+  "3": <enderio:item_basic_capacitor:1>,
 });
 
 # [Alloy Smelter] from [Industrial Machine Chassis][+4]
@@ -418,7 +418,7 @@ craft.remake(<enderio:block_alloy_smelter>, ["pretty",
   "H": <tcomplement:high_oven_controller>, # High Oven Controller
   "M": <ore:itemMachineChassi>,            # Industrial Machine Chassis
   "☼": <ore:gearDark>,                     # Dark Bimetal Gear
-  "3": <opencomputers:print>,              # 3D Print
+  "3": <enderio:item_basic_capacitor:1>,
 });
 
 // [Simple_Inventory_Charger] from [LV_Capacitor][+2]

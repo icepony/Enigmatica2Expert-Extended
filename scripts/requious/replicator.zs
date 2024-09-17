@@ -1,4 +1,5 @@
 #modloaded requious
+#priority -1400
 #reloadable
 
 import crafttweaker.item.IItemStack;
@@ -20,12 +21,6 @@ import scripts.category.uu;
 
 // Replicator RF/t usage
 static ENERGY_USAGE as int = 20000;
-
-// fraction of UU-Matter cost that will be added to difficulty
-static INCREASE_FACTOR as double = 0.000001;
-
-// Minimum difficulty increasing when performing replication
-static MIN_DIFF_INCREASE as double = 0.001;
 
 // [Replicator] from [Energium Ingot][+3]
 recipes.addShapeless('old to new replicator', <requious:replicator>, [<ic2:te:63>]);
@@ -183,7 +178,7 @@ function defineVars(m as MachineContainer) as void {
 // Increase player owner difficulty, no matter online he or not
 function increaseDifficulty(m as MachineContainer, bufferConsumed as int, dfclty as double) as void {
   // Determine cost
-  val increase = Math.max(MIN_DIFF_INCREASE, INCREASE_FACTOR * bufferConsumed);
+  val increase = scripts.category.uu.diffIncrease(0.01 * bufferConsumed);
   val ownerUUID = m.getString('ownerUUID');
   val newDifficulty = dfclty + increase;
   scripts.lib.offline.op.set(ownerUUID, 'difficulty', newDifficulty);
@@ -251,7 +246,7 @@ function consumeEnergy(m as MachineContainer, amount as int) as void {
 // Machine completed it task and could start new one
 function succes(m as MachineContainer, powr as int, output as IItemStack, dfclty as double) as void {
   m.setItem(outX, outY, output);
-  increaseDifficulty(m, uu.getCost(output), dfclty);
+  increaseDifficulty(m, uu.getCost(output, -1), dfclty);
   consumeEnergy(m, powr);
   m.setInteger('goal', 0);
   pushErr(m, null);
@@ -371,10 +366,13 @@ function tick(m as MachineContainer) as void {
   }
   m.setItem(displX, displY, item); // Set item is display slot
 
+  // Acquire item when player trying to replicate it
+  scripts.do.acquire.events.checkAcquire('replicate', server.getPlayerByUUID(ownerUUID), item);
+
   // 🥼 Check if we can consume catalyst
   val catl = m.getItem(catlX, catlY);
   if (isNull(catl)) return pushErr(m, '§6Need\n§6 catalyst');
-  val catlCost = uu.getCost(catl);
+  val catlCost = uu.getCost(catl, -1);
   if (catlCost <= 0) return pushErr(m, '§7Unusable\n§7 catalyst');
 
   // 💲 Calculate cost and penalty based on difficulty

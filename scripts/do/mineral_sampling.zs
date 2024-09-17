@@ -1,4 +1,4 @@
-#modloaded zenutils immersiveengineering
+#modloaded zenutils immersiveengineering immersivepetroleum tconevo
 #reloadable
 
 /**
@@ -19,6 +19,13 @@
  * -player will be given this sample
  * -the hammer will recive a cooldown of 20 ticks
  *
+ * mod requirement:
+ * - zenutils: for native java access
+ * - immersiveengineering: provides `Mineral Sample`
+ * - immersivepetroleum: for oil support
+ * - tconevo: allows attaching energy to TCon tools, change this if energy consuming method
+ * is altered/removed in the future
+ *
  * @author ZZZank
  *
  * @see blusunrize.immersiveengineering.common.blocks.metal.TileEntitySampleDrill
@@ -28,10 +35,42 @@
 import crafttweaker.data.IData;
 import crafttweaker.entity.IEntityEquipmentSlot;
 import crafttweaker.event.PlayerInteractBlockEvent;
+import crafttweaker.item.IItemStack;
+
 import native.blusunrize.immersiveengineering.api.tool.ExcavatorHandler;
 import native.blusunrize.immersiveengineering.common.blocks.metal.TileEntitySampleDrill;
+import native.flaxbeard.immersivepetroleum.api.crafting.PumpjackHandler;
+
+import scripts.jei.crafting_hints;
 
 val ENERGY_COST = 8000 * 10; // base cost is 8000RF, we make it 10 times bigger as the cost of saving time
+
+// Recipe hint
+val ENERGY_FULL_EXAMPLE = 100000; //must be no smaller than `ENERGY_COST` to prevent display error
+crafting_hints.addInsOutsCatl(
+  [
+    <tconstruct:hammer>.withTag({
+      FluxedEnergyMax: ENERGY_FULL_EXAMPLE, 
+      Traits: ["tconevo.fluxed"], 
+      Modifiers: [
+        {identifier: "tconevo.fluxed", color: 11091771, level: 1, modifierUsed: 1 as byte}
+      ], 
+      FluxedEnergy: ENERGY_FULL_EXAMPLE
+    })
+  ],
+  [
+    <tconstruct:hammer>.withTag({
+      FluxedEnergyMax: ENERGY_FULL_EXAMPLE, 
+      Traits: ["tconevo.fluxed"], 
+      Modifiers: [
+        {identifier: "tconevo.fluxed", color: 11091771, level: 1, modifierUsed: 1 as byte}
+      ], 
+      FluxedEnergy: ENERGY_FULL_EXAMPLE - ENERGY_COST
+    }),
+    <immersiveengineering:coresample>
+  ],
+  <immersiveengineering:metal_device1:7>
+);
 
 events.onPlayerInteractBlock(function (event as PlayerInteractBlockEvent) {
   val player = event.player;
@@ -74,14 +113,26 @@ events.onPlayerInteractBlock(function (event as PlayerInteractBlockEvent) {
     nativePlayer.chunkCoordX,
     nativePlayer.chunkCoordZ
   );
-    val sample = drill.createCoreSample(
+  var sample = drill.createCoreSample(
     nativeWorld,
     nativePlayer.chunkCoordX,
     nativePlayer.chunkCoordZ,
     worldInfo
+  ) as IItemStack;
+  //attach oil info
+  val oilInfo = PumpjackHandler.getOilWorldInfo(
+    nativeWorld,
+    nativePlayer.chunkCoordX,
+    nativePlayer.chunkCoordZ
   );
+  if (!isNull(oilInfo)) {
+    sample = sample.withTag(sample.tag + {
+      "resType": oilInfo.getType().name,
+      "oil": oilInfo.current
+    });
+  }
 
   // give item, and prevent players from clicking multiple times, because one sample is enough for one chunk
-  player.give(sample.wrapper);
+  player.give(sample);
   player.setCooldown(item, 20);
 });

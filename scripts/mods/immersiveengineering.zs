@@ -6,11 +6,15 @@ import crafttweaker.liquid.ILiquidStack;
 import crafttweaker.potions.IPotionEffect;
 import mods.alfinivia.ImmersiveEngineering.addChemthrowerEffect;
 import mods.alfinivia.ImmersiveEngineering.addRailgunBullet;
+import scripts.jei.crafting_hints;
 
 recipes.remove(<immersiveengineering:material:1>);
 recipes.remove(<immersiveengineering:material:2>);
 recipes.remove(<immersiveengineering:material:3>);
 Purge(<immersiveengineering:material:24>).ores([<ore:dustSaltpeter>, <ore:dustNiter>]);
+
+// Recipe hint for mineral sampling
+crafting_hints.add1to1(<immersiveengineering:metal_device1:7>, <immersiveengineering:coresample>);
 
 // Fix IC2 block
 val UI = <ore:ingotUranium>;
@@ -93,11 +97,26 @@ scripts.jei.crafting_hints.addInsOutsCatl([], [
   <immersiveengineering:stone_decoration:5>,
 ], <forge:bucketfilled>.withTag({FluidName: "concrete", Amount: 1000}));
 
-// Concrete cutting
-scripts.process.saw(<immersiveengineering:stone_decoration:5>, <immersiveengineering:stone_decoration_slab:5> * 2, 'only: BlockCutter AdvRockCutter', null, 0, { hardness: 9 });
-scripts.process.saw(<immersiveengineering:stone_decoration_slab:5>, <immersiveengineering:stone_device:4> * 2, 'only: BlockCutter AdvRockCutter', null, 0, { hardness: 9 });
-scripts.process.saw(<immersiveengineering:stone_device:4>, <immersiveengineering:stone_device:3> * 2, 'only: BlockCutter AdvRockCutter', null, 0, { hardness: 9 });
-scripts.process.saw(<immersiveengineering:stone_device:5>, <immersiveengineering:stone_device:4> * 3, 'only: BlockCutter AdvRockCutter', null, 0, { hardness: 9 });
+// Concrete cutting in half
+scripts.process.saw(<immersiveengineering:stone_decoration:5>, <immersiveengineering:stone_decoration_slab:5> * 2, 'only: BlockCutter', null, 0, { hardness: 9 });
+scripts.process.saw(<immersiveengineering:stone_decoration_slab:5>, <immersiveengineering:stone_device:4> * 2, 'only: BlockCutter', null, 0, { hardness: 9 });
+scripts.process.saw(<immersiveengineering:stone_device:4>, <immersiveengineering:stone_device:3> * 2, 'only: BlockCutter', null, 0, { hardness: 9 });
+scripts.process.saw(<immersiveengineering:stone_device:5>, <immersiveengineering:stone_device:4> * 3, 'only: BlockCutter', null, 0, { hardness: 9 });
+
+// Concrete cutting in sheets
+for input in [
+  <immersiveengineering:stone_decoration:5> * 8,
+  <immersiveengineering:stone_device:5> * 6,
+  <immersiveengineering:stone_decoration_slab:5> * 4,
+  <immersiveengineering:stone_device:4> * 2,
+] as IItemStack[] {
+  val o = input.anyAmount();
+  scripts.process.saw(o, <immersiveengineering:stone_device:3> * input.amount, 'only: AdvRockCutter');
+  mods.bloodmagic.AlchemyTable.addRecipe(<immersiveengineering:stone_device:3> * (5 * input.amount), [
+    <bloodmagic:cutting_fluid>,
+    o, o, o, o, o,
+    ], 100, 8, 1);
+}
 
 // Coke Dust Compatibility
 mods.actuallyadditions.Crusher.addRecipe(<immersiveengineering:material:17>, <thermalfoundation:material:802>);
@@ -486,16 +505,6 @@ craft.remake(<immersivepetroleum:stone_decoration> * 8, [
   B: <ore:bitumen>,
   C: <ore:gravel>,
   D: LiquidIngr('water'),
-});
-
-// [Portable_Drill] from [Bedrock_Miner][+2]
-craft.remake(<portabledrill:portable_drill>, ['pretty',
-  '╱ B ╱',
-  '  |  ',
-  '  |  '], {
-  '╱': <ore:stickSteel>,                 // Steel Rod
-  'B': <bedrockores:bedrock_miner>,      // Bedrock Miner
-  '|': <immersiveengineering:coresample>, // Core Sample
 });
 
 // Forge hammer from IC2 harder to craft, so everyone used IE hammer

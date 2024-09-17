@@ -168,12 +168,23 @@ export async function init(h = defaultHelper, options = argv) {
           .replace(/\n\/\/ .*\n\[\w+\]\n([\w\.]+: .*\n)*/gm, ''), dest)
       },
 
-      // Sort keys
       'options.txt': () => {
-        const list = fileContent
-          .split('\n')
-          .sort((a, b) => [a, b].every(l => l.startsWith('key_')) ? naturalSort(a, b) : 0)
-        saveText(list.join('\n'), dest)
+        // Merge keys
+        let entries = Object.entries({
+          ...Object.fromEntries(loadText(dest).split('\n').map(l=>l.split(/:(.*)/s))),
+          ...Object.fromEntries(fileContent.split('\n').map(l=>l.split(/:(.*)/s))),
+        })
+
+        entries = entries.filter(([k])=>![
+          'renderDistance',
+          'difficulty',
+        ].includes(k))
+
+        // Sort keys
+          entries
+          .sort(([a], [b]) => [a, b].every(l => l.startsWith('key_')) ? naturalSort(a, b) : 0)
+        
+        saveText(entries.map(([k,v])=>k?`${k}:${v}`:'').join('\n'), dest)
       },
     }
     ;(optionsTransformers[o.sourceFilePath] ?? optionsTransformers.default)()

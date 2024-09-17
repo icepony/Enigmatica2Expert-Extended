@@ -409,6 +409,7 @@ e2ee.acquire.on.craft=§8(создав §7✎§8 его)
 e2ee.acquire.on.place=§8(разместив §7❒§8 его)
 e2ee.acquire.on.use=§8(использовав §7⚙§8 его)
 e2ee.acquire.on.hold=§8(держа §7✍§8 его)
+e2ee.acquire.on.replicate=§8(реплицируя §7⌛§8 его)
 e2ee.acquire.difficulty=§7Сложность увеличена на §6§l+%s§7. Всего: §l%s§7.
 e2ee.acquire.max_already=§7Сложность §l1000§7 (максимум).
 e2ee.acquire.more=§7§nНажмите здесь для подробностей§7.
@@ -420,6 +421,7 @@ e2ee.acquire.owned.someone=кому-то другому
 e2ee.acquire.cannot=§7Вы не можете реплицировать %s§7, потому что\n§6║ §7ваша сложность §fслишком высокая§7.
 e2ee.acquire.to_replicate=§7Чтобы реплицировать %s§7 с уровнем сложности %s§7,\n§6║ §7вам нужны предметы стоимостью более %s§7.
 e2ee.acquire.list=§7Список %s§7 предметов с более высокой стоимостью UU:
+e2ee.acquire.increase=§7Репликация 64 предметов увеличит сложность на §6+%s§e✪§7.
 tooltips.lang.acquire.hit=§e⚒ Ударьте §fРепликатор§e этим, чтобы увидеть §6Катализатор§e предметы!
 e2ee.warn.wrong_installation=§6✖ §4Модпак установлен неправильно!§6 ✖\n§cОтсутствуют моды: §nSmeltery IO§c, §nNetherending Ores§c и другие.\n§cЭто обычно происходит, если эти моды не были загружены вручную через лаунчер.\n§cВ §4Prism Launcher§c просто нажмите ☛[§nОткрыть Отсутствующие§c] во всплывающем окне при установке модпака.\n§8E2E-E содержит 4 мода, создатели которых указали, что их нельзя загружать через сторонние лаунчеры.
 e2ee.warn.wrong_world_type=§6✖ §4Похоже, вы неправильно создали мир!§6 ✖\n§cЧтобы играть в Skyblock, из главного меню перейдите в\n§6Моды§c ▶ §6Just Enough Dimensions§c Настройки ▶ §6Общие§c ▶ и установите значение §6initialSpawnDimensionId§c на §63§c. Затем создайте новый мир.
@@ -589,6 +591,12 @@ tooltips.dim_stages.healthy_can=Теперь вы можете посетить 
 tooltips.dim_stages.restricted=§cВ мире §bСкайблока §c. Вы не можете посетить другие измерения §8(кроме личных, RFTools и Космоса)§r.
 tooltips.dim_stages.enter_skyblock=§eВы запустили мир-§bСкайблок §e. Вы не можете посетить другие измерения §8(кроме личных, RFTools и Космоса). А еще тебе дали Хасту на 3 часа.§r
 tooltips.dim_stages.remind_skyblock=§eВы снова запустили мир-§bСкайблок §e. Помните: вы не можете посетить другие измерения §8(кроме личных, RFTools и Космоса)§r.
+
+# --------------------------------------
+# Custom JEI categories
+# - "e2ee.jei.{id}.{entry}" format recommended
+# --------------------------------------
+e2ee.jei.rats_consuming.title=Крысы едят
 
 # --------------------------------------
 # Requious Fracto custom JEI categories
