@@ -1,5 +1,6 @@
 #modloaded jei
 #ignoreBracketErrors
+#reloadable
 
 import crafttweaker.item.IItemStack;
 
