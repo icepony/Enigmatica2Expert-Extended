@@ -21,7 +21,7 @@
     "dev:jer": "tsx dev/automation/jer.js",
     "dev:manifest": "tsx mc-tools/packages/manifest/src/cli.ts --verbose --ignore=dev/.devonly.ignore --key=secrets/~cf_api_key.txt",
     "dev:misc": "tsx dev/automation/misc.js --keep-cache",
-    "dev:modlist": "tsx mc-tools/packages/modlist/src/cli.ts --old=../E2E-unchanged/minecraftinstance.json --verbose --ignore=dev/.devonly.ignore --key=secrets/~cf_api_key.txt --template=dev/tools/modlist_template.md",
+    "dev:modlist": "tsx mc-tools/packages/modlist/src/cli.ts --old=../E2E-unchanged/minecraftinstance.json --verbose --ignore=dev/.devonly.ignore --key=secrets/~cf_api_key.txt --template=dev/tools/modlist_template.md --sort=addonID",
     "dev:patchouli": "tsx dev/Patchouli/Patchouli.js",
     "dev:tcon": "tsx mc-tools/packages/tcon/src/cli.ts --default=dev/default_configs/tweakersconstruct.cfg --tweaks=dev/tools/tcon/tweaks --save=dev/tools/tcon/stats",
     "dev:tellme": "tsx config/tellme/!rename_update.js",

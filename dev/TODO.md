@@ -2,35 +2,12 @@
 
 🚧✅❌⚠️ List of priorities:
 
-- [ ] 🩸 Meteor: Implement https://github.com/friendlyhj/ZenUtils/issues/54#issuecomment-2152275918
-- [ ] 🚂 Process NC schematics https://discord.com/channels/911676461050642432/911676461050642434/1270356435380994099
-- [ ] 📀 Concrete make hardening slower for servers
+- [x] 📀 Concrete make hardening slower for servers
 - [ ] 🛡️ Challenger armor - tweak effects
-- [ ] 🦆 Fix goose duping equippable items
-- [ ] ✏️ Idea: Time in a Bottle add levels to Tinker's tools
-- [ ] 🧽 remove "Sponge clear TCon modifiers" feature or fix it
 - [ ] ✏️ Fix Gunpowder cant be made in Crucible for the research
-- [ ] 📜 Improve CF page: fasten GIF, update mods
-- [ ] ⭐ Make self-forbidding mechanism for Difficulty https://github.com/friendlyhj/ZenUtils/issues/53#issuecomment-2154922579
-- [ ] ⭐ Difficulty: descrease over time?
-- [ ] ✏️ Rethink EnderTank recipe since glass cant be poured with iron after cast
-- [ ] 📖 Skyblock chapter disable chapter comletion message on each quest (how if everything optional?)
-- [ ] ✨ Idea: reaching 1000 difficulty opening supreme power, instantly advance player to endgame powers
-- [ ] ✏️ New recipe idea: `Experiment 115` farm. You need to grow cakes to full for using them in recipe.
-- [ ] Fixeroo enlarge xp orbs when fixed https://github.com/CaliforniaDemise/Fixeroo/issues/6
-- [ ] Add mention that Assembler is automatable
-- [ ] Add when fixed https://github.com/Invadermonky/MagicultureIntegrations/issues/4
-- [ ] transormation powder turn fox into foxhound
-- [ ] Integrate https://www.curseforge.com/minecraft/mc-mods/customfishing
-- [ ] Integrate `Fluid Interaction Tweaker`
-- [ ] 📖 Reward proper tank in Skyblock Quests before treated wood
+- [ ] 🟢 Add when fixed https://github.com/Invadermonky/MagicultureIntegrations/issues/4
 - [ ] 🚧 TconScript: account trait "value" in resulted power
-- [ ] 📖 Add `Ctrl+F5` hotkey info
-- [ ] 📖 Add note about disabling placement logic
-- [ ] 📖 Find how to work with Modrinth and install https://modrinth.com/mod/hit-indication
-- [ ] 🕰️ Make Timewood Clock function unstackable
-- [ ] 🟢 Add and integrate https://legacy.curseforge.com/minecraft/mc-mods/villager-contracts
-- [ ] 📖 fix stellar set reward random
+- [ ] 🟢 Find how to work with Modrinth and install https://modrinth.com/mod/hit-indication
 
 ---
 
@@ -89,7 +66,7 @@ Planned non-urgent changes, or just good ideas:
 - [ ] ✏️ Milk Questing Ram to color essence
 - [ ] 🔄 Add `Cow Hacker` feature. Buff cow with 2-3 special potions based on their UUID to turn it into drop generator.
 - [ ] ✏️ Dragon Ice better craft isages
-- [ ] ✏️ Fish rework: All automated fishing options way harder to make sense of manual fishing. All fish usages lower. Add `Fish Singularity`.
+- [ ] ✏️ Fish rework: All automated fishing options way harder to make sense of manual fishing. All fish usages lower. Add `Fish Singularity`. Integrate https://www.curseforge.com/minecraft/mc-mods/customfishing
 - [ ] ✏️ Add `Meat Singularity`
 - [ ] 🔨 Ironwood Add material. Drop Armor from mobs on hit
 
@@ -147,6 +124,17 @@ Planned non-urgent changes, or just good ideas:
 
 ### Other
 
+- [ ] 💦 Integrate `Fluid Interaction Tweaker` when resolved: https://github.com/tttsaurus/Fluid-Interaction-Tweaker/issues/4
+- [ ] 🦊 Transormation powder turn `Fox` into `Foxhound`
+- [ ] 🟢 Integrate `villager-contracts`
+- [ ] 🕰️ Make Timewood Clock function unstackable
+- [ ] ✨ Idea: `Experiment 115` farm. You need to grow cakes to full for using them in recipe.
+- [ ] ✨ Idea: reaching 1000 difficulty opening supreme power, instantly advance player to endgame powers
+- [ ] ✏️ Rethink EnderIO `Fluid Tank` recipe since glass cant be poured with iron after cast
+- [ ] ⭐ Make self-forbidding mechanism for Difficulty https://github.com/friendlyhj/ZenUtils/issues/53#issuecomment-2154922579
+- [ ] ⭐ Difficulty: descrease over time?
+- [ ] 📖 Skyblock chapter disable chapter comletion message on each quest (how if everything optional?)
+- [ ] ✏️ Idea: Time in a Bottle add levels to Tinker's tools
 - [ ] Add "Balls" singularity
 - [ ] 📀 Add animated GIF for java warning https://github.com/Darkhax-Minecraft/OldJavaWarning/blob/1.12.2/src/main/java/net/darkhax/oldjava/OldJavaWarning.java
 - [ ] ✏️ Add Archeologyst trades to HEI

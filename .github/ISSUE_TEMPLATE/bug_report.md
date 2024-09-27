@@ -1,7 +1,7 @@
 ---
 name: Bug report
 about: Create a report if something crashing / not working
-title: 'Crash: `ExecutionException:ArrayIndexOutOfBoundsException`'
+title: ''
 labels: ''
 assignees: ''
 
@@ -10,7 +10,6 @@ assignees: ''
 ## Description
 
 <!-- A clear and concise description of what the bug is. -->
-
 
 **To Reproduce**
 

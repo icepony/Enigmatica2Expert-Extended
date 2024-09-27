@@ -70,6 +70,9 @@ for (const o of ['d', 'h']) {
 //   $(this).html(codeContent.replace(/\n/g, '<br/>\n').replace(/ /g, ' '))
 // })
 
+// Remove CF unsupported tags
+$('details').replaceWith($('details').contents())
+
 // Remove html and body tags
 $('html').contents().unwrap()
 $('body').replaceWith($('body').contents())
