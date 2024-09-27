@@ -130,8 +130,13 @@ const argv = yargs(process.argv.slice(2))
     execSyncInherit(`npx conventional-changelog-cli --config dev/tools/changelog/config.cjs -o ${latestPath}`)
 
     // Iconize
-    execSyncInherit(`ts-node E:/dev/mc-icons/src/cli.ts "${latestPath}" --silent --no-short --modpack=e2ee --treshold=2`)
-    await git.add(latestPath)
+    try {
+      execSyncInherit(`ts-node E:/dev/mc-icons/src/cli.ts "${latestPath}" --silent --no-short --modpack=e2ee --treshold=2`)
+      await git.add(latestPath)
+    }
+    catch (error) {
+      write(`ERROR: ${error}`)
+    }
 
     await open(latestPath, { wait: true })
 
