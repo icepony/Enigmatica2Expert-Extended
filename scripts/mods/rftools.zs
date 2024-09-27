@@ -344,3 +344,48 @@ val FG = <rftoolsdim:fake_gravel>;
 scripts.process.crush(MA, FG * 64, 'only: Macerator');
 mods.ic2.ThermalCentrifuge.addRecipe([FG * 64, FG * 32], MA);
 mods.astralsorcery.Grindstone.addRecipe(MA, FG * 64, 0.5);
+
+// [Shape Card (Silk Quarry)] from [Shape Card (Quarry)][+3]
+recipes.removeByRecipeName("rftools:shape_card_quarry_silk");
+craft.make(<rftools:shape_card:3>, ['pretty',
+  '◊ S ◊',
+  '¤ h ¤',
+  '◊ ¤ ◊'], {
+  '◊': <ore:gemDimensionalShard>, // Dimensional Shard
+  'S': <tconstruct:materials:16>, // Silky Jewel
+  '¤': <ore:gearDiamond>,         // Diamond Gear
+  'h': <rftools:shape_card:2>,    // Shape Card (Quarry)
+});
+
+// [Shape Card (Fortune Quarry)] from [Shape Card (Quarry)][+3]
+recipes.removeByRecipeName("rftools:shape_card_quarry_fortune");
+craft.make(<rftools:shape_card:4>, ['pretty',
+  '◊ * ◊',
+  '¤ S ¤',
+  '◊ * ◊'], {
+  '◊': <ore:gemDimensionalShard>, // Dimensional Shard
+  '*': <ore:lapotronCrystal>,     // Lapotron Crystal
+  '¤': <ore:gearDiamond>,         // Diamond Gear
+  'S': <rftools:shape_card:2>,    // Shape Card (Quarry)
+});
+
+// [Endergenic Generator] from [Machine Frame][+2]
+craft.remake(<rftools:endergenic>, ['pretty',
+  'F F F',
+  'F ◙ F',
+  'F ¤ F'], {
+  'F': <randomthings:ingredient:7>, // Floo Powder
+  '◙': <rftools:machine_frame>,     // Machine Frame
+  '¤': <ore:gearDiamond>,           // Diamond Gear
+});
+
+// [Machine Infuser] from [Machine Frame][+3]
+craft.remake(<rftools:machine_infuser>, ['pretty',
+  '◊ * ◊',
+  '¤ ◙ ¤',
+  '◊ * ◊'], {
+  '◊': <ore:gemDimensionalShard>, // Dimensional Shard
+  '*': <ore:gemCrystalFlux>,      // Flux Crystal
+  '¤': <ore:gearDiamond>,         // Diamond Gear
+  '◙': <rftools:machine_frame>,   // Machine Frame
+});
