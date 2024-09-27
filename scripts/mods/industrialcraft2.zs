@@ -175,9 +175,9 @@ recipes.remove(<ic2:dust:9>);
 recipes.remove(<ic2:dust:5>);
 
 // IC2 Block Cutting blades
-mods.tconstruct.Casting.addTableRecipe(<ic2:block_cutting_blade>,   <architecturecraft:sawblade>, <fluid:iron>, 1152, true);
-mods.tconstruct.Casting.addTableRecipe(<ic2:block_cutting_blade:1>, <architecturecraft:sawblade>, <fluid:steel>, 1152, true);
-mods.tconstruct.Casting.addTableRecipe(<ic2:block_cutting_blade:2>, <architecturecraft:sawblade>, <fluid:diamond>, 5328, true);
+mods.tconstruct.Casting.addTableRecipe(<ic2:block_cutting_blade>,   <architecturecraft:sawblade>, <fluid:iron>, 1152, true, 20);
+mods.tconstruct.Casting.addTableRecipe(<ic2:block_cutting_blade:1>, <architecturecraft:sawblade>, <fluid:steel>, 1152, true, 60);
+mods.tconstruct.Casting.addTableRecipe(<ic2:block_cutting_blade:2>, <architecturecraft:sawblade>, <fluid:diamond>, 5328, true, 120);
 mods.tconstruct.Melting.addRecipe(<liquid:iron>  * 1152, <ic2:block_cutting_blade>);
 mods.tconstruct.Melting.addRecipe(<liquid:steel> * 1152, <ic2:block_cutting_blade:1>);
 

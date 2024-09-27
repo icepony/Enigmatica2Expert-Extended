@@ -398,7 +398,7 @@ scripts.process.melt(<extrautils2:ironwood_planks:0>, <liquid:iron> *  8, 'No Ex
 // Burnt
 scripts.process.melt(<extrautils2:ironwood_log:1>   , <liquid:iron> * 144, 'No Exceptions');
 scripts.process.melt(<extrautils2:ironwood_planks:1>, <liquid:iron> *  80, 'No Exceptions');
-mods.tconstruct.Casting.addTableRecipe(<extrautils2:ironwood_sapling>, <ore:treeSapling>, <liquid:iron>, 576, true);
+mods.tconstruct.Casting.addTableRecipe(<extrautils2:ironwood_sapling>, <ore:treeSapling>, <liquid:iron>, 576, true, 1);
 
 // Rat diamond alt
 // [Climograph Base Unit] from [Machine Block][+3]

@@ -84,11 +84,11 @@ craft.remake(<cyclicmagic:storage_bag>, ['pretty',
 
 // [Ender Orb] from [Molten Demon Metal Bucket][+1]
 recipes.remove(<cyclicmagic:ender_pearl_reuse>);
-mods.tconstruct.Casting.addTableRecipe(<cyclicmagic:ender_pearl_reuse>, <endreborn:item_advanced_ender_pearl>, <liquid:xu_demonic_metal>, 144 * 4, true);
+mods.tconstruct.Casting.addTableRecipe(<cyclicmagic:ender_pearl_reuse>, <endreborn:item_advanced_ender_pearl>, <liquid:xu_demonic_metal>, 144 * 4, true, 20);
 
 // [Ender Orb Translocator] from [Molten Lapis Bucket][+1]
 recipes.remove(<cyclicmagic:ender_pearl_mounted>);
-mods.tconstruct.Casting.addTableRecipe(<cyclicmagic:ender_pearl_mounted>, <endreborn:item_advanced_ender_pearl>, <liquid:lapis>, 666 * 4, true);
+mods.tconstruct.Casting.addTableRecipe(<cyclicmagic:ender_pearl_mounted>, <endreborn:item_advanced_ender_pearl>, <liquid:lapis>, 666 * 4, true, 20);
 
 // Soul stone as T3 crafting ingredient
 recipes.remove(<cyclicmagic:soulstone>);
