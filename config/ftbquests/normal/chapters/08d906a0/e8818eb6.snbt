@@ -59,6 +59,6 @@
 	rewards: [{
 		uid: "c9194a14",
 		type: "item",
-		item: "immersivetech:metal_barrel 1 2"
+		item: "enderio:block_tank"
 	}]
 }
