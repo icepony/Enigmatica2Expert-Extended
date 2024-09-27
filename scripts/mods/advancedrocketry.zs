@@ -618,3 +618,15 @@ mods.thaumcraft.Infusion.registerRecipe(
     'L L L'], {
     'L': <twilightforest:magic_leaves:1>, // Leaves of Transformation
   }).spiral(1));
+
+// [Precision Assembler] from [Machine Structure][+4]
+craft.remake(<advancedrocketry:precisionassemblingmachine>, ['pretty',
+  '  U  ',
+  'I M C',
+  '¤ ¤ ¤'], {
+  'U': <advancedrocketry:misc>,      // User Interface
+  'I': <advancedrocketry:ic:4>,      // Item IO Circuit Board
+  'M': <libvulpes:structuremachine>, // Machine Structure
+  'C': <advancedrocketry:ic:3>,      // Control Circuit Board
+  '¤': <ore:gearDiamond>,            // Diamond Gear
+});
