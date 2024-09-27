@@ -1,0 +1,19 @@
+{
+	title: "{q.getting_started.configuration.name}",
+	icon: "botania:cosmetic 1 32",
+	disable_toast: true,
+	x: -5.475d,
+	y: 6.0d,
+	text: [
+		"{q.getting_started.configuration.desc}"
+	],
+	dependencies: [
+		"151f1e78"
+	],
+	size: 0.75d,
+	optional: true,
+	tasks: [{
+		uid: "5a602455",
+		type: "checkmark"
+	}]
+}
