@@ -12,7 +12,7 @@ Note: Non-CF mods not listed here.
 
 Mods that exists both in `E2E` __and__ `E2E-Extended`
 
-183 mods in this section.
+182 mods in this section.
 
 Icon | Summary
 ----:|:-------
@@ -204,7 +204,7 @@ Icon | Summary
 
 Mods that present only in `Extended` version:
 
-235 mods in this section.
+234 mods in this section.
 
 Icon | Summary
 ----:|:-------
@@ -441,7 +441,6 @@ Icon | Summary
 <img src="https://media.forgecdn.net/avatars/thumbnails/1049/742/30/30/638578938162857406.png"           > |    [**Rather Enough Immersive Multiblocks**](https://www.curseforge.com/minecraft/mc-mods/rather-enough-immersive-multiblocks)<sup><sub>reim-0.1.jar                                     </sub></sup><br>JEI integration for IE style multiblocks
 <img src="https://media.forgecdn.net/avatars/thumbnails/1057/908/30/30/638588800856609371.png"           > |       [**MiniEffects-Legacy Extended Life**](https://www.curseforge.com/minecraft/mc-mods/minieffects-legacy-extended-life)<sup><sub>minieffects-2.1.0.jar                            </sub></sup><br>fork of MiniEffects for Minecraft 1.12, with more feature(s) like JEI bookmark support
 <img src="https://media.forgecdn.net/avatars/thumbnails/1062/375/30/30/638594947374082619.png"           > |                         [**JEI Area Fixer**](https://www.curseforge.com/minecraft/mc-mods/jei-area-fixer)               <sup><sub>jei_area_fixer-1.5.0.jar                         </sub></sup><br>fix JEI GUI to not overlap with modded GUIs 
-<img src="https://media.forgecdn.net/avatars/thumbnails/1068/994/30/30/638603711520444197.jpg"           > |                          [**CustomFishing**](https://www.curseforge.com/minecraft/mc-mods/customfishing)                <sup><sub>customfishing-0.0.8.jar                          </sub></sup><br>CustomFishing is a CraftTweaker addon that allows users to add fishing conditions using scripts. For example, you can set a 50% chance of catching an apple when fishing in lava.
 <img src="https://media.forgecdn.net/avatars/thumbnails/1071/348/30/30/638606872011907048.png"           > |              [**Fluid Interaction Tweaker**](https://www.curseforge.com/minecraft/mc-mods/fluid-interaction-tweaker)    <sup><sub>fluidintetweaker-1.3.2.jar                       </sub></sup><br>This is a CraftTweaker/GroovyScript addon that enables you to add more fluid interactions using the zenscript/groovyscript.
 -----------
 
@@ -452,7 +451,7 @@ Mods that exists in `E2E` but __was removed__ in `E2E-Extended`
 
 Note: most of those mods was replaced by their fork versions
 
-69 mods in this section.
+70 mods in this section.
 
 Icon | Summary
 ----:|:-------
@@ -509,6 +508,7 @@ Icon | Summary
 <img src="https://media.forgecdn.net/avatars/thumbnails/123/621/30/30/636415909007705252.jpeg"           > |                 [**Unlimited Chisel Works**](https://www.curseforge.com/minecraft/mc-mods/unlimited-chisel-works)       <sup><sub>UnlimitedChiselWorks-0.3.5.jar                   </sub></sup><br>Generated Chisel variants for modded blocks
 <img src="https://media.forgecdn.net/avatars/thumbnails/401/238/30/30/637607183569439478.png"            > |                               [**Foam​Fix**](https://www.curseforge.com/minecraft/mc-mods/foamfix-optimization-mod)     <sup><sub>foamfix-0.10.15-1.12.2.jar                       </sub></sup><br>Simple, targetted optimizations for a popular block game
 <img src="https://media.forgecdn.net/avatars/thumbnails/124/276/30/30/636420595226292681.png"            > |                          [**Blockcraftery**](https://www.curseforge.com/minecraft/mc-mods/blockcraftery)                <sup><sub>blockcraftery-1.12.2-1.3.1.jar                   </sub></sup><br>Customizable building blocks!
+<img src="https://media.forgecdn.net/avatars/thumbnails/127/504/30/30/636439463392471790.png"            > |           [**Colytra (Fabric/Forge/Quilt)**](https://www.curseforge.com/minecraft/mc-mods/colytra)                      <sup><sub>colytra-1.12.2-1.2.0.4.jar                       </sub></sup><br>Allows attachment of elytras to chestplates.
 <img src="https://media.forgecdn.net/avatars/thumbnails/981/435/30/30/638488257660151687.png"            > |                           [**AttributeFix**](https://www.curseforge.com/minecraft/mc-mods/attributefix)                 <sup><sub>AttributeFix-Forge-1.12.2-1.0.12.jar             </sub></sup><br>Removes arbitrary limits on Minecraft&#x27;s attribute system.
 <img src="https://media.forgecdn.net/avatars/thumbnails/483/910/30/30/637784634472116278.png"            > |                           [**TipTheScales**](https://www.curseforge.com/minecraft/mc-mods/tipthescales)                 <sup><sub>TipTheScales-1.12.2-1.0.4.jar                    </sub></sup><br>Allows for more options when adjusting the GUIScale option as well as making it a slider.
 <img src="https://media.forgecdn.net/avatars/thumbnails/173/965/30/30/636747325401407773.png"            > |                           [**DiscordSuite**](https://www.curseforge.com/minecraft/mc-mods/discordsuite)                 <sup><sub>DiscordSuite-2.2.4.jar                           </sub></sup><br>Discord Rich Presence
