@@ -429,7 +429,6 @@
     {"projectID":1073925,"fileID":5579062,"___name":"Rather Enough Immersive Multiblocks"     ,"downloadUrl":"https://edge.forgecdn.net/files/5579/62/reim-0.1.jar","required":true},
     {"projectID":1081085,"fileID":5716574,"___name":"MiniEffects-Legacy Extended Life"        ,"downloadUrl":"https://edge.forgecdn.net/files/5716/574/minieffects-2.1.0.jar","required":true},
     {"projectID":1085598,"fileID":5745198,"___name":"JEI Area Fixer"                          ,"downloadUrl":"https://edge.forgecdn.net/files/5745/198/jei_area_fixer-1.5.0.jar","required":true},
-    {"projectID":1091948,"fileID":5743635,"___name":"CustomFishing"                           ,"downloadUrl":"https://edge.forgecdn.net/files/5743/635/customfishing-0.0.8.jar","required":true},
     {"projectID":1094214,"fileID":5706649,"___name":"Fluid Interaction Tweaker"               ,"downloadUrl":"https://edge.forgecdn.net/files/5706/649/fluidintetweaker-1.3.2.jar","required":true}
   ]
 }
