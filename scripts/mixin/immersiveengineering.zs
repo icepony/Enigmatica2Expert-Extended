@@ -98,3 +98,20 @@ zenClass MixinManualPagesCraftingMulti {
         // NO-OP
     }
 }
+
+/*
+Attempt to make Liquid Concrete hardening slower.
+Not working for some reason.
+*/
+// #mixin Mixin
+// #{targets: "blusunrize.immersiveengineering.common.blocks.BlockIEFluidConcrete"}
+// zenClass MixinBlockIEFluidConcrete {
+//     #mixin ModifyConstant
+//     #{
+//     #    method: "func_180650_b",
+//     #    constant: {intValue: 14, ordinal: 0}
+//     #}
+//     function slowerHardening(value as int) as int {
+//         return value * 2;
+//     }
+// }
