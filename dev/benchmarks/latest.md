@@ -5,10 +5,10 @@
 
 <p align="center" style="font-size:160%;">
 MC total load time:<br>
-284.61 sec
+293.54 sec
 <br>
 <sup><sub>(
-4:44 min
+4:53 min
 )</sub></sup>
 </p>
 
@@ -20,8 +20,8 @@ MC total load time:<br>
   type: 'horizontalBar',
   data: {
     datasets: [
-      {label:      'MODS:', data: [111.54]},
-      {label: 'FML stuff:', data: [173.07]}
+      {label:      'MODS:', data: [107.02]},
+      {label: 'FML stuff:', data: [186.52]}
     ]
   },
   options: {
@@ -60,30 +60,30 @@ MC total load time:<br>
   },
   data: {...
 `
-8f304e   5.29s Astral Sorcery;
-813e81   5.11s OpenComputers;
-a651a8   4.45s IndustrialCraft 2;
-516fa8   4.43s Ender IO;
-cd922c   3.83s NuclearCraft;
-5161a8   2.78s CraftTweaker2;
-495797   9.20s CraftTweaker2 (Script Loading);
-213664   2.71s Forestry;
-308f7e   2.15s Quark: RotN Edition;
-ba3eb8   2.14s Cyclic;
-436e17   2.10s Integrated Dynamics;
-3e8160   1.99s The Twilight Forest;
-3eba85   1.99s Just Enough Magiculture;
-8f4d30   1.93s Open Terrain Generator;
-a86e51   1.82s Extra Utilities 2;
-3eb2ba   1.65s Botania;
-8c2ccd   1.64s Immersive Engineering;
-5a352c   1.45s Shadowfacts' Forgelin;
-61176e   1.44s Ice and Fire;
-649e21   1.44s OpenBlocks;
-814a3e   1.42s RFTools;
-444444  12.91s 11 Other mods;
-333333  39.30s 131 'Fast' mods (load 1.0s - 0.1s);
-222222   7.59s 296 'Instant' mods (load %3C 0.1s)
+8f304e   5.01s Astral Sorcery;
+813e81   4.94s OpenComputers;
+a651a8   3.94s IndustrialCraft 2;
+516fa8   3.93s Ender IO;
+cd922c   3.58s NuclearCraft;
+5161a8   2.68s CraftTweaker2;
+495797   9.00s CraftTweaker2 (Script Loading);
+213664   2.58s Forestry;
+308f7e   2.03s Quark: RotN Edition;
+3e8160   2.01s The Twilight Forest;
+ba3eb8   2.01s Cyclic;
+436e17   1.94s Integrated Dynamics;
+3eba85   1.91s Just Enough Magiculture;
+a86e51   1.83s Extra Utilities 2;
+8f4d30   1.70s Open Terrain Generator;
+3eb2ba   1.70s Botania;
+8c2ccd   1.63s Immersive Engineering;
+5a352c   1.47s Shadowfacts' Forgelin;
+3e68ba   1.41s AE2 Unofficial Extended Life;
+61176e   1.33s Ice and Fire;
+814a3e   1.32s RFTools;
+444444  12.56s 11 Other mods;
+333333  37.69s 128 'Fast' mods (load 1.0s - 0.1s);
+222222   7.82s 299 'Instant' mods (load %3C 0.1s)
 `
     .split(';').reduce((a, l) => {
       l.match(/(\w{6}) *(\d*\.\d*)s (.*)/)
@@ -153,18 +153,18 @@ a86e51   1.82s Extra Utilities 2;
       .forEach(([name]) => a.datasets.push({ label: name, data: [] }));
 `
                             1      2      3      4      5      6      7      8  ;
-Astral Sorcery          |  0.19|  0.00|  4.47|  0.63|  0.00|  0.00|  0.00|  0.00;
-OpenComputers           |  0.14|  0.00|  3.39|  1.58|  0.00|  0.00|  0.00|  0.00;
-IndustrialCraft 2       |  0.66|  0.00|  3.19|  0.59|  0.00|  0.00|  0.00|  0.00;
-Ender IO                |  1.24|  0.00|  2.87|  0.32|  0.00|  0.00|  0.00|  0.00;
-NuclearCraft            |  1.17|  0.00|  2.42|  0.24|  0.00|  0.00|  0.00|  0.00;
-CraftTweaker2           |  0.21|  0.00|  2.57|  0.00|  0.00|  0.00|  0.00|  0.00;
-Forestry                |  0.33|  0.00|  2.01|  0.37|  0.00|  0.00|  0.00|  0.00;
-Quark: RotN Edition     |  0.02|  0.00|  2.04|  0.09|  0.00|  0.00|  0.00|  0.00;
-Cyclic                  |  0.06|  0.00|  1.66|  0.42|  0.00|  0.00|  0.00|  0.00;
-Integrated Dynamics     |  0.15|  0.00|  1.91|  0.04|  0.00|  0.00|  0.00|  0.00;
-The Twilight Forest     |  0.65|  0.00|  1.20|  0.14|  0.00|  0.00|  0.00|  0.00;
-Just Enough Magiculture |  0.09|  0.00|  0.00|  1.89|  0.00|  0.00|  0.00|  0.00
+Astral Sorcery          |  0.18|  0.00|  4.25|  0.58|  0.00|  0.00|  0.00|  0.00;
+OpenComputers           |  0.14|  0.01|  3.23|  1.57|  0.00|  0.00|  0.00|  0.00;
+IndustrialCraft 2       |  0.56|  0.00|  2.95|  0.43|  0.00|  0.00|  0.00|  0.00;
+Ender IO                |  1.31|  0.00|  2.43|  0.18|  0.00|  0.00|  0.00|  0.00;
+NuclearCraft            |  1.27|  0.00|  2.09|  0.22|  0.00|  0.00|  0.00|  0.00;
+CraftTweaker2           |  0.11|  0.00|  2.57|  0.00|  0.00|  0.00|  0.00|  0.00;
+Forestry                |  0.30|  0.00|  1.95|  0.33|  0.00|  0.00|  0.00|  0.00;
+Quark: RotN Edition     |  0.02|  0.00|  1.95|  0.06|  0.00|  0.00|  0.00|  0.00;
+The Twilight Forest     |  0.74|  0.00|  1.17|  0.10|  0.00|  0.00|  0.00|  0.00;
+Cyclic                  |  0.05|  0.00|  1.59|  0.37|  0.00|  0.00|  0.00|  0.00;
+Integrated Dynamics     |  0.15|  0.00|  1.76|  0.03|  0.00|  0.00|  0.00|  0.00;
+Just Enough Magiculture |  0.10|  0.00|  0.00|  1.80|  0.00|  0.00|  0.00|  0.00
 `
     .split(';').slice(1)
       .map(l => l.split('|').map(s => s.trim()))
@@ -195,22 +195,22 @@ Just Enough Magiculture |  0.09|  0.00|  0.00|  1.89|  0.00|  0.00|  0.00|  0.00
         }]
       };
 `
-  2.74: jeresources.jei.JEIConfig;
-  0.93: com.rwtema.extrautils2.crafting.jei.XUJEIPlugin;
-  0.59: crazypants.enderio.machines.integration.jei.MachinesPlugin;
-  0.49: com.buuz135.industrial.jei.JEICustomPlugin;
-  0.42: mezz.jei.plugins.vanilla.VanillaPlugin;
-  0.39: ic2.jeiIntegration.SubModule;
-  0.38: knightminer.tcomplement.plugin.jei.JEIPlugin;
-  0.31: nc.integration.jei.NCJEI;
-  0.24: cofh.thermalexpansion.plugins.jei.JEIPluginTE;
-  0.18: com.buuz135.thaumicjei.ThaumcraftJEIPlugin;
-  0.18: ninjabrain.gendustryjei.GendustryJEIPlugin;
-  0.16: crazypants.enderio.base.integration.jei.JeiPlugin;
-  0.12: crafttweaker.mods.jei.JEIAddonPlugin;
-  0.11: thelm.packagedauto.integration.jei.PackagedAutoJEIPlugin;
-  0.11: net.bdew.jeibees.BeesJEIPlugin;
-  1.80: Other 124 Plugins
+  2.84: jeresources.jei.JEIConfig;
+  1.20: com.rwtema.extrautils2.crafting.jei.XUJEIPlugin;
+  0.61: ic2.jeiIntegration.SubModule;
+  0.50: com.buuz135.industrial.jei.JEICustomPlugin;
+  0.49: mezz.jei.plugins.vanilla.VanillaPlugin;
+  0.48: crazypants.enderio.machines.integration.jei.MachinesPlugin;
+  0.31: knightminer.tcomplement.plugin.jei.JEIPlugin;
+  0.30: nc.integration.jei.NCJEI;
+  0.28: crazypants.enderio.base.integration.jei.JeiPlugin;
+  0.27: cofh.thermalexpansion.plugins.jei.JEIPluginTE;
+  0.20: com.buuz135.thaumicjei.ThaumcraftJEIPlugin;
+  0.14: net.bdew.jeibees.BeesJEIPlugin;
+  0.14: ninjabrain.gendustryjei.GendustryJEIPlugin;
+  0.10: forestry.factory.recipes.jei.FactoryJeiPlugin;
+  0.10: crafttweaker.mods.jei.JEIAddonPlugin;
+  1.57: Other 124 Plugins
 `
         .split(';')
         .map(l => l.split(':'))
@@ -247,7 +247,7 @@ Just Enough Magiculture |  0.09|  0.00|  0.00|  1.89|  0.00|  0.00|  0.00|  0.00
             font: {size: 18}
           },
           {
-            text: [173.07,'s'].join(''),
+            text: [186.52,'s'].join(''),
             color: 'rgba(128, 128, 128, 1)',
             font: {size: 22}
           }
@@ -269,7 +269,7 @@ Just Enough Magiculture |  0.09|  0.00|  0.00|  1.89|  0.00|  0.00|  0.00|  0.00
 `
 993A00   0.46s Loading sounds;
 994400   0.50s Loading Resource - SoundHandler;
-444444 172.11s Other
+444444 185.56s Other
 `
     .split(';')
       .map(l => l.match(/(\w{6}) *(\d*\.\d*)s (.*)/))

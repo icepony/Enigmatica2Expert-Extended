@@ -114,7 +114,6 @@ getCSV('config/tellme/dimensions-csv.csv')
   121,
   124,
   125,
-  4,
   200,
 /**/
 ] as int[];

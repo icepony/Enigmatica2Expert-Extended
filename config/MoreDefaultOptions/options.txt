@@ -13,7 +13,7 @@ fboEnable:true
 fancyGraphics:true
 ao:2
 renderClouds:true
-resourcePacks:["Better Gendustry v1.0.zip","ALTERNATIVES/Pixel Reality Luminance (Light) 1.12.2.zip"]
+resourcePacks:["Better Gendustry v1.0.zip","Dark Mode.zip","A Dark Mode Addon-1.8.0.zip"]
 incompatibleResourcePacks:[]
 lastServer:51.210.223.149:25566
 lang:en_us
@@ -115,7 +115,7 @@ key_Hub Expand Key:0
 key_jecalculation.key.gui_craft:0
 key_jecalculation.key.gui_math:0
 key_key.advancements:38
-key_key.ae2fc.open_wireless_fluid_pattern_terminal.desc:0
+key_key.ae2fc.open_wireless_fluid_pattern_terminal.desc:34:SHIFT
 key_key.anchor:35
 key_key.aquaacrobatics.toggle_crawling:46:SHIFT
 key_key.attack:-100
