@@ -68,9 +68,9 @@ Despite this, the modpack **only takes 30% longer** to load than the original E2
 [**LittleTiles**](https://www.curseforge.com/minecraft/mc-mods/littletiles)
 </td>
 
-<td><img src="https://i.imgur.com/T28UV8d.png"></td><td>
+<td><img src="https://i.imgur.com/L6uKZsV.png"></td><td>
 
-[**Flopper**](https://www.curseforge.com/minecraft/mc-mods/flopper)
+[**Immersive Cables**](https://www.curseforge.com/minecraft/mc-mods/immersive-cables)
 </td>
 
 <td><img src="https://i.imgur.com/K49ZGIO.png"></td><td>
@@ -85,9 +85,9 @@ Despite this, the modpack **only takes 30% longer** to load than the original E2
 [**Rats**](https://www.curseforge.com/minecraft/mc-mods/rats)
 </td>
 
-<td><img src="https://i.imgur.com/jUpfai4.png"></td><td>
+<td><img src="https://i.imgur.com/8gmAM7b.png"></td><td>
 
-[**Hole Filler Mod**](https://www.curseforge.com/minecraft/mc-mods/hole-filler-mod)
+[**JEI Utilities**](https://www.curseforge.com/minecraft/mc-mods/jei-utilities)
 </td>
 
 <td><img src="https://i.imgur.com/0N4SG5A.png"></td><td>
@@ -195,7 +195,7 @@ Generate mods screenshot with command:
 
 </td><td>
 
-<img src="https://i.imgur.com/W1kJI5w.gif" alt="Utilities Quest lines" width=251>
+<img src="https://i.imgur.com/nzJf1gG.gif" alt="Utilities Quest lines" width=251>
 
 </td></tr><tr><td>
 
