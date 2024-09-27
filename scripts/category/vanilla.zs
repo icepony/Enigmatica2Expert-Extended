@@ -14,7 +14,6 @@ import loottweaker.vanilla.loot.Functions;
 
 // Buff Elythra durability (was 432)
 <minecraft:elytra>.maxDamage = 1200;
-<colytra:elytra_bauble>.maxDamage = 1200;
 
 // Nerf torches from Light level 14
 <minecraft:torch>.asBlock().definition.lightLevel = 0.75f;
