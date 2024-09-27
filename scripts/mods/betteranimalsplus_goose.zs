@@ -4,6 +4,8 @@
 import crafttweaker.entity.IEntityAnimal;
 import crafttweaker.entity.IEntityLivingBase;
 import crafttweaker.player.IPlayer;
+import crafttweaker.entity.IEntityEquipmentSlot;
+import crafttweaker.entity.IEntityEquipmentSlot.mainHand;
 
 function clearPlayerInventory(player as IPlayer) as void {
   for i in 0 .. player.inventorySize {
@@ -12,6 +14,13 @@ function clearPlayerInventory(player as IPlayer) as void {
     player.replaceItemInInventory(i, null);
   }
 }
+
+static armorSlots as IEntityEquipmentSlot[] = [
+  IEntityEquipmentSlot.head(),
+  IEntityEquipmentSlot.chest(),
+  IEntityEquipmentSlot.feet(),
+  IEntityEquipmentSlot.legs(),
+] as IEntityEquipmentSlot[];
 
 // --------------------------------
 // Geese use items
@@ -22,7 +31,7 @@ function clearPlayerInventory(player as IPlayer) as void {
 }, 10);
 
 function tickGoose(entity as IEntityLivingBase) as void {
-  val item = entity.getItemInSlot(crafttweaker.entity.IEntityEquipmentSlot.mainHand());
+  val item = entity.getItemInSlot(mainHand());
 
   // No item in Goose beak
   if (isNull(item)) return;
@@ -37,10 +46,19 @@ function tickGoose(entity as IEntityLivingBase) as void {
   // Clear previous fake player inventory
   clearPlayerInventory(player);
 
-  val result = player.simulateRightClickItem(item, crafttweaker.entity.IEntityEquipmentSlot.mainHand());
+  val result = player.simulateRightClickItem(item, mainHand());
+
+  // Prevent of copying armor pieces by equipping them
+  for slot in armorSlots {
+    val equipment = player.getItemInSlot(slot);
+    if (!isNull(equipment) && (equipment has item || item has equipment)) {
+      player.replaceItemInInventory(slot.slotIndex, null);
+      break;
+    }
+  }
 
   // Replace held item of Goose
-  entity.setItemToSlot(crafttweaker.entity.IEntityEquipmentSlot.mainHand(), result.item);
+  entity.setItemToSlot(mainHand(), null);
 
   // Drop all items in fake player inventory
   for i in 0 .. player.inventorySize {
