@@ -7,6 +7,7 @@ import crafttweaker.entity.IEntity;
 import mods.contenttweaker.tconstruct.Trait;
 import crafttweaker.item.IItemStack;
 import mods.contenttweaker.conarm.ArmorTrait;
+import crafttweaker.util.Math;
 
 // /////////////////////////////////////////////////////////////////////////////
 // /////////////////////////////////////////////////////////////////////////////
@@ -17,22 +18,23 @@ a.localizedName = game.localize('e2ee.tconstruct.material.challenger.name');
 a.localizedDescription = game.localize('e2ee.tconstruct.material.challenger.description');
 
 a.getMiningSpeed = function(trait, tool, e) {
-  e.newSpeed = e.originalSpeed * getToolBonus(trait, tool, e.player);
+  e.newSpeed = e.originalSpeed * getToolBonus(e.player);
 };
 
 a.calcDamage = function(trait, tool, attacker, target, originalDamage, newDamage, isCritical) {
-  return newDamage * getToolBonus(trait, tool, target);
+  return newDamage * getToolBonus(target);
 };
 
 a.afterHit = function(trait, tool, attacker, target, damageDealt, wasCritical, wasHit) {
 	if (attacker.world.remote || !wasHit) return;
-  showFX(attacker, target.x, target.y, target.z, damageDealt);
+  showFX(attacker, target.x, target.y, target.z, Math.sqrt(damageDealt));
 };
 
 a.afterBlockBreak = function(trait, tool, world, blockstate, blockPos, miner, wasEffective) {
 	if (miner.world.remote || !wasEffective) return;
-  showFX(miner, 0.5 + blockPos.x, 0.5 + blockPos.y, 0.5 + blockPos.z, 1.0);
+  showFX(miner, 0.5 + blockPos.x, 0.5 + blockPos.y, 0.5 + blockPos.z, 0.1);
 };
+
 // a.extraInfo = function(trait, tool, tag) {
 //   return [] as string[];
 // };
@@ -47,15 +49,14 @@ b.localizedDescription = game.localize('e2ee.tconstruct.material.challenger.desc
 b.maxLevel = 4;
 b.getModifications = function(trait, player, mods, armor, damageSource, damage, index) {
   if (damage <= 0.0) return mods;
-  val bonus = getAnyBonus(1, player);
+  val bonus = getAnyBonus(player);
   mods.armorMod *= bonus;
   mods.toughnessMod *= bonus;
   return mods;
 };
 b.onDamaged = function (trait, armor, player, source, damage, newDamage, evt) {
   if (player.world.remote || newDamage <= 0) return newDamage;
-  val bonus = getAnyBonus(1, player);
-  showFX(player, player.x, player.y, player.z, bonus);
+  showFX(player, player.x, player.y, player.z, getAnyBonus(player));
   return newDamage;
 };
 b.register();
@@ -69,18 +70,15 @@ function showFX(entity as IEntity, x as double,y as double,z as double, value as
   });
 }
 
-function getToolBonus(trait as Trait, tool as IItemStack, entity as IEntity) as double {
-  if (isNull(trait)) return 1.0;
-  val data = trait.getData(tool);
-  if (isNull(data)) return 1.0;
-  return getAnyBonus(data.level, entity);
+function getToolBonus(entity as IEntity) as double {
+  return getAnyBonus(entity);
 }
 
-function getAnyBonus(level as double, entity as IEntity) as double {
+function getAnyBonus(entity as IEntity) as double {
   val areaDiff = entity.world.getAreaDifficultyAt(entity.position);
-  return getBonus(areaDiff, level);
+  return getBonus(areaDiff);
 }
 
-function getBonus(areaDiff as double, level as double) as double {
-  return (areaDiff / 100.0 + 1.0) * level;
+function getBonus(areaDiff as double) as double {
+  return pow(areaDiff / 100.0 + 1.0, 2.0);
 }
