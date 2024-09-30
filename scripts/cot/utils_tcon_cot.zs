@@ -1,7 +1,7 @@
 #loader contenttweaker
 #priority 100
 
-import crafttweaker.entity.IEntityEquipmentSlot as entEqSlot;
+import crafttweaker.entity.IEntityEquipmentSlot;
 import crafttweaker.item.IItemStack;
 import crafttweaker.player.IPlayer;
 
@@ -22,9 +22,9 @@ function getItemMatAmount(item as IItemStack, lookup as string, durabLeft as int
   return level;
 }
 
-static armSlots as entEqSlot[] = [
-  entEqSlot.head(), entEqSlot.chest(), entEqSlot.legs(), entEqSlot.feet(),
-] as entEqSlot[];
+static armSlots as IEntityEquipmentSlot[] = [
+  head, chest, legs, feet,
+] as IEntityEquipmentSlot[];
 
 function getArmorMatsAmount(player as IPlayer, lookup as string, durabLeft as int = -1) as int {
   var level = 0;

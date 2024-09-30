@@ -337,7 +337,7 @@ function onFalling(armor as IItemStack, player as IPlayer) as void {
     return;
   }
 
-  val blockUnderPos = player.position.getOffset(IFacing.down(), 1);
+  val blockUnderPos = player.position.getOffset(down, 1);
   val blockState = world.getBlockState(blockUnderPos);
   if (isNull(blockState) || blockState == <blockstate:minecraft:air>) {
     if (isVerbose) player.sendMessage('§8No block under player!');

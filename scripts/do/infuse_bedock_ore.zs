@@ -49,7 +49,7 @@ events.onPlayerInteractBlock(function (e as crafttweaker.event.PlayerInteractBlo
   )) return;
 
   if (world.remote) {
-    world.playSound('thaumcraft:poof', 'ambient', e.position.getOffset(crafttweaker.world.IFacing.up(), 1), 0.5f, 0.2f);
+    world.playSound('thaumcraft:poof', 'ambient', e.position.getOffset(up, 1), 0.5f, 0.2f);
     return;
   }
 

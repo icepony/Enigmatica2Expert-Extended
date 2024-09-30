@@ -244,35 +244,35 @@ function spin(player as IPlayer) as void {
 function breakArmor(target as IEntityLivingBase, warp as int, player as IPlayer) as void {
   var broken = false;
 
-  if (target.hasItemInSlot(crafttweaker.entity.IEntityEquipmentSlot.feet())
+  if (target.hasItemInSlot(feet)
   && target.world.random.nextInt(1000) > warp) {
-    var item = target.getItemInSlot(crafttweaker.entity.IEntityEquipmentSlot.feet());
+    var item = target.getItemInSlot(feet);
     if (!isNull(item) && item.isDamageable) {
-      target.setItemToSlot(crafttweaker.entity.IEntityEquipmentSlot.feet(), null);
+      target.setItemToSlot(feet, null);
       broken = true;
     }
   }
-  if (target.hasItemInSlot(crafttweaker.entity.IEntityEquipmentSlot.legs())
+  if (target.hasItemInSlot(legs)
   && target.world.random.nextInt(1000) > warp) {
-    var item = target.getItemInSlot(crafttweaker.entity.IEntityEquipmentSlot.legs());
+    var item = target.getItemInSlot(legs);
     if (!isNull(item) && item.isDamageable) {
-      target.setItemToSlot(crafttweaker.entity.IEntityEquipmentSlot.legs(), null);
+      target.setItemToSlot(legs, null);
       broken = true;
     }
   }
-  if (target.hasItemInSlot(crafttweaker.entity.IEntityEquipmentSlot.chest())
+  if (target.hasItemInSlot(chest)
   && target.world.random.nextInt(1000) > warp) {
-    var item = target.getItemInSlot(crafttweaker.entity.IEntityEquipmentSlot.chest());
+    var item = target.getItemInSlot(chest);
     if (!isNull(item) && item.isDamageable) {
-      target.setItemToSlot(crafttweaker.entity.IEntityEquipmentSlot.chest(), null);
+      target.setItemToSlot(chest, null);
       broken = true;
     }
   }
-  if (target.hasItemInSlot(crafttweaker.entity.IEntityEquipmentSlot.head())
+  if (target.hasItemInSlot(head)
   && target.world.random.nextInt(1000) > warp) {
-    var item = target.getItemInSlot(crafttweaker.entity.IEntityEquipmentSlot.head());
+    var item = target.getItemInSlot(head);
     if (!isNull(item) && item.isDamageable) {
-      target.setItemToSlot(crafttweaker.entity.IEntityEquipmentSlot.head(), null);
+      target.setItemToSlot(head, null);
       broken = true;
     }
   }
@@ -470,20 +470,20 @@ eldritchRetribution_trait.onHurt = function (trait, armor, player, source, damag
       return newDamage;
     }
     if (i == 2) {
-      if (mobTrue.hasItemInSlot(crafttweaker.entity.IEntityEquipmentSlot.mainHand())) {
-        var item = mobTrue.getItemInSlot(crafttweaker.entity.IEntityEquipmentSlot.mainHand());
+      if (mobTrue.hasItemInSlot(mainHand)) {
+        var item = mobTrue.getItemInSlot(mainHand);
         if (!isNull(item)) {
           if (item.isDamageable) item = item.withDamage(mobTrue.world.random.nextInt(item.maxDamage));
           mobTrue.world.spawnEntity(item.createEntityItem(mobTrue.world, mobTrue.position));
-          mobTrue.setItemToSlot(crafttweaker.entity.IEntityEquipmentSlot.mainHand(), null);
+          mobTrue.setItemToSlot(mainHand, null);
         }
       }
-      if (mobTrue.hasItemInSlot(crafttweaker.entity.IEntityEquipmentSlot.offhand())) {
-        var item = mobTrue.getItemInSlot(crafttweaker.entity.IEntityEquipmentSlot.offhand());
+      if (mobTrue.hasItemInSlot(offhand)) {
+        var item = mobTrue.getItemInSlot(offhand);
         if (!isNull(item)) {
           if (item.isDamageable) item = item.withDamage(mobTrue.world.random.nextInt(item.maxDamage));
           mobTrue.world.spawnEntity(item.createEntityItem(mobTrue.world, mobTrue.position));
-          mobTrue.setItemToSlot(crafttweaker.entity.IEntityEquipmentSlot.offhand(), null);
+          mobTrue.setItemToSlot(offhand, null);
         }
       }
       return newDamage;
@@ -680,7 +680,7 @@ function fluxStikeMechanic(target as IEntityLivingBase, damage as float) as void
     }).sleep(5).run(function(world, context){
       if(!isNull(entity))server.commandManager.executeCommandSilent(server, "/particle witchMagic "~entity.x~" "~(entity.y+entity.eyeHeight)~" "~entity.z~" 0 0 0 3 20");
     }).sleep(1).run(function(world, context){
-      if(!isNull(entity))entity.attackEntityFrom(crafttweaker.damage.IDamageSource.MAGIC(), damage);
+      if(!isNull(entity))entity.attackEntityFrom(MAGIC, damage);
     })
     .start();
     count +=1;
