@@ -49,7 +49,7 @@ events.onWorldTick(function (e as crafttweaker.event.WorldTickEvent) {
     if (!seeSky) continue;
 
     // Must lay on sand
-    val blockPos = entityItem.position.getOffset(IFacing.down(), 1);
+    val blockPos = entityItem.position.getOffset(down, 1);
     val block = world.getBlock(blockPos);
     if (block.definition.id != 'minecraft:sand') continue;
 

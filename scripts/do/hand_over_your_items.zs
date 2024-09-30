@@ -12,8 +12,6 @@ import crafttweaker.data.IData;
 import crafttweaker.item.IItemStack;
 import crafttweaker.player.IPlayer;
 
-val MAIN_HAND = crafttweaker.entity.IEntityEquipmentSlot.mainHand();
-
 events.onPlayerInteractEntity(function (e as crafttweaker.event.PlayerInteractEntityEvent) {
   val player = e.player;
   if (
@@ -24,7 +22,7 @@ events.onPlayerInteractEntity(function (e as crafttweaker.event.PlayerInteractEn
     // Player must be sneaking
     || !player.isSneaking
     // Player must be holding something
-    || !player.hasItemInSlot(MAIN_HAND)
+    || !player.hasItemInSlot(mainHand)
     // Player must be targeting another player
     || !(e.target instanceof IPlayer)
   ) {
@@ -41,7 +39,7 @@ events.onPlayerInteractEntity(function (e as crafttweaker.event.PlayerInteractEn
   val target as IPlayer = e.target;
   val item = player.mainHandHeldItem;
   target.give(item);
-  player.setItemToSlot(MAIN_HAND, null);
+  player.setItemToSlot(mainHand, null);
 
   broadcastMsg('send', player, target, item, 'blue', 'dark_blue');
   broadcastMsg('receive', target, player, item, 'dark_green', 'green');

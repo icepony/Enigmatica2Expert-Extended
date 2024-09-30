@@ -216,40 +216,40 @@ function cognitioExperienceBlessing(scythe as IEntity, target as IEntityLivingBa
 
 function desideriumDisarm(target as IEntityLivingBase) as void{
     val y = entityEyeHeight(target);
-    if(target.hasItemInSlot(crafttweaker.entity.IEntityEquipmentSlot.feet())){
-        var item = target.getItemInSlot(crafttweaker.entity.IEntityEquipmentSlot.feet());
+    if(target.hasItemInSlot(feet)){
+        var item = target.getItemInSlot(feet);
         if(!isNull(item)){
             server.commandManager.executeCommandSilent(server, "/particle totem "~target.x~" "~y~" "~target.z~" .5 .5 .5 .2 5");
             if(item.isDamageable) item = item.withDamage(target.world.random.nextInt(item.maxDamage));
             target.world.spawnEntity(item.createEntityItem(target.world, target.position));
-            target.setItemToSlot(crafttweaker.entity.IEntityEquipmentSlot.feet(),null);
+            target.setItemToSlot(feet,null);
         }
     }
-    if(target.hasItemInSlot(crafttweaker.entity.IEntityEquipmentSlot.legs())){
-        var item = target.getItemInSlot(crafttweaker.entity.IEntityEquipmentSlot.legs());
+    if(target.hasItemInSlot(legs)){
+        var item = target.getItemInSlot(legs);
         if(!isNull(item)){
             server.commandManager.executeCommandSilent(server, "/particle totem "~target.x~" "~y~" "~target.z~" .5 .5 .5 .2 5");
             if(item.isDamageable) item = item.withDamage(target.world.random.nextInt(item.maxDamage));
             target.world.spawnEntity(item.createEntityItem(target.world, target.position));
-            target.setItemToSlot(crafttweaker.entity.IEntityEquipmentSlot.legs(),null);
+            target.setItemToSlot(legs,null);
         }
     }
-    if(target.hasItemInSlot(crafttweaker.entity.IEntityEquipmentSlot.chest())){
-        var item = target.getItemInSlot(crafttweaker.entity.IEntityEquipmentSlot.chest());
+    if(target.hasItemInSlot(chest)){
+        var item = target.getItemInSlot(chest);
         if(!isNull(item)){
             server.commandManager.executeCommandSilent(server, "/particle totem "~target.x~" "~y~" "~target.z~" .5 .5 .5 .2 5");
             if(item.isDamageable) item = item.withDamage(target.world.random.nextInt(item.maxDamage));
             target.world.spawnEntity(item.createEntityItem(target.world, target.position));
-            target.setItemToSlot(crafttweaker.entity.IEntityEquipmentSlot.chest(),null);
+            target.setItemToSlot(chest,null);
         }
     }
-    if(target.hasItemInSlot(crafttweaker.entity.IEntityEquipmentSlot.head())){
-        var item = target.getItemInSlot(crafttweaker.entity.IEntityEquipmentSlot.head());
+    if(target.hasItemInSlot(head)){
+        var item = target.getItemInSlot(head);
         if(!isNull(item)){
             server.commandManager.executeCommandSilent(server, "/particle totem "~target.x~" "~y~" "~target.z~" .5 .5 .5 .2 5");
             if(item.isDamageable) item = item.withDamage(target.world.random.nextInt(item.maxDamage));
             target.world.spawnEntity(item.createEntityItem(target.world, target.position));
-            target.setItemToSlot(crafttweaker.entity.IEntityEquipmentSlot.head(),null);
+            target.setItemToSlot(head,null);
         }
     }
     val player = target.world.getClosestPlayerToEntity(target, 40, false);
@@ -370,7 +370,7 @@ function herbaTomatos(target as IEntityLivingBase) as void{
 
 function humanusCure(target as IEntityLivingBase, player as IPlayer) as void{
     target.addPotionEffect(<potion:minecraft:weakness>.makePotionEffect(600, 0));
-    player.simulateRightClickEntity(target, <minecraft:golden_apple>, crafttweaker.entity.IEntityEquipmentSlot.mainHand());
+    player.simulateRightClickEntity(target, <minecraft:golden_apple>, mainHand);
     server.commandManager.executeCommandSilent(server, "/particle happyVillager "~target.x~" "~entityEyeHeight(target)~" "~target.z~" .5 .5 .5 .2 5");
     target.updateNBT({"ConversionTime":5});
 }
@@ -400,18 +400,18 @@ function calcRepair(player as IPlayer, item as IItemStack, lvl as int) as void{
 }
 
 function instrumentumRepair(player as IPlayer, lvl as int) as void{
-    if(!isNull(player.getItemInSlot(crafttweaker.entity.IEntityEquipmentSlot.head()))) calcRepair(player,player.getItemInSlot(crafttweaker.entity.IEntityEquipmentSlot.head()),lvl);
-    if(!isNull(player.getItemInSlot(crafttweaker.entity.IEntityEquipmentSlot.chest()))) calcRepair(player,player.getItemInSlot(crafttweaker.entity.IEntityEquipmentSlot.chest()),lvl);
-    if(!isNull(player.getItemInSlot(crafttweaker.entity.IEntityEquipmentSlot.legs()))) calcRepair(player,player.getItemInSlot(crafttweaker.entity.IEntityEquipmentSlot.legs()),lvl);
-    if(!isNull(player.getItemInSlot(crafttweaker.entity.IEntityEquipmentSlot.feet()))) calcRepair(player,player.getItemInSlot(crafttweaker.entity.IEntityEquipmentSlot.feet()),lvl);
-    if(!isNull(player.getItemInSlot(crafttweaker.entity.IEntityEquipmentSlot.offhand()))) calcRepair(player,player.getItemInSlot(crafttweaker.entity.IEntityEquipmentSlot.offhand()),lvl);
+    if(!isNull(player.getItemInSlot(head))) calcRepair(player,player.getItemInSlot(head),lvl);
+    if(!isNull(player.getItemInSlot(chest))) calcRepair(player,player.getItemInSlot(chest),lvl);
+    if(!isNull(player.getItemInSlot(legs))) calcRepair(player,player.getItemInSlot(legs),lvl);
+    if(!isNull(player.getItemInSlot(feet))) calcRepair(player,player.getItemInSlot(feet),lvl);
+    if(!isNull(player.getItemInSlot(offhand))) calcRepair(player,player.getItemInSlot(offhand),lvl);
 }
 
 function luxLight(target as IEntityLivingBase, player as IPlayer) as void{
     player.simulateRightClickBlock(<randomthings:spectreilluminator>,
-    crafttweaker.entity.IEntityEquipmentSlot.mainHand() ,
+    mainHand ,
     crafttweaker.util.Position3f.create(target.x, target.y - 1, target.z) as IBlockPos,
-    crafttweaker.world.IFacing.north(),0.5, 0.5, 0.5);
+    north,0.5, 0.5, 0.5);
     server.commandManager.executeCommandSilent(server, "/particle endRod "~target.x~" "~entityEyeHeight(target)~" "~target.z~" 5 1 5 0 50");
     playSound("thaumcraft:wand", target);
 
