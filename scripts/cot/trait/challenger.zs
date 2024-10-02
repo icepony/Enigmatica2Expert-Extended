@@ -32,7 +32,7 @@ a.afterHit = function(trait, tool, attacker, target, damageDealt, wasCritical, w
 
 a.afterBlockBreak = function(trait, tool, world, blockstate, blockPos, miner, wasEffective) {
 	if (miner.world.remote || !wasEffective) return;
-  showFX(miner, 0.5 + blockPos.x, 0.5 + blockPos.y, 0.5 + blockPos.z, 0.1);
+  showFX(miner, 0.5 + blockPos.x, 0.5 + blockPos.y, 0.5 + blockPos.z, 0.05);
 };
 
 // a.extraInfo = function(trait, tool, tag) {
@@ -56,7 +56,7 @@ b.getModifications = function(trait, player, mods, armor, damageSource, damage, 
 };
 b.onDamaged = function (trait, armor, player, source, damage, newDamage, evt) {
   if (player.world.remote || newDamage <= 0) return newDamage;
-  showFX(player, player.x, player.y, player.z, getAnyBonus(player));
+  showFX(player, player.x, player.y, player.z, Math.log(getAnyBonus(player)));
   return newDamage;
 };
 b.register();
