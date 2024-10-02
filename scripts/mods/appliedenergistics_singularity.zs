@@ -45,8 +45,8 @@ static COLORS as string[] = [
   '§f',  // white
 ];
 
-static cutDownLen = EMOJIS.length * COLORS.length;
-static splitLen = COLORS.length;
+static cutDownLen as int = EMOJIS.length * COLORS.length;
+static splitLen as int = COLORS.length;
 
 function emojifiedFrequency(frequency as long) as string {
   var freq = frequency;
