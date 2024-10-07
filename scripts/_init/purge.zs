@@ -212,6 +212,7 @@ Purge(<mysticalagriculture:chunk:1>);
 Purge(<mysticalagriculture:chunk:2>);
 Purge(<mysticalagriculture:chunk:3>);
 Purge(<mysticalagriculture:chunk:4>);
+Purge(<mysticalagriculture:crafting:48>);
 Purge(<mysticalagradditions:insanium:4>);
 Purge(<mysticalagradditions:stuff:69>);
 Purge(<immersiveengineering:ore:1>).ores([<ore:oreAluminum>, <ore:oreAluminium>]);
