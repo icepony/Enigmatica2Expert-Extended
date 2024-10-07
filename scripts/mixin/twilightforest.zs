@@ -77,7 +77,7 @@ zenClass MixinContainerTFUncrafting {
     #    cancellable: true
     #}
     function filterRecipes(item as ItemStack, cir as CallbackInfoReturnable) as void {
-        val recipes as IRecipe[] = cir.getReturnValue() as IRecipe[];
+        val recipes as IRecipe[] = cir.getReturnValue();
         val recipeMap as [IRecipe][string] = {};
         for recipe in recipes {
             val out = recipe.recipeOutput;
