@@ -579,6 +579,9 @@ addItems(<ore:blockDimensional>, [
   <rftoolsdim:dimensional_small_blocks>,
 ]);
 
+// Remove wildcarded but keep original
+remove(<ore:oreDimensionalShard>, <rftools:dimensional_shard_ore:*>);
+
 // Remove conflicst
 remove(<ore:blockGlassWhite>, <enderio:block_fused_glass>);
 
