@@ -113,12 +113,12 @@ events.onPlayerInteractBlock(function (event as PlayerInteractBlockEvent) {
     nativePlayer.chunkCoordX,
     nativePlayer.chunkCoordZ
   );
-  var sample = drill.createCoreSample(
+  var sample as IItemStack = drill.createCoreSample(
     nativeWorld,
     nativePlayer.chunkCoordX,
     nativePlayer.chunkCoordZ,
     worldInfo
-  ) as IItemStack;
+  );
   //attach oil info
   val oilInfo = PumpjackHandler.getOilWorldInfo(
     nativeWorld,
