@@ -1,4 +1,4 @@
-#modloaded astralsorcery
+#modloaded astralsorcery requious
 #priority 950
 
 import crafttweaker.item.IItemStack;

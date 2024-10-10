@@ -1,5 +1,5 @@
 #priority 950
-#modloaded thaumcraft
+#modloaded thaumcraft requious
 
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
