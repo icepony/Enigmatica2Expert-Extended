@@ -1,4 +1,4 @@
-#modloaded ic2
+#modloaded ic2 ctintegration
 #reloadable
 #priority -1
 #sideonly client

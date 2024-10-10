@@ -1,14 +1,16 @@
+#modloaded contenttweaker
 #reloadable
 
 import crafttweaker.item.IItemStack;
 import crafttweaker.player.IPlayer;
 import crafttweaker.world.IBlockPos;
 import crafttweaker.world.IWorld;
-import mods.ctutils.utils.Math.abs;
 import crafttweaker.world.IFacing;
 import mods.contenttweaker.BlockPos;
 import mods.contenttweaker.BlockState;
 import mods.contenttweaker.World;
+
+function abs(n as double) as double { return n < 0 ? -n : n; }
 
 // ------------------------------------------
 // Anglesite and Benitoite

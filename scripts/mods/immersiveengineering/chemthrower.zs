@@ -1,4 +1,4 @@
-#modloaded immersiveengineering alfinivia
+#modloaded immersiveengineering alfinivia biomesoplenty
 #priority 900
 
 import crafttweaker.block.IBlockState;
