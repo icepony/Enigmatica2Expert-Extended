@@ -1,3 +1,4 @@
+#modloaded mcjtylib_ng
 #loader mixin
 
 /*

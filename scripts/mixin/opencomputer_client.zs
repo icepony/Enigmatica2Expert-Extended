@@ -1,3 +1,4 @@
+#modloaded opencomputers
 #loader mixin
 #sideonly client
 

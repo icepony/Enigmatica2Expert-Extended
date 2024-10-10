@@ -1,3 +1,4 @@
+#modloaded enderio
 #loader mixin
 
 import native.crazypants.enderio.base.recipe.alloysmelter.AlloyRecipeManager;
