@@ -1,4 +1,4 @@
-#modloaded thaumicwonders
+#modloaded thaumicwonders requious
 #priority 950
 
 import crafttweaker.item.IIngredient;

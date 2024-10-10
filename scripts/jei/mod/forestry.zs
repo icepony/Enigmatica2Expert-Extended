@@ -1,5 +1,5 @@
 #priority 950
-#modloaded forestry
+#modloaded forestry requious
 
 import crafttweaker.item.IItemStack;
 import mods.requious.AssemblyRecipe;
