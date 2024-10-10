@@ -1,3 +1,4 @@
+#modloaded architecturecraft
 #loader mixin
 #sideonly client
 

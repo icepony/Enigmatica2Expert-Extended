@@ -1,3 +1,4 @@
+#modloaded thermalexpansion
 #loader mixin
 
 import native.net.minecraft.item.ItemStack;

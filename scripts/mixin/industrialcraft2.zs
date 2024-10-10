@@ -1,3 +1,4 @@
+#modloaded ic2
 #loader mixin
 
 import native.ic2.api.crops.CropCard;

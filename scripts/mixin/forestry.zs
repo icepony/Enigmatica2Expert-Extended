@@ -1,3 +1,4 @@
+#modloaded forestry
 #loader mixin
 
 import native.forestry.api.recipes.ISqueezerManager;

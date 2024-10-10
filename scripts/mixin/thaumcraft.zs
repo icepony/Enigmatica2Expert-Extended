@@ -1,3 +1,4 @@
+#modloaded thaumcraft
 #loader mixin
 
 import native.thaumcraft.api.golems.parts.GolemMaterial;

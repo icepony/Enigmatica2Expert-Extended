@@ -1,3 +1,4 @@
+#modloaded botania
 #loader mixin
 
 import mixin.CallbackInfo;

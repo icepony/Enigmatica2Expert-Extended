@@ -1,3 +1,4 @@
+#modloaded scalinghealth
 #loader mixin
 
 import native.net.silentchaos512.scalinghealth.lib.EnumAreaDifficultyMode;
