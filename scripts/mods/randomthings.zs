@@ -1,4 +1,4 @@
-#modloaded randomthings
+#modloaded randomthings nuclearcraft
 
 import crafttweaker.item.IIngredient;
 
