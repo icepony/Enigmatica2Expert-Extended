@@ -424,6 +424,10 @@ Some of the changes from the `Extended` version [[1]](https://github.com/Enigmat
 
 - [The whole modpack beaten in only peaceful mode!](https://www.reddit.com/r/feedthebeast/comments/10p6uva/the_whole_modpack_beaten_in_only_peaceful_mode/?utm_source=share&utm_medium=web2x&context=3)
 
+### Migrate to Java 22 (Recommended)
+
+[![Migrate to Java 22](https://img.youtube.com/vi/bXXuKDeFGsQ/0.jpg)](https://www.youtube.com/embed/bXXuKDeFGsQ)
+
 ### Modpack Review (English)
 
 [![Modpack Review](https://img.youtube.com/vi/NAmwHIhZ6yM/0.jpg)](https://www.youtube.com/embed/NAmwHIhZ6yM)
