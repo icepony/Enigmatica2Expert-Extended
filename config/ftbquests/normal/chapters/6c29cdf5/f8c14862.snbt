@@ -1,25 +1,30 @@
 {
-	icon: "thaumcraft:bellows",
-	x: 3.5d,
-	y: 8.0d,
-	shape: "diamond",
+	icon: {
+		id: "botania:specialflower",
+		tag: {
+			type: "exoflame"
+		}
+	},
+	x: 16.1d,
+	y: 6.5d,
 	text: [
-		"{q.thaumcraft.arcane_bellows.desc}"
+		"{q.botania.exoflame.desc}"
 	],
 	dependencies: [
-		"0c6a05c4"
+		"5fe4c911"
 	],
-	size: 0.75d,
 	tasks: [{
-		uid: "e7ec5d0c",
+		uid: "8868e83e",
 		type: "item",
 		items: [{
-			item: "thaumcraft:bellows"
-		}],
-		ignore_nbt: 1b
+			id: "botania:specialflower",
+			tag: {
+				type: "exoflame"
+			}
+		}]
 	},
 	{
-		uid: "24087c43",
+		uid: "d5176fe7",
 		type: "item",
 		disable_toast: true,
 		items: [{
@@ -91,8 +96,13 @@
 		ignore_nbt: 1b
 	}],
 	rewards: [{
-		uid: "50cd7a18",
-		type: "random",
-		table: 142
+		uid: "f1d97f58",
+		type: "item",
+		item: {
+			id: "ftbquests:lootcrate",
+			tag: {
+				type: "uncommon"
+			}
+		}
 	}]
 }
