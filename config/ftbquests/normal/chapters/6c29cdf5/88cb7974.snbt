@@ -1,5 +1,11 @@
 {
 	title: "{q.botania.kekimurus.name}",
+	icon: {
+		id: "botania:specialflower",
+		tag: {
+			type: "kekimurus"
+		}
+	},
 	x: 13.5d,
 	y: 4.666666666666667d,
 	text: [
@@ -18,6 +24,48 @@
 				type: "kekimurus"
 			}
 		}]
+	},
+	{
+		uid: "10745cfd",
+		type: "item",
+		disable_toast: true,
+		items: [{
+			item: "minecraft:cake"
+		},
+		{
+			item: "thaumadditions:cake"
+		},
+		{
+			item: "twilightforest:experiment_115"
+		},
+		{
+			item: "exnihilocreatio:block_end_cake"
+		},
+		{
+			item: "harvestcraft:redvelvetcakeitem"
+		},
+		{
+			item: "harvestcraft:pumpkincheesecakeitem"
+		},
+		{
+			item: "harvestcraft:pineappleupsidedowncakeitem"
+		},
+		{
+			item: "harvestcraft:holidaycakeitem"
+		},
+		{
+			item: "harvestcraft:chocolatesprinklecakeitem"
+		},
+		{
+			item: "harvestcraft:cherrycheesecakeitem"
+		},
+		{
+			item: "harvestcraft:cheesecakeitem"
+		},
+		{
+			item: "harvestcraft:carrotcakeitem"
+		}],
+		ignore_nbt: 1b
 	}],
 	rewards: [{
 		uid: "fb485b1d",
