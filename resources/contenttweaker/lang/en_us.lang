@@ -597,13 +597,14 @@ tooltips.dim_stages.remind_skyblock=§eYou have entered a §bSkyblock §eworld a
 # - "e2ee.jei.{id}.{entry}" format recommended
 # --------------------------------------
 e2ee.jei.rats_consuming.title=Rats Consuming
+e2ee.jei.alchemists_stone.title=Alchemists Stone
+e2ee.jei.alienist_stone.title=Alienists Stone
+e2ee.jei.transmuter_stone.title=Transmuters Stone
 
 # --------------------------------------
 # Requious Fracto custom JEI categories
 # --------------------------------------
 requious.jei.recipe.adv_bee_analyzer=Advanced Analyzer
-requious.jei.recipe.alchemists_stone=Alchemists Stone
-requious.jei.recipe.alienists_stone=Alienists Stone
 requious.jei.recipe.arboreal_extractor=Arboreal Extractor
 requious.jei.recipe.asteroids=Asteroids
 requious.jei.recipe.barrel_milking=Barrel Milking
@@ -632,7 +633,6 @@ requious.jei.recipe.pech_trades=Pech Trades
 requious.jei.recipe.petro_petunia=Petro Petunia
 requious.jei.recipe.scented_hive=Scented Hive
 requious.jei.recipe.syngas_producer=Syngas Producer
-requious.jei.recipe.transmuters_stone=Transmuters Stone
 requious.jei.recipe.turbine=Turbine
 requious.jei.recipe.typewriter=Typewriter
 requious.jei.recipe.witch_water=Witch Water

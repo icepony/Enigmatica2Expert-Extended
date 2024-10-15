@@ -599,13 +599,14 @@ tooltips.dim_stages.remind_skyblock=§eВы снова запустили мир
 # - "e2ee.jei.{id}.{entry}" format recommended
 # --------------------------------------
 e2ee.jei.rats_consuming.title=Крысы едят
+e2ee.jei.alchemists_stone.title=Alchemists Stone
+e2ee.jei.alienist_stone.title=Alienists Stone
+e2ee.jei.transmuter_stone.title=Transmuters Stone
 
 # --------------------------------------
 # Requious Fracto custom JEI categories
 # --------------------------------------
 requious.jei.recipe.adv_bee_analyzer=Расширенный Анализатор
-requious.jei.recipe.alchemists_stone=Камень Алхимиов
-requious.jei.recipe.alienists_stone=Камень Чужеродностей
 requious.jei.recipe.arboreal_extractor=Древесный выжиматель
 requious.jei.recipe.asteroids=Астероиды
 requious.jei.recipe.barrel_milking=Доение Бочкой
@@ -634,7 +635,6 @@ requious.jei.recipe.pech_trades=Торговля ПеКа
 requious.jei.recipe.petro_petunia=Петро Петуния
 requious.jei.recipe.scented_hive=Ароматный улей
 requious.jei.recipe.syngas_producer=Производитель Сингаза
-requious.jei.recipe.transmuters_stone=Камень Трансмутаций
 requious.jei.recipe.turbine=Турбина
 requious.jei.recipe.typewriter=Печатная машинка
 requious.jei.recipe.witch_water=Ведьмина Вода

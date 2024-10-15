@@ -598,13 +598,14 @@ tooltips.dim_stages.remind_skyblock=§e你再次进入了一个§b空岛§e世�
 # - "e2ee.jei.{id}.{entry}" format recommended
 # --------------------------------------
 e2ee.jei.rats_consuming.title=老鼠食用
+e2ee.jei.alchemists_stone.title=Alchemists Stone
+e2ee.jei.alienist_stone.title=Alienists Stone
+e2ee.jei.transmuter_stone.title=Transmuters Stone
 
 # --------------------------------------
 # Requious Fracto custom JEI categories
 # --------------------------------------
 requious.jei.recipe.adv_bee_analyzer=高级蜜蜂分析仪
-requious.jei.recipe.alchemists_stone=炼金术士之石
-requious.jei.recipe.alienists_stone=异形之石
 requious.jei.recipe.arboreal_extractor=树汁提取器
 requious.jei.recipe.asteroids=小行星
 requious.jei.recipe.barrel_milking=桶交互
@@ -633,7 +634,6 @@ requious.jei.recipe.pech_trades=岩精交易
 requious.jei.recipe.petro_petunia=石油矮牵牛花
 requious.jei.recipe.scented_hive=清香的人工蜂巢
 requious.jei.recipe.syngas_producer=合成气制造器
-requious.jei.recipe.transmuters_stone=转化之石
 requious.jei.recipe.turbine=涡轮机
 requious.jei.recipe.typewriter=打字机
 requious.jei.recipe.witch_water=巫水转化
