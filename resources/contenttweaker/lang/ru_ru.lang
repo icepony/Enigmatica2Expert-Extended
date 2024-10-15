@@ -386,6 +386,7 @@ e2ee.written_book.Zombie=Зомби
 
 # Misc
 stat.replications=Потраченные ведра UU Материи
+e2ee.recipe.over_void=Игрок должен находиться над бездной
 e2ee.quest.common=§fОбычный§r Лутбокс §e✪
 e2ee.quest.uncommon=§bНеобычный§r Лутбокс §e✪
 e2ee.quest.rare=§6Редкий§r Лутбокс §e✪

@@ -385,6 +385,7 @@ e2ee.written_book.Zombie=Zombie
 
 # Misc
 stat.replications=Spent UU Matter buckets
+e2ee.recipe.over_void=The player must be positioned over the void
 e2ee.quest.common=§fCommon§r Loot Crate §e✪
 e2ee.quest.uncommon=§bUncommon§r Loot Crate §e✪
 e2ee.quest.rare=§6Rare§r Loot Crate §e✪
