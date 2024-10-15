@@ -385,6 +385,7 @@ e2ee.written_book.Zombie=僵尸
 
 # Misc 杂项
 stat.replications=消耗的UU物质桶
+e2ee.recipe.over_void=玩家必须位于虚空之上
 e2ee.quest.common=§f普通§r 战利品箱 §e✪
 e2ee.quest.uncommon=§b不常见§r 战利品箱 §e✪
 e2ee.quest.rare=§6稀有§r 战利品箱 §e✪
