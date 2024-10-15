@@ -1097,6 +1097,7 @@ q.astral_sorcery.resplendent_prism.desc=这件饰品会为身上的盔甲或主�
 q.astral_sorcery.fosic_resonator.desc=法斯刻共振器在夜间会高亮显示星能更强的位置。
 q.astral_sorcery.starmetal_ore.desc=铁矿石接受一定量的聚焦星能后会转化为星辉矿石。
 q.astral_sorcery.starlight_infuser.desc=星能聚合器可以向材料或工具中灌注星光。 为了使其正常工作，你需要在它周围构建多方块结构，参考星芒宝典。
+q.astral_sorcery.ichosic_resonator.desc=夜间用伊科西共振器右键点击方块，将显示该区块内的流体储层。
 q.astral_sorcery.resonating_gem.desc=共振宝石是合成材料，由星能聚合器制作。
 q.astral_sorcery.telescope.desc=天文望远镜是望远镜的升级版，它需要放在地上。
 q.astral_sorcery.ritual_pedestal.desc=效应放大器基于放置其中的共鸣水晶石，可以产生多种效果。
