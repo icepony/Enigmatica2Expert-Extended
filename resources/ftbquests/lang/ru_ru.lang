@@ -1097,6 +1097,7 @@ q.astral_sorcery.resplendent_prism.desc=Эта безделушка добави
 q.astral_sorcery.fosic_resonator.desc=Fosic Resonator будет выделять области, которые получают больше, чем обычно, количество звездного света, но только ночью.
 q.astral_sorcery.starmetal_ore.desc=Starmetal Ore - это железная руда, которая получила достаточное количество сфокусированного звездного света.
 q.astral_sorcery.starlight_infuser.desc=Starlight Infuser наполняет Starlight различными материалами и инструментами. Вам нужно будет построить вокруг него структуру из нескольких блоков, которую вы можете найти в Astral Tome.
+q.astral_sorcery.ichosic_resonator.desc=Щелчок правой кнопкой мыши по блоку ночью с помощью Ихосического Резонатора покажет наличие резервуара с жидкостью в этом чанке.
 q.astral_sorcery.resonating_gem.desc=Резонирующие камни - это компоненты для крафта, которые изготавливаются в Starlight Infuser.
 q.astral_sorcery.telescope.desc=Телескоп - это в основном модернизированная стационарная версия Зеркала.
 q.astral_sorcery.ritual_pedestal.desc=Ритуальный пьедестал может выполнять различные ритуалы в зависимости от того, каким настроенным кристаллом вы его поставите.

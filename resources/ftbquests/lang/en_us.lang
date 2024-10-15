@@ -1099,6 +1099,7 @@ q.astral_sorcery.resplendent_prism.desc=This Bauble will add levels to random en
 q.astral_sorcery.fosic_resonator.desc=The Fosic Resonator will highlight areas that receive a larger than normal amount of starlight, but only at night.
 q.astral_sorcery.starmetal_ore.desc=Starmetal Ore is Iron Ore that has received a sufficient amount of focused starlight.
 q.astral_sorcery.starlight_infuser.desc=The Starlight Infuser infuses various materials and tools with Starlight. You will need to build a multiblock structure around it, which you can find in the Astral Tome.
+q.astral_sorcery.ichosic_resonator.desc=Right-clicking a block at night with the Ichosic Resonator will reveal any fluid reservoirs in that chunk.
 q.astral_sorcery.resonating_gem.desc=Resonating Gems are crafting components and are made in the Starlight Infuser.
 q.astral_sorcery.telescope.desc=The Telescope is an upgraded, stationary version of the Looking Glass.
 q.astral_sorcery.ritual_pedestal.desc=The Ritual Pedestal can perform various rituals, based on which Attuned Crystal you supply it with.
