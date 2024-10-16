@@ -28,7 +28,7 @@ zenClass Spread {
 	zenConstructor() {}
 
   // Recipes for exact inputState => outputState
-  val stateRecipes as IBlockState[][IBlockState][int][int] = {};
+  val stateRecipes as IBlockState[][IBlockState][int][int] = {} as IBlockState[][IBlockState][int][int]$orderly;
 
   // Block numerical IDs that can be converted (completely or only some of their states)
   val transformableBlockNumIds as bool[int][int][int] = {};
