@@ -62,11 +62,9 @@
 		item: {
 			id: "thermalexpansion:strongbox",
 			tag: {
-				ench: [{
-					lvl: 4s,
-					id: 55
-				}],
-				Level: 2b
+				ench: [{}],
+				enchantmentColor: 10590976,
+				Level: 3b
 			}
 		}
 	},
@@ -512,12 +510,9 @@
 		item: {
 			id: "thermalexpansion:tank",
 			tag: {
-				ench: [{
-					lvl: 1s,
-					id: 55
-				}],
+				ench: [{}],
 				enchantmentColor: 10590976,
-				Level: 0b
+				Level: 1b
 			}
 		}
 	},

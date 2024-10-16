@@ -2,39 +2,6 @@
 	title: "Mythic",
 	loot_size: 1,
 	rewards: [{
-		item: {
-			id: "twilightforest:minotaur_axe",
-			tag: {
-				"Quark:RuneColor": 16,
-				ench: [{
-					lvl: 9s,
-					id: 64
-				},
-				{
-					lvl: 9s,
-					id: 35
-				},
-				{
-					lvl: 9s,
-					id: 34
-				},
-				{
-					lvl: 15s,
-					id: 32
-				},
-				{
-					lvl: 15s,
-					id: 54
-				},
-				{
-					lvl: 12s,
-					id: 57
-				}],
-				"Quark:RuneAttached": 1b
-			}
-		}
-	},
-	{
 		icon: "rats:confit_byaldi 64",
 		item: "rats:confit_byaldi",
 		count: 64
