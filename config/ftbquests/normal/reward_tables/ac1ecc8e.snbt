@@ -14,10 +14,7 @@
 			Damage: 4s,
 			tag: {
 				enchantmentColor: 10057489,
-				ench: [{
-					lvl: 1s,
-					id: 44s
-				}],
+				ench: [{}],
 				inventory: {
 					Items: [{
 						Slot: 0b,

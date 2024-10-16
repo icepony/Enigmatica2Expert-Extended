@@ -309,17 +309,14 @@
 						tag: {
 							Fluid: {
 								FluidName: "potion",
-								Amount: 90000,
+								Amount: 30000,
 								Tag: {
 									Potion: "cofhcore:healing4"
 								}
 							},
-							Arrows: 1800,
+							Arrows: 600,
 							Mode: 1,
-							ench: [{
-								id: 55,
-								lvl: 4s
-							}],
+							ench: [{}],
 							enchantmentColor: 3887386
 						}
 					},
