@@ -120,7 +120,7 @@
       "name": "research_name.thaumadditions:crystal_bore",
       "icons": ["thaumadditions:crystal_bore"],
       "category": "ARTIFICE",
-      "location": [0, 4],
+      "location": [2, 2],
       "parents": ["BASEARTIFICE", "CRYSTALFARMER"],
       "stages": [
         {
