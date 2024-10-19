@@ -1,6 +1,7 @@
 #sideonly client
 #reloadable
 #priority -1500
+#modloaded randomtweaker
 
 import mods.randomtweaker.botania.IBotaniaFXHelper;
 import mods.zenutils.NetworkHandler;
@@ -54,5 +55,5 @@ NetworkHandler.registerServer2ClientMessage('acquire_star_and_flare', function(p
   val sqrtValue = Math.sqrt(value);
   
   showStarAndFlare(data.x, data.y, data.z, sqrtValue);
-  playAcquireSound(player.world, data, sqrtValue / 64 + 0.1, 0.5);
+  if (sqrtValue > 0.1) playAcquireSound(player.world, data, sqrtValue / 64 + 0.1, 0.5);
 });

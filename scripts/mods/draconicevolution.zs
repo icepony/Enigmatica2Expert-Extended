@@ -369,3 +369,22 @@ recipes.addShapedMirrored('Fluid Gate',
   [[<ore:ingotIron>, <draconicevolution:potentiometer>, <ore:ingotIron>],
     [<minecraft:bucket>, <nuclearcraft:part:10>, <minecraft:bucket>],
     [<ore:ingotIron>, <minecraft:comparator>, <ore:ingotIron>]]);
+
+// [Reactor Stabilizer Focus Ring] from [Wyvern Core][+2]
+craft.remake(<draconicevolution:reactor_part:4>, ['pretty',
+  '¤ □ ¤',
+  '□ W □',
+  '¤ □ ¤'], {
+  '¤': <ore:gearDiamond>,               // Diamond Gear
+  '□': <ore:plateDenseGold>,            // Dense Gold Plate
+  'W': <draconicevolution:wyvern_core>, // Wyvern Core
+});
+
+// [Reactor Stabilizer Outer Rotor] from [Draconic Core][+2]
+craft.remake(<draconicevolution:reactor_part:2>, ['pretty',
+  '¤ ¤ ¤',
+  'D ☼ ☼'], {
+  '¤': <ore:gearDiamond>,                 // Diamond Gear
+  'D': <draconicevolution:draconic_core>, // Draconic Core
+  '☼': <ore:gearDraconium>,               // Draconium Gear
+});

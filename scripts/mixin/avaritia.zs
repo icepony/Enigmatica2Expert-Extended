@@ -1,3 +1,4 @@
+#modloaded avaritia
 #loader mixin
 
 import native.net.minecraftforge.event.RegistryEvent;

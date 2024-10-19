@@ -234,9 +234,7 @@ function setBlock(world as IWorld, bpos as IBlockPos, state as IBlockState, fanc
 function isShowParticles(world as IWorld, portalPos as Position3f) as bool {
   val player = world.getClosestPlayer(portalPos.x, portalPos.y, portalPos.z, 60, false);
   if (!isNull(player)) {
-    val item = player.getItemInSlot(
-      crafttweaker.entity.IEntityEquipmentSlot.mainHand()
-    );
+    val item = player.getItemInSlot(mainHand);
     if (
       !isNull(item)
       && item.definition.id == 'minecraft:flint_and_steel'

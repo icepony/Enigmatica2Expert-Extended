@@ -1,4 +1,5 @@
 {
+	icon: "immersiveengineering:metal_device1 1 1",
 	x: -3.5d,
 	y: 4.833333333333333d,
 	text: [
@@ -13,6 +14,78 @@
 		items: [{
 			item: "immersiveengineering:metal_device1 1 1"
 		}]
+	},
+	{
+		uid: "59706963",
+		type: "item",
+		disable_toast: true,
+		items: [{
+			item: "minecraft:furnace"
+		},
+		{
+			item: "thaumcraft:smelter_basic"
+		},
+		{
+			item: "thaumcraft:smelter_thaumium"
+		},
+		{
+			item: "thaumcraft:smelter_void"
+		},
+		{
+			item: "thaumadditions:mithrillium_smelter"
+		},
+		{
+			item: "thaumadditions:adaminite_smelter"
+		},
+		{
+			item: "thaumadditions:mithminite_smelter"
+		},
+		{
+			item: "tconstruct:seared_furnace_controller"
+		},
+		{
+			item: "tconstruct:smeltery_controller"
+		},
+		{
+			item: "tcomplement:melter"
+		},
+		{
+			item: "immersiveengineering:stone_device 1 7"
+		},
+		{
+			item: "immersiveengineering:stone_device 1 1"
+		},
+		{
+			item: "immersiveengineering:metal_multiblock 1 13"
+		},
+		{
+			item: "ic2:te 1 12"
+		},
+		{
+			item: "ic2:te 1 50"
+		},
+		{
+			item: "ic2:te 1 100"
+		},
+		{
+			item: "engineersdecor:small_lab_furnace"
+		},
+		{
+			item: "mysticalagriculture:inferium_furnace"
+		},
+		{
+			item: "mysticalagriculture:prudentium_furnace"
+		},
+		{
+			item: "mysticalagriculture:intermedium_furnace"
+		},
+		{
+			item: "mysticalagriculture:superium_furnace"
+		},
+		{
+			item: "mysticalagriculture:supremium_furnace"
+		}],
+		ignore_nbt: 1b
 	}],
 	rewards: [{
 		uid: "b7bf9561",

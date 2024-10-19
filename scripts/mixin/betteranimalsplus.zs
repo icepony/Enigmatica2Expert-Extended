@@ -1,3 +1,4 @@
+#modloaded betteranimalsplus
 #loader mixin
 
 import native.net.minecraft.entity.Entity;

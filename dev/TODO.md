@@ -2,35 +2,19 @@
 
 🚧✅❌⚠️ List of priorities:
 
-- [ ] 🩸 Meteor: Implement https://github.com/friendlyhj/ZenUtils/issues/54#issuecomment-2152275918
-- [ ] 🚂 Process NC schematics https://discord.com/channels/911676461050642432/911676461050642434/1270356435380994099
-- [ ] 📀 Concrete make hardening slower for servers
-- [ ] 🛡️ Challenger armor - tweak effects
-- [ ] 🦆 Fix goose duping equippable items
-- [ ] ✏️ Idea: Time in a Bottle add levels to Tinker's tools
-- [ ] 🧽 remove "Sponge clear TCon modifiers" feature or fix it
-- [ ] ✏️ Fix Gunpowder cant be made in Crucible for the research
-- [ ] 📜 Improve CF page: fasten GIF, update mods
-- [ ] ⭐ Make self-forbidding mechanism for Difficulty https://github.com/friendlyhj/ZenUtils/issues/53#issuecomment-2154922579
-- [ ] ⭐ Difficulty: descrease over time?
-- [ ] ✏️ Rethink EnderTank recipe since glass cant be poured with iron after cast
-- [ ] 📖 Skyblock chapter disable chapter comletion message on each quest (how if everything optional?)
-- [ ] ✨ Idea: reaching 1000 difficulty opening supreme power, instantly advance player to endgame powers
-- [ ] ✏️ New recipe idea: `Experiment 115` farm. You need to grow cakes to full for using them in recipe.
-- [ ] Fixeroo enlarge xp orbs when fixed https://github.com/CaliforniaDemise/Fixeroo/issues/6
-- [ ] Add mention that Assembler is automatable
-- [ ] Add when fixed https://github.com/Invadermonky/MagicultureIntegrations/issues/4
-- [ ] transormation powder turn fox into foxhound
-- [ ] Integrate https://www.curseforge.com/minecraft/mc-mods/customfishing
-- [ ] Integrate `Fluid Interaction Tweaker`
-- [ ] 📖 Reward proper tank in Skyblock Quests before treated wood
 - [ ] 🚧 TconScript: account trait "value" in resulted power
-- [ ] 📖 Add `Ctrl+F5` hotkey info
-- [ ] 📖 Add note about disabling placement logic
-- [ ] 📖 Find how to work with Modrinth and install https://modrinth.com/mod/hit-indication
-- [ ] 🕰️ Make Timewood Clock function unstackable
-- [ ] 🟢 Add and integrate https://legacy.curseforge.com/minecraft/mc-mods/villager-contracts
-- [ ] 📖 fix stellar set reward random
+- [ ] 🟢 Find how to work with Modrinth and install https://modrinth.com/mod/hit-indication
+- [ ] 💬 fix sometimes when playing on server, it spam errors about uu matter tooltip. Caused by player.difficulty getter
+- [ ] Use `WaitingIdly` mixin to fix RT tp bug
+- [ ] 🌑 Add dark mode for Replicator
+- [ ] 🟢 add mod `improved stronghold`
+- [ ] Iterate all possible variants in Transmuter Stone
+- [ ] Fix PSI "silk touch falling" turning Netherending Ores into meta-0 ones
+- [ ] `Black Quartz Ore` transforms in Nether Portal only after `/ct relaod`
+
+```
+{validSpell:1b,spellName:"Collapse Block",uuidMost:-2407616212808744454L,uuidLeast:-5336080093071054503L,spellList:[{x:2,y:2,data:{key:"operatorEntityPosition",params:{_target:2}}},{x:2,y:3,data:{key:"selectorFocalPoint"}},{x:3,y:2,data:{key:"operatorVectorRaycast",params:{_position:3,_ray:2,_max:0}}},{x:3,y:3,data:{key:"operatorEntityLook",params:{_target:3}}},{x:4,y:2,data:{key:"trickCollapseBlock",params:{_position:3}}}]}
+```
 
 ---
 
@@ -57,6 +41,7 @@ Planned non-urgent changes, or just good ideas:
 - [ ] 📖 Distilled water add JEI entries
 - [ ] 🐉 Bestiary book have missed item icons
 - [ ] 📖 Suggest IC2 reactors schemas
+- [ ] 📖 Add note that Mana Enchanter can put Airtight Seal on TCon armor
 
 ### "Battle" expansion
 - [ ] ✏️ Buff EU saber - give it more damage? But better split entities in two.
@@ -89,7 +74,7 @@ Planned non-urgent changes, or just good ideas:
 - [ ] ✏️ Milk Questing Ram to color essence
 - [ ] 🔄 Add `Cow Hacker` feature. Buff cow with 2-3 special potions based on their UUID to turn it into drop generator.
 - [ ] ✏️ Dragon Ice better craft isages
-- [ ] ✏️ Fish rework: All automated fishing options way harder to make sense of manual fishing. All fish usages lower. Add `Fish Singularity`.
+- [ ] ✏️ Fish rework: All automated fishing options way harder to make sense of manual fishing. All fish usages lower. Add `Fish Singularity`. Integrate https://www.curseforge.com/minecraft/mc-mods/customfishing
 - [ ] ✏️ Add `Meat Singularity`
 - [ ] 🔨 Ironwood Add material. Drop Armor from mobs on hit
 
@@ -127,11 +112,9 @@ Planned non-urgent changes, or just good ideas:
 ### Mods
 - [ ] 🔴 Remove `Random Patches` since UT and Valkyrie now do most of its features
 - [ ] 🟠 Do not update `ae2-uel-v0.56.6` since its breaking plus + button craftings
-- [ ] 🟠 Do not update `Xaero` Minimap and World - incompatible with `visualores`
 - [ ] 🔴 Remove `XTones` and `Environmental Materials`
 - [ ] 🟢 Return Village Names when fixed https://legacy.curseforge.com/minecraft/mc-mods/village-names/issues/18
 - [ ] 🟡 Update `Precision Mining` when fixed https://codeberg.org/PORTB/PrecisionMiningRewrite/issues/4
-- [ ] 🟡 Update REID when fixed https://github.com/TerraFirmaCraft-The-Final-Frontier/RoughlyEnoughIDs/issues/37
 - [ ] 🟢 Add **Legendary Tooltips** when fixed: https://github.com/AHilyard/LegendaryTooltips/issues/47
 - [ ] 🟢 Add **Fancier Particles** (note gitignore) when fixed: https://github.com/Red-Studio-Ragnarok/Fancier-Block-Particles/issues/12
 - [ ] 🟢 Add **quality-tools**
@@ -141,12 +124,25 @@ Planned non-urgent changes, or just good ideas:
 - [ ] 🟠 Do not update `JAOPCA` - uncompatible with JAOPCACustom
 - [ ] 🟠 Do not update `spark` (not working propertly)
 - [ ] 🟢 Add Nothirium when fixed https://github.com/Meldexun/Nothirium/issues/9
-- [ ] 🟢 Return Custom Loading Screen when fixed [this](https://github.com/AlexIIL/CustomLoadingScreen/issues/74)
-- [ ] 🟢 Add [Heat And Climate](https://www.curseforge.com/minecraft/mc-mods/heat-and-climate)
-- [ ] 🟢 Add https://github.com/Olivoz/ExtendedConfigs
+- [ ] 🟢 Return Custom Loading Screen when fixed https://github.com/AlexIIL/CustomLoadingScreen/issues/74
+- [ ] 🟢 Add https://www.curseforge.com/minecraft/mc-mods/heat-and-climate
+- [ ] 🟢 Add https://www.curseforge.com/minecraft/mc-mods/ae2-crafting-tree-legacy
 
 ### Other
 
+- [ ] 🌠 Tweak Shooting Star drop list
+- [ ] 📀 Concrete make hardening slower for servers. Source code of concrete https://github.com/BluSunrize/ImmersiveEngineering/blob/master/src/main/java/blusunrize/immersiveengineering/common/blocks/BlockIEFluidConcrete.java#L51-L191
+- [ ] 💦 Integrate `Fluid Interaction Tweaker` when resolved: https://github.com/tttsaurus/Fluid-Interaction-Tweaker/issues/4
+- [ ] 🦊 Transormation powder turn `Fox` into `Foxhound`
+- [ ] 🟢 Integrate `villager-contracts`
+- [ ] 🕰️ Make Timewood Clock function unstackable
+- [ ] ✨ Idea: `Experiment 115` farm. You need to grow cakes to full for using them in recipe.
+- [ ] ✨ Idea: reaching 1000 difficulty opening supreme power, instantly advance player to endgame powers
+- [ ] ✏️ Rethink EnderIO `Fluid Tank` recipe since glass cant be poured with iron after cast
+- [ ] ⭐ Make self-forbidding mechanism for Difficulty https://github.com/friendlyhj/ZenUtils/issues/53#issuecomment-2154922579
+- [ ] ⭐ Difficulty: descrease over time?
+- [ ] 📖 Skyblock chapter disable chapter comletion message on each quest (how if everything optional?)
+- [ ] ✏️ Idea: Time in a Bottle add levels to Tinker's tools
 - [ ] Add "Balls" singularity
 - [ ] 📀 Add animated GIF for java warning https://github.com/Darkhax-Minecraft/OldJavaWarning/blob/1.12.2/src/main/java/net/darkhax/oldjava/OldJavaWarning.java
 - [ ] ✏️ Add Archeologyst trades to HEI
@@ -241,15 +237,14 @@ Planned non-urgent changes, or just good ideas:
 - [ ] 🔄 Add custom progression for Twilight Forest based on Quest Book, since achievments can be disabled
 - [ ] 📀 Fix NPE https://is.gd/wZprY2
 - [ ] ✏️ Add multiblock structure that speed up blocks like Time In Bottle, but based on numbers of mobs around https://is.gd/tPPqt2
-- [ ] 📀 Adv. Rock tank left 64 buckets when broken
-- [ ] 🔄 After getting 30 hearts, player need to relog to enter nether
+- [ ] 🔄 Fix after getting 30 hearts, player need to relog to enter nether
 - [ ] 🔄 Check why mobs are not spawned enough (less then 70 for whole server)
 - [ ] ✏️ Rethink HedgeAlchemy, add recipes for essential tech-alike ingredients
 - [ ] ✏️ Fix main Vis Crystals doubled in JEI (happens because of Rustic add into JEI everything in output of Alchemical)
 - [ ] 📀 Colossal Chests make bigger interface
 - [ ] ✏️ Drop items onto garbage piles to make pile bigger
 - [ ] ✏️ ? Quark Crystals: orange -> topaz nuggets, violet -> tanzanite nuggets, yellow -> brass nuggets
-- [ ] ✏️ Fix Green fertilizer output additional crop even if not grown (carrots)
+- [ ] 📀 Fix Green fertilizer output additional crop even if not grown (carrots)
 - [ ] ✏️ Spray Pyrotheum or other liquids to turn blocks into charcoal or other stuff.
 - [ ] ✏️ Change `Expire in block` craft to be faster
 - [ ] ✏️ `Ash` add to liquid interaction
@@ -281,7 +276,7 @@ Planned non-urgent changes, or just good ideas:
 ## Unable to
 
 - ✏️ fix 59% on Bees Output such as Combs. Impossible since this how Mod Tweaker adds them. Some recipes have -1% some dont.
-- ❌ fix I C2 Chainsaw Cant Cut T Ctrees. Impossible to change mining level with `MaterialChanger`
+- ❌ fix I C2 Chainsaw Cant Cut TC trees. Impossible to change mining level with `MaterialChanger`
 - ✏️ Add Rubber Wood in Resin Funnel - **Resin Funnel** recipes cant be changed
 - 🔄 Blacklist Bedrock Ore for ![](https://git.io/Jz9q9 "Mining Laser")
 - Buff Giant Sword

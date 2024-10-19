@@ -1,3 +1,4 @@
+#modloaded tconstruct
 #loader mixin
 
 import native.net.minecraft.item.ItemStack;
@@ -6,6 +7,7 @@ import native.net.minecraft.nbt.NBTTagCompound;
 import native.slimeknights.tconstruct.library.smeltery.ICastingRecipe;
 import native.slimeknights.tconstruct.library.modifiers.ModifierAspect;
 import native.slimeknights.tconstruct.library.modifiers.ModifierNBT;
+import native.slimeknights.tconstruct.library.modifiers.ModifierNBT.IntegerNBT;
 import native.slimeknights.tconstruct.library.tools.ToolNBT;
 import native.slimeknights.tconstruct.library.utils.TagUtil;
 import native.slimeknights.tconstruct.tools.modifiers.ToolModifier;
@@ -73,7 +75,7 @@ zenClass MixinModSharpness {
 
     #mixin Overwrite
     function applyEffect(rootCompound as NBTTagCompound, modifierTag as NBTTagCompound) as void {
-        val data as ModifierNBT.IntegerNBT = ModifierNBT.readInteger(modifierTag);
+        val data as IntegerNBT = ModifierNBT.readInteger(modifierTag);
         val toolData as ToolNBT = TagUtil.getOriginalToolStats(rootCompound);
         var attack as float = toolData.attack;
         val level as float = (1.0f * data.current) / max;

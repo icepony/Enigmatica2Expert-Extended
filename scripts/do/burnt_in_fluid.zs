@@ -82,7 +82,7 @@ events.onEntityItemDeath(function (e as mods.zenutils.event.EntityItemDeathEvent
   // Iterate block essence inside and under it (item can jump)
   for i in 0 .. 2 {
     // Get state
-    val blockPos = entityItem.position.getOffset(IFacing.down(), i);
+    val blockPos = entityItem.position.getOffset(down, i);
     val blockState = world.getBlockState(blockPos);
 
     // Liquid should be full

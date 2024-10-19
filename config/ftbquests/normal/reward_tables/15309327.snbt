@@ -93,7 +93,7 @@
 		item: "openblocks:sponge_on_a_stick"
 	},
 	{
-		item: "colytra:elytra_bauble"
+		item: "minecraft:elytra"
 	},
 	{
 		item: "draconicevolution:dislocator"

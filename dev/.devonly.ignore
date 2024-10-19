@@ -1,4 +1,4 @@
-# .gitignore-alike list of files and derictories
+# .gitignore-alike list of files and dirictories
 # that should be ignored when exporting package
 ./*
 scripts/debug
@@ -57,6 +57,7 @@ ComplementaryUnbound_*
 BSL_*
 MakeUp-UltraFast-*
 AdvancedCreation-*
+Dark Mode-*
 
 # Mods in process of testing to add them later
 mods/effortlessbuilding-*

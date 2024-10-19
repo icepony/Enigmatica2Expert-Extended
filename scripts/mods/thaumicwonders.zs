@@ -8,7 +8,7 @@ import crafttweaker.recipes.IRecipeFunction;
 // Cast quicksilver back to gem
 recipes.removeByRecipeName('thaumicwonders:quicksilver_bucket');
 recipes.removeByRecipeName('thaumicwonders:quicksilver_bucket_deconstruct');
-mods.tconstruct.Casting.addTableRecipe(<thaumcraft:quicksilver>, <tconstruct:cast_custom:2>, <liquid:fluid_quicksilver>, 125, false);
+mods.tconstruct.Casting.addTableRecipe(<thaumcraft:quicksilver>, <tconstruct:cast_custom:2>, <liquid:fluid_quicksilver>, 125, false, 1);
 scripts.process.melt(<thaumcraft:quicksilver>, <liquid:fluid_quicksilver> * 125);
 
 // [Flux Capacitor] from [Vis Battery][+4]

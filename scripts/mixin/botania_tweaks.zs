@@ -1,6 +1,6 @@
+#modloaded botania_tweaks
 #loader mixin
-
-import mixin.CallbackInfoReturnable;
+#sideonly client
 
 #mixin Mixin
 #{targets: "quaternary.botaniatweaks.modules.jei.RecipeWrapperAgglomeration"}

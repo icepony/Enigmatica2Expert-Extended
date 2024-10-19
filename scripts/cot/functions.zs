@@ -1,14 +1,16 @@
+#modloaded contenttweaker
 #reloadable
 
 import crafttweaker.item.IItemStack;
 import crafttweaker.player.IPlayer;
 import crafttweaker.world.IBlockPos;
 import crafttweaker.world.IWorld;
-import mods.ctutils.utils.Math.abs;
 import crafttweaker.world.IFacing;
 import mods.contenttweaker.BlockPos;
 import mods.contenttweaker.BlockState;
 import mods.contenttweaker.World;
+
+function abs(n as double) as double { return n < 0 ? -n : n; }
 
 // ------------------------------------------
 // Anglesite and Benitoite
@@ -104,23 +106,23 @@ val lifeRecipes = {
 scripts.jei.crafting_hints.add1to1(<contenttweaker:compressed_coral>, <randomthings:biomestone>);
 
 function canPlaceCoral(world as World, p as IBlockPos) as bool {
-  val floorBlockId = world.getBlockState(p.getOffset(IFacing.down(), 1)).block.definition.id;
+  val floorBlockId = world.getBlockState(p.down()).block.definition.id;
   return 
     (floorBlockId == 'minecraft:sand' || floorBlockId == 'minecraft:gravel' || floorBlockId == 'minecraft:dirt')
     && world.getBlockState(p).block.definition.id == 'minecraft:water'
-    && world.getBlockState(p.getOffset(IFacing.up(), 1)).block.definition.id == 'minecraft:water'
+    && world.getBlockState(p.up()).block.definition.id == 'minecraft:water'
   ;
 }
 <cotBlock:compressed_coral>.onRandomTick = function (world as World, p as BlockPos, blockState as BlockState) {
   if (world.remote) return;
 
-  if(world.getBlockState(p.getOffset(IFacing.up(), 1)).block.definition.id != 'minecraft:water') {
+  if(world.getBlockState(p.up()).block.definition.id != 'minecraft:water') {
     world.destroyBlock(p, false);
     world.setBlockState(<blockstate:randomthings:biomestone>, p);
     return;
   }
   
-  for face in [IFacing.east(), IFacing.north(), IFacing.west(), IFacing.south()] as IFacing[] {
+  for face in [east, north, west, south] as IFacing[] {
     if (world.getRandom().nextInt(2) != 0) continue;
 
     val coral = <blockstate:biomesoplenty:coral>;

@@ -1,5 +1,6 @@
 #reloadable
 #priority -1300
+#modloaded zenutils ctintegration
 
 import crafttweaker.block.IBlockDefinition;
 import crafttweaker.item.IItemStack;

@@ -47,15 +47,34 @@ function stateToItem(state as IBlockState) as IItemStack {
   ) return null;
 
   val defId = state.block.definition.id;
-  var item = state.block.getItem(null, null, state);
+  var item = defId.startsWith('netherendingores:')
+    ? <item:${defId}:${state.block.meta}>
+    : state.block.getItem(null, null, state);
   if (isNull(item)) item = blockRepresentation[defId];
   if (isNull(item))
     logger.logWarning('Cannot find item representation for block: ' ~ defId);
   return item;
 }
 
+/**
+ * Compare two lists of items to be the same items and same amounts
+ */
+function isItemListSame(A as IItemStack[], B as IItemStack[]) as bool {
+  for a in A {
+    var match = false;
+    for b in B {
+      if (a has b || b has a) {
+        match = true;
+        break;
+      }
+    }
+    if (!match) return false;
+  }
+  return true;
+}
+
 // Group recipes by inputs and outputs
-val recipeMap as IItemStack[][IIngredient] = {};
+val recipeMap as IItemStack[][IIngredient] = {} as IItemStack[][IIngredient]$orderly;
 
 for dimFrom, dimFromData in scripts.do.portal_spread.recipes.spread.stateRecipes {
   for dimTo, dimToData in dimFromData {
@@ -80,12 +99,7 @@ for dimFrom, dimFromData in scripts.do.portal_spread.recipes.spread.stateRecipes
       for inp, outs in recipeMap {
         if (isNull(outs)) continue;
 
-        // Find if outputs are the same
-        var outsMatch = true;
-        for out in outs { if (!(outputs has out)) { outsMatch = false; break; } }
-        if (outsMatch) for out in outputs { if (!(outs has out)) { outsMatch = false; break; } }
-
-        if (!outsMatch || inp has input) continue;
+        if (!isItemListSame(outs, outputs) || inp has input) continue;
 
         // Replace inputs
         recipeMap[inp] = null;

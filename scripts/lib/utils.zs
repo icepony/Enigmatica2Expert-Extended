@@ -451,7 +451,7 @@ zenClass Utils {
     entityliving.rotationYawHead = yaw;
     entityliving.renderYawOffset = yaw;
     entityliving.onInitialSpawn(worldIn.native.getDifficultyForLocation(
-      crafttweaker.world.IBlockPos.create(entityliving.x, entityliving.y, entityliving.z).native
+      crafttweaker.world.IBlockPos.create(x, y, z).native
     ), null);
     worldIn.native.spawnEntity(entity);
     entityliving.playLivingSound();

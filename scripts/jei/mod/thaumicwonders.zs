@@ -1,4 +1,4 @@
-#modloaded thaumicwonders
+#modloaded thaumicwonders requious
 #priority 950
 
 import crafttweaker.item.IIngredient;
@@ -6,40 +6,47 @@ import crafttweaker.item.IItemStack;
 import mods.randomtweaker.jei.IJeiUtils;
 import mods.requious.SlotVisual;
 
-// -----------------------------------------------------------------------
-// -----------------------------------------------------------------------
-// <assembly:transmuters_stone>
+function registerStoneCategory(ID as string, catalysts as IItemStack[]) as void {
+  val SLOT_SIZE = 18;
+  val ARROW_WIDTH = SLOT_SIZE + 4;
+  val p =mods.jei.JEI.createJei(ID, game.localize(`e2ee.jei.${ID}.title`))
+    .setBackground(IJeiUtils.createBackground(2 * SLOT_SIZE + ARROW_WIDTH, SLOT_SIZE))
+    .setIcon(catalysts[0])
+    .setModid('thaumicwonders')
+    .addSlot(IJeiUtils.createItemSlot('input', 0, 0, true, false))
+    .addElement(IJeiUtils.createArrowElement(SLOT_SIZE, 1, 0))
+    .addSlot(IJeiUtils.createItemSlot('output', SLOT_SIZE + ARROW_WIDTH, 0, false, false));
 
-var
-// -----------------------------------------------------------------------
-  x = <assembly:alchemists_stone>;
-x.addJEICatalyst(<thaumicwonders:alchemist_stone>);
-x.addJEICatalyst(<thaumicwonders:catalyzation_chamber>);
-scripts.jei.requious.addInsOuts(x, [[0, 0]], [[2, 0]]);
-x.setJEIDurationSlot(1, 0, 'duration', SlotVisual.arrowRight());
+  for cat in catalysts {
+    p.addRecipeCatalyst(cat);
+  }
 
-function addAlchemists(input as IIngredient, output as IItemStack) as void {
-  scripts.jei.requious.add(<assembly:alchemists_stone>, { [input] as IIngredient[]: [output] });
+  p.register();
+}
+
+// -----------------------------------------------------------------------
+registerStoneCategory('alchemists_stone', [<thaumicwonders:alchemist_stone>, <thaumicwonders:catalyzation_chamber>]);
+function addAlchemists(input as IIngredient, output as IIngredient) as void {
+  mods.jei.JEI.createJeiRecipe('alchemists_stone')
+    .addInput(input)
+    .addOutput(output)
+    .build();
 }
 // -----------------------------------------------------------------------
-x = <assembly:alienists_stone>;
-x.addJEICatalyst(<thaumicwonders:alienist_stone>);
-x.addJEICatalyst(<thaumicwonders:catalyzation_chamber>);
-scripts.jei.requious.addInsOuts(x, [[0, 0]], [[2, 0]]);
-x.setJEIDurationSlot(1, 0, 'duration', SlotVisual.arrowRight());
-
-function addAlienists(input as IIngredient, output as IItemStack) as void {
-  scripts.jei.requious.add(<assembly:alienists_stone>, { [input] as IIngredient[]: [output] });
+registerStoneCategory('alienist_stone', [<thaumicwonders:alienist_stone>, <thaumicwonders:catalyzation_chamber>]);
+function addAlienists(input as IIngredient, output as IIngredient) as void {
+  mods.jei.JEI.createJeiRecipe('alienist_stone')
+    .addInput(input)
+    .addOutput(output)
+    .build();
 }
 // -----------------------------------------------------------------------
-x = <assembly:transmuters_stone>;
-x.addJEICatalyst(<thaumicwonders:transmuter_stone>);
-x.addJEICatalyst(<thaumicwonders:catalyzation_chamber>);
-scripts.jei.requious.addInsOuts(x, [[0, 0]], [[2, 0]]);
-x.setJEIDurationSlot(1, 0, 'duration', SlotVisual.arrowRight());
-
-function addTransmuters(input as IIngredient, output as IItemStack) as void {
-  scripts.jei.requious.add(<assembly:transmuters_stone>, { [input] as IIngredient[]: [output] });
+registerStoneCategory('transmuter_stone', [<thaumicwonders:transmuter_stone>, <thaumicwonders:catalyzation_chamber>]);
+function addTransmuters(input as IIngredient, output as IIngredient) as void {
+  mods.jei.JEI.createJeiRecipe('transmuter_stone')
+    .addInput(input)
+    .addOutput(output)
+    .build();
 }
 
 // Available prefixes

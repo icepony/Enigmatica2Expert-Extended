@@ -118,7 +118,7 @@ remake('environmentaltech modifier_speed',
 
 remake('environmentaltech modifier_accuracy',
   <environmentaltech:modifier_accuracy>, [
-    [<ore:blockDiamond>, <environmentaltech:pladium_crystal>, <ore:blockDiamond>],
+    [<ore:gearDiamond>, <environmentaltech:pladium_crystal>, <ore:gearDiamond>],
     [<environmentaltech:mica>, <environmentaltech:modifier_null>, <environmentaltech:mica>],
     [LiquidIngr('exhaust_steam'), <environmentaltech:lonsdaleite_crystal>, LiquidIngr('exhaust_steam')]]);
 
